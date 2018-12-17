@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class UpdateType
- * @see https://core.telegram.org/bots/api#update
+ * @link https://core.telegram.org/bots/api#update
  */
 class UpdateType
 {
@@ -45,15 +45,15 @@ class UpdateType
     public $editedChannelPost;
 
     /**
-     * @see https://core.telegram.org/bots/api#inline-mode
+     * @link https://core.telegram.org/bots/api#inline-mode
      * Optional. New incoming inline query
      * @var inlineQueryType|null
      */
     public $inlineQuery;
 
     /**
-     * @see https://core.telegram.org/bots/api#inline-mode
-     * @see https://core.telegram.org/bots/inline#collecting-feedback
+     * @link https://core.telegram.org/bots/api#inline-mode
+     * @link https://core.telegram.org/bots/inline#collecting-feedback
      * Optional. The result of an inline query that was chosen by a user and sent to their chat partner.
      * Please see our documentation on the feedback collecting for details on how to enable these updates for your bot.
      * @var ChosenInlineResultType|null

@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class DocumentType
- * @see https://core.telegram.org/bots/api#document
+ * @link https://core.telegram.org/bots/api#document
  */
 class DocumentType
 {

@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class ContactType
- * @see https://core.telegram.org/bots/api#contact
+ * @link https://core.telegram.org/bots/api#contact
  */
 class ContactType
 {

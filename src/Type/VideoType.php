@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class VideoType
- * @see https://core.telegram.org/bots/api#video
+ * @link https://core.telegram.org/bots/api#video
  */
 class VideoType
 {

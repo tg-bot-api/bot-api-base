@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class MessageEntityType
- * @see https://core.telegram.org/bots/api#messageentity
+ * @link https://core.telegram.org/bots/api#messageentity
  */
 class MessageEntityType
 {

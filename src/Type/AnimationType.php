@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class AnimationType
- * @see https://core.telegram.org/bots/api#animation
+ * @link https://core.telegram.org/bots/api#animation
  */
 class AnimationType
 {

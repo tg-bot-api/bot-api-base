@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class UserType
- * @see https://core.telegram.org/bots/api#user
+ * @link https://core.telegram.org/bots/api#user
  */
 class UserType
 {

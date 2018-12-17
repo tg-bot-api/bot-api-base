@@ -5,7 +5,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class ChatType
- * @see https://core.telegram.org/bots/api#chat
+ * @link https://core.telegram.org/bots/api#chat
  */
 class ChatType
 {

@@ -5,7 +5,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class MessageType
- * @see https://core.telegram.org/bots/api#message
+ * @link https://core.telegram.org/bots/api#message
  */
 class MessageType
 {
@@ -126,7 +126,7 @@ class MessageType
     public $animation;
 
     /**
-     * @see https://core.telegram.org/bots/api#games
+     * @link https://core.telegram.org/bots/api#games
      * Optional. Message is a game, information about the game.
      * @var GameType|null
      */
@@ -157,7 +157,7 @@ class MessageType
     public $voice;
 
     /**
-     * @see https://telegram.org/blog/video-messages-and-telescope
+     * @link https://telegram.org/blog/video-messages-and-telescope
      * Optional. Message is a video note, information about the video message
      * @var VideoNoteType|null
      */
@@ -266,7 +266,7 @@ class MessageType
     public $pinnedMessage;
 
     /**
-     * @see https://core.telegram.org/bots/api#payments
+     * @link https://core.telegram.org/bots/api#payments
      * Message is an invoice for a payment, information about the invoice.
      * @var InvoiceType|null
      */
@@ -274,14 +274,14 @@ class MessageType
 
     //successful_payment	SuccessfulPayment
     /**
-     * @see https://core.telegram.org/bots/api#payments
+     * @link https://core.telegram.org/bots/api#payments
      * Optional. Message is a service message about a successful payment, information about the payment.
      * @var SuccessfulPaymentType|null
      */
     public $successfulPayment;
 
     /**
-     * @see https://core.telegram.org/widgets/login
+     * @link https://core.telegram.org/widgets/login
      * Optional. The domain name of the website on which the user has logged in.
      * @var String|null
      */

@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class ChatPhotoType
- * @see https://core.telegram.org/bots/api#chatphoto
+ * @link https://core.telegram.org/bots/api#chatphoto
  */
 class ChatPhotoType
 {

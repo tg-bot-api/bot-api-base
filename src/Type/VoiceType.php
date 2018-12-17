@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class VoiceType
- * @see https://core.telegram.org/bots/api#voice
+ * @link https://core.telegram.org/bots/api#voice
  */
 class VoiceType
 {

@@ -6,7 +6,7 @@ namespace Greenplugin\TelegramBot\Type;
 
 /**
  * Class VideoNoteType
- * @see https://core.telegram.org/bots/api#videonote
+ * @link https://core.telegram.org/bots/api#videonote
  */
 class VideoNoteType
 {
