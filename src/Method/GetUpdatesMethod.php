@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Greenplugin\TelegramBot\Request;
+namespace Greenplugin\TelegramBot\Method;
 
-class GetUpdatesRequest
+class GetUpdatesMethod
 {
     public $offset;
     public $limit;

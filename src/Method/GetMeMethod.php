@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Greenplugin\TelegramBot\Request;
+namespace Greenplugin\TelegramBot\Method;
 
 
 use Greenplugin\TelegramBot\Type\UserResponse;
 
-class GetMeRequest
+class GetMeMethod
 {
     public function getMethod()
     {

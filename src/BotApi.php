@@ -3,8 +3,8 @@
 namespace Greenplugin\TelegramBot;
 
 use Greenplugin\TelegramBot\Exception\ResponseException;
-use Greenplugin\TelegramBot\Request\GetMeRequest;
-use Greenplugin\TelegramBot\Request\GetUpdatesRequest;
+use Greenplugin\TelegramBot\Method\GetMeMethod;
+use Greenplugin\TelegramBot\Method\GetUpdatesMethod;
 use Greenplugin\TelegramBot\Type\UpdateType;
 use Greenplugin\TelegramBot\Type\UserType;
 use Nyholm\Psr7\Request;
@@ -41,34 +41,34 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param GetMeRequest $request
+     * @param GetMeMethod $method
      * @return UserType
      * @throws ResponseException
      */
-    public function getMe(GetMeRequest $request): UserType
+    public function getMe(GetMeMethod $method): UserType
     {
-        return $this->send($request, UserType::class);
+        return $this->call($method, UserType::class);
     }
 
     /**
-     * @param GetUpdatesRequest $request
+     * @param GetUpdatesMethod $method
      * @return UpdateType[]
      * @throws ResponseException
      */
-    public function getUpdates(GetUpdatesRequest $request): array
+    public function getUpdates(GetUpdatesMethod $method): array
     {
-        return $this->send($request, UpdateType::class.'[]');
+        return $this->call($method, UpdateType::class.'[]');
     }
 
     /**
-     * @param $request
+     * @param $method
      * @param $type
      * @return object
      * @throws ResponseException
      */
-    public function send($request, $type)
+    public function call($method, $type)
     {
-        $json = $this->httpClient->get($this->endPoint . $this->key . '/' . $this->getMethodName($request));
+        $json = $this->httpClient->get($this->endPoint . $this->key . '/' . $this->getMethodName($method));
 
         if ($json->ok !== true) {
             throw new ResponseException($json->description);
@@ -77,9 +77,9 @@ class BotApi implements BotApiInterface
         return $this->denormalize($json, $type);
     }
 
-    private function getMethodName($request)
+    private function getMethodName($method)
     {
-        return lcfirst(substr(get_class($request),strrpos(get_class($request), '\\')+1, -1 * strlen('Request')));
+        return lcfirst(substr(get_class($method),strrpos(get_class($method), '\\')+1, -1 * strlen('Method')));
     }
 
 
