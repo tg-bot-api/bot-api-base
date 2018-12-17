@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 $key = '*';
 $proxy = null;
@@ -9,7 +9,7 @@ $client = new \Buzz\Client\FileGetContents([
 ], new \Nyholm\Psr7\Factory\Psr17Factory());
 
 
-$bot = new \Greenplugin\TelegramBot\BotApi(new \Greenplugin\TelegramBot\HttpClient($key, $client));
+$bot = new \Greenplugin\TelegramBot\BotApi(new \Greenplugin\TelegramBot\HttpClient($client), $key);
 
 $getMeRequest = new \Greenplugin\TelegramBot\Request\GetMeRequest();
 var_dump($bot->getMe($getMeRequest));

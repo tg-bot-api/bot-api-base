@@ -2,36 +2,66 @@
 
 namespace Greenplugin\TelegramBot;
 
+use Greenplugin\TelegramBot\Exception\ResponseException;
 use Greenplugin\TelegramBot\Request\GetMeRequest;
 use Greenplugin\TelegramBot\Response\UserResponse;
-use Nyholm\Psr7\Request;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
-use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
 
 class BotApi implements BotApiInterface
 {
+    /**
+     * @var HttpClientInterface
+     */
     private $httpClient;
+
+    private $key;
+
+    private $endPoint;
 
     /**
      * Create a new Skeleton Instance
+     * @param HttpClientInterface $httpClient
      * @param string $key
+     * @param string $endPoint
      */
-    public function __construct(HttpClient $httpClient)
+    public function __construct(HttpClientInterface $httpClient, string $key, string $endPoint = 'https://api.telegram.org/bot')
     {
         $this->httpClient = $httpClient;
+        $this->key = $key;
+        $this->endPoint = $endPoint;
     }
 
-    public function getMe(GetMeRequest $request)
+    /**
+     * @param GetMeRequest $request
+     * @return UserResponse
+     * @throws ResponseException
+     */
+    public function getMe(GetMeRequest $request): UserResponse
     {
         return $this->send($request, UserResponse::class);
     }
 
-    public function send($request, $response)
+    /**
+     * @param $request
+     * @param $response
+     * @return object
+     * @throws ResponseException
+     */
+    public function send($request, $response): object
     {
-        return $this->denormalize($this->httpClient->get('getMe'), $response);
+
+        $json = $this->httpClient->get($this->endPoint . $this->key . '/' . $this->getMethodName($request));
+
+        if ($json->ok !== true) {
+            throw new ResponseException($json->description);
+        }
+
+        return $this->denormalize($json, $response);
+    }
+
+    private function getMethodName($request)
+    {
+        return 'getMe';
     }
 
     private function denormalize($data, $response)

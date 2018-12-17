@@ -7,29 +7,30 @@ namespace Greenplugin\TelegramBot;
 use Nyholm\Psr7\Request;
 use Psr\Http\Client\ClientInterface;
 
-class HttpClient
+class HttpClient implements HttpClientInterface
 {
-    private $key;
-    private $endpoint;
     private $client;
-    public function __construct($key, ClientInterface $client, $endpoint = 'https://api.telegram.org/bot')
+
+    public function __construct(ClientInterface $client)
     {
-        $this->key = $key;
-        $this->endpoint = $endpoint;
         $this->client = $client;
     }
 
-    public function get($method, $query = [])
+    public function get(string $path)
     {
-        $request = new Request('GET', $this->endpoint.$this->key.'/'.$method);
+        $request = new Request('GET', $path);
 
         $response = $this->client->sendRequest($request);
 
-        $json = json_decode($response->getBody()->getContents());
-        if($json->ok !== true) {
-            throw new \Exception('whoops');
-        }
+        return json_decode($response->getBody()->getContents());
+    }
 
-        return $json;
+    public function post(string $path, array $data)
+    {
+        $request = new Request('POST', $path, $data);
+
+        $response = $this->client->sendRequest($request);
+
+        return json_decode($response->getBody()->getContents());
     }
 }
