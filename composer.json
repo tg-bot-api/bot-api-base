@@ -18,7 +18,9 @@
     ],
     "require": {
         "php": "~7.1",
-        "kriswallsmith/buzz": "^0.17.2"
+        "kriswallsmith/buzz": "^0.17.2",
+        "symfony/property-access": "^4.2",
+        "symfony/serializer": "^4.2"
     },
     "require-dev": {
         "phpunit/phpunit" : "~7.5.1",
@@ -26,7 +28,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Greenplugin\\TelegramBot\\": "src"
+            "Greenplugin\\TelegramBot\\": "src/"
         }
     },
     "autoload-dev": {
