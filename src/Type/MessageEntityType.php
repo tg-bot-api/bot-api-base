@@ -4,6 +4,10 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+/**
+ * Class MessageEntityType
+ * @see https://core.telegram.org/bots/api#messageentity
+ */
 class MessageEntityType
 {
 
@@ -29,13 +33,13 @@ class MessageEntityType
 
     /**
      * Optional. For “text_link” only, url that will be opened after user taps on the text
-     * @var String
+     * @var String|null
      */
     public $url;
 
     /**
      * Optional. For “text_mention” only, the mentioned user
-     * @var UserType
+     * @var UserType|null
      */
     public $user;
 }

@@ -4,6 +4,10 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+/**
+ * Class PhotoSizeType
+ * @see https://core.telegram.org/bots/api#photosize
+ */
 class PhotoSizeType
 {
     /**
@@ -26,7 +30,7 @@ class PhotoSizeType
 
     /**
      * Optional. File size.
-     * @var Integer
+     * @var Integer|null
      */
     public $fileSize;
 }

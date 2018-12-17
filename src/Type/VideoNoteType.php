@@ -4,6 +4,10 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+/**
+ * Class VideoNoteType
+ * @see https://core.telegram.org/bots/api#videonote
+ */
 class VideoNoteType
 {
     /**
@@ -26,13 +30,13 @@ class VideoNoteType
 
     /**
      * Optional. Video thumbnailю
-     * @var PhotoSizeType
+     * @var PhotoSizeType|null
      */
     public $thumb;
 
     /**
      * Optional. File size.
-     * @var Integer
+     * @var Integer|null
      */
     public $fileSize;
 

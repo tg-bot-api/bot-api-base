@@ -4,6 +4,10 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+/**
+ * Class ChatPhotoType
+ * @see https://core.telegram.org/bots/api#chatphoto
+ */
 class ChatPhotoType
 {
     /**

@@ -4,6 +4,10 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+/**
+ * Class VideoType
+ * @see https://core.telegram.org/bots/api#video
+ */
 class VideoType
 {
     /**
@@ -32,19 +36,19 @@ class VideoType
 
     /**
      * Optional. Video thumbnail.
-     * @var PhotoSizeType
+     * @var PhotoSizeType|null
      */
     public $thumb;
 
     /**
      * Optional. Mime type of a file as defined by sender.
-     * @var String
+     * @var String|null
      */
     public $mimeType;
 
     /**
      * Optional. File size.
-     * @var Integer
+     * @var Integer|null
      */
     public $fileSize;
 
