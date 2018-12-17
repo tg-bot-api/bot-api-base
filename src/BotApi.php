@@ -4,8 +4,17 @@ namespace Greenplugin\TelegramBot;
 
 use Greenplugin\TelegramBot\Exception\ResponseException;
 use Greenplugin\TelegramBot\Request\GetMeRequest;
-use Greenplugin\TelegramBot\Response\UserResponse;
+use Greenplugin\TelegramBot\Request\GetUpdatesRequest;
+use Greenplugin\TelegramBot\Type\UpdateType;
+use Greenplugin\TelegramBot\Type\UserType;
+use Nyholm\Psr7\Request;
+use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+use Symfony\Component\Serializer\Mapping\Loader\AnnotationLoader;
+use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
 
 class BotApi implements BotApiInterface
 {
@@ -33,41 +42,50 @@ class BotApi implements BotApiInterface
 
     /**
      * @param GetMeRequest $request
-     * @return UserResponse
+     * @return UserType
      * @throws ResponseException
      */
-    public function getMe(GetMeRequest $request): UserResponse
+    public function getMe(GetMeRequest $request): UserType
     {
-        return $this->send($request, UserResponse::class);
+        return $this->send($request, UserType::class);
+    }
+
+    /**
+     * @param GetUpdatesRequest $request
+     * @return UpdateType[]
+     * @throws ResponseException
+     */
+    public function getUpdates(GetUpdatesRequest $request): array
+    {
+        return $this->send($request, UpdateType::class.'[]');
     }
 
     /**
      * @param $request
-     * @param $response
+     * @param $type
      * @return object
      * @throws ResponseException
      */
-    public function send($request, $response): object
+    public function send($request, $type)
     {
-
         $json = $this->httpClient->get($this->endPoint . $this->key . '/' . $this->getMethodName($request));
 
         if ($json->ok !== true) {
             throw new ResponseException($json->description);
         }
 
-        return $this->denormalize($json, $response);
+        return $this->denormalize($json, $type);
     }
 
     private function getMethodName($request)
     {
-        return 'getMe';
+        return lcfirst(substr(get_class($request),strrpos(get_class($request), '\\')+1, -1 * strlen('Request')));
     }
 
-    private function denormalize($data, $response)
-    {
-        $normalizer = new ObjectNormalizer(null);
 
-        return $normalizer->denormalize($data->result, $response);
+    private function denormalize($data, $type)
+    {
+        $serializer = new Serializer([new ObjectNormalizer(null, null, null, new PhpDocExtractor()), new ArrayDenormalizer]);
+        return $serializer->denormalize($data->result, $type);
     }
 }

@@ -4,7 +4,7 @@
 namespace Greenplugin\TelegramBot\Request;
 
 
-use Greenplugin\TelegramBot\Response\UserResponse;
+use Greenplugin\TelegramBot\Type\UserResponse;
 
 class GetMeRequest
 {
