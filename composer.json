@@ -21,7 +21,7 @@
         "kriswallsmith/buzz": "^0.17.2",
         "symfony/property-access": "^4.2",
         "symfony/property-info": "^4.2",
-        "symfony/serializer": "^4.2".
+        "symfony/serializer": "^4.2",
         "ext-json": "*"
     },
     "require-dev": {
