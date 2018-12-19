@@ -9,9 +9,12 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class MessageType
 {
+    const PARSE_TYPE_MARKDOWN = 'Markdown';
+    const PARSE_TYPE_HTML = 'HTML';
+
     /**
      * Unique message identifier inside this chat.
-     * @var Integer
+     * @var integer
      */
     public $messageId;
 
@@ -23,7 +26,7 @@ class MessageType
 
     /**
      * Date the message was sent in Unix time.
-     * @var Integer
+     * @var integer
      */
     public $date;
 
@@ -47,7 +50,7 @@ class MessageType
 
     /**
      * Optional. For messages forwarded from channels, identifier of the original message in the channel.
-     * @var Integer|null
+     * @var integer|null
      */
     public $forwardFromMessageId;
 
@@ -59,7 +62,7 @@ class MessageType
 
     /**
      * Optional. For forwarded messages, date the original message was sent in Unix time.
-     * @var Integer|null
+     * @var integer|null
      */
     public $forwardDate;
 
@@ -72,7 +75,7 @@ class MessageType
 
     /**
      * Optional. Date the message was last edited in Unix time
-     * @var Integer|null
+     * @var integer|null
      */
     public $editDate;
 
@@ -245,7 +248,7 @@ class MessageType
      * greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it.
      * But it is smaller than 52 bits, so a signed 64 bit integer or double-precision
      * float type are safe for storing this identifier.
-     * @var Integer|null
+     * @var integer|null
      */
     public $migrateToChat;
 
@@ -255,7 +258,7 @@ class MessageType
      * This number may be greater than 32 bits and some programming languages may have difficulty/silent
      * defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer
      * or double-precision float type are safe for storing this identifier.
-     * @var Integer|null
+     * @var integer|null
      */
     public $migrateFromChat;
 

@@ -18,7 +18,7 @@ class AudioType
 
     /**
      * Duration of the audio in seconds as defined by sender
-     * @var Integer
+     * @var integer
      */
     public $duration;
 
@@ -42,7 +42,7 @@ class AudioType
 
     /**
      * Optional. File size
-     * @var Integer|null
+     * @var integer|null
      */
     public $fileSize;
 

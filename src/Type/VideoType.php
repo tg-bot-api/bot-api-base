@@ -18,19 +18,19 @@ class VideoType
 
     /**
      * Video width as defined by sender.
-     * @var Integer
+     * @var integer
      */
     public $width;
 
     /**
      * Video height as defined by sender.
-     * @var Integer
+     * @var integer
      */
     public $height;
 
     /**
      * Duration of the video in seconds as defined by sender.
-     * @var Integer
+     * @var integer
      */
     public $duration;
 
@@ -48,7 +48,7 @@ class VideoType
 
     /**
      * Optional. File size.
-     * @var Integer|null
+     * @var integer|null
      */
     public $fileSize;
 

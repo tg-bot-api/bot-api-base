@@ -36,7 +36,7 @@ class DocumentType
 
     /**
      * Optional. File size.
-     * @var Integer|null
+     * @var integer|null
      */
     public $fileSize;
 

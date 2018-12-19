@@ -12,7 +12,7 @@ class UserType
 {
     /**
      * Unique identifier for this user or bot.
-     * @var Integer
+     * @var integer
      */
     public $id;
 

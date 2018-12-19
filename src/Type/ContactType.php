@@ -30,7 +30,7 @@ class ContactType
 
     /**
      * Optional. Contact's user identifier in Telegram.
-     * @var Integer|null
+     * @var integer|null
      */
     public $userId;
 

@@ -21,13 +21,13 @@ class MessageEntityType
 
     /**
      * Offset in UTF-16 code units to the start of the entity
-     * @var Integer
+     * @var integer
      */
     public $offset;
 
     /**
      * Length of the entity in UTF-16 code units
-     * @var Integer
+     * @var integer
      */
     public $length;
 

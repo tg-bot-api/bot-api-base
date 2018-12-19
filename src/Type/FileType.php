@@ -23,7 +23,7 @@ class FileType
 
     /**
      * Optional. File size, if known.
-     * @var Integer|null
+     * @var integer|null
      */
     public $fileSize;
 

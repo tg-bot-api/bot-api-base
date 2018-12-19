@@ -12,7 +12,7 @@ class UserProfilePhotosType
 {
     /**
      * Total number of profile pictures the target user has.
-     * @var Integer
+     * @var integer
      */
     public $totalCount;
 

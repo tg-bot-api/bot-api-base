@@ -16,7 +16,7 @@ class UpdateType
      * repeated updates or to restore the correct update sequence, should they get out of order. If there are
      * no new updates for at least a week, then identifier of the next update will be chosen randomly instead
      * of sequentially.
-     * @var Integer
+     * @var integer
      */
     public $updateId;
 

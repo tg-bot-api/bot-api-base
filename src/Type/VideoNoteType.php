@@ -18,13 +18,13 @@ class VideoNoteType
 
     /**
      * Video width and height (diameter of the video message) as defined by sender
-     * @var Integer
+     * @var integer
      */
     public $length;
 
     /**
      * Duration of the video in seconds as defined by sender.
-     * @var Integer
+     * @var integer
      */
     public $duration;
 
@@ -36,7 +36,7 @@ class VideoNoteType
 
     /**
      * Optional. File size.
-     * @var Integer|null
+     * @var integer|null
      */
     public $fileSize;
 

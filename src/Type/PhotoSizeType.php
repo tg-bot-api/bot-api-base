@@ -18,19 +18,19 @@ class PhotoSizeType
 
     /**
      * Photo width.
-     * @var Integer
+     * @var integer
      */
     public $width;
 
     /**
      * Photo height
-     * @var Integer
+     * @var integer
      */
     public $height;
 
     /**
      * Optional. File size.
-     * @var Integer|null
+     * @var integer|null
      */
     public $fileSize;
 }
