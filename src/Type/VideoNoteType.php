@@ -12,7 +12,7 @@ class VideoNoteType
 {
     /**
      * Unique identifier for this file
-     * @var String
+     * @var string
      */
     public $fileId;
 

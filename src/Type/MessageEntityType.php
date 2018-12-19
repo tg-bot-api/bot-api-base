@@ -15,7 +15,7 @@ class MessageEntityType
      * Type of the entity. Can be mention (@username), hashtag, cashtag, bot_command, url, email, phone_number,
      * bold (bold text), italic (italic text), code (monowidth string), pre (monowidth block),
      * text_link (for clickable text URLs), text_mention (for users without usernames)
-     * @var String
+     * @var string
      */
     public $type;
 
@@ -33,7 +33,7 @@ class MessageEntityType
 
     /**
      * Optional. For “text_link” only, url that will be opened after user taps on the text
-     * @var String|null
+     * @var string|null
      */
     public $url;
 

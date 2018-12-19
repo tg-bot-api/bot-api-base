@@ -18,31 +18,31 @@ class UserType
 
     /**
      * True, if this user is a bot.
-     * @var Boolean
+     * @var boolean
      */
     public $isBot;
 
     /**
      * User‘s or bot’s first name.
-     * @var String
+     * @var string
      */
     public $firstName;
 
     /**
      * Optional. User‘s or bot’s last name.
-     * @var String|null
+     * @var string|null
      */
     public $lastName;
 
     /**
      * Optional. User‘s or bot’s username.
-     * @var String|null
+     * @var string|null
      */
     public $username;
 
     /**
      * Optional. IETF language tag of the user's language.
-     * @var String|null
+     * @var string|null
      */
     public $languageCode;
 }

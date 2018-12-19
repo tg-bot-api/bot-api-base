@@ -12,7 +12,7 @@ class AnimationType
 {
     /**
      * Unique file identifier.
-     * @var String
+     * @var string
      */
     public $fileId;
 
@@ -42,13 +42,13 @@ class AnimationType
 
     /**
      * Optional. Original animation filename as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $fileName;
 
     /**
      * Optional. MIME type of the file as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $mimeType;
 

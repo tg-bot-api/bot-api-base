@@ -12,7 +12,7 @@ class VideoType
 {
     /**
      * Unique identifier for this file.
-     * @var String
+     * @var string
      */
     public $fileId;
 
@@ -42,7 +42,7 @@ class VideoType
 
     /**
      * Optional. Mime type of a file as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $mimeType;
 

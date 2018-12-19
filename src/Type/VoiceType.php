@@ -12,7 +12,7 @@ class VoiceType
 {
     /**
      * Unique identifier for this file.
-     * @var String
+     * @var string
      */
     public $fileId;
 
@@ -24,7 +24,7 @@ class VoiceType
 
     /**
      * Optional. MIME type of the file as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $mimeType;
 

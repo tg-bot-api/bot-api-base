@@ -12,7 +12,7 @@ class DocumentType
 {
     /**
      * Unique file identifier.
-     * @var String
+     * @var string
      */
     public $fileId;
 
@@ -24,13 +24,13 @@ class DocumentType
 
     /**
      * Optional. Original filename as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $fileName;
 
     /**
      * Optional. MIME type of the file as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $mimeType;
 

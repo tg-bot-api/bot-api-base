@@ -24,32 +24,32 @@ class ChatType
 
     /**
      * Type of chat, can be either “private”, “group”, “supergroup” or “channel”.
-     * @var String
+     * @var string
      */
     public $type;
 
     /**
      * Optional. Title, for supergroups, channels and group chats username String Optional Username,
      * for private chats, supergroups and channels if available
-     * @var String|null
+     * @var string|null
      */
     public $title;
 
     /**
      * Optional. First name of the other party in a private chat.
-     * @var String|null
+     * @var string|null
      */
     public $firstName;
 
     /**
      * Optional. Last name of the other party in a private chat.
-     * @var String|null
+     * @var string|null
      */
     public $lastName;
 
     /**
      * Optional. True if a group has ‘All Members Are Admins’ enabled.
-     * @var Boolean|null
+     * @var boolean|null
      */
     public $allMembersAreAdministrators;
     /**
@@ -60,12 +60,12 @@ class ChatType
 
     /**
      * Optional. Description, for supergroups and channel chats. Returned only in getChat.
-     * @var String|null
+     * @var string|null
      */
     public $description;
     /**
      * Optional. Chat invite link, for supergroups and channel chats. Returned only in getChat.
-     * @var String|null
+     * @var string|null
      */
     public $inviteLink;
 
@@ -77,13 +77,13 @@ class ChatType
 
     /**
      * Optional. For supergroups, name of group sticker set. Returned only in getChat.
-     * @var String|null
+     * @var string|null
      */
     public $stickerSetName;
 
     /**
      * Optional. True, if the bot can change the group sticker set. Returned only in getChat.
-     * @var Boolean|null
+     * @var boolean|null
      */
     public $canSetStickerSet;
 

@@ -53,7 +53,7 @@ class MessageType
 
     /**
      * Optional. For messages forwarded from channels, signature of the post author if present.
-     * @var String|null
+     * @var string|null
      */
     public $signature;
 
@@ -78,19 +78,19 @@ class MessageType
 
     /**
      * Optional. The unique identifier of a media message group this message belongs to
-     * @var String|null
+     * @var string|null
      */
     public $mediaGroupId;
 
     /**
      * Optional. Signature of the post author for messages in channels
-     * @var String|null
+     * @var string|null
      */
     public $authorSignature;
 
     /**
      * Optional. For text messages, the actual UTF-8 text of the message, 0-4096 characters.
-     * @var String|null
+     * @var string|null
      */
     public $text;
 
@@ -165,7 +165,7 @@ class MessageType
 
     /**
      * Optional. Caption for the audio, document, photo, video or voice, 0-1024 characters
-     * @var String|null
+     * @var string|null
      */
     public $caption;
 
@@ -202,7 +202,7 @@ class MessageType
 
     /**
      * Optional. A chat title was changed to this value
-     * @var String|null
+     * @var string|null
      */
     public $newChatTitle;
 
@@ -214,13 +214,13 @@ class MessageType
 
     /**
      * Optional. Service message: the chat photo was deleted
-     * @var Boolean|null
+     * @var boolean|null
      */
     public $deleteChatPhoto;
 
     /**
      * Optional. Service message: the group has been created
-     * @var Boolean|null
+     * @var boolean|null
      */
     public $groupChanelCreated;
 
@@ -228,7 +228,7 @@ class MessageType
      * Optional. Service message: the supergroup has been created. This field can‘t be received in a message coming
      * through updates, because bot can’t be a member of a supergroup when it is created. It can only be found in
      * reply_to_message if someone replies to a very first message in a directly created supergroup.
-     * @var Boolean|null
+     * @var boolean|null
      */
     public $supergroupChatCreated;
 
@@ -236,7 +236,7 @@ class MessageType
      * Optional. Service message: the channel has been created. This field can‘t be received in a message coming
      * through updates, because bot can’t be a member of a channel when it is created. It can only be found in
      * reply_to_message if someone replies to a very first message in a channel.
-     * @var Boolean|null
+     * @var boolean|null
      */
     public $channelChatCreated;
 
@@ -283,7 +283,7 @@ class MessageType
     /**
      * @link https://core.telegram.org/widgets/login
      * Optional. The domain name of the website on which the user has logged in.
-     * @var String|null
+     * @var string|null
      */
     public $connectedWebsite;
 

@@ -12,19 +12,19 @@ class ContactType
 {
     /**
      * Contact's phone number.
-     * @var String
+     * @var string
      */
     public $phoneNumber;
 
     /**
      * Contact's first name.
-     * @var String
+     * @var string
      */
     public $firstName;
 
     /**
      * Optional. Contact's last name.
-     * @var String|null
+     * @var string|null
      */
     public $lastName;
 
@@ -36,7 +36,7 @@ class ContactType
 
     /**
      * Optional. Additional data about the contact in the form of a vCard
-     * @var String|null
+     * @var string|null
      */
     public $vcard;
 }

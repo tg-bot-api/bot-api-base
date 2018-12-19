@@ -12,7 +12,7 @@ class AudioType
 {
     /**
      * Unique identifier for this file
-     * @var String
+     * @var string
      */
     public $fileId;
 
@@ -24,19 +24,19 @@ class AudioType
 
     /**
      * Optional. Performer of the audio as defined by sender or by audio tags.
-     * @var String|null
+     * @var string|null
      */
     public $performer;
 
     /**
      * Optional. Title of the audio as defined by sender or by audio tags.
-     * @var String|null
+     * @var string|null
      */
     public $title;
 
     /**
      * Optional. MIME type of the file as defined by sender.
-     * @var String|null
+     * @var string|null
      */
     public $mimeType;
 
