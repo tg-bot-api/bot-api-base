@@ -42,7 +42,7 @@ class SendAudioMethod extends SendWithCaptionMethodAbstract
     /**
      * Optional. Track name.
      *
-     * @var string
+     * @var string|null
      */
     public $title;
 
