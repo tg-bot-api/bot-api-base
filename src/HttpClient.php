@@ -27,7 +27,7 @@ class HttpClient implements HttpClientInterface
 
     public function post(string $path, array $data)
     {
-        $request = new Request('POST', $path, $data);
+        $request = new Request('POST', $path, ['Content-Type' => 'application/json'], json_encode($data));
 
         $response = $this->client->sendRequest($request);
 

@@ -68,7 +68,9 @@ class BotApi implements BotApiInterface
      */
     public function call($method, $type)
     {
-        $json = $this->httpClient->get($this->endPoint . $this->key . '/' . $this->getMethodName($method));
+        $data = $this->encode($method);
+
+        $json = $this->httpClient->post($this->endPoint . $this->key . '/' . $this->getMethodName($method),  $data);
 
         if ($json->ok !== true) {
             throw new ResponseException($json->description);
@@ -82,10 +84,37 @@ class BotApi implements BotApiInterface
         return lcfirst(substr(get_class($method),strrpos(get_class($method), '\\')+1, -1 * strlen('Method')));
     }
 
-
     private function denormalize($data, $type)
     {
-        $serializer = new Serializer([new ObjectNormalizer(null, null, null, new PhpDocExtractor()), new ArrayDenormalizer]);
+        $callbacks = [];
+
+        $normalizer = new ObjectNormalizer(
+            null,
+            new CamelCaseToSnakeCaseNameConverter(),
+            null,
+            new PhpDocExtractor(),
+            null,
+            null,
+            [ObjectNormalizer::CALLBACKS =>$callbacks]);
+
+        $serializer = new Serializer([$normalizer, new ArrayDenormalizer]);
         return $serializer->denormalize($data->result, $type);
+    }
+
+    private function encode($method)
+    {
+        $callbacks = [];
+        $normalizer = new ObjectNormalizer(
+            null,
+            new CamelCaseToSnakeCaseNameConverter(),
+            null,
+            null,
+            null,
+            null,
+            [ObjectNormalizer::CALLBACKS =>$callbacks]);
+
+        $serializer = new Serializer([$normalizer]);
+
+        return $serializer->normalize($method, null, ['skip_null_values' => true]);
     }
 }
