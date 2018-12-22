@@ -9,6 +9,9 @@ namespace Greenplugin\TelegramBot\Method;
  */
 class SendMessageMethod extends SendMethodAbstract
 {
+    const PARSE_MODE_HTML = 'HTML';
+    const PARSE_MODE_MARKDOWN = 'Markdown';
+
     /**
      * Text of the message to be sent
      *

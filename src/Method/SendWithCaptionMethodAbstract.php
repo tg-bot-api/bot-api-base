@@ -5,6 +5,8 @@ namespace Greenplugin\TelegramBot\Method;
 
 abstract class SendWithCaptionMethodAbstract extends SendMethodAbstract
 {
+    const PARSE_MODE_HTML = 'HTML';
+    const PARSE_MODE_MARKDOWN = 'Markdown';
     /**
      * Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
      * text or inline URLs in the media caption.
