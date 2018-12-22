@@ -8,8 +8,4 @@ use Greenplugin\TelegramBot\Type\UserResponse;
 
 class GetMeMethod
 {
-    public function getMethod()
-    {
-        return 'getMe';
-    }
 }
