@@ -10,7 +10,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     public function testTrueIsTrue()
     {
 
-        $botApi = new BotApi('');
+        $botApi = new BotApi(new Stubs\HttpClient(), '');
         $this->assertInstanceOf(BotApiInterface::class, $botApi);
     }
 }
