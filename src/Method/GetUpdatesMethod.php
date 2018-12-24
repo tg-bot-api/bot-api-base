@@ -3,12 +3,16 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use phpDocumentor\Reflection\Types\Integer;
+
 /**
  * Class GetUpdatesMethod
  * @link https://core.telegram.org/bots/api#getupdates
  */
 class GetUpdatesMethod
 {
+    use FillFromArrayTrait;
     const TYPE_MESSAGE = 'message';
     const TYPE_EDITED_MESSAGE = 'edited_message';
     const TYPE_CHANNEL_POST = 'channel_post';
@@ -60,4 +64,16 @@ class GetUpdatesMethod
      * @var string[]|null
      */
     public $allowed_updates;
+
+    /**
+     * GetUpdatesMethod constructor.
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct(array $data = null)
+    {
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

@@ -3,18 +3,17 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
+
 /**
  * Class GetUserProfilePhotosMethod
  * @link https://core.telegram.org/bots/api#getuserprofilephotos
  */
 class GetUserProfilePhotosMethod
 {
-    /**
-     * Unique identifier of the target user.
-     *
-     * @var integer
-     */
-    public $userId;
+    use FillFromArrayTrait;
+    use UserIdVariableTrait;
 
     /**
      * Optional. Sequential number of the first photo to be returned. By default, all photos are returned.
@@ -29,5 +28,18 @@ class GetUserProfilePhotosMethod
      * @var integer|null
      */
     public $limit;
-}
 
+    /**
+     * GetUserProfilePhotosMethod constructor.
+     * @param int $userId
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct(int $userId, array $data = null)
+    {
+        $this->userId = $userId;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
+}

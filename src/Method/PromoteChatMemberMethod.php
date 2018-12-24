@@ -3,12 +3,20 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class PromoteChatMemberMethod
  * @package Greenplugin\TelegramBot\Method
  */
-class PromoteChatMemberMethod extends ChatMemberMethodAbstract
+class PromoteChatMemberMethod
 {
+    use FillFromArrayTrait;
+    use ChatIdVariableTrait;
+    use UserIdVariableTrait;
+
     /**
      * Optional. Pass True, if the administrator can change chat title, photo and other settings.
      *
@@ -66,4 +74,20 @@ class PromoteChatMemberMethod extends ChatMemberMethodAbstract
      * @var boolean|null
      */
     public $canPromoteMembers;
+
+    /**
+     * PromoteChatMemberMethod constructor.
+     * @param $chatId
+     * @param $userId
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, $userId, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->userId = $userId;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

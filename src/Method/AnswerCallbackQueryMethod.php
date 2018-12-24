@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class AnswerCallbackQueryMethod
  *
@@ -14,6 +16,7 @@ namespace Greenplugin\TelegramBot\Method;
  */
 class AnswerCallbackQueryMethod
 {
+    use FillFromArrayTrait;
     /**
      * Unique identifier for the query to be answered.
      *
@@ -56,5 +59,16 @@ class AnswerCallbackQueryMethod
      */
     public $cacheTime;
 
-
+    /**
+     * @param  string $callbackQueryId
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct(string $callbackQueryId, array $data = null)
+    {
+        $this->callbackQueryId = $callbackQueryId;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

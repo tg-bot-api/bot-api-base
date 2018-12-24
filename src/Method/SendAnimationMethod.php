@@ -3,14 +3,21 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
+use Greenplugin\TelegramBot\Method\Traits\CaptionVariablesTrait;
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
  * Class SendAnimationMethod
  * @link https://core.telegram.org/bots/api#sendanimation
  */
-class SendAnimationMethod extends SendWithCaptionMethodAbstract
+class SendAnimationMethod implements HasParseModeVariableInterface
 {
+    use FillFromArrayTrait;
+    use SendToChatVariablesTrait;
+    use CaptionVariablesTrait;
     /**
      * Animation to send.
      * Pass a file_id as String to send an animation that exists on the Telegram servers (recommended),
@@ -52,4 +59,20 @@ class SendAnimationMethod extends SendWithCaptionMethodAbstract
      * @var InputFileType|string|null
      */
     public $thumb;
+
+    /**
+     * SendAnimationMethod constructor.
+     * @param integer|string $chatId
+     * @param InputFileType|string $animation
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, $animation, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->animation = $animation;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

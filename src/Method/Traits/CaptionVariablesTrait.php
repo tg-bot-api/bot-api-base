@@ -1,12 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace Greenplugin\TelegramBot\Method\Traits;
 
-abstract class SendWithCaptionMethodAbstract extends SendMethodAbstract
+/**
+ * Trait CaptionVariablesTrait
+ */
+trait CaptionVariablesTrait
 {
-    const PARSE_MODE_HTML = 'HTML';
-    const PARSE_MODE_MARKDOWN = 'Markdown';
     /**
      * Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
      * text or inline URLs in the media caption.

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+
 /**
  * Class SendChatActionMethod
  * @link https://core.telegram.org/bots/api#sendchataction
@@ -17,12 +19,7 @@ class SendChatActionMethod
     const ACTION_FIND_LOCATION = 'find_location';
     const ACTION_RECORD_VIDEO_NOTE = 'record_video_note';
 
-    /**
-     * Unique identifier for the target chat or username of the target channel (in the format @channelusername).
-     *
-     * @var integer|string
-     */
-    public $chatId;
+    use ChatIdVariableTrait;
 
     /**
      * Type of action to broadcast.
@@ -38,4 +35,15 @@ class SendChatActionMethod
      * @var string
      */
     public $action;
+
+    /**
+     * SendChatActionMethod constructor.
+     * @param integer|string $chatId
+     * @param string $action
+     */
+    public function __construct($chatId, string $action)
+    {
+        $this->chatId = $chatId;
+        $this->action = $action;
+    }
 }

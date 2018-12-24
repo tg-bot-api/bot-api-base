@@ -26,4 +26,13 @@ class GetFileMethod
      * @var string
      */
     public $fileId;
+
+    /**
+     * GetFileMethod constructor.
+     * @param string $fileId
+     */
+    public function __construct(string $fileId)
+    {
+        $this->fileId = $fileId;
+    }
 }

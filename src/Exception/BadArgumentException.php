@@ -4,9 +4,9 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Exception;
 
 /**
- * Class ResponseException
+ * Class BadArgumentException
  */
-class ResponseException extends \Exception
+class BadArgumentException extends \Exception
 {
 
 }

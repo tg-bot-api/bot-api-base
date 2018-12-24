@@ -3,14 +3,18 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
  * Class SendVideoNoteMethod
  * @link https://core.telegram.org/bots/api#sendvideonote
  */
-class SendVideoNoteMethod extends SendMethodAbstract
+class SendVideoNoteMethod
 {
+    use FillFromArrayTrait;
+    use SendToChatVariablesTrait;
     /**
      * Video note to send.
      * Pass a file_id as String to send a video note that exists on the Telegram servers (recommended)
@@ -46,4 +50,20 @@ class SendVideoNoteMethod extends SendMethodAbstract
      * @var InputFileType|string|null
      */
     public $thumb;
+
+    /**
+     * SendVideoNoteMethod constructor.
+     * @param int|string $chatId
+     * @param InputFileType|string $videoNote
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, $videoNote, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->videoNote = $videoNote;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

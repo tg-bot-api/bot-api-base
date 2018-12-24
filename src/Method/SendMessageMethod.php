@@ -3,14 +3,18 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
+
 /**
  * Class SendMessageMethod
  * @link https://core.telegram.org/bots/api#sendmessage
  */
-class SendMessageMethod extends SendMethodAbstract
+class SendMessageMethod implements HasParseModeVariableInterface
 {
-    const PARSE_MODE_HTML = 'HTML';
-    const PARSE_MODE_MARKDOWN = 'Markdown';
+    use FillFromArrayTrait;
+    use SendToChatVariablesTrait;
 
     /**
      * Text of the message to be sent
@@ -33,4 +37,20 @@ class SendMessageMethod extends SendMethodAbstract
      * @var boolean|null
      */
     public $disableWebPagePreview;
+
+    /**
+     * SendMessageMethod constructor.
+     * @param int|string $chatId
+     * @param string $text
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, string $text, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->text = $text;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

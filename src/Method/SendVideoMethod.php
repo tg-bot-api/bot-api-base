@@ -3,14 +3,22 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
+use Greenplugin\TelegramBot\Method\Traits\CaptionVariablesTrait;
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
  * Class SendVideoMethod
  * @link https://core.telegram.org/bots/api#sendvideo
  */
-class SendVideoMethod extends SendWithCaptionMethodAbstract
+class SendVideoMethod implements HasParseModeVariableInterface
 {
+    use FillFromArrayTrait;
+    use SendToChatVariablesTrait;
+    use CaptionVariablesTrait;
+
     /**
      * Video to send. Pass a file_id as String to send a video that exists on the Telegram servers (recommended),
      * pass an HTTP URL as a String for Telegram to get a video from the Internet,
@@ -30,7 +38,7 @@ class SendVideoMethod extends SendWithCaptionMethodAbstract
     /**
      * Optional. Video width.
      *
-     * @var
+     * @var integer|null
      */
     public $width;
 
@@ -58,4 +66,20 @@ class SendVideoMethod extends SendWithCaptionMethodAbstract
      * @var boolean|null
      */
     public $supportStreaming;
+
+    /**
+     * SendVideoMethod constructor.
+     * @param int|string $chatId
+     * @param InputFileType|string $video
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, $video, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->video = $video;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

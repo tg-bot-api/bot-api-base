@@ -3,18 +3,20 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
-use Greenplugin\TelegramBot\Type\ForceReplyType;
-use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
+use Greenplugin\TelegramBot\Method\Traits\CaptionVariablesTrait;
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
-use Greenplugin\TelegramBot\Type\ReplyKeyboardMarkupType;
-use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
 
 /**
  * Class SendAudioMethod
  * @link https://core.telegram.org/bots/api#sendaudio
  */
-class SendAudioMethod extends SendWithCaptionMethodAbstract
+class SendAudioMethod
 {
+    use FillFromArrayTrait;
+    use SendToChatVariablesTrait;
+    use CaptionVariablesTrait;
     /**
      * Audio file to send.
      * Pass a file_id as String to send an audio file that exists on the Telegram servers (recommended),
@@ -56,4 +58,20 @@ class SendAudioMethod extends SendWithCaptionMethodAbstract
      * @var InputFileType|string|null
      */
     public $thumb;
+
+    /**
+     * SendAnimationMethod constructor.
+     * @param integer|string $chatId
+     * @param InputFileType|string $audio
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, $audio, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->audio = $audio;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

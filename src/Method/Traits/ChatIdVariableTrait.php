@@ -1,13 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
-
+namespace Greenplugin\TelegramBot\Method\Traits;
 
 /**
- * Class ChatMethodAbstract
+ * Trait ChatIdVariableTrait
  */
-abstract class ChatMethodAbstract
+trait ChatIdVariableTrait
 {
     /**
      * Unique identifier for the target chat or username of the target channel (in the format @channelusername)

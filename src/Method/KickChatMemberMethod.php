@@ -3,12 +3,19 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class KickChatMemberMethod
  * @link https://core.telegram.org/bots/api#kickchatmember
  */
-class KickChatMemberMethod extends ChatMemberMethodAbstract
+class KickChatMemberMethod
 {
+    use FillFromArrayTrait;
+    use ChatIdVariableTrait;
+    use UserIdVariableTrait;
     /**
      * Optional. Date when the user will be unbanned, unix time.
      * If user is banned for more than 366 days or less than 30 seconds
@@ -17,4 +24,20 @@ class KickChatMemberMethod extends ChatMemberMethodAbstract
      * @var integer|null
      */
     public $untilDate;
+
+    /**
+     * KickChatMemberMethod constructor.
+     * @param int|string $chatId
+     * @param int $userId
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct($chatId, int $userId, array $data = null)
+    {
+        $this->chatId = $chatId;
+        $this->userId = $userId;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

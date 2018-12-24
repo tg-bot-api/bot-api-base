@@ -1,12 +1,12 @@
 <?php
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace Greenplugin\TelegramBot\Method\Traits;
 
 /**
- * Class ChatMemberMethodAbstract
+ * Trait UserIdVariableTrait
  */
-abstract class ChatMemberMethodAbstract extends ChatMethodAbstract
+trait UserIdVariableTrait
 {
     /**
      * Unique identifier of the target user.
