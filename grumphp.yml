@@ -30,7 +30,7 @@ parameters:
             strict: false
         phpcpd:
             directory: '.'
-            exclude: ['vendor', 'var']
+            exclude: ['vendor']
             names_exclude: []
             regexps_exclude: []
             fuzzy: false
@@ -42,7 +42,7 @@ parameters:
             whitelist_patterns: []
             exclude: []
             exclude_name: []
-            exclude_path: ['vendor', 'var']
+            exclude_path: ['vendor']
             extensions: []
             hint: false
             ignore_numbers: []
@@ -51,8 +51,8 @@ parameters:
             triggered_by: ['php']
         git_blacklist:
             keywords:
-            - "die("
-            - "var_dump("
-            - "dump("
+            - "die"
+            - "var_dump"
+            - "dump"
             - "exit;"
             triggered_by: [php]
