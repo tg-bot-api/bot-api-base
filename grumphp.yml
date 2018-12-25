@@ -49,7 +49,7 @@ parameters:
             ignore_strings: []
             strings: false
             triggered_by: ['php']
-        phpunitbridge:
+        phpunit:
             config_file: ~
             testsuite: ~
             group: []
