@@ -13,7 +13,7 @@ use Greenplugin\TelegramBot\Type\InputMediaVideoType;
  * Class SendMediaGroupMethod
  * @link https://core.telegram.org/bots/api#sendmediagroup
  */
-class SendGroupMethod
+class SendMediaGroupMethod extends SendMethodAbstract
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
