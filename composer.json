@@ -26,6 +26,7 @@
         "symfony/serializer": "^4.2"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.13",
         "phpro/grumphp": "^0.14.3",
         "phpstan/phpstan": "^0.10.6",
         "phpunit/phpunit": "~7.5.1",
