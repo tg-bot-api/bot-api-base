@@ -13,6 +13,7 @@ use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
 use Greenplugin\TelegramBot\Method\GetChatMethod;
 use Greenplugin\TelegramBot\Method\GetFileMethod;
 use Greenplugin\TelegramBot\Method\GetMeMethod;
+use Greenplugin\TelegramBot\Method\GetUpdatesMethod;
 use Greenplugin\TelegramBot\Method\GetUserProfilePhotosMethod;
 use Greenplugin\TelegramBot\Method\KickChatMemberMethod;
 use Greenplugin\TelegramBot\Method\SendAnimationMethod;
@@ -32,6 +33,7 @@ use Greenplugin\TelegramBot\Type\ChatMemberType;
 use Greenplugin\TelegramBot\Type\ChatType;
 use Greenplugin\TelegramBot\Type\FileType;
 use Greenplugin\TelegramBot\Type\MessageType;
+use Greenplugin\TelegramBot\Type\UpdateType;
 use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
 use Greenplugin\TelegramBot\Type\UserType;
 
@@ -44,6 +46,19 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     {
         $botApi = new BotApi(new Stubs\HttpClient(), '');
         $this->assertInstanceOf(BotApiInterface::class, $botApi);
+    }
+
+    public function testGetUpdates()
+    {
+        $method = new GetUpdatesMethod();
+
+        $bot = $this->getBotMock();
+        $bot->expects($this->once())
+            ->method('call')
+            ->with($this->equalTo($method), $this->equalTo(UpdateType::class.'[]'))
+            ->willReturn([]);
+
+        $bot->getUpdates($method);
     }
 
     public function testGetMe()

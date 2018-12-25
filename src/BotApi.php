@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot;
 
 use Greenplugin\TelegramBot\Exception\ResponseException;
-use Greenplugin\TelegramBot\Method\AnswerCallbackQueryMethod;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
 use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
@@ -322,18 +321,6 @@ class BotApi implements BotApiInterface
     public function getChatMember(GetChatMemberMethod $method): ChatMemberType
     {
         return $this->call($method, ChatMemberType::class);
-    }
-
-    /**
-     * @param AnswerCallbackQueryMethod $method
-     *
-     * @throws ResponseException
-     *
-     * @return MessageType
-     */
-    public function answerCallbackQueryMethod(AnswerCallbackQueryMethod $method): MessageType
-    {
-        return $this->call($method, MessageType::class);
     }
 
     private function getMethodName($method)
