@@ -27,7 +27,10 @@
     "require-dev": {
         "phpro/grumphp": "^0.14.3",
         "phpunit/phpunit": "~7.5.1",
-        "squizlabs/php_codesniffer": "^3.0"
+        "squizlabs/php_codesniffer": "^3.0",
+        "phpstan/phpstan": "^0.10.6",
+        "povils/phpmnd": "^2.0",
+        "sebastian/phpcpd": "^4.1"
     },
     "autoload": {
         "psr-4": {
