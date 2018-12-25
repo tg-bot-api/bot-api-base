@@ -19,4 +19,13 @@ class InlineKeyboardMarkupType
      * @var InlineKeyboardButtonType[][]
      */
     public $inlineKeyboard;
+
+    /**
+     * InlineKeyboardMarkupType constructor.
+     * @param array $inlineKeyboard
+     */
+    public function __construct(array $inlineKeyboard = [])
+    {
+        $this->inlineKeyboard = $inlineKeyboard;
+    }
 }

@@ -4,12 +4,16 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class InlineKeyboardButtonType
  * @link https://core.telegram.org/bots/api#inlinekeyboardbutton
  */
 class InlineKeyboardButtonType
 {
+    use FillFromArrayTrait;
+
     /**
      * Label text on the button.
      *
@@ -72,4 +76,18 @@ class InlineKeyboardButtonType
      * @var boolean|null
      */
     public $pay;
+
+    /**
+     * InlineKeyboardButtonType constructor.
+     * @param string $text
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct(string $text, array $data = null)
+    {
+        $this->text = $text;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }

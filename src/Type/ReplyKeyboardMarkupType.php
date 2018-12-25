@@ -4,6 +4,8 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Type;
 
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class ReplyKeyboardMarkupType
  * @link https://core.telegram.org/bots/api#replykeyboardmarkup
@@ -11,6 +13,8 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class ReplyKeyboardMarkupType
 {
+    use FillFromArrayTrait;
+
     /**
      * Array of button rows, each represented by an Array of KeyboardButton objects
      * @var KeyboardButtonType[][]
@@ -43,4 +47,18 @@ class ReplyKeyboardMarkupType
      * @var boolean|null
      */
     public $selective;
+
+    /**
+     * ReplyKeyboardMarkupType constructor.
+     * @param array $keyboard
+     * @param array|null $data
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
+    public function __construct(array $keyboard = [], array $data = null)
+    {
+        $this->keyboard = $keyboard;
+        if ($data) {
+            $this->fill($data);
+        }
+    }
 }
