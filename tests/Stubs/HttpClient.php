@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Stubs;
+namespace Greenplugin\TelegramBot\Tests\Stubs;
 
 class HttpClient implements \Greenplugin\TelegramBot\HttpClientInterface
 {

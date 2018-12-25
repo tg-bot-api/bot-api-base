@@ -39,7 +39,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Greenplugin\\TelegramBot\\": "tests"
+            "Greenplugin\\TelegramBot\\Tests\\": "tests"
         }
     },
     "scripts": {

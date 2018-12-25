@@ -2,8 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot;
+namespace Greenplugin\TelegramBot\Tests;
 
+use Greenplugin\TelegramBot\BotApi;
+use Greenplugin\TelegramBot\BotApiInterface;
 use Greenplugin\TelegramBot\Method\EditMessageLiveLocationMethod;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;

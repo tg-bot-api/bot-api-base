@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Methods;
+namespace Greenplugin\TelegramBot\Tests\Methods;
 
 use Greenplugin\TelegramBot\BotApi;
 use Greenplugin\TelegramBot\HttpClientInterface;
