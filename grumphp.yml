@@ -49,6 +49,11 @@ parameters:
             ignore_strings: []
             strings: false
             triggered_by: ['php']
+        phpunitbridge:
+            config_file: ~
+            testsuite: ~
+            group: []
+            always_execute: false
         git_blacklist:
             keywords:
             - "die"
