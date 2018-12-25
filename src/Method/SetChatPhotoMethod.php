@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -7,8 +8,9 @@ use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
- * Class SetChatPhotoMethod
- * @link https://core.telegram.org/bots/api#setchatphoto
+ * Class SetChatPhotoMethod.
+ *
+ * @see https://core.telegram.org/bots/api#setchatphoto
  */
 class SetChatPhotoMethod
 {
@@ -22,7 +24,8 @@ class SetChatPhotoMethod
 
     /**
      * SetChatPhotoMethod constructor.
-     * @param integer|string $chatId
+     *
+     * @param int|string    $chatId
      * @param InputFileType $photo
      */
     public function __construct($chatId, InputFileType $photo)

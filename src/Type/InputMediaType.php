@@ -1,12 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class InputMediaType
- * @link https://core.telegram.org/bots/api#inputmedia
+ * Class InputMediaType.
+ *
+ * @see https://core.telegram.org/bots/api#inputmedia
  */
 class InputMediaType
 {
@@ -17,24 +18,18 @@ class InputMediaType
     const TYPE_DOCUMENT = 'document';
 
     /**
-     * Type of the result, must be photo
-     *
-     * @var string
-     */
-    protected $type;
-
-    /**
      * File to send. Pass a file_id to send a file that exists on the Telegram servers (recommended),
      * pass an HTTP URL for Telegram to get a file from the Internet, or pass “attach://<file_attach_name>”
      * to upload a new one using multipart/form-data under <file_attach_name> name.
-     * @link https://core.telegram.org/bots/api#sending-files
+     *
+     * @see https://core.telegram.org/bots/api#sending-files
      *
      * @var string
      */
     public $media;
 
     /**
-     * Optional. Caption of the media to be sent, 0-1024 characters
+     * Optional. Caption of the media to be sent, 0-1024 characters.
      *
      * @var string|null
      */
@@ -47,4 +42,11 @@ class InputMediaType
      * @var string|null
      */
     public $parseMode;
+
+    /**
+     * Type of the result, must be photo.
+     *
+     * @var string
+     */
+    protected $type;
 }

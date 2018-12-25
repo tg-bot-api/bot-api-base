@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class UpdateType
- * @link https://core.telegram.org/bots/api#update
+ * Class UpdateType.
+ *
+ * @see https://core.telegram.org/bots/api#update
  */
 class UpdateType
 {
@@ -16,64 +17,74 @@ class UpdateType
      * repeated updates or to restore the correct update sequence, should they get out of order. If there are
      * no new updates for at least a week, then identifier of the next update will be chosen randomly instead
      * of sequentially.
-     * @var integer
+     *
+     * @var int
      */
     public $updateId;
 
     /**
      * Optional. New incoming message of any kind — text, photo, sticker, etc.
+     *
      * @var MessageType|null
      */
     public $message;
 
     /**
      * Optional. New version of a message that is known to the bot and was edited.
+     *
      * @var MessageType|null
      */
     public $editedMessage;
 
     /**
      * Optional. New incoming channel post of any kind — text, photo, sticker, etc.
+     *
      * @var MessageType|null
      */
     public $channelPost;
 
     /**
      * Optional. New version of a channel post that is known to the bot and was edited.
+     *
      * @var MessageType|null
      */
     public $editedChannelPost;
 
     /**
-     * @link https://core.telegram.org/bots/api#inline-mode
+     * @see https://core.telegram.org/bots/api#inline-mode
      * Optional. New incoming inline query
+     *
      * @var inlineQueryType|null
      */
     public $inlineQuery;
 
     /**
-     * @link https://core.telegram.org/bots/api#inline-mode
-     * @link https://core.telegram.org/bots/inline#collecting-feedback
+     * @see https://core.telegram.org/bots/api#inline-mode
+     * @see https://core.telegram.org/bots/inline#collecting-feedback
      * Optional. The result of an inline query that was chosen by a user and sent to their chat partner.
      * Please see our documentation on the feedback collecting for details on how to enable these updates for your bot.
+     *
      * @var ChosenInlineResultType|null
      */
     public $chosenInlineResult;
 
     /**
-     * Optional. New incoming callback query
+     * Optional. New incoming callback query.
+     *
      * @var CallbackQuery|null
      */
     public $callbackQuery;
 
     /**
-     * Optional. New incoming shipping query. Only for invoices with flexible price
+     * Optional. New incoming shipping query. Only for invoices with flexible price.
+     *
      * @var ShippingQuery|null
      */
     public $shippingQuery;
 
     /**
-     * Optional. New incoming pre-checkout query. Contains full information about checkout
+     * Optional. New incoming pre-checkout query. Contains full information about checkout.
+     *
      * @var PreCheckoutQuery|null
      */
     public $preCheckoutQuery;

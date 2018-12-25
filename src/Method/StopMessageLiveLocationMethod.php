@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -7,8 +8,9 @@ use Greenplugin\TelegramBot\Method\Traits\EditMessageVariablesTrait;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 
 /**
- * Class StopMessageLiveLocationType
- * @link https://core.telegram.org/bots/api#stopmessagelivelocation
+ * Class StopMessageLiveLocationType.
+ *
+ * @see https://core.telegram.org/bots/api#stopmessagelivelocation
  */
 class StopMessageLiveLocationMethod
 {
@@ -17,7 +19,9 @@ class StopMessageLiveLocationMethod
 
     /**
      * StopMessageLiveLocationMethod constructor.
+     *
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct(array $data = null)
@@ -28,28 +32,34 @@ class StopMessageLiveLocationMethod
     }
 
     /**
-     * @param integer|string $chatId
+     * @param int|string $chatId
      * @param array|null $data
-     * @return StopMessageLiveLocationMethod
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return StopMessageLiveLocationMethod
      */
     public static function create($chatId, array $data = null)
     {
         $method = new self($data);
         $method->chatId = $chatId;
+
         return $method;
     }
 
     /**
-     * @param string $inlineMessageId
+     * @param string     $inlineMessageId
      * @param array|null $data
-     * @return StopMessageLiveLocationMethod
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return StopMessageLiveLocationMethod
      */
     public static function createInline(string $inlineMessageId, array $data = null)
     {
         $method = new self($data);
         $method->inlineMessageId = $inlineMessageId;
+
         return $method;
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -6,8 +7,9 @@ namespace Greenplugin\TelegramBot\Method;
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 
 /**
- * Class SetChatTitleMethod
- * @link https://core.telegram.org/bots/api#setchattitle
+ * Class SetChatTitleMethod.
+ *
+ * @see https://core.telegram.org/bots/api#setchattitle
  */
 class SetChatTitleMethod
 {
@@ -22,8 +24,9 @@ class SetChatTitleMethod
 
     /**
      * SetChatTitleMethod constructor.
-     * @param integer|string $chatId
-     * @param string $title
+     *
+     * @param int|string $chatId
+     * @param string     $title
      */
     public function __construct($chatId, string $title)
     {

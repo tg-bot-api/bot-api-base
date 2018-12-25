@@ -1,10 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method\Traits;
 
 /**
- * Trait CaptionVariablesTrait
+ * Trait CaptionVariablesTrait.
  */
 trait CaptionVariablesTrait
 {
@@ -17,7 +18,7 @@ trait CaptionVariablesTrait
     public $parseMode;
 
     /**
-     * Optional. Media caption (may also be used when resending photos by file_id), 0-1024 characters\
+     * Optional. Media caption (may also be used when resending photos by file_id), 0-1024 characters\.
      *
      * @var string|null
      */

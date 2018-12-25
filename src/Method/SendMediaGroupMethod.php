@@ -1,8 +1,8 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
-
 
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
@@ -10,8 +10,9 @@ use Greenplugin\TelegramBot\Type\InputMediaPhotoType;
 use Greenplugin\TelegramBot\Type\InputMediaVideoType;
 
 /**
- * Class SendMediaGroupMethod
- * @link https://core.telegram.org/bots/api#sendmediagroup
+ * Class SendMediaGroupMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendmediagroup
  */
 class SendMediaGroupMethod
 {
@@ -26,9 +27,11 @@ class SendMediaGroupMethod
 
     /**
      * SendGroupMethod constructor.
-     * @param int|string $chatId
+     *
+     * @param int|string                                  $chatId
      * @param InputMediaPhotoType[]|InputMediaVideoType[] $media
-     * @param array|null $data
+     * @param array|null                                  $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, $media, array $data = null)

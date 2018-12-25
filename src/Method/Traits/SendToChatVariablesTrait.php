@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method\Traits;
@@ -9,7 +10,7 @@ use Greenplugin\TelegramBot\Type\ReplyKeyboardMarkupType;
 use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
 
 /**
- * Trait SendMethodVariablesTrait
+ * Trait SendMethodVariablesTrait.
  */
 trait SendToChatVariablesTrait
 {
@@ -18,14 +19,14 @@ trait SendToChatVariablesTrait
     /**
      * Optional. Sends the message silently. Users will receive a notification with no sound.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $disableNotification;
 
     /**
      * Optional. If the message is a reply, ID of the original message.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $replyToMessageId;
 

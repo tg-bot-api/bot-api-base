@@ -1,14 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 
 /**
- * Class InlineKeyboardButtonType
- * @link https://core.telegram.org/bots/api#inlinekeyboardbutton
+ * Class InlineKeyboardButtonType.
+ *
+ * @see https://core.telegram.org/bots/api#inlinekeyboardbutton
  */
 class InlineKeyboardButtonType
 {
@@ -22,14 +23,14 @@ class InlineKeyboardButtonType
     public $text;
 
     /**
-     * Optional. HTTP or tg:// url to be opened when button is pressed
+     * Optional. HTTP or tg:// url to be opened when button is pressed.
      *
      * @var string|null
      */
     public $url;
 
     /**
-     * Optional. Data to be sent in a callback query to the bot when button is pressed, 1-64 bytes
+     * Optional. Data to be sent in a callback query to the bot when button is pressed, 1-64 bytes.
      *
      * @var string|null
      */
@@ -73,14 +74,16 @@ class InlineKeyboardButtonType
      *
      * NOTE: This type of button must always be the first button in the first row.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $pay;
 
     /**
      * InlineKeyboardButtonType constructor.
-     * @param string $text
+     *
+     * @param string     $text
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct(string $text, array $data = null)

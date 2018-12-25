@@ -1,12 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class ResponseParametersType
- * @link https://core.telegram.org/bots/api#responseparameters
+ * Class ResponseParametersType.
+ *
+ * @see https://core.telegram.org/bots/api#responseparameters
  */
 class ResponseParametersType
 {
@@ -16,7 +17,7 @@ class ResponseParametersType
      * defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer or double-precision
      * float type are safe for storing this identifier.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $migrateToChatId;
 
@@ -24,7 +25,7 @@ class ResponseParametersType
      * Optional. In case of exceeding flood control, the number of seconds left to wait before the request
      * can be repeated.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $retryAfter;
 }

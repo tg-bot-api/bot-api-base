@@ -1,10 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
 /**
- * Class GetFileMethod
+ * Class GetFileMethod.
  *
  * Use this method to get basic info about a file and prepare it for downloading.
  * For the moment, bots can download files of up to 20MB in size. On success, a File object is returned.
@@ -16,7 +17,7 @@ namespace Greenplugin\TelegramBot\Method;
  * Note: This function may not preserve the original file name and MIME type.
  * You should save the file's MIME type and name (if available) when the File object is received.
  *
- * @link https://core.telegram.org/bots/api#getfile
+ * @see https://core.telegram.org/bots/api#getfile
  */
 class GetFileMethod
 {
@@ -29,6 +30,7 @@ class GetFileMethod
 
     /**
      * GetFileMethod constructor.
+     *
      * @param string $fileId
      */
     public function __construct(string $fileId)

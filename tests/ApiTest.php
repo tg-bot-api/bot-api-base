@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Greenplugin\TelegramBot;
 
 use Greenplugin\TelegramBot\Method\EditMessageLiveLocationMethod;
@@ -34,20 +36,13 @@ use Greenplugin\TelegramBot\Type\UserType;
 class ApiTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * Test that true does in fact equal true
+     * Test that true does in fact equal true.
      */
     public function testTrueIsTrue()
     {
-
         $botApi = new BotApi(new Stubs\HttpClient(), '');
         $this->assertInstanceOf(BotApiInterface::class, $botApi);
     }
-
-    private function getBotMock()
-    {
-        return $this->getMockBuilder(BotApi::class)->disableOriginalConstructor()->setMethods(['call'])->getMock();
-    }
-
 
     public function testGetMe()
     {
@@ -549,6 +544,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->willReturn(new ChatMemberType());
 
         $bot->getChatMember($method);
+    }
+
+    private function getBotMock()
+    {
+        return $this->getMockBuilder(BotApi::class)->disableOriginalConstructor()->setMethods(['call'])->getMock();
     }
 
     /*

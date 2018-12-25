@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -8,8 +9,9 @@ use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
- * Class SendVideoNoteMethod
- * @link https://core.telegram.org/bots/api#sendvideonote
+ * Class SendVideoNoteMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendvideonote
  */
 class SendVideoNoteMethod
 {
@@ -28,14 +30,14 @@ class SendVideoNoteMethod
     /**
      * Optional. Duration of sent video in seconds.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $duration;
 
     /**
      * Optional. Video width and height, i.e. diameter of the video message.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $length;
 
@@ -53,9 +55,11 @@ class SendVideoNoteMethod
 
     /**
      * SendVideoNoteMethod constructor.
-     * @param int|string $chatId
+     *
+     * @param int|string           $chatId
      * @param InputFileType|string $videoNote
-     * @param array|null $data
+     * @param array|null           $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, $videoNote, array $data = null)

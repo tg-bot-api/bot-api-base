@@ -1,14 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 use phpDocumentor\Reflection\Types\Boolean;
 
 /**
- * Class ChatMemberType
- * @link https://core.telegram.org/bots/api#chatmember
+ * Class ChatMemberType.
+ *
+ * @see https://core.telegram.org/bots/api#chatmember
  */
 class ChatMemberType
 {
@@ -20,7 +21,7 @@ class ChatMemberType
     const STATUS_KICKED = 'kicked';
 
     /**
-     * Information about the user
+     * Information about the user.
      *
      * @var UserType
      */
@@ -36,28 +37,28 @@ class ChatMemberType
     /**
      * Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, unix time.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $untilDate;
 
     /**
      * Optional. Administrators only. True, if the bot is allowed to edit administrator privileges of that user.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canBeEdited;
 
     /**
      * Optional. Administrators only. True, if the administrator can change the chat title, photo and other settings.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canChangeInfo;
 
     /**
      * Optional. Administrators only. True, if the administrator can post in the channel, channels only.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canPostMessages;
 
@@ -65,35 +66,35 @@ class ChatMemberType
      * Optional. Administrators only. True, if the administrator can edit messages of other users
      * and can pin messages, channels only.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canEditMessages;
 
     /**
      * Optional. Administrators only. True, if the administrator can delete messages of other users.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canDeleteMessages;
 
     /**
      * Optional. Administrators only. True, if the administrator can invite new users to the chat.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canInviteUsers;
 
     /**
      * Boolean    Optional. Administrators only. True, if the administrator can restrict, ban or unban chat members.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canRestrictMembers;
 
     /**
      * Boolean    Optional. Administrators only. True, if the administrator can pin messages, supergroups only.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canPinMessages;
 
@@ -102,14 +103,14 @@ class ChatMemberType
      * of his own privileges or demote administrators that he has promoted, directly or indirectly
      * (promoted by administrators that were appointed by the user).
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canPromoteMembers;
 
     /**
      * Optional. Restricted only. True, if the user can send text messages, contacts, locations and venues.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canSendMessages;
 
@@ -117,7 +118,7 @@ class ChatMemberType
      * Optional. Restricted only. True, if the user can send audios, documents, photos, videos,
      * video notes and voice notes, implies can_send_messages.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canSendMediaMessages;
 
@@ -125,7 +126,7 @@ class ChatMemberType
      * Optional. Restricted only. True, if the user can send animations, games, stickers and use inline bots,
      * implies can_send_media_messages.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canSendOthersMessages;
 
@@ -133,8 +134,7 @@ class ChatMemberType
      * Optional. Restricted only. True, if user may add web page previews to his messages,
      * implies can_send_media_messages.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canAddWebPagePreviews;
-
 }

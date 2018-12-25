@@ -1,12 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class InputMediaVideoType
- * @package Greenplugin\TelegramBot\Type
+ * Class InputMediaVideoType.
  */
 class InputMediaVideoType extends InputMediaType
 {
@@ -23,26 +22,30 @@ class InputMediaVideoType extends InputMediaType
     public $thumb;
 
     /**
-     * Optional. Video width
-     * @var integer|null
+     * Optional. Video width.
+     *
+     * @var int|null
      */
     public $width;
 
     /**
-     * Optional. Video height
-     * @var integer|null
+     * Optional. Video height.
+     *
+     * @var int|null
      */
     public $height;
 
     /**
-     * Optional. Video duration
-     * @var integer|null
+     * Optional. Video duration.
+     *
+     * @var int|null
      */
     public $duration;
 
     /**
-     * Optional. Pass True, if the uploaded video is suitable for streaming
-     * @var boolean|null
+     * Optional. Pass True, if the uploaded video is suitable for streaming.
+     *
+     * @var bool|null
      */
     public $supportStreaming;
 

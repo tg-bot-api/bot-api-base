@@ -1,15 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
 
 /**
- * Class PromoteChatMemberMethod
- * @package Greenplugin\TelegramBot\Method
+ * Class PromoteChatMemberMethod.
  */
 class PromoteChatMemberMethod
 {
@@ -20,66 +20,68 @@ class PromoteChatMemberMethod
     /**
      * Optional. Pass True, if the administrator can change chat title, photo and other settings.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canChangeInfo;
 
     /**
      * Optional. Pass True, if the administrator can create channel posts, channels only.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canPostMessages;
 
     /**
      * Optional. Pass True, if the administrator can edit messages of other users and can pin messages, channels only.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canEditMessages;
 
     /**
      * Optional. Pass True, if the administrator can delete messages of other users.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canDeleteMessages;
 
     /**
      * Optional. Pass True, if the administrator can invite new users to the chat.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canInviteUsers;
 
     /**
      * Optional. Pass True, if the administrator can restrict, ban or unban chat members.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canRestrictMembers;
 
     /**
      * Optional. Pass True, if the administrator can pin messages, supergroups only.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canPinMessages;
 
     /**
      * Optional. Pass True, if the administrator can add new administrators with a subset of his own privileges
      * or demote administrators that he has promoted, directly or indirectly
-     * (promoted by administrators that were appointed by him)
+     * (promoted by administrators that were appointed by him).
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canPromoteMembers;
 
     /**
      * PromoteChatMemberMethod constructor.
+     *
      * @param $chatId
      * @param $userId
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, $userId, array $data = null)

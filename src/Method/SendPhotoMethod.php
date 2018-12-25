@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -10,8 +11,9 @@ use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
- * Class SendPhotoMethod
- * @link https://core.telegram.org/bots/api#sendphoto
+ * Class SendPhotoMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendphoto
  */
 class SendPhotoMethod implements HasParseModeVariableInterface
 {
@@ -30,9 +32,11 @@ class SendPhotoMethod implements HasParseModeVariableInterface
 
     /**
      * SendPhotoMethod constructor.
-     * @param int|string $chatId
+     *
+     * @param int|string           $chatId
      * @param InputFileType|string $photo
-     * @param array|null $data
+     * @param array|null           $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, $photo, array $data = null)

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -6,13 +7,13 @@ namespace Greenplugin\TelegramBot\Method;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 
 /**
- * Class AnswerCallbackQueryMethod
+ * Class AnswerCallbackQueryMethod.
  *
  * Use this method to send answers to callback queries sent from inline keyboards.
  * The answer will be displayed to the user as a notification at the top of the chat screen or as an alert.
  * On success, True is returned.
  *
- * @link https://core.telegram.org/bots/api#answercallbackquery
+ * @see https://core.telegram.org/bots/api#answercallbackquery
  */
 class AnswerCallbackQueryMethod
 {
@@ -25,7 +26,7 @@ class AnswerCallbackQueryMethod
     public $callbackQueryId;
 
     /**
-     * Optional. Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters
+     * Optional. Text of the notification. If not specified, nothing will be shown to the user, 0-200 characters.
      *
      * @var string|null
      */
@@ -35,7 +36,7 @@ class AnswerCallbackQueryMethod
      * Optional. If true, an alert will be shown by the client instead of a notification at the top of the chat screen.
      * Defaults to false.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $showAlert;
 
@@ -55,13 +56,14 @@ class AnswerCallbackQueryMethod
      * Optional. The maximum amount of time in seconds that the result of the callback query may be cached client-side.
      * Telegram apps will support caching starting in version 3.14. Defaults to 0.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $cacheTime;
 
     /**
-     * @param  string $callbackQueryId
+     * @param string     $callbackQueryId
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct(string $callbackQueryId, array $data = null)

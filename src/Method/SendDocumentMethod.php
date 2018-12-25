@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -10,8 +11,9 @@ use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
- * Class SendDocumentMethod
- * @link https://core.telegram.org/bots/api#senddocument
+ * Class SendDocumentMethod.
+ *
+ * @see https://core.telegram.org/bots/api#senddocument
  */
 class SendDocumentMethod implements HasParseModeVariableInterface
 {
@@ -32,7 +34,7 @@ class SendDocumentMethod implements HasParseModeVariableInterface
      * A thumbnail‘s width and height should not exceed 90.
      * Ignored if the file is not uploaded using multipart/form-data.
      * Thumbnails can’t be reused and can be only uploaded as a new file, so you can pass “attach://<file_attach_name>”
-     * if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More info on Sending Files »
+     * if the thumbnail was uploaded using multipart/form-data under <file_attach_name>. More info on Sending Files ».
      *
      * @var InputFileType|string|null
      */
@@ -40,9 +42,11 @@ class SendDocumentMethod implements HasParseModeVariableInterface
 
     /**
      * SendDocumentMethod constructor.
-     * @param int|string $chatId
+     *
+     * @param int|string           $chatId
      * @param InputFileType|string $document
-     * @param array|null $data
+     * @param array|null           $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, $document, array $data = null)

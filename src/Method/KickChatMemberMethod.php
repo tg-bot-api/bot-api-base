@@ -1,15 +1,17 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
 
 /**
- * Class KickChatMemberMethod
- * @link https://core.telegram.org/bots/api#kickchatmember
+ * Class KickChatMemberMethod.
+ *
+ * @see https://core.telegram.org/bots/api#kickchatmember
  */
 class KickChatMemberMethod
 {
@@ -21,15 +23,17 @@ class KickChatMemberMethod
      * If user is banned for more than 366 days or less than 30 seconds
      * from the current time they are considered to be banned forever.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $untilDate;
 
     /**
      * KickChatMemberMethod constructor.
+     *
      * @param int|string $chatId
-     * @param int $userId
+     * @param int        $userId
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, int $userId, array $data = null)

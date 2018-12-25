@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -7,8 +8,9 @@ use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
 
 /**
- * Class UnbanChatMemberMethod
- * @link https://core.telegram.org/bots/api#unbanchatmember
+ * Class UnbanChatMemberMethod.
+ *
+ * @see https://core.telegram.org/bots/api#unbanchatmember
  */
 class UnbanChatMemberMethod
 {
@@ -17,8 +19,9 @@ class UnbanChatMemberMethod
 
     /**
      * UnbanChatMemberMethod constructor.
+     *
      * @param int|string $chatId
-     * @param int $userId
+     * @param int        $userId
      */
     public function __construct($chatId, int $userId)
     {

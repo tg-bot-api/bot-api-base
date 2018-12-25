@@ -1,10 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method\Interfaces;
 
 /**
- * Interface HasCaptionVariableInterface
+ * Interface HasCaptionVariableInterface.
  */
 interface HasParseModeVariableInterface
 {

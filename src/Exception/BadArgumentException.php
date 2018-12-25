@@ -1,12 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Exception;
 
 /**
- * Class BadArgumentException
+ * Class BadArgumentException.
  */
 class BadArgumentException extends \Exception
 {
-
 }

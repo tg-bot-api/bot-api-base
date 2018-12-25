@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -7,8 +8,9 @@ use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 
 /**
- * Class SendLocationMethod
- * @link https://core.telegram.org/bots/api#sendlocation
+ * Class SendLocationMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendlocation
  */
 class SendLocationMethod
 {
@@ -23,7 +25,7 @@ class SendLocationMethod
     public $latitude;
 
     /**
-     * Longitude of the location
+     * Longitude of the location.
      *
      * @var float
      */
@@ -32,16 +34,18 @@ class SendLocationMethod
     /**
      * Period in seconds for which the location will be updated (see Live Locations, should be between 60 and 86400.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $livePeriod;
 
     /**
      * SendGroupMethod constructor.
+     *
      * @param int|string $chatId
-     * @param float $latitude
-     * @param float $longitude
+     * @param float      $latitude
+     * @param float      $longitude
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, float $latitude, float $longitude, array $data = null)

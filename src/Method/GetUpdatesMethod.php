@@ -1,14 +1,15 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use phpDocumentor\Reflection\Types\Integer;
 
 /**
- * Class GetUpdatesMethod
- * @link https://core.telegram.org/bots/api#getupdates
+ * Class GetUpdatesMethod.
+ *
+ * @see https://core.telegram.org/bots/api#getupdates
  */
 class GetUpdatesMethod
 {
@@ -31,14 +32,14 @@ class GetUpdatesMethod
      * The negative offset can be specified to retrieve updates starting from -offset update
      * from the end of the updates queue. All previous updates will forgotten.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $offset;
 
     /**
      * Optional. Limits the number of updates to be retrieved. Values between 1—100 are accepted. Defaults to 100.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $limit;
 
@@ -46,7 +47,7 @@ class GetUpdatesMethod
      * Optional. Timeout in seconds for long polling. Defaults to 0, i.e. usual short polling.
      * Should be positive, short polling should be used for testing purposes only.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $timeout;
 
@@ -67,7 +68,9 @@ class GetUpdatesMethod
 
     /**
      * GetUpdatesMethod constructor.
+     *
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct(array $data = null)

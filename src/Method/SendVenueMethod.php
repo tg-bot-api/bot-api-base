@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -7,8 +8,7 @@ use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 
 /**
- * Class SendVenueMethod
- * @package Greenplugin\TelegramBot\Method
+ * Class SendVenueMethod.
  */
 class SendVenueMethod
 {
@@ -23,7 +23,7 @@ class SendVenueMethod
     public $latitude;
 
     /**
-     * Longitude of the venue
+     * Longitude of the venue.
      *
      * @var float
      */
@@ -52,21 +52,22 @@ class SendVenueMethod
 
     /**
      * Optional. Foursquare type of the venue, if known.
-     * (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.)
+     * (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.).
      *
      * @var string|null
      */
     public $foursquareType;
 
-
     /**
      * SendVenueMethod constructor.
+     *
      * @param int|string $chatId
-     * @param float $latitude
-     * @param float $longitude
-     * @param string $title
-     * @param string $address
+     * @param float      $latitude
+     * @param float      $longitude
+     * @param string     $title
+     * @param string     $address
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, float $latitude, float $longitude, string $title, $address, array $data = null)

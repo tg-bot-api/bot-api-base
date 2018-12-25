@@ -1,12 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class InputMediaDocumentType
- * @link https://core.telegram.org/bots/api#inputmediadocument
+ * Class InputMediaDocumentType.
+ *
+ * @see https://core.telegram.org/bots/api#inputmediadocument
  */
 class InputMediaDocumentType extends InputMediaType
 {

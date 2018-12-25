@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method\Traits;
@@ -9,21 +10,21 @@ use Greenplugin\TelegramBot\Type\ReplyKeyboardMarkupType;
 use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
 
 /**
- * Trait EditVariablesTrait
+ * Trait EditVariablesTrait.
  */
 trait EditMessageVariablesTrait
 {
     /**
-     * Unique identifier for the target chat or username of the target channel (in the format @channelusername)
+     * Unique identifier for the target chat or username of the target channel (in the format @channelusername).
      *
-     * @var integer|string|null
+     * @var int|string|null
      */
     public $chatId;
 
     /**
      * Optional. Required if inline_message_id is not specified. Identifier of the sent message.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $messageId;
 

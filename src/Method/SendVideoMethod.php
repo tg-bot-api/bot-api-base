@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -10,8 +11,9 @@ use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
- * Class SendVideoMethod
- * @link https://core.telegram.org/bots/api#sendvideo
+ * Class SendVideoMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendvideo
  */
 class SendVideoMethod implements HasParseModeVariableInterface
 {
@@ -31,21 +33,21 @@ class SendVideoMethod implements HasParseModeVariableInterface
     /**
      * Optional. Duration of sent video in seconds.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $duration;
 
     /**
      * Optional. Video width.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $width;
 
     /**
      * Optional. Video height.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $height;
 
@@ -63,15 +65,17 @@ class SendVideoMethod implements HasParseModeVariableInterface
     /**
      * Optional. Pass True, if the uploaded video is suitable for streaming.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $supportStreaming;
 
     /**
      * SendVideoMethod constructor.
-     * @param int|string $chatId
+     *
+     * @param int|string           $chatId
      * @param InputFileType|string $video
-     * @param array|null $data
+     * @param array|null           $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, $video, array $data = null)

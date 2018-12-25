@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -7,8 +8,9 @@ use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
 
 /**
- * Class SendContactMethod
- * @link https://core.telegram.org/bots/api#sendcontact
+ * Class SendContactMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendcontact
  */
 class SendContactMethod
 {
@@ -45,10 +47,12 @@ class SendContactMethod
 
     /**
      * SendContactMethod constructor.
+     *
      * @param int|string $chatId
-     * @param string $phoneNumber
-     * @param string $firstName
+     * @param string     $phoneNumber
+     * @param string     $firstName
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, string $phoneNumber, string $firstName, array $data = null)

@@ -1,11 +1,12 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class ReplyKeyboardRemoveType
+ * Class ReplyKeyboardRemoveType.
+ *
  * @plink https://core.telegram.org/bots/api#replykeyboardremove
  */
 class ReplyKeyboardRemoveType
@@ -15,7 +16,8 @@ class ReplyKeyboardRemoveType
      * Requests clients to remove the custom keyboard (user will not be able to summon this keyboard;
      * if you want to hide the keyboard from sight but keep it accessible,
      * use one_time_keyboard in ReplyKeyboardMarkup).
-     * @var boolean
+     *
+     * @var bool
      */
     public $removeKeyboard;
 
@@ -26,7 +28,8 @@ class ReplyKeyboardRemoveType
      *
      * Example: A user votes in a poll, bot returns confirmation message in reply to the vote and removes
      * the keyboard for that user, while still showing the keyboard with poll options to users who haven't voted yet.
-     * @var boolean|null
+     *
+     * @var bool|null
      */
     public $selective;
 }

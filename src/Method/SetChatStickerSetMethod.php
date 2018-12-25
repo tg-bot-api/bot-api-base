@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -6,8 +7,9 @@ namespace Greenplugin\TelegramBot\Method;
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 
 /**
- * Class SetChatStickerSetMethod
- * @link https://core.telegram.org/bots/api#setchatstickerset
+ * Class SetChatStickerSetMethod.
+ *
+ * @see https://core.telegram.org/bots/api#setchatstickerset
  */
 class SetChatStickerSetMethod
 {
@@ -22,8 +24,9 @@ class SetChatStickerSetMethod
 
     /**
      * SetChatStickerSetMethod constructor.
+     *
      * @param int|string $chatId
-     * @param string $stickerSetName
+     * @param string     $stickerSetName
      */
     public function __construct($chatId, string $stickerSetName)
     {

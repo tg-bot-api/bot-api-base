@@ -1,8 +1,8 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
-
 
 /**
  * Class CallbackQueryType
@@ -11,11 +11,10 @@ namespace Greenplugin\TelegramBot\Type;
  * will be present. If the button was attached to a message sent via the bot (in inline mode), the field
  * inline_message_id will be present. Exactly one of the fields data or game_short_name will be present.
  *
- * @link https://core.telegram.org/bots/api#callbackquery
+ * @see https://core.telegram.org/bots/api#callbackquery
  */
 class CallbackQueryType
 {
-
     /**
      * Unique identifier for this query.
      *
@@ -24,7 +23,7 @@ class CallbackQueryType
     public $id;
 
     /**
-     * Sender
+     * Sender.
      *
      * @var UserType
      */
@@ -62,10 +61,9 @@ class CallbackQueryType
     public $data;
 
     /**
-     * Optional. Short name of a Game to be returned, serves as the unique identifier for the game
+     * Optional. Short name of a Game to be returned, serves as the unique identifier for the game.
      *
      * @var string|null
      */
     public $gameShortGame;
-
 }

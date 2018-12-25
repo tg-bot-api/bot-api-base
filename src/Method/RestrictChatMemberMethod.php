@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -8,8 +9,9 @@ use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
 
 /**
- * Class RestrictChatMemberMethod
- * @link https://core.telegram.org/bots/api#restrictchatmember
+ * Class RestrictChatMemberMethod.
+ *
+ * @see https://core.telegram.org/bots/api#restrictchatmember
  */
 class RestrictChatMemberMethod
 {
@@ -22,45 +24,47 @@ class RestrictChatMemberMethod
      * If user is banned for more than 366 days or less than 30 seconds
      * from the current time they are considered to be banned forever.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $untilDate;
 
     /**
      * Optional. Pass True, if the user can send text messages, contacts, locations and venues.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canSendMessages;
 
     /**
      * Optional. Pass True, if the user can send audios, documents, photos, videos, video notes and voice notes,
-     * implies can_send_messages
+     * implies can_send_messages.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canSendMediaMessages;
 
     /**
      * Optional. Pass True, if the user can send animations, games, stickers and use inline bots,
-     * implies can_send_media_messages
+     * implies can_send_media_messages.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canSendOtherMessages;
 
     /**
-     * Optional. Pass True, if the user may add web page previews to their messages, implies can_send_media_messages
+     * Optional. Pass True, if the user may add web page previews to their messages, implies can_send_media_messages.
      *
-     * @var boolean|null
+     * @var bool|null
      */
     public $canAddWebPagePreview;
 
     /**
      * RestrictChatMemberMethod constructor.
+     *
      * @param $chatId
-     * @param int $userId
+     * @param int        $userId
      * @param array|null $data
+     *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
     public function __construct($chatId, int $userId, array $data = null)

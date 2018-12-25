@@ -1,9 +1,8 @@
 <?php
 
+declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Stubs;
-
-use Psr\Http\Client\ClientInterface;
 
 class HttpClient implements \Greenplugin\TelegramBot\HttpClientInterface
 {

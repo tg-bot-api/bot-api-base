@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
@@ -6,8 +7,9 @@ namespace Greenplugin\TelegramBot\Method;
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 
 /**
- * Class LeaveChatMethod
- * @link https://core.telegram.org/bots/api#leavechat
+ * Class LeaveChatMethod.
+ *
+ * @see https://core.telegram.org/bots/api#leavechat
  */
 class LeaveChatMethod
 {
@@ -15,7 +17,9 @@ class LeaveChatMethod
 
     /**
      * LeaveChatMethod constructor.
-     * @param integer|string
+     *
+     * @param int|string
+     * @param mixed $chatId
      */
     public function __construct($chatId)
     {

@@ -1,12 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class InputMediaAudioType
- * @link https://core.telegram.org/bots/api#inputmediaaudio
+ * Class InputMediaAudioType.
+ *
+ * @see https://core.telegram.org/bots/api#inputmediaaudio
  */
 class InputMediaAudioType extends InputMediaType
 {
@@ -25,7 +26,7 @@ class InputMediaAudioType extends InputMediaType
     /**
      * Optional. Duration of the audio in seconds.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $duration;
 

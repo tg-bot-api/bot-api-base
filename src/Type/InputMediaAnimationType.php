@@ -1,12 +1,13 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-
 /**
- * Class InputMediaAnimationType
- * @link https://core.telegram.org/bots/api#inputmediaanimation
+ * Class InputMediaAnimationType.
+ *
+ * @see https://core.telegram.org/bots/api#inputmediaanimation
  */
 class InputMediaAnimationType extends InputMediaType
 {
@@ -25,21 +26,21 @@ class InputMediaAnimationType extends InputMediaType
     /**
      * Optional. Animation width.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $width;
 
     /**
      * Optional. Animation height.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $height;
 
     /**
      * Optional. Animation duration.
      *
-     * @var integer|null
+     * @var int|null
      */
     public $duration;
 
