@@ -77,7 +77,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testforwardMessage()
     {
-        $method = new ForwardMessageMethod('id', 'id', 'id');
+        $method = new ForwardMessageMethod('id', 'id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -278,7 +278,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetUserProfilePhotos()
     {
-        $method = new GetUserProfilePhotosMethod('id');
+        $method = new GetUserProfilePhotosMethod(1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -540,7 +540,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChatMember()
     {
-        $method = new GetChatMemberMethod('id', 'id');
+        $method = new GetChatMemberMethod('id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
