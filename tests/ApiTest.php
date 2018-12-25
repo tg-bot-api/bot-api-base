@@ -6,7 +6,6 @@ namespace Greenplugin\TelegramBot\Tests;
 
 use Greenplugin\TelegramBot\BotApi;
 use Greenplugin\TelegramBot\BotApiInterface;
-use Greenplugin\TelegramBot\Method\EditMessageLiveLocationMethod;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
 use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
@@ -15,10 +14,8 @@ use Greenplugin\TelegramBot\Method\GetFileMethod;
 use Greenplugin\TelegramBot\Method\GetMeMethod;
 use Greenplugin\TelegramBot\Method\GetUpdatesMethod;
 use Greenplugin\TelegramBot\Method\GetUserProfilePhotosMethod;
-use Greenplugin\TelegramBot\Method\KickChatMemberMethod;
 use Greenplugin\TelegramBot\Method\SendAnimationMethod;
 use Greenplugin\TelegramBot\Method\SendAudioMethod;
-use Greenplugin\TelegramBot\Method\SendChatActionMethod;
 use Greenplugin\TelegramBot\Method\SendContactMethod;
 use Greenplugin\TelegramBot\Method\SendDocumentMethod;
 use Greenplugin\TelegramBot\Method\SendLocationMethod;
@@ -48,6 +45,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $this->assertInstanceOf(BotApiInterface::class, $botApi);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testGetUpdates()
     {
         $method = new GetUpdatesMethod();
@@ -61,6 +61,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getUpdates($method);
     }
 
+    /**
+     *
+     */
     public function testGetMe()
     {
         $method = new GetMeMethod();
@@ -74,6 +77,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getMe($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendMessage()
     {
         $method = new SendMessageMethod('id', 'text');
@@ -87,6 +93,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendMessage($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testforwardMessage()
     {
         $method = new ForwardMessageMethod('id', 'id', 1);
@@ -100,6 +109,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendForwardMessage($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendPhoto()
     {
         $method = new SendPhotoMethod('id', 'url');
@@ -113,6 +125,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendPhoto($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendAudio()
     {
         $method = new SendAudioMethod('id', 'url');
@@ -126,6 +141,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendAudio($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendDocument()
     {
         $method = new SendDocumentMethod('id', 'url');
@@ -139,6 +157,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendDocument($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendVideo()
     {
         $method = new SendVideoMethod('id', 'url');
@@ -152,6 +173,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendVideo($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendAnimation()
     {
         $method = new SendAnimationMethod('id', 'url');
@@ -165,6 +189,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendAnimation($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendVoice()
     {
         $method = new SendVoiceMethod('id', 'url');
@@ -178,6 +205,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendVoice($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendVideoNote()
     {
         $method = new SendVideoNoteMethod('id', 'url');
@@ -191,6 +221,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendVideoNote($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendMediaGroup()
     {
         $method = new SendMediaGroupMethod('id', []);
@@ -204,6 +237,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendMediaGroup($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendLocation()
     {
         $method = new SendLocationMethod('id', 0.1, 0.1);
@@ -247,6 +283,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendVenue()
     {
         $method = new SendVenueMethod('id', 0.1, 0.1, 'title', 'address');
@@ -260,6 +299,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendVenue($method);
     }
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testSendContact()
     {
         $method = new SendContactMethod('id', 'phone number', 'first name');
@@ -288,6 +330,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     */
     public function testGetUserProfilePhotos()
     {
         $method = new GetUserProfilePhotosMethod(1);
@@ -301,6 +346,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getUserProfilePhotos($method);
     }
 
+    /**
+     *
+     */
     public function testGetFile()
     {
         $method = new GetFileMethod('id');
@@ -509,6 +557,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
+    /**
+     *
+     */
     public function testGetChat()
     {
         $method = new GetChatMethod('id');
@@ -522,6 +573,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getChat($method);
     }
 
+    /**
+     *
+     */
     public function testGetChatAdministrators()
     {
         $method = new GetChatAdministratorsMethod('id');
@@ -550,6 +604,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
+    /**
+     *
+     */
     public function testGetChatMember()
     {
         $method = new GetChatMemberMethod('id', 1);
@@ -563,6 +620,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getChatMember($method);
     }
 
+    /**
+     * @return \PHPUnit\Framework\MockObject\MockObject
+     */
     private function getBotMock()
     {
         return $this->getMockBuilder(BotApi::class)->disableOriginalConstructor()->setMethods(['call'])->getMock();

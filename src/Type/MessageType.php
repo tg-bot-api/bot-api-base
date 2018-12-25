@@ -143,7 +143,8 @@ class MessageType
     public $document;
 
     /**
-     * Optional. Message is an animation, information about the animation. For backward compatibility, when this field is set, the document field will also be set.
+     * Optional. Message is an animation, information about the animation.
+     * For backward compatibility, when this field is set, the document field will also be set.
      *
      * @var AnimationType|null
      */
@@ -304,7 +305,9 @@ class MessageType
     public $migrateFromChat;
 
     /**
-     * Optional. Specified message was pinned. Note that the Message object in this field will not contain further reply_to_message fields even if it is itself a reply.
+     * Optional. Specified message was pinned.
+     * Note that the Message object in this field
+     * will not contain further reply_to_message fields even if it is itself a reply.
      *
      * @var MessageType|null
      */
@@ -318,7 +321,7 @@ class MessageType
      */
     public $invoice;
 
-    //successful_payment	SuccessfulPayment
+    //successful_payment    SuccessfulPayment
     /**
      * @see https://core.telegram.org/bots/api#payments
      * Optional. Message is a service message about a successful payment, information about the payment.

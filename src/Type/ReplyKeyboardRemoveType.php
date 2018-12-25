@@ -11,7 +11,7 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class ReplyKeyboardRemoveType
 {
-    //remove_keyboard	True
+    //remove_keyboard   True
     /**
      * Requests clients to remove the custom keyboard (user will not be able to summon this keyboard;
      * if you want to hide the keyboard from sight but keep it accessible,

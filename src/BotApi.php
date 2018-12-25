@@ -53,8 +53,8 @@ class BotApi implements BotApiInterface
      * Create a new Skeleton Instance.
      *
      * @param HttpClientInterface $httpClient
-     * @param string              $key
-     * @param string              $endPoint
+     * @param string $key
+     * @param string $endPoint
      */
     public function __construct(HttpClientInterface $httpClient, string $key, string $endPoint = 'https://api.telegram.org/bot')
     {
@@ -74,7 +74,7 @@ class BotApi implements BotApiInterface
     public function call($method, $type)
     {
         $data = $this->encode($method);
-        $json = $this->httpClient->post($this->endPoint.$this->key.'/'.$this->getMethodName($method), $data);
+        $json = $this->httpClient->post($this->endPoint . $this->key . '/' . $this->getMethodName($method), $data);
 
         if (true !== $json->ok) {
             throw new ResponseException($json->description);
@@ -92,7 +92,7 @@ class BotApi implements BotApiInterface
      */
     public function getUpdates(GetUpdatesMethod $method): array
     {
-        return $this->call($method, UpdateType::class.'[]');
+        return $this->call($method, UpdateType::class . '[]');
     }
 
     /**
@@ -224,7 +224,7 @@ class BotApi implements BotApiInterface
      */
     public function sendMediaGroup(SendMediaGroupMethod $method): array
     {
-        return $this->call($method, MessageType::class.'[]');
+        return $this->call($method, MessageType::class . '[]');
     }
 
     /**
@@ -308,7 +308,7 @@ class BotApi implements BotApiInterface
      */
     public function getChatAdministrators(GetChatAdministratorsMethod $method): array
     {
-        return $this->call($method, ChatMemberType::class.'[]');
+        return $this->call($method, ChatMemberType::class . '[]');
     }
 
     /**
@@ -339,7 +339,8 @@ class BotApi implements BotApiInterface
             new PhpDocExtractor(),
             null,
             null,
-            [ObjectNormalizer::CALLBACKS => $callbacks]);
+            [ObjectNormalizer::CALLBACKS => $callbacks]
+        );
 
         $serializer = new Serializer([$normalizer, new ArrayDenormalizer()]);
 
@@ -356,7 +357,8 @@ class BotApi implements BotApiInterface
             null,
             null,
             null,
-            [ObjectNormalizer::CALLBACKS => $callbacks]);
+            [ObjectNormalizer::CALLBACKS => $callbacks]
+        );
 
         $serializer = new Serializer([$normalizer]);
 

@@ -18,11 +18,12 @@
     ],
     "require": {
         "php": ">7.2",
+        "ext-json": "*",
         "kriswallsmith/buzz": "^0.17.2",
+        "php-ds/php-ds": "^1.2",
         "symfony/property-access": "^4.2",
         "symfony/property-info": "^4.2",
-        "symfony/serializer": "^4.2",
-        "ext-json": "*"
+        "symfony/serializer": "^4.2"
     },
     "require-dev": {
         "phpro/grumphp": "^0.14.3",

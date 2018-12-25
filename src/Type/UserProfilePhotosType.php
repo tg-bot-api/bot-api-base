@@ -22,7 +22,7 @@ class UserProfilePhotosType
      * @todo check this field.
      * Requested profile pictures (in up to 4 sizes each)
      *
-     * @var PhotoSizeType[][]
+     * @var PhotoSizeTypeCollection[]
      */
     public $photos;
 }
