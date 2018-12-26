@@ -55,7 +55,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot = $this->getBotMock();
         $bot->expects($this->once())
             ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(UpdateType::class.'[]'))
+            ->with($this->equalTo($method), $this->equalTo(UpdateType::class . '[]'))
             ->willReturn([]);
 
         $bot->getUpdates($method);
@@ -228,7 +228,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot = $this->getBotMock();
         $bot->expects($this->once())
             ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(MessageType::class.'[]'))
+            ->with($this->equalTo($method), $this->equalTo(MessageType::class . '[]'))
             ->willReturn([]);
 
         $bot->sendMediaGroup($method);
@@ -571,7 +571,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot = $this->getBotMock();
         $bot->expects($this->once())
             ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class.'[]'))
+            ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class . '[]'))
             ->willReturn([]);
 
         $bot->getChatAdministrators($method);

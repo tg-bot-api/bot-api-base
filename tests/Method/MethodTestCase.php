@@ -16,7 +16,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 
         $stub->expects($this->once())
             ->method('post')
-            ->with('https://api.telegram.org/bot000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/'.$methodName, $request)
+            ->with('https://api.telegram.org/bot000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/' . $methodName, $request)
             ->willReturn((object) (['ok' => true, 'result' => []]));
 
         return new BotApi($stub, '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
