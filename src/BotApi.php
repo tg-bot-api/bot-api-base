@@ -56,8 +56,11 @@ class BotApi implements BotApiInterface
      * @param string              $key
      * @param string              $endPoint
      */
-    public function __construct(HttpClientInterface $httpClient, string $key, string $endPoint = 'https://api.telegram.org')
-    {
+    public function __construct(
+        HttpClientInterface $httpClient,
+        string $key,
+        string $endPoint = 'https://api.telegram.org'
+    ) {
         $this->httpClient = $httpClient;
         $this->key = $key;
         $this->endPoint = $endPoint;
@@ -74,7 +77,11 @@ class BotApi implements BotApiInterface
     public function call($method, $type)
     {
         $data = $this->encode($method);
-        $json = $this->httpClient->post($this->endPoint . '/bot' . $this->key . '/' . $this->getMethodName($method), $data);
+        $json = $this->httpClient->post(
+            $this->endPoint .
+            '/bot' . $this->key . '/' . $this->getMethodName($method),
+            $data
+        );
 
         if (true !== $json->ok) {
             throw new ResponseException($json->description);
