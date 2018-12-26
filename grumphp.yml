@@ -1,0 +1,76 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    process_async_limit: 10
+    process_async_wait: 1000
+    process_timeout: 600
+    ascii:
+        succeeded: ~
+    tasks:
+        phpcs:
+            standard: []
+            severity: ~
+            error_severity: ~
+            warning_severity: ~
+            tab_width: ~
+            report: full
+            report_width: ~
+            whitelist_patterns: []
+            encoding: ~
+            ignore_patterns: []
+            sniffs: []
+            triggered_by: [php]
+        phpcsfixer2:
+            allow_risky: true
+            cache_file: ~
+            config: .php_cs
+            using_cache: true
+            config_contains_finder: true
+            verbose: true
+            diff: false
+            triggered_by: ['php']
+        phpstan:
+            autoload_file: ~
+            configuration: phpstan.neon
+            level: 0
+            triggered_by: ['php']
+        composer:
+            file: ./composer.json
+            no_check_all: false
+            no_check_lock: false
+            no_check_publish: false
+            with_dependencies: false
+            strict: false
+        phpcpd:
+            directory: '.'
+            exclude: ['vendor']
+            names_exclude: []
+            regexps_exclude: []
+            fuzzy: false
+            min_lines: 5
+            min_tokens: 70
+            triggered_by: ['php']
+        phpmnd:
+            directory: .
+            whitelist_patterns: []
+            exclude: []
+            exclude_name: []
+            exclude_path: ['vendor']
+            extensions: []
+            hint: false
+            ignore_numbers: []
+            ignore_strings: []
+            strings: false
+            triggered_by: ['php']
+        phpunit:
+            config_file: ~
+            testsuite: ~
+            group: []
+            always_execute: false
+        git_blacklist:
+            keywords:
+            - "die"
+            - "var_dump"
+            - "dump"
+            - "exit;"
+            triggered_by: [php]

@@ -4,3 +4,4 @@ vendor
 phpcs.xml
 phpunit.xml
 /.idea
+.php_cs.cache
