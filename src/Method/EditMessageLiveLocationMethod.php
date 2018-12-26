@@ -56,7 +56,7 @@ class EditMessageLiveLocationMethod
      *
      * @return EditMessageLiveLocationMethod
      */
-    public static function create($chatId, float $latitude, float $longitude, array $data = null)
+    public static function create($chatId, float $latitude, float $longitude, array $data = null): EditMessageLiveLocationMethod
     {
         $method = new self($latitude, $longitude, $data);
         $method->chatId = $chatId;
@@ -74,7 +74,7 @@ class EditMessageLiveLocationMethod
      *
      * @return EditMessageLiveLocationMethod
      */
-    public static function createInline(string $inlineMessageId, float $latitude, float $longitude, array $data = null)
+    public static function createInline(string $inlineMessageId, float $latitude, float $longitude, array $data = null): EditMessageLiveLocationMethod
     {
         $method = new self($latitude, $longitude, $data);
         $method->inlineMessageId = $inlineMessageId;

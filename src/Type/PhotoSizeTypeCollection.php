@@ -71,7 +71,7 @@ class PhotoSizeTypeCollection implements \IteratorAggregate, Collection
      *
      * @return \ArrayIterator
      */
-    public function getIterator()
+    public function getIterator(): \ArrayIterator
     {
         return new \ArrayIterator($this->toArray());
     }

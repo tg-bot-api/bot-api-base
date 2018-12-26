@@ -5,10 +5,11 @@
 
     <config name="ignore_warnings_on_exit" value="1" />
     <config name="ignore_errors_on_exit" value="1" />
+    <config name="report_width" value="160" />
+
 
     <arg name="colors" />
     <arg value="s" />
 
-    <!-- Use the PSR2 Standard-->
-    <rule ref="PSR2" />
+    <rule ref="PSR12" />
 </ruleset>

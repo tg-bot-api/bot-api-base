@@ -61,9 +61,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getUpdates($method);
     }
 
-    /**
-     *
-     */
     public function testGetMe()
     {
         $method = new GetMeMethod();
@@ -346,9 +343,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getUserProfilePhotos($method);
     }
 
-    /**
-     *
-     */
     public function testGetFile()
     {
         $method = new GetFileMethod('id');
@@ -557,9 +551,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
-    /**
-     *
-     */
     public function testGetChat()
     {
         $method = new GetChatMethod('id');
@@ -573,9 +564,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getChat($method);
     }
 
-    /**
-     *
-     */
     public function testGetChatAdministrators()
     {
         $method = new GetChatAdministratorsMethod('id');
@@ -604,9 +592,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
-    /**
-     *
-     */
     public function testGetChatMember()
     {
         $method = new GetChatMemberMethod('id', 1);
@@ -623,7 +608,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     /**
      * @return \PHPUnit\Framework\MockObject\MockObject
      */
-    private function getBotMock()
+    private function getBotMock(): \PHPUnit\Framework\MockObject\MockObject
     {
         return $this->getMockBuilder(BotApi::class)->disableOriginalConstructor()->setMethods(['call'])->getMock();
     }

@@ -39,7 +39,7 @@ class StopMessageLiveLocationMethod
      *
      * @return StopMessageLiveLocationMethod
      */
-    public static function create($chatId, array $data = null)
+    public static function create($chatId, array $data = null): StopMessageLiveLocationMethod
     {
         $method = new self($data);
         $method->chatId = $chatId;
@@ -55,7 +55,7 @@ class StopMessageLiveLocationMethod
      *
      * @return StopMessageLiveLocationMethod
      */
-    public static function createInline(string $inlineMessageId, array $data = null)
+    public static function createInline(string $inlineMessageId, array $data = null): StopMessageLiveLocationMethod
     {
         $method = new self($data);
         $method->inlineMessageId = $inlineMessageId;

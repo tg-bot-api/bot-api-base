@@ -32,7 +32,7 @@
         "phpunit/phpunit": "~7.5.1",
         "povils/phpmnd": "^2.0",
         "sebastian/phpcpd": "^4.1",
-        "squizlabs/php_codesniffer": "^3.0"
+        "squizlabs/php_codesniffer": "^3.4"
     },
     "autoload": {
         "psr-4": {

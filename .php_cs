@@ -1,7 +1,6 @@
 <?php
 
 $finder = PhpCsFixer\Finder::create()
-    ->exclude('app/propel/migrations')
     ->in(__DIR__)
 ;
 
@@ -11,10 +10,14 @@ return PhpCsFixer\Config::create()
         'declare_strict_types' => true,
         'phpdoc_add_missing_param_annotation' => ['only_untyped' => false],
         'array_syntax' => ['syntax' => 'short'],
+        'date_time_immutable' => true,
         'ordered_class_elements' => true,
         'ordered_imports' => true,
         'phpdoc_order' => true,
+        'phpdoc_to_return_type' => true,
         'psr4' => true,
+        'heredoc_to_nowdoc' => true,
+        'logical_operators' => true,
         'random_api_migration' => true,
         'simplified_null_return' => true,
         'strict_comparison' => true,
@@ -23,7 +26,8 @@ return PhpCsFixer\Config::create()
         'visibility_required' => true,
         'general_phpdoc_annotation_remove' => ['annotations' => ['author']],
         'native_function_invocation' => true,
-        'no_useless_return' => true
+        'no_useless_return' => true,
+        'concat_space' => false,
     ])
     ->setFinder($finder)
 ;

@@ -53,8 +53,8 @@ class BotApi implements BotApiInterface
      * Create a new Skeleton Instance.
      *
      * @param HttpClientInterface $httpClient
-     * @param string $key
-     * @param string $endPoint
+     * @param string              $key
+     * @param string              $endPoint
      */
     public function __construct(HttpClientInterface $httpClient, string $key, string $endPoint = 'https://api.telegram.org/bot')
     {
@@ -68,8 +68,6 @@ class BotApi implements BotApiInterface
      * @param $type
      *
      * @throws ResponseException
-     *
-     * @return object
      */
     public function call($method, $type)
     {
