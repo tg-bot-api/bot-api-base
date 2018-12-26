@@ -56,7 +56,7 @@ class BotApi implements BotApiInterface
      * @param string              $key
      * @param string              $endPoint
      */
-    public function __construct(HttpClientInterface $httpClient, string $key, string $endPoint = 'https://api.telegram.org/bot')
+    public function __construct(HttpClientInterface $httpClient, string $key, string $endPoint = 'https://api.telegram.org')
     {
         $this->httpClient = $httpClient;
         $this->key = $key;
@@ -68,11 +68,13 @@ class BotApi implements BotApiInterface
      * @param $type
      *
      * @throws ResponseException
+     *
+     * @return mixed
      */
     public function call($method, $type)
     {
         $data = $this->encode($method);
-        $json = $this->httpClient->post($this->endPoint . $this->key . '/' . $this->getMethodName($method), $data);
+        $json = $this->httpClient->post($this->endPoint . '/bot' . $this->key . '/' . $this->getMethodName($method), $data);
 
         if (true !== $json->ok) {
             throw new ResponseException($json->description);
@@ -274,6 +276,8 @@ class BotApi implements BotApiInterface
     }
 
     /**
+     * @todo fix this is bad
+     *
      * @param GetFileMethod $method
      *
      * @throws ResponseException
@@ -283,6 +287,16 @@ class BotApi implements BotApiInterface
     public function getFile(GetFileMethod $method): FileType
     {
         return $this->call($method, FileType::class);
+    }
+
+    /**
+     * @param FileType $file
+     *
+     * @return string
+     */
+    public function getAbsoluteFilePath(FileType $file): string
+    {
+        return \sprintf('%s/file/bot%s/%s', $this->endPoint, $this->key, $file->filePath);
     }
 
     /**
@@ -314,7 +328,7 @@ class BotApi implements BotApiInterface
      *
      * @throws ResponseException
      *
-     * @return ChatMemberType[]
+     * @return ChatMemberType
      */
     public function getChatMember(GetChatMemberMethod $method): ChatMemberType
     {
