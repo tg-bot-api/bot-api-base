@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
@@ -7,8 +8,7 @@ use Ds\Collection;
 use Ds\Traits\GenericCollection;
 
 /**
- * Class PhotoSizeTypeCollection
- * @package Greenplugin\TelegramBot\Type
+ * Class PhotoSizeTypeCollection.
  */
 class PhotoSizeTypeCollection implements \IteratorAggregate, Collection
 {
@@ -17,15 +17,19 @@ class PhotoSizeTypeCollection implements \IteratorAggregate, Collection
     /**
      * @var PhotoSizeType[]
      */
-    private $photoSizeTypes;
+    private $photoSizeTypes = [];
 
     /**
-     * PhotoSizeTypeCollection constructor.
-     * @param PhotoSizeType[] $photoSizeTypes
+     * @todo fix collection denormalization.
+     *
+     * @param int           $name
+     * @param PhotoSizeType $value
+     *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
-    public function __construct(array $photoSizeTypes)
+    public function __set($name, $value)
     {
-        $this->photoSizeTypes = $photoSizeTypes;
+        $this->photoSizeTypes[$name] = new PhotoSizeType(\get_object_vars($value));
     }
 
     /**
@@ -34,6 +38,7 @@ class PhotoSizeTypeCollection implements \IteratorAggregate, Collection
     public function clear()
     {
         $this->photoSizeTypes = [];
+
         return $this->photoSizeTypes;
     }
 
@@ -44,7 +49,7 @@ class PhotoSizeTypeCollection implements \IteratorAggregate, Collection
      */
     public function count(): int
     {
-        return count($this->photoSizeTypes);
+        return \count($this->photoSizeTypes);
     }
 
     /**
@@ -62,11 +67,9 @@ class PhotoSizeTypeCollection implements \IteratorAggregate, Collection
     }
 
     /**
-     * Retrieve an external iterator
-     * @link https://php.net/manual/en/iteratoraggregate.getiterator.php
-     * @return \ArrayIterator An instance of an object implementing <b>Iterator</b> or
-     * <b>Traversable</b>
-     * @since 5.0.0
+     * Retrieve an external iterator.
+     *
+     * @return \ArrayIterator
      */
     public function getIterator()
     {

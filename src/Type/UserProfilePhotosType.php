@@ -19,7 +19,7 @@ class UserProfilePhotosType
     public $totalCount;
 
     /**
-     * @todo check this field.
+     * @todo fix collection denormalization.
      * Requested profile pictures (in up to 4 sizes each)
      *
      * @var PhotoSizeTypeCollection[]
