@@ -16,14 +16,28 @@ class InputFileType
      * in the usual way that files are uploaded via the browser.
      */
 
+    /**
+     * @var false|string
+     */
     public $path;
+    /**
+     * @var string
+     */
     public $filename;
+    /**
+     * @var string
+     */
     public $contentType;
 
+    /**
+     * InputFileType constructor.
+     *
+     * @param \SplFileInfo $file
+     */
     public function __construct(\SplFileInfo $file)
     {
         $this->path = $file->getRealPath();
         $this->filename = $file->getFilename();
-        $this->contentType = mime_content_type($this->path);
+        $this->contentType = \mime_content_type($this->path);
     }
 }
