@@ -33,6 +33,7 @@ use Greenplugin\TelegramBot\Type\UpdateType;
 use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
 use Greenplugin\TelegramBot\Type\UserType;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -77,7 +78,15 @@ class BotApi implements BotApiInterface
     public function call($method, $type)
     {
         $data = $this->encode($method);
+
+        /*
         $json = $this->httpClient->post(
+            $this->endPoint .
+            '/bot' . $this->key . '/' . $this->getMethodName($method),
+            $data
+        );*/
+
+        $json = $this->httpClient->form(
             $this->endPoint .
             '/bot' . $this->key . '/' . $this->getMethodName($method),
             $data
@@ -368,7 +377,12 @@ class BotApi implements BotApiInterface
 
     private function encode($method)
     {
-        $callbacks = [];
+        $callbacks = ['replyMarkup' => function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = array()) {
+            $normalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
+            $serializer = new Serializer([$normalizer]);
+            return json_encode($serializer->normalize($innerObject, null, ['skip_null_values' => true]));
+        }];
+
         $normalizer = new ObjectNormalizer(
             null,
             new CamelCaseToSnakeCaseNameConverter(),
