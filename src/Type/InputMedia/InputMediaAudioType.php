@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace Greenplugin\TelegramBot\Type\InputMedia;
+
+use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
  * Class InputMediaAudioType.

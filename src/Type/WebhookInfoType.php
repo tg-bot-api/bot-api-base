@@ -33,9 +33,9 @@ class WebhookInfoType
     public $pendingUpdateCount;
 
     /**
-     * Optional. Unix time for the most recent error that happened when trying to deliver an update via webhook.
+     * Optional. DateTimeImmutable for the most recent error that happened when trying to deliver an update via webhook.
      *
-     * @var int|null
+     * @var \DateTimeImmutable|null
      */
     public $lastErrorDate;
 

@@ -9,7 +9,14 @@ use Greenplugin\TelegramBot\BotApi;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {
-    protected function getBot($methodName, $request)
+    /**
+     * @param $methodName
+     * @param $request
+     * @param array $result
+     *
+     * @return BotApi
+     */
+    protected function getBot($methodName, $request, $result = []): BotApi
     {
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
@@ -17,7 +24,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
         $stub->expects($this->once())
             ->method('send')
             ->with($methodName, $request)
-            ->willReturn((object) (['ok' => true, 'result' => []]));
+            ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
     }

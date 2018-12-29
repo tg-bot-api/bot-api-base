@@ -7,7 +7,7 @@ namespace Greenplugin\TelegramBot\Method;
 use Greenplugin\TelegramBot\Method\Traits\EditMessageVariablesTrait;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
-use Greenplugin\TelegramBot\Type\InputMediaType;
+use Greenplugin\TelegramBot\Type\InputMedia\InputMediaType;
 
 /**
  * Class EditMessageMediaMethod.

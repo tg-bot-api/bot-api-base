@@ -13,6 +13,7 @@ use Greenplugin\TelegramBot\Method\GetFileMethod;
 use Greenplugin\TelegramBot\Method\GetMeMethod;
 use Greenplugin\TelegramBot\Method\GetUpdatesMethod;
 use Greenplugin\TelegramBot\Method\GetUserProfilePhotosMethod;
+use Greenplugin\TelegramBot\Method\KickChatMemberMethod;
 use Greenplugin\TelegramBot\Method\SendAnimationMethod;
 use Greenplugin\TelegramBot\Method\SendAudioMethod;
 use Greenplugin\TelegramBot\Method\SendContactMethod;
@@ -354,6 +355,23 @@ class BotApi implements BotApiInterface
         return $this->call($method, ChatMemberType::class);
     }
 
+    /**
+     * @param KickChatMemberMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function kickChatMember(KickChatMemberMethod $method): bool
+    {
+        return $this->call($method, false);
+    }
+
+//    public function answerInlineQuery(AnswerInlineQueryMethod $method)
+//    {
+//        return $this->call($method, '');
+//    }
+
     private function getMethodName($method)
     {
         return \lcfirst(\substr(
@@ -379,7 +397,11 @@ class BotApi implements BotApiInterface
             $arrayNormalizer,
         ]);
 
-        return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
+        if ($type) {
+            return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
+        }
+
+        return $data->result;
     }
 
     private function encode($method)
@@ -391,10 +413,15 @@ class BotApi implements BotApiInterface
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
             new KeyboardNormalizer($objectNormalizer),
+            new DateTimeNormalizer(),
             $objectNormalizer,
         ]);
 
-        $data = $serializer->normalize($method, null, ['skip_null_values' => true]);
+        $data = $serializer->normalize(
+            $method,
+            null,
+            ['skip_null_values' => true, DateTimeNormalizer::FORMAT_KEY => 'U']
+        );
 
         return [$data, $files];
     }

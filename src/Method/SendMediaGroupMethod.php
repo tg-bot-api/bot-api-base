@@ -6,8 +6,8 @@ namespace Greenplugin\TelegramBot\Method;
 
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputMediaPhotoType;
-use Greenplugin\TelegramBot\Type\InputMediaVideoType;
+use Greenplugin\TelegramBot\Type\InputMedia\InputMediaPhotoType;
+use Greenplugin\TelegramBot\Type\InputMedia\InputMediaVideoType;
 
 /**
  * Class SendMediaGroupMethod.
