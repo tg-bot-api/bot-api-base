@@ -90,7 +90,7 @@ class BotApi implements BotApiInterface
      *
      * @return mixed
      */
-    public function call($method, $type)
+    public function call($method, $type = null)
     {
         list($data, $files) = $this->encode($method);
 
@@ -100,7 +100,7 @@ class BotApi implements BotApiInterface
             throw new ResponseException($json->description);
         }
 
-        return $this->denormalize($json, $type);
+        return $type ? $this->denormalize($json, $type) : $json->result;
     }
 
     /**
@@ -364,7 +364,7 @@ class BotApi implements BotApiInterface
      */
     public function kickChatMember(KickChatMemberMethod $method): bool
     {
-        return $this->call($method, false);
+        return $this->call($method);
     }
 
 //    public function answerInlineQuery(AnswerInlineQueryMethod $method)
@@ -397,11 +397,7 @@ class BotApi implements BotApiInterface
             $arrayNormalizer,
         ]);
 
-        if ($type) {
-            return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
-        }
-
-        return $data->result;
+        return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
     }
 
     private function encode($method)
