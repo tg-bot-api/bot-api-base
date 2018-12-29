@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Tests;
 
 use Greenplugin\TelegramBot\BotApi;
-use Greenplugin\TelegramBot\BotApiInterface;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
 use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
@@ -36,15 +35,6 @@ use Greenplugin\TelegramBot\Type\UserType;
 
 class ApiTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * Test that true does in fact equal true.
-     */
-    public function testTrueIsTrue()
-    {
-        $botApi = new BotApi(new Stubs\HttpClient(), '');
-        $this->assertInstanceOf(BotApiInterface::class, $botApi);
-    }
-
     /**
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */

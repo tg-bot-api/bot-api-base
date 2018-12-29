@@ -4,9 +4,6 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
-
 /**
  * Class PhotoSizeType.
  *
@@ -14,7 +11,6 @@ use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter
  */
 class PhotoSizeType
 {
-    use FillFromArrayTrait;
     /**
      * Unique identifier for this file.
      *
@@ -42,19 +38,4 @@ class PhotoSizeType
      * @var int|null
      */
     public $fileSize;
-
-    /**
-     * @todo fix collection denormalization.
-     * UserProfilePhotosType constructor.
-     *
-     * @param array|null $data
-     *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     */
-    public function __construct(array $data = null)
-    {
-        if ($data) {
-            $this->fill($data, null, new CamelCaseToSnakeCaseNameConverter());
-        }
-    }
 }

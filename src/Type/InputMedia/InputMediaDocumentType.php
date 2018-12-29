@@ -2,14 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace Greenplugin\TelegramBot\Type\InputMedia;
+
+use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
- * Class InputMediaAnimationType.
+ * Class InputMediaDocumentType.
  *
- * @see https://core.telegram.org/bots/api#inputmediaanimation
+ * @see https://core.telegram.org/bots/api#inputmediadocument
  */
-class InputMediaAnimationType extends InputMediaType
+class InputMediaDocumentType extends InputMediaType
 {
     /**
      * Optional. Thumbnail of the file sent. The thumbnail should be in JPEG format and less than 200 kB in size.
@@ -24,31 +26,10 @@ class InputMediaAnimationType extends InputMediaType
     public $thumb;
 
     /**
-     * Optional. Animation width.
-     *
-     * @var int|null
-     */
-    public $width;
-
-    /**
-     * Optional. Animation height.
-     *
-     * @var int|null
-     */
-    public $height;
-
-    /**
-     * Optional. Animation duration.
-     *
-     * @var int|null
-     */
-    public $duration;
-
-    /**
-     * InputMediaAnimationType constructor.
+     * InputMediaDocumentType constructor.
      */
     public function __construct()
     {
-        $this->type = self::TYPE_ANIMATION;
+        $this->type = self::TYPE_DOCUMENT;
     }
 }

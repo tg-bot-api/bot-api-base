@@ -20,11 +20,11 @@ class RestrictChatMemberMethod
     use UserIdVariableTrait;
 
     /**
-     * Optional. Date when the user will be unbanned, unix time.
+     * Optional. Date when the user will be unbanned, DateTimeInterface.
      * If user is banned for more than 366 days or less than 30 seconds
      * from the current time they are considered to be banned forever.
      *
-     * @var int|null
+     * @var \DateTimeInterface|null
      */
     public $untilDate;
 

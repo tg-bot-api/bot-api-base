@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
-use phpDocumentor\Reflection\Types\Boolean;
-
 /**
  * Class ChatMemberType.
  *
@@ -35,9 +33,9 @@ class ChatMemberType
     public $status;
 
     /**
-     * Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, unix time.
+     * Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, \DateTimeImmutable.
      *
-     * @var int|null
+     * @var \DateTimeImmutable|null
      */
     public $untilDate;
 

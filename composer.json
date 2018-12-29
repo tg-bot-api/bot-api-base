@@ -19,8 +19,9 @@
     "require": {
         "php": ">7.2",
         "ext-json": "*",
-        "kriswallsmith/buzz": "^0.17.2",
-        "php-ds/php-ds": "^1.2",
+        "psr/http-message": "^1.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
         "symfony/property-access": "^4.2",
         "symfony/property-info": "^4.2",
         "symfony/serializer": "^4.2"

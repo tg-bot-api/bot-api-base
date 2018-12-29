@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace Greenplugin\TelegramBot\Type\InputMedia;
 
 /**
  * Class InputMediaType.
  *
  * @see https://core.telegram.org/bots/api#inputmedia
  */
-class InputMediaType
+abstract class InputMediaType
 {
     const TYPE_PHOTO = 'photo';
     const TYPE_VIDEO = 'video';
@@ -24,7 +24,7 @@ class InputMediaType
      *
      * @see https://core.telegram.org/bots/api#sending-files
      *
-     * @var string
+     * @var string|\SplFileInfo
      */
     public $media;
 
@@ -48,5 +48,5 @@ class InputMediaType
      *
      * @var string
      */
-    protected $type;
+    public $type;
 }
