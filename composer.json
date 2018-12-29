@@ -20,16 +20,14 @@
         "php": ">7.2",
         "ext-json": "*",
         "psr/http-message": "^1.0",
-        "psr/http-client": "^0.1",
+        "psr/http-client": "^1.0",
         "psr/http-factory": "^1.0",
-        "php-ds/php-ds": "^1.2",
         "symfony/property-access": "^4.2",
         "symfony/property-info": "^4.2",
         "symfony/serializer": "^4.2"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.13",
-        "kriswallsmith/buzz": "^0.17.2",
         "phpro/grumphp": "^0.14.3",
         "phpstan/phpstan": "^0.10.6",
         "phpunit/phpunit": "~7.5.1",
