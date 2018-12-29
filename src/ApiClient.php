@@ -23,8 +23,11 @@ class ApiClient implements ApiClientInterface
      * @param StreamFactoryInterface  $streamFactory
      * @param ClientInterface         $client
      */
-    public function __construct(RequestFactoryInterface $requestFactory, StreamFactoryInterface $streamFactory, ClientInterface $client)
-    {
+    public function __construct(
+        RequestFactoryInterface $requestFactory,
+        StreamFactoryInterface $streamFactory,
+        ClientInterface $client
+    ) {
         $this->streamFactory = $streamFactory;
         $this->requestFactory = $requestFactory;
         $this->client = $client;
@@ -48,9 +51,8 @@ class ApiClient implements ApiClientInterface
         $stream = $this->streamFactory->createStream($this->createStreamBody($boundary, $data, $files));
 
         $response = $this->client->sendRequest($request
-            ->withHeader('Content-Type', 'multipart/form-data; boundary="'.$boundary.'"')
-            ->withBody($stream)
-        );
+            ->withHeader('Content-Type', 'multipart/form-data; boundary="' . $boundary . '"')
+            ->withBody($stream));
 
         $content = $response->getBody()->getContents();
 
@@ -110,7 +112,11 @@ class ApiClient implements ApiClientInterface
     protected function createFileStream($boundary, $name, \SplFileInfo $file): string
     {
         $headers = '';
-        $headers .= \sprintf("Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n", $name, $file->getBasename());
+        $headers .= \sprintf(
+            "Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n",
+            $name,
+            $file->getBasename()
+        );
         $headers .= \sprintf("Content-Length: %s\r\n", (string) $file->getSize());
         $headers .= \sprintf("Content-Type: %s\r\n", \mime_content_type($file->getRealPath()));
 

@@ -21,7 +21,7 @@ class InputFileNormalizer implements NormalizerInterface
         $uniqid = \uniqid();
         $this->files[$uniqid] = $topic->file;
 
-        return 'attach://'.$uniqid;
+        return 'attach://' . $uniqid;
     }
 
     public function supportsNormalization($data, $format = null)

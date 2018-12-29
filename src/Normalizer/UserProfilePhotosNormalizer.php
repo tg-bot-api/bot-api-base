@@ -25,7 +25,7 @@ class UserProfilePhotosNormalizer implements DenormalizerInterface
     public function denormalize($data, $class, $format = null, array $context = [])
     {
         $serializer = new Serializer([$this->objectNormalizer, $this->arrayDenormalizer]);
-        $data['photos'] = $serializer->denormalize($data['photos'], PhotoSizeType::class.'[][]');
+        $data['photos'] = $serializer->denormalize($data['photos'], PhotoSizeType::class . '[][]');
 
         return $serializer->denormalize($data, UserProfilePhotosType::class);
     }

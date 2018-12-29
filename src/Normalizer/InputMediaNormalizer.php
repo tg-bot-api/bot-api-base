@@ -25,7 +25,7 @@ class InputMediaNormalizer implements NormalizerInterface
         if ($topic->media instanceof \SplFileInfo) {
             $uniqid = \uniqid();
             $this->files[$uniqid] = $topic->media;
-            $topic->media = 'attach://'.$uniqid;
+            $topic->media = 'attach://' . $uniqid;
         }
 
         $serializer = new Serializer([$this->objectNormalizer]);

@@ -62,15 +62,17 @@ class BotApi implements BotApiInterface
     private $endPoint;
 
     /**
-     * Create a new Skeleton Instance.
+     * BotApi constructor.
      *
-     * @param ApiClientInterface $client
      * @param string             $botKey
      * @param ApiClientInterface $apiClient
      * @param string             $endPoint
      */
-    public function __construct(string $botKey, ApiClientInterface $apiClient, string $endPoint = 'https://api.telegram.org')
-    {
+    public function __construct(
+        string $botKey,
+        ApiClientInterface $apiClient,
+        string $endPoint = 'https://api.telegram.org'
+    ) {
         $this->botKey = $botKey;
         $this->apiClient = $apiClient;
         $this->endPoint = $endPoint;
@@ -354,7 +356,11 @@ class BotApi implements BotApiInterface
 
     private function getMethodName($method)
     {
-        return \lcfirst(\substr(\get_class($method), \strrpos(\get_class($method), '\\') + 1, -1 * \strlen('Method')));
+        return \lcfirst(\substr(
+            \get_class($method),
+            \strrpos(\get_class($method), '\\') + 1,
+            -1 * \strlen('Method')
+        ));
     }
 
     private function denormalize($data, $type)
@@ -366,7 +372,12 @@ class BotApi implements BotApiInterface
             new PhpDocExtractor()
         );
         $arrayNormalizer = new ArrayDenormalizer();
-        $serializer = new Serializer([new UserProfilePhotosNormalizer($normalizer, $arrayNormalizer), new DateTimeNormalizer(), $normalizer, $arrayNormalizer]);
+        $serializer = new Serializer([
+            new UserProfilePhotosNormalizer($normalizer, $arrayNormalizer),
+            new DateTimeNormalizer(),
+            $normalizer,
+            $arrayNormalizer,
+        ]);
 
         return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
     }
