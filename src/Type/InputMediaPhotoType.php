@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class InputMediaPhotoType.
  *
@@ -11,11 +13,22 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class InputMediaPhotoType extends InputMediaType
 {
+    use FillFromArrayTrait;
+
     /**
      * InputMediaPhotoType constructor.
+     *
+     * @param $media
+     * @param array|null $data
+     *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      */
-    public function __construct()
+    public function __construct($media, array $data = null)
     {
         $this->type = self::TYPE_PHOTO;
+        $this->media = $media;
+        if ($data) {
+            $this->fill($data);
+        }
     }
 }

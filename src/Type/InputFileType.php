@@ -15,29 +15,18 @@ class InputFileType
      * This object represents the contents of a file to be uploaded. Must be posted using multipart/form-data
      * in the usual way that files are uploaded via the browser.
      */
-
     /**
-     * @var false|string
+     * @var \SplFileInfo
      */
-    public $path;
-    /**
-     * @var string
-     */
-    public $filename;
-    /**
-     * @var string
-     */
-    public $contentType;
+    public $file;
 
     /**
      * InputFileType constructor.
      *
      * @param \SplFileInfo $file
      */
-    public function __construct(\SplFileInfo $file)
+    public function __construct($file)
     {
-        $this->path = $file->getRealPath();
-        $this->filename = $file->getFilename();
-        $this->contentType = \mime_content_type($this->path);
+        $this->file = $file;
     }
 }

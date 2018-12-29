@@ -31,7 +31,7 @@ class MessageType
     /**
      * Date the message was sent in Unix time.
      *
-     * @var int
+     * @var \DateTimeImmutable
      */
     public $date;
 

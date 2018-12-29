@@ -25,6 +25,11 @@ use Greenplugin\TelegramBot\Method\SendVenueMethod;
 use Greenplugin\TelegramBot\Method\SendVideoMethod;
 use Greenplugin\TelegramBot\Method\SendVideoNoteMethod;
 use Greenplugin\TelegramBot\Method\SendVoiceMethod;
+use Greenplugin\TelegramBot\Normalizer\InputFileNormalizer;
+use Greenplugin\TelegramBot\Normalizer\InputMediaNormalizer;
+use Greenplugin\TelegramBot\Normalizer\KeyboardNormalizer;
+use Greenplugin\TelegramBot\Normalizer\MediaGroupNormalizer;
+use Greenplugin\TelegramBot\Normalizer\UserProfilePhotosNormalizer;
 use Greenplugin\TelegramBot\Type\ChatMemberType;
 use Greenplugin\TelegramBot\Type\ChatType;
 use Greenplugin\TelegramBot\Type\FileType;
@@ -33,38 +38,45 @@ use Greenplugin\TelegramBot\Type\UpdateType;
 use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
 use Greenplugin\TelegramBot\Type\UserType;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
+use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
 class BotApi implements BotApiInterface
 {
     /**
-     * @var HttpClientInterface
+     * @var string
      */
-    private $httpClient;
+    private $botKey;
 
-    private $key;
+    /**
+     * @var ApiClientInterface
+     */
+    private $apiClient;
 
+    /**
+     * @var string
+     */
     private $endPoint;
 
     /**
      * Create a new Skeleton Instance.
      *
-     * @param HttpClientInterface $httpClient
-     * @param string              $key
-     * @param string              $endPoint
+     * @param ApiClientInterface $client
+     * @param string             $botKey
+     * @param ApiClientInterface $apiClient
+     * @param string             $endPoint
      */
-    public function __construct(
-        HttpClientInterface $httpClient,
-        string $key,
-        string $endPoint = 'https://api.telegram.org'
-    ) {
-        $this->httpClient = $httpClient;
-        $this->key = $key;
+    public function __construct(string $botKey, ApiClientInterface $apiClient, string $endPoint = 'https://api.telegram.org')
+    {
+        $this->botKey = $botKey;
+        $this->apiClient = $apiClient;
         $this->endPoint = $endPoint;
+
+        $this->apiClient->setBotKey($botKey);
+        $this->apiClient->setEndpoint($endPoint);
     }
 
     /**
@@ -77,20 +89,9 @@ class BotApi implements BotApiInterface
      */
     public function call($method, $type)
     {
-        $data = $this->encode($method);
+        list($data, $files) = $this->encode($method);
 
-        /*
-        $json = $this->httpClient->post(
-            $this->endPoint .
-            '/bot' . $this->key . '/' . $this->getMethodName($method),
-            $data
-        );*/
-
-        $json = $this->httpClient->form(
-            $this->endPoint .
-            '/bot' . $this->key . '/' . $this->getMethodName($method),
-            $data
-        );
+        $json = $this->apiClient->send($this->getMethodName($method), $data, $files);
 
         if (true !== $json->ok) {
             throw new ResponseException($json->description);
@@ -312,7 +313,7 @@ class BotApi implements BotApiInterface
      */
     public function getAbsoluteFilePath(FileType $file): string
     {
-        return \sprintf('%s/file/bot%s/%s', $this->endPoint, $this->key, $file->filePath);
+        return \sprintf('%s/file/bot%s/%s', $this->endPoint, $this->botKey, $file->filePath);
     }
 
     /**
@@ -358,43 +359,32 @@ class BotApi implements BotApiInterface
 
     private function denormalize($data, $type)
     {
-        $callbacks = [];
-
         $normalizer = new ObjectNormalizer(
             null,
             new CamelCaseToSnakeCaseNameConverter(),
             null,
-            new PhpDocExtractor(),
-            null,
-            null,
-            [ObjectNormalizer::CALLBACKS => $callbacks]
+            new PhpDocExtractor()
         );
+        $arrayNormalizer = new ArrayDenormalizer();
+        $serializer = new Serializer([new UserProfilePhotosNormalizer($normalizer, $arrayNormalizer), new DateTimeNormalizer(), $normalizer, $arrayNormalizer]);
 
-        $serializer = new Serializer([$normalizer, new ArrayDenormalizer()]);
-
-        return $serializer->denormalize($data->result, $type);
+        return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
     }
 
     private function encode($method)
     {
-        $callbacks = ['replyMarkup' => function ($innerObject, $outerObject, string $attributeName, string $format = null, array $context = array()) {
-            $normalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
-            $serializer = new Serializer([$normalizer]);
-            return json_encode($serializer->normalize($innerObject, null, ['skip_null_values' => true]));
-        }];
+        $files = [];
 
-        $normalizer = new ObjectNormalizer(
-            null,
-            new CamelCaseToSnakeCaseNameConverter(),
-            null,
-            null,
-            null,
-            null,
-            [ObjectNormalizer::CALLBACKS => $callbacks]
-        );
+        $objectNormalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
+        $serializer = new Serializer([
+            new InputFileNormalizer($files),
+            new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
+            new KeyboardNormalizer($objectNormalizer),
+            $objectNormalizer,
+        ]);
 
-        $serializer = new Serializer([$normalizer]);
+        $data = $serializer->normalize($method, null, ['skip_null_values' => true]);
 
-        return $serializer->normalize($method, null, ['skip_null_values' => true]);
+        return [$data, $files];
     }
 }

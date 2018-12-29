@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Tests\Method;
 
+use Greenplugin\TelegramBot\ApiClientInterface;
 use Greenplugin\TelegramBot\BotApi;
-use Greenplugin\TelegramBot\HttpClientInterface;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {
     protected function getBot($methodName, $request)
     {
-        $stub = $this->getMockBuilder(HttpClientInterface::class)
+        $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
 
         $stub->expects($this->once())
-            ->method('post')
-            ->with('https://api.telegram.org/bot000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/' . $methodName, $request)
+            ->method('send')
+            ->with($methodName, $request)
             ->willReturn((object) (['ok' => true, 'result' => []]));
 
-        return new BotApi($stub, '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
     }
 }

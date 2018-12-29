@@ -19,7 +19,7 @@ class SendMessageMethodTest extends MethodTestCase
             'disable_web_page_preview' => true,
             'disable_notification' => true,
             'reply_to_message_id' => 1,
-            'reply_markup' => ['inline_keyboard' => []],
+            'reply_markup' => '{"inline_keyboard":[]}',
         ]);
 
         $botApi->sendMessage(new SendMessageMethod('1', 'test', [

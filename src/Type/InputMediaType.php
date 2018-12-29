@@ -24,7 +24,7 @@ class InputMediaType
      *
      * @see https://core.telegram.org/bots/api#sending-files
      *
-     * @var string
+     * @var string|\SplFileInfo
      */
     public $media;
 
@@ -48,5 +48,5 @@ class InputMediaType
      *
      * @var string
      */
-    protected $type;
+    public $type;
 }
