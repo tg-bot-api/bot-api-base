@@ -71,21 +71,21 @@ class UpdateType
     /**
      * Optional. New incoming callback query.
      *
-     * @var CallbackQuery|null
+     * @var CallbackQueryType|null
      */
     public $callbackQuery;
 
     /**
      * Optional. New incoming shipping query. Only for invoices with flexible price.
      *
-     * @var ShippingQuery|null
+     * @var ShippingQueryType|null
      */
     public $shippingQuery;
 
     /**
      * Optional. New incoming pre-checkout query. Contains full information about checkout.
      *
-     * @var PreCheckoutQuery|null
+     * @var PreCheckoutQueryType|null
      */
     public $preCheckoutQuery;
 }
