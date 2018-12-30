@@ -234,7 +234,7 @@ class MessageType implements HasParseModeVariableInterface
      *
      * @var UserType|null
      */
-    public $leftChatMembers;
+    public $leftChatMember;
 
     /**
      * Optional. A chat title was changed to this value.
@@ -341,4 +341,11 @@ class MessageType implements HasParseModeVariableInterface
      * @var PassportData|null
      */
     public $passportData;
+
+    /**
+     * Warning: This variable is experimental.
+     * @experimental Returns User type
+     * @var UserType|null
+     */
+    public $leftChatParticipant;
 }
