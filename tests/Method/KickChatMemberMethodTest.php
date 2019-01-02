@@ -24,6 +24,6 @@ class KickChatMemberMethodTest extends MethodTestCase
             'until_date' => $dateTime->format('U'),
         ], true);
 
-        $botApi->kickChatMember(new KickChatMemberMethod(1, 1, ['untilDate' => $dateTime]));
+        $botApi->kickChatMember(KickChatMemberMethod::create(1, 1, ['untilDate' => $dateTime]));
     }
 }

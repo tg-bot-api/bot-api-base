@@ -21,12 +21,15 @@ class InputFileType
     public $file;
 
     /**
-     * InputFileType constructor.
-     *
      * @param \SplFileInfo $file
+     *
+     * @return InputFileType
      */
-    public function __construct($file)
+    public static function create($file): InputFileType
     {
-        $this->file = $file;
+        $instance = new static();
+        $instance->file = $file;
+
+        return $instance;
     }
 }

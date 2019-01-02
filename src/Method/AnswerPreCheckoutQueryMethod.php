@@ -44,23 +44,31 @@ class AnswerPreCheckoutQueryMethod
 
     /**
      * @param string $preCheckoutQueryId
+     *
+     * @return AnswerPreCheckoutQueryMethod
      */
-    public static function createSuccess(string $preCheckoutQueryId)
+    public static function createSuccess(string $preCheckoutQueryId): AnswerPreCheckoutQueryMethod
     {
-        $instance = new self();
+        $instance = new static();
         $instance->preCheckoutQueryId = $preCheckoutQueryId;
         $instance->ok = true;
+
+        return $instance;
     }
 
     /**
      * @param string $preCheckoutQueryId
      * @param string $errorMessage
+     *
+     * @return AnswerPreCheckoutQueryMethod
      */
-    public static function createFail(string $preCheckoutQueryId, string $errorMessage)
+    public static function createFail(string $preCheckoutQueryId, string $errorMessage): AnswerPreCheckoutQueryMethod
     {
-        $instance = new self();
+        $instance = new static();
         $instance->preCheckoutQueryId = $preCheckoutQueryId;
         $instance->ok = false;
         $instance->errorMessage = $errorMessage;
+
+        return $instance;
     }
 }

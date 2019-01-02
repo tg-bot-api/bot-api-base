@@ -11,4 +11,8 @@ namespace Greenplugin\TelegramBot\Method;
  */
 class GetWebhookInfoMethod
 {
+    public static function create(): GetWebhookInfoMethod
+    {
+        return new static();
+    }
 }

@@ -17,9 +17,14 @@ class GetChatMembersCountMethod
 
     /**
      * @param int|string $chatId
+     *
+     * @return GetChatMembersCountMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): GetChatMembersCountMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

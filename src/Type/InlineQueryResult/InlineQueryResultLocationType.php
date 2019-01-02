@@ -77,8 +77,6 @@ class InlineQueryResultLocationType extends InlineQueryResultType
     public $thumbHeight;
 
     /**
-     * InlineQueryResultLocationType constructor.
-     *
      * @param string     $id
      * @param float      $latitude
      * @param float      $longitude
@@ -86,16 +84,26 @@ class InlineQueryResultLocationType extends InlineQueryResultType
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultLocationType
      */
-    public function __construct(string $id, float $latitude, float $longitude, string $title, array $data = null)
-    {
-        $this->type = self::TYPE_LOCATION;
-        $this->id = $id;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-        $this->title = $title;
+    public static function create(
+        string $id,
+        float $latitude,
+        float $longitude,
+        string $title,
+        array $data = null
+    ): InlineQueryResultLocationType {
+        $instance = new static();
+        $instance->type = static::TYPE_LOCATION;
+        $instance->id = $id;
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->title = $title;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

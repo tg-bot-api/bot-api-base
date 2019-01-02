@@ -61,23 +61,30 @@ class InlineQueryResultVoiceType extends InlineQueryResultType implements HasPar
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultVoiceType constructor.
-     *
      * @param string     $id
      * @param string     $voiceUrl
      * @param string     $title
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultVoiceType
      */
-    public function __construct(string $id, string $voiceUrl, string $title, array $data = null)
-    {
-        $this->type = self::TYPE_VOICE;
-        $this->id = $id;
-        $this->voiceUrl = $voiceUrl;
-        $this->title = $title;
+    public static function create(
+        string $id,
+        string $voiceUrl,
+        string $title,
+        array $data = null
+    ): InlineQueryResultVoiceType {
+        $instance = new static();
+        $instance->type = static::TYPE_VOICE;
+        $instance->id = $id;
+        $instance->voiceUrl = $voiceUrl;
+        $instance->title = $title;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

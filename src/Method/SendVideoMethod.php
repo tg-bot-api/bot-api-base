@@ -70,20 +70,23 @@ class SendVideoMethod implements HasParseModeVariableInterface
     public $supportStreaming;
 
     /**
-     * SendVideoMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $video
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendVideoMethod
      */
-    public function __construct($chatId, $video, array $data = null)
+    public static function create($chatId, $video, array $data = null): SendVideoMethod
     {
-        $this->chatId = $chatId;
-        $this->video = $video;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->video = $video;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

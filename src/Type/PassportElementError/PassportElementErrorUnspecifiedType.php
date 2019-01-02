@@ -36,17 +36,22 @@ class PassportElementErrorUnspecifiedType extends PassportElementErrorType imple
     public $elementHash;
 
     /**
-     * PassportElementErrorUnspecifiedType constructor.
-     *
      * @param string $type
      * @param string $message
      * @param string $elementHash
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return PassportElementErrorTranslationFileType
      */
-    public function __construct(string $type, string $message, string $elementHash)
-    {
-        parent::__construct('unspecified', $type, $message);
-        $this->elementHash = $elementHash;
+    public static function create(
+        string $type,
+        string $message,
+        string $elementHash
+    ): PassportElementErrorTranslationFileType {
+        $instance = parent::createBase('unspecified', $type, $message);
+        $instance->elementHash = $elementHash;
+
+        return $instance;
     }
 }

@@ -33,17 +33,30 @@ class PassportElementErrorFilesType extends PassportElementErrorType
     public $fileHashes;
 
     /**
-     * PassportElementErrorFileType constructor.
-     *
-     * @param string $type
-     * @param string $message
-     * @param string $fileHashes
+     * @param string   $type
+     * @param string   $message
+     * @param string[] $fileHashes
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return PassportElementErrorFilesType
      */
-    public function __construct(string $type, string $message, string $fileHashes)
+    public static function create(
+        string $type,
+        string $message,
+        array $fileHashes
+    ): PassportElementErrorFilesType {
+        $instance = parent::createBase('files', $type, $message);
+        $instance->fileHashes = $fileHashes;
+
+        return $instance;
+    }
+
+    /**
+     * @param string $hash
+     */
+    public function addHash(string $hash)
     {
-        parent::__construct('files', $type, $message);
-        $this->fileHashes = $fileHashes;
+        $this->fileHashes[] = $hash;
     }
 }

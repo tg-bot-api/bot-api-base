@@ -23,21 +23,24 @@ class InlineQueryResultGameType extends InlineQueryResultType
     public $gameShortName;
 
     /**
-     * InlineQueryResultGameType constructor.
-     *
      * @param string     $id
      * @param string     $gameShortName
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultGameType
      */
-    public function __construct(string $id, string $gameShortName, array $data = null)
+    public static function create(string $id, string $gameShortName, array $data = null): InlineQueryResultGameType
     {
-        $this->type = self::TYPE_GAME;
-        $this->id = $id;
-        $this->gameShortName = $gameShortName;
+        $instance = new static();
+        $instance->type = static::TYPE_GAME;
+        $instance->id = $id;
+        $instance->gameShortName = $gameShortName;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

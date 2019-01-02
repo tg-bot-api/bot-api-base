@@ -36,15 +36,15 @@ abstract class PassportElementErrorType
     public $message;
 
     /**
-     * PassportElementErrorType constructor.
-     *
      * @param string $source
      * @param string $type
      * @param string $message
      *
      * @throws BadArgumentException
+     *
+     * @return mixed
      */
-    public function __construct(string $source, string $type, string $message)
+    protected static function createBase(string $source, string $type, string $message)
     {
         if (!\in_array($type, static::ALLOWED_TYPES, true)) {
             throw new BadArgumentException(\sprintf(
@@ -53,8 +53,11 @@ abstract class PassportElementErrorType
                 $type
             ));
         }
-        $this->source = $source;
-        $this->type = $type;
-        $this->message = $message;
+        $instance = new static();
+        $instance->source = $source;
+        $instance->type = $type;
+        $instance->message = $message;
+
+        return $instance;
     }
 }

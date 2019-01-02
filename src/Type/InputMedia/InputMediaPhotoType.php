@@ -16,19 +16,22 @@ class InputMediaPhotoType extends InputMediaType
     use FillFromArrayTrait;
 
     /**
-     * InputMediaPhotoType constructor.
-     *
-     * @param $media
-     * @param array|null $data
+     * @param string|\SplFileInfo $media
+     * @param array|null          $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InputMediaPhotoType
      */
-    public function __construct($media, array $data = null)
+    public static function create($media, array $data = null): InputMediaPhotoType
     {
-        $this->type = self::TYPE_PHOTO;
-        $this->media = $media;
+        $instance = new static();
+        $instance->media = $media;
+        $instance->type = static::TYPE_PHOTO;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

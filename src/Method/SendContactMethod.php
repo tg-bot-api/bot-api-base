@@ -46,22 +46,29 @@ class SendContactMethod
     public $vcard;
 
     /**
-     * SendContactMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $phoneNumber
      * @param string     $firstName
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendContactMethod
      */
-    public function __construct($chatId, string $phoneNumber, string $firstName, array $data = null)
-    {
-        $this->chatId = $chatId;
-        $this->phoneNumber = $phoneNumber;
-        $this->$firstName = $firstName;
+    public static function create(
+        $chatId,
+        string $phoneNumber,
+        string $firstName,
+        array $data = null
+    ): SendContactMethod {
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->phoneNumber = $phoneNumber;
+        $instance->$firstName = $firstName;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

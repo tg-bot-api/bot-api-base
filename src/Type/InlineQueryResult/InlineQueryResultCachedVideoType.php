@@ -63,23 +63,30 @@ class InlineQueryResultCachedVideoType extends InlineQueryResultType implements 
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedVideoType constructor.
-     *
      * @param string     $id
      * @param string     $videoFileId
      * @param string     $title
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedVideoType
      */
-    public function __construct(string $id, string $videoFileId, string $title, array $data = null)
-    {
-        $this->type = self::TYPE_VIDEO;
-        $this->id = $id;
-        $this->videoFileId = $videoFileId;
-        $this->title = $title;
+    public static function create(
+        string $id,
+        string $videoFileId,
+        string $title,
+        array $data = null
+    ): InlineQueryResultCachedVideoType {
+        $instance = new static();
+        $instance->type = static::TYPE_VIDEO;
+        $instance->id = $id;
+        $instance->videoFileId = $videoFileId;
+        $instance->title = $title;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

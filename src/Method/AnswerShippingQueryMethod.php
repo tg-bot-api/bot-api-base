@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Method;
 
 use Greenplugin\TelegramBot\Type\ShippingOption;
-use phpDocumentor\Reflection\Types\This;
 
 /**
  * Class AnswerShippingQueryMethod.
@@ -49,25 +48,33 @@ class AnswerShippingQueryMethod
     /**
      * @param string $shippingQueryId
      * @param array  $shippingOptions
+     *
+     * @return AnswerShippingQueryMethod
      */
-    public static function createSuccess(string $shippingQueryId, array $shippingOptions)
+    public static function createSuccess(string $shippingQueryId, array $shippingOptions): AnswerShippingQueryMethod
     {
-        $instance = new self();
+        $instance = new static();
         $instance->shippingQueryId = $shippingQueryId;
         $instance->ok = true;
         $instance->shippingOptions = $shippingOptions;
+
+        return $instance;
     }
 
     /**
      * @param string $shippingQueryId
      * @param string $errorMessage
+     *
+     * @return AnswerShippingQueryMethod
      */
-    public static function createFail(string $shippingQueryId, string $errorMessage)
+    public static function createFail(string $shippingQueryId, string $errorMessage): AnswerShippingQueryMethod
     {
-        $instance = new self();
+        $instance = new static();
         $instance->shippingQueryId = $shippingQueryId;
         $instance->ok = false;
         $instance->errorMessage = $errorMessage;
+
+        return $instance;
     }
 
     /**

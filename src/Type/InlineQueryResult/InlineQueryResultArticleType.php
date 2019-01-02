@@ -72,27 +72,30 @@ class InlineQueryResultArticleType extends InlineQueryResultType
     public $thumbHeight;
 
     /**
-     * InlineQueryResultArticleType constructor.
-     *
      * @param string                  $id
      * @param string                  $title
      * @param InputMessageContentType $inputMessageContent
      * @param array|null              $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultArticleType
      */
-    public function __construct(
+    public static function create(
         string $id,
         string $title,
         InputMessageContentType $inputMessageContent,
         array $data = null
-    ) {
-        $this->type = self::TYPE_ARTICLE;
-        $this->id = $id;
-        $this->title = $title;
-        $this->inputMessageContent = $inputMessageContent;
+    ): InlineQueryResultArticleType {
+        $instance = new static();
+        $instance->type = self::TYPE_ARTICLE;
+        $instance->id = $id;
+        $instance->title = $title;
+        $instance->inputMessageContent = $inputMessageContent;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

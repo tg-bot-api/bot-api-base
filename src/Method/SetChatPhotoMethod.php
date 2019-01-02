@@ -23,14 +23,17 @@ class SetChatPhotoMethod
     public $photo;
 
     /**
-     * SetChatPhotoMethod constructor.
-     *
      * @param int|string    $chatId
      * @param InputFileType $photo
+     *
+     * @return SetChatPhotoMethod
      */
-    public function __construct($chatId, InputFileType $photo)
+    public static function create($chatId, InputFileType $photo): SetChatPhotoMethod
     {
-        $this->chatId = $chatId;
-        $this->photo = $photo;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->photo = $photo;
+
+        return $instance;
     }
 }

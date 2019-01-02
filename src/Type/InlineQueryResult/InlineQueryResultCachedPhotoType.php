@@ -60,21 +60,24 @@ class InlineQueryResultCachedPhotoType extends InlineQueryResultType implements 
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedPhotoType constructor.
-     *
      * @param string     $id
      * @param string     $photoFileId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedPhotoType
      */
-    public function __construct(string $id, string $photoFileId, array $data = null)
+    public static function create(string $id, string $photoFileId, array $data = null): InlineQueryResultCachedPhotoType
     {
-        $this->type = self::TYPE_PHOTO;
-        $this->id = $id;
-        $this->photoFileId = $photoFileId;
+        $instance = new static();
+        $instance->type = static::TYPE_PHOTO;
+        $instance->id = $id;
+        $instance->photoFileId = $photoFileId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

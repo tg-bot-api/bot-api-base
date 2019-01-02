@@ -43,11 +43,16 @@ class SetPassportDataErrorsMethod
      * @param int $userId
      * @param PassportElementErrorType[]
      * @param array $errors
+     *
+     * @return SetPassportDataErrorsMethod
      */
-    public function __construct(int $userId, array $errors)
+    public static function create(int $userId, array $errors): SetPassportDataErrorsMethod
     {
-        $this->userId = $userId;
-        $this->errors = $errors;
+        $instance = new static();
+        $instance->userId = $userId;
+        $instance->errors = $errors;
+
+        return $instance;
     }
 
     /**

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Method;
 
+use Greenplugin\TelegramBot\Method\Interfaces\HasActionVariableInterface;
 use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
 
 /**
@@ -11,16 +12,9 @@ use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#sendchataction
  */
-class SendChatActionMethod
+class SendChatActionMethod implements HasActionVariableInterface
 {
     use ChatIdVariableTrait;
-    const ACTION_TYPING = 'typing';
-    const ACTION_UPLOAD_PHOTO = 'upload_photo';
-    const ACTION_RECORD_VIDEO = 'record_video';
-    const ACTION_RECORD_AUDIO = 'record_audio';
-    const ACTION_UPLOAD_DOCUMENT = 'upload_document';
-    const ACTION_FIND_LOCATION = 'find_location';
-    const ACTION_RECORD_VIDEO_NOTE = 'record_video_note';
 
     /**
      * Type of action to broadcast.
@@ -38,14 +32,17 @@ class SendChatActionMethod
     public $action;
 
     /**
-     * SendChatActionMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $action
+     *
+     * @return SendChatActionMethod
      */
-    public function __construct($chatId, string $action)
+    public static function create($chatId, string $action): SendChatActionMethod
     {
-        $this->chatId = $chatId;
-        $this->action = $action;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->action = $action;
+
+        return $instance;
     }
 }

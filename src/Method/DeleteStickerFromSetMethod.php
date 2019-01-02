@@ -19,12 +19,15 @@ class DeleteStickerFromSetMethod
     public $sticker;
 
     /**
-     * DeleteStickerFromSetMethod constructor.
-     *
      * @param string $sticker
+     *
+     * @return DeleteStickerFromSetMethod
      */
-    public function __construct(string $sticker)
+    public static function create(string $sticker): DeleteStickerFromSetMethod
     {
-        $this->sticker = $sticker;
+        $instance = new static();
+        $instance->sticker = $sticker;
+
+        return $instance;
     }
 }

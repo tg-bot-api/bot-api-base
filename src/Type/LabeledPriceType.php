@@ -34,11 +34,15 @@ class LabeledPriceType
     /**
      * @param string $label
      * @param int    $amount
+     *
+     * @return LabeledPriceType
      */
-    public static function create(string $label, int $amount)
+    public static function create(string $label, int $amount): LabeledPriceType
     {
-        $instance = new self();
+        $instance = new static();
         $instance->label = $label;
         $instance->amount = $amount;
+
+        return $instance;
     }
 }

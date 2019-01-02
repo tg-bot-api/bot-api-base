@@ -58,21 +58,24 @@ class InlineQueryResultCachedGifType extends InlineQueryResultType implements Ha
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedGifType constructor.
-     *
      * @param string     $id
      * @param string     $gifFileId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedGifType
      */
-    public function __construct(string $id, string $gifFileId, array $data = null)
+    public static function create(string $id, string $gifFileId, array $data = null): InlineQueryResultCachedGifType
     {
-        $this->type = self::TYPE_GIF;
-        $this->id = $id;
-        $this->gifFileId = $gifFileId;
+        $instance = new static();
+        $instance->type = static::TYPE_GIF;
+        $instance->id = $id;
+        $instance->gifFileId = $gifFileId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

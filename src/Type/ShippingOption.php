@@ -36,20 +36,28 @@ class ShippingOption
      * @param string $id
      * @param string $title
      * @param array  $prices
+     *
+     * @return ShippingOption
      */
-    public static function create(string $id, string $title, array $prices)
+    public static function create(string $id, string $title, array $prices): ShippingOption
     {
-        $instance = new self();
+        $instance = new static();
         $instance->id = $id;
         $instance->title = $title;
         $instance->prices = $prices;
+
+        return $instance;
     }
 
     /**
      * @param LabeledPriceType $price
+     *
+     * @return ShippingOption
      */
-    public function addPrice(LabeledPriceType $price)
+    public function addPrice(LabeledPriceType $price): ShippingOption
     {
         $this->prices[] = $price;
+
+        return $this;
     }
 }

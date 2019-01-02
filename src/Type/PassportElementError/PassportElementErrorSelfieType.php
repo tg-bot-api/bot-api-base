@@ -31,17 +31,22 @@ class PassportElementErrorSelfieType extends PassportElementErrorType
     public $fileHash;
 
     /**
-     * PassportElementErrorSelfieType constructor.
-     *
      * @param string $type
      * @param string $message
      * @param string $fileHash
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return PassportElementErrorSelfieType
      */
-    public function __construct(string $type, string $message, string $fileHash)
-    {
-        parent::__construct('selfie', $type, $message);
-        $this->fileHash = $fileHash;
+    public static function create(
+        string $type,
+        string $message,
+        string $fileHash
+    ): PassportElementErrorSelfieType {
+        $instance = parent::createBase('selfie', $type, $message);
+        $instance->fileHash = $fileHash;
+
+        return $instance;
     }
 }

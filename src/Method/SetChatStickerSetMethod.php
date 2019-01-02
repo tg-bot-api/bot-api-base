@@ -23,14 +23,17 @@ class SetChatStickerSetMethod
     public $stickerSetName;
 
     /**
-     * SetChatStickerSetMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $stickerSetName
+     *
+     * @return SetChatStickerSetMethod
      */
-    public function __construct($chatId, string $stickerSetName)
+    public static function create($chatId, string $stickerSetName): SetChatStickerSetMethod
     {
-        $this->chatId = $chatId;
-        $this->stickerSetName = $stickerSetName;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->stickerSetName = $stickerSetName;
+
+        return $instance;
     }
 }

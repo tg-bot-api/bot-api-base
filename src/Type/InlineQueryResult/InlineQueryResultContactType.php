@@ -76,23 +76,30 @@ class InlineQueryResultContactType extends InlineQueryResultType
     public $thumbHeight;
 
     /**
-     * InlineQueryResultContactType constructor.
-     *
      * @param string     $id
      * @param string     $phoneNumber
      * @param string     $firstName
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultContactType
      */
-    public function __construct(string $id, string $phoneNumber, string $firstName, array $data = null)
-    {
-        $this->type = self::TYPE_CONTACT;
-        $this->id = $id;
-        $this->phoneNumber = $phoneNumber;
-        $this->$firstName = $firstName;
+    public static function create(
+        string $id,
+        string $phoneNumber,
+        string $firstName,
+        array $data = null
+    ): InlineQueryResultContactType {
+        $instance = new static();
+        $instance->type = static::TYPE_CONTACT;
+        $instance->id = $id;
+        $instance->phoneNumber = $phoneNumber;
+        $instance->$firstName = $firstName;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

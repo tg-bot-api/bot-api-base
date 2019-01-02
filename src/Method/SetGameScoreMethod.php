@@ -73,10 +73,17 @@ class SetGameScoreMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SetGameScoreMethod
      */
-    public static function create(int $userId, int $score, int $chatId, int $messageId, array $data = null)
-    {
-        $instance = new self();
+    public static function create(
+        int $userId,
+        int $score,
+        int $chatId,
+        int $messageId,
+        array $data = null
+    ): SetGameScoreMethod {
+        $instance = new static();
         $instance->userId = $userId;
         $instance->score = $score;
         $instance->chatId = $chatId;
@@ -84,6 +91,8 @@ class SetGameScoreMethod
         if ($data) {
             $instance->fill($data);
         }
+
+        return $instance;
     }
 
     /**
@@ -93,15 +102,23 @@ class SetGameScoreMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SetGameScoreMethod
      */
-    public static function createInline(int $userId, int $score, string $inlineMessageId, array $data = null)
-    {
-        $instance = new self();
+    public static function createInline(
+        int $userId,
+        int $score,
+        string $inlineMessageId,
+        array $data = null
+    ): SetGameScoreMethod {
+        $instance = new static();
         $instance->userId = $userId;
         $instance->score = $score;
         $instance->inlineMessageId = $inlineMessageId;
         if ($data) {
             $instance->fill($data);
         }
+
+        return $instance;
     }
 }

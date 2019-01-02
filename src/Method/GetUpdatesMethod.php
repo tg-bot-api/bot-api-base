@@ -59,16 +59,19 @@ class GetUpdatesMethod implements HasUpdateTypeVariableInterface
     public $allowed_updates;
 
     /**
-     * GetUpdatesMethod constructor.
-     *
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return GetUpdatesMethod
      */
-    public function __construct(array $data = null)
+    public static function create(array $data = null): GetUpdatesMethod
     {
+        $instance = new static();
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

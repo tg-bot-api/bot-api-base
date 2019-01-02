@@ -38,12 +38,17 @@ class GetUserProfilePhotosMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return GetUserProfilePhotosMethod
      */
-    public function __construct(int $userId, array $data = null)
+    public static function create(int $userId, array $data = null): GetUserProfilePhotosMethod
     {
-        $this->userId = $userId;
+        $instance = new static();
+        $instance->userId = $userId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

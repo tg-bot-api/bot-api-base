@@ -173,8 +173,6 @@ class SendInvoiceMethod
     public $replyToMessageId;
 
     /**
-     * SendInvoiceMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $title
      * @param string     $description
@@ -186,8 +184,10 @@ class SendInvoiceMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendInvoiceMethod
      */
-    public function __construct(
+    public static function create(
         $chatId,
         string $title,
         string $description,
@@ -197,17 +197,20 @@ class SendInvoiceMethod
         string $currency,
         array $prices,
         array $data = null
-    ) {
-        $this->chatId = $chatId;
-        $this->title = $title;
-        $this->description = $description;
-        $this->payload = $payload;
-        $this->providerToken = $providerToken;
-        $this->startParameter = $startParameter;
-        $this->currency = $currency;
-        $this->prices = $prices;
+    ): SendInvoiceMethod {
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->title = $title;
+        $instance->description = $description;
+        $instance->payload = $payload;
+        $instance->providerToken = $providerToken;
+        $instance->startParameter = $startParameter;
+        $instance->currency = $currency;
+        $instance->prices = $prices;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

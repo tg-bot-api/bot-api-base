@@ -16,13 +16,15 @@ class LeaveChatMethod
     use ChatIdVariableTrait;
 
     /**
-     * LeaveChatMethod constructor.
+     * @param int|string $chatId
      *
-     * @param int|string
-     * @param mixed $chatId
+     * @return LeaveChatMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): LeaveChatMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

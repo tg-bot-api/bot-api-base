@@ -32,14 +32,17 @@ class UploadStickerFileMethod
     public $pngSticker;
 
     /**
-     * UploadStickerFileMethod constructor.
-     *
      * @param int           $userId
      * @param InputFileType $pngSticker
+     *
+     * @return UploadStickerFileMethod
      */
-    public function __construct(int $userId, InputFileType $pngSticker)
+    public static function create(int $userId, InputFileType $pngSticker): UploadStickerFileMethod
     {
-        $this->userId = $userId;
-        $this->pngSticker = $pngSticker;
+        $instance = new static();
+        $instance->userId = $userId;
+        $instance->pngSticker = $pngSticker;
+
+        return $instance;
     }
 }

@@ -38,20 +38,23 @@ class SendVoiceMethod implements HasParseModeVariableInterface
     public $duration;
 
     /**
-     * SendVoiceMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $voice
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendVoiceMethod
      */
-    public function __construct($chatId, $voice, array $data = null)
+    public static function create($chatId, $voice, array $data = null): SendVoiceMethod
     {
-        $this->chatId = $chatId;
-        $this->voice = $voice;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->voice = $voice;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

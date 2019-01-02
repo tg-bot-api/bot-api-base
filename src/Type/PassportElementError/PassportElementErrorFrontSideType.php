@@ -31,17 +31,22 @@ class PassportElementErrorFrontSideType extends PassportElementErrorType
     public $fileHash;
 
     /**
-     * PassportElementErrorFrontSideType constructor.
-     *
      * @param string $type
      * @param string $message
      * @param string $fileHash
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return PassportElementErrorFrontSideType
      */
-    public function __construct(string $type, string $message, string $fileHash)
-    {
-        parent::__construct('front_side', $type, $message);
-        $this->fileHash = $fileHash;
+    public static function create(
+        string $type,
+        string $message,
+        string $fileHash
+    ): PassportElementErrorFrontSideType {
+        $instance = parent::createBase('front_side', $type, $message);
+        $instance->fileHash = $fileHash;
+
+        return $instance;
     }
 }

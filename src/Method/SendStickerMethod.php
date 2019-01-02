@@ -29,20 +29,23 @@ class SendStickerMethod
     public $sticker;
 
     /**
-     * SendStickerMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $sticker
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendStickerMethod
      */
-    public function __construct($chatId, $sticker, array $data = null)
+    public static function create($chatId, $sticker, array $data = null): SendStickerMethod
     {
-        $this->chatId = $chatId;
-        $this->sticker = $sticker;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->sticker = $sticker;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -19,12 +19,15 @@ class GetStickerSetMethod
     public $name;
 
     /**
-     * GetStickerSetMethod constructor.
-     *
      * @param string $name
+     *
+     * @return GetStickerSetMethod
      */
-    public function __construct(string $name)
+    public static function create(string $name): GetStickerSetMethod
     {
-        $this->name = $name;
+        $instance = new static();
+        $instance->name = $name;
+
+        return $instance;
     }
 }

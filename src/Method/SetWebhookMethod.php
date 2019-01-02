@@ -58,18 +58,21 @@ class SetWebhookMethod implements HasUpdateTypeVariableInterface
     public $allowedUpdates;
 
     /**
-     * SetWebhookMethod constructor.
-     *
      * @param string     $url
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SetWebhookMethod
      */
-    public function __construct(string $url, array $data = null)
+    public static function create(string $url, array $data = null): SetWebhookMethod
     {
-        $this->$url;
+        $instance = new static();
+        $instance->$url;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

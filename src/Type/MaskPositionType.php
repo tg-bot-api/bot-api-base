@@ -51,7 +51,7 @@ class MaskPositionType
      */
     public static function create(string $point, float $xShift, float $yShift, float $scale): MaskPositionType
     {
-        $instance = new self();
+        $instance = new static();
         $instance->point = $point;
         $instance->xShift = $xShift;
         $instance->yShift = $yShift;

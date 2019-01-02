@@ -15,6 +15,7 @@ use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
 trait EditMessageVariablesTrait
 {
     /**
+     * Required if inline_message_id is not specified.
      * Unique identifier for the target chat or username of the target channel (in the format @channelusername).
      *
      * @var int|string

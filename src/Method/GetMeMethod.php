@@ -11,4 +11,8 @@ namespace Greenplugin\TelegramBot\Method;
  */
 class GetMeMethod
 {
+    public static function create(): GetMeMethod
+    {
+        return new static();
+    }
 }

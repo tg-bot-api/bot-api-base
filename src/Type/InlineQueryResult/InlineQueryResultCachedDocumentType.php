@@ -59,23 +59,30 @@ class InlineQueryResultCachedDocumentType extends InlineQueryResultType
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedDocumentType constructor.
-     *
      * @param string     $id
      * @param string     $title
      * @param string     $documentFileId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedDocumentType
      */
-    public function __construct(string $id, string $title, string $documentFileId, array $data = null)
-    {
-        $this->type = self::TYPE_DOCUMENT;
-        $this->id = $id;
-        $this->title = $title;
-        $this->documentFileId = $documentFileId;
+    public static function create(
+        string $id,
+        string $title,
+        string $documentFileId,
+        array $data = null
+    ): InlineQueryResultCachedDocumentType {
+        $instance = new static();
+        $instance->type = static::TYPE_DOCUMENT;
+        $instance->id = $id;
+        $instance->title = $title;
+        $instance->documentFileId = $documentFileId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

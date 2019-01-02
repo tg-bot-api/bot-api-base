@@ -41,20 +41,23 @@ class SendDocumentMethod implements HasParseModeVariableInterface
     public $thumb;
 
     /**
-     * SendDocumentMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $document
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendDocumentMethod
      */
-    public function __construct($chatId, $document, array $data = null)
+    public static function create($chatId, $document, array $data = null): SendDocumentMethod
     {
-        $this->chatId = $chatId;
-        $this->document = $document;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->document = $document;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -82,28 +82,35 @@ class AnswerInlineQueryMethod
     public $switchPmParameter;
 
     /**
-     * AnswerInlineQueryMethod constructor.
-     *
      * @param string                  $inlineQueryId
      * @param InlineQueryResultType[] $results
      * @param array|null              $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return AnswerInlineQueryMethod
      */
-    public function __construct(string $inlineQueryId, array $results, array $data = null)
+    public static function create(string $inlineQueryId, array $results, array $data = null): AnswerInlineQueryMethod
     {
-        $this->inlineQueryId = $inlineQueryId;
-        $this->results = $results;
+        $instance = new static();
+        $instance->inlineQueryId = $inlineQueryId;
+        $instance->results = $results;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 
     /**
      * @param InlineQueryResultType $result
+     *
+     * @return AnswerInlineQueryMethod
      */
-    public function addResult(InlineQueryResultType $result)
+    public function addResult(InlineQueryResultType $result): AnswerInlineQueryMethod
     {
         $this->results[] = $result;
+
+        return $this;
     }
 }

@@ -46,20 +46,23 @@ class SendGameMethod
     public $replyToMessageId;
 
     /**
-     * SendGameType constructor.
-     *
      * @param int        $chatId
      * @param string     $gameShortName
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendGameMethod
      */
-    public function __construct(int $chatId, string $gameShortName, array $data = null)
+    public static function create(int $chatId, string $gameShortName, array $data = null): SendGameMethod
     {
-        $this->chatId = $chatId;
-        $this->gameShortName = $gameShortName;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->gameShortName = $gameShortName;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

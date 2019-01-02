@@ -81,27 +81,30 @@ class InlineQueryResultPhotoType extends InlineQueryResultType implements HasPar
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultArticleType constructor.
-     *
      * @param string     $id
      * @param string     $thumbUrl
      * @param string     $photoUrl
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultPhotoType
      */
-    public function __construct(
+    public static function create(
         string $id,
         string $photoUrl,
         string $thumbUrl,
         array $data = null
-    ) {
-        $this->type = self::TYPE_PHOTO;
-        $this->id = $id;
-        $this->photoUrl = $photoUrl;
-        $this->thumbUrl = $thumbUrl;
+    ): InlineQueryResultPhotoType {
+        $instance = new static();
+        $instance->type = static::TYPE_PHOTO;
+        $instance->id = $id;
+        $instance->photoUrl = $photoUrl;
+        $instance->thumbUrl = $thumbUrl;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

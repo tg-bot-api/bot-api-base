@@ -62,20 +62,23 @@ class SendAudioMethod
     public $thumb;
 
     /**
-     * SendAnimationMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $audio
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendAudioMethod
      */
-    public function __construct($chatId, $audio, array $data = null)
+    public static function create($chatId, $audio, array $data = null): SendAudioMethod
     {
-        $this->chatId = $chatId;
-        $this->audio = $audio;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->audio = $audio;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

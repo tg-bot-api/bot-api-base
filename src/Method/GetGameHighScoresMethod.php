@@ -56,7 +56,7 @@ class GetGameHighScoresMethod
      */
     public static function create(int $userId, int $chatId, int $messageId): GetGameHighScoresMethod
     {
-        $instance = new self();
+        $instance = new static();
         $instance->userId = $userId;
         $instance->chatId = $chatId;
         $instance->$messageId = $messageId;
@@ -72,7 +72,7 @@ class GetGameHighScoresMethod
      */
     public static function createInline(int $userId, string $inlineMessageId): GetGameHighScoresMethod
     {
-        $instance = new self();
+        $instance = new static();
         $instance->userId = $userId;
         $instance->inlineMessageId = $inlineMessageId;
 

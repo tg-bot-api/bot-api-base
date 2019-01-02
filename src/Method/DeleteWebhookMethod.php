@@ -11,4 +11,11 @@ namespace Greenplugin\TelegramBot\Method;
  */
 class DeleteWebhookMethod
 {
+    /**
+     * @return DeleteWebhookMethod
+     */
+    public static function create(): DeleteWebhookMethod
+    {
+        return new static();
+    }
 }

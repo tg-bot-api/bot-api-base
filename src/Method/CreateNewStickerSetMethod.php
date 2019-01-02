@@ -79,22 +79,27 @@ class CreateNewStickerSetMethod
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return CreateNewStickerSetMethod
      */
-    public function __construct(
+    public static function create(
         int $userId,
         string $name,
         string $title,
         $pngSticker,
         string $emojis,
         array $data = null
-    ) {
-        $this->userId = $userId;
-        $this->$name = $name;
-        $this->title = $title;
-        $this->$pngSticker = $pngSticker;
-        $this->emojis = $emojis;
+    ): CreateNewStickerSetMethod {
+        $instance = new static();
+        $instance->userId = $userId;
+        $instance->$name = $name;
+        $instance->title = $title;
+        $instance->$pngSticker = $pngSticker;
+        $instance->emojis = $emojis;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

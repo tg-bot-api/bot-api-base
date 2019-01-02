@@ -26,14 +26,17 @@ class DeleteMessageMethod
     use MessageIdVariableTrait;
 
     /**
-     * DeleteMessageMethod constructor.
-     *
      * @param int|string $chatId
      * @param int        $messageId
+     *
+     * @return DeleteMessageMethod
      */
-    public function __construct($chatId, int $messageId)
+    public static function create($chatId, int $messageId): DeleteMessageMethod
     {
-        $this->chatId = $chatId;
-        $this->messageId = $messageId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->messageId = $messageId;
+
+        return $instance;
     }
 }

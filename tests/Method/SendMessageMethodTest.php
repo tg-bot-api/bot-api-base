@@ -8,8 +8,15 @@ use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
 use Greenplugin\TelegramBot\Method\SendMessageMethod;
 use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
 
+/**
+ * Class SendMessageMethodTest.
+ */
 class SendMessageMethodTest extends MethodTestCase
 {
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     */
     public function testEncode()
     {
         $botApi = $this->getBot('sendMessage', [
@@ -22,12 +29,12 @@ class SendMessageMethodTest extends MethodTestCase
             'reply_markup' => '{"inline_keyboard":[]}',
         ]);
 
-        $botApi->sendMessage(new SendMessageMethod('1', 'test', [
+        $botApi->sendMessage(SendMessageMethod::create('1', 'test', [
             'parseMode' => HasParseModeVariableInterface::PARSE_MODE_HTML,
             'disableWebPagePreview' => true,
             'disableNotification' => true,
             'replyToMessageId' => 1,
-            'replyMarkup' => new InlineKeyboardMarkupType([]),
+            'replyMarkup' => InlineKeyboardMarkupType::create([]),
         ]));
     }
 }

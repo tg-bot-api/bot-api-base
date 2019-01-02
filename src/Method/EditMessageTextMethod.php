@@ -41,53 +41,48 @@ class EditMessageTextMethod implements HasParseModeVariableInterface
     public $disableWebPagePreview;
 
     /**
-     * EditMessageTextMethod constructor.
-     *
-     * @param int|string $chatId
-     * @param string     $text
-     * @param array|null $data
-     */
-    public function __construct($chatId, string $text, array $data = null)
-    {
-        $this->chatId = $chatId;
-        $this->text = $text;
-        if ($data) {
-            $this->fill($data);
-        }
-    }
-
-    /**
      * @param int|string $chatId
      * @param int        $messageId
      * @param string     $text
      * @param array|null $data
      *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
      * @return EditMessageTextMethod
      */
     public static function create($chatId, int $messageId, string $text, array $data = null): EditMessageTextMethod
     {
-        $instance = new self($chatId, $text, $data);
+        $instance = new self();
+        $instance->chatId = $chatId;
+        $instance->text = $text;
         $instance->messageId = $messageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
         return $instance;
     }
 
     /**
-     * @param int|string $chatId
      * @param string     $inlineMessageId
      * @param string     $text
      * @param array|null $data
      *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
      * @return EditMessageTextMethod
      */
     public static function createInline(
-        $chatId,
         string $inlineMessageId,
         string $text,
         array $data = null
     ): EditMessageTextMethod {
-        $instance = new self($chatId, $text, $data);
+        $instance = new self();
         $instance->inlineMessageId = $inlineMessageId;
+        $instance->text = $text;
+        if ($data) {
+            $instance->fill($data);
+        }
 
         return $instance;
     }

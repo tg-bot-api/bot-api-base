@@ -54,20 +54,23 @@ class SendVideoNoteMethod
     public $thumb;
 
     /**
-     * SendVideoNoteMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $videoNote
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendVideoNoteMethod
      */
-    public function __construct($chatId, $videoNote, array $data = null)
+    public static function create($chatId, $videoNote, array $data = null): SendVideoNoteMethod
     {
-        $this->chatId = $chatId;
-        $this->videoNote = $videoNote;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->videoNote = $videoNote;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

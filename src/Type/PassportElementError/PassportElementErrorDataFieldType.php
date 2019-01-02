@@ -42,19 +42,25 @@ class PassportElementErrorDataFieldType extends PassportElementErrorType
     public $dataHash;
 
     /**
-     * PassportElementErrorDataFieldType constructor.
-     *
      * @param string $type
      * @param string $message
      * @param string $fieldName
      * @param string $dataHash
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return PassportElementErrorDataFieldType
      */
-    public function __construct(string $type, string $message, string $fieldName, string $dataHash)
-    {
-        parent::__construct('data', $type, $message);
-        $this->fieldName = $fieldName;
-        $this->dataHash = $dataHash;
+    public static function create(
+        string $type,
+        string $message,
+        string $fieldName,
+        string $dataHash
+    ): PassportElementErrorDataFieldType {
+        $instance = parent::createBase('data', $type, $message);
+        $instance->fieldName = $fieldName;
+        $instance->dataHash = $dataHash;
+
+        return $instance;
     }
 }

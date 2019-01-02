@@ -65,12 +65,17 @@ class AnswerCallbackQueryMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return AnswerCallbackQueryMethod
      */
-    public function __construct(string $callbackQueryId, array $data = null)
+    public static function create(string $callbackQueryId, array $data = null): AnswerCallbackQueryMethod
     {
-        $this->callbackQueryId = $callbackQueryId;
+        $instance = new static();
+        $instance->callbackQueryId = $callbackQueryId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }
