@@ -11,4 +11,5 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class CallbackGameType
 {
+    //A placeholder, currently holds no information. Use BotFather to set up your game.
 }
