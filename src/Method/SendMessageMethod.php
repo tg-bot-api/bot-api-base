@@ -41,20 +41,23 @@ class SendMessageMethod implements HasParseModeVariableInterface
     public $disableWebPagePreview;
 
     /**
-     * SendMessageMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $text
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendMessageMethod
      */
-    public function __construct($chatId, string $text, array $data = null)
+    public static function create($chatId, string $text, array $data = null): SendMessageMethod
     {
-        $this->chatId = $chatId;
-        $this->text = $text;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->text = $text;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

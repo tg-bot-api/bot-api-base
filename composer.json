@@ -1,27 +1,28 @@
 {
-    "name": "greenplugin/telegram-bot-api",
+    "name": "tg-bot-api/telegram-bot-api",
     "type": "library",
     "description": "this is low low lwvwl telegram bot api",
     "keywords": [
-        "greenplugin",
+        "tg-bot-api",
         "telegram-bot-api"
     ],
-    "homepage": "https://github.com/greenplugin/telegram-bot-api",
+    "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
     "license": "MIT",
     "authors": [
         {
             "name": "Greenplugin",
             "email": "wformps@gmail.com",
-            "homepage": "https://github.com/Greenplugin/telegram-bot-api",
+            "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">7.2",
         "ext-json": "*",
-        "psr/http-message": "^1.0",
+        "phpdocumentor/reflection-docblock": "^4.3",
         "psr/http-client": "^1.0",
         "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
         "symfony/property-access": "^4.2",
         "symfony/property-info": "^4.2",
         "symfony/serializer": "^4.2"

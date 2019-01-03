@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type\InputMedia;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
@@ -13,6 +14,8 @@ use Greenplugin\TelegramBot\Type\InputFileType;
  */
 class InputMediaAudioType extends InputMediaType
 {
+    use FillFromArrayTrait;
+
     /**
      * Optional. Thumbnail of the file sent. The thumbnail should be in JPEG format and less than 200 kB in size.
      * A thumbnail‘s width and height should not exceed 90.
@@ -47,10 +50,22 @@ class InputMediaAudioType extends InputMediaType
     public $title;
 
     /**
-     * InputMediaAudioType constructor.
+     * @param string|\SplFileInfo $media
+     * @param array|null          $data
+     *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InputMediaAudioType
      */
-    public function __construct()
+    public static function create($media, array $data = null): InputMediaAudioType
     {
-        $this->type = self::TYPE_AUDIO;
+        $instance = new static();
+        $instance->media = $media;
+        $instance->type = static::TYPE_AUDIO;
+        if ($data) {
+            $instance->fill($data);
+        }
+
+        return $instance;
     }
 }

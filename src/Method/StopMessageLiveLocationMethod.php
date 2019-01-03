@@ -18,33 +18,24 @@ class StopMessageLiveLocationMethod
     use EditMessageVariablesTrait;
 
     /**
-     * StopMessageLiveLocationMethod constructor.
-     *
-     * @param array|null $data
-     *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     */
-    public function __construct(array $data = null)
-    {
-        if ($data) {
-            $this->fill($data);
-        }
-    }
-
-    /**
      * @param int|string $chatId
+     * @param int        $messageId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
      *
      * @return StopMessageLiveLocationMethod
      */
-    public static function create($chatId, array $data = null): StopMessageLiveLocationMethod
+    public static function create($chatId, int $messageId, array $data = null): StopMessageLiveLocationMethod
     {
-        $method = new self($data);
-        $method->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->messageId = $messageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 
     /**
@@ -57,9 +48,12 @@ class StopMessageLiveLocationMethod
      */
     public static function createInline(string $inlineMessageId, array $data = null): StopMessageLiveLocationMethod
     {
-        $method = new self($data);
-        $method->inlineMessageId = $inlineMessageId;
+        $instance = new static();
+        $instance->inlineMessageId = $inlineMessageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 }

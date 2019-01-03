@@ -7,19 +7,6 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practices by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
-
 ## Install
 
 Via Composer
@@ -31,8 +18,11 @@ $ composer require greenplugin/telegram-bot-api
 ## Usage
 
 ``` php
-$skeleton = new Greenplugin\TelegramBot();
-echo $skeleton->echoPhrase('Hello, League!');
+//usage
+```
+
+``` php
+//usage alt
 ```
 
 ## Change log
@@ -55,7 +45,8 @@ If you discover any security related issues, please email wformps@gmail.com inst
 
 ## Credits
 
-- [Greenplugin][link-author]
+- [Greenplugin][link-author-1]
+- [Big-Shark][link-author-2]
 - [All Contributors][link-contributors]
 
 ## License
@@ -74,5 +65,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-scrutinizer]: https://scrutinizer-ci.com/g/greenplugin/telegram-bot-api/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/greenplugin/telegram-bot-api
 [link-downloads]: https://packagist.org/packages/greenplugin/telegram-bot-api
-[link-author]: https://github.com/greenplugin
+[link-author-1]: https://github.com/greenplugin
+[link-author-2]: https://github.com/Big-Shark
 [link-contributors]: ../../contributors

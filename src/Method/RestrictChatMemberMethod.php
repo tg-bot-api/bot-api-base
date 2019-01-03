@@ -59,20 +59,23 @@ class RestrictChatMemberMethod
     public $canAddWebPagePreview;
 
     /**
-     * RestrictChatMemberMethod constructor.
-     *
      * @param $chatId
      * @param int        $userId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return RestrictChatMemberMethod
      */
-    public function __construct($chatId, int $userId, array $data = null)
+    public static function create($chatId, int $userId, array $data = null): RestrictChatMemberMethod
     {
-        $this->chatId = $chatId;
-        $this->userId = $userId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->userId = $userId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -14,19 +14,26 @@ trait FillFromArrayTrait
 {
     /**
      * @param array                       $data
-     * @param array|null                  $exclude
+     * @param array                       $forbidden
      * @param NameConverterInterface|null $converter
      *
      * @throws BadArgumentException
      */
-    private function fill(array $data, array $exclude = null, NameConverterInterface $converter = null)
+    public function fill(array $data, array $forbidden = [], NameConverterInterface $converter = null)
     {
+        foreach ($forbidden as $item) {
+            if (isset($data[$item])) {
+                throw new BadArgumentException(
+                    \sprintf('Argument %s is forbidden in %s constructor', $item, static::class)
+                );
+            }
+        }
         foreach ($data as $key => $value) {
             if ($converter) {
                 $key = $converter->denormalize($key);
             }
             if (!\property_exists($this, $key)) {
-                throw new BadArgumentException(\sprintf('Argument %s not found in %s', $key, self::class));
+                throw new BadArgumentException(\sprintf('Argument %s not found in %s', $key, static::class));
             }
             $this->{$key} = $value;
         }

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type\InputMessageContent;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class InputTextMessageContentType.
  *
@@ -11,6 +13,7 @@ namespace Greenplugin\TelegramBot\Type\InputMessageContent;
  */
 class InputTextMessageContentType extends InputMessageContentType
 {
+    use FillFromArrayTrait;
     /**
      * Text of the message to be sent, 1-4096 characters.
      *
@@ -32,4 +35,23 @@ class InputTextMessageContentType extends InputMessageContentType
      * @var bool|null
      */
     public $disableWebPagePreview;
+
+    /**
+     * @param string     $messageText
+     * @param array|null $data
+     *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InputTextMessageContentType
+     */
+    public static function create(string $messageText, array $data = null): InputTextMessageContentType
+    {
+        $instance = new static();
+        $instance->messageText = $messageText;
+        if ($data) {
+            $instance->fill($data);
+        }
+
+        return $instance;
+    }
 }

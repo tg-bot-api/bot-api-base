@@ -45,14 +45,19 @@ class ForwardMessageMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return ForwardMessageMethod
      */
-    public function __construct($chatId, $fromChatId, int $messageId, array $data = null)
+    public static function create($chatId, $fromChatId, int $messageId, array $data = null): ForwardMessageMethod
     {
-        $this->chatId = $chatId;
-        $this->fromChatId = $fromChatId;
-        $this->$messageId = $messageId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->fromChatId = $fromChatId;
+        $instance->$messageId = $messageId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

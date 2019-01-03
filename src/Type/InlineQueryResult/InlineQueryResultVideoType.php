@@ -106,8 +106,6 @@ class InlineQueryResultVideoType extends InlineQueryResultType implements HasPar
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultVideoType constructor.
-     *
      * @param string     $id
      * @param string     $video
      * @param string     $mimeType
@@ -116,23 +114,28 @@ class InlineQueryResultVideoType extends InlineQueryResultType implements HasPar
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultVideoType
      */
-    public function __construct(
+    public static function create(
         string $id,
         string $video,
         string $mimeType,
         string $thumbUrl,
         string $title,
         array $data = null
-    ) {
-        $this->type = self::TYPE_VIDEO;
-        $this->id = $id;
-        $this->video = $video;
-        $this->mimeType = $mimeType;
-        $this->thumbUrl = $thumbUrl;
-        $this->title = $title;
+    ): InlineQueryResultVideoType {
+        $instance = new static();
+        $instance->type = static::TYPE_VIDEO;
+        $instance->id = $id;
+        $instance->video = $video;
+        $instance->mimeType = $mimeType;
+        $instance->thumbUrl = $thumbUrl;
+        $instance->title = $title;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

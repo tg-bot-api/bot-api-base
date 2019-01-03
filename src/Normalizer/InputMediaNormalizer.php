@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Normalizer;
 
-use Greenplugin\TelegramBot\Type\InputMediaPhotoType;
-use Greenplugin\TelegramBot\Type\InputMediaVideoType;
+use Greenplugin\TelegramBot\Type\InputMedia\InputMediaPhotoType;
+use Greenplugin\TelegramBot\Type\InputMedia\InputMediaVideoType;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
 

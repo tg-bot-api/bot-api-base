@@ -20,10 +20,15 @@ class GetChatMemberMethod
     /**
      * @param int|string $chatId
      * @param int        $userId
+     *
+     * @return GetChatMemberMethod
      */
-    public function __construct($chatId, int $userId)
+    public static function create($chatId, int $userId): GetChatMemberMethod
     {
-        $this->chatId = $chatId;
-        $this->userId = $userId;
+        $instance = new self();
+        $instance->chatId = $chatId;
+        $instance->userId = $userId;
+
+        return $instance;
     }
 }

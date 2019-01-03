@@ -23,14 +23,17 @@ class SetChatTitleMethod
     public $title;
 
     /**
-     * SetChatTitleMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $title
+     *
+     * @return SetChatTitleMethod
      */
-    public function __construct($chatId, string $title)
+    public static function create($chatId, string $title): SetChatTitleMethod
     {
-        $this->chatId = $chatId;
-        $this->title = $title;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->title = $title;
+
+        return $instance;
     }
 }

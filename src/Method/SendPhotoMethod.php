@@ -31,20 +31,23 @@ class SendPhotoMethod implements HasParseModeVariableInterface
     public $photo;
 
     /**
-     * SendPhotoMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $photo
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendPhotoMethod
      */
-    public function __construct($chatId, $photo, array $data = null)
+    public static function create($chatId, $photo, array $data = null): SendPhotoMethod
     {
-        $this->chatId = $chatId;
-        $this->photo = $photo;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->photo = $photo;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -31,22 +31,6 @@ class EditMessageLiveLocationMethod
     public $longitude;
 
     /**
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param array|null $data
-     *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     */
-    public function __construct(float $latitude, float $longitude, array $data = null)
-    {
-        $this->$latitude = $latitude;
-        $this->longitude = $longitude;
-        if ($data) {
-            $this->fill($data);
-        }
-    }
-
-    /**
      * @param int|string $chatId
      * @param float      $latitude
      * @param float      $longitude
@@ -62,10 +46,15 @@ class EditMessageLiveLocationMethod
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
-        $method = new self($latitude, $longitude, $data);
-        $method->chatId = $chatId;
+        $instance = new static();
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->chatId = $chatId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 
     /**
@@ -84,9 +73,14 @@ class EditMessageLiveLocationMethod
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
-        $method = new self($latitude, $longitude, $data);
-        $method->inlineMessageId = $inlineMessageId;
+        $instance = new static();
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->inlineMessageId = $inlineMessageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 }

@@ -8,10 +8,13 @@ use Greenplugin\TelegramBot\Method\GetMeMethod;
 
 class GetMeMethodTest extends MethodTestCase
 {
+    /**
+     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     */
     public function testEncode()
     {
         $botApi = $this->getBot('getMe', []);
 
-        $botApi->getMe(new GetMeMethod());
+        $botApi->getMe(GetMeMethod::create());
     }
 }

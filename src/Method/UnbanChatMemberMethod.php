@@ -18,14 +18,17 @@ class UnbanChatMemberMethod
     use UserIdVariableTrait;
 
     /**
-     * UnbanChatMemberMethod constructor.
-     *
      * @param int|string $chatId
      * @param int        $userId
+     *
+     * @return UnbanChatMemberMethod
      */
-    public function __construct($chatId, int $userId)
+    public static function create($chatId, int $userId): UnbanChatMemberMethod
     {
-        $this->chatId = $chatId;
-        $this->userId = $userId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->userId = $userId;
+
+        return $instance;
     }
 }

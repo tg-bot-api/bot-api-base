@@ -51,8 +51,6 @@ class AddStickerToSetMethod
     public $maskPosition;
 
     /**
-     * AddStickerToSetMethod constructor.
-     *
      * @param int                  $userId
      * @param string               $name
      * @param InputFileType|string $pngSticker
@@ -60,15 +58,25 @@ class AddStickerToSetMethod
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return AddStickerToSetMethod
      */
-    public function __construct(int $userId, string $name, $pngSticker, string $emojis, array $data = null)
-    {
-        $this->userId = $userId;
-        $this->name = $name;
-        $this->pngSticker = $pngSticker;
-        $this->emojis = $emojis;
+    public static function create(
+        int $userId,
+        string $name,
+        $pngSticker,
+        string $emojis,
+        array $data = null
+    ): AddStickerToSetMethod {
+        $instance = new static();
+        $instance->userId = $userId;
+        $instance->name = $name;
+        $instance->pngSticker = $pngSticker;
+        $instance->emojis = $emojis;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

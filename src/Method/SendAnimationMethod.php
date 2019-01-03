@@ -63,20 +63,23 @@ class SendAnimationMethod implements HasParseModeVariableInterface
     public $thumb;
 
     /**
-     * SendAnimationMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $animation
      * @param array|null           $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendAnimationMethod
      */
-    public function __construct($chatId, $animation, array $data = null)
+    public static function create($chatId, $animation, array $data = null): SendAnimationMethod
     {
-        $this->chatId = $chatId;
-        $this->animation = $animation;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->animation = $animation;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

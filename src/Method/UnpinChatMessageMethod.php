@@ -16,12 +16,15 @@ class UnpinChatMessageMethod
     use ChatIdVariableTrait;
 
     /**
-     * UnbanChatMemberMethod constructor.
-     *
      * @param int|string $chatId
+     *
+     * @return UnpinChatMessageMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): UnpinChatMessageMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

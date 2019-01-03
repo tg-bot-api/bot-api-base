@@ -67,27 +67,30 @@ class InlineQueryResultAudioType extends InlineQueryResultType implements HasPar
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultAudio constructor.
-     *
      * @param string     $id
      * @param string     $audioUrl
      * @param string     $title
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultAudioType
      */
-    public function __construct(
+    public static function create(
         string $id,
         string $audioUrl,
         string $title,
         array $data = null
-    ) {
-        $this->type = self::TYPE_AUDIO;
-        $this->id = $id;
-        $this->audioUrl = $audioUrl;
-        $this->title = $title;
+    ): InlineQueryResultAudioType {
+        $instance = new static();
+        $instance->type = self::TYPE_AUDIO;
+        $instance->id = $id;
+        $instance->audioUrl = $audioUrl;
+        $instance->title = $title;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

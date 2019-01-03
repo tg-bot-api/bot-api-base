@@ -91,8 +91,6 @@ class InlineQueryResultVenueType extends InlineQueryResultType
     public $thumbHeight;
 
     /**
-     * InlineQueryResultVenueType constructor.
-     *
      * @param string     $id
      * @param float      $latitude
      * @param float      $longitude
@@ -101,23 +99,28 @@ class InlineQueryResultVenueType extends InlineQueryResultType
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultVenueType
      */
-    public function __construct(
+    public static function create(
         string $id,
         float $latitude,
         float $longitude,
         string $title,
         string $address,
         array $data = null
-    ) {
-        $this->type = self::TYPE_VENUE;
-        $this->id = $id;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-        $this->title = $title;
-        $this->address = $address;
+    ): InlineQueryResultVenueType {
+        $instance = new static();
+        $instance->type = static::TYPE_VENUE;
+        $instance->id = $id;
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->title = $title;
+        $instance->address = $address;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

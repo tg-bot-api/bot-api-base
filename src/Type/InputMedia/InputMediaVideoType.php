@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type\InputMedia;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 use Greenplugin\TelegramBot\Type\InputFileType;
 
 /**
@@ -11,6 +12,7 @@ use Greenplugin\TelegramBot\Type\InputFileType;
  */
 class InputMediaVideoType extends InputMediaType
 {
+    use FillFromArrayTrait;
     /**
      * Optional. Thumbnail of the file sent. The thumbnail should be in JPEG format and less than 200 kB in size.
      * A thumbnail‘s width and height should not exceed 90.
@@ -52,10 +54,22 @@ class InputMediaVideoType extends InputMediaType
     public $supportStreaming;
 
     /**
-     * InputMediaVideoType constructor.
+     * @param string|\SplFileInfo $media
+     * @param array|null          $data
+     *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InputMediaVideoType
      */
-    public function __construct()
+    public static function create($media, array $data = null): InputMediaVideoType
     {
-        $this->type = self::TYPE_VIDEO;
+        $instance = new static();
+        $instance->media = $media;
+        $instance->type = static::TYPE_VIDEO;
+        if ($data) {
+            $instance->fill($data);
+        }
+
+        return $instance;
     }
 }

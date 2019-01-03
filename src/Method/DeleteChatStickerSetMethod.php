@@ -17,9 +17,14 @@ class DeleteChatStickerSetMethod
 
     /**
      * @param int|string $chatId
+     *
+     * @return DeleteChatStickerSetMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): DeleteChatStickerSetMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

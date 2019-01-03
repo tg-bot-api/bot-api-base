@@ -17,9 +17,14 @@ class ExportChatInviteLinkMethod
 
     /**
      * @param int|string $chatId
+     *
+     * @return ExportChatInviteLinkMethod
      */
-    public function __construct($chatId)
+    public function create($chatId): ExportChatInviteLinkMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

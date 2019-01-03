@@ -27,24 +27,6 @@ class EditMessageMediaMethod
     public $media;
 
     /**
-     * EditMessageMediaMethod constructor.
-     *
-     * @param int|string    $chatId
-     * @param InputFileType $media
-     * @param array|null    $data
-     *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     */
-    public function __construct($chatId, InputFileType $media, array $data = null)
-    {
-        $this->chatId = $chatId;
-        $this->media = $media;
-        if ($data) {
-            $this->fill($data);
-        }
-    }
-
-    /**
      * @param int|string    $chatId
      * @param int           $messageId
      * @param InputFileType $media
@@ -60,14 +42,18 @@ class EditMessageMediaMethod
         InputFileType $media,
         array $data = null
     ): EditMessageMediaMethod {
-        $instance = new self($chatId, $media, $data);
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->media = $media;
         $instance->messageId = $messageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
         return $instance;
     }
 
     /**
-     * @param int|string    $chatId
      * @param string        $inlineMessageId
      * @param InputFileType $media
      * @param array|null    $data
@@ -77,13 +63,16 @@ class EditMessageMediaMethod
      * @return EditMessageMediaMethod
      */
     public static function createInline(
-        $chatId,
         string $inlineMessageId,
         InputFileType $media,
         array $data = null
     ): EditMessageMediaMethod {
-        $instance = new self($chatId, $media, $data);
+        $instance = new static();
         $instance->inlineMessageId = $inlineMessageId;
+        $instance->media = $media;
+        if ($data) {
+            $instance->fill($data);
+        }
 
         return $instance;
     }

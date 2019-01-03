@@ -28,20 +28,23 @@ class PinChatMessageMethod
     public $disableNotification;
 
     /**
-     * PinChatMessageMethod constructor.
-     *
      * @param int|string $chatId
      * @param int        $messageId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return PinChatMessageMethod
      */
-    public function __construct($chatId, int $messageId, array $data = null)
+    public static function create($chatId, int $messageId, array $data = null): PinChatMessageMethod
     {
-        $this->chatId = $chatId;
-        $this->messageId = $messageId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->messageId = $messageId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -59,8 +59,6 @@ class SendVenueMethod
     public $foursquareType;
 
     /**
-     * SendVenueMethod constructor.
-     *
      * @param int|string $chatId
      * @param float      $latitude
      * @param float      $longitude
@@ -69,16 +67,27 @@ class SendVenueMethod
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendVenueMethod
      */
-    public function __construct($chatId, float $latitude, float $longitude, string $title, $address, array $data = null)
-    {
-        $this->chatId = $chatId;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
-        $this->title = $title;
-        $this->address = $address;
+    public static function create(
+        $chatId,
+        float $latitude,
+        float $longitude,
+        string $title,
+        $address,
+        array $data = null
+    ): SendVenueMethod {
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->title = $title;
+        $instance->address = $address;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

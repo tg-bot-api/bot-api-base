@@ -234,7 +234,7 @@ class MessageType implements HasParseModeVariableInterface
      *
      * @var UserType|null
      */
-    public $leftChatMembers;
+    public $leftChatMember;
 
     /**
      * Optional. A chat title was changed to this value.
@@ -338,7 +338,16 @@ class MessageType implements HasParseModeVariableInterface
     /**
      * Optional. Telegram Passport data.
      *
-     * @var PassportData|null
+     * @var PassportDataType|null
      */
     public $passportData;
+
+    /**
+     * Warning: This variable is experimental.
+     *
+     * @experimental Returns User type
+     *
+     * @var UserType|null
+     */
+    public $leftChatParticipant;
 }

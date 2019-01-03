@@ -31,21 +31,27 @@ class InlineQueryResultCachedStickerType extends InlineQueryResultType
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedStickerType constructor.
-     *
      * @param string     $id
      * @param string     $stickerFileId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedStickerType
      */
-    public function __construct(string $id, string $stickerFileId, array $data = null)
-    {
-        $this->type = self::TYPE_STICKER;
-        $this->id = $id;
-        $this->stickerFileId = $stickerFileId;
+    public static function create(
+        string $id,
+        string $stickerFileId,
+        array $data = null
+    ): InlineQueryResultCachedStickerType {
+        $instance = new static();
+        $instance->type = static::TYPE_STICKER;
+        $instance->id = $id;
+        $instance->stickerFileId = $stickerFileId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

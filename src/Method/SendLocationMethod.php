@@ -39,22 +39,25 @@ class SendLocationMethod
     public $livePeriod;
 
     /**
-     * SendGroupMethod constructor.
-     *
      * @param int|string $chatId
      * @param float      $latitude
      * @param float      $longitude
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendLocationMethod
      */
-    public function __construct($chatId, float $latitude, float $longitude, array $data = null)
+    public static function create($chatId, float $latitude, float $longitude, array $data = null): SendLocationMethod
     {
-        $this->chatId = $chatId;
-        $this->latitude = $latitude;
-        $this->longitude = $longitude;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

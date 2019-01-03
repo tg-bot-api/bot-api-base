@@ -26,14 +26,17 @@ class SetStickerPositionInSetMethod
     public $position;
 
     /**
-     * SetStickerPositionInSetMethod constructor.
-     *
      * @param $sticker
      * @param $position
+     *
+     * @return SetStickerPositionInSetMethod
      */
-    public function __construct($sticker, $position)
+    public static function create($sticker, $position): SetStickerPositionInSetMethod
     {
-        $this->sticker = $sticker;
-        $this->position = $position;
+        $instance = new static();
+        $instance->sticker = $sticker;
+        $instance->position = $position;
+
+        return $instance;
     }
 }

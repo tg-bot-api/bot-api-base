@@ -25,18 +25,21 @@ class SetChatDescriptionMethod
     public $description;
 
     /**
-     * SetChatDescriptionMethod constructor.
-     *
      * @param int|string $chatId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SetChatDescriptionMethod
      */
-    public function __construct($chatId, array $data = null)
+    public static function create($chatId, array $data = null): SetChatDescriptionMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

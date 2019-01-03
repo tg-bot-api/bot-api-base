@@ -97,8 +97,6 @@ class InlineQueryResultDocumentType extends InlineQueryResultType implements Has
     public $thumbHeight;
 
     /**
-     * InlineQueryResultDocumentType constructor.
-     *
      * @param string     $id
      * @param string     $title
      * @param string     $documentUrl
@@ -106,16 +104,26 @@ class InlineQueryResultDocumentType extends InlineQueryResultType implements Has
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultDocumentType
      */
-    public function __construct(string $id, string $title, string $documentUrl, string $mimeType, array $data = null)
-    {
-        $this->type = self::TYPE_DOCUMENT;
-        $this->id = $id;
-        $this->title = $title;
-        $this->documentUrl = $documentUrl;
-        $this->$mimeType = $mimeType;
+    public static function create(
+        string $id,
+        string $title,
+        string $documentUrl,
+        string $mimeType,
+        array $data = null
+    ): InlineQueryResultDocumentType {
+        $instance = new static();
+        $instance->type = static::TYPE_DOCUMENT;
+        $instance->id = $id;
+        $instance->title = $title;
+        $instance->documentUrl = $documentUrl;
+        $instance->$mimeType = $mimeType;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

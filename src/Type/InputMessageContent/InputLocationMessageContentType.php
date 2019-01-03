@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type\InputMessageContent;
 
+use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+
 /**
  * Class InputLocationMessageContentType.
  *
@@ -11,6 +13,7 @@ namespace Greenplugin\TelegramBot\Type\InputMessageContent;
  */
 class InputLocationMessageContentType extends InputMessageContentType
 {
+    use FillFromArrayTrait;
     /**
      * Latitude of the location in degrees.
      *
@@ -31,4 +34,28 @@ class InputLocationMessageContentType extends InputMessageContentType
      * @var int|null
      */
     public $livePeriod;
+
+    /**
+     * @param float      $latitude
+     * @param float      $longitude
+     * @param array|null $data
+     *
+     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InputLocationMessageContentType
+     */
+    public static function create(
+        float $latitude,
+        float $longitude,
+        array $data = null
+    ): InputLocationMessageContentType {
+        $instance = new static();
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        if ($data) {
+            $instance->fill($data);
+        }
+
+        return $instance;
+    }
 }

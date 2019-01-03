@@ -79,18 +79,21 @@ class InlineKeyboardButtonType
     public $pay;
 
     /**
-     * InlineKeyboardButtonType constructor.
-     *
      * @param string     $text
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineKeyboardButtonType
      */
-    public function __construct(string $text, array $data = null)
+    public static function create(string $text, array $data = null): InlineKeyboardButtonType
     {
-        $this->text = $text;
+        $instance = new static();
+        $instance->text = $text;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

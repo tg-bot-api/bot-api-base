@@ -40,20 +40,23 @@ class SendMediaGroupMethod
     public $replyToMessageId;
 
     /**
-     * SendGroupMethod constructor.
-     *
      * @param int|string                                  $chatId
      * @param InputMediaPhotoType[]|InputMediaVideoType[] $media
      * @param array|null                                  $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return SendMediaGroupMethod
      */
-    public function __construct($chatId, $media, array $data = null)
+    public static function create($chatId, $media, array $data = null): SendMediaGroupMethod
     {
-        $this->chatId = $chatId;
-        $this->media = $media;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->media = $media;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

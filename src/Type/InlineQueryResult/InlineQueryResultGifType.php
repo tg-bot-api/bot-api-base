@@ -82,28 +82,30 @@ class InlineQueryResultGifType extends InlineQueryResultType implements HasParse
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultGifType constructor.
-     *
      * @param string     $id
      * @param string     $gifUrl
      * @param string     $thumbUrl
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultGifType
      */
-    public function __construct(
+    public static function create(
         string $id,
         string $gifUrl,
         string $thumbUrl,
         array $data = null
-    ) {
-        $this->type = self::TYPE_GIF;
-        $this->id = $id;
-        $this->gifUrl = $gifUrl;
-        $this->thumbUrl = $thumbUrl;
-
+    ): InlineQueryResultGifType {
+        $instance = new static();
+        $instance->type = static::TYPE_GIF;
+        $instance->id = $id;
+        $instance->gifUrl = $gifUrl;
+        $instance->thumbUrl = $thumbUrl;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

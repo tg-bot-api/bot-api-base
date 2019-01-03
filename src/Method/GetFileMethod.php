@@ -29,12 +29,15 @@ class GetFileMethod
     public $fileId;
 
     /**
-     * GetFileMethod constructor.
-     *
      * @param string $fileId
+     *
+     * @return GetFileMethod
      */
-    public function __construct(string $fileId)
+    public static function create(string $fileId): GetFileMethod
     {
-        $this->fileId = $fileId;
+        $instance = new static();
+        $instance->fileId = $fileId;
+
+        return $instance;
     }
 }

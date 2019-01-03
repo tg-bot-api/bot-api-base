@@ -47,21 +47,24 @@ class InlineQueryResultCachedAudioType extends InlineQueryResultType implements 
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedAudioType constructor.
-     *
      * @param string     $id
      * @param string     $audioFileId
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedAudioType
      */
-    public function __construct(string $id, string $audioFileId, array $data = null)
+    public static function create(string $id, string $audioFileId, array $data = null): InlineQueryResultCachedAudioType
     {
-        $this->type = self::TYPE_AUDIO;
-        $this->id = $id;
-        $this->audioFileId = $audioFileId;
+        $instance = new static();
+        $instance->type = self::TYPE_AUDIO;
+        $instance->id = $id;
+        $instance->audioFileId = $audioFileId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

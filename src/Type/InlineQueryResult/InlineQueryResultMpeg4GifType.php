@@ -82,27 +82,30 @@ class InlineQueryResultMpeg4GifType extends InlineQueryResultType implements Has
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultMpeg4GifType constructor.
-     *
      * @param string     $id
      * @param string     $mpeg4Url
      * @param string     $thumbUrl
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultMpeg4GifType
      */
-    public function __construct(
+    public static function create(
         string $id,
         string $mpeg4Url,
         string $thumbUrl,
         array $data = null
-    ) {
-        $this->type = self::TYPE_MPEG4GIF;
-        $this->id = $id;
-        $this->mpeg4Url = $mpeg4Url;
-        $this->thumbUrl = $thumbUrl;
+    ): InlineQueryResultMpeg4GifType {
+        $instance = new static();
+        $instance->type = static::TYPE_MPEG4GIF;
+        $instance->id = $id;
+        $instance->mpeg4Url = $mpeg4Url;
+        $instance->thumbUrl = $thumbUrl;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -54,23 +54,30 @@ class InlineQueryResultCachedVoiceType extends InlineQueryResultType implements 
     public $inputMessageContent;
 
     /**
-     * InlineQueryResultCachedVoiceType constructor.
-     *
      * @param string     $id
      * @param string     $voiceFileId
      * @param string     $title
      * @param array|null $data
      *
      * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     *
+     * @return InlineQueryResultCachedVoiceType
      */
-    public function __construct(string $id, string $voiceFileId, string $title, array $data = null)
-    {
-        $this->type = self::TYPE_VOICE;
-        $this->id = $id;
-        $this->title = $title;
-        $this->voiceFileId = $voiceFileId;
+    public static function create(
+        string $id,
+        string $voiceFileId,
+        string $title,
+        array $data = null
+    ): InlineQueryResultCachedVoiceType {
+        $instance = new static();
+        $instance->type = static::TYPE_VOICE;
+        $instance->id = $id;
+        $instance->title = $title;
+        $instance->voiceFileId = $voiceFileId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

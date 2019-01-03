@@ -17,9 +17,14 @@ class DeleteChatPhotoMethod
 
     /**
      * @param int|string $chatId
+     *
+     * @return DeleteChatPhotoMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): DeleteChatPhotoMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }
