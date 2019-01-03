@@ -38,7 +38,7 @@ class ApiClient implements ApiClientInterface
      * @param array  $data
      * @param array  $files
      *
-     * @throws \Psr\Http\Client\ClientException
+     * @throws \Psr\Http\Client\ClientExceptionInterface
      *
      * @return mixed
      */
@@ -97,7 +97,9 @@ class ApiClient implements ApiClientInterface
             $stream .= $this->createFileStream($boundary, $name, $file);
         }
 
-        $stream .= "--$boundary--\r\n";
+        if (\strlen($stream)) {
+            $stream .= "--$boundary--\r\n";
+        }
 
         return $stream;
     }
