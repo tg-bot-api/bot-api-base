@@ -3,16 +3,16 @@
     "type": "library",
     "description": "this is low low lwvwl telegram bot api",
     "keywords": [
-        "greenplugin",
+        "tg-bot-api",
         "telegram-bot-api"
     ],
-    "homepage": "https://github.com/greenplugin/telegram-bot-api",
+    "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
     "license": "MIT",
     "authors": [
         {
             "name": "Greenplugin",
             "email": "wformps@gmail.com",
-            "homepage": "https://github.com/Greenplugin/telegram-bot-api",
+            "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
             "role": "Developer"
         }
     ],
