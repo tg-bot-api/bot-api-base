@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot;
 
 use Greenplugin\TelegramBot\Exception\ResponseException;
+use Greenplugin\TelegramBot\Method\AddStickerToSetMethod;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
 use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
@@ -28,7 +29,7 @@ use Greenplugin\TelegramBot\Method\SendVideoNoteMethod;
 use Greenplugin\TelegramBot\Method\SendVoiceMethod;
 use Greenplugin\TelegramBot\Normalizer\InputFileNormalizer;
 use Greenplugin\TelegramBot\Normalizer\InputMediaNormalizer;
-use Greenplugin\TelegramBot\Normalizer\KeyboardNormalizer;
+use Greenplugin\TelegramBot\Normalizer\JsonSerializableNormalizer;
 use Greenplugin\TelegramBot\Normalizer\MediaGroupNormalizer;
 use Greenplugin\TelegramBot\Normalizer\UserProfilePhotosNormalizer;
 use Greenplugin\TelegramBot\Type\ChatMemberType;
@@ -45,6 +46,9 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 
+/**
+ * Class BotApi.
+ */
 class BotApi implements BotApiInterface
 {
     /**
@@ -367,6 +371,18 @@ class BotApi implements BotApiInterface
         return $this->call($method);
     }
 
+    /**
+     * @param AddStickerToSetMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function addStickerToSet(AddStickerToSetMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
 //    public function answerInlineQuery(AnswerInlineQueryMethod $method)
 //    {
 //        return $this->call($method, '');
@@ -408,7 +424,7 @@ class BotApi implements BotApiInterface
         $serializer = new Serializer([
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
-            new KeyboardNormalizer($objectNormalizer),
+            new JsonSerializableNormalizer($objectNormalizer),
             new DateTimeNormalizer(),
             $objectNormalizer,
         ]);

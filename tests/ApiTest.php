@@ -40,7 +40,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testGetUpdates()
     {
-        $method = new GetUpdatesMethod();
+        $method = GetUpdatesMethod::create();
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -53,7 +53,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetMe()
     {
-        $method = new GetMeMethod();
+        $method = GetMeMethod::create();
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -69,7 +69,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendMessage()
     {
-        $method = new SendMessageMethod('id', 'text');
+        $method = SendMessageMethod::create('id', 'text');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -85,7 +85,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testforwardMessage()
     {
-        $method = new ForwardMessageMethod('id', 'id', 1);
+        $method = ForwardMessageMethod::create('id', 'id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -101,7 +101,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendPhoto()
     {
-        $method = new SendPhotoMethod('id', 'url');
+        $method = SendPhotoMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -117,7 +117,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendAudio()
     {
-        $method = new SendAudioMethod('id', 'url');
+        $method = SendAudioMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -133,7 +133,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendDocument()
     {
-        $method = new SendDocumentMethod('id', 'url');
+        $method = SendDocumentMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -149,7 +149,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendVideo()
     {
-        $method = new SendVideoMethod('id', 'url');
+        $method = SendVideoMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -165,7 +165,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendAnimation()
     {
-        $method = new SendAnimationMethod('id', 'url');
+        $method = SendAnimationMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -181,7 +181,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendVoice()
     {
-        $method = new SendVoiceMethod('id', 'url');
+        $method = SendVoiceMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -197,7 +197,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendVideoNote()
     {
-        $method = new SendVideoNoteMethod('id', 'url');
+        $method = SendVideoNoteMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -213,7 +213,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendMediaGroup()
     {
-        $method = new SendMediaGroupMethod('id', []);
+        $method = SendMediaGroupMethod::create('id', []);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -229,7 +229,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendLocation()
     {
-        $method = new SendLocationMethod('id', 0.1, 0.1);
+        $method = SendLocationMethod::create('id', 0.1, 0.1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -275,7 +275,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendVenue()
     {
-        $method = new SendVenueMethod('id', 0.1, 0.1, 'title', 'address');
+        $method = SendVenueMethod::create('id', 0.1, 0.1, 'title', 'address');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -291,7 +291,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testSendContact()
     {
-        $method = new SendContactMethod('id', 'phone number', 'first name');
+        $method = SendContactMethod::create('id', 'phone number', 'first name');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -322,7 +322,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testGetUserProfilePhotos()
     {
-        $method = new GetUserProfilePhotosMethod(1);
+        $method = GetUserProfilePhotosMethod::create(1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -335,7 +335,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetFile()
     {
-        $method = new GetFileMethod('id');
+        $method = GetFileMethod::create('id');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -543,7 +543,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChat()
     {
-        $method = new GetChatMethod('id');
+        $method = GetChatMethod::create('id');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -556,7 +556,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChatAdministrators()
     {
-        $method = new GetChatAdministratorsMethod('id');
+        $method = GetChatAdministratorsMethod::create('id');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -584,7 +584,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChatMember()
     {
-        $method = new GetChatMemberMethod('id', 1);
+        $method = GetChatMemberMethod::create('id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())

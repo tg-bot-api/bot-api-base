@@ -11,6 +11,11 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class MaskPositionType
 {
+    const MASK_POINT_FOREHEAD = 'forehead';
+    const MASK_POINT_EYES = 'eyes';
+    const MASK_POINT_MOUTH = 'mouth';
+    const MASK_POINT_CHIN = 'chin';
+
     /**
      * The part of the face relative to which the mask should be placed. One of “forehead”, “eyes”, “mouth”, or “chin”.
      *
@@ -55,7 +60,7 @@ class MaskPositionType
         $instance->point = $point;
         $instance->xShift = $xShift;
         $instance->yShift = $yShift;
-        $instance->$scale = $scale;
+        $instance->scale = $scale;
 
         return $instance;
     }

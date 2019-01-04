@@ -6,12 +6,13 @@ namespace Greenplugin\TelegramBot\Normalizer;
 
 use Greenplugin\TelegramBot\Type\ForceReplyType;
 use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
+use Greenplugin\TelegramBot\Type\MaskPositionType;
 use Greenplugin\TelegramBot\Type\ReplyKeyboardMarkupType;
 use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
 
-class KeyboardNormalizer implements NormalizerInterface
+class JsonSerializableNormalizer implements NormalizerInterface
 {
     private $objectNormalizer;
 
@@ -32,6 +33,7 @@ class KeyboardNormalizer implements NormalizerInterface
         return $data instanceof InlineKeyboardMarkupType ||
             $data instanceof ReplyKeyboardMarkupType ||
             $data instanceof ReplyKeyboardRemoveType ||
+            $data instanceof MaskPositionType ||
             $data instanceof ForceReplyType;
     }
 }
