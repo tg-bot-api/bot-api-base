@@ -37,7 +37,7 @@ class AnswerInlineQueryMethod
      * Optional. The maximum amount of time in seconds that the result of the inline query may be cached on the server.
      * Defaults to 300.
      *
-     * @var int|null
+     * @var \DateTimeInterface|null
      */
     public $cacheTime;
 

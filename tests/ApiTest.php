@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Greenplugin\TelegramBot\Tests;
 
 use Greenplugin\TelegramBot\BotApi;
+use Greenplugin\TelegramBot\Method\AnswerCallbackQueryMethod;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
 use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
@@ -633,18 +634,16 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
-    /*
-    public function testAnswerCallbackQuery()
-    {
-        $method = new AnswerCallbackQueryMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(ChatMember::class))
-            ->willReturn(new ChatMember());
-
-        $bot->answerCallbackQuery($method);
-    }
-    */
+//    public function testAnswerCallbackQuery()
+//    {
+//        $method = new AnswerCallbackQueryMethod();
+//
+//        $bot = $this->getBotMock();
+//        $bot->expects($this->once())
+//            ->method('call')
+//            ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class))
+//            ->willReturn(new ChatMemberType());
+//
+//        $bot->answerCallbackQuery($method);
+//    }
 }

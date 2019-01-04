@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Greenplugin\TelegramBot\Type\InputMessageContent;
 
+use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
 use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
 
 /**
@@ -11,7 +12,7 @@ use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
  *
  * @see https://core.telegram.org/bots/api#inputtextmessagecontent
  */
-class InputTextMessageContentType extends InputMessageContentType
+class InputTextMessageContentType extends InputMessageContentType implements HasParseModeVariableInterface
 {
     use FillFromArrayTrait;
     /**

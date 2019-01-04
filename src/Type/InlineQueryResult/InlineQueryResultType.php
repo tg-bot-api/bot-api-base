@@ -46,5 +46,5 @@ abstract class InlineQueryResultType
      *
      * @var string
      */
-    protected $type;
+    public $type;
 }

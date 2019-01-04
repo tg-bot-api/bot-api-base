@@ -6,6 +6,8 @@ namespace Greenplugin\TelegramBot;
 
 use Greenplugin\TelegramBot\Exception\ResponseException;
 use Greenplugin\TelegramBot\Method\AddStickerToSetMethod;
+use Greenplugin\TelegramBot\Method\AnswerCallbackQueryMethod;
+use Greenplugin\TelegramBot\Method\AnswerInlineQueryMethod;
 use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
 use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
 use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
@@ -27,6 +29,7 @@ use Greenplugin\TelegramBot\Method\SendVenueMethod;
 use Greenplugin\TelegramBot\Method\SendVideoMethod;
 use Greenplugin\TelegramBot\Method\SendVideoNoteMethod;
 use Greenplugin\TelegramBot\Method\SendVoiceMethod;
+use Greenplugin\TelegramBot\Normalizer\AnswerInlineQueryNormalizer;
 use Greenplugin\TelegramBot\Normalizer\InputFileNormalizer;
 use Greenplugin\TelegramBot\Normalizer\InputMediaNormalizer;
 use Greenplugin\TelegramBot\Normalizer\JsonSerializableNormalizer;
@@ -388,7 +391,36 @@ class BotApi implements BotApiInterface
 //        return $this->call($method, '');
 //    }
 
-    private function getMethodName($method)
+    /**
+     * @param AnswerCallbackQueryMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function answerCallbackQuery(AnswerCallbackQueryMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param AnswerInlineQueryMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function answerInlineQuery(AnswerInlineQueryMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param $method
+     *
+     * @return string
+     */
+    private function getMethodName($method): string
     {
         return \lcfirst(\substr(
             \get_class($method),
@@ -397,7 +429,13 @@ class BotApi implements BotApiInterface
         ));
     }
 
-    private function denormalize($data, $type)
+    /**
+     * @param $data
+     * @param $type
+     *
+     * @return object
+     */
+    private function denormalize($data, $type): object
     {
         $normalizer = new ObjectNormalizer(
             null,
@@ -416,7 +454,12 @@ class BotApi implements BotApiInterface
         return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
     }
 
-    private function encode($method)
+    /**
+     * @param $method
+     *
+     * @return array
+     */
+    private function encode($method): array
     {
         $files = [];
 
@@ -425,6 +468,7 @@ class BotApi implements BotApiInterface
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
             new JsonSerializableNormalizer($objectNormalizer),
+            new AnswerInlineQueryNormalizer($objectNormalizer),
             new DateTimeNormalizer(),
             $objectNormalizer,
         ]);

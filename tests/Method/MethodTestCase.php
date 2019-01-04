@@ -13,17 +13,28 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      * @param $methodName
      * @param $request
      * @param array $result
+     * @param array $serialisedFields
      *
      * @return BotApi
      */
-    protected function getBot($methodName, $request, $result = []): BotApi
+    protected function getBot($methodName, $request, $result = [], $serialisedFields = []): BotApi
     {
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
 
         $stub->expects($this->once())
             ->method('send')
-            ->with($methodName, $request)
+            ->with(
+                $methodName,
+                $this->callback(function ($query) use ($request, $serialisedFields) {
+                    foreach ($serialisedFields as $serializedField) {
+                        $query[$serializedField] = \json_decode($query[$serializedField], true);
+                    }
+                    $this->assertEquals($request, $query);
+
+                    return true;
+                })
+            )
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
