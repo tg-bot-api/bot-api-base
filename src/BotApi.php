@@ -17,12 +17,16 @@ use TgBotApi\BotApiBase\Method\AnswerInlineQueryMethod;
 use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
 use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
 use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
+use TgBotApi\BotApiBase\Method\GetChatMembersCountMethod;
 use TgBotApi\BotApiBase\Method\GetChatMethod;
 use TgBotApi\BotApiBase\Method\GetFileMethod;
 use TgBotApi\BotApiBase\Method\GetMeMethod;
 use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
 use TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod;
+use TgBotApi\BotApiBase\Method\GetWebhookInfoMethod;
 use TgBotApi\BotApiBase\Method\KickChatMemberMethod;
+use TgBotApi\BotApiBase\Method\LeaveChatMethod;
+use TgBotApi\BotApiBase\Method\PinChatMessageMethod;
 use TgBotApi\BotApiBase\Method\SendAnimationMethod;
 use TgBotApi\BotApiBase\Method\SendAudioMethod;
 use TgBotApi\BotApiBase\Method\SendContactMethod;
@@ -48,6 +52,7 @@ use TgBotApi\BotApiBase\Type\MessageType;
 use TgBotApi\BotApiBase\Type\UpdateType;
 use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
 use TgBotApi\BotApiBase\Type\UserType;
+use TgBotApi\BotApiBase\Type\WebhookInfoType;
 
 /**
  * Class BotApi.
@@ -303,6 +308,35 @@ class BotApi implements BotApiInterface
     }
 
     /**
+     * @param GetWebhookInfoMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return WebhookInfoType
+     */
+    public function getWebhookInfo(GetWebhookInfoMethod $method): WebhookInfoType
+    {
+        return $this->call($method, WebhookInfoType::class);
+    }
+
+    /**
+     * @param LeaveChatMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function leaveChat(LeaveChatMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    public function pinChatMessage(PinChatMessageMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
      * @todo fix this is bad
      *
      * @param GetFileMethod $method
@@ -386,6 +420,18 @@ class BotApi implements BotApiInterface
         return $this->call($method);
     }
 
+    /**
+     * @param GetChatMembersCountMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return int
+     */
+    public function getChatMembersCount(GetChatMembersCountMethod $method): int
+    {
+        return $this->call($method);
+    }
+
 //    public function answerInlineQuery(AnswerInlineQueryMethod $method)
 //    {
 //        return $this->call($method, '');
@@ -433,9 +479,9 @@ class BotApi implements BotApiInterface
      * @param $data
      * @param $type
      *
-     * @return object
+     * @return object|array
      */
-    private function denormalize($data, $type): object
+    private function denormalize($data, $type)
     {
         $normalizer = new ObjectNormalizer(
             null,

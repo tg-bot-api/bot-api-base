@@ -56,7 +56,7 @@ class GetUpdatesMethod implements HasUpdateTypeVariableInterface
      *
      * @var string[]|null
      */
-    public $allowed_updates;
+    public $allowedUpdates;
 
     /**
      * @param array|null $data
