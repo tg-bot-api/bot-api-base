@@ -57,8 +57,8 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/greenplugin/telegram-bot-api.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/greenplugin/telegram-bot-api.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/tg-bot-api/bot-api-base.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-last-commit]: https://img.shields.io/github/last-commit/tg-bot-api/bot-api-base.svg?style=flat-square
 
