@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\EditMessageVariablesTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class StopMessageLiveLocationType.
@@ -18,48 +18,42 @@ class StopMessageLiveLocationMethod
     use EditMessageVariablesTrait;
 
     /**
-     * StopMessageLiveLocationMethod constructor.
-     *
-     * @param array|null $data
-     *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     */
-    public function __construct(array $data = null)
-    {
-        if ($data) {
-            $this->fill($data);
-        }
-    }
-
-    /**
      * @param int|string $chatId
+     * @param int        $messageId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return StopMessageLiveLocationMethod
      */
-    public static function create($chatId, array $data = null): StopMessageLiveLocationMethod
+    public static function create($chatId, int $messageId, array $data = null): StopMessageLiveLocationMethod
     {
-        $method = new self($data);
-        $method->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->messageId = $messageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 
     /**
      * @param string     $inlineMessageId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return StopMessageLiveLocationMethod
      */
     public static function createInline(string $inlineMessageId, array $data = null): StopMessageLiveLocationMethod
     {
-        $method = new self($data);
-        $method->inlineMessageId = $inlineMessageId;
+        $instance = new static();
+        $instance->inlineMessageId = $inlineMessageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 }

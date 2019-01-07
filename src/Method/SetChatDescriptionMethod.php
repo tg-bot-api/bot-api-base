@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class SetChatDescriptionMethod.
@@ -25,18 +25,21 @@ class SetChatDescriptionMethod
     public $description;
 
     /**
-     * SetChatDescriptionMethod constructor.
-     *
      * @param int|string $chatId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SetChatDescriptionMethod
      */
-    public function __construct($chatId, array $data = null)
+    public static function create($chatId, array $data = null): SetChatDescriptionMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

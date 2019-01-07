@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
 /**
  * Class GetMeMethod.
@@ -11,4 +11,8 @@ namespace Greenplugin\TelegramBot\Method;
  */
 class GetMeMethod
 {
+    public static function create(): GetMeMethod
+    {
+        return new static();
+    }
 }

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Method\Traits\CaptionVariablesTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\CaptionVariablesTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class SendVideoMethod.
@@ -70,20 +70,23 @@ class SendVideoMethod implements HasParseModeVariableInterface
     public $supportStreaming;
 
     /**
-     * SendVideoMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $video
      * @param array|null           $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendVideoMethod
      */
-    public function __construct($chatId, $video, array $data = null)
+    public static function create($chatId, $video, array $data = null): SendVideoMethod
     {
-        $this->chatId = $chatId;
-        $this->video = $video;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->video = $video;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

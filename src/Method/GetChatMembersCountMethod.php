@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
  * Class GetChatMembersCountMethod.
@@ -17,9 +17,14 @@ class GetChatMembersCountMethod
 
     /**
      * @param int|string $chatId
+     *
+     * @return GetChatMembersCountMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): GetChatMembersCountMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

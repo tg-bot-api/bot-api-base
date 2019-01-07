@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method\Interfaces;
+namespace TgBotApi\BotApiBase\Method\Interfaces;
 
 /**
  * Interface HasCaptionVariableInterface.

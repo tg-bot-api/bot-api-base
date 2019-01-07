@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\EditMessageVariablesTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class EditMessageLiveLocationMethod.
@@ -31,28 +31,12 @@ class EditMessageLiveLocationMethod
     public $longitude;
 
     /**
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param array|null $data
-     *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     */
-    public function __construct(float $latitude, float $longitude, array $data = null)
-    {
-        $this->$latitude = $latitude;
-        $this->longitude = $longitude;
-        if ($data) {
-            $this->fill($data);
-        }
-    }
-
-    /**
      * @param int|string $chatId
      * @param float      $latitude
      * @param float      $longitude
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return EditMessageLiveLocationMethod
      */
@@ -62,10 +46,15 @@ class EditMessageLiveLocationMethod
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
-        $method = new self($latitude, $longitude, $data);
-        $method->chatId = $chatId;
+        $instance = new static();
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->chatId = $chatId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 
     /**
@@ -74,7 +63,7 @@ class EditMessageLiveLocationMethod
      * @param float      $longitude
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return EditMessageLiveLocationMethod
      */
@@ -84,9 +73,14 @@ class EditMessageLiveLocationMethod
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
-        $method = new self($latitude, $longitude, $data);
-        $method->inlineMessageId = $inlineMessageId;
+        $instance = new static();
+        $instance->latitude = $latitude;
+        $instance->longitude = $longitude;
+        $instance->inlineMessageId = $inlineMessageId;
+        if ($data) {
+            $instance->fill($data);
+        }
 
-        return $method;
+        return $instance;
     }
 }

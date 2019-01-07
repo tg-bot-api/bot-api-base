@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Type;
+namespace TgBotApi\BotApiBase\Tests\Type;
 
-use Greenplugin\TelegramBot\BotApi;
-use Greenplugin\TelegramBot\HttpClientInterface;
+use TgBotApi\BotApiBase\ApiClientInterface;
+use TgBotApi\BotApiBase\BotApi;
 
 abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
 {
     protected function getBot($result)
     {
-        $stub = $this->getMockBuilder(HttpClientInterface::class)
+        $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
 
         $stub->expects($this->once())
-            ->method('post')
+            ->method('send')
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
-        return new BotApi($stub, '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
     }
 }

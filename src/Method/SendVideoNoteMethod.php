@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class SendVideoNoteMethod.
@@ -54,20 +54,23 @@ class SendVideoNoteMethod
     public $thumb;
 
     /**
-     * SendVideoNoteMethod constructor.
-     *
      * @param int|string           $chatId
      * @param InputFileType|string $videoNote
      * @param array|null           $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendVideoNoteMethod
      */
-    public function __construct($chatId, $videoNote, array $data = null)
+    public static function create($chatId, $videoNote, array $data = null): SendVideoNoteMethod
     {
-        $this->chatId = $chatId;
-        $this->videoNote = $videoNote;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->videoNote = $videoNote;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

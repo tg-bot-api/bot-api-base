@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace TgBotApi\BotApiBase\Type;
 
 /**
  * Class UserProfilePhotosType.
@@ -19,10 +19,9 @@ class UserProfilePhotosType
     public $totalCount;
 
     /**
-     * @todo fix collection denormalization.
-     * Requested profile pictures (in up to 4 sizes each)
+     * Requested profile pictures (in up to 4 sizes each).
      *
-     * @var PhotoSizeTypeCollection[]
+     * @var PhotoSizeType[][]
      */
     public $photos;
 }

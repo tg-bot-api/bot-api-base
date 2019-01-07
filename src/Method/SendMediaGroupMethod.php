@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
-use Greenplugin\TelegramBot\Type\InputMediaPhotoType;
-use Greenplugin\TelegramBot\Type\InputMediaVideoType;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
 
 /**
  * Class SendMediaGroupMethod.
@@ -17,7 +17,7 @@ use Greenplugin\TelegramBot\Type\InputMediaVideoType;
 class SendMediaGroupMethod
 {
     use FillFromArrayTrait;
-    use SendToChatVariablesTrait;
+    use ChatIdVariableTrait;
     /**
      * A JSON-serialized array describing photos and videos to be sent, must include 2–10 items.
      *
@@ -26,20 +26,37 @@ class SendMediaGroupMethod
     public $media;
 
     /**
-     * SendGroupMethod constructor.
+     * Optional. Sends the message silently. Users will receive a notification with no sound.
      *
+     * @var bool|null
+     */
+    public $disableNotification;
+
+    /**
+     * Optional. If the message is a reply, ID of the original message.
+     *
+     * @var int|null
+     */
+    public $replyToMessageId;
+
+    /**
      * @param int|string                                  $chatId
      * @param InputMediaPhotoType[]|InputMediaVideoType[] $media
      * @param array|null                                  $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendMediaGroupMethod
      */
-    public function __construct($chatId, $media, array $data = null)
+    public static function create($chatId, $media, array $data = null): SendMediaGroupMethod
     {
-        $this->chatId = $chatId;
-        $this->media = $media;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->media = $media;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

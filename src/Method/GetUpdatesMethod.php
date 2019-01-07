@@ -2,27 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Interfaces\HasUpdateTypeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class GetUpdatesMethod.
  *
  * @see https://core.telegram.org/bots/api#getupdates
  */
-class GetUpdatesMethod
+class GetUpdatesMethod implements HasUpdateTypeVariableInterface
 {
     use FillFromArrayTrait;
-    const TYPE_MESSAGE = 'message';
-    const TYPE_EDITED_MESSAGE = 'edited_message';
-    const TYPE_CHANNEL_POST = 'channel_post';
-    const TYPE_EDITED_CHANNEL_POST = 'edited_channel_post';
-    const TYPE_INLINE_QUERY = 'inline_query';
-    const TYPE_CHOSEN_INLINE_RESULT = 'chosen_inline_result';
-    const TYPE_CALLBACK_QUERY = 'callback_query';
-    const TYPE_SHIPPING_QUERY = 'shipping_query';
-    const TYPE_PRE_CHECKOUT_QUERY = 'pre_checkout_query';
 
     /**
      * Optional. Identifier of the first update to be returned.
@@ -67,16 +59,19 @@ class GetUpdatesMethod
     public $allowed_updates;
 
     /**
-     * GetUpdatesMethod constructor.
-     *
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return GetUpdatesMethod
      */
-    public function __construct(array $data = null)
+    public static function create(array $data = null): GetUpdatesMethod
     {
+        $instance = new static();
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class AnswerCallbackQueryMethod.
@@ -56,7 +56,7 @@ class AnswerCallbackQueryMethod
      * Optional. The maximum amount of time in seconds that the result of the callback query may be cached client-side.
      * Telegram apps will support caching starting in version 3.14. Defaults to 0.
      *
-     * @var int|null
+     * @var \DateTimeInterface|null
      */
     public $cacheTime;
 
@@ -64,13 +64,18 @@ class AnswerCallbackQueryMethod
      * @param string     $callbackQueryId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return AnswerCallbackQueryMethod
      */
-    public function __construct(string $callbackQueryId, array $data = null)
+    public static function create(string $callbackQueryId, array $data = null): AnswerCallbackQueryMethod
     {
-        $this->callbackQueryId = $callbackQueryId;
+        $instance = new static();
+        $instance->callbackQueryId = $callbackQueryId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

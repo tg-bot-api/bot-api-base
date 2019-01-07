@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\MessageIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\MessageIdVariableTrait;
 
 /**
  * Class PinChatMessageMethod.
@@ -28,20 +28,23 @@ class PinChatMessageMethod
     public $disableNotification;
 
     /**
-     * PinChatMessageMethod constructor.
-     *
      * @param int|string $chatId
      * @param int        $messageId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return PinChatMessageMethod
      */
-    public function __construct($chatId, int $messageId, array $data = null)
+    public static function create($chatId, int $messageId, array $data = null): PinChatMessageMethod
     {
-        $this->chatId = $chatId;
-        $this->messageId = $messageId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->messageId = $messageId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

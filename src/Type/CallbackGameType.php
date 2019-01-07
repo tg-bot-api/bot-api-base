@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace TgBotApi\BotApiBase\Type;
 
 /**
  * Class CallbackGameType.
@@ -11,4 +11,13 @@ namespace Greenplugin\TelegramBot\Type;
  */
 class CallbackGameType
 {
+    //A placeholder, currently holds no information. Use BotFather to set up your game.
+
+    /**
+     * @return CallbackGameType
+     */
+    public static function create(): CallbackGameType
+    {
+        return new static();
+    }
 }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Type;
+namespace TgBotApi\BotApiBase\Tests\Type;
 
-use Greenplugin\TelegramBot\Type\UserType;
+use TgBotApi\BotApiBase\Type\UserType;
 
 class UserTypeTest extends TypeTestCase
 {

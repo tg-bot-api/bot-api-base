@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
  * Class DeleteChatStickerSetMethod.
@@ -17,9 +17,14 @@ class DeleteChatStickerSetMethod
 
     /**
      * @param int|string $chatId
+     *
+     * @return DeleteChatStickerSetMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): DeleteChatStickerSetMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

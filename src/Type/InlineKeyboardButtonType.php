@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace TgBotApi\BotApiBase\Type;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class InlineKeyboardButtonType.
@@ -79,18 +79,21 @@ class InlineKeyboardButtonType
     public $pay;
 
     /**
-     * InlineKeyboardButtonType constructor.
-     *
      * @param string     $text
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return InlineKeyboardButtonType
      */
-    public function __construct(string $text, array $data = null)
+    public static function create(string $text, array $data = null): InlineKeyboardButtonType
     {
-        $this->text = $text;
+        $instance = new static();
+        $instance->text = $text;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

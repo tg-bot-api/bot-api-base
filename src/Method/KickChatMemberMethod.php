@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
 
 /**
  * Class KickChatMemberMethod.
@@ -19,11 +19,11 @@ class KickChatMemberMethod
     use ChatIdVariableTrait;
     use UserIdVariableTrait;
     /**
-     * Optional. Date when the user will be unbanned, unix time.
+     * Optional. Date when the user will be unbanned, \DateTimeInterface.
      * If user is banned for more than 366 days or less than 30 seconds
      * from the current time they are considered to be banned forever.
      *
-     * @var int|null
+     * @var \DateTimeInterface|null
      */
     public $untilDate;
 
@@ -34,14 +34,19 @@ class KickChatMemberMethod
      * @param int        $userId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return KickChatMemberMethod
      */
-    public function __construct($chatId, int $userId, array $data = null)
+    public static function create($chatId, int $userId, array $data = null): KickChatMemberMethod
     {
-        $this->chatId = $chatId;
-        $this->userId = $userId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->userId = $userId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

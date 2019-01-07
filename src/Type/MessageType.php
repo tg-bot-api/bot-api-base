@@ -2,18 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace TgBotApi\BotApiBase\Type;
+
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 
 /**
  * Class MessageType.
  *
  * @see https://core.telegram.org/bots/api#message
  */
-class MessageType
+class MessageType implements HasParseModeVariableInterface
 {
-    const PARSE_TYPE_MARKDOWN = 'Markdown';
-    const PARSE_TYPE_HTML = 'HTML';
-
     /**
      * Unique message identifier inside this chat.
      *
@@ -29,9 +28,9 @@ class MessageType
     public $from;
 
     /**
-     * Date the message was sent in Unix time.
+     * Date the message was sent in \DateTimeInterface.
      *
-     * @var int
+     * @var \DateTimeImmutable
      */
     public $date;
 
@@ -71,9 +70,9 @@ class MessageType
     public $signature;
 
     /**
-     * Optional. For forwarded messages, date the original message was sent in Unix time.
+     * Optional. For forwarded messages, date the original message was sent in \DateTimeImmutable.
      *
-     * @var int|null
+     * @var \DateTimeImmutable|null
      */
     public $forwardDate;
 
@@ -86,9 +85,9 @@ class MessageType
     public $replyToMessage;
 
     /**
-     * Optional. Date the message was last edited in Unix time.
+     * Optional. Date the message was last edited in \DateTimeImmutable.
      *
-     * @var int|null
+     * @var \DateTimeImmutable|null
      */
     public $editDate;
 
@@ -235,7 +234,7 @@ class MessageType
      *
      * @var UserType|null
      */
-    public $leftChatMembers;
+    public $leftChatMember;
 
     /**
      * Optional. A chat title was changed to this value.
@@ -293,7 +292,6 @@ class MessageType
      */
     public $migrateToChat;
 
-    //migrate_from_chat_id
     /**
      * Optional. The supergroup has been migrated from a group with the specified identifier.
      * This number may be greater than 32 bits and some programming languages may have difficulty/silent
@@ -321,7 +319,6 @@ class MessageType
      */
     public $invoice;
 
-    //successful_payment    SuccessfulPayment
     /**
      * @see https://core.telegram.org/bots/api#payments
      * Optional. Message is a service message about a successful payment, information about the payment.
@@ -341,7 +338,16 @@ class MessageType
     /**
      * Optional. Telegram Passport data.
      *
-     * @var PassportData|null
+     * @var PassportDataType|null
      */
     public $passportData;
+
+    /**
+     * Warning: This variable is experimental.
+     *
+     * @experimental Returns User type
+     *
+     * @var UserType|null
+     */
+    public $leftChatParticipant;
 }

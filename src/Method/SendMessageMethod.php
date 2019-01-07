@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 
 /**
  * Class SendMessageMethod.
@@ -41,20 +41,23 @@ class SendMessageMethod implements HasParseModeVariableInterface
     public $disableWebPagePreview;
 
     /**
-     * SendMessageMethod constructor.
-     *
      * @param int|string $chatId
      * @param string     $text
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendMessageMethod
      */
-    public function __construct($chatId, string $text, array $data = null)
+    public static function create($chatId, string $text, array $data = null): SendMessageMethod
     {
-        $this->chatId = $chatId;
-        $this->text = $text;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->text = $text;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

@@ -2,55 +2,45 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests;
+namespace TgBotApi\BotApiBase\Tests;
 
-use Greenplugin\TelegramBot\BotApi;
-use Greenplugin\TelegramBot\BotApiInterface;
-use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
-use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
-use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
-use Greenplugin\TelegramBot\Method\GetChatMethod;
-use Greenplugin\TelegramBot\Method\GetFileMethod;
-use Greenplugin\TelegramBot\Method\GetMeMethod;
-use Greenplugin\TelegramBot\Method\GetUpdatesMethod;
-use Greenplugin\TelegramBot\Method\GetUserProfilePhotosMethod;
-use Greenplugin\TelegramBot\Method\SendAnimationMethod;
-use Greenplugin\TelegramBot\Method\SendAudioMethod;
-use Greenplugin\TelegramBot\Method\SendContactMethod;
-use Greenplugin\TelegramBot\Method\SendDocumentMethod;
-use Greenplugin\TelegramBot\Method\SendLocationMethod;
-use Greenplugin\TelegramBot\Method\SendMediaGroupMethod;
-use Greenplugin\TelegramBot\Method\SendMessageMethod;
-use Greenplugin\TelegramBot\Method\SendPhotoMethod;
-use Greenplugin\TelegramBot\Method\SendVenueMethod;
-use Greenplugin\TelegramBot\Method\SendVideoMethod;
-use Greenplugin\TelegramBot\Method\SendVideoNoteMethod;
-use Greenplugin\TelegramBot\Method\SendVoiceMethod;
-use Greenplugin\TelegramBot\Type\ChatMemberType;
-use Greenplugin\TelegramBot\Type\ChatType;
-use Greenplugin\TelegramBot\Type\FileType;
-use Greenplugin\TelegramBot\Type\MessageType;
-use Greenplugin\TelegramBot\Type\UpdateType;
-use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
-use Greenplugin\TelegramBot\Type\UserType;
+use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
+use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
+use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
+use TgBotApi\BotApiBase\Method\GetChatMethod;
+use TgBotApi\BotApiBase\Method\GetFileMethod;
+use TgBotApi\BotApiBase\Method\GetMeMethod;
+use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
+use TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod;
+use TgBotApi\BotApiBase\Method\SendAnimationMethod;
+use TgBotApi\BotApiBase\Method\SendAudioMethod;
+use TgBotApi\BotApiBase\Method\SendContactMethod;
+use TgBotApi\BotApiBase\Method\SendDocumentMethod;
+use TgBotApi\BotApiBase\Method\SendLocationMethod;
+use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
+use TgBotApi\BotApiBase\Method\SendMessageMethod;
+use TgBotApi\BotApiBase\Method\SendPhotoMethod;
+use TgBotApi\BotApiBase\Method\SendVenueMethod;
+use TgBotApi\BotApiBase\Method\SendVideoMethod;
+use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
+use TgBotApi\BotApiBase\Method\SendVoiceMethod;
+use TgBotApi\BotApiBase\Type\ChatMemberType;
+use TgBotApi\BotApiBase\Type\ChatType;
+use TgBotApi\BotApiBase\Type\FileType;
+use TgBotApi\BotApiBase\Type\MessageType;
+use TgBotApi\BotApiBase\Type\UpdateType;
+use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
+use TgBotApi\BotApiBase\Type\UserType;
 
 class ApiTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * Test that true does in fact equal true.
-     */
-    public function testTrueIsTrue()
-    {
-        $botApi = new BotApi(new Stubs\HttpClient(), '');
-        $this->assertInstanceOf(BotApiInterface::class, $botApi);
-    }
-
-    /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testGetUpdates()
     {
-        $method = new GetUpdatesMethod();
+        $method = GetUpdatesMethod::create();
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -63,7 +53,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetMe()
     {
-        $method = new GetMeMethod();
+        $method = GetMeMethod::create();
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -75,11 +65,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendMessage()
     {
-        $method = new SendMessageMethod('id', 'text');
+        $method = SendMessageMethod::create('id', 'text');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -91,11 +81,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testforwardMessage()
     {
-        $method = new ForwardMessageMethod('id', 'id', 1);
+        $method = ForwardMessageMethod::create('id', 'id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -107,11 +97,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendPhoto()
     {
-        $method = new SendPhotoMethod('id', 'url');
+        $method = SendPhotoMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -123,11 +113,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendAudio()
     {
-        $method = new SendAudioMethod('id', 'url');
+        $method = SendAudioMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -139,11 +129,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendDocument()
     {
-        $method = new SendDocumentMethod('id', 'url');
+        $method = SendDocumentMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -155,11 +145,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVideo()
     {
-        $method = new SendVideoMethod('id', 'url');
+        $method = SendVideoMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -171,11 +161,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendAnimation()
     {
-        $method = new SendAnimationMethod('id', 'url');
+        $method = SendAnimationMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -187,11 +177,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVoice()
     {
-        $method = new SendVoiceMethod('id', 'url');
+        $method = SendVoiceMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -203,11 +193,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVideoNote()
     {
-        $method = new SendVideoNoteMethod('id', 'url');
+        $method = SendVideoNoteMethod::create('id', 'url');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -219,11 +209,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendMediaGroup()
     {
-        $method = new SendMediaGroupMethod('id', []);
+        $method = SendMediaGroupMethod::create('id', []);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -235,11 +225,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendLocation()
     {
-        $method = new SendLocationMethod('id', 0.1, 0.1);
+        $method = SendLocationMethod::create('id', 0.1, 0.1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -281,11 +271,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     */
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVenue()
     {
-        $method = new SendVenueMethod('id', 0.1, 0.1, 'title', 'address');
+        $method = SendVenueMethod::create('id', 0.1, 0.1, 'title', 'address');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -297,11 +287,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendContact()
     {
-        $method = new SendContactMethod('id', 'phone number', 'first name');
+        $method = SendContactMethod::create('id', 'phone number', 'first name');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -328,11 +318,11 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     */
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testGetUserProfilePhotos()
     {
-        $method = new GetUserProfilePhotosMethod(1);
+        $method = GetUserProfilePhotosMethod::create(1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -345,7 +335,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetFile()
     {
-        $method = new GetFileMethod('id');
+        $method = GetFileMethod::create('id');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -553,7 +543,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChat()
     {
-        $method = new GetChatMethod('id');
+        $method = GetChatMethod::create('id');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -566,7 +556,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChatAdministrators()
     {
-        $method = new GetChatAdministratorsMethod('id');
+        $method = GetChatAdministratorsMethod::create('id');
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -594,7 +584,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 
     public function testGetChatMember()
     {
-        $method = new GetChatMemberMethod('id', 1);
+        $method = GetChatMemberMethod::create('id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -643,18 +633,16 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
     */
 
-    /*
-    public function testAnswerCallbackQuery()
-    {
-        $method = new AnswerCallbackQueryMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(ChatMember::class))
-            ->willReturn(new ChatMember());
-
-        $bot->answerCallbackQuery($method);
-    }
-    */
+//    public function testAnswerCallbackQuery()
+//    {
+//        $method = new AnswerCallbackQueryMethod();
+//
+//        $bot = $this->getBotMock();
+//        $bot->expects($this->once())
+//            ->method('call')
+//            ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class))
+//            ->willReturn(new ChatMemberType());
+//
+//        $bot->answerCallbackQuery($method);
+//    }
 }

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
 
 /**
  * Class GetUserProfilePhotosMethod.
@@ -37,13 +37,18 @@ class GetUserProfilePhotosMethod
      * @param int        $userId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return GetUserProfilePhotosMethod
      */
-    public function __construct(int $userId, array $data = null)
+    public static function create(int $userId, array $data = null): GetUserProfilePhotosMethod
     {
-        $this->userId = $userId;
+        $instance = new static();
+        $instance->userId = $userId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

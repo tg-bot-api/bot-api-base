@@ -1,26 +1,34 @@
 {
-    "name": "greenplugin/telegram-bot-api",
+    "name": "tg-bot-api/bot-api-base",
     "type": "library",
     "description": "this is low low lwvwl telegram bot api",
     "keywords": [
-        "greenplugin",
-        "telegram-bot-api"
+        "tg-bot-api",
+        "telegram-bot-api",
+        "telegram",
+        "telegram-bot",
+        "telegram-php",
+        "php-telegram-bot",
+        "bot",
+        "php-bot"
     ],
-    "homepage": "https://github.com/greenplugin/telegram-bot-api",
+    "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
     "license": "MIT",
     "authors": [
         {
-            "name": "Greenplugin",
+            "name": "TgBotApi",
             "email": "wformps@gmail.com",
-            "homepage": "https://github.com/Greenplugin/telegram-bot-api",
+            "homepage": "https://github.com/greenplugin",
             "role": "Developer"
         }
     ],
     "require": {
         "php": ">7.2",
         "ext-json": "*",
-        "kriswallsmith/buzz": "^0.17.2",
-        "php-ds/php-ds": "^1.2",
+        "phpdocumentor/reflection-docblock": "^4.3",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-message": "^1.0",
         "symfony/property-access": "^4.2",
         "symfony/property-info": "^4.2",
         "symfony/serializer": "^4.2"
@@ -36,12 +44,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Greenplugin\\TelegramBot\\": "src/"
+            "TgBotApi\\BotApiBase\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Greenplugin\\TelegramBot\\Tests\\": "tests"
+            "TgBotApi\\BotApiBase\\Tests\\": "tests"
         }
     },
     "scripts": {

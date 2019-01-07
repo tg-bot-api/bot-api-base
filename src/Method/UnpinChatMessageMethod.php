@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
  * Class UnpinChatMessageMethod.
@@ -16,12 +16,15 @@ class UnpinChatMessageMethod
     use ChatIdVariableTrait;
 
     /**
-     * UnbanChatMemberMethod constructor.
-     *
      * @param int|string $chatId
+     *
+     * @return UnpinChatMessageMethod
      */
-    public function __construct($chatId)
+    public static function create($chatId): UnpinChatMessageMethod
     {
-        $this->chatId = $chatId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+
+        return $instance;
     }
 }

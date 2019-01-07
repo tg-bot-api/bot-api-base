@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\UserIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
 
 /**
  * Class PromoteChatMemberMethod.
@@ -76,20 +76,23 @@ class PromoteChatMemberMethod
     public $canPromoteMembers;
 
     /**
-     * PromoteChatMemberMethod constructor.
-     *
      * @param $chatId
      * @param $userId
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return PromoteChatMemberMethod
      */
-    public function __construct($chatId, $userId, array $data = null)
+    public static function create($chatId, $userId, array $data = null): PromoteChatMemberMethod
     {
-        $this->chatId = $chatId;
-        $this->userId = $userId;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->userId = $userId;
         if ($data) {
-            $this->fill($data);
+            $instance->fill($data);
         }
+
+        return $instance;
     }
 }

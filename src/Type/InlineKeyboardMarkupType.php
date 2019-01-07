@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace TgBotApi\BotApiBase\Type;
 
 /**
  * Class InlineKeyboardMarkupType
@@ -22,12 +22,15 @@ class InlineKeyboardMarkupType
     public $inlineKeyboard;
 
     /**
-     * InlineKeyboardMarkupType constructor.
-     *
      * @param array $inlineKeyboard
+     *
+     * @return InlineKeyboardMarkupType
      */
-    public function __construct(array $inlineKeyboard = [])
+    public static function create(array $inlineKeyboard): InlineKeyboardMarkupType
     {
-        $this->inlineKeyboard = $inlineKeyboard;
+        $instance = new static();
+        $instance->inlineKeyboard = $inlineKeyboard;
+
+        return $instance;
     }
 }

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot;
+namespace TgBotApi\BotApiBase;
 
 interface BotApiInterface
 {

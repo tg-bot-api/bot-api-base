@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class SetChatPhotoMethod.
@@ -23,14 +23,17 @@ class SetChatPhotoMethod
     public $photo;
 
     /**
-     * SetChatPhotoMethod constructor.
-     *
      * @param int|string    $chatId
      * @param InputFileType $photo
+     *
+     * @return SetChatPhotoMethod
      */
-    public function __construct($chatId, InputFileType $photo)
+    public static function create($chatId, InputFileType $photo): SetChatPhotoMethod
     {
-        $this->chatId = $chatId;
-        $this->photo = $photo;
+        $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->photo = $photo;
+
+        return $instance;
     }
 }

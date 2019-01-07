@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method\Traits;
+namespace TgBotApi\BotApiBase\Method\Traits;
 
 /**
  * Trait ChatIdVariableTrait.
