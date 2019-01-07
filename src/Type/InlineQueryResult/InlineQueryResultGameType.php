@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InlineQueryResult;
+namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class InlineQueryResultGameType.
@@ -27,7 +27,7 @@ class InlineQueryResultGameType extends InlineQueryResultType
      * @param string     $gameShortName
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return InlineQueryResultGameType
      */

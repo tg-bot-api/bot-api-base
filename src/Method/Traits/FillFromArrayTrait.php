@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method\Traits;
+namespace TgBotApi\BotApiBase\Method\Traits;
 
-use Greenplugin\TelegramBot\Exception\BadArgumentException;
 use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
+use TgBotApi\BotApiBase\Exception\BadArgumentException;
 
 /**
  * Trait FillFromArrayTrait.

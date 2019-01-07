@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\Method\AnswerCallbackQueryMethod;
+use TgBotApi\BotApiBase\Method\AnswerCallbackQueryMethod;
 
 class AnswerCallbackQueryMethodTest extends MethodTestCase
 {
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \Exception
      */
     public function testEncode()
@@ -33,7 +33,7 @@ class AnswerCallbackQueryMethodTest extends MethodTestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \Exception
      */
     public function testEncodePartial()
@@ -46,7 +46,7 @@ class AnswerCallbackQueryMethodTest extends MethodTestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \Exception
      */
     public function testEncodeFalse()

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InlineQueryResult;
+namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 
-use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
 
 /**
  * Class InlineQueryResult.

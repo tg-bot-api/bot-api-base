@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Normalizer;
+namespace TgBotApi\BotApiBase\Normalizer;
 
-use Greenplugin\TelegramBot\Type\InputFileType;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 class InputFileNormalizer implements NormalizerInterface
 {

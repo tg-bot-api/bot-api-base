@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\PassportElementError;
+namespace TgBotApi\BotApiBase\Type\PassportElementError;
 
 /**
  * Class PassportElementErrorFrontSideType.
@@ -35,7 +35,7 @@ class PassportElementErrorFrontSideType extends PassportElementErrorType
      * @param string $message
      * @param string $fileHash
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return PassportElementErrorFrontSideType
      */

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\PassportElementError;
+namespace TgBotApi\BotApiBase\Type\PassportElementError;
 
-use Greenplugin\TelegramBot\Method\Interfaces\EncryptedPassportElementTypes;
+use TgBotApi\BotApiBase\Method\Interfaces\EncryptedPassportElementTypes;
 
 /**
  * Class PassportElementErrorUnspecifiedType.
@@ -40,7 +40,7 @@ class PassportElementErrorUnspecifiedType extends PassportElementErrorType imple
      * @param string $message
      * @param string $elementHash
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return PassportElementErrorTranslationFileType
      */

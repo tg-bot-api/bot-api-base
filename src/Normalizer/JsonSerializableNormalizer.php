@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Normalizer;
+namespace TgBotApi\BotApiBase\Normalizer;
 
-use Greenplugin\TelegramBot\Type\ForceReplyType;
-use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
-use Greenplugin\TelegramBot\Type\MaskPositionType;
-use Greenplugin\TelegramBot\Type\ReplyKeyboardMarkupType;
-use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Type\ForceReplyType;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
+use TgBotApi\BotApiBase\Type\MaskPositionType;
+use TgBotApi\BotApiBase\Type\ReplyKeyboardMarkupType;
+use TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType;
 
 class JsonSerializableNormalizer implements NormalizerInterface
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method\Traits;
+namespace TgBotApi\BotApiBase\Tests\Method\Traits;
 
-use Greenplugin\TelegramBot\Type\CallbackGameType;
-use Greenplugin\TelegramBot\Type\InlineKeyboardButtonType;
+use TgBotApi\BotApiBase\Type\CallbackGameType;
+use TgBotApi\BotApiBase\Type\InlineKeyboardButtonType;
 
 trait InlineButtonTrait
 {
@@ -27,7 +27,7 @@ trait InlineButtonTrait
     /**
      * @param null $replacement
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return InlineKeyboardButtonType
      */

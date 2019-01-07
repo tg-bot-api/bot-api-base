@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method\Traits;
+namespace TgBotApi\BotApiBase\Method\Traits;
 
-use Greenplugin\TelegramBot\Type\ForceReplyType;
-use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
-use Greenplugin\TelegramBot\Type\ReplyKeyboardMarkupType;
-use Greenplugin\TelegramBot\Type\ReplyKeyboardRemoveType;
+use TgBotApi\BotApiBase\Type\ForceReplyType;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
+use TgBotApi\BotApiBase\Type\ReplyKeyboardMarkupType;
+use TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType;
 
 /**
  * Class ReplyMarkupVariableTrait.

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Method\Traits\CaptionVariablesTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\SendToChatVariablesTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\CaptionVariablesTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class SendAnimationMethod.
@@ -67,7 +67,7 @@ class SendAnimationMethod implements HasParseModeVariableInterface
      * @param InputFileType|string $animation
      * @param array|null           $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return SendAnimationMethod
      */

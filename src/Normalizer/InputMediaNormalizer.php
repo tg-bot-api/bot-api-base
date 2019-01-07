@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Normalizer;
+namespace TgBotApi\BotApiBase\Normalizer;
 
-use Greenplugin\TelegramBot\Type\InputMedia\InputMediaPhotoType;
-use Greenplugin\TelegramBot\Type\InputMedia\InputMediaVideoType;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
 
 class InputMediaNormalizer implements NormalizerInterface
 {

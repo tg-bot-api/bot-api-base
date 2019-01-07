@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Type;
+namespace TgBotApi\BotApiBase\Tests\Type;
 
-use Greenplugin\TelegramBot\ApiClientInterface;
-use Greenplugin\TelegramBot\BotApi;
+use TgBotApi\BotApiBase\ApiClientInterface;
+use TgBotApi\BotApiBase\BotApi;
 
 abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
 {

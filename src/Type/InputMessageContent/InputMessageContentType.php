@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InputMessageContent;
+namespace TgBotApi\BotApiBase\Type\InputMessageContent;
 
 /**
  * Class InputMessageContentType.

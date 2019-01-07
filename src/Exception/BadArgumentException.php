@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Exception;
+namespace TgBotApi\BotApiBase\Exception;
 
 /**
  * Class BadArgumentException.

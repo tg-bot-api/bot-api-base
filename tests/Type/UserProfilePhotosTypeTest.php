@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Type;
+namespace TgBotApi\BotApiBase\Tests\Type;
 
-use Greenplugin\TelegramBot\Type\PhotoSizeType;
-use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
+use TgBotApi\BotApiBase\Type\PhotoSizeType;
+use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
 
 class UserProfilePhotosTypeTest extends TypeTestCase
 {

@@ -2,42 +2,41 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests;
+namespace TgBotApi\BotApiBase\Tests;
 
-use Greenplugin\TelegramBot\BotApi;
-use Greenplugin\TelegramBot\Method\AnswerCallbackQueryMethod;
-use Greenplugin\TelegramBot\Method\ForwardMessageMethod;
-use Greenplugin\TelegramBot\Method\GetChatAdministratorsMethod;
-use Greenplugin\TelegramBot\Method\GetChatMemberMethod;
-use Greenplugin\TelegramBot\Method\GetChatMethod;
-use Greenplugin\TelegramBot\Method\GetFileMethod;
-use Greenplugin\TelegramBot\Method\GetMeMethod;
-use Greenplugin\TelegramBot\Method\GetUpdatesMethod;
-use Greenplugin\TelegramBot\Method\GetUserProfilePhotosMethod;
-use Greenplugin\TelegramBot\Method\SendAnimationMethod;
-use Greenplugin\TelegramBot\Method\SendAudioMethod;
-use Greenplugin\TelegramBot\Method\SendContactMethod;
-use Greenplugin\TelegramBot\Method\SendDocumentMethod;
-use Greenplugin\TelegramBot\Method\SendLocationMethod;
-use Greenplugin\TelegramBot\Method\SendMediaGroupMethod;
-use Greenplugin\TelegramBot\Method\SendMessageMethod;
-use Greenplugin\TelegramBot\Method\SendPhotoMethod;
-use Greenplugin\TelegramBot\Method\SendVenueMethod;
-use Greenplugin\TelegramBot\Method\SendVideoMethod;
-use Greenplugin\TelegramBot\Method\SendVideoNoteMethod;
-use Greenplugin\TelegramBot\Method\SendVoiceMethod;
-use Greenplugin\TelegramBot\Type\ChatMemberType;
-use Greenplugin\TelegramBot\Type\ChatType;
-use Greenplugin\TelegramBot\Type\FileType;
-use Greenplugin\TelegramBot\Type\MessageType;
-use Greenplugin\TelegramBot\Type\UpdateType;
-use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
-use Greenplugin\TelegramBot\Type\UserType;
+use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
+use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
+use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
+use TgBotApi\BotApiBase\Method\GetChatMethod;
+use TgBotApi\BotApiBase\Method\GetFileMethod;
+use TgBotApi\BotApiBase\Method\GetMeMethod;
+use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
+use TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod;
+use TgBotApi\BotApiBase\Method\SendAnimationMethod;
+use TgBotApi\BotApiBase\Method\SendAudioMethod;
+use TgBotApi\BotApiBase\Method\SendContactMethod;
+use TgBotApi\BotApiBase\Method\SendDocumentMethod;
+use TgBotApi\BotApiBase\Method\SendLocationMethod;
+use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
+use TgBotApi\BotApiBase\Method\SendMessageMethod;
+use TgBotApi\BotApiBase\Method\SendPhotoMethod;
+use TgBotApi\BotApiBase\Method\SendVenueMethod;
+use TgBotApi\BotApiBase\Method\SendVideoMethod;
+use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
+use TgBotApi\BotApiBase\Method\SendVoiceMethod;
+use TgBotApi\BotApiBase\Type\ChatMemberType;
+use TgBotApi\BotApiBase\Type\ChatType;
+use TgBotApi\BotApiBase\Type\FileType;
+use TgBotApi\BotApiBase\Type\MessageType;
+use TgBotApi\BotApiBase\Type\UpdateType;
+use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
+use TgBotApi\BotApiBase\Type\UserType;
 
 class ApiTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testGetUpdates()
     {
@@ -66,7 +65,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendMessage()
     {
@@ -82,7 +81,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testforwardMessage()
     {
@@ -98,7 +97,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendPhoto()
     {
@@ -114,7 +113,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendAudio()
     {
@@ -130,7 +129,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendDocument()
     {
@@ -146,7 +145,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVideo()
     {
@@ -162,7 +161,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendAnimation()
     {
@@ -178,7 +177,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVoice()
     {
@@ -194,7 +193,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVideoNote()
     {
@@ -210,7 +209,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendMediaGroup()
     {
@@ -226,7 +225,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendLocation()
     {
@@ -272,7 +271,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     */
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendVenue()
     {
@@ -288,7 +287,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testSendContact()
     {
@@ -319,7 +318,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
     */
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testGetUserProfilePhotos()
     {

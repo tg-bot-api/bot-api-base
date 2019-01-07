@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputMedia\InputMediaPhotoType;
-use Greenplugin\TelegramBot\Type\InputMedia\InputMediaVideoType;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
 
 /**
  * Class SendMediaGroupMethod.
@@ -44,7 +44,7 @@ class SendMediaGroupMethod
      * @param InputMediaPhotoType[]|InputMediaVideoType[] $media
      * @param array|null                                  $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return SendMediaGroupMethod
      */

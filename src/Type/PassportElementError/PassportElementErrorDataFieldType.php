@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\PassportElementError;
+namespace TgBotApi\BotApiBase\Type\PassportElementError;
 
 /**
  * Class PassportElementErrorDataFieldType.
@@ -47,7 +47,7 @@ class PassportElementErrorDataFieldType extends PassportElementErrorType
      * @param string $fieldName
      * @param string $dataHash
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return PassportElementErrorDataFieldType
      */

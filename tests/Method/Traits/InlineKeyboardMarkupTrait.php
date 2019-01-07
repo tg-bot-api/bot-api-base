@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method\Traits;
+namespace TgBotApi\BotApiBase\Tests\Method\Traits;
 
-use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
 
 trait InlineKeyboardMarkupTrait
 {

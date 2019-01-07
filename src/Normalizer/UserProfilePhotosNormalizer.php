@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Normalizer;
+namespace TgBotApi\BotApiBase\Normalizer;
 
-use Greenplugin\TelegramBot\Type\PhotoSizeType;
-use Greenplugin\TelegramBot\Type\UserProfilePhotosType;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Type\PhotoSizeType;
+use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
 
 class UserProfilePhotosNormalizer implements DenormalizerInterface
 {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Exception\BadArgumentException;
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Method\Traits\EditMessageVariablesTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Exception\BadArgumentException;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class EditMessageCaptionMethod.

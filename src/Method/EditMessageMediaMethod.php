@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\EditMessageVariablesTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
-use Greenplugin\TelegramBot\Type\InputMedia\InputMediaType;
+use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaType;
 
 /**
  * Class EditMessageMediaMethod.
@@ -32,7 +32,7 @@ class EditMessageMediaMethod
      * @param InputFileType $media
      * @param array|null    $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return EditMessageMediaMethod
      */
@@ -58,7 +58,7 @@ class EditMessageMediaMethod
      * @param InputFileType $media
      * @param array|null    $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return EditMessageMediaMethod
      */

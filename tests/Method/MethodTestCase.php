@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\ApiClientInterface;
-use Greenplugin\TelegramBot\BotApi;
+use TgBotApi\BotApiBase\ApiClientInterface;
+use TgBotApi\BotApiBase\BotApi;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {

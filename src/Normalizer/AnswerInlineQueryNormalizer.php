@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Normalizer;
+namespace TgBotApi\BotApiBase\Normalizer;
 
-use Greenplugin\TelegramBot\Method\AnswerInlineQueryMethod;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Method\AnswerInlineQueryMethod;
 
 class AnswerInlineQueryNormalizer implements NormalizerInterface
 {

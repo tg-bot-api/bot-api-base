@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InputMedia;
+namespace TgBotApi\BotApiBase\Type\InputMedia;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class InputMediaVideoType.
@@ -57,7 +57,7 @@ class InputMediaVideoType extends InputMediaType
      * @param string|\SplFileInfo $media
      * @param array|null          $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return InputMediaVideoType
      */

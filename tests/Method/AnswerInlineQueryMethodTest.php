@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\Method\AnswerInlineQueryMethod;
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Tests\Method\Traits\InlineKeyboardMarkupTrait;
-use Greenplugin\TelegramBot\Type\InlineQueryResult\InlineQueryResultArticleType;
-use Greenplugin\TelegramBot\Type\InlineQueryResult\InlineQueryResultAudioType;
-use Greenplugin\TelegramBot\Type\InputMessageContent\InputTextMessageContentType;
+use TgBotApi\BotApiBase\Method\AnswerInlineQueryMethod;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
+use TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultArticleType;
+use TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultAudioType;
+use TgBotApi\BotApiBase\Type\InputMessageContent\InputTextMessageContentType;
 
 /**
  * Class AnswerInlineQueryMethodTest.
@@ -21,8 +21,8 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
     use InlineKeyboardMarkupTrait;
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testInlineQueryResultArticle()
     {
@@ -59,8 +59,8 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testInlineQueryResultAudio()
     {
@@ -95,7 +95,7 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
     }
 
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return array
      */
@@ -121,8 +121,8 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
      * @param $excepted
      * @param $verifiable
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      * @throws \Exception
      */
     private function runWithArguments($excepted, $verifiable)

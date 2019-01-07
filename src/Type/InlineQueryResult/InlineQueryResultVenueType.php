@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InlineQueryResult;
+namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
 
 /**
  * Class InlineQueryResultVenueType.
@@ -98,7 +98,7 @@ class InlineQueryResultVenueType extends InlineQueryResultType
      * @param string     $address
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return InlineQueryResultVenueType
      */

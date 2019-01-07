@@ -1,18 +1,24 @@
 {
-    "name": "tg-bot-api/telegram-bot-api",
+    "name": "tg-bot-api/bot-api-base",
     "type": "library",
     "description": "this is low low lwvwl telegram bot api",
     "keywords": [
         "tg-bot-api",
-        "telegram-bot-api"
+        "telegram-bot-api",
+        "telegram",
+        "telegram-bot",
+        "telegram-php",
+        "php-telegram-bot",
+        "bot",
+        "php-bot"
     ],
     "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
     "license": "MIT",
     "authors": [
         {
-            "name": "Greenplugin",
+            "name": "TgBotApi",
             "email": "wformps@gmail.com",
-            "homepage": "https://github.com/tg-bot-api/telegram-bot-api",
+            "homepage": "https://github.com/greenplugin",
             "role": "Developer"
         }
     ],
@@ -38,12 +44,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Greenplugin\\TelegramBot\\": "src/"
+            "TgBotApi\\BotApiBase\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Greenplugin\\TelegramBot\\Tests\\": "tests"
+            "TgBotApi\\BotApiBase\\Tests\\": "tests"
         }
     },
     "scripts": {

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\PassportElementError;
+namespace TgBotApi\BotApiBase\Type\PassportElementError;
 
-use Greenplugin\TelegramBot\Exception\BadArgumentException;
+use TgBotApi\BotApiBase\Exception\BadArgumentException;
 
 /**
  * Class PassportElementErrorType.

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Method\Traits\ReplyMarkupVariableTrait;
-use Greenplugin\TelegramBot\Type\LabeledPriceType;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\ReplyMarkupVariableTrait;
+use TgBotApi\BotApiBase\Type\LabeledPriceType;
 
 /**
  * Class SendInvoiceMethod.
@@ -183,7 +183,7 @@ class SendInvoiceMethod
      * @param array      $prices
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return SendInvoiceMethod
      */

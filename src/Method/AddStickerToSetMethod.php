@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\EmojisVariableTrait;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputFileType;
-use Greenplugin\TelegramBot\Type\MaskPositionType;
+use TgBotApi\BotApiBase\Method\Traits\EmojisVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\MaskPositionType;
 
 /**
  * Class AddStickerToSetMethod.
@@ -57,7 +57,7 @@ class AddStickerToSetMethod
      * @param string               $emojis
      * @param array|null           $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return AddStickerToSetMethod
      */

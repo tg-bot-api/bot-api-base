@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InlineQueryResult\InlineQueryResultType;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultType;
 
 /**
  * Class AnswerInlineQueryMethod.
@@ -86,7 +86,7 @@ class AnswerInlineQueryMethod
      * @param InlineQueryResultType[] $results
      * @param array|null              $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return AnswerInlineQueryMethod
      */

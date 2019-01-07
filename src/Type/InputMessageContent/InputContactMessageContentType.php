@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InputMessageContent;
+namespace TgBotApi\BotApiBase\Type\InputMessageContent;
 
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class InputContactMessageContentType.
@@ -47,7 +47,7 @@ class InputContactMessageContentType extends InputMessageContentType
      * @param string     $firstName
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return InputContactMessageContentType
      */

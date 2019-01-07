@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InlineQueryResult;
+namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Method\Traits\FillFromArrayTrait;
-use Greenplugin\TelegramBot\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
 
 /**
  * Class InlineQueryResultCachedVideoType.
@@ -68,7 +68,7 @@ class InlineQueryResultCachedVideoType extends InlineQueryResultType implements 
      * @param string     $title
      * @param array|null $data
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return InlineQueryResultCachedVideoType
      */

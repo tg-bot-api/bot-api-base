@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\Method\KickChatMemberMethod;
+use TgBotApi\BotApiBase\Method\KickChatMemberMethod;
 
 /**
  * Class KickChatMemberMethodTest.
@@ -12,7 +12,7 @@ use Greenplugin\TelegramBot\Method\KickChatMemberMethod;
 class KickChatMemberMethodTest extends MethodTestCase
 {
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      * @throws \Exception
      */
     public function testEncode()

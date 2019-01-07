@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\Method\GetMeMethod;
+use TgBotApi\BotApiBase\Method\GetMeMethod;
 
 class GetMeMethodTest extends MethodTestCase
 {
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncode()
     {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\InputMedia;
+namespace TgBotApi\BotApiBase\Type\InputMedia;
 
 /**
  * Class InputMediaType.

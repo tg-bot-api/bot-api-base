@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Method;
+namespace TgBotApi\BotApiBase\Method;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasActionVariableInterface;
-use Greenplugin\TelegramBot\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Interfaces\HasActionVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
  * Class SendChatActionMethod.

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\Method\AddStickerToSetMethod;
-use Greenplugin\TelegramBot\Type\InputFileType;
-use Greenplugin\TelegramBot\Type\MaskPositionType;
+use TgBotApi\BotApiBase\Method\AddStickerToSetMethod;
+use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\MaskPositionType;
 
 class AddStickerToSetMethodTest extends MethodTestCase
 {

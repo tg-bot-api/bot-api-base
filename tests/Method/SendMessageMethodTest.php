@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Tests\Method;
+namespace TgBotApi\BotApiBase\Tests\Method;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
-use Greenplugin\TelegramBot\Method\SendMessageMethod;
-use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\SendMessageMethod;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
 
 /**
  * Class SendMessageMethodTest.
@@ -14,8 +14,8 @@ use Greenplugin\TelegramBot\Type\InlineKeyboardMarkupType;
 class SendMessageMethodTest extends MethodTestCase
 {
     /**
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
-     * @throws \Greenplugin\TelegramBot\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncode()
     {

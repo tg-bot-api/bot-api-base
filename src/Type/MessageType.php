@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type;
+namespace TgBotApi\BotApiBase\Type;
 
-use Greenplugin\TelegramBot\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 
 /**
  * Class MessageType.

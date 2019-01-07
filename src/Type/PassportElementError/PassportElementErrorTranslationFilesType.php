@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Greenplugin\TelegramBot\Type\PassportElementError;
+namespace TgBotApi\BotApiBase\Type\PassportElementError;
 
 /**
  * Class PassportElementErrorTranslationFilesType.
@@ -45,7 +45,7 @@ class PassportElementErrorTranslationFilesType extends PassportElementErrorType
      * @param string $message
      * @param array  $fileHashes
      *
-     * @throws \Greenplugin\TelegramBot\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
      * @return PassportElementErrorTranslationFilesType
      */
