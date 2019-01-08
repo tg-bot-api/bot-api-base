@@ -40,7 +40,7 @@ class SendAnimationMethod implements HasParseModeVariableInterface
     /**
      * Optional. Animation width.
      *
-     * @var
+     * @var int|null
      */
     public $width;
 

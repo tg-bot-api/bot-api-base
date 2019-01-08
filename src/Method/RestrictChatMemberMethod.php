@@ -56,7 +56,7 @@ class RestrictChatMemberMethod
      *
      * @var bool|null
      */
-    public $canAddWebPagePreview;
+    public $canAddWebPagePreviews;
 
     /**
      * @param $chatId

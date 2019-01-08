@@ -10,6 +10,8 @@ use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
 
 /**
  * Class PromoteChatMemberMethod.
+ *
+ * @see https://core.telegram.org/bots/api#promotechatmember
  */
 class PromoteChatMemberMethod
 {

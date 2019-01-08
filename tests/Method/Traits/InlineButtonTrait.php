@@ -9,7 +9,7 @@ use TgBotApi\BotApiBase\Type\InlineKeyboardButtonType;
 
 trait InlineButtonTrait
 {
-    protected function buildInlineKeyboardArray($newKeys = [])
+    protected function buildInlineKeyboardButtonArray($newKeys = [])
     {
         return \array_merge(
             [
@@ -31,7 +31,7 @@ trait InlineButtonTrait
      *
      * @return InlineKeyboardButtonType
      */
-    protected function buildInlineKeyboardObject($replacement = null): InlineKeyboardButtonType
+    protected function buildInlineKeyboardButtonObject($replacement = null): InlineKeyboardButtonType
     {
         return InlineKeyboardButtonType::create('text', $replacement ?? [
                 'url' => 'url',

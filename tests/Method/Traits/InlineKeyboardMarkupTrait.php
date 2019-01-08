@@ -10,16 +10,27 @@ trait InlineKeyboardMarkupTrait
 {
     use InlineButtonTrait;
 
-    public function buildMarkupArray()
+    /**
+     * @return array
+     */
+    public function buildInlineMarkupArray(): array
     {
-        return ['inline_keyboard' => [[$this->buildInlineKeyboardArray(), $this->buildInlineKeyboardArray()]]];
+        return ['inline_keyboard' => [[
+            $this->buildInlineKeyboardButtonArray(),
+            $this->buildInlineKeyboardButtonArray(),
+        ]]];
     }
 
-    public function builInlinedMarkupObject(): InlineKeyboardMarkupType
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return InlineKeyboardMarkupType
+     */
+    public function buildInlineMarkupObject(): InlineKeyboardMarkupType
     {
         return InlineKeyboardMarkupType::create([[
-            $this->buildInlineKeyboardObject(),
-            $this->buildInlineKeyboardObject(),
+            $this->buildInlineKeyboardButtonObject(),
+            $this->buildInlineKeyboardButtonObject(),
         ]]);
     }
 }

@@ -72,7 +72,8 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
                 $this->callback(function ($files) use (&$requestedData, $request, $fileMap, $serializableFields) {
                     $request = $this->buildFileTree($files, $request, $fileMap);
                     foreach ($serializableFields as $field) {
-                        $request[$field] = \json_encode($request[$field]);
+                        $this->assertIsString($requestedData[$field]);
+                        $requestedData[$field] = \json_decode($requestedData[$field], true);
                     }
                     $this->assertEquals($request, $requestedData);
 

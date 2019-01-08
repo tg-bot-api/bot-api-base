@@ -27,6 +27,8 @@ use TgBotApi\BotApiBase\Method\GetWebhookInfoMethod;
 use TgBotApi\BotApiBase\Method\KickChatMemberMethod;
 use TgBotApi\BotApiBase\Method\LeaveChatMethod;
 use TgBotApi\BotApiBase\Method\PinChatMessageMethod;
+use TgBotApi\BotApiBase\Method\PromoteChatMemberMethod;
+use TgBotApi\BotApiBase\Method\RestrictChatMemberMethod;
 use TgBotApi\BotApiBase\Method\SendAnimationMethod;
 use TgBotApi\BotApiBase\Method\SendAudioMethod;
 use TgBotApi\BotApiBase\Method\SendContactMethod;
@@ -331,7 +333,38 @@ class BotApi implements BotApiInterface
         return $this->call($method);
     }
 
+    /**
+     * @param PinChatMessageMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
     public function pinChatMessage(PinChatMessageMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param PromoteChatMemberMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function promoteChatMember(PromoteChatMemberMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param RestrictChatMemberMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function restrictChatMember(RestrictChatMemberMethod $method): bool
     {
         return $this->call($method);
     }

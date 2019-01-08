@@ -33,7 +33,7 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
                 'id' => 'id',
                 'title' => 'title',
                 'input_message_content' => $exceptedMessageContent,
-                'reply_markup' => $this->buildInlineKeyboardArray(),
+                'reply_markup' => $this->buildInlineKeyboardButtonArray(),
                 'url' => 'url',
                 'hide_url' => true,
                 'description' => 'description',
@@ -46,7 +46,7 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
                 'title',
                 $verifiableMessageContent,
                 [
-                    'replyMarkup' => $this->buildInlineKeyboardObject(),
+                    'replyMarkup' => $this->buildInlineKeyboardButtonObject(),
                     'url' => 'url',
                     'hideUrl' => true,
                     'description' => 'description',
@@ -75,7 +75,7 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
                 'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 'performer' => 'performer',
                 'audio_duration' => 1,
-                'reply_markup' => $this->buildInlineKeyboardArray(),
+                'reply_markup' => $this->buildInlineKeyboardButtonArray(),
                 'input_message_content' => $exceptedMessageContent,
             ],
             InlineQueryResultAudioType::create(
@@ -86,7 +86,7 @@ class AnswerInlineQueryMethodTest extends MethodTestCase
                     'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                     'performer' => 'performer',
                     'audioDuration' => 1,
-                    'replyMarkup' => $this->buildInlineKeyboardObject(),
+                    'replyMarkup' => $this->buildInlineKeyboardButtonObject(),
                     'caption' => 'caption',
                     'inputMessageContent' => $verifiableMessageContent,
                 ]
