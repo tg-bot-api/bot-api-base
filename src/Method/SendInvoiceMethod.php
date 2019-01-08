@@ -173,15 +173,15 @@ class SendInvoiceMethod
     public $replyToMessageId;
 
     /**
-     * @param int|string $chatId
-     * @param string     $title
-     * @param string     $description
-     * @param string     $payload
-     * @param string     $providerToken
-     * @param string     $startParameter
-     * @param string     $currency
-     * @param array      $prices
-     * @param array|null $data
+     * @param int|string         $chatId
+     * @param string             $title
+     * @param string             $description
+     * @param string             $payload
+     * @param string             $providerToken
+     * @param string             $startParameter
+     * @param string             $currency
+     * @param LabeledPriceType[] $prices
+     * @param array|null         $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *

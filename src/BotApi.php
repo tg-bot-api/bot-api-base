@@ -31,8 +31,11 @@ use TgBotApi\BotApiBase\Method\PromoteChatMemberMethod;
 use TgBotApi\BotApiBase\Method\RestrictChatMemberMethod;
 use TgBotApi\BotApiBase\Method\SendAnimationMethod;
 use TgBotApi\BotApiBase\Method\SendAudioMethod;
+use TgBotApi\BotApiBase\Method\SendChatActionMethod;
 use TgBotApi\BotApiBase\Method\SendContactMethod;
 use TgBotApi\BotApiBase\Method\SendDocumentMethod;
+use TgBotApi\BotApiBase\Method\SendGameMethod;
+use TgBotApi\BotApiBase\Method\SendInvoiceMethod;
 use TgBotApi\BotApiBase\Method\SendLocationMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Method\SendMessageMethod;
@@ -259,6 +262,42 @@ class BotApi implements BotApiInterface
     public function sendMediaGroup(SendMediaGroupMethod $method): array
     {
         return $this->call($method, MessageType::class . '[]');
+    }
+
+    /**
+     * @param SendChatActionMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function sendChatAction(SendChatActionMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SendGameMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return MessageType
+     */
+    public function sendGame(SendGameMethod $method): MessageType
+    {
+        return $this->call($method, MessageType::class);
+    }
+
+    /**
+     * @param SendInvoiceMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return MessageType
+     */
+    public function sendInvoice(SendInvoiceMethod $method): MessageType
+    {
+        return $this->call($method, MessageType::class);
     }
 
     /**

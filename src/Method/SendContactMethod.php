@@ -64,7 +64,7 @@ class SendContactMethod
         $instance = new static();
         $instance->chatId = $chatId;
         $instance->phoneNumber = $phoneNumber;
-        $instance->$firstName = $firstName;
+        $instance->firstName = $firstName;
         if ($data) {
             $instance->fill($data);
         }
