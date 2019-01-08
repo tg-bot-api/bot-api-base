@@ -28,6 +28,12 @@ class InputMediaNormalizer implements NormalizerInterface
             $topic->media = 'attach://' . $uniqid;
         }
 
+        if (\property_exists($topic, 'thumb') && $topic->thumb instanceof \SplFileInfo) {
+            $uniqid = \uniqid();
+            $this->files[$uniqid] = $topic->thumb;
+            $topic->thumb = 'attach://' . $uniqid;
+        }
+
         $serializer = new Serializer([$this->objectNormalizer]);
 
         return $serializer->normalize($topic, null, ['skip_null_values' => true]);

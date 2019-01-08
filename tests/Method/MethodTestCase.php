@@ -93,11 +93,11 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      *
      * @return array
      */
-    private function buildFileTree($files, $request, $map, $pointer = 0): array
+    private function buildFileTree($files, &$request, $map, &$pointer = 0): array
     {
         foreach ($map as $key => $field) {
             if (\is_array($field)) {
-                $request[$key] = $this->buildFileTree($files, $request, $field, $pointer);
+                $request[$key] = $this->buildFileTree($files, $request[$key], $field, $pointer);
             } else {
                 $request[$key] = 'attach://' . \array_keys($files)[$pointer];
                 ++$pointer;

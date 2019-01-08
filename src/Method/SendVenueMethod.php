@@ -9,6 +9,8 @@ use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 
 /**
  * Class SendVenueMethod.
+ *
+ * @see https://core.telegram.org/bots/api#sendvenue
  */
 class SendVenueMethod
 {
@@ -47,6 +49,8 @@ class SendVenueMethod
      * Optional. Foursquare identifier of the venue.
      *
      * @var string|null
+     *
+     * @see https://foursquare.com/
      */
     public $foursquareId;
 
@@ -55,6 +59,8 @@ class SendVenueMethod
      * (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.).
      *
      * @var string|null
+     *
+     * @see https://foursquare.com/
      */
     public $foursquareType;
 
@@ -75,7 +81,7 @@ class SendVenueMethod
         float $latitude,
         float $longitude,
         string $title,
-        $address,
+        string $address,
         array $data = null
     ): SendVenueMethod {
         $instance = new static();

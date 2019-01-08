@@ -5,10 +5,11 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Type\InputMedia;
 
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
-use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class InputMediaVideoType.
+ *
+ * @see https://core.telegram.org/bots/api#inputmediavideo
  */
 class InputMediaVideoType extends InputMediaType
 {
@@ -21,7 +22,7 @@ class InputMediaVideoType extends InputMediaType
      * so you can pass “attach://<file_attach_name>” if the thumbnail was uploaded using multipart/form-data
      * under <file_attach_name>.
      *
-     * @var InputFileType|string|null
+     * @var \SplFileInfo|string|null
      */
     public $thumb;
 

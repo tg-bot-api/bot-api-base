@@ -40,6 +40,7 @@ use TgBotApi\BotApiBase\Method\SendLocationMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Method\SendMessageMethod;
 use TgBotApi\BotApiBase\Method\SendPhotoMethod;
+use TgBotApi\BotApiBase\Method\SendStickerMethod;
 use TgBotApi\BotApiBase\Method\SendVenueMethod;
 use TgBotApi\BotApiBase\Method\SendVideoMethod;
 use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
@@ -382,6 +383,18 @@ class BotApi implements BotApiInterface
     public function pinChatMessage(PinChatMessageMethod $method): bool
     {
         return $this->call($method);
+    }
+
+    /**
+     * @param SendStickerMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return MessageType
+     */
+    public function sendSticker(SendStickerMethod $method): MessageType
+    {
+        return $this->call($method, MessageType::class);
     }
 
     /**
