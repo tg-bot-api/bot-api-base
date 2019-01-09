@@ -8,6 +8,10 @@ use TgBotApi\BotApiBase\Method\GetFileMethod;
 
 class GetFileMethodTest extends MethodTestCase
 {
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testEncode()
     {
         $botApi = $this->getBot('getFile', ['file_id' => 'file_id']);

@@ -8,6 +8,10 @@ use TgBotApi\BotApiBase\Method\GetChatMethod;
 
 class GetChatMethodTest extends MethodTestCase
 {
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testEncode()
     {
         $botApi = $this->getBot('getChat', ['chat_id' => 'chat_id']);

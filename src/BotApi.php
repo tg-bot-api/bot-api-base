@@ -10,6 +10,7 @@ use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Exception\NormalizationException;
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\AddStickerToSetMethod;
 use TgBotApi\BotApiBase\Method\AnswerCallbackQueryMethod;
@@ -113,6 +114,7 @@ class BotApi implements BotApiInterface
      * @param $type
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return mixed
      */
@@ -133,6 +135,7 @@ class BotApi implements BotApiInterface
      * @param GetUpdatesMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return UpdateType[]
      */
@@ -145,6 +148,7 @@ class BotApi implements BotApiInterface
      * @param GetMeMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return UserType
      */
@@ -157,6 +161,7 @@ class BotApi implements BotApiInterface
      * @param SendMessageMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -169,6 +174,7 @@ class BotApi implements BotApiInterface
      * @param ForwardMessageMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -181,6 +187,7 @@ class BotApi implements BotApiInterface
      * @param SendPhotoMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -193,6 +200,7 @@ class BotApi implements BotApiInterface
      * @param SendAudioMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -205,6 +213,7 @@ class BotApi implements BotApiInterface
      * @param SendDocumentMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -217,6 +226,7 @@ class BotApi implements BotApiInterface
      * @param SendVideoMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -229,6 +239,7 @@ class BotApi implements BotApiInterface
      * @param SendAnimationMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -241,6 +252,7 @@ class BotApi implements BotApiInterface
      * @param SendVoiceMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -253,6 +265,7 @@ class BotApi implements BotApiInterface
      * @param SendVideoNoteMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -265,6 +278,7 @@ class BotApi implements BotApiInterface
      * @param SendMediaGroupMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType[]
      */
@@ -277,6 +291,7 @@ class BotApi implements BotApiInterface
      * @param SendChatActionMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -289,6 +304,7 @@ class BotApi implements BotApiInterface
      * @param SendGameMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -301,6 +317,7 @@ class BotApi implements BotApiInterface
      * @param SendInvoiceMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -313,6 +330,7 @@ class BotApi implements BotApiInterface
      * @param SendLocationMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -325,6 +343,7 @@ class BotApi implements BotApiInterface
      * @param SendVenueMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -337,6 +356,7 @@ class BotApi implements BotApiInterface
      * @param SendContactMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -349,6 +369,7 @@ class BotApi implements BotApiInterface
      * @param SendMessageInterface $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -361,6 +382,7 @@ class BotApi implements BotApiInterface
      * @param GetUserProfilePhotosMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return UserProfilePhotosType
      */
@@ -373,6 +395,7 @@ class BotApi implements BotApiInterface
      * @param GetWebhookInfoMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return WebhookInfoType
      */
@@ -385,6 +408,7 @@ class BotApi implements BotApiInterface
      * @param LeaveChatMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -397,6 +421,7 @@ class BotApi implements BotApiInterface
      * @param PinChatMessageMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -409,6 +434,7 @@ class BotApi implements BotApiInterface
      * @param SendStickerMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return MessageType
      */
@@ -421,6 +447,7 @@ class BotApi implements BotApiInterface
      * @param PromoteChatMemberMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -433,6 +460,7 @@ class BotApi implements BotApiInterface
      * @param RestrictChatMemberMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -442,11 +470,10 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @todo fix this is bad
-     *
      * @param GetFileMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return FileType
      */
@@ -469,6 +496,7 @@ class BotApi implements BotApiInterface
      * @param GetChatMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return ChatType
      */
@@ -481,6 +509,7 @@ class BotApi implements BotApiInterface
      * @param GetChatAdministratorsMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return ChatMemberType[]
      */
@@ -493,6 +522,7 @@ class BotApi implements BotApiInterface
      * @param GetChatMemberMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return ChatMemberType
      */
@@ -505,6 +535,7 @@ class BotApi implements BotApiInterface
      * @param KickChatMemberMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -517,6 +548,7 @@ class BotApi implements BotApiInterface
      * @param SetChatDescriptionMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -529,6 +561,7 @@ class BotApi implements BotApiInterface
      * @param SetChatPhotoMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -541,6 +574,7 @@ class BotApi implements BotApiInterface
      * @param SetChatStickerSetMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -553,6 +587,7 @@ class BotApi implements BotApiInterface
      * @param SetChatTitleMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -565,6 +600,7 @@ class BotApi implements BotApiInterface
      * @param SetGameScoreMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -577,6 +613,7 @@ class BotApi implements BotApiInterface
      * @param SetStickerPositionInSetMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -589,6 +626,7 @@ class BotApi implements BotApiInterface
      * @param SetWebhookMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -601,6 +639,7 @@ class BotApi implements BotApiInterface
      * @param AddStickerToSetMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -613,6 +652,7 @@ class BotApi implements BotApiInterface
      * @param GetChatMembersCountMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return int
      */
@@ -621,15 +661,11 @@ class BotApi implements BotApiInterface
         return $this->call($method);
     }
 
-//    public function answerInlineQuery(AnswerInlineQueryMethod $method)
-//    {
-//        return $this->call($method, '');
-//    }
-
     /**
      * @param AnswerCallbackQueryMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -642,6 +678,7 @@ class BotApi implements BotApiInterface
      * @param AnswerInlineQueryMethod $method
      *
      * @throws ResponseException
+     * @throws NormalizationException
      *
      * @return bool
      */
@@ -692,7 +729,9 @@ class BotApi implements BotApiInterface
     /**
      * @param $method
      *
-     * @return array[]
+     * @throws NormalizationException
+     *
+     * @return array []
      */
     private function encode($method): array
     {
@@ -713,6 +752,10 @@ class BotApi implements BotApiInterface
             null,
             ['skip_null_values' => true, DateTimeNormalizer::FORMAT_KEY => 'U']
         );
+
+        if (!\is_array($data)) {
+            throw new NormalizationException('Normalized data must be array');
+        }
 
         return [$data, $files];
     }

@@ -8,6 +8,11 @@ use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
 
 class GetUpdatesMethodTest extends MethodTestCase
 {
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testEncode()
     {
         $botApi = $this->getBot('getUpdates', [

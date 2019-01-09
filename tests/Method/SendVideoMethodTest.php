@@ -17,6 +17,7 @@ class SendVideoMethodTest extends MethodTestCase
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      */
     public function testEncode()
     {
