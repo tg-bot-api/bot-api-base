@@ -13,17 +13,22 @@
 Via Composer
 
 ``` bash
-$ composer require greenplugin/telegram-bot-api
+composer require greenplugin/telegram-bot-api
 ```
 
 ## Usage
 
+We support all psr17 and psr18 implementations, but we will use guzzle6 for example
+```bash
+composer require php-http/guzzle6-adapter http-interop/http-factory-guzzle
+```
+
 ```php	
 $botKey = '*';
 
-$requestFactory = \Http\Factory\Discovery\HttpFactory::requestFactory();
-$streamFactory = \Http\Factory\Discovery\HttpFactory::streamFactory();
-$client = \Http\Factory\Discovery\HttpClient::client();
+$requestFactory = new Http\Factory\Guzzle\RequestFactory()
+$streamFactory = new Http\Factory\Guzzle\StreamFactory();
+$client = new Http\Adapter\Guzzle6\Client();
 
 $apiClient = new \TgBotApi\BotApiBase\ApiClient($requestFactory, $streamFactory, $client);
 $bot = new \TgBotApi\BotApiBase\BotApi($botKey, $apiClient);
