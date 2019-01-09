@@ -68,7 +68,7 @@ class SetWebhookMethod implements HasUpdateTypeVariableInterface
     public static function create(string $url, array $data = null): SetWebhookMethod
     {
         $instance = new static();
-        $instance->$url;
+        $instance->url = $url;
         if ($data) {
             $instance->fill($data);
         }

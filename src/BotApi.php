@@ -45,6 +45,13 @@ use TgBotApi\BotApiBase\Method\SendVenueMethod;
 use TgBotApi\BotApiBase\Method\SendVideoMethod;
 use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
 use TgBotApi\BotApiBase\Method\SendVoiceMethod;
+use TgBotApi\BotApiBase\Method\SetChatDescriptionMethod;
+use TgBotApi\BotApiBase\Method\SetChatPhotoMethod;
+use TgBotApi\BotApiBase\Method\SetChatStickerSetMethod;
+use TgBotApi\BotApiBase\Method\SetChatTitleMethod;
+use TgBotApi\BotApiBase\Method\SetGameScoreMethod;
+use TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod;
+use TgBotApi\BotApiBase\Method\SetWebhookMethod;
 use TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
@@ -489,6 +496,90 @@ class BotApi implements BotApiInterface
      * @return bool
      */
     public function kickChatMember(KickChatMemberMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetChatDescriptionMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setChatDescription(SetChatDescriptionMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetChatPhotoMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setChatPhoto(SetChatPhotoMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetChatStickerSetMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setChatStickerSet(SetChatStickerSetMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetChatTitleMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setChatTitle(SetChatTitleMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetGameScoreMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setGameScore(SetGameScoreMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetStickerPositionInSetMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setStickerPositionInSet(SetStickerPositionInSetMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SetWebhookMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setWebhook(SetWebhookMethod $method): bool
     {
         return $this->call($method);
     }
