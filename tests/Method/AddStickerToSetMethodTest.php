@@ -10,6 +10,10 @@ use TgBotApi\BotApiBase\Type\MaskPositionType;
 
 class AddStickerToSetMethodTest extends MethodTestCase
 {
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testEncode()
     {
         $botApi = $this->getBotWithFiles(
@@ -29,7 +33,7 @@ class AddStickerToSetMethodTest extends MethodTestCase
         $botApi->addStickerToSet(AddStickerToSetMethod::create(
             1,
             'name',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             '😀',
             [
                 'maskPosition' => MaskPositionType::create(MaskPositionType::MASK_POINT_FOREHEAD, 1, 1, 1),

@@ -9,27 +9,15 @@ namespace TgBotApi\BotApiBase\Type;
  *
  * @see https://core.telegram.org/bots/api#inputfile
  */
-class InputFileType
+class InputFileType extends \SplFileInfo
 {
-    /*
-     * This object represents the contents of a file to be uploaded. Must be posted using multipart/form-data
-     * in the usual way that files are uploaded via the browser.
-     */
     /**
-     * @var \SplFileInfo
-     */
-    public $file;
-
-    /**
-     * @param \SplFileInfo $file
+     * @param string $path
      *
      * @return InputFileType
      */
-    public static function create($file): InputFileType
+    public static function create(string $path): InputFileType
     {
-        $instance = new static();
-        $instance->file = $file;
-
-        return $instance;
+        return new static($path);
     }
 }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendPhotoMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
@@ -19,7 +20,16 @@ class SendPhotoMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendPhoto($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendPhoto',
             [
                 'chat_id' => 'chat_id',
@@ -35,10 +45,18 @@ class SendPhotoMethodTest extends MethodTestCase
             ['photo' => true],
             ['reply_markup']
         );
+    }
 
-        $botApi->sendPhoto(SendPhotoMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendPhotoMethod
+     */
+    private function getMethod(): SendPhotoMethod
+    {
+        return SendPhotoMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             [
                 'caption' => 'caption',
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
@@ -47,6 +65,6 @@ class SendPhotoMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

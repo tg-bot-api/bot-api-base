@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendAudioMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
@@ -19,7 +20,16 @@ class SendAudioMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendAudio($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendAudio',
             [
                 'chat_id' => 'chat_id',
@@ -39,15 +49,23 @@ class SendAudioMethodTest extends MethodTestCase
             ['audio' => true, 'thumb' => true],
             ['reply_markup']
         );
+    }
 
-        $botApi->sendAudio(SendAudioMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendAudioMethod
+     */
+    private function getMethod(): SendAudioMethod
+    {
+        return SendAudioMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             [
                 'duration' => 100,
                 'performer' => 'performer',
                 'title' => 'title',
-                'thumb' => InputFileType::create(new \SplFileInfo('/dev/null')),
+                'thumb' => InputFileType::create('/dev/null'),
 
                 'caption' => 'caption',
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
@@ -56,6 +74,6 @@ class SendAudioMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

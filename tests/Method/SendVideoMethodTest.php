@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendVideoMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
@@ -19,7 +20,16 @@ class SendVideoMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendVideo($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendVideo',
             [
                 'chat_id' => 'chat_id',
@@ -38,15 +48,23 @@ class SendVideoMethodTest extends MethodTestCase
             ['video' => true, 'thumb' => true],
             ['reply_markup']
         );
+    }
 
-        $botApi->sendVideo(SendVideoMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendVideoMethod
+     */
+    private function getMethod(): SendVideoMethod
+    {
+        return SendVideoMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             [
                 'duration' => 100,
                 'width' => 100,
                 'height' => 100,
-                'thumb' => InputFileType::create(new \SplFileInfo('/dev/null')),
+                'thumb' => InputFileType::create('/dev/null'),
                 'caption' => 'caption',
                 'supportStreaming' => true,
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
@@ -54,6 +72,6 @@ class SendVideoMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

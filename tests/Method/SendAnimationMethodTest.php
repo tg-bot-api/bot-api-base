@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendAnimationMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
@@ -14,12 +15,22 @@ class SendAnimationMethodTest extends MethodTestCase
     use InlineKeyboardMarkupTrait;
 
     /**
-     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendAnimation($this->getMethod());
+
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendAnimation',
             [
                 'chat_id' => 'chat_id',
@@ -37,21 +48,29 @@ class SendAnimationMethodTest extends MethodTestCase
             ['animation' => true, 'thumb' => true],
             ['reply_markup']
         );
+    }
 
-        $botApi->sendAnimation(SendAnimationMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendAnimationMethod
+     */
+    private function getMethod(): SendAnimationMethod
+    {
+        return SendAnimationMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             [
                 'duration' => 100,
                 'width' => 100,
                 'height' => 100,
-                'thumb' => InputFileType::create(new \SplFileInfo('/dev/null')),
+                'thumb' => InputFileType::create('/dev/null'),
                 'caption' => 'caption',
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

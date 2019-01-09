@@ -41,7 +41,7 @@ class SetWebhookMethodTest extends MethodTestCase
         $botApi->setWebhook(SetWebhookMethod::create(
             'https://url',
             [
-                'certificate' => InputFileType::create(new \SplFileInfo('/dev/null')),
+                'certificate' => InputFileType::create('/dev/null'),
                 'maxConnections' => 100,
                 'allowedUpdates' => [
                     SetWebhookMethod::TYPE_SHIPPING_QUERY,

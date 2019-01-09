@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Type\InputMedia;
 
+use TgBotApi\BotApiBase\Type\InputFileType;
+
 /**
  * Class InputMediaType.
  *
@@ -24,7 +26,7 @@ abstract class InputMediaType
      *
      * @see https://core.telegram.org/bots/api#sending-files
      *
-     * @var string|\SplFileInfo
+     * @var string|InputFileType
      */
     public $media;
 

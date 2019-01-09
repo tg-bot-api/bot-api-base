@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
@@ -18,7 +19,16 @@ class SendVideoNoteMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendVideoNote($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendVideoNote',
             [
                 'chat_id' => 'chat_id',
@@ -32,17 +42,25 @@ class SendVideoNoteMethodTest extends MethodTestCase
             ['video_note' => true, 'thumb' => true],
             ['reply_markup']
         );
+    }
 
-        $botApi->sendVideoNote(SendVideoNoteMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendVideoNoteMethod
+     */
+    private function getMethod(): SendVideoNoteMethod
+    {
+        return SendVideoNoteMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             [
                 'duration' => 100,
-                'thumb' => InputFileType::create(new \SplFileInfo('/dev/null')),
+                'thumb' => InputFileType::create('/dev/null'),
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

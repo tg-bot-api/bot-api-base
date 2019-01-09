@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Type\InputMedia;
 
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class InputMediaPhotoType.
@@ -16,8 +17,8 @@ class InputMediaPhotoType extends InputMediaType
     use FillFromArrayTrait;
 
     /**
-     * @param string|\SplFileInfo $media
-     * @param array|null          $data
+     * @param string|InputFileType $media
+     * @param array|null           $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *

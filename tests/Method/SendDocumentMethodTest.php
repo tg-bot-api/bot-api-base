@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendDocumentMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
@@ -19,7 +20,16 @@ class SendDocumentMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendDocument($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendDocument',
             [
                 'chat_id' => 'chat_id',
@@ -36,12 +46,20 @@ class SendDocumentMethodTest extends MethodTestCase
             ['document' => true, 'thumb' => true],
             ['reply_markup']
         );
+    }
 
-        $botApi->sendDocument(SendDocumentMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendDocumentMethod
+     */
+    private function getMethod(): SendDocumentMethod
+    {
+        return SendDocumentMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null')),
+            InputFileType::create('/dev/null'),
             [
-                'thumb' => InputFileType::create(new \SplFileInfo('/dev/null')),
+                'thumb' => InputFileType::create('/dev/null'),
 
                 'caption' => 'caption',
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
@@ -50,6 +68,6 @@ class SendDocumentMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

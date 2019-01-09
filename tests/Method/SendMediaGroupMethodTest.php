@@ -4,9 +4,11 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
 
@@ -20,7 +22,16 @@ class SendMediaGroupMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBotWithFiles(
+        $this->getApi()->sendMediaGroup($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBotWithFiles(
             'sendMediaGroup',
             [
                 'chat_id' => 'chat_id',
@@ -53,16 +64,24 @@ class SendMediaGroupMethodTest extends MethodTestCase
             ]],
             ['media']
         );
+    }
 
-        $botApi->sendMediaGroup(SendMediaGroupMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendMediaGroupMethod
+     */
+    private function getMethod(): SendMediaGroupMethod
+    {
+        return SendMediaGroupMethod::create(
             'chat_id',
             [
-                InputMediaPhotoType::create(new \SplFileInfo('/dev/null'), [
+                InputMediaPhotoType::create(InputFileType::create('/dev/null'), [
                     'caption' => 'InputMediaPhotoType',
                     'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 ]),
-                InputMediaVideoType::create(new \SplFileInfo('/dev/null'), [
-                    'thumb' => new \SplFileInfo('/dev/null'),
+                InputMediaVideoType::create(InputFileType::create('/dev/null'), [
+                    'thumb' => InputFileType::create('/dev/null'),
                     'width' => 100,
                     'height' => 100,
                     'duration' => 100,
@@ -75,6 +94,6 @@ class SendMediaGroupMethodTest extends MethodTestCase
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
             ]
-        ));
+        );
     }
 }

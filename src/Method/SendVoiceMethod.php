@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
 use TgBotApi\BotApiBase\Method\Traits\CaptionVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
@@ -15,7 +16,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  *
  * @see https://core.telegram.org/bots/api#sendvoice
  */
-class SendVoiceMethod implements HasParseModeVariableInterface
+class SendVoiceMethod implements HasParseModeVariableInterface, SendMessageInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;

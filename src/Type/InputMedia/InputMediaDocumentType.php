@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Type\InputMedia;
 
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
  * Class InputMediaDocumentType.
@@ -23,13 +24,13 @@ class InputMediaDocumentType extends InputMediaType
      * so you can pass “attach://<file_attach_name>” if the thumbnail was uploaded using
      * multipart/form-data under <file_attach_name>.
      *
-     * @var \SplFileInfo|string|null
+     * @var InputFileType|string|null
      */
     public $thumb;
 
     /**
-     * @param string|\SplFileInfo $media
-     * @param array|null          $data
+     * @param string|InputFileType $media
+     * @param array|null           $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *

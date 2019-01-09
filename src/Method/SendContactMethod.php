@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
  *
  * @see https://core.telegram.org/bots/api#sendcontact
  */
-class SendContactMethod
+class SendContactMethod implements SendMessageInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;

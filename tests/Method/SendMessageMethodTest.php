@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendMessageMethod;
 use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
@@ -19,7 +20,16 @@ class SendMessageMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBot('sendMessage', [
+        $this->getApi()->sendMessage($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBot('sendMessage', [
             'text' => 'test',
             'parse_mode' => 'HTML',
             'chat_id' => '1',
@@ -28,13 +38,21 @@ class SendMessageMethodTest extends MethodTestCase
             'reply_to_message_id' => 1,
             'reply_markup' => '{"inline_keyboard":[]}',
         ]);
+    }
 
-        $botApi->sendMessage(SendMessageMethod::create('1', 'test', [
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendMessageMethod
+     */
+    private function getMethod(): SendMessageMethod
+    {
+        return SendMessageMethod::create('1', 'test', [
             'parseMode' => HasParseModeVariableInterface::PARSE_MODE_HTML,
             'disableWebPagePreview' => true,
             'disableNotification' => true,
             'replyToMessageId' => 1,
             'replyMarkup' => InlineKeyboardMarkupType::create([]),
-        ]));
+        ]);
     }
 }

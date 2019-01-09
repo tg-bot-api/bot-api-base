@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\SendInvoiceMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\LabeledPriceType;
@@ -18,7 +19,16 @@ class SendInvoiceMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBot('sendInvoice', [
+        $this->getApi()->sendInvoice($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBot('sendInvoice', [
             'chat_id' => 1,
             'title' => 'title',
             'description' => 'description',
@@ -43,8 +53,16 @@ class SendInvoiceMethodTest extends MethodTestCase
             'reply_to_message_id' => 1,
             'reply_markup' => $this->buildInlineMarkupArray(),
         ], [], ['reply_markup']);
+    }
 
-        $botApi->sendInvoice(SendInvoiceMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendInvoiceMethod
+     */
+    private function getMethod(): SendInvoiceMethod
+    {
+        return SendInvoiceMethod::create(
             1,
             'title',
             'description',
@@ -70,6 +88,6 @@ class SendInvoiceMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

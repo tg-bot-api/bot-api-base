@@ -24,6 +24,7 @@ use TgBotApi\BotApiBase\Method\GetMeMethod;
 use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
 use TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod;
 use TgBotApi\BotApiBase\Method\GetWebhookInfoMethod;
+use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
 use TgBotApi\BotApiBase\Method\KickChatMemberMethod;
 use TgBotApi\BotApiBase\Method\LeaveChatMethod;
 use TgBotApi\BotApiBase\Method\PinChatMessageMethod;
@@ -340,6 +341,18 @@ class BotApi implements BotApiInterface
      * @return MessageType
      */
     public function sendContact(SendContactMethod $method): MessageType
+    {
+        return $this->call($method, MessageType::class);
+    }
+
+    /**
+     * @param SendMessageInterface $method
+     *
+     * @throws ResponseException
+     *
+     * @return MessageType
+     */
+    public function send(SendMessageInterface $method): MessageType
     {
         return $this->call($method, MessageType::class);
     }
@@ -679,7 +692,7 @@ class BotApi implements BotApiInterface
     /**
      * @param $method
      *
-     * @return array
+     * @return array[]
      */
     private function encode($method): array
     {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\ReplyMarkupVariableTrait;
@@ -14,7 +15,7 @@ use TgBotApi\BotApiBase\Type\LabeledPriceType;
  *
  * @see https://core.telegram.org/bots/api#sendinvoice
  */
-class SendInvoiceMethod
+class SendInvoiceMethod implements SendMessageInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;

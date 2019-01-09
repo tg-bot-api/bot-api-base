@@ -24,7 +24,7 @@ class SetChatPhotoMethodTest extends MethodTestCase
 
         $botApi->setChatPhoto(SetChatPhotoMethod::create(
             'chat_id',
-            InputFileType::create(new \SplFileInfo('/dev/null'))
+            InputFileType::create('/dev/null')
         ));
     }
 }

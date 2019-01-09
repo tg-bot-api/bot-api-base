@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\SendVenueMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 
@@ -17,7 +18,16 @@ class SendVenueMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBot('sendVenue', [
+        $this->getApi()->sendVenue($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBot('sendVenue', [
             'chat_id' => 1,
             'latitude' => 51.5287718,
             'longitude' => -0.2416802,
@@ -29,8 +39,16 @@ class SendVenueMethodTest extends MethodTestCase
             'reply_to_message_id' => 1,
             'reply_markup' => $this->buildInlineMarkupArray(),
         ], [], ['reply_markup']);
+    }
 
-        $botApi->sendVenue(SendVenueMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendVenueMethod
+     */
+    private function getMethod(): SendVenueMethod
+    {
+        return SendVenueMethod::create(
             1,
             51.5287718,
             -0.2416802,
@@ -43,6 +61,6 @@ class SendVenueMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

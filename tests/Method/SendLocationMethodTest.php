@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\SendLocationMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 
@@ -17,7 +18,16 @@ class SendLocationMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBot('sendLocation', [
+        $this->getApi()->sendLocation($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBot('sendLocation', [
             'chat_id' => 1,
             'live_period' => 60,
             'latitude' => 51.5287718,
@@ -26,8 +36,16 @@ class SendLocationMethodTest extends MethodTestCase
             'reply_to_message_id' => 1,
             'reply_markup' => $this->buildInlineMarkupArray(),
         ], [], ['reply_markup']);
+    }
 
-        $botApi->sendLocation(SendLocationMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendLocationMethod
+     */
+    private function getMethod(): SendLocationMethod
+    {
+        return SendLocationMethod::create(
             1,
             51.5287718,
             -0.2416802,
@@ -37,6 +55,6 @@ class SendLocationMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

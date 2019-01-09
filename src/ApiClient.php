@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
+use TgBotApi\BotApiBase\Type\InputFileType;
 
 class ApiClient implements ApiClientInterface
 {
@@ -107,11 +108,11 @@ class ApiClient implements ApiClientInterface
     /**
      * @param $boundary
      * @param $name
-     * @param \SplFileInfo $file
+     * @param InputFileType $file
      *
      * @return string
      */
-    protected function createFileStream($boundary, $name, \SplFileInfo $file): string
+    protected function createFileStream($boundary, $name, InputFileType $file): string
     {
         $headers = '';
         $headers .= \sprintf(

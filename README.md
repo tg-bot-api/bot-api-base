@@ -38,6 +38,28 @@ $userId = '*';
 $bot->sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
 ```
 
+Implemented all methods and types referenced by [official Api](https://core.telegram.org/bots/api) 
+
+To send messages you can use alias `send(SendMessageInterface $message)`
+
+Alias is available for the following methods:
+* `SendAnimationMethod`
+* `SendAudioMethod`
+* `SendContactMethod`
+* `SendDocumentMethod`
+* `SendGameMethod`
+* `SendInvoiceMethod`
+* `SendLocationMethod`
+* `SendMediaGroupMethod`
+* `SendMessageMethod`
+* `SendPhotoMethod`
+* `SendStickerMethod`
+* `SendVenueMethod`
+* `SendVideoMethod`
+* `SendVideoNoteMethod`
+* `SendVoiceMethod`
+
+
 ## Change log
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.

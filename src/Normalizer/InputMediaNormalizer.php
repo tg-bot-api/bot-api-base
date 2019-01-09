@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Normalizer;
 
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Type\InputFileType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
 
@@ -22,13 +23,13 @@ class InputMediaNormalizer implements NormalizerInterface
 
     public function normalize($topic, $format = null, array $context = [])
     {
-        if ($topic->media instanceof \SplFileInfo) {
+        if ($topic->media instanceof InputFileType) {
             $uniqid = \uniqid();
             $this->files[$uniqid] = $topic->media;
             $topic->media = 'attach://' . $uniqid;
         }
 
-        if (\property_exists($topic, 'thumb') && $topic->thumb instanceof \SplFileInfo) {
+        if (\property_exists($topic, 'thumb') && $topic->thumb instanceof InputFileType) {
             $uniqid = \uniqid();
             $this->files[$uniqid] = $topic->thumb;
             $topic->thumb = 'attach://' . $uniqid;

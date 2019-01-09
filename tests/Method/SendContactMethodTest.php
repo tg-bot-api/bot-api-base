@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\SendContactMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 
@@ -17,7 +18,16 @@ class SendContactMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBot('sendContact', [
+        $this->getApi()->sendContact($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBot('sendContact', [
             'chat_id' => 'chat_id',
             'phone_number' => '+00000000000',
             'first_name' => 'first_name',
@@ -27,8 +37,16 @@ class SendContactMethodTest extends MethodTestCase
             'reply_to_message_id' => 1,
             'reply_markup' => $this->buildInlineMarkupArray(),
         ], [], ['reply_markup']);
+    }
 
-        $botApi->sendContact(SendContactMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendContactMethod
+     */
+    private function getMethod(): SendContactMethod
+    {
+        return SendContactMethod::create(
             'chat_id',
             '+00000000000',
             'first_name',
@@ -39,6 +57,6 @@ class SendContactMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }

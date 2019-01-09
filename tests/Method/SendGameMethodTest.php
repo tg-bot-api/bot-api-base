@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
+use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\SendGameMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 
@@ -17,15 +18,32 @@ class SendGameMethodTest extends MethodTestCase
      */
     public function testEncode()
     {
-        $botApi = $this->getBot('sendGame', [
+        $this->getApi()->sendGame($this->getMethod());
+        $this->getApi()->send($this->getMethod());
+    }
+
+    /**
+     * @return \TgBotApi\BotApiBase\BotApi
+     */
+    private function getApi(): BotApi
+    {
+        return $this->getBot('sendGame', [
             'chat_id' => 1,
             'game_short_name' => 'game_short_name',
             'disable_notification' => true,
             'reply_to_message_id' => 1,
             'reply_markup' => $this->buildInlineMarkupArray(),
         ], [], ['reply_markup']);
+    }
 
-        $botApi->sendGame(SendGameMethod::create(
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendGameMethod
+     */
+    private function getMethod(): SendGameMethod
+    {
+        return SendGameMethod::create(
             1,
             'game_short_name',
             [
@@ -33,6 +51,6 @@ class SendGameMethodTest extends MethodTestCase
                 'replyToMessageId' => 1,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
-        ));
+        );
     }
 }
