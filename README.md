@@ -18,12 +18,19 @@ $ composer require greenplugin/telegram-bot-api
 
 ## Usage
 
-``` php
-//usage
-```
+```php	
+$botKey = '*';
 
-``` php
-//usage alt
+$requestFactory = \Http\Factory\Discovery\HttpFactory::requestFactory();
+$streamFactory = \Http\Factory\Discovery\HttpFactory::streamFactory();
+$client = \Http\Factory\Discovery\HttpClient::client();
+
+$apiClient = new \TgBotApi\BotApiBase\ApiClient($requestFactory, $streamFactory, $client);
+$bot = new \TgBotApi\BotApiBase\BotApi($botKey, $apiClient);
+
+$userId = '*';
+
+$bot->sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
 ```
 
 ## Change log
