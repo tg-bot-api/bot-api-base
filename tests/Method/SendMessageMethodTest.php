@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Helper\BotApiHelper;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendMessageMethod;
 use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
@@ -26,9 +26,9 @@ class SendMessageMethodTest extends MethodTestCase
     }
 
     /**
-     * @return \TgBotApi\BotApiBase\BotApi
+     * @return BotApiHelper
      */
-    private function getApi(): BotApi
+    private function getApi(): BotApiHelper
     {
         return $this->getBot('sendMessage', [
             'text' => 'test',

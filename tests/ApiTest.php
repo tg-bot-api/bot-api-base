@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests;
 
-use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Helper\BotApiHelper;
 use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
 use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
 use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
@@ -93,7 +93,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        $bot->sendForwardMessage($method);
+        $bot->forwardMessage($method);
     }
 
     /**
@@ -240,36 +240,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendLocation($method);
     }
 
-    /*
-    public function testEditMessageLiveLocation()
-    {
-        $method = new EditMessageLiveLocationMethod(0.1, 0.1, ['inline_message_id' => 1]);
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(MessageType::class))
-            ->willReturn(new MessageType());
-
-        $bot->editMessageLiveLocation($method);
-    }
-    */
-
-    /*
-    public function testStopMessageLiveLocation()
-    {
-        $method = new EditMessageLiveLocationMethod(0.1, 0.1, ['inline_message_id' => 1]);
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(MessageType::class))
-            ->willReturn(new MessageType());
-
-        $bot->stopMessageLiveLocation($method);
-    }
-    */
-
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
@@ -302,21 +272,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->sendContact($method);
     }
 
-    /*
-    public function testSendChatAction()
-    {
-        $method = new SendChatActionMethod('id', 'action');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(MessageType::class))
-            ->willReturn(new MessageType());
-
-        $bot->sendChatAction($method);
-    }
-    */
-
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
@@ -346,201 +301,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getFile($method);
     }
 
-    /*
-    public function testKickChatMember()
-    {
-        $method = new KickChatMemberMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->kickChatMember($method);
-    }
-    */
-
-    /*
-    public function testUnbanChatMember()
-    {
-        $method = new UnbanChatMemberMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->unbanChatMember($method);
-    }
-    */
-
-    /*
-    public function testRestrictChatMember()
-    {
-        $method = new RestrictChatMemberMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->restrictChatMember($method);
-    }
-    */
-
-    /*
-    public function testPromoteChatMember()
-    {
-        $method = new PromoteChatMemberMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->promoteChatMember($method);
-    }
-    */
-
-    /*
-    public function testExportChatInviteLink()
-    {
-        $method = new ExportChatInviteLinkMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->exportChatInviteLink($method);
-    }
-    */
-
-    /*
-    public function testSetChatPhoto()
-    {
-        $method = new SetChatPhotoMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->setChatPhoto($method);
-    }
-    */
-
-    /*
-    public function testSetChatPhoto()
-    {
-        $method = new SetChatPhotoMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->setChatPhoto($method);
-    }
-    */
-
-    /*
-    public function testDeleteChatPhoto()
-    {
-        $method = new DeleteChatPhotoMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->deleteChatPhoto($method);
-    }
-    */
-
-    /*
-    public function testSetChatTitle()
-    {
-        $method = new SetChatTitleMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->setChatTitle($method);
-    }
-    */
-
-    /*
-    public function testSetChatDescription()
-    {
-        $method = new SetChatDescriptionMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->setChatDescription($method);
-    }
-    */
-
-    /*
-    public function testPinChatMessag()
-    {
-        $method = new PinChatMessageMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->pinChatMessage($method);
-    }
-    */
-
-    /*
-    public function testUnpinChatMessage()
-    {
-        $method = new UnpinChatMessageMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->unpinChatMessage($method);
-    }
-    */
-
-    /*
-    public function testLeaveChat()
-    {
-        $method = new LeaveChatMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(FileType::class))
-            ->willReturn(new FileType());
-
-        $bot->leaveChat($method);
-    }
-    */
-
     public function testGetChat()
     {
         $method = GetChatMethod::create('id');
@@ -567,21 +327,6 @@ class ApiTest extends \PHPUnit\Framework\TestCase
         $bot->getChatAdministrators($method);
     }
 
-    /*
-    public function testGetChatMembersCount()
-    {
-        $method = new GetChatMembersCountMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(ChatMember::class.'[]'))
-            ->willReturn([]);
-
-        $bot->getChatMembersCount($method);
-    }
-    */
-
     public function testGetChatMember()
     {
         $method = GetChatMemberMethod::create('id', 1);
@@ -600,49 +345,9 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     private function getBotMock(): \PHPUnit\Framework\MockObject\MockObject
     {
-        return $this->getMockBuilder(BotApi::class)->disableOriginalConstructor()->setMethods(['call'])->getMock();
+        return $this->getMockBuilder(BotApiHelper::class)
+            ->disableOriginalConstructor()
+            ->setMethods(['call'])
+            ->getMock();
     }
-
-    /*
-    public function testSetChatStickerSet()
-    {
-        $method = new SetChatStickerSetMethod('id', 'name');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(ChatMember::class))
-            ->willReturn(new ChatMember());
-
-        $bot->setChatStickerSet($method);
-    }
-    */
-
-    /*
-    public function testDeleteChatStickerSet()
-    {
-        $method = new DeleteChatStickerSetMethod('id');
-
-        $bot = $this->getBotMock();
-        $bot->expects($this->once())
-            ->method('call')
-            ->with($this->equalTo($method), $this->equalTo(ChatMember::class))
-            ->willReturn(new ChatMember());
-
-        $bot->deleteChatStickerSet($method);
-    }
-    */
-
-//    public function testAnswerCallbackQuery()
-//    {
-//        $method = new AnswerCallbackQueryMethod();
-//
-//        $bot = $this->getBotMock();
-//        $bot->expects($this->once())
-//            ->method('call')
-//            ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class))
-//            ->willReturn(new ChatMemberType());
-//
-//        $bot->answerCallbackQuery($method);
-//    }
 }

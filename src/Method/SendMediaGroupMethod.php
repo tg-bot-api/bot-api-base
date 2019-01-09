@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
-use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
@@ -15,7 +14,7 @@ use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
  *
  * @see https://core.telegram.org/bots/api#sendmediagroup
  */
-class SendMediaGroupMethod implements SendMessageInterface
+class SendMediaGroupMethod
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;

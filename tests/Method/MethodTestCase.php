@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 
 use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Helper\BotApiHelper;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -15,9 +16,9 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      * @param array $result
      * @param array $serialisedFields
      *
-     * @return BotApi
+     * @return BotApiHelper
      */
-    protected function getBot($methodName, $request, $result = [], $serialisedFields = []): BotApi
+    protected function getBot($methodName, $request, $result = [], $serialisedFields = []): BotApiHelper
     {
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
@@ -37,7 +38,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             )
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
-        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
+        return new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub));
     }
 
     /**
@@ -47,7 +48,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      * @param array $serializableFields
      * @param array $result
      *
-     * @return BotApi
+     * @return BotApiHelper
      */
     protected function getBotWithFiles(
         $methodName,
@@ -55,7 +56,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
         array $fileMap,
         array $serializableFields = [],
         $result = []
-    ): BotApi {
+    ): BotApiHelper {
         $requestedData = [];
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
@@ -82,7 +83,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             )
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
-        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
+        return new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub));
     }
 
     /**

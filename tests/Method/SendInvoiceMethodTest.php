@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Helper\BotApiHelper;
 use TgBotApi\BotApiBase\Method\SendInvoiceMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\LabeledPriceType;
@@ -25,9 +25,9 @@ class SendInvoiceMethodTest extends MethodTestCase
     }
 
     /**
-     * @return \TgBotApi\BotApiBase\BotApi
+     * @return BotApiHelper
      */
-    private function getApi(): BotApi
+    private function getApi(): BotApiHelper
     {
         return $this->getBot('sendInvoice', [
             'chat_id' => 1,

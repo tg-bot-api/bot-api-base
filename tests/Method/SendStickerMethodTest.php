@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\Helper\BotApiHelper;
 use TgBotApi\BotApiBase\Method\SendStickerMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
 
+/**
+ * Class SendStickerMethodTest.
+ */
 class SendStickerMethodTest extends MethodTestCase
 {
     use InlineKeyboardMarkupTrait;
@@ -28,9 +31,9 @@ class SendStickerMethodTest extends MethodTestCase
     }
 
     /**
-     * @return \TgBotApi\BotApiBase\BotApi
+     * @return BotApiHelper
      */
-    private function getApi(): BotApi
+    private function getApi(): BotApiHelper
     {
         return $this->getBotWithFiles(
             'sendSticker',
@@ -47,7 +50,10 @@ class SendStickerMethodTest extends MethodTestCase
         );
     }
 
-    private function getApiWithStringFileId(): BotApi
+    /**
+     * @return BotApiHelper
+     */
+    private function getApiWithStringFileId(): BotApiHelper
     {
         return $this->getBot(
             'sendSticker',
@@ -64,6 +70,11 @@ class SendStickerMethodTest extends MethodTestCase
         );
     }
 
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     *
+     * @return SendStickerMethod
+     */
     private function getMethod(): SendStickerMethod
     {
         return SendStickerMethod::create(

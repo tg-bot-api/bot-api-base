@@ -58,6 +58,7 @@ Alias is available for the following methods:
 * `SendVideoMethod`
 * `SendVideoNoteMethod`
 * `SendVoiceMethod`
+* `ForwardMessageMethod`
 
 
 ## Change log
