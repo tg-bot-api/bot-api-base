@@ -1,5 +1,6 @@
 # telegram-bot-api
 
+[![Telegram bot api][ico-bot-api]][link-bot-api]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
@@ -7,6 +8,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 ![Total Downloads][ico-last-commit]
+![Total Downloads][ico-php-v]
 
 ## Install
 
@@ -89,6 +91,8 @@ If you discover any security related issues, please email wformps@gmail.com inst
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
+[ico-php-v]: https://img.shields.io/travis/php-v/tg-bot-api/bot-api-base.svg?style=flat-square
+[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.1-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square
@@ -97,6 +101,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-downloads]: https://img.shields.io/packagist/dt/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-last-commit]: https://img.shields.io/github/last-commit/tg-bot-api/bot-api-base.svg?style=flat-square
 
+[link-bot-api]: https://core.telegram.org/bots/api
 [link-packagist]: https://packagist.org/packages/tg-bot-api/bot-api-base
 [link-travis]: https://travis-ci.org/tg-bot-api/bot-api-base
 [link-scrutinizer]: https://scrutinizer-ci.com/g/tg-bot-api/bot-api-base/code-structure
