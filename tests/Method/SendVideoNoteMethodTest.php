@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\Helper\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiHelper;
 use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;

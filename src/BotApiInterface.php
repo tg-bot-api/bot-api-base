@@ -6,7 +6,6 @@ namespace TgBotApi\BotApiBase;
 
 use TgBotApi\BotApiBase\Exception\NormalizationException;
 use TgBotApi\BotApiBase\Exception\ResponseException;
-use TgBotApi\BotApiBase\Type\FileType;
 
 interface BotApiInterface
 {
@@ -22,9 +21,12 @@ interface BotApiInterface
     public function call($method, $type = null);
 
     /**
-     * @param FileType $file
-     *
      * @return string
      */
-    public function getAbsoluteFilePath(FileType $file): string;
+    public function getBotKey(): string;
+
+    /**
+     * @return string
+     */
+    public function getEndPoint(): string;
 }

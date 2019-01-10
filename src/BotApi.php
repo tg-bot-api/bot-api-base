@@ -18,7 +18,6 @@ use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
 use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
 use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
 use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
-use TgBotApi\BotApiBase\Type\FileType;
 
 /**
  * Class BotApi.
@@ -83,13 +82,19 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param FileType $file
-     *
      * @return string
      */
-    public function getAbsoluteFilePath(FileType $file): string
+    public function getBotKey(): string
     {
-        return \sprintf('%s/file/bot%s/%s', $this->endPoint, $this->botKey, $file->filePath);
+        return $this->botKey;
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndPoint(): string
+    {
+        return $this->endPoint;
     }
 
     /**

@@ -6,7 +6,7 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 
 use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApi;
-use TgBotApi\BotApiBase\Helper\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiHelper;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -38,6 +38,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             )
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
+        /* @var ApiClientInterface $stub */
         return new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub));
     }
 
@@ -58,6 +59,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
         $result = []
     ): BotApiHelper {
         $requestedData = [];
+
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
 
@@ -83,6 +85,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             )
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
+        /* @var ApiClientInterface $stub */
         return new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub));
     }
 

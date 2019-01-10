@@ -2,15 +2,36 @@
 
 declare(strict_types=1);
 
-namespace TgBotApi\BotApiBase\Helper;
+namespace TgBotApi\BotApiBase;
 
-use TgBotApi\BotApiBase\BotApiInterface;
 use TgBotApi\BotApiBase\Exception\NormalizationException;
 use TgBotApi\BotApiBase\Exception\ResponseException;
+use TgBotApi\BotApiBase\Helper\AddMethodTrait;
+use TgBotApi\BotApiBase\Helper\AnswerMethodTrait;
+use TgBotApi\BotApiBase\Helper\CreateMethodTrait;
+use TgBotApi\BotApiBase\Helper\DeleteMethodTrait;
+use TgBotApi\BotApiBase\Helper\EditMethodTrait;
+use TgBotApi\BotApiBase\Helper\ExportMethodTrait;
+use TgBotApi\BotApiBase\Helper\ForwardMethodTrait;
+use TgBotApi\BotApiBase\Helper\GetMethodTrait;
+use TgBotApi\BotApiBase\Helper\KickMethodTrait;
+use TgBotApi\BotApiBase\Helper\LeaveMethodTrait;
+use TgBotApi\BotApiBase\Helper\PinMethodTrait;
+use TgBotApi\BotApiBase\Helper\PromoteMethodTrait;
+use TgBotApi\BotApiBase\Helper\RestrictMethodTrait;
+use TgBotApi\BotApiBase\Helper\SendMethodTrait;
+use TgBotApi\BotApiBase\Helper\SetMethodTrait;
+use TgBotApi\BotApiBase\Helper\StopMethodTrait;
+use TgBotApi\BotApiBase\Helper\UnbanMethodTrait;
+use TgBotApi\BotApiBase\Helper\UnpinMethodTrait;
+use TgBotApi\BotApiBase\Helper\UploadMethodTrait;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
 use TgBotApi\BotApiBase\Type\FileType;
 use TgBotApi\BotApiBase\Type\MessageType;
 
+/**
+ * Class BotApiHelper.
+ * \ */
 class BotApiHelper implements BotApiInterface
 {
     use AddMethodTrait;
@@ -69,7 +90,12 @@ class BotApiHelper implements BotApiInterface
      */
     public function getAbsoluteFilePath(FileType $file): string
     {
-        return $this->botApi->getAbsoluteFilePath($file);
+        return \sprintf(
+            '%s/file/bot%s/%s',
+            $this->botApi->getendPoint(),
+            $this->botApi->getBotKey(),
+            $file->filePath
+        );
     }
 
     /**
@@ -83,5 +109,21 @@ class BotApiHelper implements BotApiInterface
     public function send(SendMessageInterface $method): MessageType
     {
         return $this->botApi->call($method, MessageType::class);
+    }
+
+    /**
+     * @return string
+     */
+    public function getBotKey(): string
+    {
+        return $this->botApi->getBotKey();
+    }
+
+    /**
+     * @return string
+     */
+    public function getEndPoint(): string
+    {
+        return $this->botApi->getEndPoint();
     }
 }

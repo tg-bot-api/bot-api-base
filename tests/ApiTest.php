@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests;
 
-use TgBotApi\BotApiBase\Helper\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiHelper;
 use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
 use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
 use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
@@ -37,6 +37,8 @@ class ApiTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testGetUpdates()
     {
@@ -48,9 +50,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(UpdateType::class . '[]'))
             ->willReturn([]);
 
+        /* @var BotApiHelper $bot */
         $bot->getUpdates($method);
     }
 
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testGetMe()
     {
         $method = GetMeMethod::create();
@@ -61,11 +68,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(UserType::class))
             ->willReturn(new UserType());
 
+        /* @var BotApiHelper $bot */
         $bot->getMe($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendMessage()
     {
@@ -77,11 +87,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendMessage($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testforwardMessage()
     {
@@ -93,11 +106,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->forwardMessage($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendPhoto()
     {
@@ -109,11 +125,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendPhoto($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendAudio()
     {
@@ -125,11 +144,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendAudio($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendDocument()
     {
@@ -141,11 +163,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendDocument($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendVideo()
     {
@@ -157,11 +182,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendVideo($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendAnimation()
     {
@@ -173,11 +201,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendAnimation($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendVoice()
     {
@@ -189,11 +220,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendVoice($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendVideoNote()
     {
@@ -205,11 +239,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendVideoNote($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendMediaGroup()
     {
@@ -221,11 +258,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class . '[]'))
             ->willReturn([]);
 
+        /* @var BotApiHelper $bot */
         $bot->sendMediaGroup($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendLocation()
     {
@@ -237,11 +277,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendLocation($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendVenue()
     {
@@ -253,11 +296,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendVenue($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testSendContact()
     {
@@ -269,11 +315,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
+        /* @var BotApiHelper $bot */
         $bot->sendContact($method);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testGetUserProfilePhotos()
     {
@@ -285,9 +334,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(UserProfilePhotosType::class))
             ->willReturn(new UserProfilePhotosType());
 
+        /* @var BotApiHelper $bot */
         $bot->getUserProfilePhotos($method);
     }
 
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testGetFile()
     {
         $method = GetFileMethod::create('id');
@@ -298,9 +352,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(FileType::class))
             ->willReturn(new FileType());
 
+        /* @var BotApiHelper $bot */
         $bot->getFile($method);
     }
 
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testGetChat()
     {
         $method = GetChatMethod::create('id');
@@ -311,9 +370,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(ChatType::class))
             ->willReturn(new ChatType());
 
+        /* @var BotApiHelper $bot */
         $bot->getChat($method);
     }
 
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testGetChatAdministrators()
     {
         $method = GetChatAdministratorsMethod::create('id');
@@ -324,9 +388,14 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class . '[]'))
             ->willReturn([]);
 
+        /* @var BotApiHelper $bot */
         $bot->getChatAdministrators($method);
     }
 
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testGetChatMember()
     {
         $method = GetChatMemberMethod::create('id', 1);
@@ -337,6 +406,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class))
             ->willReturn(new ChatMemberType());
 
+        /* @var BotApiHelper $bot */
         $bot->getChatMember($method);
     }
 
