@@ -7,7 +7,6 @@
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
-![Total Downloads][ico-last-commit]
 ![Total Downloads][ico-php-v]
 
 ## Install
