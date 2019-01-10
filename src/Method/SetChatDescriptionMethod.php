@@ -37,7 +37,7 @@ class SetChatDescriptionMethod
         $instance = new static();
         $instance->chatId = $chatId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId']);
         }
 
         return $instance;

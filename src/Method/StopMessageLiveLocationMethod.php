@@ -32,7 +32,7 @@ class StopMessageLiveLocationMethod
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['messageId', 'chatId', 'inlineMessageId']);
         }
 
         return $instance;
@@ -51,7 +51,7 @@ class StopMessageLiveLocationMethod
         $instance = new static();
         $instance->inlineMessageId = $inlineMessageId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['messageId', 'chatId', 'inlineMessageId']);
         }
 
         return $instance;

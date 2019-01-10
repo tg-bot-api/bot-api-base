@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method\Traits;
 
-use Symfony\Component\Serializer\NameConverter\NameConverterInterface;
 use TgBotApi\BotApiBase\Exception\BadArgumentException;
 
 /**
@@ -13,13 +12,12 @@ use TgBotApi\BotApiBase\Exception\BadArgumentException;
 trait FillFromArrayTrait
 {
     /**
-     * @param array                       $data
-     * @param array                       $forbidden
-     * @param NameConverterInterface|null $converter
+     * @param array $data
+     * @param array $forbidden
      *
      * @throws BadArgumentException
      */
-    public function fill(array $data, array $forbidden = [], NameConverterInterface $converter = null)
+    public function fill(array $data, array $forbidden = [])
     {
         foreach ($forbidden as $item) {
             if (isset($data[$item])) {
@@ -29,9 +27,6 @@ trait FillFromArrayTrait
             }
         }
         foreach ($data as $key => $value) {
-            if ($converter) {
-                $key = $converter->denormalize($key);
-            }
             if (!\property_exists($this, $key)) {
                 throw new BadArgumentException(\sprintf('Argument %s not found in %s', $key, static::class));
             }

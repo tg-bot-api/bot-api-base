@@ -18,7 +18,7 @@ class PassportElementErrorUnspecifiedType extends PassportElementErrorType imple
         self::TYPE_PASSPORT,
         self::TYPE_DRIVER_LICENSE,
         self::TYPE_IDENTITY_CARD,
-        self::TYPE_INTERNATIONAL_PASSPORT,
+        self::TYPE_INTERNAL_PASSPORT,
         self::TYPE_ADDRESS,
         self::TYPE_UTILITY_BILL,
         self::TYPE_BANK_STATEMENT,
@@ -42,13 +42,13 @@ class PassportElementErrorUnspecifiedType extends PassportElementErrorType imple
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
-     * @return PassportElementErrorTranslationFileType
+     * @return PassportElementErrorUnspecifiedType
      */
     public static function create(
         string $type,
         string $message,
         string $elementHash
-    ): PassportElementErrorTranslationFileType {
+    ): PassportElementErrorUnspecifiedType {
         $instance = parent::createBase('unspecified', $type, $message);
         $instance->elementHash = $elementHash;
 

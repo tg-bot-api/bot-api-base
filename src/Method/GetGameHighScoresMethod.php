@@ -59,7 +59,7 @@ class GetGameHighScoresMethod
         $instance = new static();
         $instance->userId = $userId;
         $instance->chatId = $chatId;
-        $instance->$messageId = $messageId;
+        $instance->messageId = $messageId;
 
         return $instance;
     }

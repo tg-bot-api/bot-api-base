@@ -59,12 +59,4 @@ class PassportElementErrorTranslationFilesType extends PassportElementErrorType
 
         return $instance;
     }
-
-    /**
-     * @param string $hash
-     */
-    public function addHash(string $hash)
-    {
-        $this->fileHashes[] = $hash;
-    }
 }

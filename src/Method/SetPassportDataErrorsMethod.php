@@ -54,12 +54,4 @@ class SetPassportDataErrorsMethod
 
         return $instance;
     }
-
-    /**
-     * @param PassportElementErrorType $error
-     */
-    public function addError(PassportElementErrorType $error)
-    {
-        $this->errors[] = $error;
-    }
 }

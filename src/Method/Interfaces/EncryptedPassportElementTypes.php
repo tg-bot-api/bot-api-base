@@ -13,7 +13,7 @@ interface EncryptedPassportElementTypes
     const TYPE_PASSPORT = 'passport';
     const TYPE_DRIVER_LICENSE = 'driver_license';
     const TYPE_IDENTITY_CARD = 'identity_card';
-    const TYPE_INTERNATIONAL_PASSPORT = 'internal_passport';
+    const TYPE_INTERNAL_PASSPORT = 'internal_passport';
     const TYPE_ADDRESS = 'address';
     const TYPE_UTILITY_BILL = 'utility_bill';
     const TYPE_BANK_STATEMENT = 'bank_statement';
