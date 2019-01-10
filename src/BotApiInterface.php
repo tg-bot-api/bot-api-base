@@ -11,14 +11,14 @@ interface BotApiInterface
 {
     /**
      * @param $method
-     * @param $type
+     * @param string|null $type
      *
      * @throws ResponseException
      * @throws NormalizationException
      *
      * @return mixed
      */
-    public function call($method, $type = null);
+    public function call($method, string $type = null);
 
     /**
      * @return string

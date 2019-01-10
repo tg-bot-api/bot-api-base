@@ -71,14 +71,14 @@ class BotApiHelper implements BotApiInterface
 
     /**
      * @param $method
-     * @param null $type
+     * @param string|null $type
      *
      * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      *
      * @return mixed
      */
-    public function call($method, $type = null)
+    public function call($method, string $type = null)
     {
         return $this->botApi->call($method, $type);
     }

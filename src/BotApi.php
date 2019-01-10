@@ -61,14 +61,14 @@ class BotApi implements BotApiInterface
 
     /**
      * @param $method
-     * @param $type
+     * @param string|null $type
      *
      * @throws ResponseException
      * @throws NormalizationException
      *
      * @return mixed
      */
-    public function call($method, $type = null)
+    public function call($method, string $type = null)
     {
         list($data, $files) = $this->encode($method);
 
