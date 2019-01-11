@@ -9,7 +9,6 @@ use TgBotApi\BotApiBase\Method\GetChatMembersCountMethod;
 class GetChatMembersCountMethodTest extends MethodTestCase
 {
     /**
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncode()

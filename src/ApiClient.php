@@ -59,14 +59,28 @@ class ApiClient implements ApiClientInterface
         return \json_decode($content);
     }
 
-    public function setBotKey(string $botKey)
+    /**
+     * @param string $botKey
+     *
+     * @return ApiClientInterface
+     */
+    public function setBotKey(string $botKey): ApiClientInterface
     {
         $this->botKey = $botKey;
+
+        return $this;
     }
 
-    public function setEndpoint(string $endPoint)
+    /**
+     * @param string $endPoint
+     *
+     * @return ApiClientInterface
+     */
+    public function setEndpoint(string $endPoint): ApiClientInterface
     {
         $this->endPoint = $endPoint;
+
+        return $this;
     }
 
     /**

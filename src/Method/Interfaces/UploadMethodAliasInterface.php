@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TgBotApi\BotApiBase\Method;
+namespace TgBotApi\BotApiBase\Method\Interfaces;
 
 /**
  * Interface UploadMethodAliasInterface.

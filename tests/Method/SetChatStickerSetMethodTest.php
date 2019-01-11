@@ -10,7 +10,6 @@ class SetChatStickerSetMethodTest extends MethodTestCase
 {
     /**
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      */
     public function testEncode()
     {

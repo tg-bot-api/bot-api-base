@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\UploadMethodAliasInterface;
 use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**

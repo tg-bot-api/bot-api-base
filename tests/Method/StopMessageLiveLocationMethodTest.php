@@ -13,7 +13,6 @@ class StopMessageLiveLocationMethodTest extends MethodTestCase
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncode()
@@ -31,7 +30,6 @@ class StopMessageLiveLocationMethodTest extends MethodTestCase
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncodeInline()

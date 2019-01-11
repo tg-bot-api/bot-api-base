@@ -10,7 +10,6 @@ class RestrictChatMemberMethodTest extends MethodTestCase
 {
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      * @throws \Exception
      */

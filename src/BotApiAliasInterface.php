@@ -20,7 +20,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\StopMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\UnbanMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\UnpinMethodAliasInterface;
-use TgBotApi\BotApiBase\Method\UploadMethodAliasInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\UploadMethodAliasInterface;
 use TgBotApi\BotApiBase\Type\FileType;
 use TgBotApi\BotApiBase\Type\MessageType;
 

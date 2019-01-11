@@ -9,7 +9,6 @@ use TgBotApi\BotApiBase\Method\GetFileMethod;
 class GetFileMethodTest extends MethodTestCase
 {
     /**
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncode()

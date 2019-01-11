@@ -20,7 +20,7 @@ class ExportChatInviteLinkMethod
      *
      * @return ExportChatInviteLinkMethod
      */
-    public function create($chatId): ExportChatInviteLinkMethod
+    public static function create($chatId): ExportChatInviteLinkMethod
     {
         $instance = new static();
         $instance->chatId = $chatId;

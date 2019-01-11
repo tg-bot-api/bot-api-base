@@ -9,7 +9,6 @@ use TgBotApi\BotApiBase\Method\GetWebhookInfoMethod;
 class GetWebhookInfoMethodTest extends MethodTestCase
 {
     /**
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     public function testEncode()

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Traits;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
-use TgBotApi\BotApiBase\Method\UploadMethodAliasInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\UploadMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\UploadStickerFileMethod;
 use TgBotApi\BotApiBase\Type\FileType;
 
