@@ -20,3 +20,7 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security
 - Nothing
+
+## 0.1.0-beta - 2019-01-11
+
+Implemented all methods and types referenced by [official Api](https://core.telegram.org/bots/api)
