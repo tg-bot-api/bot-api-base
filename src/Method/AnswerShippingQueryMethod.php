@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\AnswerMethodAliasInterface;
 use TgBotApi\BotApiBase\Type\ShippingOption;
 
 /**
@@ -11,7 +12,7 @@ use TgBotApi\BotApiBase\Type\ShippingOption;
  *
  * @see https://core.telegram.org/bots/api#answershippingquery
  */
-class AnswerShippingQueryMethod
+class AnswerShippingQueryMethod implements AnswerMethodAliasInterface
 {
     /**
      * Unique identifier for the query to be answered.

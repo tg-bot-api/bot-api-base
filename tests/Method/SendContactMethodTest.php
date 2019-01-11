@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiComplete;
 use TgBotApi\BotApiBase\Method\SendContactMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 
@@ -24,9 +24,9 @@ class SendContactMethodTest extends MethodTestCase
     }
 
     /**
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
-    private function getApi(): BotApiHelper
+    private function getApi(): BotApiComplete
     {
         return $this->getBot('sendContact', [
             'chat_id' => 'chat_id',

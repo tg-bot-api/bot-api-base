@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
-use TgBotApi\BotApiBase\Method\Interfaces\SendMessageInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\CaptionVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
@@ -15,7 +15,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  *
  * @see https://core.telegram.org/bots/api#sendaudio
  */
-class SendAudioMethod implements SendMessageInterface
+class SendAudioMethod implements SendMethodAliasInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;

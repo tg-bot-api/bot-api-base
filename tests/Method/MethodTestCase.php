@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Tests\Method;
 
 use TgBotApi\BotApiBase\ApiClientInterface;
-use TgBotApi\BotApiBase\BotApi;
-use TgBotApi\BotApiBase\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiComplete;
+use TgBotApi\BotApiBase\BotApiNormalizer;
+use TgBotApi\BotApiBase\BotApiRequestInterface;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -16,9 +17,9 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      * @param array $result
      * @param array $serialisedFields
      *
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
-    protected function getBot($methodName, $request, $result = [], $serialisedFields = []): BotApiHelper
+    protected function getBot($methodName, $request, $result = [], $serialisedFields = []): BotApiComplete
     {
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
@@ -27,7 +28,8 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             ->method('send')
             ->with(
                 $methodName,
-                $this->callback(function ($query) use ($request, $serialisedFields) {
+                $this->callback(function (BotApiRequestInterface $botApiRequest) use ($request, $serialisedFields) {
+                    $query = $botApiRequest->getData();
                     foreach ($serialisedFields as $serializedField) {
                         $query[$serializedField] = \json_decode($query[$serializedField], true);
                     }
@@ -39,7 +41,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         /* @var ApiClientInterface $stub */
-        return new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub));
+        return new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
     }
 
     /**
@@ -49,7 +51,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      * @param array $serializableFields
      * @param array $result
      *
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
     protected function getBotWithFiles(
         $methodName,
@@ -57,9 +59,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
         array $fileMap,
         array $serializableFields = [],
         $result = []
-    ): BotApiHelper {
-        $requestedData = [];
-
+    ): BotApiComplete {
         $stub = $this->getMockBuilder(ApiClientInterface::class)
             ->getMock();
 
@@ -67,26 +67,24 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             ->method('send')
             ->with(
                 $methodName,
-                $this->callback(function ($query) use (&$requestedData) {
-                    $requestedData = $query;
+                $this->callback(
+                    function (BotApiRequestInterface $botApiRequest) use ($request, $fileMap, $serializableFields) {
+                        $request = $this->buildFileTree($botApiRequest->getFiles(), $request, $fileMap);
+                        $data = $botApiRequest->getData();
+                        foreach ($serializableFields as $field) {
+                            $this->assertIsString($data[$field]);
+                            $data[$field] = \json_decode($data[$field], true);
+                        }
+                        $this->assertEquals($request, $data);
 
-                    return true;
-                }),
-                $this->callback(function ($files) use (&$requestedData, $request, $fileMap, $serializableFields) {
-                    $request = $this->buildFileTree($files, $request, $fileMap);
-                    foreach ($serializableFields as $field) {
-                        $this->assertIsString($requestedData[$field]);
-                        $requestedData[$field] = \json_decode($requestedData[$field], true);
+                        return true;
                     }
-                    $this->assertEquals($request, $requestedData);
-
-                    return true;
-                })
+                )
             )
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         /* @var ApiClientInterface $stub */
-        return new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub));
+        return new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
     }
 
     /**

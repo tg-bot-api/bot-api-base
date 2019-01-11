@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Type\PassportElementError\PassportElementErrorType;
 
 /**
@@ -21,7 +22,7 @@ use TgBotApi\BotApiBase\Type\PassportElementError\PassportElementErrorType;
  * @see https://core.telegram.org/bots/api#setpassportdataerrors
  * @see https://core.telegram.org/passport
  */
-class SetPassportDataErrorsMethod
+class SetPassportDataErrorsMethod implements SetMethodAliasInterface
 {
     /**
      * User identifier.

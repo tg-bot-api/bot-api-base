@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiComplete;
 use TgBotApi\BotApiBase\Method\SendStickerMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
@@ -31,9 +31,9 @@ class SendStickerMethodTest extends MethodTestCase
     }
 
     /**
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
-    private function getApi(): BotApiHelper
+    private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
             'sendSticker',
@@ -51,9 +51,9 @@ class SendStickerMethodTest extends MethodTestCase
     }
 
     /**
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
-    private function getApiWithStringFileId(): BotApiHelper
+    private function getApiWithStringFileId(): BotApiComplete
     {
         return $this->getBot(
             'sendSticker',

@@ -10,5 +10,5 @@ interface ApiClientInterface
 
     public function setEndpoint(string $endPoint);
 
-    public function send(string $method, array $data, array $files = []);
+    public function send(string $method, BotApiRequestInterface $request);
 }

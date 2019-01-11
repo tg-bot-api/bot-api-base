@@ -35,21 +35,20 @@ class ApiClient implements ApiClientInterface
     }
 
     /**
-     * @param string $method
-     * @param array  $data
-     * @param array  $files
+     * @param string                 $method
+     * @param BotApiRequestInterface $apiRequest
      *
      * @throws \Psr\Http\Client\ClientExceptionInterface
      *
      * @return mixed
      */
-    public function send(string $method, array $data, array $files = [])
+    public function send(string $method, BotApiRequestInterface $apiRequest)
     {
         $request = $this->requestFactory->createRequest('POST', $this->generateUri($method));
 
         $boundary = \uniqid('', true);
 
-        $stream = $this->streamFactory->createStream($this->createStreamBody($boundary, $data, $files));
+        $stream = $this->streamFactory->createStream($this->createStreamBody($boundary, $apiRequest));
 
         $response = $this->client->sendRequest($request
             ->withHeader('Content-Type', 'multipart/form-data; boundary="' . $boundary . '"')
@@ -81,20 +80,19 @@ class ApiClient implements ApiClientInterface
     }
 
     /**
-     * @param $data
-     * @param $files
-     * @param mixed $boundary
+     * @param mixed                  $boundary
+     * @param BotApiRequestInterface $request
      *
      * @return string
      */
-    protected function createStreamBody($boundary, $data, $files): string
+    protected function createStreamBody($boundary, BotApiRequestInterface $request): string
     {
         $stream = '';
-        foreach ($data as $name => $value) {
+        foreach ($request->getData() as $name => $value) {
             $stream .= $this->createDataStream($boundary, $name, $value);
         }
 
-        foreach ($files as $name => $file) {
+        foreach ($request->getFiles() as $name => $file) {
             $stream .= $this->createFileStream($boundary, $name, $file);
         }
 

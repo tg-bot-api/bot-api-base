@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\UnpinMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
@@ -11,7 +12,7 @@ use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#unpinchatmessage
  */
-class UnpinChatMessageMethod
+class UnpinChatMessageMethod implements UnpinMethodAliasInterface
 {
     use ChatIdVariableTrait;
 

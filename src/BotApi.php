@@ -4,26 +4,22 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase;
 
-use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
-use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
-use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
-use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use Symfony\Component\Serializer\Serializer;
-use TgBotApi\BotApiBase\Exception\NormalizationException;
 use TgBotApi\BotApiBase\Exception\ResponseException;
-use TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer;
-use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
-use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
-use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
-use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
-use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
+use TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod;
+use TgBotApi\BotApiBase\Method\SendChatActionMethod;
+use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
+use TgBotApi\BotApiBase\Traits\AliasMethodTrait;
+use TgBotApi\BotApiBase\Traits\GetMethodTrait;
+use TgBotApi\BotApiBase\Type\FileType;
+use TgBotApi\BotApiBase\Type\MessageType;
 
 /**
  * Class BotApi.
  */
 class BotApi implements BotApiInterface
 {
+    use AliasMethodTrait;
+    use GetMethodTrait;
     /**
      * @var string
      */
@@ -40,19 +36,27 @@ class BotApi implements BotApiInterface
     private $endPoint;
 
     /**
+     * @var NormalizerInterface
+     */
+    private $normalizer;
+
+    /**
      * BotApi constructor.
      *
-     * @param string             $botKey
-     * @param ApiClientInterface $apiClient
-     * @param string             $endPoint
+     * @param string              $botKey
+     * @param ApiClientInterface  $apiClient
+     * @param NormalizerInterface $normalizer
+     * @param string              $endPoint
      */
     public function __construct(
         string $botKey,
         ApiClientInterface $apiClient,
+        NormalizerInterface $normalizer,
         string $endPoint = 'https://api.telegram.org'
     ) {
         $this->botKey = $botKey;
         $this->apiClient = $apiClient;
+        $this->normalizer = $normalizer;
         $this->endPoint = $endPoint;
 
         $this->apiClient->setBotKey($botKey);
@@ -64,37 +68,69 @@ class BotApi implements BotApiInterface
      * @param string|null $type
      *
      * @throws ResponseException
-     * @throws NormalizationException
      *
      * @return mixed
      */
     public function call($method, string $type = null)
     {
-        list($data, $files) = $this->encode($method);
-
-        $json = $this->apiClient->send($this->getMethodName($method), $data, $files);
+        $json = $this->apiClient->send($this->getMethodName($method), $this->normalizer->normalize($method));
 
         if (true !== $json->ok) {
             throw new ResponseException($json->description);
         }
 
-        return $type ? $this->denormalize($json, $type) : $json->result;
+        return $type ? $this->normalizer->denormalize($json, $type) : $json->result;
     }
 
     /**
+     * @param ExportChatInviteLinkMethod $method
+     *
+     * @throws ResponseException
+     *
      * @return string
      */
-    public function getBotKey(): string
+    public function exportChatInviteLink(ExportChatInviteLinkMethod $method): string
     {
-        return $this->botKey;
+        return $this->call($method);
     }
 
     /**
+     * @param SendChatActionMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function sendChatAction(SendChatActionMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @param SendMediaGroupMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return MessageType[]
+     */
+    public function sendMediaGroup(SendMediaGroupMethod $method): array
+    {
+        return $this->call($method, MessageType::class . '[]');
+    }
+
+    /**
+     * @param FileType $file
+     *
      * @return string
      */
-    public function getEndPoint(): string
+    public function getAbsoluteFilePath(FileType $file): string
     {
-        return $this->endPoint;
+        return \sprintf(
+            '%s/file/bot%s/%s',
+            $this->endPoint,
+            $this->botKey,
+            $file->filePath
+        );
     }
 
     /**
@@ -109,64 +145,5 @@ class BotApi implements BotApiInterface
             \strrpos(\get_class($method), '\\') + 1,
             -1 * \strlen('Method')
         ));
-    }
-
-    /**
-     * @param $data
-     * @param $type
-     *
-     * @return object|array
-     */
-    private function denormalize($data, $type)
-    {
-        $normalizer = new ObjectNormalizer(
-            null,
-            new CamelCaseToSnakeCaseNameConverter(),
-            null,
-            new PhpDocExtractor()
-        );
-        $arrayNormalizer = new ArrayDenormalizer();
-        $serializer = new Serializer([
-            new UserProfilePhotosNormalizer($normalizer, $arrayNormalizer),
-            new DateTimeNormalizer(),
-            $normalizer,
-            $arrayNormalizer,
-        ]);
-
-        return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
-    }
-
-    /**
-     * @param $method
-     *
-     * @throws NormalizationException
-     *
-     * @return array []
-     */
-    private function encode($method): array
-    {
-        $files = [];
-
-        $objectNormalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
-        $serializer = new Serializer([
-            new InputFileNormalizer($files),
-            new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
-            new JsonSerializableNormalizer($objectNormalizer),
-            new AnswerInlineQueryNormalizer($objectNormalizer),
-            new DateTimeNormalizer(),
-            $objectNormalizer,
-        ]);
-
-        $data = $serializer->normalize(
-            $method,
-            null,
-            ['skip_null_values' => true, DateTimeNormalizer::FORMAT_KEY => 'U']
-        );
-
-        if (!\is_array($data)) {
-            throw new NormalizationException('Normalized data must be array');
-        }
-
-        return [$data, $files];
     }
 }

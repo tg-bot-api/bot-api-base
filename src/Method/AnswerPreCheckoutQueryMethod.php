@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\AnswerMethodAliasInterface;
+
 /**
  * Class AnswerPreCheckoutQueryMethod.
  *
@@ -14,7 +16,7 @@ namespace TgBotApi\BotApiBase\Method;
  *
  * @see https://core.telegram.org/bots/api#answerprecheckoutquery
  */
-class AnswerPreCheckoutQueryMethod
+class AnswerPreCheckoutQueryMethod implements AnswerMethodAliasInterface
 {
     /**
      * Unique identifier for the query to be answered.

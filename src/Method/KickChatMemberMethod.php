@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\KickMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
@@ -13,7 +14,7 @@ use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#kickchatmember
  */
-class KickChatMemberMethod
+class KickChatMemberMethod implements KickMethodAliasInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;

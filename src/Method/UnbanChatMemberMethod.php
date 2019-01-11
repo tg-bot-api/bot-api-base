@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\UnbanMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
 
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#unbanchatmember
  */
-class UnbanChatMemberMethod
+class UnbanChatMemberMethod implements UnbanMethodAliasInterface
 {
     use ChatIdVariableTrait;
     use UserIdVariableTrait;

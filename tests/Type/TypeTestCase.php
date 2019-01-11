@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Tests\Type;
 
 use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApi;
+use TgBotApi\BotApiBase\BotApiNormalizer;
 
 abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -18,6 +19,7 @@ abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
             ->method('send')
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
-        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub);
+        /* @var ApiClientInterface $stub */
+        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
     }
 }

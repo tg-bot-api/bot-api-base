@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\PinMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\MessageIdVariableTrait;
@@ -13,7 +14,7 @@ use TgBotApi\BotApiBase\Method\Traits\MessageIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#pinchatmessage
  */
-class PinChatMessageMethod
+class PinChatMessageMethod implements PinMethodAliasInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;

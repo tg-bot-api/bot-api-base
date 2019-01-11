@@ -25,42 +25,76 @@ composer require php-http/guzzle6-adapter http-interop/http-factory-guzzle
 ```
 
 ```php	
-$botKey = '*';
+$botKey = '<bot key>';
 
 $requestFactory = new Http\Factory\Guzzle\RequestFactory()
 $streamFactory = new Http\Factory\Guzzle\StreamFactory();
 $client = new Http\Adapter\Guzzle6\Client();
 
 $apiClient = new \TgBotApi\BotApiBase\ApiClient($requestFactory, $streamFactory, $client);
-$bot = new \TgBotApi\BotApiBase\BotApi($botKey, $apiClient);
+$bot = new \TgBotApi\BotApiBase\BotApi($botKey, $apiClient, new \TgBotApi\BotApiBase\BotApi\BotApiNormalizer());
 
-$userId = '*';
+$userId = '<user id>';
+
+$bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
+```
+Allowed methods:
+
+|Method|Allowed type|response|
+|:--|:--|:--|
+|add|AddStickerToSetMethod|bool|
+|answer|AnswerCallbackQueryMethod, AnswerInlineQueryMethod, AnswerPreCheckoutQueryMethod, AnswerShippingQueryMethod|bool|
+|create|CreateNewStickerSetMethod|bool|
+|delete|DeleteChatPhotoMethod, DeleteChatStickerSetMethod, DeleteMessageMethod, DeleteStickerFromSetMethod, DeleteWebhookMethod|bool|
+|edit|EditMessageCaptionMethod, EditMessageLiveLocationMethod, EditMessageMediaMethod, EditMessageReplyMarkupMethod, EditMessageTextMethod|bool|
+|forward|ForwardMethod|MessageType|
+|kick|KickChatMemberMethod|bool|
+|leave|LeaveChatMethod|bool|
+|pin|PinChatMessageMethod|bool|
+|promote|PromoteChatMemberMethod|bool|
+|restrict|RestrictChatMemberMethod|bool|
+|send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod|MessageType|
+|set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod|bool|
+|stop|StopMessageLiveLocationMethod|bool|
+|unban|UnbanChatMemberMethod|bool|
+|unpin|UnpinChatMessageMethod|bool|
+|upload|uploadStickerFile|FileType|
+|exportChatInviteLink|ExportChatInviteLinkMethod|string|
+|sendChatAction|SendChatActionMethod|bool|
+|getUpdates|GetUpdatesMethod|UpdateType[]|
+|getMe|GetMeMethod|UserType|
+|getUserProfilePhotos|GetUserProfilePhotosMethod|UserProfilePhotosType|
+|getWebhookInfo|GetWebhookInfoMethod|WebhookInfoType|
+|getChatMembersCount|GetChatMembersCountMethod|int|
+|getChat|GetChatMethod|ChatType|
+|getChatAdministrators|GetChatAdministratorsMethod|ChatMemberType[]|
+|getChatMember|GetChatMemberMethod|ChatMemberType|
+|getGameHighScores|GameHighScoreType[]|GameHighScoreType[]|
+|getStickerSet|GetStickerSetMethod|StickerSetType|
+|getFile|GetFileMethod|FileType|
+|sendMediaGroup|sendMediaGroup|MessageType[]|
+|getAbsoluteFilePath|FileType|string|
+|call($method, [string $type])|any method class, [optional expected type]|array or excepted type object|
+
+Implemented all methods and types referenced by [official Api](https://core.telegram.org/bots/api)
+
+You can use  `BotApiComplete` instance as helper to call 
+all methods from [official Api](https://core.telegram.org/bots/api) like this:
+
+```php
+$botKey = '<bot key>';
+
+$requestFactory = new Http\Factory\Guzzle\RequestFactory()
+$streamFactory = new Http\Factory\Guzzle\StreamFactory();
+$client = new Http\Adapter\Guzzle6\Client();
+
+$apiClient = new \TgBotApi\BotApiBase\ApiClient($requestFactory, $streamFactory, $client);
+$bot = new \TgBotApi\BotApiBase\BotApiComplete($botKey, $apiClient, new \TgBotApi\BotApiBase\BotApi\BotApiNormalizer());
+
+$userId = '<user id>';
 
 $bot->sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
 ```
-
-Implemented all methods and types referenced by [official Api](https://core.telegram.org/bots/api) 
-
-To send messages you can use alias `send(SendMessageInterface $message)`
-
-Alias is available for the following methods:
-* `SendAnimationMethod`
-* `SendAudioMethod`
-* `SendContactMethod`
-* `SendDocumentMethod`
-* `SendGameMethod`
-* `SendInvoiceMethod`
-* `SendLocationMethod`
-* `SendMediaGroupMethod`
-* `SendMessageMethod`
-* `SendPhotoMethod`
-* `SendStickerMethod`
-* `SendVenueMethod`
-* `SendVideoMethod`
-* `SendVideoNoteMethod`
-* `SendVoiceMethod`
-* `ForwardMessageMethod`
-
 
 ## Change log
 

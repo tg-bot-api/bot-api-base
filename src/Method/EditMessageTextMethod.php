@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
@@ -13,7 +14,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
  *
  * @see https://core.telegram.org/bots/api#editmessagetext
  */
-class EditMessageTextMethod implements HasParseModeVariableInterface
+class EditMessageTextMethod implements HasParseModeVariableInterface, EditMethodAliasInterface
 {
     use FillFromArrayTrait;
     use EditMessageVariablesTrait;

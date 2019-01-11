@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\AnswerMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
@@ -15,7 +16,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
  *
  * @see https://core.telegram.org/bots/api#answercallbackquery
  */
-class AnswerCallbackQueryMethod
+class AnswerCallbackQueryMethod implements AnswerMethodAliasInterface
 {
     use FillFromArrayTrait;
     /**

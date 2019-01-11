@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
+
 /**
  * Class SetStickerPositionInSetMethod.
  *
  * @see https://core.telegram.org/bots/api#setstickerpositioninset
  */
-class SetStickerPositionInSetMethod
+class SetStickerPositionInSetMethod implements SetMethodAliasInterface
 {
     /**
      * File identifier of the sticker.

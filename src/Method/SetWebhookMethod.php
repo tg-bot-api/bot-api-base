@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\HasUpdateTypeVariableInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
 
@@ -14,7 +15,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  * @see https://core.telegram.org/bots/api#setwebhook
  * @see https://core.telegram.org/bots/webhooks
  */
-class SetWebhookMethod implements HasUpdateTypeVariableInterface
+class SetWebhookMethod implements HasUpdateTypeVariableInterface, SetMethodAliasInterface
 {
     use FillFromArrayTrait;
 

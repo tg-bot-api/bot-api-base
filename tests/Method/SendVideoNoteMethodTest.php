@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiComplete;
 use TgBotApi\BotApiBase\Method\SendVideoNoteMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
@@ -25,9 +25,9 @@ class SendVideoNoteMethodTest extends MethodTestCase
     }
 
     /**
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
-    private function getApi(): BotApiHelper
+    private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
             'sendVideoNote',

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\PromoteMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
@@ -13,7 +14,7 @@ use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#promotechatmember
  */
-class PromoteChatMemberMethod
+class PromoteChatMemberMethod implements PromoteMethodAliasInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;

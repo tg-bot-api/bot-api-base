@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
 
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  *
  * @see https://core.telegram.org/bots/api#setchatphoto
  */
-class SetChatPhotoMethod
+class SetChatPhotoMethod implements SetMethodAliasInterface
 {
     use ChatIdVariableTrait;
     /**

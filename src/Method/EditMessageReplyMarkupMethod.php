@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
  *
  * @see https://core.telegram.org/bots/api#editmessagereplymarkup
  */
-class EditMessageReplyMarkupMethod
+class EditMessageReplyMarkupMethod implements EditMethodAliasInterface
 {
     use FillFromArrayTrait;
     use EditMessageVariablesTrait;

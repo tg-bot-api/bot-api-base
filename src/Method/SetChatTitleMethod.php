@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
@@ -11,7 +12,7 @@ use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#setchattitle
  */
-class SetChatTitleMethod
+class SetChatTitleMethod implements SetMethodAliasInterface
 {
     use ChatIdVariableTrait;
 

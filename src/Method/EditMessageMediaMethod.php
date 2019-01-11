@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
@@ -14,7 +15,7 @@ use TgBotApi\BotApiBase\Type\InputMedia\InputMediaType;
  *
  * @see https://core.telegram.org/bots/api#editmessagemedia
  */
-class EditMessageMediaMethod
+class EditMessageMediaMethod implements EditMethodAliasInterface
 {
     use FillFromArrayTrait;
     use EditMessageVariablesTrait;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiComplete;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
@@ -19,7 +19,6 @@ class SendMediaGroupMethodTest extends MethodTestCase
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      */
     public function testEncode()
     {
@@ -27,9 +26,9 @@ class SendMediaGroupMethodTest extends MethodTestCase
     }
 
     /**
-     * @return BotApiHelper
+     * @return BotApiComplete
      */
-    private function getApi(): BotApiHelper
+    private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
             'sendMediaGroup',

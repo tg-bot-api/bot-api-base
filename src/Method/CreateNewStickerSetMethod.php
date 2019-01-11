@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\CreateMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\EmojisVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
@@ -14,7 +15,7 @@ use TgBotApi\BotApiBase\Type\MaskPositionType;
  *
  * @see https://core.telegram.org/bots/api#createnewstickerset
  */
-class CreateNewStickerSetMethod
+class CreateNewStickerSetMethod implements CreateMethodAliasInterface
 {
     use FillFromArrayTrait;
     use EmojisVariableTrait;

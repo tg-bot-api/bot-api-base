@@ -14,7 +14,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  *
  * @see https://core.telegram.org/bots/api#uploadstickerfile
  */
-class UploadStickerFileMethod
+class UploadStickerFileMethod implements UploadMethodAliasInterface
 {
     /**
      * User identifier of sticker file owner.

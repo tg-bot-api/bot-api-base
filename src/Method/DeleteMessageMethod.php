@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\DeleteMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\MessageIdVariableTrait;
 
@@ -20,7 +21,7 @@ use TgBotApi\BotApiBase\Method\Traits\MessageIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#deletemessage
  */
-class DeleteMessageMethod
+class DeleteMessageMethod implements DeleteMethodAliasInterface
 {
     use ChatIdVariableTrait;
     use MessageIdVariableTrait;

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
  *
  * @see https://core.telegram.org/bots/api#setchatdescription
  */
-class SetChatDescriptionMethod
+class SetChatDescriptionMethod implements SetMethodAliasInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;

@@ -6,8 +6,8 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 
 use PHPUnit\Framework\TestCase;
 use TgBotApi\BotApiBase\ApiClientInterface;
-use TgBotApi\BotApiBase\BotApi;
-use TgBotApi\BotApiBase\BotApiHelper;
+use TgBotApi\BotApiBase\BotApiComplete;
+use TgBotApi\BotApiBase\BotApiNormalizer;
 use TgBotApi\BotApiBase\Type\FileType;
 
 class GetAbsoluteFilePathTest extends TestCase
@@ -17,7 +17,12 @@ class GetAbsoluteFilePathTest extends TestCase
         /** @var ApiClientInterface $stub */
         $stub = $this->getMockBuilder(ApiClientInterface::class)->getMock();
 
-        $botApi = new BotApiHelper(new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, 'endpoint'));
+        $botApi = new BotApiComplete(
+            '000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA',
+            $stub,
+            new BotApiNormalizer(),
+            'endpoint'
+        );
 
         $file = new FileType();
         $file->filePath = 'path';

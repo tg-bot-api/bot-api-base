@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\AnswerMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultType;
 
@@ -15,7 +16,7 @@ use TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultType;
  *
  * @see https://core.telegram.org/bots/api#answerinlinequery
  */
-class AnswerInlineQueryMethod
+class AnswerInlineQueryMethod implements AnswerMethodAliasInterface
 {
     use FillFromArrayTrait;
 

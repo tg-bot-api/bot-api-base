@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests;
 
-use TgBotApi\BotApiBase\BotApiHelper;
-use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
+use TgBotApi\BotApiBase\BotApiComplete;
+use TgBotApi\BotApiBase\Method\ForwardMethod;
 use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
 use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
 use TgBotApi\BotApiBase\Method\GetChatMethod;
@@ -50,7 +50,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(UpdateType::class . '[]'))
             ->willReturn([]);
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getUpdates($method);
     }
 
@@ -68,7 +68,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(UserType::class))
             ->willReturn(new UserType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getMe($method);
     }
 
@@ -87,7 +87,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendMessage($method);
     }
 
@@ -98,7 +98,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testforwardMessage()
     {
-        $method = ForwardMessageMethod::create('id', 'id', 1);
+        $method = ForwardMethod::create('id', 'id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())
@@ -106,7 +106,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->forwardMessage($method);
     }
 
@@ -125,7 +125,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendPhoto($method);
     }
 
@@ -144,7 +144,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendAudio($method);
     }
 
@@ -163,7 +163,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendDocument($method);
     }
 
@@ -182,7 +182,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendVideo($method);
     }
 
@@ -201,7 +201,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendAnimation($method);
     }
 
@@ -220,7 +220,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendVoice($method);
     }
 
@@ -239,7 +239,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendVideoNote($method);
     }
 
@@ -258,7 +258,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class . '[]'))
             ->willReturn([]);
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendMediaGroup($method);
     }
 
@@ -277,7 +277,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendLocation($method);
     }
 
@@ -296,7 +296,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendVenue($method);
     }
 
@@ -315,7 +315,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(MessageType::class))
             ->willReturn(new MessageType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->sendContact($method);
     }
 
@@ -334,7 +334,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(UserProfilePhotosType::class))
             ->willReturn(new UserProfilePhotosType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getUserProfilePhotos($method);
     }
 
@@ -352,7 +352,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(FileType::class))
             ->willReturn(new FileType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getFile($method);
     }
 
@@ -370,7 +370,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(ChatType::class))
             ->willReturn(new ChatType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getChat($method);
     }
 
@@ -388,7 +388,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class . '[]'))
             ->willReturn([]);
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getChatAdministrators($method);
     }
 
@@ -406,7 +406,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
             ->with($this->equalTo($method), $this->equalTo(ChatMemberType::class))
             ->willReturn(new ChatMemberType());
 
-        /* @var BotApiHelper $bot */
+        /* @var BotApiComplete $bot */
         $bot->getChatMember($method);
     }
 
@@ -415,7 +415,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     private function getBotMock(): \PHPUnit\Framework\MockObject\MockObject
     {
-        return $this->getMockBuilder(BotApiHelper::class)
+        return $this->getMockBuilder(BotApiComplete::class)
             ->disableOriginalConstructor()
             ->setMethods(['call'])
             ->getMock();
