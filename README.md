@@ -69,7 +69,7 @@ Allowed methods:
 |getChat|GetChatMethod|ChatType|
 |getChatAdministrators|GetChatAdministratorsMethod|ChatMemberType[]|
 |getChatMember|GetChatMemberMethod|ChatMemberType|
-|getGameHighScores|GameHighScoreType[]|GameHighScoreType[]|
+|getGameHighScores|GetGameHighScoresMethod|GameHighScoreType[]|
 |getStickerSet|GetStickerSetMethod|StickerSetType|
 |getFile|GetFileMethod|FileType|
 |sendMediaGroup|sendMediaGroup|MessageType[]|
