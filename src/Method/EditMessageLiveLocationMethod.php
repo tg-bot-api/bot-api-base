@@ -33,6 +33,7 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
 
     /**
      * @param int|string $chatId
+     * @param int        $messageId
      * @param float      $latitude
      * @param float      $longitude
      * @param array|null $data
@@ -43,16 +44,18 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
      */
     public static function create(
         $chatId,
+        int $messageId,
         float $latitude,
         float $longitude,
         array $data = null
     ): EditMessageLiveLocationMethod {
         $instance = new static();
+        $instance->chatId = $chatId;
+        $instance->messageId = $messageId;
         $instance->latitude = $latitude;
         $instance->longitude = $longitude;
-        $instance->chatId = $chatId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId', 'messageId', 'latitude', 'longitude', 'inlineMessageId']);
         }
 
         return $instance;
@@ -79,7 +82,7 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
         $instance->longitude = $longitude;
         $instance->inlineMessageId = $inlineMessageId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId', 'latitude', 'longitude', 'inlineMessageId']);
         }
 
         return $instance;

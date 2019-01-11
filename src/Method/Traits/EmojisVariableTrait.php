@@ -15,12 +15,4 @@ trait EmojisVariableTrait
      * @var string
      */
     public $emojis;
-
-    /**
-     * @param string $emoji
-     */
-    public function addEmoji(string $emoji)
-    {
-        $this->emojis .= $emoji;
-    }
 }

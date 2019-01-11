@@ -71,17 +71,4 @@ class ReplyKeyboardMarkupType
 
         return $instance;
     }
-
-    /**
-     * @param int                $index  keyboard row
-     * @param KeyboardButtonType $button
-     *
-     * @return ReplyKeyboardMarkupType
-     */
-    public function addKeyboardButton(int $index, KeyboardButtonType $button): ReplyKeyboardMarkupType
-    {
-        $this->keyboard[$index][] = $button;
-
-        return $this;
-    }
 }

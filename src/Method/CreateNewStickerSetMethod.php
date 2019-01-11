@@ -93,9 +93,9 @@ class CreateNewStickerSetMethod implements CreateMethodAliasInterface
     ): CreateNewStickerSetMethod {
         $instance = new static();
         $instance->userId = $userId;
-        $instance->$name = $name;
+        $instance->name = $name;
         $instance->title = $title;
-        $instance->$pngSticker = $pngSticker;
+        $instance->pngSticker = $pngSticker;
         $instance->emojis = $emojis;
         if ($data) {
             $instance->fill($data);

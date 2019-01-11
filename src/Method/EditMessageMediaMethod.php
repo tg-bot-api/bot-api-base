@@ -7,7 +7,6 @@ namespace TgBotApi\BotApiBase\Method;
 use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
-use TgBotApi\BotApiBase\Type\InputFileType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaType;
 
 /**
@@ -28,10 +27,10 @@ class EditMessageMediaMethod implements EditMethodAliasInterface
     public $media;
 
     /**
-     * @param int|string    $chatId
-     * @param int           $messageId
-     * @param InputFileType $media
-     * @param array|null    $data
+     * @param int|string     $chatId
+     * @param int            $messageId
+     * @param InputMediaType $media
+     * @param array|null     $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
@@ -40,7 +39,7 @@ class EditMessageMediaMethod implements EditMethodAliasInterface
     public static function create(
         $chatId,
         int $messageId,
-        InputFileType $media,
+        InputMediaType $media,
         array $data = null
     ): EditMessageMediaMethod {
         $instance = new static();
@@ -48,16 +47,16 @@ class EditMessageMediaMethod implements EditMethodAliasInterface
         $instance->media = $media;
         $instance->messageId = $messageId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId', 'media', 'messageId', 'caption']);
         }
 
         return $instance;
     }
 
     /**
-     * @param string        $inlineMessageId
-     * @param InputFileType $media
-     * @param array|null    $data
+     * @param string         $inlineMessageId
+     * @param InputMediaType $media
+     * @param array|null     $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
@@ -65,14 +64,14 @@ class EditMessageMediaMethod implements EditMethodAliasInterface
      */
     public static function createInline(
         string $inlineMessageId,
-        InputFileType $media,
+        InputMediaType $media,
         array $data = null
     ): EditMessageMediaMethod {
         $instance = new static();
         $instance->inlineMessageId = $inlineMessageId;
         $instance->media = $media;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId', 'media', 'messageId', 'caption']);
         }
 
         return $instance;

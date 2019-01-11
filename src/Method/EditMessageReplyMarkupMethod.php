@@ -33,7 +33,7 @@ class EditMessageReplyMarkupMethod implements EditMethodAliasInterface
         $instance->chatId = $chatId;
         $instance->messageId = $messageId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId', 'messageId', 'inlineMessageId']);
         }
 
         return $instance;
@@ -54,7 +54,7 @@ class EditMessageReplyMarkupMethod implements EditMethodAliasInterface
         $instance = new self();
         $instance->inlineMessageId = $inlineMessageId;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['chatId', 'messageId', 'inlineMessageId']);
         }
 
         return $instance;
