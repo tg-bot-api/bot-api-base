@@ -23,7 +23,7 @@ We support all psr17 and psr18 implementations, but we will use guzzle6 for exam
 composer require php-http/guzzle6-adapter http-interop/http-factory-guzzle
 ```
 
-```php	
+```php
 $botKey = '<bot key>';
 
 $requestFactory = new Http\Factory\Guzzle\RequestFactory()
@@ -37,7 +37,7 @@ $userId = '<user id>';
 
 $bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
 ```
-Allowed methods:
+### Allowed methods:
 
 |Method|Allowed type|response|
 |:--|:--|:--|
@@ -57,7 +57,7 @@ Allowed methods:
 |stop|StopMessageLiveLocationMethod|bool|
 |unban|UnbanChatMemberMethod|bool|
 |unpin|UnpinChatMessageMethod|bool|
-|upload|uploadStickerFile|FileType|
+|upload|UploadStickerFileMethod|FileType|
 |exportChatInviteLink|ExportChatInviteLinkMethod|string|
 |sendChatAction|SendChatActionMethod|bool|
 |getUpdates|GetUpdatesMethod|UpdateType[]|
@@ -71,7 +71,7 @@ Allowed methods:
 |getGameHighScores|GetGameHighScoresMethod|GameHighScoreType[]|
 |getStickerSet|GetStickerSetMethod|StickerSetType|
 |getFile|GetFileMethod|FileType|
-|sendMediaGroup|sendMediaGroup|MessageType[]|
+|sendMediaGroup|SendMediaGroupMethod|MessageType[]|
 |getAbsoluteFilePath|FileType|string|
 |call($method, [string $type])|any method class, [optional expected type]|array or excepted type object|
 
@@ -93,6 +93,15 @@ $bot = new \TgBotApi\BotApiBase\BotApiComplete($botKey, $apiClient, new \TgBotAp
 $userId = '<user id>';
 
 $bot->sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
+```
+
+### Fetching webhooks
+
+Method `fetch()` of WebhookFetcher handling Psr\Http\Message\RequestInterface or string and always returns instance of UpdateType or throwing BadRequestException.
+
+```php
+$fetcher = new WebhookFetcher(new BotApiNormalizer());
+$update = $fetcher->fetch($request);
 ```
 
 ## Change log

@@ -21,27 +21,45 @@ class WebhookFetcher implements WebhookFetcherInterface
     /**
      * WebhookFetcher constructor.
      *
-     * @param BotApiNormalizer $normalizer
+     * @param NormalizerInterface $normalizer
      */
-    public function __construct(BotApiNormalizer $normalizer)
+    public function __construct(NormalizerInterface $normalizer)
     {
         $this->normalizer = $normalizer;
     }
 
     /**
-     * @param RequestInterface $request
+     * @param RequestInterface|string $request
      *
      * @throws BadRequestException
      *
      * @return UpdateType
      */
-    public function fetch(RequestInterface $request): UpdateType
+    public function fetch($request): UpdateType
     {
-        $input = \json_decode($request->getBody()->getContents());
+        $input = \json_decode($this->getContents($request));
         if (!($input instanceof \stdClass)) {
-            throw new BadRequestException();
+            throw new BadRequestException('Request content must be valid JSON object.');
         }
 
         return $this->normalizer->denormalize($input, UpdateType::class);
+    }
+
+    /**
+     * @param $request
+     *
+     * @throws BadRequestException
+     *
+     * @return string
+     */
+    private function getContents($request): string
+    {
+        if ($request instanceof RequestInterface) {
+            return $request->getBody()->getContents();
+        }
+        if (\is_string($request)) {
+            return $request;
+        }
+        throw new BadRequestException('Request must be instance of Psr\Http\Message\RequestInterface or string.');
     }
 }
