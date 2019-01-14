@@ -100,7 +100,7 @@ $bot->sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId,
 Method `fetch()` of WebhookFetcher handling Psr\Http\Message\RequestInterface or string and always returns instance of UpdateType or throwing BadRequestException.
 
 ```php
-$fetcher = new WebhookFetcher(new BotApiNormalizer());
+$fetcher = new \TgBotApi\BotApiBase\WebhookFetcher(new \TgBotApi\BotApiBase\BotApiNormalizer());
 $update = $fetcher->fetch($request);
 ```
 
