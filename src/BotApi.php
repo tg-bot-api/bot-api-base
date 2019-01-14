@@ -79,7 +79,7 @@ class BotApi implements BotApiInterface
             throw new ResponseException($json->description);
         }
 
-        return $type ? $this->normalizer->denormalize($json, $type) : $json->result;
+        return $type ? $this->normalizer->denormalize($json->result, $type) : $json->result;
     }
 
     /**

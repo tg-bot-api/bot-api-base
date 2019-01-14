@@ -41,7 +41,7 @@ class BotApiNormalizer implements NormalizerInterface
             $arrayNormalizer,
         ]);
 
-        return $serializer->denormalize($data->result, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
+        return $serializer->denormalize($data, $type, null, [DateTimeNormalizer::FORMAT_KEY => 'U']);
     }
 
     /**

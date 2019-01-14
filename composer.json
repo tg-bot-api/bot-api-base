@@ -1,7 +1,7 @@
 {
   "name": "tg-bot-api/bot-api-base",
   "type": "library",
-  "description": "this is low low lwvwl telegram bot api",
+  "description": "Clear and simple Telegram bot API",
   "keywords": [
     "tg-bot-api",
     "telegram-bot-api",
