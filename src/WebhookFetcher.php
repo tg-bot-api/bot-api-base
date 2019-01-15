@@ -14,7 +14,7 @@ use TgBotApi\BotApiBase\Type\UpdateType;
 class WebhookFetcher implements WebhookFetcherInterface
 {
     /**
-     * @var BotApiNormalizer
+     * @var NormalizerInterface
      */
     private $normalizer;
 

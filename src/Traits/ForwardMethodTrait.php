@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Traits;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
-use TgBotApi\BotApiBase\Method\ForwardMethod;
+use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\ForwardMethodAliasInterface;
 use TgBotApi\BotApiBase\Type\MessageType;
 
@@ -24,13 +24,13 @@ trait ForwardMethodTrait
     abstract public function forward(ForwardMethodAliasInterface $method): MessageType;
 
     /**
-     * @param ForwardMethod $method
+     * @param ForwardMessageMethod $method
      *
      * @throws ResponseException
      *
      * @return MessageType
      */
-    public function forwardMessage(ForwardMethod $method): MessageType
+    public function forwardMessage(ForwardMessageMethod $method): MessageType
     {
         return $this->forward($method);
     }

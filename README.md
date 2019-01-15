@@ -46,7 +46,7 @@ $bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'))
 |create|CreateNewStickerSetMethod|bool|
 |delete|DeleteChatPhotoMethod, DeleteChatStickerSetMethod, DeleteMessageMethod, DeleteStickerFromSetMethod, DeleteWebhookMethod|bool|
 |edit|EditMessageCaptionMethod, EditMessageLiveLocationMethod, EditMessageMediaMethod, EditMessageReplyMarkupMethod, EditMessageTextMethod|bool|
-|forward|ForwardMethod|MessageType|
+|forward|ForwardMessageMethod|MessageType|
 |kick|KickChatMemberMethod|bool|
 |leave|LeaveChatMethod|bool|
 |pin|PinChatMessageMethod|bool|

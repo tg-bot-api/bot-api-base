@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Tests;
 
 use TgBotApi\BotApiBase\BotApiComplete;
-use TgBotApi\BotApiBase\Method\ForwardMethod;
+use TgBotApi\BotApiBase\Method\ForwardMessageMethod;
 use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
 use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
 use TgBotApi\BotApiBase\Method\GetChatMethod;
@@ -98,7 +98,7 @@ class ApiTest extends \PHPUnit\Framework\TestCase
      */
     public function testforwardMessage()
     {
-        $method = ForwardMethod::create('id', 'id', 1);
+        $method = ForwardMessageMethod::create('id', 'id', 1);
 
         $bot = $this->getBotMock();
         $bot->expects($this->once())

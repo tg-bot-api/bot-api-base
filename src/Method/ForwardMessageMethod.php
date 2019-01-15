@@ -10,11 +10,11 @@ use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
- * Class ForwardMethod.
+ * Class ForwardMessageMethod.
  *
  * @see https://core.telegram.org/bots/api#forwardmessage
  */
-class ForwardMethod implements SendMethodAliasInterface, ForwardMethodAliasInterface
+class ForwardMessageMethod implements SendMethodAliasInterface, ForwardMethodAliasInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;
@@ -48,9 +48,9 @@ class ForwardMethod implements SendMethodAliasInterface, ForwardMethodAliasInter
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
-     * @return ForwardMethod
+     * @return ForwardMessageMethod
      */
-    public static function create($chatId, $fromChatId, int $messageId, array $data = null): ForwardMethod
+    public static function create($chatId, $fromChatId, int $messageId, array $data = null): ForwardMessageMethod
     {
         $instance = new static();
         $instance->chatId = $chatId;
