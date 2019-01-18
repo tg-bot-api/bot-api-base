@@ -37,6 +37,9 @@ $userId = '<user id>';
 
 $bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
 ```
+
+You can configure it to work in symfony, for example, in [this way](https://gist.github.com/greenplugin/09179bee606aa01b1ee00d049ab78fc4).
+
 ### Allowed methods:
 
 |Method|Allowed type|response|
