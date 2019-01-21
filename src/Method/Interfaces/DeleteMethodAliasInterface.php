@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Class DeleteMethodAliasInterface.
  */
-interface DeleteMethodAliasInterface
+interface DeleteMethodAliasInterface extends MethodInterface
 {
 }

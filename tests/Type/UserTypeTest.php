@@ -8,6 +8,9 @@ use TgBotApi\BotApiBase\Type\UserType;
 
 class UserTypeTest extends TypeTestCase
 {
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
     public function testEncode()
     {
         $result = [
@@ -20,7 +23,7 @@ class UserTypeTest extends TypeTestCase
         ];
         $botApi = $this->getBot($result);
 
-        $type = $botApi->call(new \stdClass(), UserType::class);
+        $type = $botApi->call($this->getMethod(), UserType::class);
 
         $this->assertEquals($type->id, $result['id']);
         $this->assertEquals($type->isBot, $result['is_bot']);

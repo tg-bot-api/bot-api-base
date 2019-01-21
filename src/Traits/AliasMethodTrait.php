@@ -13,6 +13,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\ForwardMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\KickMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\LeaveMethodAliasInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\PinMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\PromoteMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\RestrictMethodAliasInterface;
@@ -31,14 +32,14 @@ use TgBotApi\BotApiBase\Type\MessageType;
 trait AliasMethodTrait
 {
     /**
-     * @param $method
-     * @param string|null $type
+     * @param MethodInterface $method
+     * @param string|null     $type
      *
      * @throws ResponseException
      *
      * @return mixed
      */
-    abstract public function call($method, string $type = null);
+    abstract public function call(MethodInterface $method, string $type = null);
 
     /**
      * @param AddMethodAliasInterface $method

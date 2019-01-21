@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface UnbanMethodAliasInterface.
  */
-interface UnbanMethodAliasInterface
+interface UnbanMethodAliasInterface extends MethodInterface
 {
 }

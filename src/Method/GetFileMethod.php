@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
+
 /**
  * Class GetFileMethod.
  *
@@ -19,7 +21,7 @@ namespace TgBotApi\BotApiBase\Method;
  *
  * @see https://core.telegram.org/bots/api#getfile
  */
-class GetFileMethod
+class GetFileMethod implements MethodInterface
 {
     /**
      * File identifier to get info about.

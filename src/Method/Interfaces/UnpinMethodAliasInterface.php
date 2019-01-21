@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface UnpinMethodAliasInterface.
  */
-interface UnpinMethodAliasInterface
+interface UnpinMethodAliasInterface extends MethodInterface
 {
 }

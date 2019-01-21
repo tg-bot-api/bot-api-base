@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
+
 /**
  * Class GetStickerSetMethod.
  *
  * @see https://core.telegram.org/bots/api#getstickerset
  */
-class GetStickerSetMethod
+class GetStickerSetMethod implements MethodInterface
 {
     /**
      * Name of the sticker set.

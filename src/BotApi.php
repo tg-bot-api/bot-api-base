@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod;
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\SendChatActionMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Traits\AliasMethodTrait;
@@ -71,7 +72,7 @@ class BotApi implements BotApiInterface
      *
      * @return mixed
      */
-    public function call($method, string $type = null)
+    public function call(MethodInterface $method, string $type = null)
     {
         $json = $this->apiClient->send($this->getMethodName($method), $this->normalizer->normalize($method));
 

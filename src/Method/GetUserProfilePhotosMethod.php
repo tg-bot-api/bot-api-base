@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
 
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#getuserprofilephotos
  */
-class GetUserProfilePhotosMethod
+class GetUserProfilePhotosMethod implements MethodInterface
 {
     use FillFromArrayTrait;
     use UserIdVariableTrait;

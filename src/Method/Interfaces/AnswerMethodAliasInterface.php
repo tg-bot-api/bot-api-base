@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface AnswerMethodAliasInterface.
  */
-interface AnswerMethodAliasInterface
+interface AnswerMethodAliasInterface extends MethodInterface
 {
 }

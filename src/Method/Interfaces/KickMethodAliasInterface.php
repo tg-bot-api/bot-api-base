@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface KickMethodAliasInterface.
  */
-interface KickMethodAliasInterface
+interface KickMethodAliasInterface extends MethodInterface
 {
 }

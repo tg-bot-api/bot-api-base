@@ -55,7 +55,8 @@ class ForwardMessageMethod implements SendMethodAliasInterface, ForwardMethodAli
         $instance = new static();
         $instance->chatId = $chatId;
         $instance->fromChatId = $fromChatId;
-        $instance->$messageId = $messageId;
+        $instance->messageId = $messageId;
+
         if ($data) {
             $instance->fill($data);
         }

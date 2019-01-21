@@ -16,6 +16,7 @@ use TgBotApi\BotApiBase\Method\GetStickerSetMethod;
 use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
 use TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod;
 use TgBotApi\BotApiBase\Method\GetWebhookInfoMethod;
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Type\ChatMemberType;
 use TgBotApi\BotApiBase\Type\ChatType;
 use TgBotApi\BotApiBase\Type\FileType;
@@ -29,14 +30,14 @@ use TgBotApi\BotApiBase\Type\WebhookInfoType;
 trait GetMethodTrait
 {
     /**
-     * @param $method
+     * @param MethodInterface $method
      * @param $type
      *
      * @throws ResponseException
      *
      * @return mixed
      */
-    abstract public function call($method, string $type = null);
+    abstract public function call(MethodInterface $method, string $type = null);
 
     /**
      * @param GetUpdatesMethod $method

@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface EditMethodAliasInterface.
  */
-interface EditMethodAliasInterface
+interface EditMethodAliasInterface extends MethodInterface
 {
 }

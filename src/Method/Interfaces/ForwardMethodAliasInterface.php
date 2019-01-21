@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Class ForwardMethodAliasInterface.
  */
-interface ForwardMethodAliasInterface
+interface ForwardMethodAliasInterface extends MethodInterface
 {
 }

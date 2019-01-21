@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\HasActionVariableInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 
 /**
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#sendchataction
  */
-class SendChatActionMethod implements HasActionVariableInterface
+class SendChatActionMethod implements HasActionVariableInterface, MethodInterface
 {
     use ChatIdVariableTrait;
 

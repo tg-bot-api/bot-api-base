@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface RestrictMethodAliasInterface.
  */
-interface RestrictMethodAliasInterface
+interface RestrictMethodAliasInterface extends MethodInterface
 {
 }

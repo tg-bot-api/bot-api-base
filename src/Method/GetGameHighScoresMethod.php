@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
+
 /**
  * Class SetGameHighScoresMethod.
  *
@@ -17,7 +19,7 @@ namespace TgBotApi\BotApiBase\Method;
  *
  * @see https://core.telegram.org/bots/api#getgamehighscores
  */
-class GetGameHighScoresMethod
+class GetGameHighScoresMethod implements MethodInterface
 {
     /**
      * Target user id.

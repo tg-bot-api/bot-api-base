@@ -7,6 +7,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
 /**
  * Interface StopMethodAliasInterface.
  */
-interface StopMethodAliasInterface
+interface StopMethodAliasInterface extends MethodInterface
 {
 }

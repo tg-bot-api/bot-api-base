@@ -9,6 +9,6 @@ namespace TgBotApi\BotApiBase\Method\Interfaces;
  */
 interface HasParseModeVariableInterface
 {
-    const PARSE_MODE_HTML = 'HTML';
-    const PARSE_MODE_MARKDOWN = 'Markdown';
+    public const PARSE_MODE_HTML = 'HTML';
+    public const PARSE_MODE_MARKDOWN = 'Markdown';
 }

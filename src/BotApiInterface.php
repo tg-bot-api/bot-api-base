@@ -17,6 +17,7 @@ use TgBotApi\BotApiBase\Method\GetStickerSetMethod;
 use TgBotApi\BotApiBase\Method\GetUpdatesMethod;
 use TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod;
 use TgBotApi\BotApiBase\Method\GetWebhookInfoMethod;
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\SendChatActionMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Type\ChatMemberType;
@@ -33,14 +34,14 @@ use TgBotApi\BotApiBase\Type\WebhookInfoType;
 interface BotApiInterface extends BotApiAliasInterface
 {
     /**
-     * @param $method
-     * @param string|null $type
+     * @param MethodInterface $method
+     * @param string|null     $type
      *
      * @throws ResponseException
      *
      * @return mixed
      */
-    public function call($method, string $type = null);
+    public function call(MethodInterface $method, string $type = null);
 
     /**
      * @param ExportChatInviteLinkMethod $method

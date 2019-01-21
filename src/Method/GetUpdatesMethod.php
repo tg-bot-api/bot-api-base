@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\HasUpdateTypeVariableInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
@@ -12,7 +13,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
  *
  * @see https://core.telegram.org/bots/api#getupdates
  */
-class GetUpdatesMethod implements HasUpdateTypeVariableInterface
+class GetUpdatesMethod implements HasUpdateTypeVariableInterface, MethodInterface
 {
     use FillFromArrayTrait;
 
