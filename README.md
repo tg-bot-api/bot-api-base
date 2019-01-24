@@ -97,7 +97,7 @@ $userId = '<user id>';
 
 $bot->sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'));
 ```
-
+[Learn api](https://tg-bot-api.github.io/bot-api-base/api/)
 ### Fetching webhooks
 
 Method `fetch()` of WebhookFetcher handling Psr\Http\Message\RequestInterface or string and always returns instance of UpdateType or throwing BadRequestException.
