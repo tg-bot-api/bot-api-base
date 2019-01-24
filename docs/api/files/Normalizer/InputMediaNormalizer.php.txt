@@ -1,0 +1,49 @@
+<?php
+
+declare(strict_types=1);
+
+namespace TgBotApi\BotApiBase\Normalizer;
+
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Serializer\Serializer;
+use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
+
+class InputMediaNormalizer implements NormalizerInterface
+{
+    private $files;
+    private $objectNormalizer;
+
+    public function __construct(NormalizerInterface $objectNormalizer, &$files)
+    {
+        $this->objectNormalizer = $objectNormalizer;
+        $this->files = &$files;
+    }
+
+    public function normalize($topic, $format = null, array $context = [])
+    {
+        if ($topic->media instanceof InputFileType) {
+            $uniqid = \uniqid();
+            $this->files[$uniqid] = $topic->media;
+            $topic->media = 'attach://' . $uniqid;
+        }
+
+        if (\property_exists($topic, 'thumb') && $topic->thumb instanceof InputFileType) {
+            $uniqid = \uniqid();
+            $this->files[$uniqid] = $topic->thumb;
+            $topic->thumb = 'attach://' . $uniqid;
+        }
+
+        $serializer = new Serializer([$this->objectNormalizer]);
+
+        return $serializer->normalize($topic, null, ['skip_null_values' => true]);
+    }
+
+    public function supportsNormalization($data, $format = null)
+    {
+        return $data instanceof InputMediaPhotoType ||
+            $data instanceof InputMediaVideoType;
+    }
+}
+

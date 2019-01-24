@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+    <meta charset="utf-8"/>
+    <title>Telegram Bot Api Base</title>
+    <meta name="author" content=""/>
+    <meta name="description" content=""/>
+
+    <link href="../css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/prism.css" rel="stylesheet" media="all"/>
+    <link href="../css/template.css" rel="stylesheet" media="all"/>
+    
+    <!--[if lt IE 9]>
+    <script src="../js/html5.js"></script>
+    <![endif]-->
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/ui/1.10.4/jquery-ui.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery.smooth-scroll.js"></script>
+    <script src="../js/prism.min.js"></script>
+    <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
+        <script type="text/javascript">
+        function loadExternalCodeSnippets() {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+                var src = pre.getAttribute('data-src');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist or is empty';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        $(document).ready(function(){
+            loadExternalCodeSnippets();
+        });
+        $('#source-view').on('shown', function () {
+            loadExternalCodeSnippets();
+        })
+    </script>
+
+    <link rel="shortcut icon" href="../images/favicon.ico"/>
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+</head>
+<body>
+
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="icon-ellipsis-vertical"></i>
+            </a>
+            <a class="brand" href="../index.html">Telegram Bot Api Base</a>
+
+            <div class="nav-collapse">
+                <ul class="nav pull-right">
+                                        <li class="dropdown">
+                        <a href="../index.html" class="dropdown-toggle" data-toggle="dropdown">
+                            API Documentation <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                                                        <li><a href="../namespaces/TgBotApi.html">\TgBotApi</a></li>
+                                                    </ul>
+                    </li>
+                                        <li class="dropdown" id="charts-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Charts <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../graphs/class.html">
+                                    <i class="icon-list-alt"></i>&#160;Class hierarchy diagram
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown" id="reports-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Reports <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../reports/errors.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Errors <span class="label label-info pull-right">615</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/markers.html">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <i class="icon-list-alt"></i>&#160;Markers <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../reports/deprecated.html">
+                                                                                                            <i class="icon-list-alt"></i>&#160;Deprecated <span class="label label-info pull-right">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--<div class="go_to_top">-->
+    <!--<a href="#___" style="color: inherit">Back to top&#160;&#160;<i class="icon-upload icon-white"></i></a>-->
+    <!--</div>-->
+</div>
+
+<div id="___" class="container-fluid">
+        <section class="row-fluid">
+        <div class="span2 sidebar">
+                                <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1650397850"></a>
+                                <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
+            </div>
+            <div id="namespace-1650397850" class="accordion-body collapse in">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-421789583"></a>
+                                <a href="../namespaces/TgBotApi.html" style="margin-left: 30px; padding-left: 0">TgBotApi</a>
+            </div>
+            <div id="namespace-421789583" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1242895102"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.html" style="margin-left: 30px; padding-left: 0">BotApiBase</a>
+            </div>
+            <div id="namespace-1242895102" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1406561586"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
+            </div>
+            <div id="namespace-1406561586" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Exception.BadArgumentException.html">BadArgumentException</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Exception.BadRequestException.html">BadRequestException</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Exception.ResponseException.html">ResponseException</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1079125519"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Method.html" style="margin-left: 30px; padding-left: 0">Method</a>
+            </div>
+            <div id="namespace-1079125519" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1303146772"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Method.Interfaces.html" style="margin-left: 30px; padding-left: 0">Interfaces</a>
+            </div>
+            <div id="namespace-1303146772" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AddMethodAliasInterface.html">AddMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AnswerMethodAliasInterface.html">AnswerMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.CreateMethodAliasInterface.html">CreateMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.DeleteMethodAliasInterface.html">DeleteMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.EditMethodAliasInterface.html">EditMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.ForwardMethodAliasInterface.html">ForwardMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.KickMethodAliasInterface.html">KickMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.LeaveMethodAliasInterface.html">LeaveMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.MethodInterface.html">MethodInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PinMethodAliasInterface.html">PinMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PromoteMethodAliasInterface.html">PromoteMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.RestrictMethodAliasInterface.html">RestrictMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SendMethodAliasInterface.html">SendMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SetMethodAliasInterface.html">SetMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.StopMethodAliasInterface.html">StopMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnbanMethodAliasInterface.html">UnbanMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnpinMethodAliasInterface.html">UnpinMethodAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UploadMethodAliasInterface.html">UploadMethodAliasInterface</a></li>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1404853699"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Method.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-1404853699" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.CaptionVariablesTrait.html">CaptionVariablesTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.ChatIdVariableTrait.html">ChatIdVariableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.EditMessageVariablesTrait.html">EditMessageVariablesTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.EmojisVariableTrait.html">EmojisVariableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.FillFromArrayTrait.html">FillFromArrayTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.MessageIdVariableTrait.html">MessageIdVariableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.ReplyMarkupVariableTrait.html">ReplyMarkupVariableTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.SendToChatVariablesTrait.html">SendToChatVariablesTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Method.Traits.UserIdVariableTrait.html">UserIdVariableTrait</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.AddStickerToSetMethod.html">AddStickerToSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.AnswerCallbackQueryMethod.html">AnswerCallbackQueryMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.AnswerInlineQueryMethod.html">AnswerInlineQueryMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.AnswerPreCheckoutQueryMethod.html">AnswerPreCheckoutQueryMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.AnswerShippingQueryMethod.html">AnswerShippingQueryMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.CreateNewStickerSetMethod.html">CreateNewStickerSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.DeleteChatPhotoMethod.html">DeleteChatPhotoMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.DeleteChatStickerSetMethod.html">DeleteChatStickerSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.DeleteMessageMethod.html">DeleteMessageMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.DeleteStickerFromSetMethod.html">DeleteStickerFromSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.DeleteWebhookMethod.html">DeleteWebhookMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.EditMessageCaptionMethod.html">EditMessageCaptionMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.EditMessageLiveLocationMethod.html">EditMessageLiveLocationMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.EditMessageMediaMethod.html">EditMessageMediaMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.EditMessageReplyMarkupMethod.html">EditMessageReplyMarkupMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.EditMessageTextMethod.html">EditMessageTextMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.ExportChatInviteLinkMethod.html">ExportChatInviteLinkMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.ForwardMessageMethod.html">ForwardMessageMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetChatAdministratorsMethod.html">GetChatAdministratorsMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetChatMemberMethod.html">GetChatMemberMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetChatMembersCountMethod.html">GetChatMembersCountMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetChatMethod.html">GetChatMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetFileMethod.html">GetFileMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetGameHighScoresMethod.html">GetGameHighScoresMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetMeMethod.html">GetMeMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetStickerSetMethod.html">GetStickerSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetUpdatesMethod.html">GetUpdatesMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetUserProfilePhotosMethod.html">GetUserProfilePhotosMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.GetWebhookInfoMethod.html">GetWebhookInfoMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.KickChatMemberMethod.html">KickChatMemberMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.LeaveChatMethod.html">LeaveChatMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.PinChatMessageMethod.html">PinChatMessageMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.PromoteChatMemberMethod.html">PromoteChatMemberMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.RestrictChatMemberMethod.html">RestrictChatMemberMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendAnimationMethod.html">SendAnimationMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendAudioMethod.html">SendAudioMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendChatActionMethod.html">SendChatActionMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendContactMethod.html">SendContactMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendDocumentMethod.html">SendDocumentMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendGameMethod.html">SendGameMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendInvoiceMethod.html">SendInvoiceMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendLocationMethod.html">SendLocationMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendMediaGroupMethod.html">SendMediaGroupMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendMessageMethod.html">SendMessageMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendPhotoMethod.html">SendPhotoMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendStickerMethod.html">SendStickerMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendVenueMethod.html">SendVenueMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendVideoMethod.html">SendVideoMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendVideoNoteMethod.html">SendVideoNoteMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SendVoiceMethod.html">SendVoiceMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetChatDescriptionMethod.html">SetChatDescriptionMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetChatPhotoMethod.html">SetChatPhotoMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetChatStickerSetMethod.html">SetChatStickerSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetChatTitleMethod.html">SetChatTitleMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetGameScoreMethod.html">SetGameScoreMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetPassportDataErrorsMethod.html">SetPassportDataErrorsMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetStickerPositionInSetMethod.html">SetStickerPositionInSetMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.SetWebhookMethod.html">SetWebhookMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.StopMessageLiveLocationMethod.html">StopMessageLiveLocationMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.UnbanChatMemberMethod.html">UnbanChatMemberMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.UnpinChatMessageMethod.html">UnpinChatMessageMethod</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Method.UploadStickerFileMethod.html">UploadStickerFileMethod</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1166051276"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Normalizer.html" style="margin-left: 30px; padding-left: 0">Normalizer</a>
+            </div>
+            <div id="namespace-1166051276" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Normalizer.AnswerInlineQueryNormalizer.html">AnswerInlineQueryNormalizer</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Normalizer.InputFileNormalizer.html">InputFileNormalizer</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Normalizer.InputMediaNormalizer.html">InputMediaNormalizer</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Normalizer.JsonSerializableNormalizer.html">JsonSerializableNormalizer</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Normalizer.MediaGroupNormalizer.html">MediaGroupNormalizer</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Normalizer.UserProfilePhotosNormalizer.html">UserProfilePhotosNormalizer</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-116560228"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Traits.html" style="margin-left: 30px; padding-left: 0">Traits</a>
+            </div>
+            <div id="namespace-116560228" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                            <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.AddMethodTrait.html">AddMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.AliasMethodTrait.html">AliasMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.AnswerMethodTrait.html">AnswerMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.CreateMethodTrait.html">CreateMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.DeleteMethodTrait.html">DeleteMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.EditMethodTrait.html">EditMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.ForwardMethodTrait.html">ForwardMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.GetMethodTrait.html">GetMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.KickMethodTrait.html">KickMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.LeaveMethodTrait.html">LeaveMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.PinMethodTrait.html">PinMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.PromoteMethodTrait.html">PromoteMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.RestrictMethodTrait.html">RestrictMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.SendMethodTrait.html">SendMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.SetMethodTrait.html">SetMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.StopMethodTrait.html">StopMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.UnbanMethodTrait.html">UnbanMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.UnpinMethodTrait.html">UnpinMethodTrait</a></li>
+                                                    <li class="trait"><a href="../classes/TgBotApi.BotApiBase.Traits.UploadMethodTrait.html">UploadMethodTrait</a></li>
+                                                                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-436752607"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Type.html" style="margin-left: 30px; padding-left: 0">Type</a>
+            </div>
+            <div id="namespace-436752607" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-691204556"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Type.InlineQueryResult.html" style="margin-left: 30px; padding-left: 0">InlineQueryResult</a>
+            </div>
+            <div id="namespace-691204556" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultArticleType.html">InlineQueryResultArticleType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultAudioType.html">InlineQueryResultAudioType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedAudioType.html">InlineQueryResultCachedAudioType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedDocumentType.html">InlineQueryResultCachedDocumentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedGifType.html">InlineQueryResultCachedGifType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedMpeg4GifType.html">InlineQueryResultCachedMpeg4GifType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedPhotoType.html">InlineQueryResultCachedPhotoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedStickerType.html">InlineQueryResultCachedStickerType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedVideoType.html">InlineQueryResultCachedVideoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedVoiceType.html">InlineQueryResultCachedVoiceType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultContactType.html">InlineQueryResultContactType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultDocumentType.html">InlineQueryResultDocumentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultGameType.html">InlineQueryResultGameType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultGifType.html">InlineQueryResultGifType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultLocationType.html">InlineQueryResultLocationType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultMpeg4GifType.html">InlineQueryResultMpeg4GifType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultPhotoType.html">InlineQueryResultPhotoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultType.html">InlineQueryResultType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVenueType.html">InlineQueryResultVenueType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVideoType.html">InlineQueryResultVideoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVoiceType.html">InlineQueryResultVoiceType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-526690702"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Type.InputMedia.html" style="margin-left: 30px; padding-left: 0">InputMedia</a>
+            </div>
+            <div id="namespace-526690702" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMedia.InputMediaAnimationType.html">InputMediaAnimationType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMedia.InputMediaAudioType.html">InputMediaAudioType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMedia.InputMediaDocumentType.html">InputMediaDocumentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMedia.InputMediaPhotoType.html">InputMediaPhotoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMedia.InputMediaType.html">InputMediaType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMedia.InputMediaVideoType.html">InputMediaVideoType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1709385057"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Type.InputMessageContent.html" style="margin-left: 30px; padding-left: 0">InputMessageContent</a>
+            </div>
+            <div id="namespace-1709385057" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMessageContent.InputContactMessageContentType.html">InputContactMessageContentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMessageContent.InputLocationMessageContentType.html">InputLocationMessageContentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMessageContent.InputMessageContentType.html">InputMessageContentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMessageContent.InputTextMessageContentType.html">InputTextMessageContentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputMessageContent.InputVenueMessageContent.html">InputVenueMessageContent</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                                                    <div class="accordion" style="margin-bottom: 0">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1161490121"></a>
+                                <a href="../namespaces/TgBotApi.BotApiBase.Type.PassportElementError.html" style="margin-left: 30px; padding-left: 0">PassportElementError</a>
+            </div>
+            <div id="namespace-1161490121" class="accordion-body collapse ">
+                <div class="accordion-inner">
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorDataFieldType.html">PassportElementErrorDataFieldType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorFilesType.html">PassportElementErrorFilesType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorFileType.html">PassportElementErrorFileType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorFrontSideType.html">PassportElementErrorFrontSideType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorReverseSideType.html">PassportElementErrorReverseSideType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorSelfieType.html">PassportElementErrorSelfieType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorTranslationFilesType.html">PassportElementErrorTranslationFilesType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorTranslationFileType.html">PassportElementErrorTranslationFileType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorType.html">PassportElementErrorType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportElementError.PassportElementErrorUnspecifiedType.html">PassportElementErrorUnspecifiedType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.AnimationType.html">AnimationType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.AudioType.html">AudioType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.CallbackGameType.html">CallbackGameType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.CallbackQueryType.html">CallbackQueryType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ChatMemberType.html">ChatMemberType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ChatPhotoType.html">ChatPhotoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ChatType.html">ChatType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ChosenInlineResultType.html">ChosenInlineResultType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ContactType.html">ContactType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.DocumentType.html">DocumentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.EncryptedCredentialsType.html">EncryptedCredentialsType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.EncryptedPassportElementType.html">EncryptedPassportElementType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.FileType.html">FileType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ForceReplyType.html">ForceReplyType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.GameHighScoreType.html">GameHighScoreType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.GameType.html">GameType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineKeyboardButtonType.html">InlineKeyboardButtonType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineKeyboardMarkupType.html">InlineKeyboardMarkupType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryType.html">InlineQueryType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InputFileType.html">InputFileType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.InvoiceType.html">InvoiceType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.KeyboardButtonType.html">KeyboardButtonType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.LabeledPriceType.html">LabeledPriceType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.LocationType.html">LocationType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.MaskPositionType.html">MaskPositionType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.MessageEntityType.html">MessageEntityType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.MessageType.html">MessageType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.OrderInfoType.html">OrderInfoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportDataType.html">PassportDataType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PassportFileType.html">PassportFileType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PhotoSizeType.html">PhotoSizeType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.PreCheckoutQueryType.html">PreCheckoutQueryType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ReplyKeyboardMarkupType.html">ReplyKeyboardMarkupType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ReplyKeyboardRemoveType.html">ReplyKeyboardRemoveType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ResponseParametersType.html">ResponseParametersType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ShippingAddressType.html">ShippingAddressType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ShippingOption.html">ShippingOption</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.ShippingQueryType.html">ShippingQueryType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.StickerSetType.html">StickerSetType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.StickerType.html">StickerType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.SuccessfulPaymentType.html">SuccessfulPaymentType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.UpdateType.html">UpdateType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.UserProfilePhotosType.html">UserProfilePhotosType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.UserType.html">UserType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.VenueType.html">VenueType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.VideoNoteType.html">VideoNoteType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.VideoType.html">VideoType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.VoiceType.html">VoiceType</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.Type.WebhookInfoType.html">WebhookInfoType</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.ApiClientInterface.html">ApiClientInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.BotApiAliasInterface.html">BotApiAliasInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.BotApiInterface.html">BotApiInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.BotApiRequestInterface.html">BotApiRequestInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.NormalizerInterface.html">NormalizerInterface</a></li>
+                                                    <li class="interface"><a href="../classes/TgBotApi.BotApiBase.WebhookFetcherInterface.html">WebhookFetcherInterface</a></li>
+                                                                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.ApiClient.html">ApiClient</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.BotApi.html">BotApi</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.BotApiComplete.html">BotApiComplete</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.BotApiNormalizer.html">BotApiNormalizer</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.BotApiRequest.html">BotApiRequest</a></li>
+                                                    <li class="class"><a href="../classes/TgBotApi.BotApiBase.WebhookFetcher.html">WebhookFetcher</a></li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    
+                    <ul>
+                                                                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </section>
+    <section class="row-fluid">
+        <div class="span10 offset2">
+            <div class="row-fluid">
+                <div class="span8 content file">
+                    <nav>
+                                                                    </nav>
+
+                    <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
+                    <h1><small>Type</small>WebhookInfoType.php</h1>
+                    <p><em></em></p>
+                    
+
+                    
+                    
+                                        <h2>Classes</h2>
+                    <table class="table table-hover">
+                                            <tr>
+                            <td><a href="../classes/TgBotApi.BotApiBase.Type.WebhookInfoType.html">WebhookInfoType</a></td>
+                            <td><em>Class WebhookInfoType.</em></td>
+                        </tr>
+                                        </table>
+                                    </div>
+
+                <aside class="span4 detailsbar">
+                    <dl>
+                                                    <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                        
+                        
+                    </dl>
+                    <h2>Tags</h2>
+                    <table class="table table-condensed">
+                                                    <tr><td colspan="2"><em>None found</em></td></tr>
+                                            </table>
+
+                </aside>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+    <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="source-view-label"></h3>
+        </div>
+        <div class="modal-body">
+            <pre data-src="../files/Type/WebhookInfoType.php.txt" class="language-php line-numbers"></pre>
+        </div>
+    </div>
+
+    <footer class="row-fluid">
+        <section class="span10 offset2">
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <section class="row-fluid footer-sections">
+                        <section class="span4">
+                                                        <h1><i class="icon-code"></i></h1>
+                            <div>
+                                <ul>
+                                                                            <li><a href="../namespaces/TgBotApi.html">\TgBotApi</a></li>
+                                                                    </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-bar-chart"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../graphs/class.html">Class Hierarchy Diagram</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section class="span4">
+                                                        <h1><i class="icon-pushpin"></i></h1>
+                            <div>
+                                <ul>
+                                    <li><a href="../reports/errors.html">Errors</a></li>
+                                    <li><a href="../reports/markers.html">Markers</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="row-fluid">
+                <section class="span10 offset1">
+                    <hr />
+                    Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and authored
+                    on January 24th, 2019 at 22:09.
+                </section>
+            </section>
+        </section>
+    </footer>
+</div>
+
+</body>
+</html>

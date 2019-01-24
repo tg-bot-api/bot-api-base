@@ -1,0 +1,89 @@
+<?php
+
+declare(strict_types=1);
+
+namespace TgBotApi\BotApiBase\Traits;
+
+use TgBotApi\BotApiBase\Exception\ResponseException;
+use TgBotApi\BotApiBase\Method\EditMessageCaptionMethod;
+use TgBotApi\BotApiBase\Method\EditMessageLiveLocationMethod;
+use TgBotApi\BotApiBase\Method\EditMessageMediaMethod;
+use TgBotApi\BotApiBase\Method\EditMessageReplyMarkupMethod;
+use TgBotApi\BotApiBase\Method\EditMessageTextMethod;
+use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
+
+/**
+ * Trait EditMethodTrait.
+ */
+trait EditMethodTrait
+{
+    /**
+     * @param EditMethodAliasInterface $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    abstract public function edit(EditMethodAliasInterface $method): bool;
+
+    /**
+     * @param EditMessageCaptionMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function editMessageCaption(EditMessageCaptionMethod $method): bool
+    {
+        return $this->edit($method);
+    }
+
+    /**
+     * @param EditMessageLiveLocationMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function editMessageLiveLocation(EditMessageLiveLocationMethod $method): bool
+    {
+        return $this->edit($method);
+    }
+
+    /**
+     * @param EditMessageMediaMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function editMessageMedia(EditMessageMediaMethod $method): bool
+    {
+        return $this->edit($method);
+    }
+
+    /**
+     * @param EditMessageReplyMarkupMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function editMessageReplyMarkup(EditMessageReplyMarkupMethod $method): bool
+    {
+        return $this->edit($method);
+    }
+
+    /**
+     * @param EditMessageTextMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function editMessageText(EditMessageTextMethod $method): bool
+    {
+        return $this->edit($method);
+    }
+}
+

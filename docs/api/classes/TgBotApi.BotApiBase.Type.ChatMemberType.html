@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Telegram Bot Api Base » \TgBotApi\BotApiBase\Type\ChatMemberType</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Telegram Bot Api Base</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">615</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_canAddWebPagePreviews" title="$canAddWebPagePreviews() :: Optional. Restricted only. True, if user may add web page previews to his messages,
+implies can_send_media_messages."><span class="description"></span><pre>$canAddWebPagePreviews</pre></a></li>
+<li class="property public "><a href="#property_canBeEdited" title="$canBeEdited() :: Optional. Administrators only. True, if the bot is allowed to edit administrator privileges of that user."><span class="description"></span><pre>$canBeEdited</pre></a></li>
+<li class="property public "><a href="#property_canChangeInfo" title="$canChangeInfo() :: Optional. Administrators only. True, if the administrator can change the chat title, photo and other settings."><span class="description"></span><pre>$canChangeInfo</pre></a></li>
+<li class="property public "><a href="#property_canDeleteMessages" title="$canDeleteMessages() :: Optional. Administrators only. True, if the administrator can delete messages of other users."><span class="description"></span><pre>$canDeleteMessages</pre></a></li>
+<li class="property public "><a href="#property_canEditMessages" title="$canEditMessages() :: Optional. Administrators only. True, if the administrator can edit messages of other users
+and can pin messages, channels only."><span class="description"></span><pre>$canEditMessages</pre></a></li>
+<li class="property public "><a href="#property_canInviteUsers" title="$canInviteUsers() :: Optional. Administrators only. True, if the administrator can invite new users to the chat."><span class="description"></span><pre>$canInviteUsers</pre></a></li>
+<li class="property public "><a href="#property_canPinMessages" title="$canPinMessages() :: Boolean    Optional. Administrators only. True, if the administrator can pin messages, supergroups only."><span class="description"></span><pre>$canPinMessages</pre></a></li>
+<li class="property public "><a href="#property_canPostMessages" title="$canPostMessages() :: Optional. Administrators only. True, if the administrator can post in the channel, channels only."><span class="description"></span><pre>$canPostMessages</pre></a></li>
+<li class="property public "><a href="#property_canPromoteMembers" title="$canPromoteMembers() :: Optional. Administrators only. True, if the administrator can add new administrators with a subset
+of his own privileges or demote administrators that he has promoted, directly or indirectly
+(promoted by administrators that were appointed by the user)."><span class="description"></span><pre>$canPromoteMembers</pre></a></li>
+<li class="property public "><a href="#property_canRestrictMembers" title="$canRestrictMembers() :: Boolean    Optional. Administrators only. True, if the administrator can restrict, ban or unban chat members."><span class="description"></span><pre>$canRestrictMembers</pre></a></li>
+<li class="property public "><a href="#property_canSendMediaMessages" title="$canSendMediaMessages() :: Optional. Restricted only. True, if the user can send audios, documents, photos, videos,
+video notes and voice notes, implies can_send_messages."><span class="description"></span><pre>$canSendMediaMessages</pre></a></li>
+<li class="property public "><a href="#property_canSendMessages" title="$canSendMessages() :: Optional. Restricted only. True, if the user can send text messages, contacts, locations and venues."><span class="description"></span><pre>$canSendMessages</pre></a></li>
+<li class="property public "><a href="#property_canSendOthersMessages" title="$canSendOthersMessages() :: Optional. Restricted only. True, if the user can send animations, games, stickers and use inline bots,
+implies can_send_media_messages."><span class="description"></span><pre>$canSendOthersMessages</pre></a></li>
+<li class="property public "><a href="#property_status" title="$status() :: The member's status in the chat. Can be “creator”, “administrator”, “member”, “restricted”, “left” or “kicked”."><span class="description"></span><pre>$status</pre></a></li>
+<li class="property public "><a href="#property_untilDate" title="$untilDate() :: Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, \DateTimeImmutable."><span class="description"></span><pre>$untilDate</pre></a></li>
+<li class="property public "><a href="#property_user" title="$user() :: Information about the user."><span class="description"></span><pre>$user</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Constants" class="icon-custom icon-constant"></i> Constants
+                    <ul>
+<li class="constant  "><a href="#constant_STATUS_ADMINISTRATOR" title="STATUS_ADMINISTRATOR() :: "><span class="description">STATUS_ADMINISTRATOR</span><pre>STATUS_ADMINISTRATOR</pre></a></li>
+<li class="constant  "><a href="#constant_STATUS_CREATOR" title="STATUS_CREATOR() :: "><span class="description">STATUS_CREATOR</span><pre>STATUS_CREATOR</pre></a></li>
+<li class="constant  "><a href="#constant_STATUS_KICKED" title="STATUS_KICKED() :: "><span class="description">STATUS_KICKED</span><pre>STATUS_KICKED</pre></a></li>
+<li class="constant  "><a href="#constant_STATUS_LEFT" title="STATUS_LEFT() :: "><span class="description">STATUS_LEFT</span><pre>STATUS_LEFT</pre></a></li>
+<li class="constant  "><a href="#constant_STATUS_MEMBER" title="STATUS_MEMBER() :: "><span class="description">STATUS_MEMBER</span><pre>STATUS_MEMBER</pre></a></li>
+<li class="constant  "><a href="#constant_STATUS_RESTRICTED" title="STATUS_RESTRICTED() :: "><span class="description">STATUS_RESTRICTED</span><pre>STATUS_RESTRICTED</pre></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\TgBotApi\BotApiBase\Type\ChatMemberType"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Type.html">Type</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/TgBotApi.BotApiBase.Type.ChatMemberType.html">ChatMemberType</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Class ChatMemberType.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/bots/api#chatmember"></a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr>
+</table>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_canAddWebPagePreviews"> </a><div class="element clickable property public property_canAddWebPagePreviews" data-toggle="collapse" data-target=".property_canAddWebPagePreviews .collapse" title="public">
+<h2>Optional. Restricted only. True, if user may add web page previews to his messages,
+implies can_send_media_messages.</h2>
+<pre>$canAddWebPagePreviews : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canBeEdited"> </a><div class="element clickable property public property_canBeEdited" data-toggle="collapse" data-target=".property_canBeEdited .collapse" title="public">
+<h2>Optional. Administrators only. True, if the bot is allowed to edit administrator privileges of that user.</h2>
+<pre>$canBeEdited : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canChangeInfo"> </a><div class="element clickable property public property_canChangeInfo" data-toggle="collapse" data-target=".property_canChangeInfo .collapse" title="public">
+<h2>Optional. Administrators only. True, if the administrator can change the chat title, photo and other settings.</h2>
+<pre>$canChangeInfo : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canDeleteMessages"> </a><div class="element clickable property public property_canDeleteMessages" data-toggle="collapse" data-target=".property_canDeleteMessages .collapse" title="public">
+<h2>Optional. Administrators only. True, if the administrator can delete messages of other users.</h2>
+<pre>$canDeleteMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canEditMessages"> </a><div class="element clickable property public property_canEditMessages" data-toggle="collapse" data-target=".property_canEditMessages .collapse" title="public">
+<h2>Optional. Administrators only. True, if the administrator can edit messages of other users
+and can pin messages, channels only.</h2>
+<pre>$canEditMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canInviteUsers"> </a><div class="element clickable property public property_canInviteUsers" data-toggle="collapse" data-target=".property_canInviteUsers .collapse" title="public">
+<h2>Optional. Administrators only. True, if the administrator can invite new users to the chat.</h2>
+<pre>$canInviteUsers : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canPinMessages"> </a><div class="element clickable property public property_canPinMessages" data-toggle="collapse" data-target=".property_canPinMessages .collapse" title="public">
+<h2>Boolean    Optional. Administrators only. True, if the administrator can pin messages, supergroups only.</h2>
+<pre>$canPinMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canPostMessages"> </a><div class="element clickable property public property_canPostMessages" data-toggle="collapse" data-target=".property_canPostMessages .collapse" title="public">
+<h2>Optional. Administrators only. True, if the administrator can post in the channel, channels only.</h2>
+<pre>$canPostMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canPromoteMembers"> </a><div class="element clickable property public property_canPromoteMembers" data-toggle="collapse" data-target=".property_canPromoteMembers .collapse" title="public">
+<h2>Optional. Administrators only. True, if the administrator can add new administrators with a subset
+of his own privileges or demote administrators that he has promoted, directly or indirectly
+(promoted by administrators that were appointed by the user).</h2>
+<pre>$canPromoteMembers : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canRestrictMembers"> </a><div class="element clickable property public property_canRestrictMembers" data-toggle="collapse" data-target=".property_canRestrictMembers .collapse" title="public">
+<h2>Boolean    Optional. Administrators only. True, if the administrator can restrict, ban or unban chat members.</h2>
+<pre>$canRestrictMembers : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canSendMediaMessages"> </a><div class="element clickable property public property_canSendMediaMessages" data-toggle="collapse" data-target=".property_canSendMediaMessages .collapse" title="public">
+<h2>Optional. Restricted only. True, if the user can send audios, documents, photos, videos,
+video notes and voice notes, implies can_send_messages.</h2>
+<pre>$canSendMediaMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canSendMessages"> </a><div class="element clickable property public property_canSendMessages" data-toggle="collapse" data-target=".property_canSendMessages .collapse" title="public">
+<h2>Optional. Restricted only. True, if the user can send text messages, contacts, locations and venues.</h2>
+<pre>$canSendMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canSendOthersMessages"> </a><div class="element clickable property public property_canSendOthersMessages" data-toggle="collapse" data-target=".property_canSendOthersMessages .collapse" title="public">
+<h2>Optional. Restricted only. True, if the user can send animations, games, stickers and use inline bots,
+implies can_send_media_messages.</h2>
+<pre>$canSendOthersMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_status"> </a><div class="element clickable property public property_status" data-toggle="collapse" data-target=".property_status .collapse" title="public">
+<h2>The member's status in the chat. Can be “creator”, “administrator”, “member”, “restricted”, “left” or “kicked”.</h2>
+<pre>$status : \TgBotApi\BotApiBase\Type\string;</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_untilDate"> </a><div class="element clickable property public property_untilDate" data-toggle="collapse" data-target=".property_untilDate .collapse" title="public">
+<h2>Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, \DateTimeImmutable.</h2>
+<pre>$untilDate : \DateTimeImmutable | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_user"> </a><div class="element clickable property public property_user" data-toggle="collapse" data-target=".property_user .collapse" title="public">
+<h2>Information about the user.</h2>
+<pre>$user : \TgBotApi\BotApiBase\Type\UserType</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<h3>
+<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
+<a id="constant_STATUS_ADMINISTRATOR"> </a><div class="element clickable constant  constant_STATUS_ADMINISTRATOR" data-toggle="collapse" data-target=".constant_STATUS_ADMINISTRATOR .collapse" title="">
+<h2>STATUS_ADMINISTRATOR</h2>
+<pre>STATUS_ADMINISTRATOR = 'administrator' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_STATUS_CREATOR"> </a><div class="element clickable constant  constant_STATUS_CREATOR" data-toggle="collapse" data-target=".constant_STATUS_CREATOR .collapse" title="">
+<h2>STATUS_CREATOR</h2>
+<pre>STATUS_CREATOR = 'creator' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_STATUS_KICKED"> </a><div class="element clickable constant  constant_STATUS_KICKED" data-toggle="collapse" data-target=".constant_STATUS_KICKED .collapse" title="">
+<h2>STATUS_KICKED</h2>
+<pre>STATUS_KICKED = 'kicked' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_STATUS_LEFT"> </a><div class="element clickable constant  constant_STATUS_LEFT" data-toggle="collapse" data-target=".constant_STATUS_LEFT .collapse" title="">
+<h2>STATUS_LEFT</h2>
+<pre>STATUS_LEFT = 'left' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_STATUS_MEMBER"> </a><div class="element clickable constant  constant_STATUS_MEMBER" data-toggle="collapse" data-target=".constant_STATUS_MEMBER .collapse" title="">
+<h2>STATUS_MEMBER</h2>
+<pre>STATUS_MEMBER = 'member' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="constant_STATUS_RESTRICTED"> </a><div class="element clickable constant  constant_STATUS_RESTRICTED" data-toggle="collapse" data-target=".constant_STATUS_RESTRICTED .collapse" title="">
+<h2>STATUS_RESTRICTED</h2>
+<pre>STATUS_RESTRICTED = 'restricted' </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
+            generated on 2019-01-25T05:10:35+07:00.<br></footer></div>
+</div>
+</body>
+</html>

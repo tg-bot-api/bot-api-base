@@ -5,3 +5,5 @@ phpcs.xml
 phpunit.xml
 /.idea
 .php_cs.cache
+/docs/cache
+/docs/log

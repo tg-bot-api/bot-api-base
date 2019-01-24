@@ -1,0 +1,822 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Telegram Bot Api Base » TgBotApi\BotApiBase\Method</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Telegram Bot Api Base</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">615</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/TgBotApi.BotApiBase.Method.html" title="Method"><i class="icon-th"></i>Method</a><ul class="nav nav-list nav-namespaces">
+<li>
+<a href="../namespaces/TgBotApi.BotApiBase.Method.Interfaces.html" title="Interfaces"><i class="icon-th"></i>Interfaces</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li>
+<a href="../namespaces/TgBotApi.BotApiBase.Method.Traits.html" title="Traits"><i class="icon-th"></i>Traits</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Classes" class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#SendContactMethod" title="Class SendContactMethod.">SendContactMethod</a></li>
+<li><a href="#AnswerInlineQueryMethod" title="Class AnswerInlineQueryMethod.">AnswerInlineQueryMethod</a></li>
+<li><a href="#SetWebhookMethod" title="Class SetWebhookMethod.">SetWebhookMethod</a></li>
+<li><a href="#GetChatMethod" title="Class GetChatMethod.">GetChatMethod</a></li>
+<li><a href="#SendVenueMethod" title="Class SendVenueMethod.">SendVenueMethod</a></li>
+<li><a href="#SendVideoNoteMethod" title="Class SendVideoNoteMethod.">SendVideoNoteMethod</a></li>
+<li><a href="#SendChatActionMethod" title="Class SendChatActionMethod.">SendChatActionMethod</a></li>
+<li><a href="#UnpinChatMessageMethod" title="Class UnpinChatMessageMethod.">UnpinChatMessageMethod</a></li>
+<li><a href="#SendMessageMethod" title="Class SendMessageMethod.">SendMessageMethod</a></li>
+<li><a href="#PromoteChatMemberMethod" title="Class PromoteChatMemberMethod.">PromoteChatMemberMethod</a></li>
+<li><a href="#GetUpdatesMethod" title="Class GetUpdatesMethod.">GetUpdatesMethod</a></li>
+<li><a href="#GetGameHighScoresMethod" title="Class SetGameHighScoresMethod.">GetGameHighScoresMethod</a></li>
+<li><a href="#GetMeMethod" title="Class GetMeMethod.">GetMeMethod</a></li>
+<li><a href="#SendGameMethod" title="Class SendGameType.">SendGameMethod</a></li>
+<li><a href="#KickChatMemberMethod" title="Class KickChatMemberMethod.">KickChatMemberMethod</a></li>
+<li><a href="#SendLocationMethod" title="Class SendLocationMethod.">SendLocationMethod</a></li>
+<li><a href="#SendVideoMethod" title="Class SendVideoMethod.">SendVideoMethod</a></li>
+<li><a href="#AddStickerToSetMethod" title="Class AddStickerToSetMethod.">AddStickerToSetMethod</a></li>
+<li><a href="#SendDocumentMethod" title="Class SendDocumentMethod.">SendDocumentMethod</a></li>
+<li><a href="#GetFileMethod" title="Class GetFileMethod.">GetFileMethod</a></li>
+<li><a href="#SetChatDescriptionMethod" title="Class SetChatDescriptionMethod.">SetChatDescriptionMethod</a></li>
+<li><a href="#GetChatAdministratorsMethod" title="Class GetChatAdministratorsMethod.">GetChatAdministratorsMethod</a></li>
+<li><a href="#EditMessageLiveLocationMethod" title="Class EditMessageLiveLocationMethod.">EditMessageLiveLocationMethod</a></li>
+<li><a href="#SetChatTitleMethod" title="Class SetChatTitleMethod.">SetChatTitleMethod</a></li>
+<li><a href="#SetPassportDataErrorsMethod" title="Class SetPassportDataErrorsMethod.">SetPassportDataErrorsMethod</a></li>
+<li><a href="#SendAudioMethod" title="Class SendAudioMethod.">SendAudioMethod</a></li>
+<li><a href="#SetChatStickerSetMethod" title="Class SetChatStickerSetMethod.">SetChatStickerSetMethod</a></li>
+<li><a href="#GetChatMembersCountMethod" title="Class GetChatMembersCountMethod.">GetChatMembersCountMethod</a></li>
+<li><a href="#SetStickerPositionInSetMethod" title="Class SetStickerPositionInSetMethod.">SetStickerPositionInSetMethod</a></li>
+<li><a href="#AnswerPreCheckoutQueryMethod" title="Class AnswerPreCheckoutQueryMethod.">AnswerPreCheckoutQueryMethod</a></li>
+<li><a href="#DeleteChatPhotoMethod" title="Class DeleteChatPhotoMethod.">DeleteChatPhotoMethod</a></li>
+<li><a href="#DeleteChatStickerSetMethod" title="Class DeleteChatStickerSetMethod.">DeleteChatStickerSetMethod</a></li>
+<li><a href="#SendInvoiceMethod" title="Class SendInvoiceMethod.">SendInvoiceMethod</a></li>
+<li><a href="#SendVoiceMethod" title="Class SendVoiceMethod.">SendVoiceMethod</a></li>
+<li><a href="#SetChatPhotoMethod" title="Class SetChatPhotoMethod.">SetChatPhotoMethod</a></li>
+<li><a href="#ExportChatInviteLinkMethod" title="Class ExportChatInviteLinkMethod.">ExportChatInviteLinkMethod</a></li>
+<li><a href="#GetUserProfilePhotosMethod" title="Class GetUserProfilePhotosMethod.">GetUserProfilePhotosMethod</a></li>
+<li><a href="#CreateNewStickerSetMethod" title="Class CreateNewStickerSetMethod.">CreateNewStickerSetMethod</a></li>
+<li><a href="#EditMessageTextMethod" title="Class EditMessageTextMethod.">EditMessageTextMethod</a></li>
+<li><a href="#DeleteWebhookMethod" title="Class DeleteWebhookMethod.">DeleteWebhookMethod</a></li>
+<li><a href="#EditMessageMediaMethod" title="Class EditMessageMediaMethod.">EditMessageMediaMethod</a></li>
+<li><a href="#GetChatMemberMethod" title="Class GetChatMemberMethod.">GetChatMemberMethod</a></li>
+<li><a href="#DeleteStickerFromSetMethod" title="Class DeleteStickerFromSetMethod.">DeleteStickerFromSetMethod</a></li>
+<li><a href="#StopMessageLiveLocationMethod" title="Class StopMessageLiveLocationType.">StopMessageLiveLocationMethod</a></li>
+<li><a href="#UploadStickerFileMethod" title="Class UploadStickerFileMethod.">UploadStickerFileMethod</a></li>
+<li><a href="#SendMediaGroupMethod" title="Class SendMediaGroupMethod.">SendMediaGroupMethod</a></li>
+<li><a href="#AnswerShippingQueryMethod" title="Class AnswerShippingQueryMethod.">AnswerShippingQueryMethod</a></li>
+<li><a href="#SetGameScoreMethod" title="Class SetGameScoreMetod.">SetGameScoreMethod</a></li>
+<li><a href="#AnswerCallbackQueryMethod" title="Class AnswerCallbackQueryMethod.">AnswerCallbackQueryMethod</a></li>
+<li><a href="#RestrictChatMemberMethod" title="Class RestrictChatMemberMethod.">RestrictChatMemberMethod</a></li>
+<li><a href="#UnbanChatMemberMethod" title="Class UnbanChatMemberMethod.">UnbanChatMemberMethod</a></li>
+<li><a href="#GetWebhookInfoMethod" title="Class GetWebhookInfoMethod.">GetWebhookInfoMethod</a></li>
+<li><a href="#EditMessageCaptionMethod" title="Class EditMessageCaptionMethod.">EditMessageCaptionMethod</a></li>
+<li><a href="#SendAnimationMethod" title="Class SendAnimationMethod.">SendAnimationMethod</a></li>
+<li><a href="#LeaveChatMethod" title="Class LeaveChatMethod.">LeaveChatMethod</a></li>
+<li><a href="#SendStickerMethod" title="Class SendStickerMethod.">SendStickerMethod</a></li>
+<li><a href="#SendPhotoMethod" title="Class SendPhotoMethod.">SendPhotoMethod</a></li>
+<li><a href="#GetStickerSetMethod" title="Class GetStickerSetMethod.">GetStickerSetMethod</a></li>
+<li><a href="#PinChatMessageMethod" title="Class PinChatMessageMethod.">PinChatMessageMethod</a></li>
+<li><a href="#ForwardMessageMethod" title="Class ForwardMessageMethod.">ForwardMessageMethod</a></li>
+<li><a href="#DeleteMessageMethod" title="Class DeleteMessageMethod.">DeleteMessageMethod</a></li>
+<li><a href="#EditMessageReplyMarkupMethod" title="Class EditMessageReplyMarkupMethod.">EditMessageReplyMarkupMethod</a></li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.html">Method</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i title="Class" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="AddStickerToSetMethod" class="element ajax clickable class">
+<h1>AddStickerToSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.AddStickerToSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class AddStickerToSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.AddStickerToSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="AnswerCallbackQueryMethod" class="element ajax clickable class">
+<h1>AnswerCallbackQueryMethod<a href="../classes/TgBotApi.BotApiBase.Method.AnswerCallbackQueryMethod.html">¶</a>
+</h1>
+<p class="short_description">Class AnswerCallbackQueryMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.AnswerCallbackQueryMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="AnswerInlineQueryMethod" class="element ajax clickable class">
+<h1>AnswerInlineQueryMethod<a href="../classes/TgBotApi.BotApiBase.Method.AnswerInlineQueryMethod.html">¶</a>
+</h1>
+<p class="short_description">Class AnswerInlineQueryMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.AnswerInlineQueryMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="AnswerPreCheckoutQueryMethod" class="element ajax clickable class">
+<h1>AnswerPreCheckoutQueryMethod<a href="../classes/TgBotApi.BotApiBase.Method.AnswerPreCheckoutQueryMethod.html">¶</a>
+</h1>
+<p class="short_description">Class AnswerPreCheckoutQueryMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.AnswerPreCheckoutQueryMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="AnswerShippingQueryMethod" class="element ajax clickable class">
+<h1>AnswerShippingQueryMethod<a href="../classes/TgBotApi.BotApiBase.Method.AnswerShippingQueryMethod.html">¶</a>
+</h1>
+<p class="short_description">Class AnswerShippingQueryMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.AnswerShippingQueryMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="CreateNewStickerSetMethod" class="element ajax clickable class">
+<h1>CreateNewStickerSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.CreateNewStickerSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class CreateNewStickerSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.CreateNewStickerSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteChatPhotoMethod" class="element ajax clickable class">
+<h1>DeleteChatPhotoMethod<a href="../classes/TgBotApi.BotApiBase.Method.DeleteChatPhotoMethod.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteChatPhotoMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.DeleteChatPhotoMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteChatStickerSetMethod" class="element ajax clickable class">
+<h1>DeleteChatStickerSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.DeleteChatStickerSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteChatStickerSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.DeleteChatStickerSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteMessageMethod" class="element ajax clickable class">
+<h1>DeleteMessageMethod<a href="../classes/TgBotApi.BotApiBase.Method.DeleteMessageMethod.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteMessageMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.DeleteMessageMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteStickerFromSetMethod" class="element ajax clickable class">
+<h1>DeleteStickerFromSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.DeleteStickerFromSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteStickerFromSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.DeleteStickerFromSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteWebhookMethod" class="element ajax clickable class">
+<h1>DeleteWebhookMethod<a href="../classes/TgBotApi.BotApiBase.Method.DeleteWebhookMethod.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteWebhookMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.DeleteWebhookMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageCaptionMethod" class="element ajax clickable class">
+<h1>EditMessageCaptionMethod<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageCaptionMethod.html">¶</a>
+</h1>
+<p class="short_description">Class EditMessageCaptionMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageCaptionMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageLiveLocationMethod" class="element ajax clickable class">
+<h1>EditMessageLiveLocationMethod<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageLiveLocationMethod.html">¶</a>
+</h1>
+<p class="short_description">Class EditMessageLiveLocationMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageLiveLocationMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageMediaMethod" class="element ajax clickable class">
+<h1>EditMessageMediaMethod<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageMediaMethod.html">¶</a>
+</h1>
+<p class="short_description">Class EditMessageMediaMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageMediaMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageReplyMarkupMethod" class="element ajax clickable class">
+<h1>EditMessageReplyMarkupMethod<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageReplyMarkupMethod.html">¶</a>
+</h1>
+<p class="short_description">Class EditMessageReplyMarkupMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageReplyMarkupMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageTextMethod" class="element ajax clickable class">
+<h1>EditMessageTextMethod<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageTextMethod.html">¶</a>
+</h1>
+<p class="short_description">Class EditMessageTextMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.EditMessageTextMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ExportChatInviteLinkMethod" class="element ajax clickable class">
+<h1>ExportChatInviteLinkMethod<a href="../classes/TgBotApi.BotApiBase.Method.ExportChatInviteLinkMethod.html">¶</a>
+</h1>
+<p class="short_description">Class ExportChatInviteLinkMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.ExportChatInviteLinkMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ForwardMessageMethod" class="element ajax clickable class">
+<h1>ForwardMessageMethod<a href="../classes/TgBotApi.BotApiBase.Method.ForwardMessageMethod.html">¶</a>
+</h1>
+<p class="short_description">Class ForwardMessageMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.ForwardMessageMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetChatAdministratorsMethod" class="element ajax clickable class">
+<h1>GetChatAdministratorsMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetChatAdministratorsMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetChatAdministratorsMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetChatAdministratorsMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetChatMemberMethod" class="element ajax clickable class">
+<h1>GetChatMemberMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetChatMemberMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetChatMemberMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetChatMemberMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetChatMembersCountMethod" class="element ajax clickable class">
+<h1>GetChatMembersCountMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetChatMembersCountMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetChatMembersCountMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetChatMembersCountMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetChatMethod" class="element ajax clickable class">
+<h1>GetChatMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetChatMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetChatMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetChatMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetFileMethod" class="element ajax clickable class">
+<h1>GetFileMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetFileMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetFileMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetFileMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetGameHighScoresMethod" class="element ajax clickable class">
+<h1>GetGameHighScoresMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetGameHighScoresMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetGameHighScoresMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetGameHighScoresMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetMeMethod" class="element ajax clickable class">
+<h1>GetMeMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetMeMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetMeMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetMeMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetStickerSetMethod" class="element ajax clickable class">
+<h1>GetStickerSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetStickerSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetStickerSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetStickerSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetUpdatesMethod" class="element ajax clickable class">
+<h1>GetUpdatesMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetUpdatesMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetUpdatesMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetUpdatesMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetUserProfilePhotosMethod" class="element ajax clickable class">
+<h1>GetUserProfilePhotosMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetUserProfilePhotosMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetUserProfilePhotosMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetUserProfilePhotosMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="GetWebhookInfoMethod" class="element ajax clickable class">
+<h1>GetWebhookInfoMethod<a href="../classes/TgBotApi.BotApiBase.Method.GetWebhookInfoMethod.html">¶</a>
+</h1>
+<p class="short_description">Class GetWebhookInfoMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.GetWebhookInfoMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="KickChatMemberMethod" class="element ajax clickable class">
+<h1>KickChatMemberMethod<a href="../classes/TgBotApi.BotApiBase.Method.KickChatMemberMethod.html">¶</a>
+</h1>
+<p class="short_description">Class KickChatMemberMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.KickChatMemberMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="LeaveChatMethod" class="element ajax clickable class">
+<h1>LeaveChatMethod<a href="../classes/TgBotApi.BotApiBase.Method.LeaveChatMethod.html">¶</a>
+</h1>
+<p class="short_description">Class LeaveChatMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.LeaveChatMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PinChatMessageMethod" class="element ajax clickable class">
+<h1>PinChatMessageMethod<a href="../classes/TgBotApi.BotApiBase.Method.PinChatMessageMethod.html">¶</a>
+</h1>
+<p class="short_description">Class PinChatMessageMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.PinChatMessageMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PromoteChatMemberMethod" class="element ajax clickable class">
+<h1>PromoteChatMemberMethod<a href="../classes/TgBotApi.BotApiBase.Method.PromoteChatMemberMethod.html">¶</a>
+</h1>
+<p class="short_description">Class PromoteChatMemberMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.PromoteChatMemberMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="RestrictChatMemberMethod" class="element ajax clickable class">
+<h1>RestrictChatMemberMethod<a href="../classes/TgBotApi.BotApiBase.Method.RestrictChatMemberMethod.html">¶</a>
+</h1>
+<p class="short_description">Class RestrictChatMemberMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.RestrictChatMemberMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendAnimationMethod" class="element ajax clickable class">
+<h1>SendAnimationMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendAnimationMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendAnimationMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendAnimationMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendAudioMethod" class="element ajax clickable class">
+<h1>SendAudioMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendAudioMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendAudioMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendAudioMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendChatActionMethod" class="element ajax clickable class">
+<h1>SendChatActionMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendChatActionMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendChatActionMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendChatActionMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendContactMethod" class="element ajax clickable class">
+<h1>SendContactMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendContactMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendContactMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendContactMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendDocumentMethod" class="element ajax clickable class">
+<h1>SendDocumentMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendDocumentMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendDocumentMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendDocumentMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendGameMethod" class="element ajax clickable class">
+<h1>SendGameMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendGameMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendGameType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendGameMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendInvoiceMethod" class="element ajax clickable class">
+<h1>SendInvoiceMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendInvoiceMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendInvoiceMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendInvoiceMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendLocationMethod" class="element ajax clickable class">
+<h1>SendLocationMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendLocationMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendLocationMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendLocationMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendMediaGroupMethod" class="element ajax clickable class">
+<h1>SendMediaGroupMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendMediaGroupMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendMediaGroupMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendMediaGroupMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendMessageMethod" class="element ajax clickable class">
+<h1>SendMessageMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendMessageMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendMessageMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendMessageMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendPhotoMethod" class="element ajax clickable class">
+<h1>SendPhotoMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendPhotoMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendPhotoMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendPhotoMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendStickerMethod" class="element ajax clickable class">
+<h1>SendStickerMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendStickerMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendStickerMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendStickerMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendVenueMethod" class="element ajax clickable class">
+<h1>SendVenueMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendVenueMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendVenueMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendVenueMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendVideoMethod" class="element ajax clickable class">
+<h1>SendVideoMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendVideoMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendVideoMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendVideoMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendVideoNoteMethod" class="element ajax clickable class">
+<h1>SendVideoNoteMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendVideoNoteMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendVideoNoteMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendVideoNoteMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendVoiceMethod" class="element ajax clickable class">
+<h1>SendVoiceMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendVoiceMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendVoiceMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendVoiceMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetChatDescriptionMethod" class="element ajax clickable class">
+<h1>SetChatDescriptionMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetChatDescriptionMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetChatDescriptionMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetChatDescriptionMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetChatPhotoMethod" class="element ajax clickable class">
+<h1>SetChatPhotoMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetChatPhotoMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetChatPhotoMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetChatPhotoMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetChatStickerSetMethod" class="element ajax clickable class">
+<h1>SetChatStickerSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetChatStickerSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetChatStickerSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetChatStickerSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetChatTitleMethod" class="element ajax clickable class">
+<h1>SetChatTitleMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetChatTitleMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetChatTitleMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetChatTitleMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetGameScoreMethod" class="element ajax clickable class">
+<h1>SetGameScoreMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetGameScoreMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetGameScoreMetod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetGameScoreMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetPassportDataErrorsMethod" class="element ajax clickable class">
+<h1>SetPassportDataErrorsMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetPassportDataErrorsMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetPassportDataErrorsMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetPassportDataErrorsMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetStickerPositionInSetMethod" class="element ajax clickable class">
+<h1>SetStickerPositionInSetMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetStickerPositionInSetMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetStickerPositionInSetMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetStickerPositionInSetMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetWebhookMethod" class="element ajax clickable class">
+<h1>SetWebhookMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetWebhookMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SetWebhookMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetWebhookMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="StopMessageLiveLocationMethod" class="element ajax clickable class">
+<h1>StopMessageLiveLocationMethod<a href="../classes/TgBotApi.BotApiBase.Method.StopMessageLiveLocationMethod.html">¶</a>
+</h1>
+<p class="short_description">Class StopMessageLiveLocationType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.StopMessageLiveLocationMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UnbanChatMemberMethod" class="element ajax clickable class">
+<h1>UnbanChatMemberMethod<a href="../classes/TgBotApi.BotApiBase.Method.UnbanChatMemberMethod.html">¶</a>
+</h1>
+<p class="short_description">Class UnbanChatMemberMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.UnbanChatMemberMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UnpinChatMessageMethod" class="element ajax clickable class">
+<h1>UnpinChatMessageMethod<a href="../classes/TgBotApi.BotApiBase.Method.UnpinChatMessageMethod.html">¶</a>
+</h1>
+<p class="short_description">Class UnpinChatMessageMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.UnpinChatMessageMethod.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UploadStickerFileMethod" class="element ajax clickable class">
+<h1>UploadStickerFileMethod<a href="../classes/TgBotApi.BotApiBase.Method.UploadStickerFileMethod.html">¶</a>
+</h1>
+<p class="short_description">Class UploadStickerFileMethod.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.UploadStickerFileMethod.html" class="more">« More »</a>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.html">Method</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.Interfaces.html">Interfaces</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i title="Class" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="AddMethodAliasInterface" class="element ajax clickable interface">
+<h1>AddMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AddMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface AddMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AddMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="AnswerMethodAliasInterface" class="element ajax clickable interface">
+<h1>AnswerMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AnswerMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface AnswerMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AnswerMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="CreateMethodAliasInterface" class="element ajax clickable interface">
+<h1>CreateMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.CreateMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface CreateMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.CreateMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteMethodAliasInterface" class="element ajax clickable interface">
+<h1>DeleteMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.DeleteMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.DeleteMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMethodAliasInterface" class="element ajax clickable interface">
+<h1>EditMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.EditMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface EditMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.EditMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ForwardMethodAliasInterface" class="element ajax clickable interface">
+<h1>ForwardMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.ForwardMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Class ForwardMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.ForwardMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="KickMethodAliasInterface" class="element ajax clickable interface">
+<h1>KickMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.KickMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface KickMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.KickMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="LeaveMethodAliasInterface" class="element ajax clickable interface">
+<h1>LeaveMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.LeaveMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface LeaveMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.LeaveMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="MethodInterface" class="element ajax clickable interface">
+<h1>MethodInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.MethodInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.MethodInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PinMethodAliasInterface" class="element ajax clickable interface">
+<h1>PinMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PinMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface PinMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PinMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PromoteMethodAliasInterface" class="element ajax clickable interface">
+<h1>PromoteMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PromoteMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Class PromoteMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PromoteMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="RestrictMethodAliasInterface" class="element ajax clickable interface">
+<h1>RestrictMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.RestrictMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface RestrictMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.RestrictMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendMethodAliasInterface" class="element ajax clickable interface">
+<h1>SendMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SendMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface SendMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SendMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetMethodAliasInterface" class="element ajax clickable interface">
+<h1>SetMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SetMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface SetMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SetMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="StopMethodAliasInterface" class="element ajax clickable interface">
+<h1>StopMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.StopMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface StopMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.StopMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UnbanMethodAliasInterface" class="element ajax clickable interface">
+<h1>UnbanMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnbanMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface UnbanMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnbanMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UnpinMethodAliasInterface" class="element ajax clickable interface">
+<h1>UnpinMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnpinMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface UnpinMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnpinMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UploadMethodAliasInterface" class="element ajax clickable interface">
+<h1>UploadMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UploadMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface UploadMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UploadMethodAliasInterface.html" class="more">« More »</a>
+</div>
+</div>
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.html">Method</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.Traits.html">Traits</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i title="Class" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="CaptionVariablesTrait" class="element ajax clickable trait">
+<h1>CaptionVariablesTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.CaptionVariablesTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait CaptionVariablesTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.CaptionVariablesTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ChatIdVariableTrait" class="element ajax clickable trait">
+<h1>ChatIdVariableTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.ChatIdVariableTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait ChatIdVariableTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.ChatIdVariableTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageVariablesTrait" class="element ajax clickable trait">
+<h1>EditMessageVariablesTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.EditMessageVariablesTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait EditVariablesTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.EditMessageVariablesTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EmojisVariableTrait" class="element ajax clickable trait">
+<h1>EmojisVariableTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.EmojisVariableTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait EmojisVariableTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.EmojisVariableTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="FillFromArrayTrait" class="element ajax clickable trait">
+<h1>FillFromArrayTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.FillFromArrayTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait FillFromArrayTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.FillFromArrayTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="MessageIdVariableTrait" class="element ajax clickable trait">
+<h1>MessageIdVariableTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.MessageIdVariableTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait MessageIdVariableTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.MessageIdVariableTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ReplyMarkupVariableTrait" class="element ajax clickable trait">
+<h1>ReplyMarkupVariableTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.ReplyMarkupVariableTrait.html">¶</a>
+</h1>
+<p class="short_description">Class ReplyMarkupVariableTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.ReplyMarkupVariableTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendToChatVariablesTrait" class="element ajax clickable trait">
+<h1>SendToChatVariablesTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.SendToChatVariablesTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait SendMethodVariablesTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.SendToChatVariablesTrait.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UserIdVariableTrait" class="element ajax clickable trait">
+<h1>UserIdVariableTrait<a href="../classes/TgBotApi.BotApiBase.Method.Traits.UserIdVariableTrait.html">¶</a>
+</h1>
+<p class="short_description">Trait UserIdVariableTrait.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Traits.UserIdVariableTrait.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
+            generated on 2019-01-25T05:10:34+07:00.<br></footer></div>
+</div>
+</body>
+</html>

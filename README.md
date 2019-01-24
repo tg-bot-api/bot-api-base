@@ -1,4 +1,4 @@
-# telegram-bot-api
+# Telegram Bot Api Base
 
 [![Telegram bot api][ico-bot-api]][link-bot-api]
 [![Latest Version on Packagist][ico-version]][link-packagist]

@@ -1,0 +1,661 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Telegram Bot Api Base » \TgBotApi\BotApiBase\Type\MessageType</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Telegram Bot Api Base</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">615</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div xmlns:php="http://php.net/xsl" class="btn-toolbar">
+<div class="btn-group visibility" data-toggle="buttons-checkbox">
+<button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button>
+</div>
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+</div>
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul>
+<li class="property public "><a href="#property_animation" title="$animation() :: Optional. Message is an animation, information about the animation."><span class="description"></span><pre>$animation</pre></a></li>
+<li class="property public "><a href="#property_audio" title="$audio() :: Optional. Message is an audio file, information about the file."><span class="description"></span><pre>$audio</pre></a></li>
+<li class="property public "><a href="#property_authorSignature" title="$authorSignature() :: Optional. Signature of the post author for messages in channels."><span class="description"></span><pre>$authorSignature</pre></a></li>
+<li class="property public "><a href="#property_caption" title="$caption() :: Optional. Caption for the audio, document, photo, video or voice, 0-1024 characters."><span class="description"></span><pre>$caption</pre></a></li>
+<li class="property public "><a href="#property_captionEntities" title="$captionEntities() :: Optional. For messages with a caption, special entities like usernames, URLs, bot commands,
+etc. that appear in the caption."><span class="description"></span><pre>$captionEntities</pre></a></li>
+<li class="property public "><a href="#property_channelChatCreated" title="$channelChatCreated() :: Optional. Service message: the channel has been created. This field can‘t be received in a message coming
+through updates, because bot can’t be a member of a channel when it is created. It can only be found in
+reply_to_message if someone replies to a very first message in a channel."><span class="description"></span><pre>$channelChatCreated</pre></a></li>
+<li class="property public "><a href="#property_chat" title="$chat() :: Conversation the message belongs to."><span class="description"></span><pre>$chat</pre></a></li>
+<li class="property public "><a href="#property_connectedWebsite" title="$connectedWebsite() :: "><span class="description"></span><pre>$connectedWebsite</pre></a></li>
+<li class="property public "><a href="#property_contact" title="$contact() :: Optional. Message is a shared contact, information about the contact."><span class="description"></span><pre>$contact</pre></a></li>
+<li class="property public "><a href="#property_date" title="$date() :: Date the message was sent in \DateTimeInterface."><span class="description"></span><pre>$date</pre></a></li>
+<li class="property public "><a href="#property_deleteChatPhoto" title="$deleteChatPhoto() :: Optional. Service message: the chat photo was deleted."><span class="description"></span><pre>$deleteChatPhoto</pre></a></li>
+<li class="property public "><a href="#property_document" title="$document() :: Optional. Message is a general file, information about the file."><span class="description"></span><pre>$document</pre></a></li>
+<li class="property public "><a href="#property_editDate" title="$editDate() :: Optional. Date the message was last edited in \DateTimeImmutable."><span class="description"></span><pre>$editDate</pre></a></li>
+<li class="property public "><a href="#property_entities" title="$entities() :: Optional. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text."><span class="description"></span><pre>$entities</pre></a></li>
+<li class="property public "><a href="#property_forwardDate" title="$forwardDate() :: Optional. For forwarded messages, date the original message was sent in \DateTimeImmutable."><span class="description"></span><pre>$forwardDate</pre></a></li>
+<li class="property public "><a href="#property_forwardFrom" title="$forwardFrom() :: Optional. For forwarded messages, sender of the original message."><span class="description"></span><pre>$forwardFrom</pre></a></li>
+<li class="property public "><a href="#property_forwardFromChat" title="$forwardFromChat() :: Optional. For messages forwarded from channels, information about the original channel."><span class="description"></span><pre>$forwardFromChat</pre></a></li>
+<li class="property public "><a href="#property_forwardFromMessageId" title="$forwardFromMessageId() :: Optional. For messages forwarded from channels, identifier of the original message in the channel."><span class="description"></span><pre>$forwardFromMessageId</pre></a></li>
+<li class="property public "><a href="#property_from" title="$from() :: Optional. Sender, empty for messages sent to channels."><span class="description"></span><pre>$from</pre></a></li>
+<li class="property public "><a href="#property_game" title="$game() :: "><span class="description"></span><pre>$game</pre></a></li>
+<li class="property public "><a href="#property_groupChanelCreated" title="$groupChanelCreated() :: Optional. Service message: the group has been created."><span class="description"></span><pre>$groupChanelCreated</pre></a></li>
+<li class="property public "><a href="#property_invoice" title="$invoice() :: "><span class="description"></span><pre>$invoice</pre></a></li>
+<li class="property public "><a href="#property_leftChatMember" title="$leftChatMember() :: Optional. A member was removed from the group, information about them (this member may be the bot itself)."><span class="description"></span><pre>$leftChatMember</pre></a></li>
+<li class="property public "><a href="#property_leftChatParticipant" title="$leftChatParticipant() :: Warning: This variable is experimental."><span class="description"></span><pre>$leftChatParticipant</pre></a></li>
+<li class="property public "><a href="#property_location" title="$location() :: Optional. Message is a shared location, information about the location."><span class="description"></span><pre>$location</pre></a></li>
+<li class="property public "><a href="#property_mediaGroupId" title="$mediaGroupId() :: Optional. The unique identifier of a media message group this message belongs to."><span class="description"></span><pre>$mediaGroupId</pre></a></li>
+<li class="property public "><a href="#property_messageId" title="$messageId() :: Unique message identifier inside this chat."><span class="description"></span><pre>$messageId</pre></a></li>
+<li class="property public "><a href="#property_migrateFromChat" title="$migrateFromChat() :: Optional. The supergroup has been migrated from a group with the specified identifier."><span class="description"></span><pre>$migrateFromChat</pre></a></li>
+<li class="property public "><a href="#property_migrateToChat" title="$migrateToChat() :: Optional. The group has been migrated to a supergroup with the specified identifier. This number may be
+greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it."><span class="description"></span><pre>$migrateToChat</pre></a></li>
+<li class="property public "><a href="#property_newChatMembers" title="$newChatMembers() :: Optional. New members that were added to the group or supergroup and information about them
+(the bot itself may be one of these members)."><span class="description"></span><pre>$newChatMembers</pre></a></li>
+<li class="property public "><a href="#property_newChatPhoto" title="$newChatPhoto() :: Optional. A chat photo was change to this value."><span class="description"></span><pre>$newChatPhoto</pre></a></li>
+<li class="property public "><a href="#property_newChatTitle" title="$newChatTitle() :: Optional. A chat title was changed to this value."><span class="description"></span><pre>$newChatTitle</pre></a></li>
+<li class="property public "><a href="#property_passportData" title="$passportData() :: Optional. Telegram Passport data."><span class="description"></span><pre>$passportData</pre></a></li>
+<li class="property public "><a href="#property_photo" title="$photo() :: Optional. Message is a photo, available sizes of the photo."><span class="description"></span><pre>$photo</pre></a></li>
+<li class="property public "><a href="#property_pinnedMessage" title="$pinnedMessage() :: Optional. Specified message was pinned."><span class="description"></span><pre>$pinnedMessage</pre></a></li>
+<li class="property public "><a href="#property_replyToMessage" title="$replyToMessage() :: Optional. For replies, the original message. Note that the Message object in this field will not contain
+further reply_to_message fields even if it itself is a reply."><span class="description"></span><pre>$replyToMessage</pre></a></li>
+<li class="property public "><a href="#property_signature" title="$signature() :: Optional. For messages forwarded from channels, signature of the post author if present."><span class="description"></span><pre>$signature</pre></a></li>
+<li class="property public "><a href="#property_sticker" title="$sticker() :: Optional. Message is a sticker, information about the sticker."><span class="description"></span><pre>$sticker</pre></a></li>
+<li class="property public "><a href="#property_successfulPayment" title="$successfulPayment() :: "><span class="description"></span><pre>$successfulPayment</pre></a></li>
+<li class="property public "><a href="#property_supergroupChatCreated" title="$supergroupChatCreated() :: Optional. Service message: the supergroup has been created. This field can‘t be received in a message coming
+through updates, because bot can’t be a member of a supergroup when it is created. It can only be found in
+reply_to_message if someone replies to a very first message in a directly created supergroup."><span class="description"></span><pre>$supergroupChatCreated</pre></a></li>
+<li class="property public "><a href="#property_text" title="$text() :: Optional. For text messages, the actual UTF-8 text of the message, 0-4096 characters."><span class="description"></span><pre>$text</pre></a></li>
+<li class="property public "><a href="#property_venue" title="$venue() :: Optional. Message is a venue, information about the venue."><span class="description"></span><pre>$venue</pre></a></li>
+<li class="property public "><a href="#property_video" title="$video() :: Optional. Message is a video, information about the video."><span class="description"></span><pre>$video</pre></a></li>
+<li class="property public "><a href="#property_videoNote" title="$videoNote() :: "><span class="description"></span><pre>$videoNote</pre></a></li>
+<li class="property public "><a href="#property_voice" title="$voice() :: Optional. Message is a voice message, information about the file."><span class="description"></span><pre>$voice</pre></a></li>
+</ul>
+</li></ul>
+</div>
+<div class="span8">
+<a xmlns:php="http://php.net/xsl" id="\TgBotApi\BotApiBase\Type\MessageType"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<li>
+<a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Type.html">Type</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/TgBotApi.BotApiBase.Type.MessageType.html">MessageType</a>
+</li>
+</ul>
+<div xmlns:php="http://php.net/xsl" class="element class">
+<p class="short_description">Class MessageType.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/bots/api#message"></a></td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/Default.html">Default</a></td>
+</tr>
+</table>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_animation"> </a><div class="element clickable property public property_animation" data-toggle="collapse" data-target=".property_animation .collapse" title="public">
+<h2>Optional. Message is an animation, information about the animation.</h2>
+<pre>$animation : \TgBotApi\BotApiBase\Type\AnimationType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>For backward compatibility, when this field is set, the document field will also be set.</p></div></div></div>
+</div>
+<a id="property_audio"> </a><div class="element clickable property public property_audio" data-toggle="collapse" data-target=".property_audio .collapse" title="public">
+<h2>Optional. Message is an audio file, information about the file.</h2>
+<pre>$audio : \TgBotApi\BotApiBase\Type\AudioType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_authorSignature"> </a><div class="element clickable property public property_authorSignature" data-toggle="collapse" data-target=".property_authorSignature .collapse" title="public">
+<h2>Optional. Signature of the post author for messages in channels.</h2>
+<pre>$authorSignature : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_caption"> </a><div class="element clickable property public property_caption" data-toggle="collapse" data-target=".property_caption .collapse" title="public">
+<h2>Optional. Caption for the audio, document, photo, video or voice, 0-1024 characters.</h2>
+<pre>$caption : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_captionEntities"> </a><div class="element clickable property public property_captionEntities" data-toggle="collapse" data-target=".property_captionEntities .collapse" title="public">
+<h2>Optional. For messages with a caption, special entities like usernames, URLs, bot commands,
+etc. that appear in the caption.</h2>
+<pre>$captionEntities : array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageEntityType&gt; | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_channelChatCreated"> </a><div class="element clickable property public property_channelChatCreated" data-toggle="collapse" data-target=".property_channelChatCreated .collapse" title="public">
+<h2>Optional. Service message: the channel has been created. This field can‘t be received in a message coming
+through updates, because bot can’t be a member of a channel when it is created. It can only be found in
+reply_to_message if someone replies to a very first message in a channel.</h2>
+<pre>$channelChatCreated : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_chat"> </a><div class="element clickable property public property_chat" data-toggle="collapse" data-target=".property_chat .collapse" title="public">
+<h2>Conversation the message belongs to.</h2>
+<pre>$chat : \TgBotApi\BotApiBase\Type\ChatType</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_connectedWebsite"> </a><div class="element clickable property public property_connectedWebsite" data-toggle="collapse" data-target=".property_connectedWebsite .collapse" title="public">
+<h2>$connectedWebsite</h2>
+<pre>$connectedWebsite : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/widgets/login">Optional. The domain name of the website on which the user has logged in.</a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_contact"> </a><div class="element clickable property public property_contact" data-toggle="collapse" data-target=".property_contact .collapse" title="public">
+<h2>Optional. Message is a shared contact, information about the contact.</h2>
+<pre>$contact : \TgBotApi\BotApiBase\Type\ContactType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_date"> </a><div class="element clickable property public property_date" data-toggle="collapse" data-target=".property_date .collapse" title="public">
+<h2>Date the message was sent in \DateTimeInterface.</h2>
+<pre>$date : \DateTimeImmutable</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_deleteChatPhoto"> </a><div class="element clickable property public property_deleteChatPhoto" data-toggle="collapse" data-target=".property_deleteChatPhoto .collapse" title="public">
+<h2>Optional. Service message: the chat photo was deleted.</h2>
+<pre>$deleteChatPhoto : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_document"> </a><div class="element clickable property public property_document" data-toggle="collapse" data-target=".property_document .collapse" title="public">
+<h2>Optional. Message is a general file, information about the file.</h2>
+<pre>$document : \TgBotApi\BotApiBase\Type\DocumentType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_editDate"> </a><div class="element clickable property public property_editDate" data-toggle="collapse" data-target=".property_editDate .collapse" title="public">
+<h2>Optional. Date the message was last edited in \DateTimeImmutable.</h2>
+<pre>$editDate : \DateTimeImmutable | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_entities"> </a><div class="element clickable property public property_entities" data-toggle="collapse" data-target=".property_entities .collapse" title="public">
+<h2>Optional. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text.</h2>
+<pre>$entities : array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageEntityType&gt; | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_forwardDate"> </a><div class="element clickable property public property_forwardDate" data-toggle="collapse" data-target=".property_forwardDate .collapse" title="public">
+<h2>Optional. For forwarded messages, date the original message was sent in \DateTimeImmutable.</h2>
+<pre>$forwardDate : \DateTimeImmutable | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_forwardFrom"> </a><div class="element clickable property public property_forwardFrom" data-toggle="collapse" data-target=".property_forwardFrom .collapse" title="public">
+<h2>Optional. For forwarded messages, sender of the original message.</h2>
+<pre>$forwardFrom : \TgBotApi\BotApiBase\Type\UserType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_forwardFromChat"> </a><div class="element clickable property public property_forwardFromChat" data-toggle="collapse" data-target=".property_forwardFromChat .collapse" title="public">
+<h2>Optional. For messages forwarded from channels, information about the original channel.</h2>
+<pre>$forwardFromChat : \TgBotApi\BotApiBase\Type\ChatType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_forwardFromMessageId"> </a><div class="element clickable property public property_forwardFromMessageId" data-toggle="collapse" data-target=".property_forwardFromMessageId .collapse" title="public">
+<h2>Optional. For messages forwarded from channels, identifier of the original message in the channel.</h2>
+<pre>$forwardFromMessageId : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_from"> </a><div class="element clickable property public property_from" data-toggle="collapse" data-target=".property_from .collapse" title="public">
+<h2>Optional. Sender, empty for messages sent to channels.</h2>
+<pre>$from : \TgBotApi\BotApiBase\Type\UserType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_game"> </a><div class="element clickable property public property_game" data-toggle="collapse" data-target=".property_game .collapse" title="public">
+<h2>$game</h2>
+<pre>$game : \TgBotApi\BotApiBase\Type\GameType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/bots/api#games">Optional. Message is a game, information about the game.</a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_groupChanelCreated"> </a><div class="element clickable property public property_groupChanelCreated" data-toggle="collapse" data-target=".property_groupChanelCreated .collapse" title="public">
+<h2>Optional. Service message: the group has been created.</h2>
+<pre>$groupChanelCreated : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_invoice"> </a><div class="element clickable property public property_invoice" data-toggle="collapse" data-target=".property_invoice .collapse" title="public">
+<h2>$invoice</h2>
+<pre>$invoice : \TgBotApi\BotApiBase\Type\InvoiceType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/bots/api#payments">Message is an invoice for a payment, information about the invoice.</a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_leftChatMember"> </a><div class="element clickable property public property_leftChatMember" data-toggle="collapse" data-target=".property_leftChatMember .collapse" title="public">
+<h2>Optional. A member was removed from the group, information about them (this member may be the bot itself).</h2>
+<pre>$leftChatMember : \TgBotApi\BotApiBase\Type\UserType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_leftChatParticipant"> </a><div class="element clickable property public property_leftChatParticipant" data-toggle="collapse" data-target=".property_leftChatParticipant .collapse" title="public">
+<h2>Warning: This variable is experimental.</h2>
+<pre>$leftChatParticipant : \TgBotApi\BotApiBase\Type\UserType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>experimental</th>
+<td>Returns User type</td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_location"> </a><div class="element clickable property public property_location" data-toggle="collapse" data-target=".property_location .collapse" title="public">
+<h2>Optional. Message is a shared location, information about the location.</h2>
+<pre>$location : \TgBotApi\BotApiBase\Type\LocationType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_mediaGroupId"> </a><div class="element clickable property public property_mediaGroupId" data-toggle="collapse" data-target=".property_mediaGroupId .collapse" title="public">
+<h2>Optional. The unique identifier of a media message group this message belongs to.</h2>
+<pre>$mediaGroupId : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_messageId"> </a><div class="element clickable property public property_messageId" data-toggle="collapse" data-target=".property_messageId .collapse" title="public">
+<h2>Unique message identifier inside this chat.</h2>
+<pre>$messageId : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_migrateFromChat"> </a><div class="element clickable property public property_migrateFromChat" data-toggle="collapse" data-target=".property_migrateFromChat .collapse" title="public">
+<h2>Optional. The supergroup has been migrated from a group with the specified identifier.</h2>
+<pre>$migrateFromChat : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>This number may be greater than 32 bits and some programming languages may have difficulty/silent
+defects in interpreting it. But it is smaller than 52 bits, so a signed 64 bit integer
+or double-precision float type are safe for storing this identifier.</p></div></div></div>
+</div>
+<a id="property_migrateToChat"> </a><div class="element clickable property public property_migrateToChat" data-toggle="collapse" data-target=".property_migrateToChat .collapse" title="public">
+<h2>Optional. The group has been migrated to a supergroup with the specified identifier. This number may be
+greater than 32 bits and some programming languages may have difficulty/silent defects in interpreting it.</h2>
+<pre>$migrateToChat : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>But it is smaller than 52 bits, so a signed 64 bit integer or double-precision
+float type are safe for storing this identifier.</p></div></div></div>
+</div>
+<a id="property_newChatMembers"> </a><div class="element clickable property public property_newChatMembers" data-toggle="collapse" data-target=".property_newChatMembers .collapse" title="public">
+<h2>Optional. New members that were added to the group or supergroup and information about them
+(the bot itself may be one of these members).</h2>
+<pre>$newChatMembers : array&lt;mixed,\TgBotApi\BotApiBase\Type\UserType&gt; | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_newChatPhoto"> </a><div class="element clickable property public property_newChatPhoto" data-toggle="collapse" data-target=".property_newChatPhoto .collapse" title="public">
+<h2>Optional. A chat photo was change to this value.</h2>
+<pre>$newChatPhoto : array&lt;mixed,\TgBotApi\BotApiBase\Type\PhotoSizeType&gt; | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_newChatTitle"> </a><div class="element clickable property public property_newChatTitle" data-toggle="collapse" data-target=".property_newChatTitle .collapse" title="public">
+<h2>Optional. A chat title was changed to this value.</h2>
+<pre>$newChatTitle : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_passportData"> </a><div class="element clickable property public property_passportData" data-toggle="collapse" data-target=".property_passportData .collapse" title="public">
+<h2>Optional. Telegram Passport data.</h2>
+<pre>$passportData : \TgBotApi\BotApiBase\Type\PassportDataType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_photo"> </a><div class="element clickable property public property_photo" data-toggle="collapse" data-target=".property_photo .collapse" title="public">
+<h2>Optional. Message is a photo, available sizes of the photo.</h2>
+<pre>$photo : array&lt;mixed,\TgBotApi\BotApiBase\Type\PhotoSizeType&gt; | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_pinnedMessage"> </a><div class="element clickable property public property_pinnedMessage" data-toggle="collapse" data-target=".property_pinnedMessage .collapse" title="public">
+<h2>Optional. Specified message was pinned.</h2>
+<pre>$pinnedMessage : \TgBotApi\BotApiBase\Type\MessageType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Note that the Message object in this field
+will not contain further reply_to_message fields even if it is itself a reply.</p></div></div></div>
+</div>
+<a id="property_replyToMessage"> </a><div class="element clickable property public property_replyToMessage" data-toggle="collapse" data-target=".property_replyToMessage .collapse" title="public">
+<h2>Optional. For replies, the original message. Note that the Message object in this field will not contain
+further reply_to_message fields even if it itself is a reply.</h2>
+<pre>$replyToMessage : \TgBotApi\BotApiBase\Type\MessageType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_signature"> </a><div class="element clickable property public property_signature" data-toggle="collapse" data-target=".property_signature .collapse" title="public">
+<h2>Optional. For messages forwarded from channels, signature of the post author if present.</h2>
+<pre>$signature : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_sticker"> </a><div class="element clickable property public property_sticker" data-toggle="collapse" data-target=".property_sticker .collapse" title="public">
+<h2>Optional. Message is a sticker, information about the sticker.</h2>
+<pre>$sticker : \TgBotApi\BotApiBase\Type\StickerType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_successfulPayment"> </a><div class="element clickable property public property_successfulPayment" data-toggle="collapse" data-target=".property_successfulPayment .collapse" title="public">
+<h2>$successfulPayment</h2>
+<pre>$successfulPayment : \TgBotApi\BotApiBase\Type\SuccessfulPaymentType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/bots/api#payments">Optional. Message is a service message about a successful payment, information about the payment.</a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_supergroupChatCreated"> </a><div class="element clickable property public property_supergroupChatCreated" data-toggle="collapse" data-target=".property_supergroupChatCreated .collapse" title="public">
+<h2>Optional. Service message: the supergroup has been created. This field can‘t be received in a message coming
+through updates, because bot can’t be a member of a supergroup when it is created. It can only be found in
+reply_to_message if someone replies to a very first message in a directly created supergroup.</h2>
+<pre>$supergroupChatCreated : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_text"> </a><div class="element clickable property public property_text" data-toggle="collapse" data-target=".property_text .collapse" title="public">
+<h2>Optional. For text messages, the actual UTF-8 text of the message, 0-4096 characters.</h2>
+<pre>$text : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_venue"> </a><div class="element clickable property public property_venue" data-toggle="collapse" data-target=".property_venue .collapse" title="public">
+<h2>Optional. Message is a venue, information about the venue.</h2>
+<pre>$venue : \TgBotApi\BotApiBase\Type\VenueType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_video"> </a><div class="element clickable property public property_video" data-toggle="collapse" data-target=".property_video .collapse" title="public">
+<h2>Optional. Message is a video, information about the video.</h2>
+<pre>$video : \TgBotApi\BotApiBase\Type\VideoType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_videoNote"> </a><div class="element clickable property public property_videoNote" data-toggle="collapse" data-target=".property_videoNote .collapse" title="public">
+<h2>$videoNote</h2>
+<pre>$videoNote : \TgBotApi\BotApiBase\Type\VideoNoteType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://telegram.org/blog/video-messages-and-telescope">Optional. Message is a video note, information about the video message</a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_voice"> </a><div class="element clickable property public property_voice" data-toggle="collapse" data-target=".property_voice .collapse" title="public">
+<h2>Optional. Message is a voice message, information about the file.</h2>
+<pre>$voice : \TgBotApi\BotApiBase\Type\VoiceType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
+            generated on 2019-01-25T05:10:35+07:00.<br></footer></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Telegram Bot Api Base » TgBotApi\BotApiBase\Method\Interfaces</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Telegram Bot Api Base</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">615</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/TgBotApi.BotApiBase.Method.Interfaces.html" title="Interfaces"><i class="icon-th"></i>Interfaces</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li class="nav-header">
+<i title="Interfaces" class="icon-custom icon-interface"></i> Interfaces</li>
+<li><a href="#PromoteMethodAliasInterface" title="Class PromoteMethodAliasInterface.">PromoteMethodAliasInterface</a></li>
+<li><a href="#KickMethodAliasInterface" title="Interface KickMethodAliasInterface.">KickMethodAliasInterface</a></li>
+<li><a href="#StopMethodAliasInterface" title="Interface StopMethodAliasInterface.">StopMethodAliasInterface</a></li>
+<li><a href="#SetMethodAliasInterface" title="Interface SetMethodAliasInterface.">SetMethodAliasInterface</a></li>
+<li><a href="#UnpinMethodAliasInterface" title="Interface UnpinMethodAliasInterface.">UnpinMethodAliasInterface</a></li>
+<li><a href="#MethodInterface" title="">MethodInterface</a></li>
+<li><a href="#SendMethodAliasInterface" title="Interface SendMethodAliasInterface.">SendMethodAliasInterface</a></li>
+<li><a href="#PinMethodAliasInterface" title="Interface PinMethodAliasInterface.">PinMethodAliasInterface</a></li>
+<li><a href="#AnswerMethodAliasInterface" title="Interface AnswerMethodAliasInterface.">AnswerMethodAliasInterface</a></li>
+<li><a href="#UnbanMethodAliasInterface" title="Interface UnbanMethodAliasInterface.">UnbanMethodAliasInterface</a></li>
+<li><a href="#RestrictMethodAliasInterface" title="Interface RestrictMethodAliasInterface.">RestrictMethodAliasInterface</a></li>
+<li><a href="#EditMethodAliasInterface" title="Interface EditMethodAliasInterface.">EditMethodAliasInterface</a></li>
+<li><a href="#ForwardMethodAliasInterface" title="Class ForwardMethodAliasInterface.">ForwardMethodAliasInterface</a></li>
+<li><a href="#LeaveMethodAliasInterface" title="Interface LeaveMethodAliasInterface.">LeaveMethodAliasInterface</a></li>
+<li><a href="#UploadMethodAliasInterface" title="Interface UploadMethodAliasInterface.">UploadMethodAliasInterface</a></li>
+<li><a href="#AddMethodAliasInterface" title="Interface AddMethodAliasInterface.">AddMethodAliasInterface</a></li>
+<li><a href="#DeleteMethodAliasInterface" title="Class DeleteMethodAliasInterface.">DeleteMethodAliasInterface</a></li>
+<li><a href="#CreateMethodAliasInterface" title="Interface CreateMethodAliasInterface.">CreateMethodAliasInterface</a></li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.html">Method</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.Interfaces.html">Interfaces</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i title="Class" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="AddMethodAliasInterface" class="element ajax clickable interface">
+<h1>AddMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AddMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface AddMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AddMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="AnswerMethodAliasInterface" class="element ajax clickable interface">
+<h1>AnswerMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AnswerMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface AnswerMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.AnswerMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="CreateMethodAliasInterface" class="element ajax clickable interface">
+<h1>CreateMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.CreateMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface CreateMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.CreateMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="DeleteMethodAliasInterface" class="element ajax clickable interface">
+<h1>DeleteMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.DeleteMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Class DeleteMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.DeleteMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="EditMethodAliasInterface" class="element ajax clickable interface">
+<h1>EditMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.EditMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface EditMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.EditMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="ForwardMethodAliasInterface" class="element ajax clickable interface">
+<h1>ForwardMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.ForwardMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Class ForwardMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.ForwardMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="KickMethodAliasInterface" class="element ajax clickable interface">
+<h1>KickMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.KickMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface KickMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.KickMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="LeaveMethodAliasInterface" class="element ajax clickable interface">
+<h1>LeaveMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.LeaveMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface LeaveMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.LeaveMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="MethodInterface" class="element ajax clickable interface">
+<h1>MethodInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.MethodInterface.html">¶</a>
+</h1>
+<p class="short_description"></p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.MethodInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PinMethodAliasInterface" class="element ajax clickable interface">
+<h1>PinMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PinMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface PinMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PinMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PromoteMethodAliasInterface" class="element ajax clickable interface">
+<h1>PromoteMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PromoteMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Class PromoteMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.PromoteMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="RestrictMethodAliasInterface" class="element ajax clickable interface">
+<h1>RestrictMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.RestrictMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface RestrictMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.RestrictMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SendMethodAliasInterface" class="element ajax clickable interface">
+<h1>SendMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SendMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface SendMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SendMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="SetMethodAliasInterface" class="element ajax clickable interface">
+<h1>SetMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SetMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface SetMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.SetMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="StopMethodAliasInterface" class="element ajax clickable interface">
+<h1>StopMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.StopMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface StopMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.StopMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UnbanMethodAliasInterface" class="element ajax clickable interface">
+<h1>UnbanMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnbanMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface UnbanMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnbanMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UnpinMethodAliasInterface" class="element ajax clickable interface">
+<h1>UnpinMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnpinMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface UnpinMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UnpinMethodAliasInterface.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UploadMethodAliasInterface" class="element ajax clickable interface">
+<h1>UploadMethodAliasInterface<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UploadMethodAliasInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface UploadMethodAliasInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.Interfaces.UploadMethodAliasInterface.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
+            generated on 2019-01-25T05:10:34+07:00.<br></footer></div>
+</div>
+</body>
+</html>

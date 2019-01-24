@@ -1,0 +1,265 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>Telegram Bot Api Base » TgBotApi\BotApiBase\Type\InlineQueryResult</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">Telegram Bot Api Base</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Namespaces</a></li>
+<li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
+<li><a>Packages</a></li>
+<li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">615</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list">
+<li class="nav-header">
+<i class="icon-map-marker"></i> Namespaces</li>
+<li>
+<a href="../namespaces/TgBotApi.BotApiBase.Type.InlineQueryResult.html" title="InlineQueryResult"><i class="icon-th"></i>InlineQueryResult</a><ul class="nav nav-list nav-namespaces"></ul>
+</li>
+<li class="nav-header">
+<i title="Classes" class="icon-custom icon-class"></i> Classes</li>
+<li><a href="#InlineQueryResultCachedMpeg4GifType" title="Class InlineQueryResultCachedMpeg4GifType.">InlineQueryResultCachedMpeg4GifType</a></li>
+<li><a href="#InlineQueryResultAudioType" title="Class InlineQueryResultAudio.">InlineQueryResultAudioType</a></li>
+<li><a href="#InlineQueryResultCachedStickerType" title="Class InlineQueryResultCachedStickerType.">InlineQueryResultCachedStickerType</a></li>
+<li><a href="#InlineQueryResultGameType" title="Class InlineQueryResultGameType.">InlineQueryResultGameType</a></li>
+<li><a href="#InlineQueryResultVoiceType" title="Class InlineQueryResultVoiceType.">InlineQueryResultVoiceType</a></li>
+<li><a href="#InlineQueryResultPhotoType" title="Class InlineQueryResultPhotoType.">InlineQueryResultPhotoType</a></li>
+<li><a href="#InlineQueryResultCachedVoiceType" title="Class InlineQueryResultCachedVoiceType.">InlineQueryResultCachedVoiceType</a></li>
+<li><a href="#InlineQueryResultCachedVideoType" title="Class InlineQueryResultCachedVideoType.">InlineQueryResultCachedVideoType</a></li>
+<li><a href="#InlineQueryResultCachedAudioType" title="Class InlineQueryResultCachedAudioType.">InlineQueryResultCachedAudioType</a></li>
+<li><a href="#InlineQueryResultCachedGifType" title="Class InlineQueryResultCachedGifType.">InlineQueryResultCachedGifType</a></li>
+<li><a href="#InlineQueryResultGifType" title="Class InlineQueryResultGifType.">InlineQueryResultGifType</a></li>
+<li><a href="#InlineQueryResultType" title="Class InlineQueryResult.">InlineQueryResultType</a></li>
+<li><a href="#InlineQueryResultVideoType" title="Class InlineQueryResultVideoType
+Represents a link to a page containing an embedded video player or a video file.">InlineQueryResultVideoType</a></li>
+<li><a href="#InlineQueryResultDocumentType" title="Class InlineQueryResultDocumentType.">InlineQueryResultDocumentType</a></li>
+<li><a href="#InlineQueryResultCachedPhotoType" title="Class InlineQueryResultCachedPhotoType.">InlineQueryResultCachedPhotoType</a></li>
+<li><a href="#InlineQueryResultContactType" title="Class InlineQueryResultContactType.">InlineQueryResultContactType</a></li>
+<li><a href="#InlineQueryResultLocationType" title="Class InlineQueryResultLocationType.">InlineQueryResultLocationType</a></li>
+<li><a href="#InlineQueryResultMpeg4GifType" title="Class InlineQueryResultMpeg4GifType.">InlineQueryResultMpeg4GifType</a></li>
+<li><a href="#InlineQueryResultVenueType" title="Class InlineQueryResultVenueType.">InlineQueryResultVenueType</a></li>
+<li><a href="#InlineQueryResultCachedDocumentType" title="Class InlineQueryResultCachedDocumentType.">InlineQueryResultCachedDocumentType</a></li>
+<li><a href="#InlineQueryResultArticleType" title="Class InlineQueryResultArticleType.">InlineQueryResultArticleType</a></li>
+</ul>
+</div>
+<div class="span8 namespace-contents">
+<ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-th"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/TgBotApi.html">TgBotApi</a></li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.html">BotApiBase</a>
+</li>
+<li>
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Type.html">Type</a>
+</li>
+<li class="active">
+<span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Type.InlineQueryResult.html">InlineQueryResult</a>
+</li>
+</ul>
+<div class="namespace-indent">
+<h3>
+<i title="Class" class="icon-custom icon-class"></i> Classes, interfaces, and traits</h3>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultArticleType" class="element ajax clickable class">
+<h1>InlineQueryResultArticleType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultArticleType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultArticleType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultArticleType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultAudioType" class="element ajax clickable class">
+<h1>InlineQueryResultAudioType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultAudioType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultAudio.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultAudioType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedAudioType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedAudioType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedAudioType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedAudioType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedAudioType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedDocumentType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedDocumentType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedDocumentType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedDocumentType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedDocumentType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedGifType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedGifType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedGifType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedGifType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedGifType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedMpeg4GifType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedMpeg4GifType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedMpeg4GifType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedMpeg4GifType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedMpeg4GifType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedPhotoType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedPhotoType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedPhotoType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedPhotoType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedPhotoType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedStickerType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedStickerType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedStickerType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedStickerType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedStickerType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedVideoType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedVideoType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedVideoType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedVideoType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedVideoType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultCachedVoiceType" class="element ajax clickable class">
+<h1>InlineQueryResultCachedVoiceType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedVoiceType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultCachedVoiceType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultCachedVoiceType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultContactType" class="element ajax clickable class">
+<h1>InlineQueryResultContactType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultContactType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultContactType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultContactType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultDocumentType" class="element ajax clickable class">
+<h1>InlineQueryResultDocumentType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultDocumentType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultDocumentType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultDocumentType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultGameType" class="element ajax clickable class">
+<h1>InlineQueryResultGameType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultGameType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultGameType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultGameType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultGifType" class="element ajax clickable class">
+<h1>InlineQueryResultGifType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultGifType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultGifType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultGifType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultLocationType" class="element ajax clickable class">
+<h1>InlineQueryResultLocationType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultLocationType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultLocationType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultLocationType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultMpeg4GifType" class="element ajax clickable class">
+<h1>InlineQueryResultMpeg4GifType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultMpeg4GifType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultMpeg4GifType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultMpeg4GifType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultPhotoType" class="element ajax clickable class">
+<h1>InlineQueryResultPhotoType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultPhotoType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultPhotoType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultPhotoType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultType" class="element ajax clickable class">
+<h1>InlineQueryResultType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResult.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultVenueType" class="element ajax clickable class">
+<h1>InlineQueryResultVenueType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVenueType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultVenueType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVenueType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultVideoType" class="element ajax clickable class">
+<h1>InlineQueryResultVideoType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVideoType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultVideoType
+Represents a link to a page containing an embedded video player or a video file.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVideoType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="InlineQueryResultVoiceType" class="element ajax clickable class">
+<h1>InlineQueryResultVoiceType<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVoiceType.html">¶</a>
+</h1>
+<p class="short_description">Class InlineQueryResultVoiceType.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.InlineQueryResult.InlineQueryResultVoiceType.html" class="more">« More »</a>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
+            generated on 2019-01-25T05:10:34+07:00.<br></footer></div>
+</div>
+</body>
+</html>
