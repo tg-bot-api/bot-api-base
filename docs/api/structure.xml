@@ -2090,7 +2090,7 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJytVE1rGzEQvetXDDQH26ReF0ooSd3aDg0UEtqDjwtF1s7uCmRJSLNxQur/Xmm/HNtL00N10TJ68+a90Wg/f7WlZSxDobjDkScnBf2iZ4t+/mF8w5jmW/SWC4R1sTK0tDJtthX3mK4DMP2ubUUP6D0v8NZoQk0hsfLDKQ9IpcnSteOSfHonlbpzZrt0jj/XsZCaTCYMJnCruPdQs98bwUkafVwlVp8GZAQvPCKURNZfJ4kwDqeECgvHt1PjimRjyCfcyncy0qmWbtvQiYYu0CRM/EtRwKfwmbW483P2wiCs2IIhg/Gs9hjXBO5DFaoyBJMDlQidOpAasmAB0U9bbJeyeOQOcmU4tZGk3m21UVLAhWoZQy9Paxld/O9iHeV5tR82UnM1hZ/opMliER/bHVqXGwe7UoryWIbgGjYIlc04YXYJvjSVymJog7RD1HA1A64z+HT1cTYblCo1/daVUsNq5SM2Ys7lLiwP89JYrUOHTv4N0vk/wfB447UQuAhm+KlUKp3ZeUiHHsm3J4F179IVz5auqLZhsvrgKZNDqpx+a2iH2uEpgAXklRZN9x2Gto8aaFiNz74Ll2cHnffDSW27cQxz6O9hfP3mo3rpOS6kDsp0+OkEBty1Mkfjm3PE+y+duIB9NfhDwH7250dT20FlDqNa9/iVlBOOPDznFnRI3LP+s72KPqMB7dme/QE5dKi/</source>
   </file>
-  <file path="BotApiInterface.php" generated-path="BotApiInterface.html" hash="0507b684b0ea5b05fa40d0e43d180b08" package="Default">
+  <file path="BotApiInterface.php" generated-path="BotApiInterface.html" hash="73674506bbf8a6384352a1ee60604d21" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2122,33 +2122,33 @@ fixed-width text or inline URLs in the media caption.</description>
     <namespace-alias name="UserProfilePhotosType">\TgBotApi\BotApiBase\Type\UserProfilePhotosType</namespace-alias>
     <namespace-alias name="UserType">\TgBotApi\BotApiBase\Type\UserType</namespace-alias>
     <namespace-alias name="WebhookInfoType">\TgBotApi\BotApiBase\Type\WebhookInfoType</namespace-alias>
-    <interface namespace="TgBotApi\BotApiBase" line="34" package="Default">
+    <interface namespace="TgBotApi\BotApiBase" line="37" package="Default">
       <extends>\TgBotApi\BotApiBase\BotApiAliasInterface</extends>
       <name>BotApiInterface</name>
       <full_name>\TgBotApi\BotApiBase\BotApiInterface</full_name>
-      <docblock line="34">
-        <description>Interface BotApiAliasInterface.</description>
+      <docblock line="37">
+        <description>Interface BotApiInterface</description>
         <long-description></long-description>
-        <tag name="package" line="34" description="Default"/>
+        <tag name="package" line="37" description="Default"/>
         <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiAliasInterface" refers="\TgBotApi\BotApiBase\BotApiAliasInterface" link="/classes/TgBotApi.BotApiBase.BotApiAliasInterface.html"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="44" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="47" package="Default">
         <name>call</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::call()</full_name>
-        <docblock line="44">
+        <docblock line="47">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="44" description="" type="\TgBotApi\BotApiBase\Method\Interfaces\MethodInterface" variable="$method">
+          <tag name="param" line="47" description="" type="\TgBotApi\BotApiBase\Method\Interfaces\MethodInterface" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\Interfaces\MethodInterface</type>
           </tag>
-          <tag name="param" line="44" description="" type="string|null" variable="$type">
+          <tag name="param" line="47" description="" type="string|null" variable="$type">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="44" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="47" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="44" description="" type="mixed">
+          <tag name="return" line="47" description="" type="mixed">
             <type>mixed</type>
           </tag>
         </docblock>
@@ -2163,19 +2163,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="56" package="Default">
         <name>exportChatInviteLink</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::exportChatInviteLink()</full_name>
-        <docblock line="53">
+        <docblock line="56">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="53" description="" type="\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod" variable="$method">
+          <tag name="param" line="56" description="" type="\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod</type>
           </tag>
-          <tag name="throws" line="53" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="56" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="53" description="" type="string">
+          <tag name="return" line="56" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -2185,19 +2185,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="62" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="65" package="Default">
         <name>sendChatAction</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::sendChatAction()</full_name>
-        <docblock line="62">
+        <docblock line="65">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="62" description="" type="\TgBotApi\BotApiBase\Method\SendChatActionMethod" variable="$method">
+          <tag name="param" line="65" description="" type="\TgBotApi\BotApiBase\Method\SendChatActionMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\SendChatActionMethod</type>
           </tag>
-          <tag name="throws" line="62" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="65" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="62" description="" type="boolean">
+          <tag name="return" line="65" description="" type="boolean">
             <type>boolean</type>
           </tag>
         </docblock>
@@ -2207,19 +2207,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SendChatActionMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="71" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="74" package="Default">
         <name>getUpdates</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getUpdates()</full_name>
-        <docblock line="71">
+        <docblock line="74">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="71" description="" type="\TgBotApi\BotApiBase\Method\GetUpdatesMethod" variable="$method">
+          <tag name="param" line="74" description="" type="\TgBotApi\BotApiBase\Method\GetUpdatesMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetUpdatesMethod</type>
           </tag>
-          <tag name="throws" line="71" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="74" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="71" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\UpdateType&gt;">
+          <tag name="return" line="74" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\UpdateType&gt;">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\UpdateType&gt;</type>
           </tag>
         </docblock>
@@ -2229,19 +2229,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetUpdatesMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="80" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="83" package="Default">
         <name>getMe</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getMe()</full_name>
-        <docblock line="80">
+        <docblock line="83">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="80" description="" type="\TgBotApi\BotApiBase\Method\GetMeMethod" variable="$method">
+          <tag name="param" line="83" description="" type="\TgBotApi\BotApiBase\Method\GetMeMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetMeMethod</type>
           </tag>
-          <tag name="throws" line="80" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="83" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="80" description="" type="\TgBotApi\BotApiBase\Type\UserType">
+          <tag name="return" line="83" description="" type="\TgBotApi\BotApiBase\Type\UserType">
             <type>\TgBotApi\BotApiBase\Type\UserType</type>
           </tag>
         </docblock>
@@ -2251,19 +2251,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetMeMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="89" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="92" package="Default">
         <name>getUserProfilePhotos</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getUserProfilePhotos()</full_name>
-        <docblock line="89">
+        <docblock line="92">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="89" description="" type="\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod" variable="$method">
+          <tag name="param" line="92" description="" type="\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod</type>
           </tag>
-          <tag name="throws" line="89" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="92" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="89" description="" type="\TgBotApi\BotApiBase\Type\UserProfilePhotosType">
+          <tag name="return" line="92" description="" type="\TgBotApi\BotApiBase\Type\UserProfilePhotosType">
             <type>\TgBotApi\BotApiBase\Type\UserProfilePhotosType</type>
           </tag>
         </docblock>
@@ -2273,19 +2273,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="98" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="101" package="Default">
         <name>getWebhookInfo</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getWebhookInfo()</full_name>
-        <docblock line="98">
+        <docblock line="101">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="98" description="" type="\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod" variable="$method">
+          <tag name="param" line="101" description="" type="\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod</type>
           </tag>
-          <tag name="throws" line="98" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="101" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="98" description="" type="\TgBotApi\BotApiBase\Type\WebhookInfoType">
+          <tag name="return" line="101" description="" type="\TgBotApi\BotApiBase\Type\WebhookInfoType">
             <type>\TgBotApi\BotApiBase\Type\WebhookInfoType</type>
           </tag>
         </docblock>
@@ -2295,19 +2295,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="107" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="110" package="Default">
         <name>getChatMembersCount</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getChatMembersCount()</full_name>
-        <docblock line="107">
+        <docblock line="110">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="107" description="" type="\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod" variable="$method">
+          <tag name="param" line="110" description="" type="\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod</type>
           </tag>
-          <tag name="throws" line="107" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="110" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="107" description="" type="integer">
+          <tag name="return" line="110" description="" type="integer">
             <type>integer</type>
           </tag>
         </docblock>
@@ -2317,19 +2317,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="116" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="119" package="Default">
         <name>getChat</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getChat()</full_name>
-        <docblock line="116">
+        <docblock line="119">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="116" description="" type="\TgBotApi\BotApiBase\Method\GetChatMethod" variable="$method">
+          <tag name="param" line="119" description="" type="\TgBotApi\BotApiBase\Method\GetChatMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetChatMethod</type>
           </tag>
-          <tag name="throws" line="116" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="119" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="116" description="" type="\TgBotApi\BotApiBase\Type\ChatType">
+          <tag name="return" line="119" description="" type="\TgBotApi\BotApiBase\Type\ChatType">
             <type>\TgBotApi\BotApiBase\Type\ChatType</type>
           </tag>
         </docblock>
@@ -2339,19 +2339,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetChatMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="125" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="128" package="Default">
         <name>getChatAdministrators</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getChatAdministrators()</full_name>
-        <docblock line="125">
+        <docblock line="128">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="125" description="" type="\TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod" variable="$method">
+          <tag name="param" line="128" description="" type="\TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod</type>
           </tag>
-          <tag name="throws" line="125" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="128" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="125" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\ChatMemberType&gt;">
+          <tag name="return" line="128" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\ChatMemberType&gt;">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\ChatMemberType&gt;</type>
           </tag>
         </docblock>
@@ -2361,19 +2361,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="134" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="137" package="Default">
         <name>getChatMember</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getChatMember()</full_name>
-        <docblock line="134">
+        <docblock line="137">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="134" description="" type="\TgBotApi\BotApiBase\Method\GetChatMemberMethod" variable="$method">
+          <tag name="param" line="137" description="" type="\TgBotApi\BotApiBase\Method\GetChatMemberMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetChatMemberMethod</type>
           </tag>
-          <tag name="throws" line="134" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="137" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="134" description="" type="\TgBotApi\BotApiBase\Type\ChatMemberType">
+          <tag name="return" line="137" description="" type="\TgBotApi\BotApiBase\Type\ChatMemberType">
             <type>\TgBotApi\BotApiBase\Type\ChatMemberType</type>
           </tag>
         </docblock>
@@ -2383,19 +2383,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetChatMemberMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="143" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="146" package="Default">
         <name>getGameHighScores</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getGameHighScores()</full_name>
-        <docblock line="143">
+        <docblock line="146">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="143" description="" type="\TgBotApi\BotApiBase\Method\GetGameHighScoresMethod" variable="$method">
+          <tag name="param" line="146" description="" type="\TgBotApi\BotApiBase\Method\GetGameHighScoresMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetGameHighScoresMethod</type>
           </tag>
-          <tag name="throws" line="143" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="146" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="143" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\GameHighScoreType&gt;">
+          <tag name="return" line="146" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\GameHighScoreType&gt;">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\GameHighScoreType&gt;</type>
           </tag>
         </docblock>
@@ -2405,19 +2405,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetGameHighScoresMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="152" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="155" package="Default">
         <name>getStickerSet</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getStickerSet()</full_name>
-        <docblock line="152">
+        <docblock line="155">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="152" description="" type="\TgBotApi\BotApiBase\Method\GetStickerSetMethod" variable="$method">
+          <tag name="param" line="155" description="" type="\TgBotApi\BotApiBase\Method\GetStickerSetMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetStickerSetMethod</type>
           </tag>
-          <tag name="throws" line="152" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="155" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="152" description="" type="\TgBotApi\BotApiBase\Type\StickerSetType">
+          <tag name="return" line="155" description="" type="\TgBotApi\BotApiBase\Type\StickerSetType">
             <type>\TgBotApi\BotApiBase\Type\StickerSetType</type>
           </tag>
         </docblock>
@@ -2427,19 +2427,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetStickerSetMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="161" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="164" package="Default">
         <name>getFile</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getFile()</full_name>
-        <docblock line="161">
+        <docblock line="164">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="161" description="" type="\TgBotApi\BotApiBase\Method\GetFileMethod" variable="$method">
+          <tag name="param" line="164" description="" type="\TgBotApi\BotApiBase\Method\GetFileMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\GetFileMethod</type>
           </tag>
-          <tag name="throws" line="161" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="164" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="161" description="" type="\TgBotApi\BotApiBase\Type\FileType">
+          <tag name="return" line="164" description="" type="\TgBotApi\BotApiBase\Type\FileType">
             <type>\TgBotApi\BotApiBase\Type\FileType</type>
           </tag>
         </docblock>
@@ -2449,19 +2449,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\GetFileMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="170" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="173" package="Default">
         <name>sendMediaGroup</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::sendMediaGroup()</full_name>
-        <docblock line="170">
+        <docblock line="173">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="170" description="" type="\TgBotApi\BotApiBase\Method\SendMediaGroupMethod" variable="$method">
+          <tag name="param" line="173" description="" type="\TgBotApi\BotApiBase\Method\SendMediaGroupMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</type>
           </tag>
-          <tag name="throws" line="170" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="173" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="170" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;">
+          <tag name="return" line="173" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;</type>
           </tag>
         </docblock>
@@ -2471,16 +2471,16 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="177" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="180" package="Default">
         <name>getAbsoluteFilePath</name>
         <full_name>\TgBotApi\BotApiBase\BotApiInterface::getAbsoluteFilePath()</full_name>
-        <docblock line="177">
+        <docblock line="180">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="177" description="" type="\TgBotApi\BotApiBase\Type\FileType" variable="$file">
+          <tag name="param" line="180" description="" type="\TgBotApi\BotApiBase\Type\FileType" variable="$file">
             <type>\TgBotApi\BotApiBase\Type\FileType</type>
           </tag>
-          <tag name="return" line="177" description="" type="string">
+          <tag name="return" line="180" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -2493,25 +2493,24 @@ fixed-width text or inline URLs in the media caption.</description>
     </interface>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="34" code="PPC:ERR-50009">No summary for interface \TgBotApi\BotApiBase\BotApiInterface</error>
-      <error line="44" code="PPC:ERR-50008">No summary for method call()</error>
-      <error line="53" code="PPC:ERR-50008">No summary for method exportChatInviteLink()</error>
-      <error line="62" code="PPC:ERR-50008">No summary for method sendChatAction()</error>
-      <error line="71" code="PPC:ERR-50008">No summary for method getUpdates()</error>
-      <error line="80" code="PPC:ERR-50008">No summary for method getMe()</error>
-      <error line="89" code="PPC:ERR-50008">No summary for method getUserProfilePhotos()</error>
-      <error line="98" code="PPC:ERR-50008">No summary for method getWebhookInfo()</error>
-      <error line="107" code="PPC:ERR-50008">No summary for method getChatMembersCount()</error>
-      <error line="116" code="PPC:ERR-50008">No summary for method getChat()</error>
-      <error line="125" code="PPC:ERR-50008">No summary for method getChatAdministrators()</error>
-      <error line="134" code="PPC:ERR-50008">No summary for method getChatMember()</error>
-      <error line="143" code="PPC:ERR-50008">No summary for method getGameHighScores()</error>
-      <error line="152" code="PPC:ERR-50008">No summary for method getStickerSet()</error>
-      <error line="161" code="PPC:ERR-50008">No summary for method getFile()</error>
-      <error line="170" code="PPC:ERR-50008">No summary for method sendMediaGroup()</error>
-      <error line="177" code="PPC:ERR-50008">No summary for method getAbsoluteFilePath()</error>
+      <error line="47" code="PPC:ERR-50008">No summary for method call()</error>
+      <error line="56" code="PPC:ERR-50008">No summary for method exportChatInviteLink()</error>
+      <error line="65" code="PPC:ERR-50008">No summary for method sendChatAction()</error>
+      <error line="74" code="PPC:ERR-50008">No summary for method getUpdates()</error>
+      <error line="83" code="PPC:ERR-50008">No summary for method getMe()</error>
+      <error line="92" code="PPC:ERR-50008">No summary for method getUserProfilePhotos()</error>
+      <error line="101" code="PPC:ERR-50008">No summary for method getWebhookInfo()</error>
+      <error line="110" code="PPC:ERR-50008">No summary for method getChatMembersCount()</error>
+      <error line="119" code="PPC:ERR-50008">No summary for method getChat()</error>
+      <error line="128" code="PPC:ERR-50008">No summary for method getChatAdministrators()</error>
+      <error line="137" code="PPC:ERR-50008">No summary for method getChatMember()</error>
+      <error line="146" code="PPC:ERR-50008">No summary for method getGameHighScores()</error>
+      <error line="155" code="PPC:ERR-50008">No summary for method getStickerSet()</error>
+      <error line="164" code="PPC:ERR-50008">No summary for method getFile()</error>
+      <error line="173" code="PPC:ERR-50008">No summary for method sendMediaGroup()</error>
+      <error line="180" code="PPC:ERR-50008">No summary for method getAbsoluteFilePath()</error>
     </parse_markers>
-    <source>eJy1l02P0zAQhu/5FT704K2QVlxZVtBdQalEpYruigNFyE2njdXUjmwHugL+O3Y+mtb5sFOFvUTrvGO/Tzwdj9++S6IkCDYQxkQAlkrQUP1QLwnI+9c3d0HAyAFkQkJAT7sHriYJXeWPByJBv09l45vVh2MIiaKcrb7oeM4knEbuWoPmoCK+0bEJF+oxImrGflIFnynb56+coVPI4iabA2VU0xDFhewXO4fDGsQ1MfKRp0z1jfRVf6Qx+Kunet8+0V20DLmAHl9g3mONpaLhHsQSelA8Jxui+hh6liAWgm81/SLiivcI/QrriPP9jG25Z9CMKRBbne2yGDkNOEOXwDZZ6oUmxz3XM0Fz2FAyFTxNXEFP+me5qtLN/Osh9pCZ1PKQXeSUh34OUpKdj7LKJA9xnkI+Qjt1PGM8ZGeplasDWmYKyrWnzEFwVHqbZTE+iSmRp5fB7wDpv9vxOHuiMXqfEEEOyEo/NDpkA5bK1Gu2+8PSOM5ejEzlLjQnqYoE/yVRrQ7bOgEqFQwd6BHKdW6zZ5KuYxqibcqy3EYhiWPcYvBV4Sm3gu6R8WYOkmbM9lJvEV9Lk7vpxIEGD9ht7OZNMXkrXFNJGAhrzXncCSUv1sZdVjSIma4Vw67aAyFUP+Nv3ztRdqf1cZsVjUCEIC9dDOXJNpT9olC4rM8BNyyuDVeVpuO7Nx9+AyLU6qNzK+wg7PZZ0DbU4nb02uE9ELRVuV24Z3Lc5Uoj1s+EVrjmnnEgQn0Suajs9bHTk+bT87qZBuQomxcfGNxoQJuuOqBu5003hgE5qo7NXezqdrCHSZ8SaF9v/gugf+7hDkvF1p13uu1cTZedgdhqPa97/y7dYIc/n32zL1oDsV123S6sSo07LGkcu5lv56qutAMRlRcZF4vR4UYD2n91G+ro6+xb20AAZ1cmR6LJCxO4y5MzxUpiNDLn8/WdtP6yk7XkcarATLkgKsKXc581zX+Df0nG/jA=</source>
+    <source>eJy1l8GO0zAQhu95Ch/24K2QKq4sK+iuoFSiUkV3xYEi5KbTxmpiR7YDXQHvjp2kSesmsVOFXqLaM/b/xZPxzNt3aZQGwQbCmAjAUgkaqh/qJQV5//r2LggYSUCmJAT0tHvgapLSVfF4IBL0fCYbZ1YfDiGkinK2+qL9OZNQjdy1Os1BRXyjfVMu1GNE1Iz9pAo+U7YvppyuU8j9JpuEMqppiOJC9vOdQ7IGcY2PfOQZU309fa0/0hj8raf63D7RXbQMuYAeb2DeY4+louEexBJ6UDynG6L6CHqWIBaCbzX9IuKK93D9CuuI8/2Mbbmn04wpEFsd7bIcqQacrktgmzz0QhPjnvsZpzlsKJkKnqUupyf9Wa7qcDN/PYw9zExoeZidxZSH/RykJDsfyzqSPIyLEPIxtEPH08fD7CS0CutgPBoFaISqgEGFS/VfT44D2jaL4KB0LMhyfBJTImvX3wHSv3wH8xuh9ykRJEFWjKKbJB+wrExSZ7s/LIvjfOLGpPfSpjJVkeC/JLpI1radAJUJhhJ6gOM+4/yZZuuYhmibsfwDQCGJY9wi8FWpqZCC7pHRZm6bZsz2+8AivpamUNOJAw0asFvY7Zty8Va4prwxENaa87gTSp7tjbukaBCzXCuGndoHQqi/9W/fO1F21f64TYpGIEKQly6G4/U3lPwym7ikzwE3bK4F1+mo470335ADIlwkUedR2E7YrbOkbUjY7egXN/xA0FZ6d+GemOMuVRrx8uJohWsuLAci1DeRi8reHzs1aT69rptpQI5jheMDgxsFaNF1mdStvKmtGJCjLuvcye5SDvYQ6ZMC7R7ovwD6xx7ukFQe3Wk53M7V1BENxHZRGLvP71wNdujzOTe7GxuI7bw0d2HV1rhDksaxK/52rrrvHYjo2O24WIwdbhSg9dctU0ddZ7d2AwGc9FWOQJNnInCXJmeIHYnRjbmfr6+k9ZudrCWPMwVmyQVRET5f+6Ro/hv8A/2QCUQ=</source>
   </file>
   <file path="Method/SendVenueMethod.php" generated-path="Method.SendVenueMethod.html" hash="205467a2426276c378a37ef16c3ff74a" package="Default">
     <docblock line="0">
@@ -2751,7 +2750,7 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </parse_markers>
     <source>eJy9VdtO3DAQfc9XjFQedlc0UV+htLuLuhJSLw9d8RQJDclk16pjp7bDRYDEh5Sf40tqOzdI0gUJqXlJNHPm2HN8PPn4udgWQZBSwlHRRBvFEnNmrgvSRx+mh0EgMCddYEKw3iylWRQsrl5L1BR/I7OVqYWVehcgPhGGVGZZdPyTRFpFF5yhbjOHL3GsFTKj4xXjfKVkvlAKr33stZVu5bU83qI5RcXwnJOu64NoNgtgBscctQaHOyVRUlUe2oxLzjURbI0p9EEUJVJRaIjTRmEeSrWJzqXRERbsnbblF67cFkVBMkYJLC845SRMlRrTI7gJwD6utbGWm9yOphzEN+aeGXxFw0yZEsgMzJbA7zGssw1ofoEKMi7R1JHIv4vynLME9njNMcIuxebt9A3JkP+79eHL1M6/YjPKbTfOR3gXaarIntBbqLHiGJL/KAyTAnkIK1kq/bu0dwxYas+dZYzUaxe9FSXn/fRTN2Yte5jIPBrdZIc5SV+5UzcGnu1xH1gGv4S8FM1uYbKSCugKnaH34fH+Dyqjz8i52CATzuNRShmW3DzeP/wLgW5BVuYWApbPgjIp04gllChCFw6n/0+gte17KNG8QHvXgQlzW60Ke4m9didpD+Dt7UPdfdkFaTzfw9RreIz37o58bcAeAt248NLAXooG+wKZrZKXGuKxyfnlKiFviXiJ6UJtSndMbbDPpMiUSvSn3JjK2lhFEshKkTgicMdraFJBXSuVpPttoJKqFXKYaOTrMs3peNWG4VqsLuF1qiSCI2itND0YjO2bbp9M2FaE/S3aCrqs+5pMD4eI95+qniyy7m4U1HToYN2YHQO2k/bo2cQcgXoFHKwefiOQWg0HasdYA7OXfeJlmT7pvFef2X9TDeoK74L2s7ZGW1GB7oK74C/PEIwn</source>
   </file>
-  <file path="BotApiComplete.php" generated-path="BotApiComplete.html" hash="f08555e1fdf08d18510c1fb72ab54080" package="Default">
+  <file path="BotApiComplete.php" generated-path="BotApiComplete.html" hash="4dc4936736a902f573a51247b223d036" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -2784,83 +2783,54 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         <tag name="package" line="28" description="Default"/>
         <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApi" refers="\TgBotApi\BotApiBase\BotApi" link="/classes/TgBotApi.BotApiBase.BotApi.html"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="27" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="32" package="Default">
         <name>$botKey</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::botKey</full_name>
-        <default></default>
-        <docblock line="27">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="27" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="32" package="Default">
-        <name>$apiClient</name>
-        <full_name>\TgBotApi\BotApiBase\BotApi::apiClient</full_name>
         <default></default>
         <docblock line="32">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="32" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="">
-            <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="37" package="Default">
-        <name>$endPoint</name>
-        <full_name>\TgBotApi\BotApiBase\BotApi::endPoint</full_name>
-        <default></default>
-        <docblock line="37">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="37" description="" type="string" variable="">
+          <tag name="var" line="32" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="37" package="Default">
+        <name>$apiClient</name>
+        <full_name>\TgBotApi\BotApiBase\BotApi::apiClient</full_name>
+        <default></default>
+        <docblock line="37">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="37" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="">
+            <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
+          </tag>
+        </docblock>
+      </property>
       <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="42" package="Default">
-        <name>$normalizer</name>
-        <full_name>\TgBotApi\BotApiBase\BotApi::normalizer</full_name>
+        <name>$endPoint</name>
+        <full_name>\TgBotApi\BotApiBase\BotApi::endPoint</full_name>
         <default></default>
         <docblock line="42">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="">
+          <tag name="var" line="42" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="47" package="Default">
+        <name>$normalizer</name>
+        <full_name>\TgBotApi\BotApiBase\BotApi::normalizer</full_name>
+        <default></default>
+        <docblock line="47">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="">
             <type>\TgBotApi\BotApiBase\NormalizerInterface</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="48" package="Default">
-        <name>__construct</name>
-        <full_name>\TgBotApi\BotApiBase\BotApiComplete::__construct()</full_name>
-        <docblock line="48">
-          <description>BotApi constructor.</description>
-          <long-description></long-description>
-          <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApi::__construct()" refers="\TgBotApi\BotApiBase\BotApi::__construct()" link="/classes/TgBotApi.BotApiBase.BotApi.html#method___construct"/>
-        </docblock>
-        <argument line="0" by_reference="false">
-          <name>$botKey</name>
-          <default></default>
-          <type>\TgBotApi\BotApiBase\string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$apiClient</name>
-          <default></default>
-          <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$normalizer</name>
-          <default></default>
-          <type>\TgBotApi\BotApiBase\NormalizerInterface</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$endPoint</name>
-          <default>'https://api.telegram.org'</default>
-          <type>\TgBotApi\BotApiBase\string</type>
-        </argument>
-      </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="51" package="Default">
         <name>add</name>
         <full_name>\TgBotApi\BotApiBase\Traits\AliasMethodTrait::add()</full_name>
@@ -3620,19 +3590,19 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\RestrictMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="117" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="122" package="Default">
         <name>sendMediaGroup</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::sendMediaGroup()</full_name>
-        <docblock line="117">
+        <docblock line="122">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="117" description="" type="\TgBotApi\BotApiBase\Method\SendMediaGroupMethod" variable="$method">
+          <tag name="param" line="122" description="" type="\TgBotApi\BotApiBase\Method\SendMediaGroupMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</type>
           </tag>
-          <tag name="throws" line="117" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="122" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="117" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;">
+          <tag name="return" line="122" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::sendMediaGroup()" refers="\TgBotApi\BotApiBase\BotApiInterface::sendMediaGroup()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_sendMediaGroup"/>
@@ -3667,19 +3637,19 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\AliasMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="105" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="110" package="Default">
         <name>sendChatAction</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::sendChatAction()</full_name>
-        <docblock line="105">
+        <docblock line="110">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="105" description="" type="\TgBotApi\BotApiBase\Method\SendChatActionMethod" variable="$method">
+          <tag name="param" line="110" description="" type="\TgBotApi\BotApiBase\Method\SendChatActionMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\SendChatActionMethod</type>
           </tag>
-          <tag name="throws" line="105" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="110" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="105" description="" type="boolean">
+          <tag name="return" line="110" description="" type="boolean">
             <type>boolean</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::sendChatAction()" refers="\TgBotApi\BotApiBase\BotApiInterface::sendChatAction()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_sendChatAction"/>
@@ -4404,22 +4374,22 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\UploadMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="52" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="57" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::__construct()</full_name>
-        <docblock line="52">
+        <docblock line="57">
           <description>BotApi constructor.</description>
           <long-description></long-description>
-          <tag name="param" line="52" description="" type="string" variable="$botKey">
+          <tag name="param" line="57" description="" type="string" variable="$botKey">
             <type>string</type>
           </tag>
-          <tag name="param" line="52" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="$apiClient">
+          <tag name="param" line="57" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="$apiClient">
             <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
           </tag>
-          <tag name="param" line="52" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="$normalizer">
+          <tag name="param" line="57" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="$normalizer">
             <type>\TgBotApi\BotApiBase\NormalizerInterface</type>
           </tag>
-          <tag name="param" line="52" description="" type="string" variable="$endPoint">
+          <tag name="param" line="57" description="" type="string" variable="$endPoint">
             <type>string</type>
           </tag>
         </docblock>
@@ -4474,19 +4444,19 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\GetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="93" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="98" package="Default">
         <name>exportChatInviteLink</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::exportChatInviteLink()</full_name>
-        <docblock line="93">
+        <docblock line="98">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="93" description="" type="\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod" variable="$method">
+          <tag name="param" line="98" description="" type="\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod</type>
           </tag>
-          <tag name="throws" line="93" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="98" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="93" description="" type="string">
+          <tag name="return" line="98" description="" type="string">
             <type>string</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::exportChatInviteLink()" refers="\TgBotApi\BotApiBase\BotApiInterface::exportChatInviteLink()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_exportChatInviteLink"/>
@@ -4498,16 +4468,16 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\BotApi</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="127" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="132" package="Default">
         <name>getAbsoluteFilePath</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::getAbsoluteFilePath()</full_name>
-        <docblock line="127">
+        <docblock line="132">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="127" description="" type="\TgBotApi\BotApiBase\Type\FileType" variable="$file">
+          <tag name="param" line="132" description="" type="\TgBotApi\BotApiBase\Type\FileType" variable="$file">
             <type>\TgBotApi\BotApiBase\Type\FileType</type>
           </tag>
-          <tag name="return" line="127" description="" type="string">
+          <tag name="return" line="132" description="" type="string">
             <type>string</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::getAbsoluteFilePath()" refers="\TgBotApi\BotApiBase\BotApiInterface::getAbsoluteFilePath()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_getAbsoluteFilePath"/>
@@ -4519,14 +4489,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\BotApi</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="142" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="147" package="Default">
         <name>getMethodName</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::getMethodName()</full_name>
-        <docblock line="142">
+        <docblock line="147">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="142" description="" type="" variable="$method"/>
-          <tag name="return" line="142" description="" type="string">
+          <tag name="param" line="147" description="" type="" variable="$method"/>
+          <tag name="return" line="147" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -4793,13 +4763,8 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="48" code="PPC:ERR-50015">Argument $botKey is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50015">Argument $apiClient is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50015">Argument $normalizer is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50015">Argument $endPoint is missing from the Docblock of __construct</error>
-      <error line="48" code="PPC:ERR-50008">No summary for method __construct()</error>
     </parse_markers>
-    <source>eJyVld9rwjAQx9/zV+RB8Aei7FUnQ90Gw23I1DdBYnpqWJuE5Jxz4v++VEnVtmMkL6X3+V6SO77X3j/ojSYkAh4zAzWLRnBc4F6D7d3Vu4RIloDVjAOdrgcK+1rMz48Bs+D41paS+dQwgXbej6I3wI2KTu/df+XS7sCEZAwNMISQjEeIISzjKRIYon9WZsdMUOEjwT9D9K/AvoJqGAsZJDcqUWFd+oCze0JyJiCD2jSBsO1R6RD9TC5ZUJtmUof1daZjxW5LJu1Gg9AGHcbMWnpOGapEpy5tOdAmvIRQ+EbXPB8mB0LdSk/Pj1wWL86WRyVD5FHJtHhUGAsPyvzvWcHoHhQd7Uneulm8xKOelZrRw4LrLuCPhLyPPCga5kLyzshIiQVSprfLWHC62kqOQkm6WHAlXRVbjrWTIF1pVXJNK0uFI9g3s3jqjFiAxBeJYFbp97rCfOwie1cmYbH4AXOlk1mwWTjHdWqshETao9UNoraddtvt20Jni7VhSUuZdfWUVaeHLFu7f4nETue6BH/l63vdnH05rH5u1pEcyS/H5k6F</source>
+    <source>eJyVk8FKxDAQhu95ihy1BxfPq8hudS8qiLu9FWRsBjdsm4Qkuor47nYt08UmItNL6Xzzp2T45uLKbZ0QCpsWPJ6E6HUTn+KHw3B5fjoXwkCHwUGDcvOytHHhdD28lhCw568hS+qNBx1DvVDqHuPWqp/v+b/tJuzRcxKlR4jISVxji7zEjdKR07+yfg+edfFb3ew4/XcIb6w7PGjDave2s7wpPeJgDyezRsMa0xp5x0frOP2VeQbWmCrjeHOtXGvh95XFrCiELGTZQghyiJS2cwdLz3owE02GSHyP/fCoLD6F7J/D36crN9bT3SKUWSJCmW0hlKwFgZz/xBLRCaRGE5mqO9YzjhLLykgwse4I/ghMPSKQCnMkUzNGkirwJb4BVIj3bw==</source>
   </file>
   <file path="Method/Interfaces/KickMethodAliasInterface.php" generated-path="Method.Interfaces.KickMethodAliasInterface.html" hash="36614e99c2cfc6e82fe32264527173a1" package="Default">
     <docblock line="0">
@@ -8069,7 +8034,7 @@ it shows the number of digits past the decimal point for each currency (2 for th
     </parse_markers>
     <source>eJydU8Fu2zAMvesrCLSHJEhtZGgv3bJlHbDTDgXa3QoMiszYKmRJkOi1wdB/HyXb6Zb4UFQXQeLjeyT19OmLb7wQFSojA84iBa3oF+09xvVq/lEIK1uMXiqE+/rG0VevH/rtRkZ8uGcgg8rFQsACvhkZI/yQWzRY3TITpnjBoRTdRERoiHy8LkvlAhbEuDrItnChLreOYim9PjN9vk/5nFcKNUkr/gjglaXTWsCtC6SdhUxQDLdjcPNbBkjt2Xq4KvPuu63RCs5zErdyzJnkwO2AGgQfXNUpAm3zMbbSGIwEndUUR5DqQkCr9jDTlrDGsATrCHbGSSorx3I4H4uD7y4APsvWG1zCjg8S/Kj48+4cVsXlFfjUvmxdZwnWsLq8OqTf8USTJj57RvEkkTCk8oYiNMbiMTq7HBM0QWzcU8xZtmu3DGepStepAxaiHGE7aG4OvOMecl0oVfNPax/yZYK28tEFTftE86o6Pxn/Gx7fy32LluJZ7Lznt8Tq4pXxPUTl0RimLMENTvqhn/epITZ5zoOTBtscxdLMeA0Ux6IBqQv21M4TRUSSxNuusyobWwWU1H/Sg/Yyyw1a8+tp3v6r5KK0ZVbLDluDxadBYsY//QRx8TkLMHD8HBOQgy3/H1haQ6MHcJ//Il7EX9NnXhA=</source>
   </file>
-  <file path="Normalizer/JsonSerializableNormalizer.php" generated-path="Normalizer.JsonSerializableNormalizer.html" hash="b84fee8cde99b18bc4363a5e85bfacf9" package="Default">
+  <file path="Normalizer/JsonSerializableNormalizer.php" generated-path="Normalizer.JsonSerializableNormalizer.html" hash="811d847a07d8e31b0be739abcc3e5c75" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -8082,31 +8047,37 @@ it shows the number of digits past the decimal point for each currency (2 for th
     <namespace-alias name="MaskPositionType">\TgBotApi\BotApiBase\Type\MaskPositionType</namespace-alias>
     <namespace-alias name="ReplyKeyboardMarkupType">\TgBotApi\BotApiBase\Type\ReplyKeyboardMarkupType</namespace-alias>
     <namespace-alias name="ReplyKeyboardRemoveType">\TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="15" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="18" package="Default">
       <extends/>
       <implements>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</implements>
       <name>JsonSerializableNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer</full_name>
-      <docblock line="15">
-        <description></description>
+      <docblock line="18">
+        <description>Class JsonSerializableNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="15" description="Default"/>
+        <tag name="package" line="18" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="17" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="23" package="Default">
         <name>$objectNormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer::objectNormalizer</full_name>
         <default></default>
-        <docblock line="17">
+        <docblock line="23">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="23" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="19" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="29" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer::__construct()</full_name>
-        <docblock line="19">
-          <description></description>
+        <docblock line="29">
+          <description>JsonSerializableNormalizer constructor.</description>
           <long-description></long-description>
+          <tag name="param" line="29" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="$objectNormalizer">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$objectNormalizer</name>
@@ -8114,22 +8085,39 @@ it shows the number of digits past the decimal point for each currency (2 for th
           <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="24" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="40" package="Default">
         <name>normalize</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer::normalize()</full_name>
-        <docblock line="24">
+        <docblock line="40">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="40" description="" type="mixed" variable="$topic">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="40" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="40" description="" type="array" variable="$context">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="40" description="" type="array|boolean|false|float|integer|string">
+            <type>array</type>
+            <type>boolean</type>
+            <type>false</type>
+            <type>float</type>
+            <type>integer</type>
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$topic</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$context</name>
@@ -8137,40 +8125,41 @@ it shows the number of digits past the decimal point for each currency (2 for th
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="31" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="52" package="Default">
         <name>supportsNormalization</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer::supportsNormalization()</full_name>
-        <docblock line="31">
+        <docblock line="52">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="52" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="52" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="52" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="15" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer</error>
-      <error line="19" code="PPC:ERR-50015">Argument $objectNormalizer is missing from the Docblock of __construct</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="24" code="PPC:ERR-50015">Argument $topic is missing from the Docblock of normalize</error>
-      <error line="24" code="PPC:ERR-50015">Argument $format is missing from the Docblock of normalize</error>
-      <error line="24" code="PPC:ERR-50015">Argument $context is missing from the Docblock of normalize</error>
-      <error line="24" code="PPC:ERR-50008">No summary for method normalize()</error>
-      <error line="31" code="PPC:ERR-50015">Argument $data is missing from the Docblock of supportsNormalization</error>
-      <error line="31" code="PPC:ERR-50015">Argument $format is missing from the Docblock of supportsNormalization</error>
-      <error line="31" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
-      <error line="17" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
+      <error line="40" code="PPC:ERR-50008">No summary for method normalize()</error>
+      <error line="52" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
     </parse_markers>
-    <source>eJyVVE1P4zAQvedXzCESiQQHztCuFiQkdgVaAbemilx3AqaOx/JHd7ML/33thBJIUwq+xHbem3l+M/bpN/2gk2SJXDKDmXVGcFe6RqOdHOcnSaJYjVYzjnB3f0buuxZF9zljFotrMjWT4i+aAPUW4bapK1JNcU61JoXKFbdoRAd5g34zvVQOTRUSnOwP0E878Jiku6C9uCDD8Qa1bOJyD/hSSaHwJzYLYmZ5xczK60/Qrphd/SIrnCD1CXir5stJ3rFusKY1dqwkFMxa+GFJbVxhC4m9ryBqLbEODloYcTv5l0AY2og1cwgpLR6Ru3f1bP/7hRQcKq94PCeUJScVusRzl41E3Y6Tt2G6ZHGk7kHYo+kQBpMxCZHwPC5EbWBZ6kgLfghpFbdciKS8lIfAjGENpEGvwz9xezbfEmNfGyrS8Df0HZbNdkid5y/exGHQeaOgeAx1KFFxWgZBfdSj6bbOTt3swK6ELuOiXDPp0R7AZArBWZzn+YdHt15rMs5uJLG4m6VL5tjQheGBX+S2WBChkExxpAp2XQF4enrltoYNiTu6+mu8vq/38oaXbi9h+BJ0vj4n/wHuh7jQ</source>
+    <source>eJyVVE1v2zAMvftX6BCgdtA22HVdsrUFBnRDh6HtLQ4MRqFbNbIkSHJWr+5/r2QnceN8ONXFH+QjHx8pfvuunlQQzJBy0Bgaqxm1iS0UmuGX6CIIBGRoFFAkD49X0l4qFtePKzAY/5E6A87+o3auuUFyX2SpFEV8LTMlBQob36NmtcsH7w+vN8KiTl2Ci+4AzWvtvIvSg+Me/5Sa4h0qXvjPDucbwZnA31hMJejZLeh5ro6A3YKZ/5WGWSbFEe4Vm08n2UDdYSYXWKOCQb8fkD655mAM+WWkWIkDU46NvM5nENAOJ8IyxTFzahuyozPBa0DcqTL60yc/FqB3etb2QfVUmi3AIunJ6TNSuzErrXgHqFEp3FTm1Ep9vk6vQEO2i8B2sk1K+ZQzStJcUN82kiTr8OFR0aIqTK2HPz37xMzZqO1Ghruq9oC3rdqXxWTsBWcunlSMtkwi55z0Uh/JtkygNRSk56qw+NIYNdpci9paTqXkZQrcYJlyCbZkwpb+povHg+KIFfWwZnW64uCq85ROW9nd7/FkSyCzvrMehv9Ic4nD8R75JtFyRPxZ1hI/uxlJUFA5c4SaqGejbZ41u/GJmTOV+I9kATxHc0KGI+K6jZMoOq4dM7BwTDeWJL3UBzU1uVJSW7OqFfzfsErTljf62oR7batRIQhzswuCokzJviVGynKNrfrRBu7ZS5/DNZupE9dem52A9i6v2/YWvAMJ1D3l</source>
   </file>
   <file path="Method/GetMeMethod.php" generated-path="Method.GetMeMethod.html" hash="1fb8f79ed3aa802d7191c560a797d391" package="Default">
     <docblock line="0">
@@ -8975,7 +8964,7 @@ can be repeated.</description>
     </parse_markers>
     <source>eJydkc9KAzEQxu95igEFdZENXv2DtUXBi162t4Kku7PbQJrETFYQFfoY+np9EidrK2pXheYyZDLf95uZnJ77mReiwtKogPsUgy7jXXz0SGdHBydCWDVH8qpEKJqhixdeTz7CUBFOCi7kIpllAjIYGUUEY8KQ8jmnUnZAiDCL0dOxlKULmEc02AQ1z11o5NRFksrrnZZ1XC9F+c1GPAng0yHSyWBs9X2LoCu0UdcaA9QuQJxpguQBfGHTfFW+Vg0eVABt4+ouu+jbqdEl7OqKp/iBKUKLh6DrL84c1a/eU+dMvznxxjb904DLxSut+l0u3ghqHShC2nkvIn2PbXohnfKGhZugWx+1s8rkvUhe9r/EZ9ua/tmSehtqWufW0LX4L+j1ZXHFs9mmVQ1CVA249JPYkffo82nLqT/EI1dxEy/iHXeK78E=</source>
   </file>
-  <file path="BotApi.php" generated-path="BotApi.html" hash="ac8f852d9607955884f6fd627dbf263e" package="Default">
+  <file path="BotApi.php" generated-path="BotApi.html" hash="e634445049f5d1f7c6442abb0dba14de" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -8990,80 +8979,85 @@ can be repeated.</description>
     <namespace-alias name="GetMethodTrait">\TgBotApi\BotApiBase\Traits\GetMethodTrait</namespace-alias>
     <namespace-alias name="FileType">\TgBotApi\BotApiBase\Type\FileType</namespace-alias>
     <namespace-alias name="MessageType">\TgBotApi\BotApiBase\Type\MessageType</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase" line="20" package="Default">
+    <namespace-alias name="sprintf">\sprintf</namespace-alias>
+    <namespace-alias name="lcfirst">\lcfirst</namespace-alias>
+    <namespace-alias name="substr">\substr</namespace-alias>
+    <namespace-alias name="get_class">\get_class</namespace-alias>
+    <namespace-alias name="strrpos">\strrpos</namespace-alias>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase" line="25" package="Default">
       <extends/>
       <implements>\TgBotApi\BotApiBase\BotApiInterface</implements>
       <name>BotApi</name>
       <full_name>\TgBotApi\BotApiBase\BotApi</full_name>
-      <docblock line="20">
+      <docblock line="25">
         <description>Class BotApi.</description>
         <long-description></long-description>
-        <tag name="package" line="20" description="Default"/>
+        <tag name="package" line="25" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="27" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="32" package="Default">
         <name>$botKey</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::botKey</full_name>
-        <default></default>
-        <docblock line="27">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="27" description="" type="string" variable="">
-            <type>string</type>
-          </tag>
-        </docblock>
-      </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="32" package="Default">
-        <name>$apiClient</name>
-        <full_name>\TgBotApi\BotApiBase\BotApi::apiClient</full_name>
         <default></default>
         <docblock line="32">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="32" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="">
-            <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
+          <tag name="var" line="32" description="" type="string" variable="">
+            <type>string</type>
           </tag>
         </docblock>
       </property>
       <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="37" package="Default">
-        <name>$endPoint</name>
-        <full_name>\TgBotApi\BotApiBase\BotApi::endPoint</full_name>
+        <name>$apiClient</name>
+        <full_name>\TgBotApi\BotApiBase\BotApi::apiClient</full_name>
         <default></default>
         <docblock line="37">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="37" description="" type="string" variable="">
-            <type>string</type>
+          <tag name="var" line="37" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="">
+            <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
           </tag>
         </docblock>
       </property>
       <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="42" package="Default">
-        <name>$normalizer</name>
-        <full_name>\TgBotApi\BotApiBase\BotApi::normalizer</full_name>
+        <name>$endPoint</name>
+        <full_name>\TgBotApi\BotApiBase\BotApi::endPoint</full_name>
         <default></default>
         <docblock line="42">
           <description></description>
           <long-description></long-description>
-          <tag name="var" line="42" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="">
+          <tag name="var" line="42" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="47" package="Default">
+        <name>$normalizer</name>
+        <full_name>\TgBotApi\BotApiBase\BotApi::normalizer</full_name>
+        <default></default>
+        <docblock line="47">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="47" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="">
             <type>\TgBotApi\BotApiBase\NormalizerInterface</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="52" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="57" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::__construct()</full_name>
-        <docblock line="52">
+        <docblock line="57">
           <description>BotApi constructor.</description>
           <long-description></long-description>
-          <tag name="param" line="52" description="" type="string" variable="$botKey">
+          <tag name="param" line="57" description="" type="string" variable="$botKey">
             <type>string</type>
           </tag>
-          <tag name="param" line="52" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="$apiClient">
+          <tag name="param" line="57" description="" type="\TgBotApi\BotApiBase\ApiClientInterface" variable="$apiClient">
             <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
           </tag>
-          <tag name="param" line="52" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="$normalizer">
+          <tag name="param" line="57" description="" type="\TgBotApi\BotApiBase\NormalizerInterface" variable="$normalizer">
             <type>\TgBotApi\BotApiBase\NormalizerInterface</type>
           </tag>
-          <tag name="param" line="52" description="" type="string" variable="$endPoint">
+          <tag name="param" line="57" description="" type="string" variable="$endPoint">
             <type>string</type>
           </tag>
         </docblock>
@@ -9088,21 +9082,21 @@ can be repeated.</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="75" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="80" package="Default">
         <name>call</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::call()</full_name>
-        <docblock line="75">
+        <docblock line="80">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="75" description="" type="" variable="$method"/>
-          <tag name="param" line="75" description="" type="string|null" variable="$type">
+          <tag name="param" line="80" description="" type="" variable="$method"/>
+          <tag name="param" line="80" description="" type="string|null" variable="$type">
             <type>string</type>
             <type>null</type>
           </tag>
-          <tag name="throws" line="75" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="80" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="75" description="" type="mixed">
+          <tag name="return" line="80" description="" type="mixed">
             <type>mixed</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::call()" refers="\TgBotApi\BotApiBase\BotApiInterface::call()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_call"/>
@@ -9118,19 +9112,19 @@ can be repeated.</description>
           <type>string|null</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="93" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="98" package="Default">
         <name>exportChatInviteLink</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::exportChatInviteLink()</full_name>
-        <docblock line="93">
+        <docblock line="98">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="93" description="" type="\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod" variable="$method">
+          <tag name="param" line="98" description="" type="\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod</type>
           </tag>
-          <tag name="throws" line="93" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="98" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="93" description="" type="string">
+          <tag name="return" line="98" description="" type="string">
             <type>string</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::exportChatInviteLink()" refers="\TgBotApi\BotApiBase\BotApiInterface::exportChatInviteLink()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_exportChatInviteLink"/>
@@ -9141,19 +9135,19 @@ can be repeated.</description>
           <type>\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="105" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="110" package="Default">
         <name>sendChatAction</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::sendChatAction()</full_name>
-        <docblock line="105">
+        <docblock line="110">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="105" description="" type="\TgBotApi\BotApiBase\Method\SendChatActionMethod" variable="$method">
+          <tag name="param" line="110" description="" type="\TgBotApi\BotApiBase\Method\SendChatActionMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\SendChatActionMethod</type>
           </tag>
-          <tag name="throws" line="105" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="110" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="105" description="" type="boolean">
+          <tag name="return" line="110" description="" type="boolean">
             <type>boolean</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::sendChatAction()" refers="\TgBotApi\BotApiBase\BotApiInterface::sendChatAction()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_sendChatAction"/>
@@ -9164,19 +9158,19 @@ can be repeated.</description>
           <type>\TgBotApi\BotApiBase\Method\SendChatActionMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="117" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="122" package="Default">
         <name>sendMediaGroup</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::sendMediaGroup()</full_name>
-        <docblock line="117">
+        <docblock line="122">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="117" description="" type="\TgBotApi\BotApiBase\Method\SendMediaGroupMethod" variable="$method">
+          <tag name="param" line="122" description="" type="\TgBotApi\BotApiBase\Method\SendMediaGroupMethod" variable="$method">
             <type>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</type>
           </tag>
-          <tag name="throws" line="117" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="122" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
-          <tag name="return" line="117" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;">
+          <tag name="return" line="122" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageType&gt;</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::sendMediaGroup()" refers="\TgBotApi\BotApiBase\BotApiInterface::sendMediaGroup()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_sendMediaGroup"/>
@@ -9187,16 +9181,16 @@ can be repeated.</description>
           <type>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="127" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="132" package="Default">
         <name>getAbsoluteFilePath</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::getAbsoluteFilePath()</full_name>
-        <docblock line="127">
+        <docblock line="132">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="127" description="" type="\TgBotApi\BotApiBase\Type\FileType" variable="$file">
+          <tag name="param" line="132" description="" type="\TgBotApi\BotApiBase\Type\FileType" variable="$file">
             <type>\TgBotApi\BotApiBase\Type\FileType</type>
           </tag>
-          <tag name="return" line="127" description="" type="string">
+          <tag name="return" line="132" description="" type="string">
             <type>string</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\BotApiInterface::getAbsoluteFilePath()" refers="\TgBotApi\BotApiBase\BotApiInterface::getAbsoluteFilePath()" link="/classes/TgBotApi.BotApiBase.BotApiInterface.html#method_getAbsoluteFilePath"/>
@@ -9207,14 +9201,14 @@ can be repeated.</description>
           <type>\TgBotApi\BotApiBase\Type\FileType</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="142" package="Default">
+      <method final="false" abstract="false" static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="147" package="Default">
         <name>getMethodName</name>
         <full_name>\TgBotApi\BotApiBase\BotApi::getMethodName()</full_name>
-        <docblock line="142">
+        <docblock line="147">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="142" description="" type="" variable="$method"/>
-          <tag name="return" line="142" description="" type="string">
+          <tag name="param" line="147" description="" type="" variable="$method"/>
+          <tag name="return" line="147" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -9900,18 +9894,18 @@ can be repeated.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="75" code="PPC:ERR-50008">No summary for method call()</error>
-      <error line="93" code="PPC:ERR-50008">No summary for method exportChatInviteLink()</error>
-      <error line="105" code="PPC:ERR-50008">No summary for method sendChatAction()</error>
-      <error line="117" code="PPC:ERR-50008">No summary for method sendMediaGroup()</error>
-      <error line="127" code="PPC:ERR-50008">No summary for method getAbsoluteFilePath()</error>
-      <error line="142" code="PPC:ERR-50008">No summary for method getMethodName()</error>
-      <error line="27" code="PPC:ERR-50007">No summary for property $botKey</error>
-      <error line="32" code="PPC:ERR-50007">No summary for property $apiClient</error>
-      <error line="37" code="PPC:ERR-50007">No summary for property $endPoint</error>
-      <error line="42" code="PPC:ERR-50007">No summary for property $normalizer</error>
+      <error line="80" code="PPC:ERR-50008">No summary for method call()</error>
+      <error line="98" code="PPC:ERR-50008">No summary for method exportChatInviteLink()</error>
+      <error line="110" code="PPC:ERR-50008">No summary for method sendChatAction()</error>
+      <error line="122" code="PPC:ERR-50008">No summary for method sendMediaGroup()</error>
+      <error line="132" code="PPC:ERR-50008">No summary for method getAbsoluteFilePath()</error>
+      <error line="147" code="PPC:ERR-50008">No summary for method getMethodName()</error>
+      <error line="32" code="PPC:ERR-50007">No summary for property $botKey</error>
+      <error line="37" code="PPC:ERR-50007">No summary for property $apiClient</error>
+      <error line="42" code="PPC:ERR-50007">No summary for property $endPoint</error>
+      <error line="47" code="PPC:ERR-50007">No summary for property $normalizer</error>
     </parse_markers>
-    <source>eJytVl1P2zAUfc+v8CRQEtYP8VpWGCCG0AZCG28EITe5bT1cO7IdPsb477MT5zttOkReEl2fc33u8Y3tL0fxMnacCEKKBXhSCRKqe/USg5zu+weOw/AKZIxDQDeLE66OYxJkrxMsQY8nsnMkOHsOIVaEs+Cn5nMmoYgcrCVdglrySHNjLtTpEqsL9kgU/CDsIRvqpV4wBWKu5UobKQK91F/AIjPncWhEbjmfIV1CRPC54EncR7oRmCgZHFOCZYZNI72Ec1DbwfW6Bd8IBfPRA7sEKfHCIp3x3p6D9tApxVKiDDrSgbETViKIrGIKK2AqjxTuOq8O0o+ZsV1dPtIsw8TTic2zh74+YoFMB7KFDY3TdyzII1aAdmZcfYcXrbaLqNWcUqK1lZo6k+ActybPJgF6sa85WUu94mKFKfkDokcDK4DtTNbqUP8ySiSh4mJkh4q5YizwygpFtcda1EC2rUEVHxrgjiKqgrcRkdtULz6ZURKiecLS/wvd3xclek5OtelsGYMi3lFBWUAJ69E+aM2TK0VT5C6ViuVkPNZ5RwooLHR9Iy4Wbsry0WvB3lFLIoeHmUhNLRqzASgUGkyl7xqwUqDBVXujAayobbZi16zDQwnqJJXmWYn+eo0p+oxFscnqFfkt463d8VkD7KzSP7qzLf6yhFI9kd5imi2sloI/SdQ6G5o4ASoRDK3IM0Qb2ynElHqNLT8XNyjW20jR7hldfpqmsqi/pU4z7fSFRZ4NL/It7Eqfi57N7w/aS1n5LmB+ZbHIHHm6+QF9mk6zuYeH/KHaZeZJbUIMntpOeZYUgQwFSUOV1X0rZ7IWZrUfdSmNoKI1yypAJlQNMpaPJqgW7+mJ9ed3o13e2w5de3SjH6BDg9cvzJ9Uk7+2TUzNS5stZ/SY0XWt+CAbZpzTjSbI2tzeJim68CLdR5XdvBh9UNmVm8vtXW/9pQhvkyZdPxYCv2xtwKCqYzLJ7kkj5N7euX3e5Dc0tDPXX+/vcb0ZHc8kp4kCk/Iaq6VXz93TzoHUVxKm5uUBbB53V44NeazPDP25K91BbbxxGnUONg/wdMgkHR7OrdRi7P+OmG18svesqlEdu3aPNzScEyGVF8hkpoF1jwKd8j5d8/IQqAM0RcRcel1I5AaB66PPaL9OGu7rwgyTAvPcTLLrl0YVTr05/wCJnx+C</source>
+    <source>eJytVm1P2zAQ/p5f4UlFTVhftC/7UFYYIIbQBkIb3yhCbnJtPVI7sh1exvjvs/PiOE7aMES+NLp77u65x9f4vhwkq8TzIghjzMEXkpNQ3sqnBMT0U7DneRSvQSQ4BHS1PGLyMCGz/OcIC1D+VLR6ZiePISSSMDr7qeIZFWAsexuDzkGuWKRiE8bl8QrLM3pPJPwg9C53dYaeUQl8oeiKwmIMnaG/gEa65mGoSb6yng46h4jgU87SpCvoimMixewwJljk2MzSGXAK8nVwdW6zbyQG/dIBOwch8NJCLlKadY5EwgmVC8cahwvChXSx6VzNjGNcgrxV8ySEC5acJ0xZvfHurod20bEGoZzZSBnGXmhZEFknMayBytJiDtN79pB6dPammKXHVU3bs8L62UVf7zHXlAhdFqZx9qu6v8cSUG/O5Hd4UmzbAhWb45gobhWn1iS4xG3Is42Amq1LRjaGXjC+xjH5A7yDAzXAZqZC6lD9QyVPQ8n4qHCZWgnmeF0QLVVxnE01rM4dbAttm+KGsqUW9Q7TeUzCasBub00ffg5UT534wNi3cq5gHXQHjTolUzRF/ZWUiZiMxyrvSEIMS9XSiPFlP4sK0LOJ7skVEcP9nKQKNdPnAAxDjbGGy4FVBDXOHgAHaLF1562t6nBfgDzKqPkFxWAzxwx9QqNEZ/VN/iLipTnW+Zn31tnftnUS/tI0jlUh9dly51SuOHsQqHHfuDgOMuUUrckjRFvHKcRx7DvXSEluYM5bU1HqaV5BlsY61N9CpZm26kIjvzAvy+/Uhbpr/SJ/MGgepfVuYIF1WGSBfDX8gD5Mp3nt4T67s6dMP5lMiMJDUym/CIpAhJxkJut0X6pKhYR57wdtTCOwuOZZOYg0loM8KkATVLN3zMTmncAZl7eOQ9uH2JkHaOHgdxMLJnby56aImXjZsJURHWK0rSrvJMOcsXirCKJW299GRTVu0r1X2+6y9U5tW9vQ9U1n/xUJfxsn1T/mHD+9WoCBzWMyyZehEepf3/S7tCm3PtRbqLe3z7j6GB3OBYtTCTrlJZYrv567Y5yL7bG6f/XT3xFjHTtWV4Z63RH9Qc3vXEatTvf+zlw66XB/UTA1vv+7YV4jU7FL2Tq1fLS3S1Os0H6+NNcVMjtzdQHU/MXu7LfgUH826wfoI/pUDxl+rvQwgrx4/wAbbT0r</source>
   </file>
   <file path="Type/OrderInfoType.php" generated-path="Type.OrderInfoType.html" hash="1402d034a4f36ed195a8607945353cbb" package="Default">
     <docblock line="0">
@@ -16212,7 +16206,7 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJy1UTtPwzAQ3v0rbuiQRoKIlfBqEQMDC+oYCTnulVhKbMt3ESDU/47jpEEU0nbhFkv33fe489Wtq5wQa1S19JgQe634hT8c0vXFPBfCyAbJSYWwel1aXjhd9M9SEhYrLzVTGGvp74GHd4WOtTXFc5CxhnDs5JOkJ+TKrotHw+g3wZo6ckzWI4taSxrRozo78n0lg0BTou+BEDtLUwEpxDXgp0nsnQc0EzwFi08BoaJKVyncOellA4fywqyJ3YEyMrny9o3g15325zxy6w2U1tZDL4uvLIOnVAyuLWutYNMa1fHBD2GSU1LNL6NyuM3hzfaP+V9bTS3z7Z8cizSsFOX6D+tqMJxxpensZrzRjpPHwa3Yii+IuQes</source>
   </file>
-  <file path="Normalizer/InputMediaNormalizer.php" generated-path="Normalizer.InputMediaNormalizer.html" hash="81dd622eadf78717199a3bacf1d8c0df" package="Default">
+  <file path="Normalizer/InputMediaNormalizer.php" generated-path="Normalizer.InputMediaNormalizer.html" hash="1a6c96113f669a60ce7281e075b193a7" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -16223,40 +16217,48 @@ fixed-width text or inline URLs in the media caption.</description>
     <namespace-alias name="InputFileType">\TgBotApi\BotApiBase\Type\InputFileType</namespace-alias>
     <namespace-alias name="InputMediaPhotoType">\TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType</namespace-alias>
     <namespace-alias name="InputMediaVideoType">\TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="13" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="16" package="Default">
       <extends/>
       <implements>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</implements>
       <name>InputMediaNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer</full_name>
-      <docblock line="13">
-        <description></description>
+      <docblock line="16">
+        <description>Class InputMediaNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="13" description="Default"/>
+        <tag name="package" line="16" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="15" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="21" package="Default">
         <name>$files</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer::files</full_name>
         <default></default>
-        <docblock line="15">
+        <docblock line="21">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="21" description="" type="" variable=""/>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="16" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="25" package="Default">
         <name>$objectNormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer::objectNormalizer</full_name>
         <default></default>
-        <docblock line="16">
+        <docblock line="25">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="25" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="18" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="32" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer::__construct()</full_name>
-        <docblock line="18">
-          <description></description>
+        <docblock line="32">
+          <description>InputMediaNormalizer constructor.</description>
           <long-description></long-description>
+          <tag name="param" line="32" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="$objectNormalizer">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
+          <tag name="param" line="32" description="" type="" variable="$files"/>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$objectNormalizer</name>
@@ -16269,22 +16271,39 @@ fixed-width text or inline URLs in the media caption.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="24" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="44" package="Default">
         <name>normalize</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer::normalize()</full_name>
-        <docblock line="24">
+        <docblock line="44">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="44" description="" type="mixed" variable="$topic">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="44" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="44" description="" type="array" variable="$context">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="44" description="" type="array|boolean|float|integer|mixed|string">
+            <type>array</type>
+            <type>boolean</type>
+            <type>float</type>
+            <type>integer</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$topic</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$context</name>
@@ -16292,42 +16311,42 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="43" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="68" package="Default">
         <name>supportsNormalization</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer::supportsNormalization()</full_name>
-        <docblock line="43">
+        <docblock line="68">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="68" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="68" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="68" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="13" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer</error>
-      <error line="18" code="PPC:ERR-50015">Argument $objectNormalizer is missing from the Docblock of __construct</error>
-      <error line="18" code="PPC:ERR-50015">Argument $files is missing from the Docblock of __construct</error>
-      <error line="18" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="24" code="PPC:ERR-50015">Argument $topic is missing from the Docblock of normalize</error>
-      <error line="24" code="PPC:ERR-50015">Argument $format is missing from the Docblock of normalize</error>
-      <error line="24" code="PPC:ERR-50015">Argument $context is missing from the Docblock of normalize</error>
-      <error line="24" code="PPC:ERR-50008">No summary for method normalize()</error>
-      <error line="43" code="PPC:ERR-50015">Argument $data is missing from the Docblock of supportsNormalization</error>
-      <error line="43" code="PPC:ERR-50015">Argument $format is missing from the Docblock of supportsNormalization</error>
-      <error line="43" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
-      <error line="15" code="PPC:ERR-50007">No summary for property $files</error>
-      <error line="16" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
+      <error line="44" code="PPC:ERR-50008">No summary for method normalize()</error>
+      <error line="68" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
+      <error line="21" code="PPC:ERR-50007">No summary for property $files</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
     </parse_markers>
-    <source>eJy9VE2P0zAQvedXzCFqEqllxZXSIhYJaQ8gpF1xaarIdSdbQ2Ibe7xsYfe/4yRt89EsH3sglziT92beG4/9+o3e6SDYIi+YwdiSEZwy2mu0i5fJPAgkK9FqxhFubi8VvdUibV6XzGL6UZmSFeIHGg91FuF6X+ZK7tN3qtRKoqT0Go1oIB10Z3klCU3uC8z/nKBdNuAxSTdee3oltaP3osDq62+wH3ArWGf5aadIPZf8WWzxQA58X62F9l9rHESpCyy9RQsj7Qh+BuAfbcQdI4Qw927svB9Tmy/IqbcJ9X+3KQSH3ElOQknIMq6k31rHKR6pdJ5nCpOmXlLna5RUT0g7YWfLIR4WY1oGpDqhR066Vh7HFctjmjgkpQWfev9ViDxfuqKYAjOG7SH0xgjvq/BqPRQrcjjQZ8uy6j0I3wUmOaocehOSdFi1YifFN7H1WdNmFSfzPqBjaXVAr6sudMsNKV0lC4gYEeO7VxcXEbw4Vmwph8YcfaTaKI2G9hneC0v21JeIdq7cRAlMJqcSdej/ma3LjZttlPyL2dCezni11/gd2kMfr56Yv3UybzMYJGdkN9FseT5PzRStIvtV6Kz6yO5Y4dBGsFiCPyq4Tn47odZprQzZowhWReNwy4gNh3U4l0eBFfZsl/q3Dzw89Pv6NKdz6TSyH4NfZkvoLA==</source>
+    <source>eJy9VU1z2jAQvftX7IHBmCFheg2FtslMZ3JopzPJ9IIZRph1UGtLqrROQ+P890q2wcaYlPZQXSxrP96+t1r77Tu1UZ63xihhGgeGNI9oSVuFZvommHieYCkaxSKE+4drSR8UD8vHNTMYfpY6ZQn/hdq6ZgbhbpvGUmzDG5kqKVBQeIealy4N78b2VhDq2AJM/pyg3pbOXSXd29rDW6Ey+sgTdG/n+H7CNWeN7ZeNJPmvwV/5GqtgbzwcejCEm4QZA7VLzd9ax1500gw8VQmmVggDHaJ5zx7YVaC4NYT3j0xX+3HxVJo/MkLoxVYPM+ny78zcmUOuvmFEB21v5eskEUlhr1YWkdSXe2DFNEu7oI9hWjEllcMKs1XCI4gzERGXApbLPebgLIgR9Mu0QZGv1NWtHm24uZi1/WHapUYrqEhoPftN8V+ONKtopfwJ1zZUKh61TCJLEkvbIVHLxLRmW+hZuoRPtVEjZVqU1nwlZZLHiWSUc0F5AZS7YRcPr6oodtQGZVWjXQ2Wkytp1EK3x/NFW0AeQxV+MUvdxQBuO8NEhDKGg0kNGlGFipngP/jaZg3L3cD3R2CbisHk0LEh97yKWrgONWHbIc2KpuAzIhZtrsZjHy53yHVI1bQdn1BpqVDTdolP3JDZ6+PTJktXfgD9/h6iOPr/pAvYbtJlRX9Dumf2317Xe/wJ9cd4MD8xI4tgUmeoLmQj0cXs+H6Vt2rum+9cLd3L8pElGRofprNChEVw3hStGbFzhqgqy03Iq6NgMqWkJrNjx9zpoIBpT0VwVad7PuLvIo4uw+FPB/L8sG2nYxr/mlKVF+83QRV3KA==</source>
   </file>
   <file path="Method/AnswerPreCheckoutQueryMethod.php" generated-path="Method.AnswerPreCheckoutQueryMethod.html" hash="c154fa6acf5f3d9209d230659d837419" package="Default">
     <docblock line="0">
@@ -17703,7 +17722,7 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </parse_markers>
     <source>eJy1UU1PwzAMvedX+LDDVgkqrpSvTeKANC6wYyWUZt4aqU2i2OVDaP+dNC1FgpZxwRcr9nv2e87FtSudEFtUlfQ4J/Za8RO/OaTLs0UmhJE1kpMKYbNfWV46nXdpJQnzjZeaKcAaGgfcvip0rK3JH8IYawiHSjZJukcu7Ta/M4x+F1ZT/sjWddVlpSUNnaMzOiKR3ONaP+PaKtnu7rpBd5okAhKIPuBrS3yfhk4qeKwl3gWEiOw2Erhx0ssapoTCrI7VHj6wuPT2heDHcb7jPHLjDRTWVn0tjVkW4cukYnBNUWkFu8aolg8UhMyPqVmcx4nhDr+5mbjef1kaczIiYv4ncb3DOLj7szb61TMuNZ1cxVN94rMIOoiD+AC7SAQ2</source>
   </file>
-  <file path="Normalizer/AnswerInlineQueryNormalizer.php" generated-path="Normalizer.AnswerInlineQueryNormalizer.html" hash="e969964a238b2b85b9ae4ed0bad2b257" package="Default">
+  <file path="Normalizer/AnswerInlineQueryNormalizer.php" generated-path="Normalizer.AnswerInlineQueryNormalizer.html" hash="985a679f0c2cdf500127847840a93e5d" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -17713,31 +17732,37 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     <namespace-alias name="NormalizerInterface">\Symfony\Component\Serializer\Normalizer\NormalizerInterface</namespace-alias>
     <namespace-alias name="Serializer">\Symfony\Component\Serializer\Serializer</namespace-alias>
     <namespace-alias name="AnswerInlineQueryMethod">\TgBotApi\BotApiBase\Method\AnswerInlineQueryMethod</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="12" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="15" package="Default">
       <extends/>
       <implements>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</implements>
       <name>AnswerInlineQueryNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer</full_name>
-      <docblock line="12">
-        <description></description>
+      <docblock line="15">
+        <description>Class AnswerInlineQueryNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="12" description="Default"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="14" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="20" package="Default">
         <name>$objectNormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer::objectNormalizer</full_name>
         <default></default>
-        <docblock line="14">
+        <docblock line="20">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="20" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="16" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="26" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer::__construct()</full_name>
-        <docblock line="16">
-          <description></description>
+        <docblock line="26">
+          <description>AnswerInlineQueryNormalizer constructor.</description>
           <long-description></long-description>
+          <tag name="param" line="26" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="$objectNormalizer">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$objectNormalizer</name>
@@ -17745,22 +17770,39 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
           <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="21" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="37" package="Default">
         <name>normalize</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer::normalize()</full_name>
-        <docblock line="21">
+        <docblock line="37">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="37" description="" type="mixed" variable="$topic">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="37" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="37" description="" type="array" variable="$context">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="37" description="" type="array|boolean|float|integer|mixed|string">
+            <type>array</type>
+            <type>boolean</type>
+            <type>float</type>
+            <type>integer</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$topic</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$context</name>
@@ -17768,40 +17810,41 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="38" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="59" package="Default">
         <name>supportsNormalization</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer::supportsNormalization()</full_name>
-        <docblock line="38">
+        <docblock line="59">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="59" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="59" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="59" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="12" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer</error>
-      <error line="16" code="PPC:ERR-50015">Argument $objectNormalizer is missing from the Docblock of __construct</error>
-      <error line="16" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="21" code="PPC:ERR-50015">Argument $topic is missing from the Docblock of normalize</error>
-      <error line="21" code="PPC:ERR-50015">Argument $format is missing from the Docblock of normalize</error>
-      <error line="21" code="PPC:ERR-50015">Argument $context is missing from the Docblock of normalize</error>
-      <error line="21" code="PPC:ERR-50008">No summary for method normalize()</error>
-      <error line="38" code="PPC:ERR-50015">Argument $data is missing from the Docblock of supportsNormalization</error>
-      <error line="38" code="PPC:ERR-50015">Argument $format is missing from the Docblock of supportsNormalization</error>
-      <error line="38" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
-      <error line="14" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
+      <error line="37" code="PPC:ERR-50008">No summary for method normalize()</error>
+      <error line="59" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
+      <error line="20" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
     </parse_markers>
-    <source>eJy9U02P0zAQvedXzCFSEyk9cF1oUZcPCaEFwZYDaqrI606oF8e27PEuAe1/X7uhTdsEtFzwJc74zfN7M+MXL83WJMkGuWQWM0dWcKqoNehmz/LnSaJYg84wjrD8dqlpYUTZfS6Zw/KDtg2T4ifaAPUO4bptaq3a8pVujFaoqLxGKzrIEbp8zQiXosFjgn/J77fvFKGtg8AnEPTbDjxm6QppqzflQrn7SC6Fwk8ebdvFg81QKedgcN4rAtEYiU2428GIzuRXAmEZK+5CESDVN7fI6aSSu3N/IwWH2itOQiuoKq5V6I/nlI2wDnnyHU13WVwpbYWbzs9hMBuTEBMexoWoPSxLSRvBC0jrGKLApLyUBTBrWQtp0Ev4I4ZX64EYd2hFTMN76HuTreL/cEKyvPiTiXX+u2qd0ShrOrfovAw9mEF567SqUHG9Car7q6fz3swhfYSiODncmTyJrCbuuzBVPKjumPToJjCbQ2gWFiNGLi7efvx8tVhW7998jbjJl8n6wJcfW7FI3ip4uuT/qvSvY+K8MdqS25OxGM3SDSN2PjHnw7F3HbEgwtAzxVHXwze3f5OdjIfkEcLUlQI=</source>
+    <source>eJy9VMGO0zAQvecrfKjUpGqpuBZa6C4gIbQg2HJATRW5zmTrxbEt2+lu2ey/Yydt0yahhAu+JPG8efPeZOzXb+RGel4MhGEFvjaKEhOZnQQ9fRm88jyOU9ASE0CLuyth5pKG5eMKawg/C5ViRn+BstBMA7rdpYngu/BapFJw4Ca8BUVLyAk6fIcNLGgKpwT/kl+9fuQGVGIFdiCoXktwm6UbMBsRh3OuHxw5oxy+ZqB25b61OR4MPDRA1wxrjRqwSpgFjT3yNxSiqWSQWqEatZjynjxkV1HTrQF6u8WqFVnGx8VTKrq1HUY9sb4HYs5+U43vkjYiuJ2IjBihXhzrS6xw2qagWe1cU7ZmlKAk48RQwVEUHen9TmxBQVM2xK2e2VA9mtVhaNpm2yU8N8zvzaT0EWLLJyQltRDPGEO9xDGZWggrhXeoZ10YeKyCCkymeBnN10KwPGECm5xykxeFcnfK+N3F5vCDdL9UNTxosO6cpGGtut1erhoN0sd5d2nwgKoD4C/dd/MY+sHwT41dBfvpKZvvZI1mCnTG7OxOUXivBY+AExFb1VXp0awyc0xvoRieBQuTZzvLvv5JZeQC0RazDHQfTWfIDhAMW4xMJh++fLuZL6JP7384XP97f3XkC06t7H9Yd8n/VWm30Y2xwV0md+/VjeXF+dOZlEIZfVCJ3a5flKmPYjCp6J4aTXUZiNpzjjkBkTSvm8O9Wrp89n4D0lMbCw==</source>
   </file>
   <file path="Type/InlineQueryResult/InlineQueryResultGifType.php" generated-path="Type.InlineQueryResult.InlineQueryResultGifType.html" hash="44ec61a887adb9a6fbeff8297ccd0686" package="Default">
     <docblock line="0">
@@ -20948,7 +20991,7 @@ implies can_send_media_messages.</description>
     </parse_markers>
     <source>eJyFkk1rAyEQhu/+CqE5JIFGek2afiT0EGhvoaeF4prJrtRV0dl+0Oa/d3Qlh7YkcxHcZ56Zl/X61reesR0oIwOMIwat8AU/PcTl1WTBmJUdRC8V8G2zcnjvdTUcKxmhegJs3Y6wPp4Cqo1FCHuyxHJzvFica90GqTFW61biZvcsg5a1gXxJY8V0yviUr42MkT98eBcwg/ZNIzxq+zpIZgQl7i4C8BbRx7kQygWYIRhoguxmLjSidhiF9PoCskmRSWeTIRP1C6bODOK68wY6sBj5r6Dsi3GqlPb/LOlrzpOKdvWS9uLa4nf6K7bhI5X7CnDkAmAf7ImlCiny6fvaaMUjUjbF971VqJ3lKoBEGJcRk/k53RAm1Uhbkll6IEtu4b2Yx/R2/hCXN4OeyDKoxE5VYhzhof/ADuwHI/He6A==</source>
   </file>
-  <file path="Normalizer/UserProfilePhotosNormalizer.php" generated-path="Normalizer.UserProfilePhotosNormalizer.html" hash="a16183ccd5b3b79028b2d977929b03d0" package="Default">
+  <file path="Normalizer/UserProfilePhotosNormalizer.php" generated-path="Normalizer.UserProfilePhotosNormalizer.html" hash="e0a8d92acfacf4b2aace9a9536d0a288" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -20960,40 +21003,52 @@ implies can_send_media_messages.</description>
     <namespace-alias name="Serializer">\Symfony\Component\Serializer\Serializer</namespace-alias>
     <namespace-alias name="PhotoSizeType">\TgBotApi\BotApiBase\Type\PhotoSizeType</namespace-alias>
     <namespace-alias name="UserProfilePhotosType">\TgBotApi\BotApiBase\Type\UserProfilePhotosType</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="14" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="18" package="TgBotApi\BotApiBase\Normalizer">
       <extends/>
       <implements>\Symfony\Component\Serializer\Normalizer\DenormalizerInterface</implements>
       <name>UserProfilePhotosNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer</full_name>
-      <docblock line="14">
-        <description></description>
+      <docblock line="18">
+        <description>Class UserProfilePhotosNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="14" description="Default"/>
+        <tag name="package" line="18" description="TgBotApi\BotApiBase\Normalizer"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="16" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="23" package="TgBotApi\BotApiBase\Normalizer">
         <name>$objectNormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer::objectNormalizer</full_name>
         <default></default>
-        <docblock line="16">
+        <docblock line="23">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="23" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="17" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="27" package="TgBotApi\BotApiBase\Normalizer">
         <name>$arrayDenormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer::arrayDenormalizer</full_name>
         <default></default>
-        <docblock line="17">
+        <docblock line="27">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="27" description="" type="\Symfony\Component\Serializer\Normalizer\ArrayDenormalizer" variable="">
+            <type>\Symfony\Component\Serializer\Normalizer\ArrayDenormalizer</type>
+          </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="19" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="34" package="TgBotApi\BotApiBase\Normalizer">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer::__construct()</full_name>
-        <docblock line="19">
-          <description></description>
+        <docblock line="34">
+          <description>UserProfilePhotosNormalizer constructor.</description>
           <long-description></long-description>
+          <tag name="param" line="34" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="$objectNormalizer">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
+          <tag name="param" line="34" description="" type="\Symfony\Component\Serializer\Normalizer\ArrayDenormalizer" variable="$arrayDenormalizer">
+            <type>\Symfony\Component\Serializer\Normalizer\ArrayDenormalizer</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$objectNormalizer</name>
@@ -21006,27 +21061,42 @@ implies can_send_media_messages.</description>
           <type>\Symfony\Component\Serializer\Normalizer\ArrayDenormalizer</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="25" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="47" package="TgBotApi\BotApiBase\Normalizer">
         <name>denormalize</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer::denormalize()</full_name>
-        <docblock line="25">
+        <docblock line="47">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="47" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="47" description="" type="string" variable="$class">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="47" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="47" description="" type="array" variable="$context">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="47" description="" type="\TgBotApi\BotApiBase\Type\UserProfilePhotosType">
+            <type>\TgBotApi\BotApiBase\Type\UserProfilePhotosType</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$class</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$context</name>
@@ -21034,49 +21104,50 @@ implies can_send_media_messages.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="33" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="61" package="TgBotApi\BotApiBase\Normalizer">
         <name>supportsDenormalization</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer::supportsDenormalization()</full_name>
-        <docblock line="33">
+        <docblock line="61">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="61" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="61" description="" type="string" variable="$type">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="61" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="61" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$type</name>
           <default></default>
-          <type/>
+          <type>string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="14" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer</error>
-      <error line="19" code="PPC:ERR-50015">Argument $objectNormalizer is missing from the Docblock of __construct</error>
-      <error line="19" code="PPC:ERR-50015">Argument $arrayDenormalizer is missing from the Docblock of __construct</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="25" code="PPC:ERR-50015">Argument $data is missing from the Docblock of denormalize</error>
-      <error line="25" code="PPC:ERR-50015">Argument $class is missing from the Docblock of denormalize</error>
-      <error line="25" code="PPC:ERR-50015">Argument $format is missing from the Docblock of denormalize</error>
-      <error line="25" code="PPC:ERR-50015">Argument $context is missing from the Docblock of denormalize</error>
-      <error line="25" code="PPC:ERR-50008">No summary for method denormalize()</error>
-      <error line="33" code="PPC:ERR-50015">Argument $data is missing from the Docblock of supportsDenormalization</error>
-      <error line="33" code="PPC:ERR-50015">Argument $type is missing from the Docblock of supportsDenormalization</error>
-      <error line="33" code="PPC:ERR-50015">Argument $format is missing from the Docblock of supportsDenormalization</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method supportsDenormalization()</error>
-      <error line="16" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
-      <error line="17" code="PPC:ERR-50007">No summary for property $arrayDenormalizer</error>
+      <error line="47" code="PPC:ERR-50008">No summary for method denormalize()</error>
+      <error line="61" code="PPC:ERR-50008">No summary for method supportsDenormalization()</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
+      <error line="27" code="PPC:ERR-50007">No summary for property $arrayDenormalizer</error>
     </parse_markers>
-    <source>eJydVNFugjAUfecr7oMJkuCSvbqxRbeXvRgT3RMQU/Eyu0DbtGWbW/z3teAEBTWuLwV6zuk9595w/yjWwnFWmGREYl9pSRO90BuBKrj17hyHkRyVIAnC/G3M9UjQqNrGRGE04TInGf1GaaCFQpht8pSzTfTEc8EZMh3NUNIK0kBHIynJ5hlZg38Nvcl8YRplaiq8TmLyL4H6sQJ3hTI36UXTNdd8ZoD27QL2VaGcSp7SDEuaqjiO6YlS0DqtKweaiwxzU6OCzkicHwfMEpJ+EI3Q48t3THSzawfHpN2VClAsM5pAWrBEU85gsUg4M7NSJLrfkWP7Hh9aDe+4zSsvq0q2q6fXVA0ejsUgOGWkQWqJW1aHP0vZdrtc1cB+b0U08aFXtsTsqT3RRpMVWeZDKWxOuYngy34O45YZtR8dS8NPqGepH56w6p+0E3sNy7a40BXldLixdVpfNnho+aihPhzM6XBYjdwNuGEcxq63679dEnUh2QVlvz2tDV3vbNyqEIJLrWqXxH7fR29/SsfJH4e8K/JcERAEQSX2V83W+QXpB8OU</source>
+    <source>eJylVMFymzAQvfMVe2DGxkPi6dUtSZP00ksmM05PhvHIeLGVgqSRRBo3k3+vBAQIYJw0umCj3bdv31v226XYC8fZYpwSiVOlJY31Wh8EquCL99VxGMlQCRIj3O+uub4SNCwf10RheMtlRlL6F6UJzRXC8pAlnB3CG54JzpDpcImSliGt6PBKSnL4gayV/5H0duZPplEmhuHHIG7/C6D5WQYPiXJv1Avv9lzzpQm0/07E/lIo7yRPaIpFmipznPls5sAMblKiFPSCmgZs0Hfj0W+yO2WTCZ078SlAoJlIMTO9KxiU2nl2wJyCoD2m/iORMKBpdT8vnkLSR6IRXL55wFi3p2cIrjckw2CkP0tduLFeY87M2Oex5vK8Li+IJNlQP33unZwe6QGCb/vINymNIclZrClnsF7XjKbvIuC/q6ZXFCt9s8fVe6rOLrpgEBxzp5XUA7dZAzbYlJeeGZVQGX3CLbhboknnxm4htgO3mNPOHcvTFNzEFtGdq4KAyeJGqqfmUqLOJeuPgP3IRo3YNr1MC5p+Rcl/JWDatnz8TmnzehV5i5GSLRtUvVEsGv6BZsVMV0dM8o8aEXktsyzn1UQUpSeR9agpdnbRa68J9eHN+losyo1xDpNVtIomXvWB2VOpO47sD0tR4XqfHhTdWDk6JxXZDefpqPMqF4JLrRpliX1fT4Gt1x0C43eN+9yVZ6x9CIKghHzV4cX5B2gPiRg=</source>
   </file>
   <file path="BotApiRequest.php" generated-path="BotApiRequest.html" hash="2bae20382c52a80dbcc4f22943d542bf" package="Default">
     <docblock line="0">
@@ -23521,7 +23592,7 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJyVVttuGzcQfd+vGKAGIhmylBR5sqPWlziwgQhJXcVtAAEGtRxp2XCXW5JrWUgM5EPan8uXZIZ7kW2tJFgP8YZz5nY4F775PU/yKJIYa2Gx47xVsb/xyxzd8FX3KIoykaLLRYwwnp8af5KrSfnnVDicjAk4ucy0yvCPAu3yCl2hPakVrl1hhD4xklQ82hlZdZML4T4K63BkJF4Lq8RUYyM+2mVobIXybvJOaf3OmvTEWrEMZ5s1q5jzwo/QOTHHM0PuMt92xljKZrC/H8E+nGnhHKyle60kGkYy5gpzi45UHQgg4Bfwhr5ysgkxGRUqU9kcRAaYTlFKlHDL+pBrsUQLxhK6PJkpjX22eboEiTNBrnrgE+UeyGFBmcMUgV3CdElyBMrcksAn7MbkXplMaIhF+AoWTzQRnAmvblEve7A0BYkzVgTFLNykJQ03cckDJ0EeJMVWSUr77M3lGKuZokRqsMqcRyHBzAIgRMtu2fPljINq57CxXRHlWmjqYH/e78FnU4yLKXZ7bJPDTwvnwSKxSKVKJdEEUzjmW63fbR3RsUOExPvcHQ4GsbHY96hxbkXaN3Y+mBrvBiJXv6gQ878csw0xh4DIwiCKdxQG4B15lC2QIFVprjENNbO1G6KvEdCPb6mt4FlGWRMPo8vR+c3480f65/zvMQzhhacIBolP9Yt23PXl2/MPDAxJDdL8NQEDMtQ+/6hq4FZoJeHT1XuYUaHy5W6s4kc1HPRrM8e3wgJPmmxeHQ3C37yYahXDXtBc9z5SKQJPprqu6hum/5bOCqt78OP7f02yP77/z6HQUZMWHT03npQcV4PgSUhMRBWMT4p0mgmlofNPjnMwmV52G5bKlJ7rONj8ZPW647Hy1Pu19bIcn22dbayb/lDNiz6clQPjURvzIKimTQ9eHrx6+etriBNhRUw16raE8C0rtG6No5pL2yL5k0fPSNgv0iwyvtGL8eh9D9QstP5CUBGMq54FkecujKvELGBqtCScp7KNe7XdmbpDebBQkgcYlQobLJubL9TRd8g3RanEg6n5/MzyupO35VZOvhBNqxOV+c0ewp38xbq7XSSo5kl7lez2cRGUdzuRhRWhaIhEh9Shsr0odnt8W1naWheJsZ52o4utelSrOztis/MH1rY2x2r4lMVSbq5Ve2zaglUD8xqnpakl0IeltaIsDVGq6A2rkVA09+VqEWehCQ7Cw0LwY6PMuXZQ7UlRb8rSf7eVkg0Pn80ctWzTda6OqfypH0u+w9mekluE1TrdKK/H8BZIPTC3QXjqPZELXqIhW7p+4cVTjnxizcLBpO01eX4XYyiKyamQJ3Ze8B5vDp9asugLu+n58yC5R3Q7T40Qw6zI4lDjsUXhsVNC6VelR+z21s4CqevHNZfrkprCFgkztzoOpJV80buhKZXu4bZ30NdGfY/bQ2T0WCNlXFRJdrpH64iD38LWH1aYw8PVi6UVTS+UIbPRKiy32LB5ZbRAanIYtdr9bWFVXDFwtavbgGFdD5udW0Oo3TuBwe4DZp7o0gtKV6CV4n3UfFYl1WiUoPvoPvoJ6NVACg==</source>
   </file>
-  <file path="Normalizer/MediaGroupNormalizer.php" generated-path="Normalizer.MediaGroupNormalizer.html" hash="49d1ea90bb729ff62957458021d96d37" package="Default">
+  <file path="Normalizer/MediaGroupNormalizer.php" generated-path="Normalizer.MediaGroupNormalizer.html" hash="7e75ce147e1ff2a20e666ff91c4ebb12" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -23530,40 +23601,52 @@ fixed-width text or inline URLs in the media caption.</description>
     <namespace-alias name="NormalizerInterface">\Symfony\Component\Serializer\Normalizer\NormalizerInterface</namespace-alias>
     <namespace-alias name="Serializer">\Symfony\Component\Serializer\Serializer</namespace-alias>
     <namespace-alias name="SendMediaGroupMethod">\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="11" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="14" package="Default">
       <extends/>
       <implements>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</implements>
       <name>MediaGroupNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer</full_name>
-      <docblock line="11">
-        <description></description>
+      <docblock line="14">
+        <description>Class MediaGroupNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="11" description="Default"/>
+        <tag name="package" line="14" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="13" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="19" package="Default">
         <name>$inputMediaNormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer::inputMediaNormalizer</full_name>
         <default></default>
-        <docblock line="13">
+        <docblock line="19">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="19" description="" type="\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer" variable="">
+            <type>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer</type>
+          </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="14" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="23" package="Default">
         <name>$objectNormalizer</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer::objectNormalizer</full_name>
         <default></default>
-        <docblock line="14">
+        <docblock line="23">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="23" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="16" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="30" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer::__construct()</full_name>
-        <docblock line="16">
-          <description></description>
+        <docblock line="30">
+          <description>MediaGroupNormalizer constructor.</description>
           <long-description></long-description>
+          <tag name="param" line="30" description="" type="\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer" variable="$inputMediaNormalizer">
+            <type>\TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer</type>
+          </tag>
+          <tag name="param" line="30" description="" type="\Symfony\Component\Serializer\Normalizer\NormalizerInterface" variable="$objectNormalizer">
+            <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$inputMediaNormalizer</name>
@@ -23576,22 +23659,39 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="22" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="42" package="Default">
         <name>normalize</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer::normalize()</full_name>
-        <docblock line="22">
+        <docblock line="42">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="42" description="" type="mixed" variable="$topic">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="42" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="42" description="" type="array" variable="$context">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="42" description="" type="array|boolean|float|integer|mixed|string">
+            <type>array</type>
+            <type>boolean</type>
+            <type>float</type>
+            <type>integer</type>
+            <type>mixed</type>
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$topic</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$context</name>
@@ -23599,42 +23699,42 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="30" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="55" package="Default">
         <name>supportsNormalization</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer::supportsNormalization()</full_name>
-        <docblock line="30">
+        <docblock line="55">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="55" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="55" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="55" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="11" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer</error>
-      <error line="16" code="PPC:ERR-50015">Argument $inputMediaNormalizer is missing from the Docblock of __construct</error>
-      <error line="16" code="PPC:ERR-50015">Argument $objectNormalizer is missing from the Docblock of __construct</error>
-      <error line="16" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="22" code="PPC:ERR-50015">Argument $topic is missing from the Docblock of normalize</error>
-      <error line="22" code="PPC:ERR-50015">Argument $format is missing from the Docblock of normalize</error>
-      <error line="22" code="PPC:ERR-50015">Argument $context is missing from the Docblock of normalize</error>
-      <error line="22" code="PPC:ERR-50008">No summary for method normalize()</error>
-      <error line="30" code="PPC:ERR-50015">Argument $data is missing from the Docblock of supportsNormalization</error>
-      <error line="30" code="PPC:ERR-50015">Argument $format is missing from the Docblock of supportsNormalization</error>
-      <error line="30" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
-      <error line="13" code="PPC:ERR-50007">No summary for property $inputMediaNormalizer</error>
-      <error line="14" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
+      <error line="42" code="PPC:ERR-50008">No summary for method normalize()</error>
+      <error line="55" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $inputMediaNormalizer</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $objectNormalizer</error>
     </parse_markers>
-    <source>eJyNU7FOwzAQ3fMVN0QikdKBGVoEDIgBFtiaKjLOhRoS27LPhYL679hNS0IaCl7inN+9e+98Pr/QSx1FJfKaGUwsGcGpoLVGOz1Nz6JIsgatZhzh8flK0aUWefu5Yhbze2UaVosPNB7qLMLDuqmUXOfXqtFKoqT8AY1oIT10b3srCU3lC5z9TdBtW/CYpDukpSo9VJZ3WAp2Y5TTbdBr9Dathe6g0wGi0TU2vqKFEXXRZwR+aSNWjBBiIbWjLU+/Bz8g6ukFOf1o0fbcPdWCQ+UkJ6EkFAVX0jfecUpuR1jHa2VjIg9rptuSrfawYloKO5mNMcL0mKte8rBGSDz0GhI2447lHpbEpLTgGcRVCJFnkq6uM2DGsDXEvjGE7yE8Xxw4sd/DENLwDbrpSOZHfGa/+VikfatB2GTWhFzPn79YJQuUXJVedVd6Mhua2eVkOyfzE/sqdBF+ihWrHdoTmM7AXzcu0nQ3EmEZJGckHOX+F+nR1luntTJk965ZiCZxyYgNb2HY8L3AgAXhJ5ZJjqqC8ZfWathEX45Lg2o=</source>
+    <source>eJyNVMFymzAQvfMVe/BMjMeup9e6dprk0MkhvaQ328PIYomVgKSRhBs35N8rATYOKBRdAO3ue2/3SXy/lnsZBDHSlCgca6MYNZE5StTLr+EiCDjJUEtCEX4/3QpzI9mmetwSjZtfQmUkZX9R2dRcIzwes0Tw4+ZOZFJw5GbziIpVKRfZF6/33KBKLMHi/wDNa5Xsk/SAZi9im8rjB4wZ+alELqtNq3E+mQQwgbuUaA1NvJFjo/OAfhoGlskUM6tLg6eH4C0Au0oWtybw40AU3HOZmxLukqhMmJdPqdiBGIQR82QuvJg+di+k2D0jNR+cauF5G6WC29OQUyPUlzOxJIpk3nb80luFHs1dfR+7yHcpo5DknBomOETRWdd4uIzpMOawpKwsdGtk9kzPVj5EWPZ5dVHc5nCFXUdcwXvHl3pqGXvF2OIJyWgrxPM0hVHikEwrRJQiRxjZcRl8bYIKTa54FS12QqRFkgpiCsZNURIV7h/An3pd4Cfp40rV9KTBduckTVvsdnu97UxXn2+zK8M/0Fzv8bpn9tPPZrsNL8fvhM1Wmau1+JtnLXiEnIrYqm6oZ6t2M3XNtO5kfaVfmIzcR3QgaY76CpYrsEcQt2FYXya36sn2Yg8CHXYcYmLIkNNQy3JW93qqcymFMvo0TuJ2xyVN297wWwP31unfVQCzl5RwiiIB/5+4avE9+Ad5DiQy</source>
   </file>
   <file path="Type/InlineQueryType.php" generated-path="Type.InlineQueryType.html" hash="160858230bc60597c9f74774a6740dd5" package="Default">
     <docblock line="0">
@@ -30455,7 +30555,7 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJy1UT1PwzAQ3f0rbuiQRoKIlfDVSiAxsEDYIiHXuRKLxLbsiwCh/nccJ40imrQTt9h6d+/5vfPVrSkNYwWKiluMHFkp6I2+Dbrri2XKmOI1OsMFQva+1rQyMu+ONXeYZ5ZLcn6scdMD918CDUmt8mcvo5XDAUlnSU9IpS7yR0Vot/5pl7+aSvOiw1eV5G7onVTpqC8kxQfaB1lhh8/zMh8+bwfbi4+WxDGDGEJUGBsJyLnvJYymm+yHga+g0FYMd4ZbXsN8HljUAe0JA49Kqz8dHGzx75xFaqyCvf8eT8LJN/5/uSAwzaaSAraNEq0GNMFOdNrV8hJGmzmW7WDh/xlsOs/IQnTC1ChXEOz+ra3+2QWV0p3d9Ivas9IwtmM79gtnXROd</source>
   </file>
-  <file path="Normalizer/InputFileNormalizer.php" generated-path="Normalizer.InputFileNormalizer.html" hash="637cf6e7a5ff9ad8baa2c6dc07606b0e" package="Default">
+  <file path="Normalizer/InputFileNormalizer.php" generated-path="Normalizer.InputFileNormalizer.html" hash="7a0fa3d21b3e241569b6777335d6a622" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -30463,31 +30563,33 @@ fixed-width text or inline URLs in the media caption.</description>
     </docblock>
     <namespace-alias name="NormalizerInterface">\Symfony\Component\Serializer\Normalizer\NormalizerInterface</namespace-alias>
     <namespace-alias name="InputFileType">\TgBotApi\BotApiBase\Type\InputFileType</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="10" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Normalizer" line="13" package="Default">
       <extends/>
       <implements>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</implements>
       <name>InputFileNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\Normalizer\InputFileNormalizer</full_name>
-      <docblock line="10">
-        <description></description>
+      <docblock line="13">
+        <description>Class InputFileNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="10" description="Default"/>
+        <tag name="package" line="13" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="12" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase\Normalizer" line="18" package="Default">
         <name>$files</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputFileNormalizer::files</full_name>
         <default></default>
-        <docblock line="12">
+        <docblock line="18">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="18" description="" type="" variable=""/>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="14" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="24" package="Default">
         <name>__construct</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputFileNormalizer::__construct()</full_name>
-        <docblock line="14">
-          <description></description>
+        <docblock line="24">
+          <description>InputFileNormalizer constructor.</description>
           <long-description></long-description>
+          <tag name="param" line="24" description="" type="" variable="$files"/>
         </docblock>
         <argument line="0" by_reference="true">
           <name>$files</name>
@@ -30495,22 +30597,38 @@ fixed-width text or inline URLs in the media caption.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="19" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="35" package="Default">
         <name>normalize</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputFileNormalizer::normalize()</full_name>
-        <docblock line="19">
+        <docblock line="35">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="35" description="" type="mixed" variable="$topic">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="35" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="param" line="35" description="" type="array" variable="$context">
+            <type>array</type>
+          </tag>
+          <tag name="return" line="35" description="" type="array|boolean|float|integer|string">
+            <type>array</type>
+            <type>boolean</type>
+            <type>float</type>
+            <type>integer</type>
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$topic</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$context</name>
@@ -30518,40 +30636,41 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>array</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="27" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Normalizer" line="49" package="Default">
         <name>supportsNormalization</name>
         <full_name>\TgBotApi\BotApiBase\Normalizer\InputFileNormalizer::supportsNormalization()</full_name>
-        <docblock line="27">
+        <docblock line="49">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="49" description="" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" line="49" description="" type="null" variable="$format">
+            <type>null</type>
+          </tag>
+          <tag name="return" line="49" description="" type="boolean">
+            <type>boolean</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default></default>
-          <type/>
+          <type>mixed</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$format</name>
           <default>null</default>
-          <type/>
+          <type>null</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="10" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Normalizer\InputFileNormalizer</error>
-      <error line="14" code="PPC:ERR-50015">Argument $files is missing from the Docblock of __construct</error>
-      <error line="14" code="PPC:ERR-50008">No summary for method __construct()</error>
-      <error line="19" code="PPC:ERR-50015">Argument $topic is missing from the Docblock of normalize</error>
-      <error line="19" code="PPC:ERR-50015">Argument $format is missing from the Docblock of normalize</error>
-      <error line="19" code="PPC:ERR-50015">Argument $context is missing from the Docblock of normalize</error>
-      <error line="19" code="PPC:ERR-50008">No summary for method normalize()</error>
-      <error line="27" code="PPC:ERR-50015">Argument $data is missing from the Docblock of supportsNormalization</error>
-      <error line="27" code="PPC:ERR-50015">Argument $format is missing from the Docblock of supportsNormalization</error>
-      <error line="27" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
-      <error line="12" code="PPC:ERR-50007">No summary for property $files</error>
+      <error line="35" code="PPC:ERR-50008">No summary for method normalize()</error>
+      <error line="49" code="PPC:ERR-50008">No summary for method supportsNormalization()</error>
+      <error line="18" code="PPC:ERR-50007">No summary for property $files</error>
     </parse_markers>
-    <source>eJx9UcFOwzAMvfcrfKi2ThpMXBkDMSSkXbhst3WassxlkdokJA6ioP07brPCNCp8afL88t6ze/dgDzZJ9ihL4TDz5JSkLdUW/exmNE0SLSr0VkiE1evc0KNVefzMhcf8xbhKlOoTHVODR1jWVWF0nT+ZyhqNmvIlOhUpZ+yz40ITuoINpq1An8uK4+QLbQM9qxKbG7txYO/hB/0VBFXZEiv29tBjk3wlwGWdeheEkBb82LNeC4ZdqSQUQUtSRsN2K43mnQRJ2SAyRy0xajSV0kH5q/u2BzMYdHpN79ivqrtQWUrGKjnmEA1E/F6HshyDcE7UkLI54UcDrzd/fINWb2rPvTyestG0N9T6xNwwNfqdhm3KIQWnYSiIhDzcTiZDuO6k/53BB2uNI98tWDRolu4FictxLpOfPFsuKF6v0BJNARc/OJofk2+m59wJ</source>
+    <source>eJyNU01PGzEQve+vmENENlFg1WspbQEJiUsvcGNRNDizxJLXNvYYkTb8985+hXRJEb7Yu+/NvDdvvd9++LXPshUpg4HyyEErXvLGUzz7MjvNMos1RY+K4PbxwvG512W3XWCk8pcLNRr9m4JQUyS42dSVs5vy0tXeWbJc3lDQHWWPvXe8tkyhEoHTtsEhlVuxU15bn/hKG2qeRK2YzzOYw6XBGGEHvvUVsMjU/1DQtTdUi8EIB7xkfzKQ1Wo0aw4/nzH056LdfdDPyASTShpHMTQqOCSqnJWEk2IXTnaNPQas+zb/KqQHoxVUySrWzsJyuavPjzr+rCV2Zps14bWOx99bDM7gaDDXYK/vLPbStX6hlZQ6r9UIsskYsdZMwCMIQ8ANTMQS08sbGIhTsB26fXDObCvjkLfa8ra5XfbxwxntEFbe+VkM6jJNY2Yx0pXXd/fvUkhWP+mVYGV3yqfTBUhwNOu/0ziru77kXmo64T1iP9IUmVGtvxbFFE4Gjc9Fu0LGzyTbKzWxfZhSTN67wHG4Wti8zVuZcWDjbHqJlgtarhNaRa6C0e/VTfWa/QVtg0UE</source>
   </file>
   <file path="Type/InputMessageContent/InputContactMessageContentType.php" generated-path="Type.InputMessageContent.InputContactMessageContentType.html" hash="c88605acc66878c69b51a2338c5c824e" package="Default">
     <docblock line="0">
@@ -30764,84 +30883,106 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJy1UT1PwzAQ3f0rbuiQRoKIlfDVIgYGGGjHSMhxr8QisS37ooJQ/zuOYyKgKZm4xdK7987v3V1cm8owtkFRc4uJIysFPdO7QXd5Ns8ZU7xBZ7hAWL8sNS2MLPpnyR0Wa8slOU9r3Tjh7k2gIalV8eTHaOVwQPKjogekSm+KW4uc8BF3K5LiFe0Kqe9MKu8Vod160y4O6fFFLbkbet51lqYMUggp4DszIKe+lzEab7IPBr7ChK5SuDHc8gaOfwizJqBRMOiosnrn4GBBv3kWqbUKSq3riGXh5aU/GxcEpi1rKWDbKtHpQQQrybSj+XmY6jfyV6aRS/xXpPEkPwwkk6ZiqjCwv1ZX8csZVdKdXMUVfSnyQNuzPfsEek8CJA==</source>
   </file>
-  <file path="ApiClient.php" generated-path="ApiClient.html" hash="56b2d96029c5f56126a2aeb020ae4f5f" package="Default">
+  <file path="ApiClient.php" generated-path="ApiClient.html" hash="4567bddd18d6775473c6550c872c050a" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="ClientExceptionInterface">\Psr\Http\Client\ClientExceptionInterface</namespace-alias>
     <namespace-alias name="ClientInterface">\Psr\Http\Client\ClientInterface</namespace-alias>
     <namespace-alias name="RequestFactoryInterface">\Psr\Http\Message\RequestFactoryInterface</namespace-alias>
     <namespace-alias name="StreamFactoryInterface">\Psr\Http\Message\StreamFactoryInterface</namespace-alias>
     <namespace-alias name="InputFileType">\TgBotApi\BotApiBase\Type\InputFileType</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase" line="12" package="Default">
+    <namespace-alias name="sprintf">\sprintf</namespace-alias>
+    <namespace-alias name="strlen">\strlen</namespace-alias>
+    <namespace-alias name="uniqid">\uniqid</namespace-alias>
+    <namespace-alias name="json_decode">\json_decode</namespace-alias>
+    <namespace-alias name="mime_content_type">\mime_content_type</namespace-alias>
+    <namespace-alias name="file_get_contents">\file_get_contents</namespace-alias>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase" line="23" package="Default">
       <extends/>
       <implements>\TgBotApi\BotApiBase\ApiClientInterface</implements>
       <name>ApiClient</name>
       <full_name>\TgBotApi\BotApiBase\ApiClient</full_name>
-      <docblock line="12">
-        <description></description>
+      <docblock line="23">
+        <description>Class ApiClient</description>
         <long-description></long-description>
-        <tag name="package" line="12" description="Default"/>
+        <tag name="package" line="23" description="Default"/>
       </docblock>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="14" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="28" package="Default">
         <name>$client</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::client</full_name>
         <default></default>
-        <docblock line="14">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="28" description="" type="\Psr\Http\Client\ClientInterface" variable="">
+            <type>\Psr\Http\Client\ClientInterface</type>
+          </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="15" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="33" package="Default">
         <name>$botKey</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::botKey</full_name>
         <default></default>
-        <docblock line="15">
+        <docblock line="33">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="33" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="16" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="38" package="Default">
         <name>$endPoint</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::endPoint</full_name>
         <default></default>
-        <docblock line="16">
+        <docblock line="38">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="38" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="17" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="43" package="Default">
         <name>$streamFactory</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::streamFactory</full_name>
         <default></default>
-        <docblock line="17">
+        <docblock line="43">
           <description></description>
           <long-description></long-description>
+          <tag name="var" line="43" description="" type="\Psr\Http\Message\StreamFactoryInterface" variable="">
+            <type>\Psr\Http\Message\StreamFactoryInterface</type>
+          </tag>
         </docblock>
       </property>
-      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="18" package="Default">
+      <property static="false" visibility="private" namespace="TgBotApi\BotApiBase" line="48" package="Default">
         <name>$requestFactory</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::requestFactory</full_name>
         <default></default>
-        <docblock line="18">
+        <docblock line="48">
           <description></description>
           <long-description></long-description>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="27" package="Default">
-        <name>__construct</name>
-        <full_name>\TgBotApi\BotApiBase\ApiClient::__construct()</full_name>
-        <docblock line="27">
-          <description>ApiApiClient constructor.</description>
-          <long-description></long-description>
-          <tag name="param" line="27" description="" type="\Psr\Http\Message\RequestFactoryInterface" variable="$requestFactory">
+          <tag name="var" line="48" description="" type="\Psr\Http\Message\RequestFactoryInterface" variable="">
             <type>\Psr\Http\Message\RequestFactoryInterface</type>
           </tag>
-          <tag name="param" line="27" description="" type="\Psr\Http\Message\StreamFactoryInterface" variable="$streamFactory">
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="57" package="Default">
+        <name>__construct</name>
+        <full_name>\TgBotApi\BotApiBase\ApiClient::__construct()</full_name>
+        <docblock line="57">
+          <description>ApiApiClient constructor.</description>
+          <long-description></long-description>
+          <tag name="param" line="57" description="" type="\Psr\Http\Message\RequestFactoryInterface" variable="$requestFactory">
+            <type>\Psr\Http\Message\RequestFactoryInterface</type>
+          </tag>
+          <tag name="param" line="57" description="" type="\Psr\Http\Message\StreamFactoryInterface" variable="$streamFactory">
             <type>\Psr\Http\Message\StreamFactoryInterface</type>
           </tag>
-          <tag name="param" line="27" description="" type="\Psr\Http\Client\ClientInterface" variable="$client">
+          <tag name="param" line="57" description="" type="\Psr\Http\Client\ClientInterface" variable="$client">
             <type>\Psr\Http\Client\ClientInterface</type>
           </tag>
         </docblock>
@@ -30861,23 +31002,23 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\Psr\Http\Client\ClientInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="45" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="74" package="Default">
         <name>send</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::send()</full_name>
-        <docblock line="45">
+        <docblock line="74">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="45" description="" type="string" variable="$method">
+          <tag name="param" line="74" description="" type="string" variable="$method">
             <type>string</type>
           </tag>
-          <tag name="param" line="45" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface" variable="$apiRequest">
+          <tag name="param" line="74" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface" variable="$apiRequest">
             <type>\TgBotApi\BotApiBase\BotApiRequestInterface</type>
           </tag>
-          <tag name="throws" line="45" description="" type="\Psr\Http\Client\ClientExceptionInterface">
-            <type>\Psr\Http\Client\ClientExceptionInterface</type>
-          </tag>
-          <tag name="return" line="45" description="" type="mixed">
+          <tag name="return" line="74" description="" type="mixed">
             <type>mixed</type>
+          </tag>
+          <tag name="throws" line="74" description="" type="\Psr\Http\Client\ClientExceptionInterface">
+            <type>\Psr\Http\Client\ClientExceptionInterface</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\ApiClientInterface::send()" refers="\TgBotApi\BotApiBase\ApiClientInterface::send()" link="/classes/TgBotApi.BotApiBase.ApiClientInterface.html#method_send"/>
         </docblock>
@@ -30892,17 +31033,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\BotApiRequestInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="67" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="94" package="Default">
         <name>setBotKey</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::setBotKey()</full_name>
-        <docblock line="67">
+        <docblock line="94">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="67" description="" type="string" variable="$botKey">
+          <tag name="param" line="94" description="" type="string" variable="$botKey">
             <type>string</type>
-          </tag>
-          <tag name="return" line="67" description="" type="\TgBotApi\BotApiBase\ApiClientInterface">
-            <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\ApiClientInterface::setBotKey()" refers="\TgBotApi\BotApiBase\ApiClientInterface::setBotKey()" link="/classes/TgBotApi.BotApiBase.ApiClientInterface.html#method_setBotKey"/>
         </docblock>
@@ -30912,17 +31050,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="79" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="102" package="Default">
         <name>setEndpoint</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::setEndpoint()</full_name>
-        <docblock line="79">
+        <docblock line="102">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="79" description="" type="string" variable="$endPoint">
+          <tag name="param" line="102" description="" type="string" variable="$endPoint">
             <type>string</type>
-          </tag>
-          <tag name="return" line="79" description="" type="\TgBotApi\BotApiBase\ApiClientInterface">
-            <type>\TgBotApi\BotApiBase\ApiClientInterface</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\ApiClientInterface::setEndpoint()" refers="\TgBotApi\BotApiBase\ApiClientInterface::setEndpoint()" link="/classes/TgBotApi.BotApiBase.ApiClientInterface.html#method_setEndpoint"/>
         </docblock>
@@ -30932,16 +31067,16 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="91" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="112" package="Default">
         <name>generateUri</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::generateUri()</full_name>
-        <docblock line="91">
+        <docblock line="112">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="91" description="" type="string" variable="$method">
+          <tag name="param" line="112" description="" type="string" variable="$method">
             <type>string</type>
           </tag>
-          <tag name="return" line="91" description="" type="string">
+          <tag name="return" line="112" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -30951,19 +31086,19 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="102" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="128" package="Default">
         <name>createStreamBody</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::createStreamBody()</full_name>
-        <docblock line="102">
+        <docblock line="128">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="102" description="" type="mixed" variable="$boundary">
+          <tag name="param" line="128" description="" type="mixed" variable="$boundary">
             <type>mixed</type>
           </tag>
-          <tag name="param" line="102" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface" variable="$request">
+          <tag name="param" line="128" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface" variable="$request">
             <type>\TgBotApi\BotApiBase\BotApiRequestInterface</type>
           </tag>
-          <tag name="return" line="102" description="" type="string">
+          <tag name="return" line="128" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -30978,18 +31113,18 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\BotApiRequestInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="127" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="149" package="Default">
         <name>createFileStream</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::createFileStream()</full_name>
-        <docblock line="127">
+        <docblock line="149">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="127" description="" type="" variable="$boundary"/>
-          <tag name="param" line="127" description="" type="" variable="$name"/>
-          <tag name="param" line="127" description="" type="\TgBotApi\BotApiBase\Type\InputFileType" variable="$file">
+          <tag name="param" line="149" description="" type="" variable="$boundary"/>
+          <tag name="param" line="149" description="" type="" variable="$name"/>
+          <tag name="param" line="149" description="" type="\TgBotApi\BotApiBase\Type\InputFileType" variable="$file">
             <type>\TgBotApi\BotApiBase\Type\InputFileType</type>
           </tag>
-          <tag name="return" line="127" description="" type="string">
+          <tag name="return" line="149" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -31009,16 +31144,16 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Type\InputFileType</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="153" package="Default">
+      <method final="false" abstract="false" static="false" visibility="protected" namespace="TgBotApi\BotApiBase" line="173" package="Default">
         <name>createDataStream</name>
         <full_name>\TgBotApi\BotApiBase\ApiClient::createDataStream()</full_name>
-        <docblock line="153">
+        <docblock line="173">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="153" description="" type="" variable="$boundary"/>
-          <tag name="param" line="153" description="" type="" variable="$name"/>
-          <tag name="param" line="153" description="" type="" variable="$value"/>
-          <tag name="return" line="153" description="" type="string">
+          <tag name="param" line="173" description="" type="" variable="$boundary"/>
+          <tag name="param" line="173" description="" type="" variable="$name"/>
+          <tag name="param" line="173" description="" type="" variable="$value"/>
+          <tag name="return" line="173" description="" type="string">
             <type>string</type>
           </tag>
         </docblock>
@@ -31041,21 +31176,20 @@ fixed-width text or inline URLs in the media caption.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="12" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\ApiClient</error>
-      <error line="45" code="PPC:ERR-50008">No summary for method send()</error>
-      <error line="67" code="PPC:ERR-50008">No summary for method setBotKey()</error>
-      <error line="79" code="PPC:ERR-50008">No summary for method setEndpoint()</error>
-      <error line="91" code="PPC:ERR-50008">No summary for method generateUri()</error>
-      <error line="102" code="PPC:ERR-50008">No summary for method createStreamBody()</error>
-      <error line="127" code="PPC:ERR-50008">No summary for method createFileStream()</error>
-      <error line="153" code="PPC:ERR-50008">No summary for method createDataStream()</error>
-      <error line="14" code="PPC:ERR-50007">No summary for property $client</error>
-      <error line="15" code="PPC:ERR-50007">No summary for property $botKey</error>
-      <error line="16" code="PPC:ERR-50007">No summary for property $endPoint</error>
-      <error line="17" code="PPC:ERR-50007">No summary for property $streamFactory</error>
-      <error line="18" code="PPC:ERR-50007">No summary for property $requestFactory</error>
+      <error line="74" code="PPC:ERR-50008">No summary for method send()</error>
+      <error line="94" code="PPC:ERR-50008">No summary for method setBotKey()</error>
+      <error line="102" code="PPC:ERR-50008">No summary for method setEndpoint()</error>
+      <error line="112" code="PPC:ERR-50008">No summary for method generateUri()</error>
+      <error line="128" code="PPC:ERR-50008">No summary for method createStreamBody()</error>
+      <error line="149" code="PPC:ERR-50008">No summary for method createFileStream()</error>
+      <error line="173" code="PPC:ERR-50008">No summary for method createDataStream()</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $client</error>
+      <error line="33" code="PPC:ERR-50007">No summary for property $botKey</error>
+      <error line="38" code="PPC:ERR-50007">No summary for property $endPoint</error>
+      <error line="43" code="PPC:ERR-50007">No summary for property $streamFactory</error>
+      <error line="48" code="PPC:ERR-50007">No summary for property $requestFactory</error>
     </parse_markers>
-    <source>eJy1V9tu4zYQffdXEIYLSYGdoK9xnbbZC3bRFg026ZsAg5HomIVFaUlqd7NB/r3Dm0TSUuxgXb3YJmfOnBmeGcq//Npsm8mkJMUOc5IKyWkh1/KxIWL1c7acTBiuiGhwQdDdw3Utf29obj6usSCw3wqCbgTPP0jZ5G92lDBpPz4ySfgGPJeh0V9ECPxA8k/kc0uEfI8LWfPHQ9a3khNcDRsPMMvvIIX8I2ta+Z7uiPoFZCFJIRCYGIaIVs2OVPDNW+ywJ08TBE/D6RcsCZoVensZLt7X8g/yGC0SVt7UdM9W+ClEezwoBlBVuxdnZ/oTnSl6Pe2iZoDVKtNza+DsfmswxxUaqW0cJ/IarjGKmEdOUdWQe2y9rPWFSbe939ECbVpWSFoztF53qaQT53gk93nnMEI7ZN2bx4R9ohl66uxmckvF4ipAQavBY/TMQ5LKPj7ayMFEV4a+wJ73FGDLrTqUPaD4mVVEbusyMjb9YAvqZYy7xVg+csvrrwLlwy397ltBGnVyfZNE/pzIljNU0W+kfPHoBTRJapOx5OdH8M00mHdItrqqfkMHAPWF05LEuqfJzd+3d8ncGT8QRjhs/8Npallkme0+DX9ft6zE+iDzltHPtEwTcAfJksDOiKJnEYjEkTBCTd3Be2vXdfmYdsHmQcZBHA7DGFqG9JGMaiAiFNRl6arS+alncfWVyu0HgkvC0+RNDeUFPzUZIaGkaneSgmrkxabm1aLEEi+RI7SaJujcK8Y5SqZJNoBu8jDJh8QLE880hMlBlV9qj0x/tZRE6jtaQeX/ipqt4ZqqS5I6sOy4XrFDekSqA4P/Zd0CZQWXhujZ5RjS3kQxDqoS7vaIs9WGRybnLpuTpfeOlY0CTOMIr0jRuagk+9vwR9IM5lucpDEKE+O1JIUkZZ+b3+whLGTmQTwN8vSSAvlfwNHpngiOVG3oVQN7IDU9JNHe07XZkcOcD0/yV5XmpVl0IO5Y7fqRmCT9pQfDheBii7oRpTv/LUybNENYoJl630SrKzT7gncwYz1AH/S8H3+auQJw09Wbogps7qB6Es+TA3zUK6OICW1g8Vg+CmCcj0YapEM3KM0Bc0dYP0bHY04Xiw5+sch5zqaDsE7HxvOALMf0p9lHa8ELtknsBDp8sXoDIUcluNWXnYg02C1DBXMBr+BMbtKgxFN3O76lcFUJqrhdIu9iVFRW+fQnkU+XSFHwFvQxzMMj09TDJeVlbkD4u6L20/5CzQ6Q7fj9SdiD3F4iiKujIjvYMg//ln4H7KMhVVk9wLyiFVnbC1f/MUx76E8E726w3AL8wNvQXt3dcqRcFclxijTsu+Qq7BqiOjZimMlIQIs80hOHrqHXNIWZNyfog2Om2gmk/xq1W1VoDidQqZt1vWxNVv+/mkygH9PK8+Q/2dMlNw==</source>
+    <source>eJytV9tu2zgQfddXcA0HkgJfsK9xnbZJW7TYFhs06ZsAg5HGNhe6laTSpkH+fYeiqAst2epu9FA35MyZMzOHQ+nV63yfO04EYUw5eEJyFsqNfMxBrP/0V46T0gRETkMgd7urTL7NWaB/rqgA3C8EkBvBg49S5sF1zCCV1c/7nyHkkmXpp1QC3yLE6oj1kNEXEILuIPgK3wsQ8gMNZcYfT1nfSg406TfuySO4w4SDT2leyA8sBvVXldq2SEOVAwlEzlkqtyt7WfIYUnu1SNl3Ftmr/4gs3WCpswjsrYQlsAkzZJrq8tsGW+S12YE0RgIJLs/PHXJOrmMqBMFUdCVxaemE3TXCkjyGRPk1i3VdnCeH4FPCqeecvHmgnNhWem9Z/mIxHqgEMg1LIyTTh6DklO76He8z+Rc8/gdHSKObjA3G7G99P5Ro2w7gDQivH5B3jA8RsfZNT7CTSKBQpovKoI6cU06Todh2HMurvwJWtpaP1WvT126WxX3MwkaTm02dgacN8RlJeVY7jGLbmB8j6pOn2m4q90zMLzsoZH3Qcsu8S1LZ2x21HHR0ZWgOgtp8PpSSLrPWNZkmIPdZZG3qeVQVsJUhrRdtlXCQBU9Jwn5CAyb3PPshyNAQPtpSgYfL65KcjeDll2Ct4ldVU3XpKyzWDbsgoXL33Ju/b+/cmTHeQQoct79x5lUsfL86TCX8fVakES0bpCet56I3KhE6ZrrXDYlO7w0HrT/P9LO1dpVFj14da9ZJuBOH4w2JJwGaSFoMGBHraZI0Ran91DO//MHk/iPQCLjnXuvZPlcXECbkJkUsGYpDLrcZT+YRlXRFDKH1xCWLVi0WxJ24fg+6zkMn3yVe3SVa5zoHVX1ZevjlfytKwms7Vrpr3WeewfJHngA9/k+IEYkoK6/r5F+Qh4xFtuZ05bWJyshcMKPomEvlFKH3aZQrO892PErKGClazfX1+5PCPvi912QmIZQQNbTbx6kLi6RbEE92f6tXHq+jKfdMLLG0+O+ZcGedLSvb3k3dFWurnSQ+pzRUzrtG+SPHKD86Q8eV8th4OBF3qNbNlHLd5nrB8w403JN6apSH8R0OAM8nVJCpei8n60syfaAxjr0WYBt00UykkrkCMAOvNdgU2MxANSSenRN81MuysAmpN9WxfBTAMJ8SqZdO1TQD+8daVY+8buKQyXxeI87nAQ/SCbmoSzworSFRlZSstc73gmb7AuI6WpKekIO62peXikBh9Z7jibls3jGc/IIpChekdc+oiOtgciaCyYqoSK2Fsp7WIS4ZdpeUl75Q8CNL7Xu+fcg7VBcN15reZ0h3cn9BMGwZlFQzzG/Qb9kvRB4LqErXgjv48vIa4K9A4xsq9wje82KhStuWmQI0kUvw1aEHEjr4kusP2O88qYAHToJ4QXnrcfACim4NneYiN8I2K1rf5i89icYr+3fEXPW9jPi/Rag//72KcM870jGBaK+WVJ6dZ+dfBv1Ogg==</source>
   </file>
   <file path="Method/Traits/FillFromArrayTrait.php" generated-path="Method.Traits.FillFromArrayTrait.html" hash="2e759f31020418e874f8456633bf2e98" package="Default">
     <docblock line="0">
@@ -31590,7 +31724,7 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJx1TzEOwjAM3P0KDwzQgYoZEFCJEbFUTJVQmlptoE0ixyAhxN9JA4zccvKd72SvNr7zAA3pXjFNg7DRcpaHp7BezJYAVg0UvNKEZVs42XlTfahQgaoDSeeaqmRlJMTtPMsAM0wz7gd3MeGk2Ki6p6TNo5uD/LPhCRiRWkZkeLSEjnFwTEhjALVjjhc52xjbojiUjjCI0Vfi+Tf2S2/vinH8ybZfKU/sb3VvNE5SY7z7BW/TWFJ6</source>
   </file>
-  <file path="BotApiNormalizer.php" generated-path="BotApiNormalizer.html" hash="3d9edda0a479734948d7a7060e1ac1f0" package="Default">
+  <file path="BotApiNormalizer.php" generated-path="BotApiNormalizer.html" hash="84d0502c0db3f44f0938d09250cfd463" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -31608,25 +31742,25 @@ fixed-width text or inline URLs in the media caption.</description>
     <namespace-alias name="JsonSerializableNormalizer">\TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer</namespace-alias>
     <namespace-alias name="MediaGroupNormalizer">\TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer</namespace-alias>
     <namespace-alias name="UserProfilePhotosNormalizer">\TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase" line="20" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase" line="23" package="Default">
       <extends/>
       <implements>\TgBotApi\BotApiBase\NormalizerInterface</implements>
       <name>BotApiNormalizer</name>
       <full_name>\TgBotApi\BotApiBase\BotApiNormalizer</full_name>
-      <docblock line="20">
-        <description></description>
+      <docblock line="23">
+        <description>Class BotApiNormalizer</description>
         <long-description></long-description>
-        <tag name="package" line="20" description="Default"/>
+        <tag name="package" line="23" description="Default"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="28" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="31" package="Default">
         <name>denormalize</name>
         <full_name>\TgBotApi\BotApiBase\BotApiNormalizer::denormalize()</full_name>
-        <docblock line="28">
+        <docblock line="31">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="28" description="" type="" variable="$data"/>
-          <tag name="param" line="28" description="" type="" variable="$type"/>
-          <tag name="return" line="28" description="" type="object|array">
+          <tag name="param" line="31" description="" type="" variable="$data"/>
+          <tag name="param" line="31" description="" type="" variable="$type"/>
+          <tag name="return" line="31" description="" type="object|array">
             <type>object</type>
             <type>array</type>
           </tag>
@@ -31643,14 +31777,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type/>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="52" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="55" package="Default">
         <name>normalize</name>
         <full_name>\TgBotApi\BotApiBase\BotApiNormalizer::normalize()</full_name>
-        <docblock line="52">
+        <docblock line="55">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="52" description="" type="" variable="$method"/>
-          <tag name="return" line="52" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface">
+          <tag name="param" line="55" description="" type="" variable="$method"/>
+          <tag name="return" line="55" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface">
             <type>\TgBotApi\BotApiBase\BotApiRequestInterface</type>
           </tag>
           <tag name="inherited_from" description="\TgBotApi\BotApiBase\NormalizerInterface::normalize()" refers="\TgBotApi\BotApiBase\NormalizerInterface::normalize()" link="/classes/TgBotApi.BotApiBase.NormalizerInterface.html#method_normalize"/>
@@ -31664,11 +31798,10 @@ fixed-width text or inline URLs in the media caption.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="20" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\BotApiNormalizer</error>
-      <error line="28" code="PPC:ERR-50008">No summary for method denormalize()</error>
-      <error line="52" code="PPC:ERR-50008">No summary for method normalize()</error>
+      <error line="31" code="PPC:ERR-50008">No summary for method denormalize()</error>
+      <error line="55" code="PPC:ERR-50008">No summary for method normalize()</error>
     </parse_markers>
-    <source>eJydVUtz2jAQvvtX6MAMhnEn0yspaQkkHdoJoYEcOphhhFmKG1tSJTmp2+a/V7aM34CJL7a0793vW3/4yHbMMDbgeJiDKSR3HbmSIQPRf9+5NAyCfRAMO4DmP66pHDDX1q9rLEDJAwFoFvpbSkJ7SH1GCRBpTzllwGU4Jltq3/yWHDuScnu6YyPqpOfLA9Yz4C723D/A7YkKP6TkWTlTp6E6eUMVeE5nBD9B9FnQaOKRcj/5HHCOwxGQ9OY88xGWMHd9mLzR/n79Exx5lnX2qZVrZlIokIgX4GPiuQS+BcDDcrAT9mPCAnnrepUSm9jdwcbFZxp+EZTsa8Trs+PGIT9zGrAzDR8FcIXZrSp1uqOSiry9obghBNKWmQC5PvPAVxMSKLsdEwXDreKL8ddA6rnoduM36qJPDHPso9YGS1y+ixiX3KUiDjLgBNEYJv9wBNZEdhG/WbD2XAdtA+JIlxK0yZBsxkEs7bcTa+t0oqeVAR71EYEXVEaimepGDwk8zyreKJuTXDQ7VgM3pZVgdlINtX3SjOPiJ+W0K/w18zYi5UqinpHHXFTyOIIAM9cwq5JLuUrlq7oYyr3IeywKSt4z6TLaxvtDAo1cje+uDo3f0p1Hi2pavd7t/cPdYL76evMd9a9Q+7G9TFr4ahyCrw9yRzcHwKpJ8gC/AhAy44LWqodtLmvtutM75iaH42hYQg13scy1pkVLYD6Ecd2VhlB+O7BqdqipM69BTt0CM1MvpY1qVkq10N5ztQ010Q5v26rrGvMjf5dG9g1oUimwng4x3NUwCnzIcFX0qUF2ajct2uLJZatIsHrGnsJhO2KI5IEiVDMm5TdZmblR/QWQp5TVA9yT8NX4D2ixIwk=</source>
+    <source>eJydVU1z2jAQvftX6MAMhqHD9EqatASSDu2E0EAOHcwwwizFjS2pkpzUbfPfK1vG3wYTXbC02rcfem/58JHtmWFswXYxB1NI7thyLQMG4vJ958IwCPZAMGwDWvy4pnLIHEv/XGMByu4LQPPA21ESWCPqMUqASGvGKQMugwnZUevmt+TYlpRbsz0bUzvZX9R4z4E72HX+ALemKvyIkmcFpnYjtXNHKvCCzgl+gvAzd6MJIuVe/DnkHAdjIMnJee5jLGHheDB9o//95ifY8izv9FNfrniTXIFEvACfENch8M0HHhSDnfCfEObLW8ctldjE7w62Dj7T8Yug5FAj3pwdNwr5mVOfnen4KIArzu5UqbM9lVRk/Y1+t2ugLhq5WAikAVK7svQNu9KEHI+54Kk3FCg9nRBF1J1SlPHXQGpF6OHqok8Mc+yh1hZLXDwLNRmfJSYO0ucE0YhI/3BI59jWj36Zv3EdG+18YkuHErRNuW5GQXoatxPd1umEq5VKAl0iAi+oyFUzuRsu4rtuL3+ifE6q1ez0GsAUhobZSW6o+ZRkHBU/LaZdUriZ9RGJmuLrqbzMZSmPIxwxMw3rlXIpVqmwyqOj2IssYt5QQE+tq3BeHzYxNTI1vruqe/6e7jxaltMaDG7vH+6Gi/XXm+/o8gq1H9uruIWvRh19PZB7uq0hqxbJA/zyQchUC/pWNW0zWWvozuAYTIbH4WMJ9bjLVaY1LVogcx3HdVcaUvntxKqYsqbOvII5VSPOTFAKM9csldpDB+RyGyqi1c/jMnSF+5H/n0b+DWRSKrBaDhHd1WPk9JDyKo+pSXZqNi3b4slh69Cwfsau4mE7VIjkvhJUMyVlJ1lRuWH9OZInktUPeBDhq/Ef5WEtBQ==</source>
   </file>
   <file path="Type/PassportElementError/PassportElementErrorType.php" generated-path="Type.PassportElementError.PassportElementErrorType.html" hash="808cf34b63bd511199fd61f2a77505a7" package="Default">
     <docblock line="0">
@@ -32857,27 +32990,26 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJy9lD1vwjAQhnf/Cg8MIVKLupa2FFAHhkr9YIxUOeYgFsa27IsoqvjvNU6K+AgEVIEXS3f3nt977OShYzJDyAi4ZBYih1Zw/MKFAfd412wTotgMnGEc6HDS09g1Iim2HnOQDC0T6HxZ7qoLXr45GBRaJR++jVYO1pH2QdErYKZHSVe5Odg+kzJlfPqeg10UmROVAyWFgvN1bxb6GfCpzvF88WcmjBFqco5yoBDs2DN2ZZMi3pWCuXXOQ27FMaExDdDpZmWI3Ppci2B1kvwQ6lfosFoxfTbMshk9fCBtzEK0FKx1mFk9d3TvPnfrLGBuFU21lmWsFXaW+lfGOFKTp1JwOs4VX+kpC1aiekfN+9DVEzk2U8XDudRI1ZNsGYhqTZVThYbFba1WeWQDM+FunkpEf4p2KFse57D3GVyXwsbxUY2hSxGo/qCvi2HXQ3SKtUsBqfhJXZfGloGo1tQ/OCzJL5/DN2s=</source>
   </file>
-  <file path="Exception/BadRequestException.php" generated-path="Exception.BadRequestException.html" hash="9536285d5def408edde79ab08f519231" package="Default">
+  <file path="Exception/BadRequestException.php" generated-path="Exception.BadRequestException.html" hash="d5da96e18192fb2d641f8910d691035d" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Exception" line="7" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Exception" line="10" package="Default">
       <extends>\Exception</extends>
       <name>BadRequestException</name>
       <full_name>\TgBotApi\BotApiBase\Exception\BadRequestException</full_name>
-      <docblock line="7">
-        <description></description>
+      <docblock line="10">
+        <description>Class BadRequestException</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
+        <tag name="package" line="10" description="Default"/>
       </docblock>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50005">No summary for class \TgBotApi\BotApiBase\Exception\BadRequestException</error>
     </parse_markers>
-    <source>eJyzsS/IKODiSklNzkksStUoLinKTC6JL6ksSC22NdS05uLKS8xNLS5ITE5VCEl3yi9xLMiMgVBOicWpMa4VyakFJZn5eUCVQBOKixWcElOCUgtLU4tL4HIKqRUlqXkpxQoI5VzVXLVcALJgLEs=</source>
+    <source>eJx1jLEKwkAQBfv9ii31mmCtIp74A2IZkOXuoQfxsmZXiIj/bkDQymqKGWa10YsSZaROBszMh5L85A+FrRfzJVGVK0wlgY/n2PtWS/tBFEO7HxPUS1+nsgmBOPCuEzOOkg+43WH+TSbZUPpnGaOjZuPfk570ojdqTzeE</source>
   </file>
   <file path="Traits/AddMethodTrait.php" generated-path="Traits.AddMethodTrait.html" hash="452abadc3f04eda3fe0bb97230ba6913" package="Default">
     <docblock line="0">
@@ -33434,57 +33566,72 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </parse_markers>
     <source>eJyNi7EKAjEQBfv9ii01hYe1itxZWdhZBiRcnl7gzIXsFor47wYCqa0ezMzbH9OUiDzG2WWsRHMY9abvBDls1zui6J6Q5Ebw9TEs2qdg6wxOYC/QafH2HBX5XiIpj84YYsON8SnDKWraz8FJU5sSdhT+KBkvRfTCVTZOH/rSD234RQM=</source>
   </file>
-  <file path="ApiClientInterface.php" generated-path="ApiClientInterface.html" hash="d7ae7f1d8a8f5b7ae7d2b583305133cd" package="Default">
+  <file path="ApiClientInterface.php" generated-path="ApiClientInterface.html" hash="cdb378258614e25d18c838ad55b14b8d" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <interface namespace="TgBotApi\BotApiBase" line="7" package="Default">
+    <interface namespace="TgBotApi\BotApiBase" line="11" package="TgBotApi\BotApiBase">
       <name>ApiClientInterface</name>
       <full_name>\TgBotApi\BotApiBase\ApiClientInterface</full_name>
-      <docblock line="7">
-        <description></description>
+      <docblock line="11">
+        <description>Interface ApiClientInterface</description>
         <long-description></long-description>
-        <tag name="package" line="7" description="Default"/>
+        <tag name="package" line="11" description="TgBotApi\BotApiBase"/>
       </docblock>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="9" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="16" package="TgBotApi\BotApiBase">
         <name>setBotKey</name>
         <full_name>\TgBotApi\BotApiBase\ApiClientInterface::setBotKey()</full_name>
-        <docblock line="9">
+        <docblock line="16">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="16" description="" type="string" variable="$botKey">
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$botKey</name>
           <default></default>
-          <type>\TgBotApi\BotApiBase\string</type>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="11" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="21" package="TgBotApi\BotApiBase">
         <name>setEndpoint</name>
         <full_name>\TgBotApi\BotApiBase\ApiClientInterface::setEndpoint()</full_name>
-        <docblock line="11">
+        <docblock line="21">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="21" description="" type="string" variable="$endPoint">
+            <type>string</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$endPoint</name>
           <default></default>
-          <type>\TgBotApi\BotApiBase\string</type>
+          <type>string</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="13" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="28" package="TgBotApi\BotApiBase">
         <name>send</name>
         <full_name>\TgBotApi\BotApiBase\ApiClientInterface::send()</full_name>
-        <docblock line="13">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
+          <tag name="param" line="28" description="" type="string" variable="$method">
+            <type>string</type>
+          </tag>
+          <tag name="param" line="28" description="" type="\TgBotApi\BotApiBase\BotApiRequestInterface" variable="$request">
+            <type>\TgBotApi\BotApiBase\BotApiRequestInterface</type>
+          </tag>
+          <tag name="return" line="28" description="" type="mixed">
+            <type>mixed</type>
+          </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$method</name>
           <default></default>
-          <type>\TgBotApi\BotApiBase\string</type>
+          <type>string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$request</name>
@@ -33495,16 +33642,11 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </interface>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="7" code="PPC:ERR-50009">No summary for interface \TgBotApi\BotApiBase\ApiClientInterface</error>
-      <error line="9" code="PPC:ERR-50015">Argument $botKey is missing from the Docblock of setBotKey</error>
-      <error line="9" code="PPC:ERR-50008">No summary for method setBotKey()</error>
-      <error line="11" code="PPC:ERR-50015">Argument $endPoint is missing from the Docblock of setEndpoint</error>
-      <error line="11" code="PPC:ERR-50008">No summary for method setEndpoint()</error>
-      <error line="13" code="PPC:ERR-50015">Argument $method is missing from the Docblock of send</error>
-      <error line="13" code="PPC:ERR-50015">Argument $request is missing from the Docblock of send</error>
-      <error line="13" code="PPC:ERR-50008">No summary for method send()</error>
+      <error line="16" code="PPC:ERR-50008">No summary for method setBotKey()</error>
+      <error line="21" code="PPC:ERR-50008">No summary for method setEndpoint()</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method send()</error>
     </parse_markers>
-    <source>eJyVkD0LwkAMhvf7FTc4WHBx9QOx4iAuIo6CXO/S9qDNnXfpUMT/btpiXXQwS8gTeF6S1caXXggDulIBppGC1XSj1kNcz5OlEKhqiF5pkJcidbT19jq0VEXgvUWCkHd7ZrvKAtLhjcRDSC7fZJXVMm9Qk3UoIxArjtD2cVjISdaPyeKLgyN+OPZovOP40QJoTh34z4NmFNRApTMzORx4hnsD8WOQkzAQfstTvADqIW1x</source>
+    <source>eJyNUsFqAjEQvecr5uBhXQqLV21pu+JBvEjpsVBiMq6hu5OYzBal9N+b7BaLUlznMjDvzXsvQ+4f3c4JoVHV0mMW2BvF73x0GB4m45kQJBsMTiqE16q0/OzMW99KGTDiRZ4LyGFJjH6baBGa1waJT6OEP0WJD1n9qxLxQphrAl8CYnVWqTo5LxtIcamC0cbyCo+/YNF1125qo2DbkmJjCQJy2bGy86Xx9NMaHR9y3QFJr23MOOSxIO0SL7tcvNGnQd5ZfQH2p3rBfYvh7yow8v3kxPbIrSdozAH1QFDS2bnl3ZBL/Azf4geUt7AG</source>
   </file>
   <file path="Type/InlineQueryResult/InlineQueryResultArticleType.php" generated-path="Type.InlineQueryResult.InlineQueryResultArticleType.html" hash="52f7c9d3a8d5bff1b047e18dbf397e14" package="Default">
     <docblock line="0">
@@ -33922,6 +34064,11 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     <source>eJyVjzFPAzEMhXf/CkswwA0XsVIQpQwwIlG2SigX3CTS9RLFLhJC/HeccCxwC14s67332b66ySEDvJIbbaEzlhKdvMh7Jr6+OF8BTPZAnK0j3PpNktscd99tY5l2WzWqyXQdYId3o2XGe008RB+eXCpUDb1qVV4zEQaRzJfGVLEXGskXe+hT8WZIwsbmeOIVEBTA1aNBA24ZDB+AWm17rQ4fE0eJacI4YUVgY6DYYSTcp4ISCCu/nxM/wfWbLRqSeTat5+MwRoeneabqp7/2PTOVRVQV2olLvKOKf1ntrX/d1Z5bwSd8AUmcfzE=</source>
   </file>
   <package name="Default" full_name="Default"/>
+  <package name="TgBotApi" full_name="TgBotApi">
+    <package name="BotApiBase" full_name="TgBotApi\BotApiBase">
+      <package name="Normalizer" full_name="TgBotApi\BotApiBase\Normalizer"/>
+    </package>
+  </package>
   <package name="global" full_name="global"/>
   <namespace name="TgBotApi" full_name="TgBotApi">
     <namespace name="BotApiBase" full_name="TgBotApi\BotApiBase">

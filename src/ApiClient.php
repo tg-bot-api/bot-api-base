@@ -4,17 +4,40 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase;
 
+use Psr\Http\Client\ClientExceptionInterface;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\RequestFactoryInterface;
 use Psr\Http\Message\StreamFactoryInterface;
 use TgBotApi\BotApiBase\Type\InputFileType;
 
+/**
+ * Class ApiClient.
+ */
 class ApiClient implements ApiClientInterface
 {
+    /**
+     * @var ClientInterface
+     */
     private $client;
+
+    /**
+     * @var string
+     */
     private $botKey;
+
+    /**
+     * @var string
+     */
     private $endPoint;
+
+    /**
+     * @var StreamFactoryInterface
+     */
     private $streamFactory;
+
+    /**
+     * @var RequestFactoryInterface
+     */
     private $requestFactory;
 
     /**
@@ -38,7 +61,7 @@ class ApiClient implements ApiClientInterface
      * @param string                 $method
      * @param BotApiRequestInterface $apiRequest
      *
-     * @throws \Psr\Http\Client\ClientExceptionInterface
+     * @throws ClientExceptionInterface
      *
      * @return mixed
      */
@@ -61,26 +84,18 @@ class ApiClient implements ApiClientInterface
 
     /**
      * @param string $botKey
-     *
-     * @return ApiClientInterface
      */
-    public function setBotKey(string $botKey): ApiClientInterface
+    public function setBotKey(string $botKey): void
     {
         $this->botKey = $botKey;
-
-        return $this;
     }
 
     /**
      * @param string $endPoint
-     *
-     * @return ApiClientInterface
      */
-    public function setEndpoint(string $endPoint): ApiClientInterface
+    public function setEndpoint(string $endPoint): void
     {
         $this->endPoint = $endPoint;
-
-        return $this;
     }
 
     /**
@@ -90,7 +105,12 @@ class ApiClient implements ApiClientInterface
      */
     protected function generateUri(string $method): string
     {
-        return $this->endPoint . '/bot' . $this->botKey . '/' . $method;
+        return \sprintf(
+            '%s/bot%s/%s',
+            $this->endPoint,
+            $this->botKey,
+            $method
+        );
     }
 
     /**
@@ -110,11 +130,7 @@ class ApiClient implements ApiClientInterface
             $stream .= $this->createFileStream($boundary, $name, $file);
         }
 
-        if (\strlen($stream)) {
-            $stream .= "--$boundary--\r\n";
-        }
-
-        return $stream;
+        return '' !== $stream ? $stream . "--$boundary--\r\n" : '';
     }
 
     /**
@@ -126,8 +142,7 @@ class ApiClient implements ApiClientInterface
      */
     protected function createFileStream($boundary, $name, InputFileType $file): string
     {
-        $headers = '';
-        $headers .= \sprintf(
+        $headers = \sprintf(
             "Content-Disposition: form-data; name=\"%s\"; filename=\"%s\"\r\n",
             $name,
             $file->getBasename()
@@ -135,8 +150,7 @@ class ApiClient implements ApiClientInterface
         $headers .= \sprintf("Content-Length: %s\r\n", (string) $file->getSize());
         $headers .= \sprintf("Content-Type: %s\r\n", \mime_content_type($file->getRealPath()));
 
-        $streams = '';
-        $streams .= "--$boundary\r\n$headers\r\n";
+        $streams = "--$boundary\r\n$headers\r\n";
         $streams .= \file_get_contents($file->getRealPath());
         $streams .= "\r\n";
 
@@ -150,17 +164,11 @@ class ApiClient implements ApiClientInterface
      *
      * @return string
      */
-    protected function createDataStream($boundary, $name, $value): string
+    protected function createDataStream(string $boundary, string $name, string $value): string
     {
-        $headers = '';
-        $headers .= \sprintf("Content-Disposition: form-data; name=\"%s\"\r\n", $name);
-        $headers .= \sprintf("Content-Length: %s\r\n", (string) \strlen((string) $value));
+        $headers = \sprintf("Content-Disposition: form-data; name=\"%s\"\r\n", $name);
+        $headers .= \sprintf("Content-Length: %s\r\n", (string) \strlen($value));
 
-        $streams = '';
-        $streams .= "--$boundary\r\n$headers\r\n";
-        $streams .= $value;
-        $streams .= "\r\n";
-
-        return $streams;
+        return "--$boundary\r\n$headers\r\n$value\r\n";
     }
 }

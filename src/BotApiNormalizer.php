@@ -17,6 +17,9 @@ use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
 use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
 use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
 
+/**
+ * Class BotApiNormalizer.
+ */
 class BotApiNormalizer implements NormalizerInterface
 {
     /**

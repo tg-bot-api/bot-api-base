@@ -44,13 +44,4 @@ class BotApiComplete extends BotApi
     use UnbanMethodTrait;
     use UnpinMethodTrait;
     use UploadMethodTrait;
-
-    public function __construct(
-        string $botKey,
-        ApiClientInterface $apiClient,
-        NormalizerInterface $normalizer,
-        string $endPoint = 'https://api.telegram.org'
-    ) {
-        parent::__construct($botKey, $apiClient, $normalizer, $endPoint);
-    }
 }

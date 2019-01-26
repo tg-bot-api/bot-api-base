@@ -23,6 +23,7 @@
 <li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/TgBotApi.html"><i class="icon-folder-open"></i> TgBotApi</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -33,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">615</span></a></li>
+                <span class="label label-info">548</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -63,8 +64,7 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public "><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
-        </span><pre>__construct()</pre></a></li>
+<li class="method public "><a href="#method___construct" title="__construct() :: InputFileNormalizer constructor."><span class="description">InputFileNormalizer constructor.</span><pre>__construct()</pre></a></li>
 <li class="method public "><a href="#method_normalize" title="normalize() :: "><span class="description">normalize()
         </span><pre>normalize()</pre></a></li>
 <li class="method public "><a href="#method_supportsNormalization" title="supportsNormalization() :: "><span class="description">supportsNormalization()
@@ -97,7 +97,7 @@
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description"></p>
+<p class="short_description">Class InputFileNormalizer</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
@@ -107,8 +107,7 @@
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct " data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>__construct()
-        </h2>
+<h2>InputFileNormalizer constructor.</h2>
 <pre>__construct($files) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
@@ -120,33 +119,54 @@
 <a id="method_normalize"></a><div class="element clickable method public method_normalize " data-toggle="collapse" data-target=".method_normalize .collapse" title="public">
 <h2>normalize()
         </h2>
-<pre>normalize($topic, $format<code> = null</code>, array $context<code> = array()</code>) </pre>
+<pre>normalize(mixed $topic, null $format<code> = null</code>, array $context<code> = array()</code>) : array | boolean | float | integer | string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$topic</h4></div>
-<div class="subelement argument"><h4>$format</h4></div>
-<div class="subelement argument"><h4>$context</h4></div>
+<div class="subelement argument">
+<h4>$topic</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$format</h4>
+<code>null</code>
+</div>
+<div class="subelement argument">
+<h4>$context</h4>
+<code>array</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>boolean</code><code>float</code><code>integer</code><code>string</code>
+</div>
 </div></div>
 </div>
 <a id="method_supportsNormalization"></a><div class="element clickable method public method_supportsNormalization " data-toggle="collapse" data-target=".method_supportsNormalization .collapse" title="public">
 <h2>supportsNormalization()
         </h2>
-<pre>supportsNormalization($data, $format<code> = null</code>) </pre>
+<pre>supportsNormalization(mixed $data, null $format<code> = null</code>) : boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument"><h4>$data</h4></div>
-<div class="subelement argument"><h4>$format</h4></div>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>mixed</code>
+</div>
+<div class="subelement argument">
+<h4>$format</h4>
+<code>null</code>
+</div>
+<h3>Returns</h3>
+<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_files"> </a><div class="element clickable property private property_files" data-toggle="collapse" data-target=".property_files .collapse" title="private">
 <h2>$files</h2>
-<pre>$files </pre>
+<pre>$files : </pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -161,7 +181,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-01-25T05:10:36+07:00.<br></footer></div>
+            generated on 2019-01-26T07:33:13+07:00.<br></footer></div>
 </div>
 </body>
 </html>

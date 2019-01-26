@@ -23,6 +23,7 @@
 <li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
+<li><a href="../packages/TgBotApi.html"><i class="icon-folder-open"></i> TgBotApi</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -33,7 +34,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">615</span></a></li>
+                <span class="label label-info">548</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -113,7 +114,7 @@
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description"></p>
+<p class="short_description">Class ApiClient</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered"><tr>
@@ -175,7 +176,7 @@
 <a id="method_setBotKey"></a><div class="element clickable method public method_setBotKey " data-toggle="collapse" data-target=".method_setBotKey .collapse" title="public">
 <h2>setBotKey()
         </h2>
-<pre>setBotKey(string $botKey) : \TgBotApi\BotApiBase\ApiClientInterface</pre>
+<pre>setBotKey(string $botKey) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -188,14 +189,12 @@
 <h4>$botKey</h4>
 <code>string</code>
 </div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\ApiClientInterface</code></div>
 </div></div>
 </div>
 <a id="method_setEndpoint"></a><div class="element clickable method public method_setEndpoint " data-toggle="collapse" data-target=".method_setEndpoint .collapse" title="public">
 <h2>setEndpoint()
         </h2>
-<pre>setEndpoint(string $endPoint) : \TgBotApi\BotApiBase\ApiClientInterface</pre>
+<pre>setEndpoint(string $endPoint) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -208,8 +207,6 @@
 <h4>$endPoint</h4>
 <code>string</code>
 </div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\ApiClientInterface</code></div>
 </div></div>
 </div>
 <a id="method_createDataStream"></a><div class="element clickable method protected method_createDataStream " data-toggle="collapse" data-target=".method_createDataStream .collapse" title="protected">
@@ -285,7 +282,7 @@
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_botKey"> </a><div class="element clickable property private property_botKey" data-toggle="collapse" data-target=".property_botKey .collapse" title="private">
 <h2>$botKey</h2>
-<pre>$botKey </pre>
+<pre>$botKey : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -295,7 +292,7 @@
 </div>
 <a id="property_client"> </a><div class="element clickable property private property_client" data-toggle="collapse" data-target=".property_client .collapse" title="private">
 <h2>$client</h2>
-<pre>$client </pre>
+<pre>$client : \Psr\Http\Client\ClientInterface</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -305,7 +302,7 @@
 </div>
 <a id="property_endPoint"> </a><div class="element clickable property private property_endPoint" data-toggle="collapse" data-target=".property_endPoint .collapse" title="private">
 <h2>$endPoint</h2>
-<pre>$endPoint </pre>
+<pre>$endPoint : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -315,7 +312,7 @@
 </div>
 <a id="property_requestFactory"> </a><div class="element clickable property private property_requestFactory" data-toggle="collapse" data-target=".property_requestFactory .collapse" title="private">
 <h2>$requestFactory</h2>
-<pre>$requestFactory </pre>
+<pre>$requestFactory : \Psr\Http\Message\RequestFactoryInterface</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -325,7 +322,7 @@
 </div>
 <a id="property_streamFactory"> </a><div class="element clickable property private property_streamFactory" data-toggle="collapse" data-target=".property_streamFactory .collapse" title="private">
 <h2>$streamFactory</h2>
-<pre>$streamFactory </pre>
+<pre>$streamFactory : \Psr\Http\Message\StreamFactoryInterface</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -340,7 +337,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-01-25T05:10:36+07:00.<br></footer></div>
+            generated on 2019-01-26T07:33:13+07:00.<br></footer></div>
 </div>
 </body>
 </html>

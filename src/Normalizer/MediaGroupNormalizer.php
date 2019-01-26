@@ -8,17 +8,39 @@ use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 
+/**
+ * Class MediaGroupNormalizer.
+ */
 class MediaGroupNormalizer implements NormalizerInterface
 {
+    /**
+     * @var InputMediaNormalizer
+     */
     private $inputMediaNormalizer;
+    /**
+     * @var NormalizerInterface
+     */
     private $objectNormalizer;
 
+    /**
+     * MediaGroupNormalizer constructor.
+     *
+     * @param InputMediaNormalizer $inputMediaNormalizer
+     * @param NormalizerInterface  $objectNormalizer
+     */
     public function __construct(InputMediaNormalizer $inputMediaNormalizer, NormalizerInterface $objectNormalizer)
     {
         $this->inputMediaNormalizer = $inputMediaNormalizer;
         $this->objectNormalizer = $objectNormalizer;
     }
 
+    /**
+     * @param mixed $topic
+     * @param null  $format
+     * @param array $context
+     *
+     * @return array|bool|float|int|mixed|string
+     */
     public function normalize($topic, $format = null, array $context = [])
     {
         $serializer = new Serializer([$this->inputMediaNormalizer, $this->objectNormalizer]);
@@ -27,7 +49,13 @@ class MediaGroupNormalizer implements NormalizerInterface
         return $serializer->normalize($topic, null, ['skip_null_values' => true]);
     }
 
-    public function supportsNormalization($data, $format = null)
+    /**
+     * @param mixed $data
+     * @param null  $format
+     *
+     * @return bool
+     */
+    public function supportsNormalization($data, $format = null): bool
     {
         return $data instanceof SendMediaGroupMethod;
     }

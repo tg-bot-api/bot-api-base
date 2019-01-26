@@ -31,6 +31,9 @@ use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
 use TgBotApi\BotApiBase\Type\UserType;
 use TgBotApi\BotApiBase\Type\WebhookInfoType;
 
+/**
+ * Interface BotApiInterface.
+ */
 interface BotApiInterface extends BotApiAliasInterface
 {
     /**

@@ -12,15 +12,33 @@ use TgBotApi\BotApiBase\Type\MaskPositionType;
 use TgBotApi\BotApiBase\Type\ReplyKeyboardMarkupType;
 use TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType;
 
+/**
+ * Class JsonSerializableNormalizer.
+ */
 class JsonSerializableNormalizer implements NormalizerInterface
 {
+    /**
+     * @var NormalizerInterface
+     */
     private $objectNormalizer;
 
+    /**
+     * JsonSerializableNormalizer constructor.
+     *
+     * @param NormalizerInterface $objectNormalizer
+     */
     public function __construct(NormalizerInterface $objectNormalizer)
     {
         $this->objectNormalizer = $objectNormalizer;
     }
 
+    /**
+     * @param mixed $topic
+     * @param null  $format
+     * @param array $context
+     *
+     * @return array|bool|false|float|int|string
+     */
     public function normalize($topic, $format = null, array $context = [])
     {
         $serializer = new Serializer([$this->objectNormalizer]);
@@ -28,7 +46,13 @@ class JsonSerializableNormalizer implements NormalizerInterface
         return \json_encode($serializer->normalize($topic, null, ['skip_null_values' => true]));
     }
 
-    public function supportsNormalization($data, $format = null)
+    /**
+     * @param mixed $data
+     * @param null  $format
+     *
+     * @return bool
+     */
+    public function supportsNormalization($data, $format = null): bool
     {
         return $data instanceof InlineKeyboardMarkupType ||
             $data instanceof ReplyKeyboardMarkupType ||

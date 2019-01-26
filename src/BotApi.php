@@ -144,7 +144,7 @@ class BotApi implements BotApiInterface
         return \lcfirst(\substr(
             \get_class($method),
             \strrpos(\get_class($method), '\\') + 1,
-            -1 * \strlen('Method')
+            -6
         ));
     }
 }

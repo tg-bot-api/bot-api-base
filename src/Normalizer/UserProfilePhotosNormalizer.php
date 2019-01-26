@@ -11,18 +11,41 @@ use Symfony\Component\Serializer\Serializer;
 use TgBotApi\BotApiBase\Type\PhotoSizeType;
 use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
 
+/**
+ * Class UserProfilePhotosNormalizer.
+ */
 class UserProfilePhotosNormalizer implements DenormalizerInterface
 {
+    /**
+     * @var NormalizerInterface
+     */
     private $objectNormalizer;
+    /**
+     * @var ArrayDenormalizer
+     */
     private $arrayDenormalizer;
 
+    /**
+     * UserProfilePhotosNormalizer constructor.
+     *
+     * @param NormalizerInterface $objectNormalizer
+     * @param ArrayDenormalizer   $arrayDenormalizer
+     */
     public function __construct(NormalizerInterface $objectNormalizer, ArrayDenormalizer $arrayDenormalizer)
     {
         $this->objectNormalizer = $objectNormalizer;
         $this->arrayDenormalizer = $arrayDenormalizer;
     }
 
-    public function denormalize($data, $class, $format = null, array $context = [])
+    /**
+     * @param mixed  $data
+     * @param string $class
+     * @param null   $format
+     * @param array  $context
+     *
+     * @return UserProfilePhotosType
+     */
+    public function denormalize($data, $class, $format = null, array $context = []): UserProfilePhotosType
     {
         $serializer = new Serializer([$this->objectNormalizer, $this->arrayDenormalizer]);
         $data['photos'] = $serializer->denormalize($data['photos'], PhotoSizeType::class . '[][]');
@@ -30,7 +53,14 @@ class UserProfilePhotosNormalizer implements DenormalizerInterface
         return $serializer->denormalize($data, UserProfilePhotosType::class);
     }
 
-    public function supportsDenormalization($data, $type, $format = null)
+    /**
+     * @param mixed  $data
+     * @param string $type
+     * @param null   $format
+     *
+     * @return bool
+     */
+    public function supportsDenormalization($data, $type, $format = null): bool
     {
         return UserProfilePhotosType::class === $type;
     }
