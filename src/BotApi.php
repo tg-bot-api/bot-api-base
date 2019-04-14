@@ -9,10 +9,12 @@ use TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\SendChatActionMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
+use TgBotApi\BotApiBase\Method\StopPollMethod;
 use TgBotApi\BotApiBase\Traits\AliasMethodTrait;
 use TgBotApi\BotApiBase\Traits\GetMethodTrait;
 use TgBotApi\BotApiBase\Type\FileType;
 use TgBotApi\BotApiBase\Type\MessageType;
+use TgBotApi\BotApiBase\Type\PollType;
 
 /**
  * Class BotApi.
@@ -65,7 +67,7 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param $method
+     * @param             $method
      * @param string|null $type
      *
      * @throws ResponseException
@@ -117,6 +119,18 @@ class BotApi implements BotApiInterface
     public function sendMediaGroup(SendMediaGroupMethod $method): array
     {
         return $this->call($method, MessageType::class . '[]');
+    }
+
+    /**
+     * @param StopPollMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return PollType
+     */
+    public function stopPoll(StopPollMethod $method): PollType
+    {
+        return $this->call($method, PollType::class);
     }
 
     /**

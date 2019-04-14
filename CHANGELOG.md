@@ -21,6 +21,23 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 0.4.0-beta - 2019-04-15
+
+Implemented support for Telegram Bot API v4.2
+
+### Added
+- #### methods
+   - added method sendPollMethod(SendPollMethod): MessageType to BotApiComplete 
+   - allowed type SendPollMethod in send method of BotApi
+   - added method stopPoll(StopPollMethod): Poll to BotApi
+- #### types
+   - added PollOptionType and PollType
+   - added property $poll of PollType type to UpdateType class
+   - added property $forwardSenderName of string type to MessageType class
+
+### Fixed
+- `bugfix` renamed property $signature to $forwardSignature 
+
 ## 0.2.0-beta - 2019-01-15
 
 Added webhook fetcher.

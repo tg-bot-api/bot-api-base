@@ -54,7 +54,7 @@ class UpdateType
      * @see https://core.telegram.org/bots/api#inline-mode
      * Optional. New incoming inline query
      *
-     * @var inlineQueryType|null
+     * @var InlineQueryType|null
      */
     public $inlineQuery;
 
@@ -88,4 +88,11 @@ class UpdateType
      * @var PreCheckoutQueryType|null
      */
     public $preCheckoutQuery;
+
+    /**
+     * Optional. New poll state. Bots receive only updates about polls, which are sent or stopped by the bot.
+     *
+     * @var PollType
+     */
+    public $poll;
 }

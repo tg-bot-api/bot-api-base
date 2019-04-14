@@ -17,7 +17,7 @@ trait FillFromArrayTrait
      *
      * @throws BadArgumentException
      */
-    public function fill(array $data, array $forbidden = [])
+    public function fill(array $data, array $forbidden = []): void
     {
         foreach ($forbidden as $item) {
             if (isset($data[$item])) {

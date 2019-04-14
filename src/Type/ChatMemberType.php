@@ -90,7 +90,7 @@ class ChatMemberType
     public $canRestrictMembers;
 
     /**
-     * Boolean    Optional. Administrators only. True, if the administrator can pin messages, supergroups only.
+     * Optional. Administrators only. True, if the administrator can pin messages, supergroups only.
      *
      * @var bool|null
      */
@@ -104,6 +104,13 @@ class ChatMemberType
      * @var bool|null
      */
     public $canPromoteMembers;
+
+    /**
+     * Optional. Restricted only. True, if the user is a member of the chat at the moment of the request.
+     *
+     * @var bool | null
+     */
+    public $isMember;
 
     /**
      * Optional. Restricted only. True, if the user can send text messages, contacts, locations and venues.

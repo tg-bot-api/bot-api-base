@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Exception\BadArgumentException;
 use TgBotApi\BotApiBase\Method\Interfaces\ForwardMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
@@ -46,11 +47,11 @@ class ForwardMessageMethod implements SendMethodAliasInterface, ForwardMethodAli
      * @param int        $messageId
      * @param array|null $data
      *
-     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws BadArgumentException
      *
      * @return ForwardMessageMethod
      */
-    public static function create($chatId, $fromChatId, int $messageId, array $data = null): ForwardMessageMethod
+    public static function create($chatId, $fromChatId, int $messageId, array $data = null): self
     {
         $instance = new static();
         $instance->chatId = $chatId;

@@ -67,7 +67,15 @@ class MessageType implements HasParseModeVariableInterface
      *
      * @var string|null
      */
-    public $signature;
+    public $forwardSignature;
+
+    /**
+     * Optional. Sender's name for messages forwarded from users
+     * who disallow adding a link to their account in forwarded messages.
+     *
+     * @var string|null
+     */
+    public $forwardSenderName;
 
     /**
      * Optional. For forwarded messages, date the original message was sent in \DateTimeImmutable.

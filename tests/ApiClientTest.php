@@ -19,7 +19,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
 /**
  * Class ApiClientTest.
  *
- * @todo improve this test
+ * @todo write real test instead this
  */
 class ApiClientTest extends TestCase
 {

@@ -81,7 +81,7 @@ class ChatType
     public $inviteLink;
 
     /**
-     * Optional. Pinned message, for supergroups and channel chats. Returned only in getChat.
+     * Optional. Pinned message, for groups, supergroups and channels. Returned only in getChat.
      *
      * @var MessageType|null
      */

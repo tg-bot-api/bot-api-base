@@ -17,6 +17,7 @@ use TgBotApi\BotApiBase\Method\SendLocationMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Method\SendMessageMethod;
 use TgBotApi\BotApiBase\Method\SendPhotoMethod;
+use TgBotApi\BotApiBase\Method\SendPollMethod;
 use TgBotApi\BotApiBase\Method\SendStickerMethod;
 use TgBotApi\BotApiBase\Method\SendVenueMethod;
 use TgBotApi\BotApiBase\Method\SendVideoMethod;
@@ -220,6 +221,18 @@ trait SendMethodTrait
      * @return MessageType
      */
     public function sendMessage(SendMessageMethod $method): MessageType
+    {
+        return $this->send($method);
+    }
+
+    /**
+     * @param SendPollMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return MessageType
+     */
+    public function sendPoll(SendPollMethod $method): MessageType
     {
         return $this->send($method);
     }
