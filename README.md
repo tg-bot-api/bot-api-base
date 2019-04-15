@@ -57,9 +57,10 @@ You can configure it to work in symfony, for example, in [this way](https://gist
 |pin|PinChatMessageMethod|bool|
 |promote|PromoteChatMemberMethod|bool|
 |restrict|RestrictChatMemberMethod|bool|
-|send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod|MessageType|
+|send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod, SendPollMethod|MessageType|
 |set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod|bool|
 |stop|StopMessageLiveLocationMethod|bool|
+|stopPoll|StopPollMethod|Poll|
 |unban|UnbanChatMemberMethod|bool|
 |unpin|UnpinChatMessageMethod|bool|
 |upload|UploadStickerFileMethod|FileType|
