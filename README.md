@@ -15,7 +15,7 @@
 Via Composer
 
 ``` bash
-composer require greenplugin/telegram-bot-api
+composer require tg-bot-api/bot-api-base
 ```
 
 ## Usage
