@@ -23,7 +23,6 @@
 <li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
-<li><a href="../packages/TgBotApi.html"><i class="icon-folder-open"></i> TgBotApi</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -34,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">548</span></a></li>
+                <span class="label label-info">556</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -94,7 +93,7 @@
 <li class="nav-header">
 <i title="Interfaces" class="icon-custom icon-interface"></i> Interfaces</li>
 <li><a href="#PromoteMethodAliasInterface" title="Class PromoteMethodAliasInterface.">PromoteMethodAliasInterface</a></li>
-<li><a href="#BotApiInterface" title="Interface BotApiInterface">BotApiInterface</a></li>
+<li><a href="#BotApiInterface" title="Interface BotApiInterface.">BotApiInterface</a></li>
 <li><a href="#KickMethodAliasInterface" title="Interface KickMethodAliasInterface.">KickMethodAliasInterface</a></li>
 <li><a href="#StopMethodAliasInterface" title="Interface StopMethodAliasInterface.">StopMethodAliasInterface</a></li>
 <li><a href="#SetMethodAliasInterface" title="Interface SetMethodAliasInterface.">SetMethodAliasInterface</a></li>
@@ -116,6 +115,7 @@
 <li><a href="#AddMethodAliasInterface" title="Interface AddMethodAliasInterface.">AddMethodAliasInterface</a></li>
 <li><a href="#DeleteMethodAliasInterface" title="Class DeleteMethodAliasInterface.">DeleteMethodAliasInterface</a></li>
 <li><a href="#CreateMethodAliasInterface" title="Interface CreateMethodAliasInterface.">CreateMethodAliasInterface</a></li>
+<li><a href="#ApiClientInterface" title="Interface ApiClientInterface.">ApiClientInterface</a></li>
 <li class="nav-header">
 <i title="Classes" class="icon-custom icon-class"></i> Classes</li>
 <li><a href="#SendContactMethod" title="Class SendContactMethod.">SendContactMethod</a></li>
@@ -147,7 +147,7 @@ This object represents a file ready to be downloaded.">FileType</a></li>
 <li><a href="#InputTextMessageContentType" title="Class InputTextMessageContentType.">InputTextMessageContentType</a></li>
 <li><a href="#GetGameHighScoresMethod" title="Class SetGameHighScoresMethod.">GetGameHighScoresMethod</a></li>
 <li><a href="#LabeledPriceType" title="Class LabeledPriceType.">LabeledPriceType</a></li>
-<li><a href="#JsonSerializableNormalizer" title="Class JsonSerializableNormalizer">JsonSerializableNormalizer</a></li>
+<li><a href="#JsonSerializableNormalizer" title="Class JsonSerializableNormalizer.">JsonSerializableNormalizer</a></li>
 <li><a href="#GetMeMethod" title="Class GetMeMethod.">GetMeMethod</a></li>
 <li><a href="#CallbackQueryType" title="Class CallbackQueryType
 represents an incoming callback query from a callback button in an inline keyboard.">CallbackQueryType</a></li>
@@ -188,7 +188,7 @@ represents an incoming callback query from a callback button in an inline keyboa
 <li><a href="#SetChatStickerSetMethod" title="Class SetChatStickerSetMethod.">SetChatStickerSetMethod</a></li>
 <li><a href="#GetChatMembersCountMethod" title="Class GetChatMembersCountMethod.">GetChatMembersCountMethod</a></li>
 <li><a href="#SetStickerPositionInSetMethod" title="Class SetStickerPositionInSetMethod.">SetStickerPositionInSetMethod</a></li>
-<li><a href="#InputMediaNormalizer" title="Class InputMediaNormalizer">InputMediaNormalizer</a></li>
+<li><a href="#InputMediaNormalizer" title="Class InputMediaNormalizer.">InputMediaNormalizer</a></li>
 <li><a href="#AnswerPreCheckoutQueryMethod" title="Class AnswerPreCheckoutQueryMethod.">AnswerPreCheckoutQueryMethod</a></li>
 <li><a href="#InlineQueryResultCachedGifType" title="Class InlineQueryResultCachedGifType.">InlineQueryResultCachedGifType</a></li>
 <li><a href="#DeleteChatPhotoMethod" title="Class DeleteChatPhotoMethod.">DeleteChatPhotoMethod</a></li>
@@ -196,7 +196,7 @@ represents an incoming callback query from a callback button in an inline keyboa
 <li><a href="#ResponseException" title="Class ResponseException.">ResponseException</a></li>
 <li><a href="#DeleteChatStickerSetMethod" title="Class DeleteChatStickerSetMethod.">DeleteChatStickerSetMethod</a></li>
 <li><a href="#SendInvoiceMethod" title="Class SendInvoiceMethod.">SendInvoiceMethod</a></li>
-<li><a href="#AnswerInlineQueryNormalizer" title="Class AnswerInlineQueryNormalizer">AnswerInlineQueryNormalizer</a></li>
+<li><a href="#AnswerInlineQueryNormalizer" title="Class AnswerInlineQueryNormalizer.">AnswerInlineQueryNormalizer</a></li>
 <li><a href="#InlineQueryResultGifType" title="Class InlineQueryResultGifType.">InlineQueryResultGifType</a></li>
 <li><a href="#PassportElementErrorTranslationFilesType" title="Class PassportElementErrorTranslationFilesType.">PassportElementErrorTranslationFilesType</a></li>
 <li><a href="#InputMediaAudioType" title="Class InputMediaAudioType.">InputMediaAudioType</a></li>
@@ -216,6 +216,7 @@ represents an incoming callback query from a callback button in an inline keyboa
 <li><a href="#EncryptedPassportElementType" title="Class EncryptedPassportElementType.">EncryptedPassportElementType</a></li>
 <li><a href="#ChatMemberType" title="Class ChatMemberType.">ChatMemberType</a></li>
 <li><a href="#ExportChatInviteLinkMethod" title="Class ExportChatInviteLinkMethod.">ExportChatInviteLinkMethod</a></li>
+<li><a href="#UserProfilePhotosNormalizer" title="Class UserProfilePhotosNormalizer.">UserProfilePhotosNormalizer</a></li>
 <li><a href="#BotApiRequest" title="Class BotApiRequest.">BotApiRequest</a></li>
 <li><a href="#GetUserProfilePhotosMethod" title="Class GetUserProfilePhotosMethod.">GetUserProfilePhotosMethod</a></li>
 <li><a href="#InputMessageContentType" title="Class InputMessageContentType.">InputMessageContentType</a></li>
@@ -232,7 +233,7 @@ represents an incoming callback query from a callback button in an inline keyboa
 <li><a href="#PassportElementErrorReverseSideType" title="Class PassportElementErrorReverseSideType.">PassportElementErrorReverseSideType</a></li>
 <li><a href="#InlineQueryResultVideoType" title="Class InlineQueryResultVideoType
 Represents a link to a page containing an embedded video player or a video file.">InlineQueryResultVideoType</a></li>
-<li><a href="#MediaGroupNormalizer" title="Class MediaGroupNormalizer">MediaGroupNormalizer</a></li>
+<li><a href="#MediaGroupNormalizer" title="Class MediaGroupNormalizer.">MediaGroupNormalizer</a></li>
 <li><a href="#InlineQueryType" title="Class InlineQueryType.">InlineQueryType</a></li>
 <li><a href="#DeleteStickerFromSetMethod" title="Class DeleteStickerFromSetMethod.">DeleteStickerFromSetMethod</a></li>
 <li><a href="#StopMessageLiveLocationMethod" title="Class StopMessageLiveLocationType.">StopMessageLiveLocationMethod</a></li>
@@ -274,24 +275,32 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <li><a href="#InlineQueryResultVenueType" title="Class InlineQueryResultVenueType.">InlineQueryResultVenueType</a></li>
 <li><a href="#InputMediaType" title="Class InputMediaType.">InputMediaType</a></li>
 <li><a href="#ShippingAddressType" title="Class ShippingAddressType.">ShippingAddressType</a></li>
-<li><a href="#InputFileNormalizer" title="Class InputFileNormalizer">InputFileNormalizer</a></li>
+<li><a href="#InputFileNormalizer" title="Class InputFileNormalizer.">InputFileNormalizer</a></li>
 <li><a href="#InputContactMessageContentType" title="Class InputContactMessageContentType.">InputContactMessageContentType</a></li>
-<li><a href="#ApiClient" title="Class ApiClient">ApiClient</a></li>
+<li><a href="#ApiClient" title="Class ApiClient.">ApiClient</a></li>
 <li><a href="#PassportElementErrorFrontSideType" title="Class PassportElementErrorFrontSideType.">PassportElementErrorFrontSideType</a></li>
-<li><a href="#BotApiNormalizer" title="Class BotApiNormalizer">BotApiNormalizer</a></li>
+<li><a href="#BotApiNormalizer" title="Class BotApiNormalizer.">BotApiNormalizer</a></li>
 <li><a href="#PassportElementErrorType" title="Class PassportElementErrorType.">PassportElementErrorType</a></li>
 <li><a href="#PinChatMessageMethod" title="Class PinChatMessageMethod.">PinChatMessageMethod</a></li>
 <li><a href="#InlineQueryResultCachedDocumentType" title="Class InlineQueryResultCachedDocumentType.">InlineQueryResultCachedDocumentType</a></li>
 <li><a href="#MaskPositionType" title="Class MaskPositionType.">MaskPositionType</a></li>
 <li><a href="#VideoType" title="Class VideoType.">VideoType</a></li>
 <li><a href="#ForwardMessageMethod" title="Class ForwardMessageMethod.">ForwardMessageMethod</a></li>
-<li><a href="#BadRequestException" title="Class BadRequestException">BadRequestException</a></li>
+<li><a href="#BadRequestException" title="Class BadRequestException.">BadRequestException</a></li>
 <li><a href="#AudioType" title="Class AudioType.">AudioType</a></li>
 <li><a href="#DeleteMessageMethod" title="Class DeleteMessageMethod.">DeleteMessageMethod</a></li>
 <li><a href="#EditMessageReplyMarkupMethod" title="Class EditMessageReplyMarkupMethod.">EditMessageReplyMarkupMethod</a></li>
 <li><a href="#VenueType" title="Class VenueType.">VenueType</a></li>
 <li><a href="#InlineQueryResultArticleType" title="Class InlineQueryResultArticleType.">InlineQueryResultArticleType</a></li>
 <li><a href="#GameHighScoreType" title="Class GameHighScoreType.">GameHighScoreType</a></li>
+<li><a href="#PollType" title="Class PollType
+This object contains information about a poll.">PollType</a></li>
+<li><a href="#PollOptionType" title="Class PollOptionType
+This object contains information about one answer option in a poll.">PollOptionType</a></li>
+<li><a href="#SendPollMethod" title="Class SendPollMethod
+Use this method to send a native poll. A native poll can't be sent to a private chat.">SendPollMethod</a></li>
+<li><a href="#StopPollMethod" title="Class StopPollMethod
+Use this method to stop a poll which was sent by the bot.">StopPollMethod</a></li>
 </ul>
 </div>
 <div class="span8 package-contents">
@@ -497,6 +506,13 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Traits.UploadMethodTrait.html" class="more">« More »</a>
 </div>
+<div xmlns:php="http://php.net/xsl" id="ApiClientInterface" class="element ajax clickable interface">
+<h1>ApiClientInterface<a href="../classes/TgBotApi.BotApiBase.ApiClientInterface.html">¶</a>
+</h1>
+<p class="short_description">Interface ApiClientInterface.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.ApiClientInterface.html" class="more">« More »</a>
+</div>
 <div xmlns:php="http://php.net/xsl" id="BotApiAliasInterface" class="element ajax clickable interface">
 <h1>BotApiAliasInterface<a href="../classes/TgBotApi.BotApiBase.BotApiAliasInterface.html">¶</a>
 </h1>
@@ -507,7 +523,7 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div xmlns:php="http://php.net/xsl" id="BotApiInterface" class="element ajax clickable interface">
 <h1>BotApiInterface<a href="../classes/TgBotApi.BotApiBase.BotApiInterface.html">¶</a>
 </h1>
-<p class="short_description">Interface BotApiInterface</p>
+<p class="short_description">Interface BotApiInterface.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.BotApiInterface.html" class="more">« More »</a>
 </div>
@@ -661,7 +677,7 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div xmlns:php="http://php.net/xsl" id="ApiClient" class="element ajax clickable class">
 <h1>ApiClient<a href="../classes/TgBotApi.BotApiBase.ApiClient.html">¶</a>
 </h1>
-<p class="short_description">Class ApiClient</p>
+<p class="short_description">Class ApiClient.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.ApiClient.html" class="more">« More »</a>
 </div>
@@ -682,7 +698,7 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div xmlns:php="http://php.net/xsl" id="BotApiNormalizer" class="element ajax clickable class">
 <h1>BotApiNormalizer<a href="../classes/TgBotApi.BotApiBase.BotApiNormalizer.html">¶</a>
 </h1>
-<p class="short_description">Class BotApiNormalizer</p>
+<p class="short_description">Class BotApiNormalizer.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.BotApiNormalizer.html" class="more">« More »</a>
 </div>
@@ -703,7 +719,7 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div xmlns:php="http://php.net/xsl" id="BadRequestException" class="element ajax clickable class">
 <h1>BadRequestException<a href="../classes/TgBotApi.BotApiBase.Exception.BadRequestException.html">¶</a>
 </h1>
-<p class="short_description">Class BadRequestException</p>
+<p class="short_description">Class BadRequestException.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Exception.BadRequestException.html" class="more">« More »</a>
 </div>
@@ -1029,6 +1045,14 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Method.SendPhotoMethod.html" class="more">« More »</a>
 </div>
+<div xmlns:php="http://php.net/xsl" id="SendPollMethod" class="element ajax clickable class">
+<h1>SendPollMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendPollMethod.html">¶</a>
+</h1>
+<p class="short_description">Class SendPollMethod
+Use this method to send a native poll. A native poll can't be sent to a private chat.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SendPollMethod.html" class="more">« More »</a>
+</div>
 <div xmlns:php="http://php.net/xsl" id="SendStickerMethod" class="element ajax clickable class">
 <h1>SendStickerMethod<a href="../classes/TgBotApi.BotApiBase.Method.SendStickerMethod.html">¶</a>
 </h1>
@@ -1127,6 +1151,14 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Method.StopMessageLiveLocationMethod.html" class="more">« More »</a>
 </div>
+<div xmlns:php="http://php.net/xsl" id="StopPollMethod" class="element ajax clickable class">
+<h1>StopPollMethod<a href="../classes/TgBotApi.BotApiBase.Method.StopPollMethod.html">¶</a>
+</h1>
+<p class="short_description">Class StopPollMethod
+Use this method to stop a poll which was sent by the bot.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.StopPollMethod.html" class="more">« More »</a>
+</div>
 <div xmlns:php="http://php.net/xsl" id="UnbanChatMemberMethod" class="element ajax clickable class">
 <h1>UnbanChatMemberMethod<a href="../classes/TgBotApi.BotApiBase.Method.UnbanChatMemberMethod.html">¶</a>
 </h1>
@@ -1151,37 +1183,44 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <div xmlns:php="http://php.net/xsl" id="AnswerInlineQueryNormalizer" class="element ajax clickable class">
 <h1>AnswerInlineQueryNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.AnswerInlineQueryNormalizer.html">¶</a>
 </h1>
-<p class="short_description">Class AnswerInlineQueryNormalizer</p>
+<p class="short_description">Class AnswerInlineQueryNormalizer.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Normalizer.AnswerInlineQueryNormalizer.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="InputFileNormalizer" class="element ajax clickable class">
 <h1>InputFileNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.InputFileNormalizer.html">¶</a>
 </h1>
-<p class="short_description">Class InputFileNormalizer</p>
+<p class="short_description">Class InputFileNormalizer.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Normalizer.InputFileNormalizer.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="InputMediaNormalizer" class="element ajax clickable class">
 <h1>InputMediaNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.InputMediaNormalizer.html">¶</a>
 </h1>
-<p class="short_description">Class InputMediaNormalizer</p>
+<p class="short_description">Class InputMediaNormalizer.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Normalizer.InputMediaNormalizer.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="JsonSerializableNormalizer" class="element ajax clickable class">
 <h1>JsonSerializableNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.JsonSerializableNormalizer.html">¶</a>
 </h1>
-<p class="short_description">Class JsonSerializableNormalizer</p>
+<p class="short_description">Class JsonSerializableNormalizer.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Normalizer.JsonSerializableNormalizer.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="MediaGroupNormalizer" class="element ajax clickable class">
 <h1>MediaGroupNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.MediaGroupNormalizer.html">¶</a>
 </h1>
-<p class="short_description">Class MediaGroupNormalizer</p>
+<p class="short_description">Class MediaGroupNormalizer.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Normalizer.MediaGroupNormalizer.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="UserProfilePhotosNormalizer" class="element ajax clickable class">
+<h1>UserProfilePhotosNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.UserProfilePhotosNormalizer.html">¶</a>
+</h1>
+<p class="short_description">Class UserProfilePhotosNormalizer.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Normalizer.UserProfilePhotosNormalizer.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="AnimationType" class="element ajax clickable class">
 <h1>AnimationType<a href="../classes/TgBotApi.BotApiBase.Type.AnimationType.html">¶</a>
@@ -1701,6 +1740,22 @@ April, 2016. Older clients will ignore them.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Type.PhotoSizeType.html" class="more">« More »</a>
 </div>
+<div xmlns:php="http://php.net/xsl" id="PollOptionType" class="element ajax clickable class">
+<h1>PollOptionType<a href="../classes/TgBotApi.BotApiBase.Type.PollOptionType.html">¶</a>
+</h1>
+<p class="short_description">Class PollOptionType
+This object contains information about one answer option in a poll.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.PollOptionType.html" class="more">« More »</a>
+</div>
+<div xmlns:php="http://php.net/xsl" id="PollType" class="element ajax clickable class">
+<h1>PollType<a href="../classes/TgBotApi.BotApiBase.Type.PollType.html">¶</a>
+</h1>
+<p class="short_description">Class PollType
+This object contains information about a poll.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Type.PollType.html" class="more">« More »</a>
+</div>
 <div xmlns:php="http://php.net/xsl" id="PreCheckoutQueryType" class="element ajax clickable class">
 <h1>PreCheckoutQueryType<a href="../classes/TgBotApi.BotApiBase.Type.PreCheckoutQueryType.html">¶</a>
 </h1>
@@ -1840,7 +1895,7 @@ April, 2016. Older clients will ignore them.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-01-26T07:33:10+07:00.<br></footer></div>
+            generated on 2019-05-01T16:02:51+07:00.<br></footer></div>
 </div>
 </body>
 </html>

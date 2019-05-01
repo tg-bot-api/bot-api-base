@@ -23,7 +23,6 @@
 <li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
-<li><a href="../packages/TgBotApi.html"><i class="icon-folder-open"></i> TgBotApi</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -34,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">548</span></a></li>
+                <span class="label label-info">556</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -70,6 +69,7 @@
 <li class="property public "><a href="#property_editedMessage" title="$editedMessage() :: Optional. New version of a message that is known to the bot and was edited."><span class="description"></span><pre>$editedMessage</pre></a></li>
 <li class="property public "><a href="#property_inlineQuery" title="$inlineQuery() :: "><span class="description"></span><pre>$inlineQuery</pre></a></li>
 <li class="property public "><a href="#property_message" title="$message() :: Optional. New incoming message of any kind — text, photo, sticker, etc."><span class="description"></span><pre>$message</pre></a></li>
+<li class="property public "><a href="#property_poll" title="$poll() :: Optional. New poll state. Bots receive only updates about polls, which are sent or stopped by the bot."><span class="description"></span><pre>$poll</pre></a></li>
 <li class="property public "><a href="#property_preCheckoutQuery" title="$preCheckoutQuery() :: Optional. New incoming pre-checkout query. Contains full information about checkout."><span class="description"></span><pre>$preCheckoutQuery</pre></a></li>
 <li class="property public "><a href="#property_shippingQuery" title="$shippingQuery() :: Optional. New incoming shipping query. Only for invoices with flexible price."><span class="description"></span><pre>$shippingQuery</pre></a></li>
 <li class="property public "><a href="#property_updateId" title="$updateId() :: The update‘s unique identifier. Update identifiers start from a certain positive number and increase
@@ -177,7 +177,7 @@ Please see our documentation on the feedback collecting for details on how to en
 </div>
 <a id="property_inlineQuery"> </a><div class="element clickable property public property_inlineQuery" data-toggle="collapse" data-target=".property_inlineQuery .collapse" title="public">
 <h2>$inlineQuery</h2>
-<pre>$inlineQuery : \TgBotApi\BotApiBase\Type\inlineQueryType | null</pre>
+<pre>$inlineQuery : \TgBotApi\BotApiBase\Type\InlineQueryType | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -194,6 +194,16 @@ Please see our documentation on the feedback collecting for details on how to en
 <a id="property_message"> </a><div class="element clickable property public property_message" data-toggle="collapse" data-target=".property_message .collapse" title="public">
 <h2>Optional. New incoming message of any kind — text, photo, sticker, etc.</h2>
 <pre>$message : \TgBotApi\BotApiBase\Type\MessageType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_poll"> </a><div class="element clickable property public property_poll" data-toggle="collapse" data-target=".property_poll .collapse" title="public">
+<h2>Optional. New poll state. Bots receive only updates about polls, which are sent or stopped by the bot.</h2>
+<pre>$poll : \TgBotApi\BotApiBase\Type\PollType</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -242,7 +252,7 @@ of sequentially.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-01-26T07:33:12+07:00.<br></footer></div>
+            generated on 2019-05-01T16:02:52+07:00.<br></footer></div>
 </div>
 </body>
 </html>

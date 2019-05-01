@@ -23,7 +23,6 @@
 <li><a href="../namespaces/TgBotApi.html"><i class="icon-th"></i> TgBotApi</a></li>
 <li><a>Packages</a></li>
 <li><a href="../packages/Default.html"><i class="icon-folder-open"></i> Default</a></li>
-<li><a href="../packages/TgBotApi.html"><i class="icon-folder-open"></i> TgBotApi</a></li>
 </ul>
 </li>
 <li class="dropdown" id="charts-menu">
@@ -34,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">548</span></a></li>
+                <span class="label label-info">556</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -84,6 +83,9 @@ reply_to_message if someone replies to a very first message in a channel."><span
 <li class="property public "><a href="#property_forwardFrom" title="$forwardFrom() :: Optional. For forwarded messages, sender of the original message."><span class="description"></span><pre>$forwardFrom</pre></a></li>
 <li class="property public "><a href="#property_forwardFromChat" title="$forwardFromChat() :: Optional. For messages forwarded from channels, information about the original channel."><span class="description"></span><pre>$forwardFromChat</pre></a></li>
 <li class="property public "><a href="#property_forwardFromMessageId" title="$forwardFromMessageId() :: Optional. For messages forwarded from channels, identifier of the original message in the channel."><span class="description"></span><pre>$forwardFromMessageId</pre></a></li>
+<li class="property public "><a href="#property_forwardSenderName" title="$forwardSenderName() :: Optional. Sender's name for messages forwarded from users
+who disallow adding a link to their account in forwarded messages."><span class="description"></span><pre>$forwardSenderName</pre></a></li>
+<li class="property public "><a href="#property_forwardSignature" title="$forwardSignature() :: Optional. For messages forwarded from channels, signature of the post author if present."><span class="description"></span><pre>$forwardSignature</pre></a></li>
 <li class="property public "><a href="#property_from" title="$from() :: Optional. Sender, empty for messages sent to channels."><span class="description"></span><pre>$from</pre></a></li>
 <li class="property public "><a href="#property_game" title="$game() :: "><span class="description"></span><pre>$game</pre></a></li>
 <li class="property public "><a href="#property_groupChanelCreated" title="$groupChanelCreated() :: Optional. Service message: the group has been created."><span class="description"></span><pre>$groupChanelCreated</pre></a></li>
@@ -105,7 +107,6 @@ greater than 32 bits and some programming languages may have difficulty/silent d
 <li class="property public "><a href="#property_pinnedMessage" title="$pinnedMessage() :: Optional. Specified message was pinned."><span class="description"></span><pre>$pinnedMessage</pre></a></li>
 <li class="property public "><a href="#property_replyToMessage" title="$replyToMessage() :: Optional. For replies, the original message. Note that the Message object in this field will not contain
 further reply_to_message fields even if it itself is a reply."><span class="description"></span><pre>$replyToMessage</pre></a></li>
-<li class="property public "><a href="#property_signature" title="$signature() :: Optional. For messages forwarded from channels, signature of the post author if present."><span class="description"></span><pre>$signature</pre></a></li>
 <li class="property public "><a href="#property_sticker" title="$sticker() :: Optional. Message is a sticker, information about the sticker."><span class="description"></span><pre>$sticker</pre></a></li>
 <li class="property public "><a href="#property_successfulPayment" title="$successfulPayment() :: "><span class="description"></span><pre>$successfulPayment</pre></a></li>
 <li class="property public "><a href="#property_supergroupChatCreated" title="$supergroupChatCreated() :: Optional. Service message: the supergroup has been created. This field can‘t be received in a message coming
@@ -340,6 +341,27 @@ reply_to_message if someone replies to a very first message in a channel.</h2>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_forwardSenderName"> </a><div class="element clickable property public property_forwardSenderName" data-toggle="collapse" data-target=".property_forwardSenderName .collapse" title="public">
+<h2>Optional. Sender's name for messages forwarded from users
+who disallow adding a link to their account in forwarded messages.</h2>
+<pre>$forwardSenderName : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_forwardSignature"> </a><div class="element clickable property public property_forwardSignature" data-toggle="collapse" data-target=".property_forwardSignature .collapse" title="public">
+<h2>Optional. For messages forwarded from channels, signature of the post author if present.</h2>
+<pre>$forwardSignature : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_from"> </a><div class="element clickable property public property_from" data-toggle="collapse" data-target=".property_from .collapse" title="public">
 <h2>Optional. Sender, empty for messages sent to channels.</h2>
 <pre>$from : \TgBotApi\BotApiBase\Type\UserType | null</pre>
@@ -545,16 +567,6 @@ further reply_to_message fields even if it itself is a reply.</h2>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_signature"> </a><div class="element clickable property public property_signature" data-toggle="collapse" data-target=".property_signature .collapse" title="public">
-<h2>Optional. For messages forwarded from channels, signature of the post author if present.</h2>
-<pre>$signature : string | null</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 <a id="property_sticker"> </a><div class="element clickable property public property_sticker" data-toggle="collapse" data-target=".property_sticker .collapse" title="public">
 <h2>Optional. Message is a sticker, information about the sticker.</h2>
 <pre>$sticker : \TgBotApi\BotApiBase\Type\StickerType | null</pre>
@@ -656,7 +668,7 @@ reply_to_message if someone replies to a very first message in a directly create
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-01-26T07:33:11+07:00.<br></footer></div>
+            generated on 2019-05-01T16:02:51+07:00.<br></footer></div>
 </div>
 </body>
 </html>
