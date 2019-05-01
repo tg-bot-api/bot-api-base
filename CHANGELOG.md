@@ -21,6 +21,13 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.0.0 - 2019-05-01
+
+### Added
+- updated api docs
+- upgraded package version to 1.0 
+
+
 ## 0.4.0-beta - 2019-04-15
 
 Implemented support for Telegram Bot API v4.2
