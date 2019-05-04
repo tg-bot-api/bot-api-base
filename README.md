@@ -28,7 +28,7 @@ composer require php-http/guzzle6-adapter http-interop/http-factory-guzzle
 ```php
 $botKey = '<bot key>';
 
-$requestFactory = new Http\Factory\Guzzle\RequestFactory()
+$requestFactory = new Http\Factory\Guzzle\RequestFactory();
 $streamFactory = new Http\Factory\Guzzle\StreamFactory();
 $client = new Http\Adapter\Guzzle6\Client();
 
