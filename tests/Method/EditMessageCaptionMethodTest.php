@@ -75,7 +75,7 @@ class EditMessageCaptionMethodTest extends MethodTestCase
         $this->getBot(
             'editMessageCaption',
             $excepted,
-            true,
+            [],
             ['reply_markup']
         )->editMessageCaption($actual);
     }

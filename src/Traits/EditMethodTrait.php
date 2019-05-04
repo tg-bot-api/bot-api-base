@@ -11,6 +11,7 @@ use TgBotApi\BotApiBase\Method\EditMessageMediaMethod;
 use TgBotApi\BotApiBase\Method\EditMessageReplyMarkupMethod;
 use TgBotApi\BotApiBase\Method\EditMessageTextMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
+use TgBotApi\BotApiBase\Type\MessageType;
 
 /**
  * Trait EditMethodTrait.
@@ -22,18 +23,18 @@ trait EditMethodTrait
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    abstract public function edit(EditMethodAliasInterface $method): bool;
+    abstract public function edit(EditMethodAliasInterface $method);
 
     /**
      * @param EditMessageCaptionMethod $method
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function editMessageCaption(EditMessageCaptionMethod $method): bool
+    public function editMessageCaption(EditMessageCaptionMethod $method)
     {
         return $this->edit($method);
     }
@@ -43,9 +44,9 @@ trait EditMethodTrait
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function editMessageLiveLocation(EditMessageLiveLocationMethod $method): bool
+    public function editMessageLiveLocation(EditMessageLiveLocationMethod $method)
     {
         return $this->edit($method);
     }
@@ -55,9 +56,9 @@ trait EditMethodTrait
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function editMessageMedia(EditMessageMediaMethod $method): bool
+    public function editMessageMedia(EditMessageMediaMethod $method)
     {
         return $this->edit($method);
     }
@@ -67,9 +68,9 @@ trait EditMethodTrait
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function editMessageReplyMarkup(EditMessageReplyMarkupMethod $method): bool
+    public function editMessageReplyMarkup(EditMessageReplyMarkupMethod $method)
     {
         return $this->edit($method);
     }
@@ -79,9 +80,9 @@ trait EditMethodTrait
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function editMessageText(EditMessageTextMethod $method): bool
+    public function editMessageText(EditMessageTextMethod $method)
     {
         return $this->edit($method);
     }

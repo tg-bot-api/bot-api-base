@@ -123,7 +123,8 @@ class ApiClient implements ApiClientInterface
     {
         $stream = '';
         foreach ($request->getData() as $name => $value) {
-            $stream .= $this->createDataStream($boundary, $name, $value);
+            // todo [GreenPlugin] fix type cast and replace it to normalizer
+            $stream .= $this->createDataStream($boundary, $name, (string) $value);
         }
 
         foreach ($request->getFiles() as $name => $file) {
@@ -134,8 +135,8 @@ class ApiClient implements ApiClientInterface
     }
 
     /**
-     * @param $boundary
-     * @param $name
+     * @param               $boundary
+     * @param               $name
      * @param InputFileType $file
      *
      * @return string

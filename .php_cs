@@ -14,7 +14,6 @@ return PhpCsFixer\Config::create()
         'ordered_class_elements' => true,
         'ordered_imports' => true,
         'phpdoc_order' => true,
-        'phpdoc_to_return_type' => true,
         'psr4' => true,
         'heredoc_to_nowdoc' => true,
         'logical_operators' => true,

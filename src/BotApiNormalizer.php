@@ -5,12 +5,14 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase;
 
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
+use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer;
+use TgBotApi\BotApiBase\Normalizer\EditMessageResponseNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
 use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
@@ -26,7 +28,9 @@ class BotApiNormalizer implements NormalizerInterface
      * @param $data
      * @param $type
      *
-     * @return object|array
+     * @throws ExceptionInterface
+     *
+     * @return object|array|bool
      */
     public function denormalize($data, $type)
     {
@@ -37,9 +41,12 @@ class BotApiNormalizer implements NormalizerInterface
             new PhpDocExtractor()
         );
         $arrayNormalizer = new ArrayDenormalizer();
+        $dateNormalizer = new DateTimeNormalizer();
         $serializer = new Serializer([
             new UserProfilePhotosNormalizer($normalizer, $arrayNormalizer),
+            new EditMessageResponseNormalizer($normalizer, $arrayNormalizer, $dateNormalizer),
             new DateTimeNormalizer(),
+            $dateNormalizer,
             $normalizer,
             $arrayNormalizer,
         ]);
@@ -49,6 +56,8 @@ class BotApiNormalizer implements NormalizerInterface
 
     /**
      * @param $method
+     *
+     * @throws ExceptionInterface
      *
      * @return BotApiRequestInterface
      */

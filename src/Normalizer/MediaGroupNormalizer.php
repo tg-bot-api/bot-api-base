@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Normalizer;
 
+use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
@@ -38,6 +39,8 @@ class MediaGroupNormalizer implements NormalizerInterface
      * @param mixed $topic
      * @param null  $format
      * @param array $context
+     *
+     * @throws ExceptionInterface
      *
      * @return array|bool|float|int|mixed|string
      */

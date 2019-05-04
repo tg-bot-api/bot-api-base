@@ -21,6 +21,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.0.1 - 2019-04-05
+
+### Fixed
+- Type bugs in Update methods.
+- Param must be of the type string, integer given, called in ApiClient.
+
 ## 1.0.0 - 2019-05-01
 
 ### Added

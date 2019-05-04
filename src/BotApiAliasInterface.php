@@ -67,9 +67,9 @@ interface BotApiAliasInterface
     /**
      * @param EditMethodAliasInterface $method
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function edit(EditMethodAliasInterface $method): bool;
+    public function edit(EditMethodAliasInterface $method);
 
     /**
      * @param ForwardMethodAliasInterface $method

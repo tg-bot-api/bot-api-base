@@ -94,11 +94,11 @@ trait AliasMethodTrait
      *
      * @throws ResponseException
      *
-     * @return bool
+     * @return MessageType | bool
      */
-    public function edit(EditMethodAliasInterface $method): bool
+    public function edit(EditMethodAliasInterface $method)
     {
-        return $this->call($method);
+        return $this->call($method, MessageType::class . '|bool');
     }
 
     /**
