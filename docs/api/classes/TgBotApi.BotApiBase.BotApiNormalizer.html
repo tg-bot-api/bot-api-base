@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">556</span></a></li>
+                <span class="label label-info">562</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -95,7 +95,7 @@
 <a id="method_denormalize"></a><div class="element clickable method public method_denormalize " data-toggle="collapse" data-target=".method_denormalize .collapse" title="public">
 <h2>denormalize()
         </h2>
-<pre>denormalize($data, $type) : object | array</pre>
+<pre>denormalize($data, $type) : object | array | boolean</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -106,9 +106,14 @@
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$data</h4></div>
 <div class="subelement argument"><h4>$type</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Symfony\Component\Serializer\Exception\ExceptionInterface</code></th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response">
-<code>object</code><code>array</code>
+<code>object</code><code>array</code><code>boolean</code>
 </div>
 </div></div>
 </div>
@@ -125,6 +130,11 @@
 </tr></table>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\Symfony\Component\Serializer\Exception\ExceptionInterface</code></th>
+<td></td>
+</tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>\TgBotApi\BotApiBase\BotApiRequestInterface</code></div>
 </div></div>
@@ -136,7 +146,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-05-01T16:02:53+07:00.<br></footer></div>
+            generated on 2019-05-04T16:28:06+07:00.<br></footer></div>
 </div>
 </body>
 </html>

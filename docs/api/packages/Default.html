@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">556</span></a></li>
+                <span class="label label-info">562</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -186,6 +186,8 @@ represents an incoming callback query from a callback button in an inline keyboa
 <li><a href="#InlineQueryResultCachedAudioType" title="Class InlineQueryResultCachedAudioType.">InlineQueryResultCachedAudioType</a></li>
 <li><a href="#PassportElementErrorDataFieldType" title="Class PassportElementErrorDataFieldType.">PassportElementErrorDataFieldType</a></li>
 <li><a href="#SetChatStickerSetMethod" title="Class SetChatStickerSetMethod.">SetChatStickerSetMethod</a></li>
+<li><a href="#StopPollMethod" title="Class StopPollMethod
+Use this method to stop a poll which was sent by the bot.">StopPollMethod</a></li>
 <li><a href="#GetChatMembersCountMethod" title="Class GetChatMembersCountMethod.">GetChatMembersCountMethod</a></li>
 <li><a href="#SetStickerPositionInSetMethod" title="Class SetStickerPositionInSetMethod.">SetStickerPositionInSetMethod</a></li>
 <li><a href="#InputMediaNormalizer" title="Class InputMediaNormalizer.">InputMediaNormalizer</a></li>
@@ -238,6 +240,8 @@ Represents a link to a page containing an embedded video player or a video file.
 <li><a href="#DeleteStickerFromSetMethod" title="Class DeleteStickerFromSetMethod.">DeleteStickerFromSetMethod</a></li>
 <li><a href="#StopMessageLiveLocationMethod" title="Class StopMessageLiveLocationType.">StopMessageLiveLocationMethod</a></li>
 <li><a href="#VideoNoteType" title="Class VideoNoteType.">VideoNoteType</a></li>
+<li><a href="#PollOptionType" title="Class PollOptionType
+This object contains information about one answer option in a poll.">PollOptionType</a></li>
 <li><a href="#UploadStickerFileMethod" title="Class UploadStickerFileMethod.">UploadStickerFileMethod</a></li>
 <li><a href="#SendMediaGroupMethod" title="Class SendMediaGroupMethod.">SendMediaGroupMethod</a></li>
 <li><a href="#WebhookFetcher" title="Class WebhookFetcher.">WebhookFetcher</a></li>
@@ -251,6 +255,8 @@ Represents a link to a page containing an embedded video player or a video file.
 <li><a href="#InputMediaDocumentType" title="Class InputMediaDocumentType.">InputMediaDocumentType</a></li>
 <li><a href="#PassportElementErrorFileType" title="Class PassportElementErrorFileType.">PassportElementErrorFileType</a></li>
 <li><a href="#InputMediaVideoType" title="Class InputMediaVideoType.">InputMediaVideoType</a></li>
+<li><a href="#SendPollMethod" title="Class SendPollMethod
+Use this method to send a native poll. A native poll can't be sent to a private chat.">SendPollMethod</a></li>
 <li><a href="#UnbanChatMemberMethod" title="Class UnbanChatMemberMethod.">UnbanChatMemberMethod</a></li>
 <li><a href="#InlineQueryResultCachedPhotoType" title="Class InlineQueryResultCachedPhotoType.">InlineQueryResultCachedPhotoType</a></li>
 <li><a href="#VoiceType" title="Class VoiceType.">VoiceType</a></li>
@@ -284,6 +290,8 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <li><a href="#PinChatMessageMethod" title="Class PinChatMessageMethod.">PinChatMessageMethod</a></li>
 <li><a href="#InlineQueryResultCachedDocumentType" title="Class InlineQueryResultCachedDocumentType.">InlineQueryResultCachedDocumentType</a></li>
 <li><a href="#MaskPositionType" title="Class MaskPositionType.">MaskPositionType</a></li>
+<li><a href="#PollType" title="Class PollType
+This object contains information about a poll.">PollType</a></li>
 <li><a href="#VideoType" title="Class VideoType.">VideoType</a></li>
 <li><a href="#ForwardMessageMethod" title="Class ForwardMessageMethod.">ForwardMessageMethod</a></li>
 <li><a href="#BadRequestException" title="Class BadRequestException.">BadRequestException</a></li>
@@ -293,14 +301,7 @@ Older clients will display unsupported message.">InlineKeyboardMarkupType</a></l
 <li><a href="#VenueType" title="Class VenueType.">VenueType</a></li>
 <li><a href="#InlineQueryResultArticleType" title="Class InlineQueryResultArticleType.">InlineQueryResultArticleType</a></li>
 <li><a href="#GameHighScoreType" title="Class GameHighScoreType.">GameHighScoreType</a></li>
-<li><a href="#PollType" title="Class PollType
-This object contains information about a poll.">PollType</a></li>
-<li><a href="#PollOptionType" title="Class PollOptionType
-This object contains information about one answer option in a poll.">PollOptionType</a></li>
-<li><a href="#SendPollMethod" title="Class SendPollMethod
-Use this method to send a native poll. A native poll can't be sent to a private chat.">SendPollMethod</a></li>
-<li><a href="#StopPollMethod" title="Class StopPollMethod
-Use this method to stop a poll which was sent by the bot.">StopPollMethod</a></li>
+<li><a href="#EditMessageResponseNormalizer" title="Class UserProfilePhotosNormalizer.">EditMessageResponseNormalizer</a></li>
 </ul>
 </div>
 <div class="span8 package-contents">
@@ -1187,6 +1188,13 @@ Use this method to stop a poll which was sent by the bot.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Normalizer.AnswerInlineQueryNormalizer.html" class="more">« More »</a>
 </div>
+<div xmlns:php="http://php.net/xsl" id="EditMessageResponseNormalizer" class="element ajax clickable class">
+<h1>EditMessageResponseNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.EditMessageResponseNormalizer.html">¶</a>
+</h1>
+<p class="short_description">Class UserProfilePhotosNormalizer.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Normalizer.EditMessageResponseNormalizer.html" class="more">« More »</a>
+</div>
 <div xmlns:php="http://php.net/xsl" id="InputFileNormalizer" class="element ajax clickable class">
 <h1>InputFileNormalizer<a href="../classes/TgBotApi.BotApiBase.Normalizer.InputFileNormalizer.html">¶</a>
 </h1>
@@ -1895,7 +1903,7 @@ This object contains information about a poll.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-05-01T16:02:51+07:00.<br></footer></div>
+            generated on 2019-05-04T16:28:04+07:00.<br></footer></div>
 </div>
 </body>
 </html>
