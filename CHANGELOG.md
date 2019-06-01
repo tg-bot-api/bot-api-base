@@ -21,6 +21,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.0.2 - 2019-06-01
+Implemented support for Telegram Bot API v4.2
+### Added
+- #### types
+   - added LoginUrlType
+
 ## 1.0.1 - 2019-04-05
 
 ### Fixed
@@ -35,7 +41,6 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 
 ## 0.4.0-beta - 2019-04-15
-
 Implemented support for Telegram Bot API v4.2
 
 ### Added

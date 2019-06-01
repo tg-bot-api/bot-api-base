@@ -8,7 +8,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 ![Total Downloads][ico-php-v]
 
-#### Supported Telegram Bot API v4.2
+#### Supported Telegram Bot API v4.3 (May 31 update)
 
 ## Installation
 
@@ -139,7 +139,7 @@ If you discover any security related issues, please email wformps@gmail.com inst
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-php-v]: https://img.shields.io/travis/php-v/tg-bot-api/bot-api-base.svg?style=flat-square
-[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.2-blue.svg?style=flat-square
+[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.3-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square
