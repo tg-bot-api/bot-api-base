@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Traits;
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\SetChatDescriptionMethod;
+use TgBotApi\BotApiBase\Method\SetChatPermissionsMethod;
 use TgBotApi\BotApiBase\Method\SetChatPhotoMethod;
 use TgBotApi\BotApiBase\Method\SetChatStickerSetMethod;
 use TgBotApi\BotApiBase\Method\SetChatTitleMethod;
@@ -121,6 +122,18 @@ trait SetMethodTrait
      * @return bool
      */
     public function setPassportDataErrors(SetPassportDataErrorsMethod $method): bool
+    {
+        return $this->set($method);
+    }
+
+    /**
+     * @param SetChatPermissionsMethod $method
+     *
+     * @throws ResponseException
+     *
+     * @return bool
+     */
+    public function setChatPermissions(SetChatPermissionsMethod $method): bool
     {
         return $this->set($method);
     }

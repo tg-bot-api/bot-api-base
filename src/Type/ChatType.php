@@ -57,9 +57,20 @@ class ChatType
     /**
      * Optional. True if a group has ‘All Members Are Admins’ enabled.
      *
+     * @deprecated
+     * @see https://core.telegram.org/bots/api#july-29-2019
+     *
      * @var bool|null
      */
     public $allMembersAreAdministrators;
+
+    /**
+     * Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat.
+     *
+     * @var ChatPermissionsType
+     */
+    public $chatPermissions;
+
     /**
      * Optional. Chat photo. Returned only in getChat.
      *

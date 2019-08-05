@@ -21,6 +21,27 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.1.0 - 2019-08-05
+implemented support of [July update](https://core.telegram.org/bots/api#july-29-2019) of api 
+
+### Added
+- ChatPermissionsType 
+- SetChatPermissionsMethod
+- $chatPermissions field to ChatType
+- $canSendPolls field to ChatMemberType
+- $chatPermissions field to RestrictChatMemberMethod
+- $isAnimated field to StickerSetType
+- $isAnimated field to StickerType
+
+### Deprecated
+- $allMembersAreAdministrators in ChatType
+- some fields in RestrictChatMemberMethod
+    + $canAddWebPagePreviews
+    + $canSendOtherMessages
+    + $canSendMediaMessages
+    + $canSendMessages
+- createOld() method in RestrictChatMemberMethod
+
 ## 1.0.2 - 2019-06-01
 Implemented support for Telegram Bot API v4.2
 ### Added

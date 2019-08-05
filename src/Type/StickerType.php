@@ -66,4 +66,11 @@ class StickerType
      * @var int|null
      */
     public $fileSize;
+
+    /**
+     * True, if the sticker is animated.
+     *
+     * @var bool
+     */
+    public $isAnimated;
 }

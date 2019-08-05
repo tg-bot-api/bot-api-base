@@ -142,4 +142,11 @@ class ChatMemberType
      * @var bool|null
      */
     public $canAddWebPagePreviews;
+
+    /**
+     * Optional. Restricted only. True, if the user is allowed to send polls;.
+     *
+     * @var bool|null
+     */
+    public $canSendPolls;
 }

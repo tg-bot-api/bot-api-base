@@ -33,6 +33,13 @@ class StickerSetType
     public $containsMasks;
 
     /**
+     * True, if the sticker set contains animated stickers.
+     *
+     * @var bool
+     */
+    public $isAnimated;
+
+    /**
      * List of all set stickers.
      *
      * @var StickerType[]
