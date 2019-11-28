@@ -4,7 +4,7 @@ language: php
 php:
   - 7.2
   - 7.3
-  - nightly
+  - 7.4
 
 # This triggers builds to run on the new TravisCI infrastructure.
 # See: http://docs.travis-ci.com/user/workers/container-based-infrastructure/
@@ -19,9 +19,6 @@ matrix:
   include:
     - php: 7.2
       env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
-  allow_failures:
-    - php: nightly
-
 
 before_script:
   - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist --ignore-platform-reqs
