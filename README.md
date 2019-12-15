@@ -8,7 +8,7 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 ![Total Downloads][ico-php-v]
 
-#### Supported Telegram Bot API v4.3 (July 29 update)
+#### Supported Telegram Bot API v4.4 (July 29 update)
 
 ## Installation
 
