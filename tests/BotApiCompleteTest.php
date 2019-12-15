@@ -7,12 +7,13 @@ namespace TgBotApi\BotApiBase\Tests;
 use PHPUnit\Framework\TestCase;
 use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApiComplete;
-use TgBotApi\BotApiBase\BotApiNormalizer;
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\GetMeMethod;
 
 class BotApiCompleteTest extends TestCase
 {
+    use GetNormalizerTrait;
+
     /**
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
@@ -26,7 +27,7 @@ class BotApiCompleteTest extends TestCase
             ->willReturn((object) (['ok' => false, 'description' => 'Exception']));
 
         /* @var ApiClientInterface $stub */
-        $bot = new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
+        $bot = new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, $this->getNormalizer());
 
         $this->expectException(ResponseException::class);
 

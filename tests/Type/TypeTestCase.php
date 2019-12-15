@@ -6,15 +6,15 @@ namespace TgBotApi\BotApiBase\Tests\Type;
 
 use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApi;
-use TgBotApi\BotApiBase\BotApiNormalizer;
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
+use TgBotApi\BotApiBase\Tests\GetNormalizerTrait;
 
 abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
 {
+    use GetNormalizerTrait;
+
     /**
      * @param $result
-     *
-     * @return BotApi
      */
     protected function getBot($result): BotApi
     {
@@ -26,12 +26,9 @@ abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         /* @var ApiClientInterface $stub */
-        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
+        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, $this->getNormalizer());
     }
 
-    /**
-     * @return MethodInterface
-     */
     protected function getMethod(): MethodInterface
     {
         return $this->getMockBuilder(MethodInterface::class)->getMock();

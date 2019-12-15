@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -58,11 +59,15 @@ class BotApiNormalizer implements NormalizerInterface
      * @param $method
      *
      * @throws ExceptionInterface
-     *
-     * @return BotApiRequestInterface
      */
     public function normalize($method): BotApiRequestInterface
     {
+        if (!\defined(AbstractObjectNormalizer::class . '::SKIP_NULL_VALUES')) {
+            $message = 'Please use BotApiLegacyNormalizer class as normalizer.'
+                . ' BotApiNormalizer is not supported Symfony serializer <= 4.3';
+            throw new \RuntimeException($message);
+        }
+
         $files = [];
 
         $objectNormalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
@@ -78,7 +83,7 @@ class BotApiNormalizer implements NormalizerInterface
         $data = $serializer->normalize(
             $method,
             null,
-            ['skip_null_values' => true, DateTimeNormalizer::FORMAT_KEY => 'U']
+            [AbstractObjectNormalizer::SKIP_NULL_VALUES => true, DateTimeNormalizer::FORMAT_KEY => 'U']
         );
 
         return new BotApiRequest($data, $files);
