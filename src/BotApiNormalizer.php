@@ -17,6 +17,7 @@ use TgBotApi\BotApiBase\Normalizer\EditMessageResponseNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
 use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
+use TgBotApi\BotApiBase\Normalizer\LegacyObjectNormalizerWrapper;
 use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
 use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
 
@@ -62,15 +63,15 @@ class BotApiNormalizer implements NormalizerInterface
      */
     public function normalize($method): BotApiRequestInterface
     {
-        if (!\defined(AbstractObjectNormalizer::class . '::SKIP_NULL_VALUES')) {
-            $message = 'Please use BotApiLegacyNormalizer class as normalizer.'
-                . ' BotApiNormalizer is not supported Symfony serializer <= 4.3';
-            throw new \RuntimeException($message);
-        }
+        $isLegacy = !\defined(AbstractObjectNormalizer::class . '::SKIP_NULL_VALUES');
 
         $files = [];
 
         $objectNormalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
+        if ($isLegacy) {
+            $objectNormalizer = new LegacyObjectNormalizerWrapper($objectNormalizer);
+        }
+
         $serializer = new Serializer([
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
@@ -83,7 +84,10 @@ class BotApiNormalizer implements NormalizerInterface
         $data = $serializer->normalize(
             $method,
             null,
-            [AbstractObjectNormalizer::SKIP_NULL_VALUES => true, DateTimeNormalizer::FORMAT_KEY => 'U']
+            [
+                'skip_null_values' => true,
+                DateTimeNormalizer::FORMAT_KEY => 'U',
+            ]
         );
 
         return new BotApiRequest($data, $files);
