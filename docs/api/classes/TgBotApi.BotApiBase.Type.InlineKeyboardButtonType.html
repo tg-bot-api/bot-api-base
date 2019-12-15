@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">562</span></a></li>
+                <span class="label label-info">582</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">0</span></a></li>
+                <span class="label label-info">6</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -74,6 +74,7 @@
                     <ul>
 <li class="property public "><a href="#property_callbackData" title="$callbackData() :: Optional. Data to be sent in a callback query to the bot when button is pressed, 1-64 bytes."><span class="description"></span><pre>$callbackData</pre></a></li>
 <li class="property public "><a href="#property_callbackGame" title="$callbackGame() :: Optional. Description of the game that will be launched when the user presses the button."><span class="description"></span><pre>$callbackGame</pre></a></li>
+<li class="property public "><a href="#property_loginUrl" title="$loginUrl() :: Optional. An HTTP URL used to automatically authorize the user."><span class="description"></span><pre>$loginUrl</pre></a></li>
 <li class="property public "><a href="#property_pay" title="$pay() :: Specify True, to send a Pay button."><span class="description"></span><pre>$pay</pre></a></li>
 <li class="property public "><a href="#property_switchInlineQuery" title="$switchInlineQuery() :: Optional. If set, pressing the button will prompt the user to select one of their chats, open that chat and
 insert the bot‘s username and the specified inline query in the input field."><span class="description"></span><pre>$switchInlineQuery</pre></a></li>
@@ -187,6 +188,16 @@ current chat's input field. Can be empty, in which case only the bot’s usernam
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>NOTE: This type of button must always be the first button in the first row.</p></div></div></div>
 </div>
+<a id="property_loginUrl"> </a><div class="element clickable property public property_loginUrl" data-toggle="collapse" data-target=".property_loginUrl .collapse" title="public">
+<h2>Optional. An HTTP URL used to automatically authorize the user.</h2>
+<pre>$loginUrl : \TgBotApi\BotApiBase\Type\LoginUrlType</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Can be used as a replacement for the Telegram Login Widget.</p></div></div></div>
+</div>
 <a id="property_pay"> </a><div class="element clickable property public property_pay" data-toggle="collapse" data-target=".property_pay .collapse" title="public">
 <h2>Specify True, to send a Pay button.</h2>
 <pre>$pay : boolean | null</pre>
@@ -250,7 +261,7 @@ something from multiple options.</p></div></div></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-05-04T16:28:05+07:00.<br></footer></div>
+            generated on 2019-12-16T02:20:45+03:00.<br></footer></div>
 </div>
 </body>
 </html>

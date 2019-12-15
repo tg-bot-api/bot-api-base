@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">562</span></a></li>
+                <span class="label label-info">582</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">0</span></a></li>
+                <span class="label label-info">6</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -65,6 +65,7 @@
                     <ul>
 <li class="property public "><a href="#property_allMembersAreAdministrators" title="$allMembersAreAdministrators() :: Optional. True if a group has ‘All Members Are Admins’ enabled."><span class="description"></span><pre>$allMembersAreAdministrators</pre></a></li>
 <li class="property public "><a href="#property_canSetStickerSet" title="$canSetStickerSet() :: Optional. True, if the bot can change the group sticker set. Returned only in getChat."><span class="description"></span><pre>$canSetStickerSet</pre></a></li>
+<li class="property public "><a href="#property_chatPermissions" title="$chatPermissions() :: Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat."><span class="description"></span><pre>$chatPermissions</pre></a></li>
 <li class="property public "><a href="#property_description" title="$description() :: Optional. Description, for supergroups and channel chats. Returned only in getChat."><span class="description"></span><pre>$description</pre></a></li>
 <li class="property public "><a href="#property_firstName" title="$firstName() :: Optional. First name of the other party in a private chat."><span class="description"></span><pre>$firstName</pre></a></li>
 <li class="property public "><a href="#property_id" title="$id() :: Unique identifier for this chat. This number may be greater than 32 bits and some programming languages
@@ -131,11 +132,33 @@ for private chats, supergroups and channels if available."><span class="descript
 <div class="subelement argument"></div>
 </div></div>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>deprecated</th>
+<td></td>
+</tr>
+<tr>
+<th>see</th>
+<td><a href="https://core.telegram.org/bots/api#july-29-2019"></a></td>
+</tr>
+</table>
+</div></div>
 </div>
 <a id="property_canSetStickerSet"> </a><div class="element clickable property public property_canSetStickerSet" data-toggle="collapse" data-target=".property_canSetStickerSet .collapse" title="public">
 <h2>Optional. True, if the bot can change the group sticker set. Returned only in getChat.</h2>
 <pre>$canSetStickerSet : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_chatPermissions"> </a><div class="element clickable property public property_chatPermissions" data-toggle="collapse" data-target=".property_chatPermissions .collapse" title="public">
+<h2>Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat.</h2>
+<pre>$chatPermissions : \TgBotApi\BotApiBase\Type\ChatPermissionsType</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -279,7 +302,7 @@ for private chats, supergroups and channels if available.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-05-04T16:28:06+07:00.<br></footer></div>
+            generated on 2019-12-16T02:20:45+03:00.<br></footer></div>
 </div>
 </body>
 </html>
