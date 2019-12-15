@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase;
 use Symfony\Component\PropertyInfo\Extractor\PhpDocExtractor;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
+use Symfony\Component\Serializer\Normalizer\AbstractObjectNormalizer;
 use Symfony\Component\Serializer\Normalizer\ArrayDenormalizer;
 use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
@@ -16,6 +17,7 @@ use TgBotApi\BotApiBase\Normalizer\EditMessageResponseNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
 use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
+use TgBotApi\BotApiBase\Normalizer\LegacyObjectNormalizerWrapper;
 use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
 use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
 
@@ -58,14 +60,18 @@ class BotApiNormalizer implements NormalizerInterface
      * @param $method
      *
      * @throws ExceptionInterface
-     *
-     * @return BotApiRequestInterface
      */
     public function normalize($method): BotApiRequestInterface
     {
+        $isLegacy = !\defined(AbstractObjectNormalizer::class . '::SKIP_NULL_VALUES');
+
         $files = [];
 
         $objectNormalizer = new ObjectNormalizer(null, new CamelCaseToSnakeCaseNameConverter());
+        if ($isLegacy) {
+            $objectNormalizer = new LegacyObjectNormalizerWrapper($objectNormalizer);
+        }
+
         $serializer = new Serializer([
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
@@ -78,7 +84,10 @@ class BotApiNormalizer implements NormalizerInterface
         $data = $serializer->normalize(
             $method,
             null,
-            ['skip_null_values' => true, DateTimeNormalizer::FORMAT_KEY => 'U']
+            [
+                'skip_null_values' => true,
+                DateTimeNormalizer::FORMAT_KEY => 'U',
+            ]
         );
 
         return new BotApiRequest($data, $files);

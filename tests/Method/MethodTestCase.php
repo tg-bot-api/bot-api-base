@@ -6,18 +6,18 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 
 use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApiComplete;
-use TgBotApi\BotApiBase\BotApiNormalizer;
 use TgBotApi\BotApiBase\BotApiRequestInterface;
+use TgBotApi\BotApiBase\Tests\GetNormalizerTrait;
 
 abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
 {
+    use GetNormalizerTrait;
+
     /**
-     * @param $methodName
-     * @param $request
+     * @param       $methodName
+     * @param       $request
      * @param array $result
      * @param array $serialisedFields
-     *
-     * @return BotApiComplete
      */
     protected function getBot($methodName, $request, $result = [], $serialisedFields = []): BotApiComplete
     {
@@ -41,17 +41,13 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         /* @var ApiClientInterface $stub */
-        return new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
+        return new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, $this->getNormalizer());
     }
 
     /**
-     * @param $methodName
-     * @param $request
-     * @param array $fileMap
-     * @param array $serializableFields
+     * @param       $methodName
+     * @param       $request
      * @param array $result
-     *
-     * @return BotApiComplete
      */
     protected function getBotWithFiles(
         $methodName,
@@ -84,7 +80,7 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
             ->willReturn((object) (['ok' => true, 'result' => $result]));
 
         /* @var ApiClientInterface $stub */
-        return new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, new BotApiNormalizer());
+        return new BotApiComplete('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, $this->getNormalizer());
     }
 
     /**
@@ -92,8 +88,6 @@ abstract class MethodTestCase extends \PHPUnit\Framework\TestCase
      * @param array $request
      * @param array $map
      * @param int   $pointer
-     *
-     * @return array
      */
     private function buildFileTree($files, &$request, $map, &$pointer = 0): array
     {
