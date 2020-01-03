@@ -6,7 +6,14 @@
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
-![Total Downloads][ico-php-v]
+[![PHP Version >= 7.2][ico-php-v]][link-php-7-2]
+[![Symfony Recipe][ico-symfony-recipe]][link-symfony-recipe]
+
+[![Quality Gate Status][sonar-gate-status-icon]][sonar-path]
+[![Bugs][sonar-bugs-icon]][sonar-path]
+[![Duplicated Lines (%)][sonar-duplicated-lines-icon]][sonar-path]
+[![Security Rating][sonar-security-rating-icon]][sonar-path]
+[![Bugs][sonar-bugs-icon]][sonar-path]
 
 #### Supported Telegram Bot API v4.4 (July 29 update)
 
@@ -147,6 +154,14 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-last-commit]: https://img.shields.io/github/last-commit/tg-bot-api/bot-api-base.svg?style=flat-square
+[ico-symfony-recipe]: https://img.shields.io/badge/Symfony%20Recipe-available-brightgreen
+
+[sonar-gate-status-icon]: https://sonarcloud.io/api/project_badges/measure?project=tg-bot-api_bot-api-base&metric=alert_status
+[sonar-bugs-icon]: https://sonarcloud.io/api/project_badges/measure?project=tg-bot-api_bot-api-base&metric=bugs
+[sonar-duplicated-lines-icon]: https://sonarcloud.io/api/project_badges/measure?project=tg-bot-api_bot-api-base&metric=duplicated_lines_density
+[sonar-security-rating-icon]: https://sonarcloud.io/api/project_badges/measure?project=tg-bot-api_bot-api-base&metric=security_rating
+[sonar-bugs-icon]: https://sonarcloud.io/api/project_badges/measure?project=tg-bot-api_bot-api-base&metric=bugs
+
 
 [link-bot-api]: https://core.telegram.org/bots/api
 [link-packagist]: https://packagist.org/packages/tg-bot-api/bot-api-base
@@ -157,3 +172,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-author-1]: https://github.com/greenplugin
 [link-author-2]: https://github.com/Big-Shark
 [link-contributors]: ../../contributors
+[link-symfony-recipe]: https://github.com/symfony/recipes-contrib/tree/master/tg-bot-api/bot-api-base/1.0
+[link-php-7-2]: https://www.php.net/releases/7_2_0.php
+[sonar-path]: https://sonarcloud.io/dashboard?id=tg-bot-api_bot-api-base
