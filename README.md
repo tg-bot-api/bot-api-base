@@ -13,7 +13,6 @@
 [![Bugs][sonar-bugs-icon]][sonar-path]
 [![Duplicated Lines (%)][sonar-duplicated-lines-icon]][sonar-path]
 [![Security Rating][sonar-security-rating-icon]][sonar-path]
-[![Bugs][sonar-bugs-icon]][sonar-path]
 
 #### Supported Telegram Bot API v4.4 (July 29 update)
 
