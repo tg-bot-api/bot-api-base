@@ -55,6 +55,13 @@ class ChatType
     public $lastName;
 
     /**
+     * Optional. Username of the other party in a private chat.
+     *
+     * @var string|null
+     */
+    public $username;
+
+    /**
      * Optional. True if a group has ‘All Members Are Admins’ enabled.
      *
      * @deprecated
