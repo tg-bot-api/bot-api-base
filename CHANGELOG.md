@@ -21,6 +21,20 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.1.4 - 2020-01-19
+
+### Fixed
+- Fixed broken field ChatType::username thanks for [Jan Dittrich](https://github.com/jan-di)
+- Fixed constant visibility in ChatType class
+
+## 1.1.1, 1.1.2, 1.1.3 - 2020-01-19
+
+### Added
+- Support symfony 3.4
+
+### Fixed
+- minor bug fixes
+
 ## 1.1.0 - 2019-08-05
 implemented support of [July update](https://core.telegram.org/bots/api#july-29-2019) of api 
 

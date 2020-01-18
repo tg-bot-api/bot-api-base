@@ -11,10 +11,10 @@ namespace TgBotApi\BotApiBase\Type;
  */
 class ChatType
 {
-    const TYPE_PRIVATE = 'private';
-    const TYPE_GROUP = 'group';
-    const TYPE_SUPERGROUP = 'supergroup';
-    const TYPE_CHANNEL = 'channel';
+    public const TYPE_PRIVATE = 'private';
+    public const TYPE_GROUP = 'group';
+    public const TYPE_SUPERGROUP = 'supergroup';
+    public const TYPE_CHANNEL = 'channel';
 
     /**
      * Unique identifier for this chat. This number may be greater than 32 bits and some programming languages
@@ -33,12 +33,18 @@ class ChatType
     public $type;
 
     /**
-     * Optional. Title, for supergroups, channels and group chats username String Optional Username,
-     * for private chats, supergroups and channels if available.
+     * Optional. Title, for supergroups, channels and group chats username.
      *
      * @var string|null
      */
     public $title;
+
+    /**
+     * Optional. Username of the other party in a private chat.
+     *
+     * @var string|null
+     */
+    public $username;
 
     /**
      * Optional. First name of the other party in a private chat.
@@ -53,13 +59,6 @@ class ChatType
      * @var string|null
      */
     public $lastName;
-
-    /**
-     * Optional. Username of the other party in a private chat.
-     *
-     * @var string|null
-     */
-    public $username;
 
     /**
      * Optional. True if a group has ‘All Members Are Admins’ enabled.
