@@ -46,7 +46,7 @@ trait SetMethodTrait
     /**
      * @throws ResponseException
      */
-    public function setChatAdministrator(SetChatAdministratorCustomTitleMethod $method): bool
+    public function setChatAdministratorCustomTitle(SetChatAdministratorCustomTitleMethod $method): bool
     {
         return $this->set($method);
     }

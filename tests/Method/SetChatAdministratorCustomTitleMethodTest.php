@@ -21,7 +21,7 @@ class SetChatAdministratorCustomTitleMethodTest extends MethodTestCase
             true
         );
 
-        $botApi->setChatAdministrator(SetChatAdministratorCustomTitleMethod::create(
+        $botApi->setChatAdministratorCustomTitle(SetChatAdministratorCustomTitleMethod::create(
             'chat_id',
             1,
             'Custom title'

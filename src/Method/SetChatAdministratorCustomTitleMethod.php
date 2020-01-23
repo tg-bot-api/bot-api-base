@@ -20,7 +20,7 @@ class SetChatAdministratorCustomTitleMethod implements SetMethodAliasInterface
     use UserIdVariableTrait;
 
     /**
-     * @var
+     * @var string
      */
     public $customTitle;
 
