@@ -112,6 +112,14 @@ class ChatType
     public $stickerSetName;
 
     /**
+     * Optional. For supergroups, the minimum allowed delay between consecutive messages
+     * sent by each unpriviledged user. Returned only in getChat.
+     *
+     * @var int|null
+     */
+    public $slowModeDelay;
+
+    /**
      * Optional. True, if the bot can change the group sticker set. Returned only in getChat.
      *
      * @var bool|null

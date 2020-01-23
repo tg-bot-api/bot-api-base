@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Traits;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
+use TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod;
 use TgBotApi\BotApiBase\Method\SetChatDescriptionMethod;
 use TgBotApi\BotApiBase\Method\SetChatPermissionsMethod;
 use TgBotApi\BotApiBase\Method\SetChatPhotoMethod;
@@ -22,20 +23,12 @@ use TgBotApi\BotApiBase\Method\SetWebhookMethod;
 trait SetMethodTrait
 {
     /**
-     * @param SetMethodAliasInterface $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     abstract public function set(SetMethodAliasInterface $method): bool;
 
     /**
-     * @param SetChatDescriptionMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setChatDescription(SetChatDescriptionMethod $method): bool
     {
@@ -43,11 +36,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetChatPhotoMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setChatPhoto(SetChatPhotoMethod $method): bool
     {
@@ -55,11 +44,15 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetChatStickerSetMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
+     */
+    public function setChatAdministrator(SetChatAdministratorCustomTitleMethod $method): bool
+    {
+        return $this->set($method);
+    }
+
+    /**
+     * @throws ResponseException
      */
     public function setChatStickerSet(SetChatStickerSetMethod $method): bool
     {
@@ -67,11 +60,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetChatTitleMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setChatTitle(SetChatTitleMethod $method): bool
     {
@@ -79,11 +68,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetGameScoreMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setGameScore(SetGameScoreMethod $method): bool
     {
@@ -91,11 +76,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetStickerPositionInSetMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setStickerPositionInSet(SetStickerPositionInSetMethod $method): bool
     {
@@ -103,11 +84,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetWebhookMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setWebhook(SetWebhookMethod $method): bool
     {
@@ -115,11 +92,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetPassportDataErrorsMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setPassportDataErrors(SetPassportDataErrorsMethod $method): bool
     {
@@ -127,11 +100,7 @@ trait SetMethodTrait
     }
 
     /**
-     * @param SetChatPermissionsMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function setChatPermissions(SetChatPermissionsMethod $method): bool
     {
