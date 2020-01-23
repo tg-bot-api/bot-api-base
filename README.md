@@ -64,7 +64,7 @@ You can configure it to work in symfony, for example, in [this way](https://gist
 |promote|PromoteChatMemberMethod|bool|
 |restrict|RestrictChatMemberMethod|bool|
 |send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod, SendPollMethod|MessageType|
-|set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod, SetChatPermissionsMethod|bool|
+|set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod, SetChatPermissionsMethod, SetChatAdministratorCustomTitleMethod|bool|
 |stop|StopMessageLiveLocationMethod|bool|
 |stopPoll|StopPollMethod|Poll|
 |unban|UnbanChatMemberMethod|bool|

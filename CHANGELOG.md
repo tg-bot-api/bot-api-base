@@ -21,6 +21,29 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.2.0 - 2020-01-23
+
+### Added
+- Added support bot api 4.5  (December 31, 2019)
+    - Added support for two new `MessageEntityType` types, underline and strikethrough.
+    - Added support for nested `MessageEntityType` objects. Entities can now contain other entities. 
+    If two entities have common characters then one of them is fully contained inside the other.
+    - Added support for nested entities and the new tags 
+    `<u>/<ins> `(for underlined text) and `<s>/<strike>/<del>` (for strikethrough text) in parse mode HTML.
+    - Added a new parse mode, MarkdownV2, which supports nested entities 
+    and two new entities (for underlined text) and (for strikethrough text). 
+    Added a new parse mode, `MarkdownV2`, which supports nested entities and two new entities 
+    `__` (for underlined text) and `~` (for strikethrough text). 
+    Parse mode Markdown remains unchanged for backward compatibility.
+    - Added the field `fileUniqueId` to the objects `AnimationType`, `AudioType`, `DocumentType`, 
+    `PassportFileType`, `PhotoSizeType`, `StickerType`, `VideoType`, `VideoNoteType`, `VoiceType`, 
+    File and the fields `smallFileUniqueId` and `bigFileUniqueId` to the object ChatPhoto. 
+    The new fields contain a unique file identifier, which is supposed to be the same over time and for different bots, 
+    but can't be used to download or reuse the file.
+    - Added the field customTitle to the `ChatMemberType` object.
+    - Added the new method `SetChatAdministratorCustomTitleMethod` to manage the custom titles of administrators promoted by the bot.
+    - Added the field `slowModeDelay` to the Chat object.
+
 ## 1.1.4 - 2020-01-19
 
 ### Fixed

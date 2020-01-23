@@ -19,6 +19,14 @@ class AnimationType
     public $fileId;
 
     /**
+     * Unique identifier for this file, which is supposed to be the same over time and for different bots.
+     * Can't be used to download or reuse the file.
+     *
+     * @var string
+     */
+    public $fileUniqueId;
+
+    /**
      * Video width as defined by sender.
      *
      * @var int

@@ -11,12 +11,12 @@ namespace TgBotApi\BotApiBase\Type;
  */
 class ChatMemberType
 {
-    const STATUS_CREATOR = 'creator';
-    const STATUS_ADMINISTRATOR = 'administrator';
-    const STATUS_MEMBER = 'member';
-    const STATUS_RESTRICTED = 'restricted';
-    const STATUS_LEFT = 'left';
-    const STATUS_KICKED = 'kicked';
+    public const STATUS_CREATOR = 'creator';
+    public const STATUS_ADMINISTRATOR = 'administrator';
+    public const STATUS_MEMBER = 'member';
+    public const STATUS_RESTRICTED = 'restricted';
+    public const STATUS_LEFT = 'left';
+    public const STATUS_KICKED = 'kicked';
 
     /**
      * Information about the user.
@@ -31,6 +31,13 @@ class ChatMemberType
      * @var string;
      */
     public $status;
+
+    /**
+     * Optional. Owner and administrators only. Custom title for this user.
+     *
+     * @var string|null
+     */
+    public $customTitle;
 
     /**
      * Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, \DateTimeImmutable.
