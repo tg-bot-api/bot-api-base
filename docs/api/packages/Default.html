@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">582</span></a></li>
+                <span class="label label-info">586</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">6</span></a></li>
+                <span class="label label-info">5</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -129,6 +129,7 @@
 <li><a href="#InlineQueryResultCachedStickerType" title="Class InlineQueryResultCachedStickerType.">InlineQueryResultCachedStickerType</a></li>
 <li><a href="#InputLocationMessageContentType" title="Class InputLocationMessageContentType.">InputLocationMessageContentType</a></li>
 <li><a href="#SendVenueMethod" title="Class SendVenueMethod.">SendVenueMethod</a></li>
+<li><a href="#LegacyObjectNormalizerWrapper" title="">LegacyObjectNormalizerWrapper</a></li>
 <li><a href="#BotApiComplete" title="Class BotApiComplete.">BotApiComplete</a></li>
 <li><a href="#ReplyKeyboardMarkupType" title="Class ReplyKeyboardMarkupType.">ReplyKeyboardMarkupType</a></li>
 <li><a href="#SendVideoNoteMethod" title="Class SendVideoNoteMethod.">SendVideoNoteMethod</a></li>
@@ -148,6 +149,8 @@ This object represents a file ready to be downloaded.">FileType</a></li>
 <li><a href="#GetGameHighScoresMethod" title="Class SetGameHighScoresMethod.">GetGameHighScoresMethod</a></li>
 <li><a href="#LabeledPriceType" title="Class LabeledPriceType.">LabeledPriceType</a></li>
 <li><a href="#JsonSerializableNormalizer" title="Class JsonSerializableNormalizer.">JsonSerializableNormalizer</a></li>
+<li><a href="#ChatPermissionsType" title="Class ChatPermissionsType
+Describes actions that a non-administrator user is allowed to take in a chat.">ChatPermissionsType</a></li>
 <li><a href="#GetMeMethod" title="Class GetMeMethod.">GetMeMethod</a></li>
 <li><a href="#CallbackQueryType" title="Class CallbackQueryType
 represents an incoming callback query from a callback button in an inline keyboard.">CallbackQueryType</a></li>
@@ -192,6 +195,8 @@ Use this method to stop a poll which was sent by the bot.">StopPollMethod</a></l
 <li><a href="#SetStickerPositionInSetMethod" title="Class SetStickerPositionInSetMethod.">SetStickerPositionInSetMethod</a></li>
 <li><a href="#InputMediaNormalizer" title="Class InputMediaNormalizer.">InputMediaNormalizer</a></li>
 <li><a href="#AnswerPreCheckoutQueryMethod" title="Class AnswerPreCheckoutQueryMethod.">AnswerPreCheckoutQueryMethod</a></li>
+<li><a href="#LoginUrlType" title="Class LoginUrlType
+This object represents a parameter of the inline keyboard button used to automatically authorize a user.">LoginUrlType</a></li>
 <li><a href="#InlineQueryResultCachedGifType" title="Class InlineQueryResultCachedGifType.">InlineQueryResultCachedGifType</a></li>
 <li><a href="#DeleteChatPhotoMethod" title="Class DeleteChatPhotoMethod.">DeleteChatPhotoMethod</a></li>
 <li><a href="#InputVenueMessageContent" title="Class InputVenueMessageContent.">InputVenueMessageContent</a></li>
@@ -213,10 +218,8 @@ Use this method to stop a poll which was sent by the bot.">StopPollMethod</a></l
 <li><a href="#ForceReplyType" title="Class ForceReplyType.">ForceReplyType</a></li>
 <li><a href="#MessageEntityType" title="Class MessageEntityType.">MessageEntityType</a></li>
 <li><a href="#PhotoSizeType" title="Class PhotoSizeType.">PhotoSizeType</a></li>
-<li><a href="#ChatType" title="Class ChatType.">ChatType</a></li>
 <li><a href="#InvoiceType" title="Class InvoiceType.">InvoiceType</a></li>
 <li><a href="#EncryptedPassportElementType" title="Class EncryptedPassportElementType.">EncryptedPassportElementType</a></li>
-<li><a href="#ChatMemberType" title="Class ChatMemberType.">ChatMemberType</a></li>
 <li><a href="#ExportChatInviteLinkMethod" title="Class ExportChatInviteLinkMethod.">ExportChatInviteLinkMethod</a></li>
 <li><a href="#UserProfilePhotosNormalizer" title="Class UserProfilePhotosNormalizer.">UserProfilePhotosNormalizer</a></li>
 <li><a href="#BotApiRequest" title="Class BotApiRequest.">BotApiRequest</a></li>
@@ -275,6 +278,7 @@ Note: This will only work in Telegram versions released after 9 April, 2016. O
 Older clients will display unsupported message.">InlineKeyboardMarkupType</a></li>
 <li><a href="#WebhookInfoType" title="Class WebhookInfoType.">WebhookInfoType</a></li>
 <li><a href="#InlineQueryResultMpeg4GifType" title="Class InlineQueryResultMpeg4GifType.">InlineQueryResultMpeg4GifType</a></li>
+<li><a href="#SetChatPermissionsMethod" title="Class SetChatPermissionsMethod.">SetChatPermissionsMethod</a></li>
 <li><a href="#SendStickerMethod" title="Class SendStickerMethod.">SendStickerMethod</a></li>
 <li><a href="#ReplyKeyboardRemoveType" title="Class ReplyKeyboardRemoveType.">ReplyKeyboardRemoveType</a></li>
 <li><a href="#SendPhotoMethod" title="Class SendPhotoMethod.">SendPhotoMethod</a></li>
@@ -302,12 +306,8 @@ This object contains information about a poll.">PollType</a></li>
 <li><a href="#VenueType" title="Class VenueType.">VenueType</a></li>
 <li><a href="#InlineQueryResultArticleType" title="Class InlineQueryResultArticleType.">InlineQueryResultArticleType</a></li>
 <li><a href="#GameHighScoreType" title="Class GameHighScoreType.">GameHighScoreType</a></li>
-<li><a href="#LoginUrlType" title="Class LoginUrlType
-This object represents a parameter of the inline keyboard button used to automatically authorize a user.">LoginUrlType</a></li>
-<li><a href="#ChatPermissionsType" title="Class ChatPermissionsType
-Describes actions that a non-administrator user is allowed to take in a chat.">ChatPermissionsType</a></li>
-<li><a href="#SetChatPermissionsMethod" title="Class SetChatPermissionsMethod.">SetChatPermissionsMethod</a></li>
-<li><a href="#LegacyObjectNormalizerWrapper" title="">LegacyObjectNormalizerWrapper</a></li>
+<li><a href="#SetChatAdministratorCustomTitleMethod" title="Use this method to set a custom title
+for an administrator in a supergroup promoted by the bot. Returns True on success.">SetChatAdministratorCustomTitleMethod</a></li>
 </ul>
 </div>
 <div class="span8 package-contents">
@@ -1095,6 +1095,14 @@ Use this method to send a native poll. A native poll can't be sent to a private 
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Method.SendVoiceMethod.html" class="more">« More »</a>
 </div>
+<div xmlns:php="http://php.net/xsl" id="SetChatAdministratorCustomTitleMethod" class="element ajax clickable class">
+<h1>SetChatAdministratorCustomTitleMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetChatAdministratorCustomTitleMethod.html">¶</a>
+</h1>
+<p class="short_description">Use this method to set a custom title
+for an administrator in a supergroup promoted by the bot. Returns True on success.</p>
+<div class="details collapse"></div>
+<a href="../classes/TgBotApi.BotApiBase.Method.SetChatAdministratorCustomTitleMethod.html" class="more">« More »</a>
+</div>
 <div xmlns:php="http://php.net/xsl" id="SetChatDescriptionMethod" class="element ajax clickable class">
 <h1>SetChatDescriptionMethod<a href="../classes/TgBotApi.BotApiBase.Method.SetChatDescriptionMethod.html">¶</a>
 </h1>
@@ -1279,13 +1287,6 @@ represents an incoming callback query from a callback button in an inline keyboa
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Type.CallbackQueryType.html" class="more">« More »</a>
 </div>
-<div xmlns:php="http://php.net/xsl" id="ChatMemberType" class="element ajax clickable class">
-<h1>ChatMemberType<a href="../classes/TgBotApi.BotApiBase.Type.ChatMemberType.html">¶</a>
-</h1>
-<p class="short_description">Class ChatMemberType.</p>
-<div class="details collapse"></div>
-<a href="../classes/TgBotApi.BotApiBase.Type.ChatMemberType.html" class="more">« More »</a>
-</div>
 <div xmlns:php="http://php.net/xsl" id="ChatPermissionsType" class="element ajax clickable class">
 <h1>ChatPermissionsType<a href="../classes/TgBotApi.BotApiBase.Type.ChatPermissionsType.html">¶</a>
 </h1>
@@ -1300,13 +1301,6 @@ Describes actions that a non-administrator user is allowed to take in a chat.</p
 <p class="short_description">Class ChatPhotoType.</p>
 <div class="details collapse"></div>
 <a href="../classes/TgBotApi.BotApiBase.Type.ChatPhotoType.html" class="more">« More »</a>
-</div>
-<div xmlns:php="http://php.net/xsl" id="ChatType" class="element ajax clickable class">
-<h1>ChatType<a href="../classes/TgBotApi.BotApiBase.Type.ChatType.html">¶</a>
-</h1>
-<p class="short_description">Class ChatType.</p>
-<div class="details collapse"></div>
-<a href="../classes/TgBotApi.BotApiBase.Type.ChatType.html" class="more">« More »</a>
 </div>
 <div xmlns:php="http://php.net/xsl" id="ChosenInlineResultType" class="element ajax clickable class">
 <h1>ChosenInlineResultType<a href="../classes/TgBotApi.BotApiBase.Type.ChosenInlineResultType.html">¶</a>
@@ -1939,7 +1933,7 @@ This object contains information about a poll.</p>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-12-16T02:20:44+03:00.<br></footer></div>
+            generated on 2020-01-23T23:47:58+03:00.<br></footer></div>
 </div>
 </body>
 </html>

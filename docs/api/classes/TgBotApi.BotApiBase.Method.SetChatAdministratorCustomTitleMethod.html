@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <meta charset="utf-8">
-<title>Telegram Bot Api Base » \TgBotApi\BotApiBase\Method\GetChatMembersCountMethod</title>
+<title>Telegram Bot Api Base » \TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</title>
 <meta name="author" content="Mike van Riel">
 <meta name="description" content="">
 <link href="../css/template.css" rel="stylesheet" media="all">
@@ -67,12 +67,16 @@
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
-                    <ul><li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li></ul>
+                    <ul>
+<li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li>
+<li class="property public "><a href="#property_customTitle" title="$customTitle() :: "><span class="description"></span><pre>$customTitle</pre></a></li>
+<li class="property public "><a href="#property_userId" title="$userId() :: Unique identifier of the target user."><span class="description"></span><pre>$userId</pre></a></li>
+</ul>
 </li>
 </ul>
 </div>
 <div class="span8">
-<a xmlns:php="http://php.net/xsl" id="\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
+<a xmlns:php="http://php.net/xsl" id="\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
 <li>
 <a href="../index.html"><i title="Classes" class="icon-custom icon-class"></i></a><span class="divider">\</span>
 </li>
@@ -84,17 +88,18 @@
 <span class="divider">\</span><a href="../namespaces/TgBotApi.BotApiBase.Method.html">Method</a>
 </li>
 <li class="active">
-<span class="divider">\</span><a href="../classes/TgBotApi.BotApiBase.Method.GetChatMembersCountMethod.html">GetChatMembersCountMethod</a>
+<span class="divider">\</span><a href="../classes/TgBotApi.BotApiBase.Method.SetChatAdministratorCustomTitleMethod.html">SetChatAdministratorCustomTitleMethod</a>
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Class GetChatMembersCountMethod.</p>
+<p class="short_description">Use this method to set a custom title
+for an administrator in a supergroup promoted by the bot. Returns True on success.</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered">
 <tr>
 <th>see</th>
-<td><a href="https://core.telegram.org/bots/api#getchatmemberscount"></a></td>
+<td><a href="https://core.telegram.org/bots/api#setchatadministratorcustomtitle"></a></td>
 </tr>
 <tr>
 <th>package</th>
@@ -106,7 +111,7 @@
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(integer|string $chatId) : \TgBotApi\BotApiBase\Method\GetChatMembersCountMethod</pre>
+<pre>create(integer|string $chatId, integer $userId, string $title) : \TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -115,8 +120,16 @@
 <h4>$chatId</h4>
 <code>integer</code><code>string</code>
 </div>
+<div class="subelement argument">
+<h4>$userId</h4>
+<code>integer</code>
+</div>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code>
+</div>
 <h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod</code></div>
+<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</code></div>
 </div></div>
 </div>
 <h3>
@@ -131,6 +144,26 @@
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_customTitle"> </a><div class="element clickable property public property_customTitle" data-toggle="collapse" data-target=".property_customTitle .collapse" title="public">
+<h2>$customTitle</h2>
+<pre>$customTitle : </pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_userId"> </a><div class="element clickable property public property_userId" data-toggle="collapse" data-target=".property_userId .collapse" title="public">
+<h2>Unique identifier of the target user.</h2>
+<pre>$userId : integer</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -138,7 +171,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-23T23:47:59+03:00.<br></footer></div>
+            generated on 2020-01-23T23:48:01+03:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">582</span></a></li>
+                <span class="label label-info">586</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">6</span></a></li>
+                <span class="label label-info">5</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -69,6 +69,7 @@
 <li><a href="#Type/InputMessageContent/InputLocationMessageContentType.php"><i class="icon-file"></i>Type/InputMessageContent/InputLocationMessageContentType.php</a></li>
 <li><a href="#BotApiInterface.php"><i class="icon-file"></i>BotApiInterface.php</a></li>
 <li><a href="#Method/SendVenueMethod.php"><i class="icon-file"></i>Method/SendVenueMethod.php</a></li>
+<li><a href="#Normalizer/LegacyObjectNormalizerWrapper.php"><i class="icon-file"></i>Normalizer/LegacyObjectNormalizerWrapper.php</a></li>
 <li><a href="#BotApiComplete.php"><i class="icon-file"></i>BotApiComplete.php</a></li>
 <li><a href="#Method/Interfaces/KickMethodAliasInterface.php"><i class="icon-file"></i>Method/Interfaces/KickMethodAliasInterface.php</a></li>
 <li><a href="#Type/ReplyKeyboardMarkupType.php"><i class="icon-file"></i>Type/ReplyKeyboardMarkupType.php</a></li>
@@ -93,6 +94,7 @@
 <li><a href="#Traits/SendMethodTrait.php"><i class="icon-file"></i>Traits/SendMethodTrait.php</a></li>
 <li><a href="#Type/LabeledPriceType.php"><i class="icon-file"></i>Type/LabeledPriceType.php</a></li>
 <li><a href="#Normalizer/JsonSerializableNormalizer.php"><i class="icon-file"></i>Normalizer/JsonSerializableNormalizer.php</a></li>
+<li><a href="#Type/ChatPermissionsType.php"><i class="icon-file"></i>Type/ChatPermissionsType.php</a></li>
 <li><a href="#Method/GetMeMethod.php"><i class="icon-file"></i>Method/GetMeMethod.php</a></li>
 <li><a href="#Type/CallbackQueryType.php"><i class="icon-file"></i>Type/CallbackQueryType.php</a></li>
 <li><a href="#Method/SendGameMethod.php"><i class="icon-file"></i>Method/SendGameMethod.php</a></li>
@@ -142,6 +144,7 @@
 <li><a href="#Traits/RestrictMethodTrait.php"><i class="icon-file"></i>Traits/RestrictMethodTrait.php</a></li>
 <li><a href="#Normalizer/InputMediaNormalizer.php"><i class="icon-file"></i>Normalizer/InputMediaNormalizer.php</a></li>
 <li><a href="#Method/AnswerPreCheckoutQueryMethod.php"><i class="icon-file"></i>Method/AnswerPreCheckoutQueryMethod.php</a></li>
+<li><a href="#Type/LoginUrlType.php"><i class="icon-file"></i>Type/LoginUrlType.php</a></li>
 <li><a href="#Type/InlineQueryResult/InlineQueryResultCachedGifType.php"><i class="icon-file"></i>Type/InlineQueryResult/InlineQueryResultCachedGifType.php</a></li>
 <li><a href="#Method/DeleteChatPhotoMethod.php"><i class="icon-file"></i>Method/DeleteChatPhotoMethod.php</a></li>
 <li><a href="#Traits/PromoteMethodTrait.php"><i class="icon-file"></i>Traits/PromoteMethodTrait.php</a></li>
@@ -244,6 +247,7 @@
 <li><a href="#Type/InlineKeyboardMarkupType.php"><i class="icon-file"></i>Type/InlineKeyboardMarkupType.php</a></li>
 <li><a href="#Type/WebhookInfoType.php"><i class="icon-file"></i>Type/WebhookInfoType.php</a></li>
 <li><a href="#Type/InlineQueryResult/InlineQueryResultMpeg4GifType.php"><i class="icon-file"></i>Type/InlineQueryResult/InlineQueryResultMpeg4GifType.php</a></li>
+<li><a href="#Method/SetChatPermissionsMethod.php"><i class="icon-file"></i>Method/SetChatPermissionsMethod.php</a></li>
 <li><a href="#Method/SendStickerMethod.php"><i class="icon-file"></i>Method/SendStickerMethod.php</a></li>
 <li><a href="#Type/ReplyKeyboardRemoveType.php"><i class="icon-file"></i>Type/ReplyKeyboardRemoveType.php</a></li>
 <li><a href="#Method/SendPhotoMethod.php"><i class="icon-file"></i>Method/SendPhotoMethod.php</a></li>
@@ -285,10 +289,7 @@
 <li><a href="#ApiClientInterface.php"><i class="icon-file"></i>ApiClientInterface.php</a></li>
 <li><a href="#Type/InlineQueryResult/InlineQueryResultArticleType.php"><i class="icon-file"></i>Type/InlineQueryResult/InlineQueryResultArticleType.php</a></li>
 <li><a href="#Type/GameHighScoreType.php"><i class="icon-file"></i>Type/GameHighScoreType.php</a></li>
-<li><a href="#Type/LoginUrlType.php"><i class="icon-file"></i>Type/LoginUrlType.php</a></li>
-<li><a href="#Type/ChatPermissionsType.php"><i class="icon-file"></i>Type/ChatPermissionsType.php</a></li>
-<li><a href="#Method/SetChatPermissionsMethod.php"><i class="icon-file"></i>Method/SetChatPermissionsMethod.php</a></li>
-<li><a href="#Normalizer/LegacyObjectNormalizerWrapper.php"><i class="icon-file"></i>Normalizer/LegacyObjectNormalizerWrapper.php</a></li>
+<li><a href="#Method/SetChatAdministratorCustomTitleMethod.php"><i class="icon-file"></i>Method/SetChatAdministratorCustomTitleMethod.php</a></li>
 </ul></div>
 <div class="span8">
 <ul class="breadcrumb">
@@ -678,6 +679,75 @@
 <td>error</td>
 <td>80</td>
 <td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Normalizer/LegacyObjectNormalizerWrapper.php" id="Normalizer/LegacyObjectNormalizerWrapper.php"></a><h3>
+<i class="icon-file"></i>Normalizer/LegacyObjectNormalizerWrapper.php<small style="float: right;padding-right: 10px;">11</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>12</td>
+<td>No summary for class \TgBotApi\BotApiBase\Normalizer\LegacyObjectNormalizerWrapper</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>17</td>
+<td>No summary for property $normalizer</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>19</td>
+<td>Argument $normalizer is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>19</td>
+<td>No summary for method __construct()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>27</td>
+<td>Argument $object is missing from the Docblock of normalize</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>27</td>
+<td>Argument $format is missing from the Docblock of normalize</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>27</td>
+<td>Argument $context is missing from the Docblock of normalize</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>Argument $data is missing from the Docblock of supportsNormalization</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
+<td>Argument $format is missing from the Docblock of supportsNormalization</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>47</td>
+<td>Argument $serializer is missing from the Docblock of setSerializer</td>
 </tr>
 </tbody>
 </table></div>
@@ -1333,6 +1403,30 @@
 <td>error</td>
 <td>58</td>
 <td>No summary for method supportsNormalization()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Type/ChatPermissionsType.php" id="Type/ChatPermissionsType.php"></a><h3>
+<i class="icon-file"></i>Type/ChatPermissionsType.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>83</td>
+<td>No summary for method create()</td>
 </tr>
 </tbody>
 </table></div>
@@ -2729,6 +2823,30 @@
 <td>error</td>
 <td>67</td>
 <td>No summary for method createFail()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Type/LoginUrlType.php" id="Type/LoginUrlType.php"></a><h3>
+<i class="icon-file"></i>Type/LoginUrlType.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>66</td>
+<td>No summary for method create()</td>
 </tr>
 </tbody>
 </table></div>
@@ -5124,6 +5242,35 @@
 </table></div>
 </div>
 <div class="package-contents">
+<a name="Method/SetChatPermissionsMethod.php" id="Method/SetChatPermissionsMethod.php"></a><h3>
+<i class="icon-file"></i>Method/SetChatPermissionsMethod.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>27</td>
+<td>No summary for property $permissions</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
 <a name="Method/SendStickerMethod.php" id="Method/SendStickerMethod.php"></a><h3>
 <i class="icon-file"></i>Method/SendStickerMethod.php<small style="float: right;padding-right: 10px;">2</small>
 </h3>
@@ -5578,7 +5725,7 @@
 </div>
 <div class="package-contents">
 <a name="Traits/SetMethodTrait.php" id="Traits/SetMethodTrait.php"></a><h3>
-<i class="icon-file"></i>Traits/SetMethodTrait.php<small style="float: right;padding-right: 10px;">11</small>
+<i class="icon-file"></i>Traits/SetMethodTrait.php<small style="float: right;padding-right: 10px;">12</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -5594,52 +5741,57 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>31</td>
+<td>32</td>
 <td>No summary for method set()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>40</td>
+<td>41</td>
 <td>No summary for method setChatDescription()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>52</td>
+<td>53</td>
 <td>No summary for method setChatPhoto()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>64</td>
-<td>No summary for method setChatStickerSet()</td>
+<td>No summary for method setChatAdministrator()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>76</td>
-<td>No summary for method setChatTitle()</td>
+<td>No summary for method setChatStickerSet()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>88</td>
-<td>No summary for method setGameScore()</td>
+<td>No summary for method setChatTitle()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>100</td>
-<td>No summary for method setStickerPositionInSet()</td>
+<td>No summary for method setGameScore()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>112</td>
-<td>No summary for method setWebhook()</td>
+<td>No summary for method setStickerPositionInSet()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>124</td>
-<td>No summary for method setPassportDataErrors()</td>
+<td>No summary for method setWebhook()</td>
 </tr>
 <tr class="error">
 <td>error</td>
 <td>136</td>
+<td>No summary for method setPassportDataErrors()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>148</td>
 <td>No summary for method setChatPermissions()</td>
 </tr>
 </tbody>
@@ -6166,8 +6318,8 @@
 </table></div>
 </div>
 <div class="package-contents">
-<a name="Type/LoginUrlType.php" id="Type/LoginUrlType.php"></a><h3>
-<i class="icon-file"></i>Type/LoginUrlType.php<small style="float: right;padding-right: 10px;">2</small>
+<a name="Method/SetChatAdministratorCustomTitleMethod.php" id="Method/SetChatAdministratorCustomTitleMethod.php"></a><h3>
+<i class="icon-file"></i>Method/SetChatAdministratorCustomTitleMethod.php<small style="float: right;padding-right: 10px;">3</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -6183,130 +6335,13 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>25</td>
+<td>No summary for property $customTitle</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>33</td>
 <td>No summary for method create()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Type/ChatPermissionsType.php" id="Type/ChatPermissionsType.php"></a><h3>
-<i class="icon-file"></i>Type/ChatPermissionsType.php<small style="float: right;padding-right: 10px;">2</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>0</td>
-<td>No summary was found for this file</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>83</td>
-<td>No summary for method create()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Method/SetChatPermissionsMethod.php" id="Method/SetChatPermissionsMethod.php"></a><h3>
-<i class="icon-file"></i>Method/SetChatPermissionsMethod.php<small style="float: right;padding-right: 10px;">3</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>0</td>
-<td>No summary was found for this file</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>27</td>
-<td>No summary for property $permissions</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>35</td>
-<td>No summary for method create()</td>
-</tr>
-</tbody>
-</table></div>
-</div>
-<div class="package-contents">
-<a name="Normalizer/LegacyObjectNormalizerWrapper.php" id="Normalizer/LegacyObjectNormalizerWrapper.php"></a><h3>
-<i class="icon-file"></i>Normalizer/LegacyObjectNormalizerWrapper.php<small style="float: right;padding-right: 10px;">11</small>
-</h3>
-<div><table class="table markers table-bordered">
-<thead><tr>
-<th>Type</th>
-<th>Line</th>
-<th>Description</th>
-</tr></thead>
-<tbody>
-<tr class="error">
-<td>error</td>
-<td>0</td>
-<td>No summary was found for this file</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>12</td>
-<td>No summary for class \TgBotApi\BotApiBase\Normalizer\LegacyObjectNormalizerWrapper</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>17</td>
-<td>No summary for property $normalizer</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>19</td>
-<td>Argument $normalizer is missing from the Docblock of __construct</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>19</td>
-<td>No summary for method __construct()</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>27</td>
-<td>Argument $object is missing from the Docblock of normalize</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>27</td>
-<td>Argument $format is missing from the Docblock of normalize</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>27</td>
-<td>Argument $context is missing from the Docblock of normalize</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>39</td>
-<td>Argument $data is missing from the Docblock of supportsNormalization</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>39</td>
-<td>Argument $format is missing from the Docblock of supportsNormalization</td>
-</tr>
-<tr class="error">
-<td>error</td>
-<td>47</td>
-<td>Argument $serializer is missing from the Docblock of setSerializer</td>
 </tr>
 </tbody>
 </table></div>
@@ -6316,7 +6351,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2019-12-16T02:20:47+03:00.<br></footer></div>
+            generated on 2020-01-23T23:48:01+03:00.<br></footer></div>
 </div>
 </body>
 </html>
