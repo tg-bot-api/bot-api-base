@@ -21,5 +21,5 @@ Not obligatory, but suggest an idea for implementing addition or change.
 Include as many relevant details about the environment you experienced the bug in and how to reproduce it.
 
 * Version used (e.g. PHP 7.2):
-* Operating system and version (e.g. Ubuntu 16.04, Debian 9):
+* Framework used (e.g. Symfony 5.0):
 * Link to your project:

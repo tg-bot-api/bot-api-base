@@ -15,15 +15,12 @@ or `closes #num`, the issue will be automatically closed when the pull is accept
 
 Please describe in detail how you tested your changes.
 
-Include details of your testing environment, and the tests you ran to
-see how your change affects other areas of the code, etc.
-
 ## Types of changes
 
-What types of changes does your code introduce? Put an `x` in all the boxes that apply:
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to change)
+What types of changes does your code introduce? Uncomment lines that apply:
+<!--- - Bug fix (non-breaking change which fixes an issue) -->
+<!--- - New feature (non-breaking change which adds functionality) -->
+<!--- - Breaking change (fix or feature that would cause existing functionality to change) -->
 
 ## Checklist:
 
