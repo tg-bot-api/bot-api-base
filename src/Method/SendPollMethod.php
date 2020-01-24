@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Exception\BadArgumentException;
+use TgBotApi\BotApiBase\Interfaces\PollTypeInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
@@ -15,7 +17,7 @@ use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
  *
  * @see https://core.telegram.org/bots/api#sendpoll
  */
-class SendPollMethod implements SendMethodAliasInterface
+class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
@@ -35,10 +37,44 @@ class SendPollMethod implements SendMethodAliasInterface
     public $options;
 
     /**
-     * @param string     $chatId
-     * @param string     $question
-     * @param string[]   $options
-     * @param array|null $data
+     * Optional. If the poll needs to be anonymous, defaults to True.
+     *
+     * @var bool|null
+     */
+    public $isAnonymous;
+
+    /**
+     * Optional. Poll type, “quiz” or “regular”, defaults to “regular”.
+     *
+     * @var string
+     */
+    public $type;
+
+    /**
+     * Optional. True, if the poll allows multiple answers, ignored for polls in quiz mode, defaults to False.
+     *
+     * @var bool|null
+     */
+    public $allowsMultipleAnswers;
+
+    /**
+     * Optional. 0-based identifier of the correct answer option, required for polls in quiz mode.
+     *
+     * @var int|null
+     */
+    public $correctOptionId;
+
+    /**
+     * Optional. Pass True, if the poll needs to be immediately closed.
+     *
+     * @var bool|null
+     */
+    public $isClosed;
+
+    /**
+     * @param string[] $options
+     *
+     * @throws BadArgumentException
      *
      * @return SendPollMethod
      */

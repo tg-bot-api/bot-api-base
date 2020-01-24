@@ -52,4 +52,25 @@ class UserType
      * @var string|null
      */
     public $languageCode;
+
+    /**
+     * Optional. True, if the bot can be invited to groups. Returned only in getMe.
+     *
+     * @var bool|null
+     */
+    public $canJoinGroups;
+
+    /**
+     * Optional. True, if privacy mode is disabled for the bot. Returned only in getMe.
+     *
+     * @var bool|null
+     */
+    public $canReadAllGroupMessages;
+
+    /**
+     * Optional. True, if the bot supports inline queries. Returned only in getMe.
+     *
+     * @var bool|null
+     */
+    public $supportsInlineQueries;
 }

@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Type;
 
+use TgBotApi\BotApiBase\Exception\BadArgumentException;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType;
 
 /**
  * Class KeyboardButtonType
@@ -42,12 +44,15 @@ class KeyboardButtonType
     public $requestLocation;
 
     /**
-     * @param string     $text
-     * @param array|null $data
+     * Optional. If specified, the user will be asked to create a poll
+     * and send it to the bot when the button is pressed. Available in private chats only.
      *
-     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return KeyboardButtonType
+     * @var KeyboardButtonPollType
+     */
+    public $requestPoll;
+
+    /**
+     * @throws BadArgumentException
      */
     public static function create(string $text, array $data = null): KeyboardButtonType
     {

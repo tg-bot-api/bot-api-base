@@ -95,4 +95,12 @@ class UpdateType
      * @var PollType
      */
     public $poll;
+
+    /**
+     * Optional. A user changed their answer in a non-anonymous poll.
+     * Bots receive new votes only in polls that were sent by the bot itself.
+     *
+     * @var PollAnswerType|null
+     */
+    public $pollAnswer;
 }
