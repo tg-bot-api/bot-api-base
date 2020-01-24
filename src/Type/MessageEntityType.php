@@ -49,4 +49,11 @@ class MessageEntityType
      * @var UserType|null
      */
     public $user;
+
+    /**
+     * Optional. For “pre” only, the programming language of the entity text.
+     *
+     * @var string|null
+     */
+    public $language;
 }

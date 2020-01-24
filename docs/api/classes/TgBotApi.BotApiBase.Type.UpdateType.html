@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">586</span></a></li>
+                <span class="label label-info">619</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -70,6 +70,7 @@
 <li class="property public "><a href="#property_inlineQuery" title="$inlineQuery() :: "><span class="description"></span><pre>$inlineQuery</pre></a></li>
 <li class="property public "><a href="#property_message" title="$message() :: Optional. New incoming message of any kind — text, photo, sticker, etc."><span class="description"></span><pre>$message</pre></a></li>
 <li class="property public "><a href="#property_poll" title="$poll() :: Optional. New poll state. Bots receive only updates about polls, which are sent or stopped by the bot."><span class="description"></span><pre>$poll</pre></a></li>
+<li class="property public "><a href="#property_pollAnswer" title="$pollAnswer() :: Optional. A user changed their answer in a non-anonymous poll."><span class="description"></span><pre>$pollAnswer</pre></a></li>
 <li class="property public "><a href="#property_preCheckoutQuery" title="$preCheckoutQuery() :: Optional. New incoming pre-checkout query. Contains full information about checkout."><span class="description"></span><pre>$preCheckoutQuery</pre></a></li>
 <li class="property public "><a href="#property_shippingQuery" title="$shippingQuery() :: Optional. New incoming shipping query. Only for invoices with flexible price."><span class="description"></span><pre>$shippingQuery</pre></a></li>
 <li class="property public "><a href="#property_updateId" title="$updateId() :: The update‘s unique identifier. Update identifiers start from a certain positive number and increase
@@ -211,6 +212,16 @@ Please see our documentation on the feedback collecting for details on how to en
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_pollAnswer"> </a><div class="element clickable property public property_pollAnswer" data-toggle="collapse" data-target=".property_pollAnswer .collapse" title="public">
+<h2>Optional. A user changed their answer in a non-anonymous poll.</h2>
+<pre>$pollAnswer : \TgBotApi\BotApiBase\Type\PollAnswerType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Bots receive new votes only in polls that were sent by the bot itself.</p></div></div></div>
+</div>
 <a id="property_preCheckoutQuery"> </a><div class="element clickable property public property_preCheckoutQuery" data-toggle="collapse" data-target=".property_preCheckoutQuery .collapse" title="public">
 <h2>Optional. New incoming pre-checkout query. Contains full information about checkout.</h2>
 <pre>$preCheckoutQuery : \TgBotApi\BotApiBase\Type\PreCheckoutQueryType | null</pre>
@@ -252,7 +263,7 @@ of sequentially.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-23T23:47:59+03:00.<br></footer></div>
+            generated on 2020-01-25T00:05:22+03:00.<br></footer></div>
 </div>
 </body>
 </html>

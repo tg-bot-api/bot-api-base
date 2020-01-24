@@ -21,10 +21,29 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 
+## 1.3.0 - 2020-01-25
+
+### Added
+- Added support Bot API 4.6  (January 23, 2020)
+    - Supported Polls 2.0.
+    -  Added the ability to send non-anonymous, multiple answer, and quiz-style polls: added the parameters 
+    `isAnonymous`, `type`, `allowsMultipleAnswers`, `correctOptionId`, 
+    `isClosed` options to the `SendPollMethod` class.
+    -  Added the class `Poll\KeyboardButtonPollType` and the field `requestPoll` to the `KeyboardButtonType` class.
+    -  Added `PollAnswerType` class 
+    -  Added updates about changes of user answers in non-anonymous polls, represented by the `PollAnswerType` class 
+    and the field `pollAnswer` in the `UpdateType` class.
+    -  Added the fields `totalVoterCount`, `isAnonymous`, `type`, `allowsMultipleAnswers`, 
+    `correctOptionId` to the Poll object.
+    -  Bots can now send polls to private chats.
+    -  Added more information about the bot in response to the `getMe` request: 
+    added the fields `canJoinGroups`, `canReadAllGroupMessages` and `supportsInlineQueries` to the `UserType` class.
+    -  Added the optional field `language` to the `MessageEntityType` class.
+
 ## 1.2.0 - 2020-01-23
 
 ### Added
-- Added support bot api 4.5  (December 31, 2019)
+- Added support Bot API 4.5  (December 31, 2019)
     - Added support for two new `MessageEntityType` types, underline and strikethrough.
     - Added support for nested `MessageEntityType` objects. Entities can now contain other entities. 
     If two entities have common characters then one of them is fully contained inside the other.

@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">586</span></a></li>
+                <span class="label label-info">619</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -74,6 +74,8 @@
                     <ul>
 <li class="property public "><a href="#property_requestContact" title="$requestContact() :: Optional. If True, the user's phone number will be sent as a contact when the button is pressed."><span class="description"></span><pre>$requestContact</pre></a></li>
 <li class="property public "><a href="#property_requestLocation" title="$requestLocation() :: Optional. If True, the user's current location will be sent when the button is pressed."><span class="description"></span><pre>$requestLocation</pre></a></li>
+<li class="property public "><a href="#property_requestPoll" title="$requestPoll() :: Optional. If specified, the user will be asked to create a poll
+and send it to the bot when the button is pressed. Available in private chats only."><span class="description"></span><pre>$requestPoll</pre></a></li>
 <li class="property public "><a href="#property_text" title="$text() :: Text of the button. If none of the optional fields are used,
 it will be sent as a message when the button is pressed."><span class="description"></span><pre>$text</pre></a></li>
 </ul>
@@ -117,26 +119,18 @@ April, 2016. Older clients will ignore them.</p>
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(string $text, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Type\KeyboardButtonType</pre>
+<pre>create(\TgBotApi\BotApiBase\Type\string $text, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$text</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\KeyboardButtonType</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -184,6 +178,17 @@ April, 2016. Older clients will ignore them.</p>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>Available in private chats only.</p></div></div></div>
 </div>
+<a id="property_requestPoll"> </a><div class="element clickable property public property_requestPoll" data-toggle="collapse" data-target=".property_requestPoll .collapse" title="public">
+<h2>Optional. If specified, the user will be asked to create a poll
+and send it to the bot when the button is pressed. Available in private chats only.</h2>
+<pre>$requestPoll : \TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_text"> </a><div class="element clickable property public property_text" data-toggle="collapse" data-target=".property_text .collapse" title="public">
 <h2>Text of the button. If none of the optional fields are used,
 it will be sent as a message when the button is pressed.</h2>
@@ -202,7 +207,7 @@ it will be sent as a message when the button is pressed.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-23T23:48:00+03:00.<br></footer></div>
+            generated on 2020-01-25T00:05:23+03:00.<br></footer></div>
 </div>
 </body>
 </html>
