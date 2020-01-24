@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">586</span></a></li>
+                <span class="label label-info">619</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -62,13 +62,14 @@
 <ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
+<li class="property public "><a href="#property_language" title="$language() :: Optional. For “pre” only, the programming language of the entity text."><span class="description"></span><pre>$language</pre></a></li>
 <li class="property public "><a href="#property_length" title="$length() :: Length of the entity in UTF-16 code units."><span class="description"></span><pre>$length</pre></a></li>
 <li class="property public "><a href="#property_offset" title="$offset() :: Offset in UTF-16 code units to the start of the entity."><span class="description"></span><pre>$offset</pre></a></li>
 <li class="property public "><a href="#property_type" title="$type() :: Type of the entity. Can be “mention” (@username), “hashtag” (#hashtag), “cashtag” ($USD),
 “bot_command” (/start@jobs_bot), “url” (https://telegram.org), “email” (do-not-reply@telegram.org),
 “phone_number” (+1-212-555-0123), “bold” (bold text), “italic” (italic text), “underline” (underlined text),
 “strikethrough” (strikethrough text), “code” (monowidth string), “pre” (monowidth block),
-“text_link” (for clickable text URLs), “text_mention” (for users without usernames)"><span class="description"></span><pre>$type</pre></a></li>
+“text_link” (for clickable text URLs), “text_mention” (for users without usernames)."><span class="description"></span><pre>$type</pre></a></li>
 <li class="property public "><a href="#property_url" title="$url() :: Optional. For “text_link” only, url that will be opened after user taps on the text."><span class="description"></span><pre>$url</pre></a></li>
 <li class="property public "><a href="#property_user" title="$user() :: Optional. For “text_mention” only, the mentioned user."><span class="description"></span><pre>$user</pre></a></li>
 </ul>
@@ -106,6 +107,16 @@
 </table>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_language"> </a><div class="element clickable property public property_language" data-toggle="collapse" data-target=".property_language .collapse" title="public">
+<h2>Optional. For “pre” only, the programming language of the entity text.</h2>
+<pre>$language : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_length"> </a><div class="element clickable property public property_length" data-toggle="collapse" data-target=".property_length .collapse" title="public">
 <h2>Length of the entity in UTF-16 code units.</h2>
 <pre>$length : integer</pre>
@@ -131,7 +142,7 @@
 “bot_command” (/start@jobs_bot), “url” (https://telegram.org), “email” (do-not-reply@telegram.org),
 “phone_number” (+1-212-555-0123), “bold” (bold text), “italic” (italic text), “underline” (underlined text),
 “strikethrough” (strikethrough text), “code” (monowidth string), “pre” (monowidth block),
-“text_link” (for clickable text URLs), “text_mention” (for users without usernames)</h2>
+“text_link” (for clickable text URLs), “text_mention” (for users without usernames).</h2>
 <pre>$type : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -167,7 +178,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-23T23:48:00+03:00.<br></footer></div>
+            generated on 2020-01-25T00:05:22+03:00.<br></footer></div>
 </div>
 </body>
 </html>

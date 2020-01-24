@@ -2090,6 +2090,105 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJytVE1rGzEQvetXDDQH26ReF0ooSd3aDg0UEtqDjwtF1s7uCmRJSLNxQur/Xmm/HNtL00N10TJ68+a90Wg/f7WlZSxDobjDkScnBf2iZ4t+/mF8w5jmW/SWC4R1sTK0tDJtthX3mK4DMP2ubUUP6D0v8NZoQk0hsfLDKQ9IpcnSteOSfHonlbpzZrt0jj/XsZCaTCYMJnCruPdQs98bwUkafVwlVp8GZAQvPCKURNZfJ4kwDqeECgvHt1PjimRjyCfcyncy0qmWbtvQiYYu0CRM/EtRwKfwmbW483P2wiCs2IIhg/Gs9hjXBO5DFaoyBJMDlQidOpAasmAB0U9bbJeyeOQOcmU4tZGk3m21UVLAhWoZQy9Paxld/O9iHeV5tR82UnM1hZ/opMliER/bHVqXGwe7UoryWIbgGjYIlc04YXYJvjSVymJog7RD1HA1A64z+HT1cTYblCo1/daVUsNq5SM2Ys7lLiwP89JYrUOHTv4N0vk/wfB447UQuAhm+KlUKp3ZeUiHHsm3J4F179IVz5auqLZhsvrgKZNDqpx+a2iH2uEpgAXklRZN9x2Gto8aaFiNz74Ll2cHnffDSW27cQxz6O9hfP3mo3rpOS6kDsp0+OkEBty1Mkfjm3PE+y+duIB9NfhDwH7250dT20FlDqNa9/iVlBOOPDznFnRI3LP+s72KPqMB7dme/QE5dKi/</source>
   </file>
+  <file path="Method/SetChatAdministratorCustomTitleMethod.php" generated-path="Method.SetChatAdministratorCustomTitleMethod.html" hash="b9729ab2a38ce5b33a7e361c652af9d0" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <namespace-alias name="SetMethodAliasInterface">\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface</namespace-alias>
+    <namespace-alias name="ChatIdVariableTrait">\TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait</namespace-alias>
+    <namespace-alias name="UserIdVariableTrait">\TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait</namespace-alias>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Method" line="17" package="Default">
+      <extends/>
+      <implements>\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface</implements>
+      <name>SetChatAdministratorCustomTitleMethod</name>
+      <full_name>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</full_name>
+      <docblock line="17">
+        <description>Use this method to set a custom title
+for an administrator in a supergroup promoted by the bot. Returns True on success.</description>
+        <long-description></long-description>
+        <tag name="see" line="17" description="" link="https://core.telegram.org/bots/api#setchatadministratorcustomtitle"/>
+        <tag name="package" line="17" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="25" package="Default">
+        <name>$customTitle</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod::customTitle</full_name>
+        <default></default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+          <tag name="var" line="25" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="17" package="Default">
+        <name>$chatId</name>
+        <full_name>\TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait::chatId</full_name>
+        <default></default>
+        <docblock line="17">
+          <description>Unique identifier for the target chat or username of the target channel (in the format @channelusername).</description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="" type="integer|string" variable="">
+            <type>integer</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="17" package="Default">
+        <name>$userId</name>
+        <full_name>\TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait::userId</full_name>
+        <default></default>
+        <docblock line="17">
+          <description>Unique identifier of the target user.</description>
+          <long-description></long-description>
+          <tag name="var" line="17" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="30" package="Default">
+        <name>create</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod::create()</full_name>
+        <docblock line="30">
+          <description></description>
+          <long-description></long-description>
+          <tag name="param" line="30" description="" type="integer|string" variable="$chatId">
+            <type>integer</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$chatId</name>
+          <default></default>
+          <type>integer|string</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$userId</name>
+          <default></default>
+          <type>\TgBotApi\BotApiBase\Method\int</type>
+        </argument>
+        <argument line="0" by_reference="false">
+          <name>$title</name>
+          <default></default>
+          <type>\TgBotApi\BotApiBase\Method\string</type>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+      <error line="30" code="PPC:ERR-50015">Argument $userId is missing from the Docblock of create</error>
+      <error line="30" code="PPC:ERR-50014">Name of argument $userId does not match with the DocBlock's name $chatId in create()</error>
+      <error line="30" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $userId in create()</error>
+      <error line="30" code="PPC:ERR-50015">Argument $title is missing from the Docblock of create</error>
+      <error line="30" code="PPC:ERR-50014">Name of argument $title does not match with the DocBlock's name $chatId in create()</error>
+      <error line="30" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $title in create()</error>
+      <error line="30" code="PPC:ERR-50008">No summary for method create()</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $customTitle</error>
+    </parse_markers>
+    <source>eJyNk0GP0zAQhe/+FSPRQ1stjbhuWaC7pz1wgcIpEnKdaWIpsS3PGLSC/e+M7ZYu2gjWF0czb55fPidv34chKNWhGXXEJXG0hr/xQ0C6ebPaKuX0hBS0Qdj3t553wbZ1u9WE7UfkwXciS/QvQXvvGONRXKj9jFyLu9Fq+tPY/s9iH7Vlau8GzffdVx2tPoxYii8d/UIYn42qZr1WsAZpAg+WYCozwB4IGTSYROwnYMsjZuHRR9AOdDdZZ4WXZilYKQClgLGPPgUI0U+esYPDg7giHDxv4BNyio5gHxOCd6I3AoQ24pqNPxAiDMyBrpvG+IgbxhH7qKeNj30jFtToYF9JLCMQ/gpQQ54zNkpukwgEdca1e6q8K8p9VlY6YKcw4oSOy8Dc3aifCmRlyrP4z815wLlbIOclr/ldR8jfmetPpabsIR1Ga2BhLgFnhoMWHoKbf1UL0ZdEc1bEmmU7JmfYCm8TUTMuTxNX2QUWqWS+grNdYbi6fhm7clqFk9fCOjnTyb9yAw5/nAIsV9vnitfvagpRnvLMimq6LKpP806XWFnJT9DlFctndxmoHo/qUf0GxFtTdA==</source>
+  </file>
   <file path="BotApiInterface.php" generated-path="BotApiInterface.html" hash="5a86de3b4c46fcd25881bea499853c25" package="Default">
     <docblock line="0">
       <description></description>
@@ -4145,20 +4244,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\AliasMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="41" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="33" package="Default">
         <name>setChatDescription</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatDescription()</full_name>
-        <docblock line="41">
+        <docblock line="33">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="41" description="" type="\TgBotApi\BotApiBase\Method\SetChatDescriptionMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatDescriptionMethod</type>
-          </tag>
-          <tag name="throws" line="41" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="33" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="41" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4168,20 +4261,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="41" package="Default">
         <name>setChatPhoto</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatPhoto()</full_name>
-        <docblock line="53">
+        <docblock line="41">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="53" description="" type="\TgBotApi\BotApiBase\Method\SetChatPhotoMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatPhotoMethod</type>
-          </tag>
-          <tag name="throws" line="53" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="41" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="53" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4191,19 +4278,13 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="64" package="Default">
-        <name>setChatAdministrator</name>
-        <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatAdministrator()</full_name>
-        <docblock line="64">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="49" package="Default">
+        <name>setChatAdministratorCustomTitle</name>
+        <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatAdministratorCustomTitle()</full_name>
+        <docblock line="49">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="64" description="" type="\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</type>
-          </tag>
-          <tag name="return" line="64" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-          <tag name="throws" line="64" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="49" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
         </docblock>
@@ -4214,20 +4295,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="76" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="57" package="Default">
         <name>setChatStickerSet</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatStickerSet()</full_name>
-        <docblock line="76">
+        <docblock line="57">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="76" description="" type="\TgBotApi\BotApiBase\Method\SetChatStickerSetMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatStickerSetMethod</type>
-          </tag>
-          <tag name="throws" line="76" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="57" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="76" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4237,20 +4312,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="88" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="65" package="Default">
         <name>setChatTitle</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatTitle()</full_name>
-        <docblock line="88">
+        <docblock line="65">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="88" description="" type="\TgBotApi\BotApiBase\Method\SetChatTitleMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatTitleMethod</type>
-          </tag>
-          <tag name="throws" line="88" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="65" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="88" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4260,20 +4329,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="100" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="73" package="Default">
         <name>setGameScore</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setGameScore()</full_name>
-        <docblock line="100">
+        <docblock line="73">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="100" description="" type="\TgBotApi\BotApiBase\Method\SetGameScoreMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetGameScoreMethod</type>
-          </tag>
-          <tag name="throws" line="100" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="73" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="100" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4283,20 +4346,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="112" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="81" package="Default">
         <name>setStickerPositionInSet</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setStickerPositionInSet()</full_name>
-        <docblock line="112">
+        <docblock line="81">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="112" description="" type="\TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod</type>
-          </tag>
-          <tag name="throws" line="112" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="81" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="112" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4306,20 +4363,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="124" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="89" package="Default">
         <name>setWebhook</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setWebhook()</full_name>
-        <docblock line="124">
+        <docblock line="89">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="124" description="" type="\TgBotApi\BotApiBase\Method\SetWebhookMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetWebhookMethod</type>
-          </tag>
-          <tag name="throws" line="124" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="89" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="124" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4329,20 +4380,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="136" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="97" package="Default">
         <name>setPassportDataErrors</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setPassportDataErrors()</full_name>
-        <docblock line="136">
+        <docblock line="97">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="136" description="" type="\TgBotApi\BotApiBase\Method\SetPassportDataErrorsMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetPassportDataErrorsMethod</type>
-          </tag>
-          <tag name="throws" line="136" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="97" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="136" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -4352,20 +4397,14 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         </argument>
         <inherited_from>\TgBotApi\BotApiBase\Traits\SetMethodTrait</inherited_from>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="148" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase" line="105" package="Default">
         <name>setChatPermissions</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatPermissions()</full_name>
-        <docblock line="148">
+        <docblock line="105">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="148" description="" type="\TgBotApi\BotApiBase\Method\SetChatPermissionsMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatPermissionsMethod</type>
-          </tag>
-          <tag name="throws" line="148" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="105" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="148" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -9289,7 +9328,7 @@ can be repeated.</description>
     </parse_markers>
     <source>eJyFVO9v2jAQ/Z6/wtKQ+CFKNGnah1A2wpZ1qBkgyDQhQJExR4gWEss2W1HV/33nJEBL3M5fLPnee3f37PPtZ77jlrUBllABDalEzFSojhxk732za1kp3YPklAEJokGmXB4vi21AJSwDBC4nVEqeCeUlsIdUeUJkApl2q2WRFvmSYJiYMN/iBLRAB2Ea2ZcAZKcUl45ts0xAR0ECkaD7TiYie50paVMev+OlFhRaoLW2qIUatsXeTCd1PgIPCtKNGaUB1qNFcLEslYoE84kX/gyG/jCYh4Oh75MeqR9UnMTqGK7jJKl3r9EDd3QfzgI38H54o0Dj1zT9HUpFVZ6oypgizvVD927qnTkCkTQJaSTgFdbEnc0m42mA9LvhLJi6wXA80tSTQ6GAKMY7pSrO0iof60O6O51XBLBO5FNxvFZ4JuH6/viX9zXUUjMkLfKYXhKSreNUjGubAC+9MkKuzTGCjF4YkeauC+iq7DB/u3q1iI/tk2xL1vjeP364gZRlG9gQ/eDIjsodyE4JPTH6f6ggepLSaLEqD+1854d1EjNS0+TvObear88pvviSjyc1PYyvBnE4JY3M8cXqeabrItVOZH8lWZrG2ntgwPWNLwd044rokI/H6fBaSYA6iPTtmTPZoOcBt+0hZVqWMAE4II3LnRVd5ga0K6dl55cAFYIeKx03nf98Bo9ngVqMz5qm+NX1CPqIUMcpatKmNOpaWdbbZUHnCprdqsLNp0sZqFa9cL1K386kQufJerL+AUrSt3c=</source>
   </file>
-  <file path="Type/UserType.php" generated-path="Type.UserType.html" hash="d710ee98c8b8096442118f9b0a09fbd4" package="Default">
+  <file path="Type/UserType.php" generated-path="Type.UserType.html" hash="491ad0012522e0e81e5b73a6581fdf49" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -9380,11 +9419,50 @@ can be repeated.</description>
           </tag>
         </docblock>
       </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="61" package="Default">
+        <name>$canJoinGroups</name>
+        <full_name>\TgBotApi\BotApiBase\Type\UserType::canJoinGroups</full_name>
+        <default></default>
+        <docblock line="61">
+          <description>Optional. True, if the bot can be invited to groups. Returned only in getMe.</description>
+          <long-description></long-description>
+          <tag name="var" line="61" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="68" package="Default">
+        <name>$canReadAllGroupMessages</name>
+        <full_name>\TgBotApi\BotApiBase\Type\UserType::canReadAllGroupMessages</full_name>
+        <default></default>
+        <docblock line="68">
+          <description>Optional. True, if privacy mode is disabled for the bot. Returned only in getMe.</description>
+          <long-description></long-description>
+          <tag name="var" line="68" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="75" package="Default">
+        <name>$supportsInlineQueries</name>
+        <full_name>\TgBotApi\BotApiBase\Type\UserType::supportsInlineQueries</full_name>
+        <default></default>
+        <docblock line="75">
+          <description>Optional. True, if the bot supports inline queries. Returned only in getMe.</description>
+          <long-description></long-description>
+          <tag name="var" line="75" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJydkc9KAzEQxu95igEFdZENXv2DtUXBi162t4Kku7PbQJrETFYQFfoY+np9EidrK2pXheYyZDLf95uZnJ77mReiwtKogPsUgy7jXXz0SGdHBydCWDVH8qpEKJqhixdeTz7CUBFOCi7kIpllAjIYGUUEY8KQ8jmnUnZAiDCL0dOxlKULmEc02AQ1z11o5NRFksrrnZZ1XC9F+c1GPAng0yHSyWBs9X2LoCu0UdcaA9QuQJxpguQBfGHTfFW+Vg0eVABt4+ouu+jbqdEl7OqKp/iBKUKLh6DrL84c1a/eU+dMvznxxjb904DLxSut+l0u3ghqHShC2nkvIn2PbXohnfKGhZugWx+1s8rkvUhe9r/EZ9ua/tmSehtqWufW0LX4L+j1ZXHFs9mmVQ1CVA249JPYkffo82nLqT/EI1dxEy/iHXeK78E=</source>
+    <source>eJytVF9rFDEQf8+nGFBQD9nFV6v0HyoVqliubwXJ7s7lBnJJzMweHCr0Y+jX6ydxsncnrd3WcjQvIbPz+zOT2bzZT/NkTIettxmfs2Rq5ausEvLbVy/2jAl2gZxsizB1R1EOE12styPLeDHVRE2qJxMDEzj2lhnOGXOJVxoq0QNGhLlI4td13caMlaBHl+2iitnVTRSubaInveI0vzbtDRrz3YCuQaKsCZwH+tYjUIdBaEaYYRYzyJwYCgfoQUmrTfoWdbC0GSjI5lwPe+obTy08pU6r+Edmmnt8CTS7xqy7vZO7idGPk7N27DZ/KfDq8hdv/F5d/maYUWaB0vNRiXI9wY2KDMhPCrwt9DkJxWB9NSqpzf6v4o/Q+/HaCnoX1dLOnUW34PtET95N32ttwfXWIYh1EMtN4qD8jP9+2rHqNfg4dveauDZCWEqH1gZodHTDkgQ7kAguxz5xBWcofQ4ai8GvNAEcyum4uzJod3tTiY+RwoeB90HmUqalbVew0GrKiHfEtvFqZf1bDc4f1+AZ2u7Q+8HjKTJrKx9mddtH7lOKWVh9eAoI+h5kwsds41bhZBD4subfMz/NH99HgxI=</source>
   </file>
   <file path="BotApi.php" generated-path="BotApi.html" hash="4795ad2b2a4090dc5e43f4df169ada3d" package="Default">
     <docblock line="0">
@@ -19868,7 +19946,7 @@ text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJyVVF1P2zAUfc+vuNJ4aKvSaK+wbhQ2BNLQ0NbxFAldnJvWkmNbtsOHBv+daycprAQEeUljn3vOPefa/fLNrm2WlSQUOhr54KQIl+HOkp9/Hu9nmcaavEVBsFwdmrCwsmhfh+ipOKOwNiXDGv8WoDjVgVzFLL44QX+OztOZKekCncQrRZvt/Q8Q/SFdtqsLJdG/n2PpUAZfHKEN0ui+B5+W31t8LJU6dqZeOId3H6qMbS/N0RrDe5WXPA02bpvAqhS/OPB8MslgAkcKvYfIeWGkoFZqxjtx88ATwToE6/fyXBhHs0CKVg7rmXGr/MoEn6OVnzyXX8dyLsozMUQJsraKatLBw5sTnMJrc8n+ZcBPdDmUXr/3ej494pXBpf0US3wmsGhKaaDiyCAYiB5ncB6tYVq8lCUg++QTr1c9otuDwPJAt9KzXaP5kyfTRcc4d03Ow8iRMDVHUlI5nvaqNiloOFkuz+Hv759RA3uVyrgnHpZcUegVK44j6aS8NIUNI9c0VhmMzWm64X6IY4h0daOCtOhCzsT1bokBZ11VX3xwjQ7+Ozv3PvXSAfL0ts2VkgJ20iF4meSvlDcq+N44jD/BVKnXhAf+g/C4IpCasxFGl36wi1b3XjdKDYqXHflL/QP2yIFJHbrm4enZETyq03ILOuS4s7eFxHgEU1PPSWOU2x7C2pkbD8XQFf1xKyiFVBxiuXCrJt6UzeI2k6PQOL19xYZC8YEjEVA1WqTchSMMNOpMTztL09ZF2zbMIboZ7w3yt3cweZSa2TXPb56OVSs1Gu+/ROx+bfUY2SkPgtrTMN8cox4iKxil1sbP5Ldq+Q6oDvRU+JBtfnaRbSpa0EP2kD0Cxs8tDA==</source>
   </file>
-  <file path="Type/UpdateType.php" generated-path="Type.UpdateType.html" hash="11932ed347c4bb4d85edffe560a5e369" package="Default">
+  <file path="Type/UpdateType.php" generated-path="Type.UpdateType.html" hash="2d8bb5b24ab748c9519d88ff4b326e70" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -20032,13 +20110,26 @@ of sequentially.</description>
           </tag>
         </docblock>
       </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="105" package="Default">
+        <name>$pollAnswer</name>
+        <full_name>\TgBotApi\BotApiBase\Type\UpdateType::pollAnswer</full_name>
+        <default></default>
+        <docblock line="105">
+          <description>Optional. A user changed their answer in a non-anonymous poll.</description>
+          <long-description>Bots receive new votes only in polls that were sent by the bot itself.</long-description>
+          <tag name="var" line="105" description="" type="\TgBotApi\BotApiBase\Type\PollAnswerType|null" variable="">
+            <type>\TgBotApi\BotApiBase\Type\PollAnswerType</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
       <error line="59" code="PPC:ERR-50007">No summary for property $inlineQuery</error>
       <error line="69" code="PPC:ERR-50007">No summary for property $chosenInlineResult</error>
     </parse_markers>
-    <source>eJy9Vk2PHDUQvfevKCkcYLU7I66EiJDhsoeQBRZxiYTc7pppa9y2sd3baQHS/ogc4O/tL8mr/tgvWtkGoYw0mmn7levVq3J1ff1NqENRVKytivx5ytHo/GvuA6cXX37xvCicajgFpZkuD698/jaYt+PPK5X47SWAAG1PTgo6oZ1VKdHPoVKZZWeDRVl/mZipzjmkr7Zb7SNvMls+RNVsfDxsS5/TVgXzrB0sYbEt9KOjit8LwmdwJJ8TuqyZRoOb678Stc781jKZil02e8NxM1nfW0qUsoqZ9tE3pEhzzMo4Cj6ZbK6YXNuUHEm5iozTkRHh7C0xTscxytp+A98m0fl3VLL2kIegEOthj2pY92T21Pv25vrvCJLJuAP9wmXt/TGdEh6hpskEvO+SACl7MgcHZWZ/kQODfDWFmMhHAUVOGSjKCB5CRtZ5QkwMNcNB7VtbCaanA2fyLb57nFCJKud72cEZ6s6b8+S4u/W1hzOVyUIAsKSO+XgqRu6elnKisHD87pZCZ6yFJqRrnwCOkMI30MS4lFlVszdYPpBzWp+3X16pCJM8PW+H39CW1mj6bPR0XqHoHtXDm5CNd8pu6HuEAo19I7ojPUkdWJwq19PRILk31+8pg/cphdpnD8Wy0UeOp8RZL9J5PZ4ilfiHa61d5Da5eoraFQoRjwOjW3q5huAoqqPznZNMi7a4GEMxdgolVhmUw38nN9q/XkfxVj2NcnZs5YrkTyHh5O8C7v6VjA94fiItdx/jurblGWeN47PGV/xEKkYk4d7Efon5+bD/g2x/nL25A/6vvNeYjmbPtLcWrQthne2Zq1Lp4z+jlwaPftfaqfIeKDAmWZI5NZuyRxm0aWrfWMlT5k2U6sgU0PkdGuDs6ELam7RN9IY2UuV128BK5aGo3FA0Mzm6Izw0x4rx4rBJYLXvxBE7VdqhLyd+0Ed7ORyxL1bbbuA+Zu7HIdSnrsdj/PqbjFY7hDLIt8xmgqyoIX0fuppDqk0I8mfkQG8cXg4iknFX3mgo1plc097yOyNqBgwjvEj1p+mkFVTTfehqqiHyma5ZH+XlOdHdeSfzAvIKX4CCeTOWiyoFNuMXGV9E3k37K0iHR+ineAfUpww3mTeE8Szh4miWkcaLxHM9jjQFizGkq42uZQgYLwuygNEiBIwcZT93zOVIYD+MZIvEsfm8+LP4AIN0Ros=</source>
+    <source>eJy9Vk1vJDUQvfevKGk5QJTMiCsLYrPDJYdlAwRxWQm53TXT1rhtY7vT2wKk/Ig9wN/LL+FVf0wyYcgMCO1IyUzbr1yvXpWr68uvQx2KomJtVeRPU45G559zHzh99flnL4vCqYZTUJrpZvPa58tg3o1fr1XidzcAArQ8OyvojFZWpUQ/hkpllp0FFmX9VWKmOueQvlgutY+8yGx5E1Wz8HGzLH1OSxXMi3awhMWy0E+OKn4tCJ/BkXzO6KZmGg3u7/5I1DrzS8tkKnbZrA3HxWT9aClRyipmWkffkCLNMSvjKPhksrllcm1TciTlKjJOR0aEs7fEOB3HKGv7BXybRFffUMnaQx6CQqyHPaph3ZNZU+/b+7s/I0gm4zb0E5e199t0TniEmiYT8L5LAqTsyWwclJn9RQ4M8tUUYiIfBRQ5ZaAoI3gIGVnnCTEx1AwHtW9tJZieNpzJt/hb44RKVLlayw7OUA/enCfH3c7XGs5UJgsBwJI65u25GLlHWsqJwsLx+x2FzlgLTUjXPgEcIYVvoIlxKbOqZm+w3JNzWp+3X92qCJM8PS+H79CW1mj6ZPR0VaHontTD25CNd8ou6FuEAo19I7ojPUltWJwq19PWILn3dx8og/c5hdpnD8Wy0VuO58RZH6TzZjxFKvE311p7kNvk6hi1WxQiHgdGO3q5huAoqq3znZNMi7a4GEMxdgolVhmUw38nN9q/OY3iTj2NcnZs5YrkjyHh5O8a7v6VjHs8P5KWq+e4ntryjLPG8UXjKz6SihFJuDexP8T8atj/TrafZ28egP8r71NMR7MX2luL1oWwLtbMVan09u/RS4NHv2vtVHl7CoxJlmROzabsUQZtmto3VvKUeROlOjIFdH6HBjg7upb2Jm0TvaGNVHndNrBSeSgqNxTNTI4eCA/NsWK8OGwSWO07ccROlXboy4n3+mgvhyP2g9W2GriPmft+CPXY9XiKP/0mo9UOoQzyHWYzQU6oIf0YejKHVJsQ5MfIgd46vBxEJONuvdFQrDO5prXl90bUDBhG+CDVH6aTTqCaHkNPphoiX+ia9VZenhPdlXcyLyCv8AUomDdjuahSYDP+IOPryKtp/wTS4Qn6GO+A+pThJvOCMJ4lXBzNMtJ4kXiux5GmYDGGdLXRtQwB42VBFjBahICRo+znjnk4EtgPI9lB4th8juzleEelX2+4mu6ncqljqQJcYefdhcK/vvFtGrjubuxeYDKv3PphMnLDiDHGNfUFnsN6iAUTV2K7/seQLgcSR9Kyw70sfi/+AgNzjaI=</source>
   </file>
   <file path="Method/Interfaces/SendMethodAliasInterface.php" generated-path="Method.Interfaces.SendMethodAliasInterface.html" hash="8de15cfaa06c66f822412ca4579d3383" package="Default">
     <docblock line="0">
@@ -20843,7 +20934,7 @@ which is supposed to be the same over time and for different bots.</description>
     </parse_markers>
     <source>eJx1Ul9rFDEQf8+nGFBo7yi71MfW4lnBNxH0fCscc7nZ3Ug2CZnZ1kWFfgz9ev0kTrY5BWnzEpLfzPz+JK/fpCEZcyDrMdMpS3ZWdjIn4qvz1aUxAUfihJZg219HeZvczeN2jUw3Wy3Uona9NrCGdx6Z4X3Mlj5R8nNBGwUKtmEiGEQSX7StjZkaIU99xrGJuW/3UbjF5F50pTuXbu1qjX1ipPluQNdCWtYaPg/xjmHpAheEclcESwQZCCamfAbI4LpynmHEMKHXUlYFVuiwlKmCh/tfDGqXsSfAoPeYksIP978X8pOmEh55N7eYtTH6etEue5r23ll42f1VrRH9p/hjEhcD+ga+sCodHENCDYNUfBE6xwnuMEgxscyp7rocR+BE1nVKUawxxODnBraYexK+ODKcryosAwro48JmpFBY1ZELi2ehbwJxiQU+VN9x/1VDuTyOebWquZWATv7Fo4KxajodsIa/k7irBTt3WJ1pwuGghipFzK53avo45Nk4f4TJP53p45O5W/11P80f5m/hXQ==</source>
   </file>
-  <file path="Type/MessageEntityType.php" generated-path="Type.MessageEntityType.html" hash="7035f29c0b1b1d5e0b21952051b83cd5" package="Default">
+  <file path="Type/MessageEntityType.php" generated-path="Type.MessageEntityType.html" hash="98ba7dd6ca50a5ab98396c47a314489e" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -20868,7 +20959,7 @@ which is supposed to be the same over time and for different bots.</description>
 “bot_command” (/start@jobs_bot), “url” (https://telegram.org), “email” (do-not-reply@telegram.org),
 “phone_number” (+1-212-555-0123), “bold” (bold text), “italic” (italic text), “underline” (underlined text),
 “strikethrough” (strikethrough text), “code” (monowidth string), “pre” (monowidth block),
-“text_link” (for clickable text URLs), “text_mention” (for users without usernames)</description>
+“text_link” (for clickable text URLs), “text_mention” (for users without usernames).</description>
           <long-description></long-description>
           <tag name="var" line="23" description="" type="string" variable="">
             <type>string</type>
@@ -20925,11 +21016,24 @@ which is supposed to be the same over time and for different bots.</description>
           </tag>
         </docblock>
       </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="58" package="Default">
+        <name>$language</name>
+        <full_name>\TgBotApi\BotApiBase\Type\MessageEntityType::language</full_name>
+        <default></default>
+        <docblock line="58">
+          <description>Optional. For “pre” only, the programming language of the entity text.</description>
+          <long-description></long-description>
+          <tag name="var" line="58" description="" type="string|null" variable="">
+            <type>string</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyVVE1v00AQvftXjNQemhDHpCgcKIjQQk9FSJDcKkVre2IvWe+udseUqCD1h8Cf6y9hPxzkBAuBL7b3vX3vzc7YL1/rWidJiYVgBs8sGV7QmnYa7avZ6CJJJGvQalYgLKtLRW80v423S2bxdumIjpSNxwmM4Uowa+E9WssqfCeJ084Tpg7z8MIiQk2k7YssK5TBKaHAyrBmqkyV5YpsxjQ/aaIABgG3MUuKYeHkPgF3BXd/jcGvgtoA1Qhx/xSumIQc4fHhR+OXlHx8+Alni9ai8cWNJh6qma2JVQE66V4iUvSQ09Wnt6PJ3syBLvO6UE3DZBkImSVmaPFZ5XbtsKjQGhHAfen9qiMDG8Yjp1SpVJQa1GK3OCT2bHWtJK5l2+RowrYns/R8dp7O5/P06ez8WVTNlYip/AMQfu3ycGKCFwGJjz2slSUawSUG+Pfbfnsvgx+VLVJtVFvVgX2w0tMsVBnlGiXVHS+pBk+VXfHaHKO5UMX2wMyLrV2QbWBulIHC5d6yXGAwgtXHGxvlArXfac/2zbZwx6lWLcG+9XbUWeydFl+Y6bJ1S1m46zb3x3RKcdyPhu7DZmORgEtYLa/T2XPwBUMrOVkgFWYxjMXRYA55c0mDxipY/Gl9g7JyB3YgPBjkv9xEUB0oVPtDZWIK1+5Mj9uipNhNwA27y8LIHbYQ/rtTGv38sA1h7AMQ09axQ2SvMJgtduGbbIUYzOh8/jVgbxhiRm/cLbpkPtNghJUD/A/lLyEc4yL5nvwCQdnAPQ==</source>
+    <source>eJydVE1v00AQvftXjNQemtDEJCgcKIjQQk9FSJDcKkVrZ2IvWe+udseUqCD1h8Cf6y9hP2xwglUVfLG97+17b3bGfvlalzpJ1pgLZvDEkuE5rWin0b6aDM6SRLIKrWY5wqI4V/RG8+t4O2cWrxeO6EjpcJjAEC4Esxbeo7WswHeSOO08YewwD88tIpRE2r5I01wZHBMKLAyrxsoUaabIpkzzoyoKYBBwG9Mk7xdObhNwV3D31xD8KqgNUIkQ94/hgknIEO7vflR+Scn7u59wMq8tGl/c4NRDJbMlsSJAR81LRPIOcrz89HZw2po50GVe5aqqmFwHQmqJGZp/VpldOSwq1EYEsC29W3VkYMV45KzVSCoaGdRiN98ndmx1qSSuZF1laMK2J5PRdDIdzWaz0dPJ9FlUzZSIqfwDEH5t8nBigucBiY8drJZrNIJLDPDvt3Z7J4MflS1SaVRdlIG9t9LRzNU6ylVKqhu+phI8VTbFa3OIZkLl2z0zL7ZyQbaBuVEGcpd7yzKBwQiWH69slAvUbqc92zfbwg2nUtUEbevtYNx4tFbzL8w04ZqlNNx1nflzOqY47wdT92GzsUjAJSwXl6PJc/AVQy05WSAVhjHMxcFk9nlzSb3GKlj8bX2FsnAntifcG+Sf3ERQ7SlU+1NlYgyX7lAP+6Kk2J2Cm3aXhZE7bSH8h6c0+gFiG8LYCCCmrWOHyF7hgS58k7UQvRmdz2MDdqYhZvTGzaJL5jP1Rlg6wP9RHgjhGI9I0Yz4H3NtlP+wK1chCCaL2v3XDpr43wfT6p0l35NfUnLvXw==</source>
   </file>
   <file path="Type/PhotoSizeType.php" generated-path="Type.PhotoSizeType.html" hash="01019a6e6d5adcb66bd2966cda759904" package="Default">
     <docblock line="0">
@@ -27407,48 +27511,115 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJyVVV1r2zAUffevuLA+JKGNu70t/ViTLR0dlBYWCoNAUGzFFpMlI10t69ZCfsYG25/LL9mVHMdpm6zUL4mvzj33XN0j+fhdmZdRlPJEMsNbFo1IcIK3Jbcnr9tHUaRYwW3JEg6jbKCxX4px9TNglo9HBBxfqNLhJU8FI7yz25GXHHOdjkeGCbTjcyHludFF3xh2G2JHOzObGpTF/RuViTudCDrwXjJroRFwI1KuPaRLqx5wZjmHHLG0vThOtOFd5JJnhhVdbbJ4qtHGrBSvhKcoPMU3T0GpcZTsIgf+HblKN9d8OPoZAT2+j239+bUg2z8duCpRaMVkF0a5K6aKCQl6BphzmFGfYLlCv8YpVK/bXDuZwpSDUPDpevgRZtoUDIGpFCQntZgzBW8OD+HrwGOs+OG3oqrYb5iWi18W5iLFPKTmXGQ51vRKI3WYcJ7C28N19kWmaPtSEBsahQ1gV0rNUlpzVqgMCidRlMxg7NUdpAzZmmXdq4WEqeXiN/puDKdNS4MUivqIVvK24WUWGCg+D1X3ay6r4Va7kFH6SS0XfxgiS3Ia9bFHTqrXiffw6XLxt9bebOicmJ9XXxd0KuUGnlLX3dW4s2/MwAPH3vmDpbI75aRcoeLwW7qpFAnsBUnk650mCearRra1nFC4mz2kPc9e2eDl9FXe8/ypM8xHXl6hzvxfjWvvgZFxfL+e83qy4Ux7t1onkE3JuTRboJlwVtBYtuqZai13C7KuLLXBzzXFU2Fn5CFWwGrwD9wAe+GmeYRk/q4IFaF59jb8t8ZjbvTcwnjbbTmkgxu2ZDxgad9krqB7ZB18zGQ4OqO23XHburZIQ0hg5lTiySCh5pG3qm72qwYqxXACvpF2byd1dVeGFoUiYkVfmJNwxqsqrfbRU8TBaShFwKrmVoj/eBGioun1Rl+uh5Obiw/DqwZN/mgFne0NHY9o6JTLFahJvI/Wf1dbt86oQPfRffQPAApEUg==</source>
   </file>
-  <file path="Method/SendPollMethod.php" generated-path="Method.SendPollMethod.html" hash="70e52554b31f2a0b3d123f1513b41484" package="Default">
+  <file path="Method/SendPollMethod.php" generated-path="Method.SendPollMethod.html" hash="f859adffaecb4739ce93f76ef165b093" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="BadArgumentException">\TgBotApi\BotApiBase\Exception\BadArgumentException</namespace-alias>
+    <namespace-alias name="PollTypeInterface">\TgBotApi\BotApiBase\Interfaces\PollTypeInterface</namespace-alias>
     <namespace-alias name="SendMethodAliasInterface">\TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface</namespace-alias>
     <namespace-alias name="FillFromArrayTrait">\TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait</namespace-alias>
     <namespace-alias name="SendToChatVariablesTrait">\TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Method" line="18" package="Default">
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Method" line="20" package="Default">
       <extends/>
       <implements>\TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface</implements>
+      <implements>\TgBotApi\BotApiBase\Interfaces\PollTypeInterface</implements>
       <name>SendPollMethod</name>
       <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod</full_name>
-      <docblock line="18">
+      <docblock line="20">
         <description>Class SendPollMethod
 Use this method to send a native poll. A native poll can't be sent to a private chat.</description>
         <long-description>On success, the sent Message is returned.</long-description>
-        <tag name="see" line="18" description="" link="https://core.telegram.org/bots/api#sendpoll"/>
-        <tag name="package" line="18" description="Default"/>
+        <tag name="see" line="20" description="" link="https://core.telegram.org/bots/api#sendpoll"/>
+        <tag name="package" line="20" description="Default"/>
       </docblock>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="28" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="30" package="Default">
         <name>$question</name>
         <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::question</full_name>
         <default></default>
-        <docblock line="28">
+        <docblock line="30">
           <description>Poll question, 1-255 characters.</description>
           <long-description></long-description>
-          <tag name="var" line="28" description="" type="\TgBotApi\BotApiBase\Method\string;" variable="">
+          <tag name="var" line="30" description="" type="\TgBotApi\BotApiBase\Method\string;" variable="">
             <type>\TgBotApi\BotApiBase\Method\string;</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="35" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="37" package="Default">
         <name>$options</name>
         <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::options</full_name>
         <default></default>
-        <docblock line="35">
+        <docblock line="37">
           <description>List of answer options, 2-10 strings 1-100 characters each.</description>
           <long-description></long-description>
-          <tag name="var" line="35" description="" type="array&lt;mixed,string&gt;" variable="">
+          <tag name="var" line="37" description="" type="array&lt;mixed,string&gt;" variable="">
             <type>array&lt;mixed,string&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="44" package="Default">
+        <name>$isAnonymous</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::isAnonymous</full_name>
+        <default></default>
+        <docblock line="44">
+          <description>Optional. If the poll needs to be anonymous, defaults to True.</description>
+          <long-description></long-description>
+          <tag name="var" line="44" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="51" package="Default">
+        <name>$type</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::type</full_name>
+        <default></default>
+        <docblock line="51">
+          <description>Optional. Poll type, “quiz” or “regular”, defaults to “regular”.</description>
+          <long-description></long-description>
+          <tag name="var" line="51" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="58" package="Default">
+        <name>$allowsMultipleAnswers</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::allowsMultipleAnswers</full_name>
+        <default></default>
+        <docblock line="58">
+          <description>Optional. True, if the poll allows multiple answers, ignored for polls in quiz mode, defaults to False.</description>
+          <long-description></long-description>
+          <tag name="var" line="58" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="65" package="Default">
+        <name>$correctOptionId</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::correctOptionId</full_name>
+        <default></default>
+        <docblock line="65">
+          <description>Optional. 0-based identifier of the correct answer option, required for polls in quiz mode.</description>
+          <long-description></long-description>
+          <tag name="var" line="65" description="" type="integer|null" variable="">
+            <type>integer</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="72" package="Default">
+        <name>$isClosed</name>
+        <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::isClosed</full_name>
+        <default></default>
+        <docblock line="72">
+          <description>Optional. Pass True, if the poll needs to be immediately closed.</description>
+          <long-description></long-description>
+          <tag name="var" line="72" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
           </tag>
         </docblock>
       </property>
@@ -27495,38 +27666,31 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="45" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="81" package="Default">
         <name>create</name>
         <full_name>\TgBotApi\BotApiBase\Method\SendPollMethod::create()</full_name>
-        <docblock line="45">
+        <docblock line="81">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="45" description="" type="string" variable="$chatId">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="45" description="" type="string" variable="$question">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="45" description="" type="array&lt;mixed,string&gt;" variable="$options">
+          <tag name="param" line="81" description="" type="array&lt;mixed,string&gt;" variable="$options">
             <type>array&lt;mixed,string&gt;</type>
           </tag>
-          <tag name="param" line="45" description="" type="array|null" variable="$data">
-            <type>array</type>
-            <type>null</type>
+          <tag name="throws" line="81" description="" type="\TgBotApi\BotApiBase\Exception\BadArgumentException">
+            <type>\TgBotApi\BotApiBase\Exception\BadArgumentException</type>
           </tag>
-          <tag name="return" line="45" description="" type="\TgBotApi\BotApiBase\Method\SendPollMethod">
+          <tag name="return" line="81" description="" type="\TgBotApi\BotApiBase\Method\SendPollMethod">
             <type>\TgBotApi\BotApiBase\Method\SendPollMethod</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$chatId</name>
           <default></default>
-          <type>string</type>
+          <type>\TgBotApi\BotApiBase\Method\string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$question</name>
           <default></default>
-          <type>string</type>
+          <type>\TgBotApi\BotApiBase\Method\string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$options</name>
@@ -27536,7 +27700,7 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default>null</default>
-          <type>array|null</type>
+          <type>array</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="20" package="Default">
@@ -27570,9 +27734,18 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="45" code="PPC:ERR-50008">No summary for method create()</error>
+      <error line="81" code="PPC:ERR-50014">Name of argument $chatId does not match with the DocBlock's name $options in create()</error>
+      <error line="81" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $chatId in create()</error>
+      <error line="81" code="PPC:ERR-50015">Argument $question is missing from the Docblock of create</error>
+      <error line="81" code="PPC:ERR-50014">Name of argument $question does not match with the DocBlock's name $options in create()</error>
+      <error line="81" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $question in create()</error>
+      <error line="81" code="PPC:ERR-50015">Argument $options is missing from the Docblock of create</error>
+      <error line="81" code="PPC:ERR-50015">Argument $data is missing from the Docblock of create</error>
+      <error line="81" code="PPC:ERR-50014">Name of argument $data does not match with the DocBlock's name $options in create()</error>
+      <error line="81" code="PPC:ERR-50016">The type hint of the argument is incorrect for the type definition of the @param tag with argument $data in create()</error>
+      <error line="81" code="PPC:ERR-50008">No summary for method create()</error>
     </parse_markers>
-    <source>eJyNlFFv2jAQx9/zKU4a0gBRApX6UtattFKlSqs2aWwvpZoOc4ClxPFsh6ra+O67SxxaQcSWl+Dz7+7/9/nCh092Y5NkSSpDR10fnFbhZ3ix5K/GvUmSGMzJW1QEs/VNEaZWz+vXDXqaP1DYFEvGSn8KmN+bQG7FVfz8G5llHZ1mGv1+Z/KvGjOHOvj5nc6yO1fkU+fwpYr9b6Yoz4rbDYYf6DQuMvIxP0n7/QT6cJuh9yDc1yLL6myJf+f6YaM95FUIQgGeIUAwGPSWwDI+hOnbJSg07wMsSNAgKQjW6S0GAsUehlL4iwFfKm6LH7BARB94iWsC1nMUSmdoKbDw154INiFYf5mmqnA0DJTR2mE+LNw6XRTBp2j1O3EnJjgnTVTLqUDnNqOc5eqdthtJfifAjzS3renN3om2ClK1Vp4+iDz8KskHXZgBjM/OLy6kFw4VS/ph5Br8eosOZCLNehJjafW25SLTCjpNqWOlz9oHKFaAxj+Tg8IKxj0+PxuPYknP+uPR6I0+EKrNCROPT60uYvFjE9eWK+cxuYp15OLvlyeA5kityOOTIFHvgEC5mT+m5A53lhjw8Bj1JB3N9vF5fOAZVrAqjRIdUI54ZLvRZDzBoDHdeb3OysHe3n4tZuAKxFnvkgc8W1Vq9WxVZ9aGNQ3/wzBFz9FAtzc5Js4+1vJMRiOtUONJsNcZaQGjV+H2t9hgegXdynzvjdeD/BV/FhF6Tdwl+5+x6fuMGtolu+QvMJ+z6A==</source>
+    <source>eJydVV1P2zAUfc+vuNKQVlDpxyRe6NgoaEiVhpi0bi/rNLnOTWvJsYPtwNiGxA/Z/hy/ZPcmaWhJqNjy0to51+f4fpy8fpstsyiKUWrhsOODUzJ8CzcZ+qPh7iiKjEjRZ0IiTBcnNowzNSt/ToTH2TmGpY0Jlvt2wLvvErOgrJmdiHjsFnmKJtSboyfjJiagS4jWzz5YrackqN56OqqUsx78EU1c7o61Ev75Z0ydUMHPzpTWZ86mY+fETbH33EhmntrTpQifhVNirtFX8VF/by+CPTjVwntgHF+xjOb9T3R+WCoPabEFwYInEAgwIqgrhIzgPRivL0EK8zLAHBkaOERA5tSVCAiSNPT44AsDPpeUFt8lggp6TkuxQCA+hyF3BmMGM/7YI8IyhMwf9vvSOuwF1LhwIu1Zt+jPbfB9kakXrI5FUEw/ki23ApVmGrn05Zu2inShUejoZwT0cL7b6rB6tyXTDCmyzc9ewQCXOXpuvi4M918dHHB6nJBE6XsVbgU/vhIOeCTMYlTt9YvfLJ9rJWFndVST6b3yAWwCwvhrdGCLdqe0v9ofDqojPfEPB4M1fkAhl1tEfPnaqqI6vCnionghqFcmSVHwolMMYuy5Q6hZhLHmJrU5KYsxEbkOxZupy7FVx9xa/cvkXOoWIcqPV+dtE1NUgS2mC/d3vy9z9eP+7g9YxyuHi5yciDY2FW282pKiVl3MtU0QX7cLai1HQmt7TQNI9Io6tyojZUktDM1BDAnJZaQHZYCvAKmNcVPzmdD+f9JYkp9X3OOSepv+wf6c/IemLKYJU4nihisvQ0PrUIbNNuzSoJPkp6/RqlmZ8LTkiqeUNIm3Vp/toZnx9a5UaYqxIuvSNyC19YUj/XsznhahTS3HGQ1cWs9UPUCPOcLScRO0fbgeQ0vnbHh5U5YP5NkSktxIPgekQ7pnp9RCeSQTm8RdWK0fvEqw8dVS63UsgoAj4CzsHpKh66RgK42Tnx1liNPQ95tQeF0J6OyOmoj9NyU9ISshraCVJoY9GGALsNLKuNqiVjAqfacQv7um9VF8Qp5fgR4Cb6P6b5X0OqIE3Ua30V9I1MUb</source>
   </file>
   <file path="Method/UnbanChatMemberMethod.php" generated-path="Method.UnbanChatMemberMethod.html" hash="81323541060d7bec5dfca7e7cb5e260b" package="Default">
     <docblock line="0">
@@ -28378,93 +28551,98 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </parse_markers>
     <source>eJzVVNFu0zAUfc9XXIlKa6usEa8bg3XTpk1aAUHhhSJ0m9w2Fq4d2Td0FezfcWInG1lbDR4Q+MWJfXzuOdcnefGqyIsoyiiVaKhv2YiUv/CmIHvyfHAcRQpXZAtMCabLM83jQsz8dIaWZhPiXGcOVtrtgIvblAoWWs3OMBubZbkixe3i8c5znnh2rZjMwlW3s4tMsF8dS4G23fkdjiu0b9FYmuiMPqIROJf0dKKpQcGNEGtx2XLYeuupBJdCykujV2NjcBNORslwGMEQziVaCw9KnGPdKc8wcpAKdWqJIGcu7FGSpNrQiEnS0uBqpM0ymWu2CRbiGTmeledJPY87nUTp3iIgVoWk6p4s7G1YDLvuJPoegRtVO7aZbfb2dLLG1D2pxhDe1AJRjuA1rSGYAb0AzgmCxVEAN2dOv6GBKtFq+UOVUob1pJ6Lci5FCr1Ata/ie1IZTNB8zfTa1TRwNZ3cxCAWsNElrFExTEP7AYvCAmuwuV7DXMvM4RhdpbjhXYhbyg7XIuMcmG65IhRKCkXw4d2Ndc/BUyawMfpHzorm4h57O3V7TmwvzZGvs86qcH7C6IXOPsJgdZt1aehlyNjVx7nRawvbvvku1BCXRu1M4zZrlpHdtChVWscgNYRM/WAnrh3cS4+9Wi8UTqBSPTjaX9Dnt26BUK6ccv8/d9JFz9fuD44fIw5fegEOGaRsBbXCKlz7cg91uerXWgcPZHQ4Fu6r8qAYPh34YgcxHLR01YtP1aRd+vxA9F3UPoYLaNk96G5XaHzsGkG/VPgPQnJdK+4HE10DfzEqncpVFjpL/14i7qKfK76THg==</source>
   </file>
-  <file path="Type/KeyboardButtonType.php" generated-path="Type.KeyboardButtonType.html" hash="fe648318cb8bb446bd194420b2be31e5" package="Default">
+  <file path="Type/KeyboardButtonType.php" generated-path="Type.KeyboardButtonType.html" hash="72e89eeb810ceb9e72190e1b148b5602" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
+    <namespace-alias name="BadArgumentException">\TgBotApi\BotApiBase\Exception\BadArgumentException</namespace-alias>
     <namespace-alias name="FillFromArrayTrait">\TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Type" line="16" package="Default">
+    <namespace-alias name="KeyboardButtonPollType">\TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType</namespace-alias>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Type" line="18" package="Default">
       <extends/>
       <name>KeyboardButtonType</name>
       <full_name>\TgBotApi\BotApiBase\Type\KeyboardButtonType</full_name>
-      <docblock line="16">
+      <docblock line="18">
         <description>Class KeyboardButtonType
 Note: request_contact and request_location options will only work in Telegram versions released after 9
 April, 2016. Older clients will ignore them.</description>
         <long-description></long-description>
-        <tag name="see" line="16" description="" link="https://core.telegram.org/bots/api#keyboardbutton"/>
-        <tag name="package" line="16" description="Default"/>
+        <tag name="see" line="18" description="" link="https://core.telegram.org/bots/api#keyboardbutton"/>
+        <tag name="package" line="18" description="Default"/>
       </docblock>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="26" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="28" package="Default">
         <name>$text</name>
         <full_name>\TgBotApi\BotApiBase\Type\KeyboardButtonType::text</full_name>
         <default></default>
-        <docblock line="26">
+        <docblock line="28">
           <description>Text of the button. If none of the optional fields are used,
 it will be sent as a message when the button is pressed.</description>
           <long-description></long-description>
-          <tag name="var" line="26" description="" type="string" variable="">
+          <tag name="var" line="28" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="34" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="36" package="Default">
         <name>$requestContact</name>
         <full_name>\TgBotApi\BotApiBase\Type\KeyboardButtonType::requestContact</full_name>
         <default></default>
-        <docblock line="34">
+        <docblock line="36">
           <description>Optional. If True, the user's phone number will be sent as a contact when the button is pressed.</description>
           <long-description>Available in private chats only.</long-description>
-          <tag name="var" line="34" description="" type="boolean|null" variable="">
+          <tag name="var" line="36" description="" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="42" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="44" package="Default">
         <name>$requestLocation</name>
         <full_name>\TgBotApi\BotApiBase\Type\KeyboardButtonType::requestLocation</full_name>
         <default></default>
-        <docblock line="42">
+        <docblock line="44">
           <description>Optional. If True, the user's current location will be sent when the button is pressed.</description>
           <long-description>Available in private chats only.</long-description>
-          <tag name="var" line="42" description="" type="boolean|null" variable="">
+          <tag name="var" line="44" description="" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
         </docblock>
       </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="52" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="52" package="Default">
+        <name>$requestPoll</name>
+        <full_name>\TgBotApi\BotApiBase\Type\KeyboardButtonType::requestPoll</full_name>
+        <default></default>
+        <docblock line="52">
+          <description>Optional. If specified, the user will be asked to create a poll
+and send it to the bot when the button is pressed. Available in private chats only.</description>
+          <long-description></long-description>
+          <tag name="var" line="52" description="" type="\TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType" variable="">
+            <type>\TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType</type>
+          </tag>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="57" package="Default">
         <name>create</name>
         <full_name>\TgBotApi\BotApiBase\Type\KeyboardButtonType::create()</full_name>
-        <docblock line="52">
+        <docblock line="57">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="52" description="" type="string" variable="$text">
-            <type>string</type>
-          </tag>
-          <tag name="param" line="52" description="" type="array|null" variable="$data">
-            <type>array</type>
-            <type>null</type>
-          </tag>
-          <tag name="throws" line="52" description="" type="\TgBotApi\BotApiBase\Exception\BadArgumentException">
+          <tag name="throws" line="57" description="" type="\TgBotApi\BotApiBase\Exception\BadArgumentException">
             <type>\TgBotApi\BotApiBase\Exception\BadArgumentException</type>
-          </tag>
-          <tag name="return" line="52" description="" type="\TgBotApi\BotApiBase\Type\KeyboardButtonType">
-            <type>\TgBotApi\BotApiBase\Type\KeyboardButtonType</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
           <name>$text</name>
           <default></default>
-          <type>string</type>
+          <type>\TgBotApi\BotApiBase\Type\string</type>
         </argument>
         <argument line="0" by_reference="false">
           <name>$data</name>
           <default>null</default>
-          <type>array|null</type>
+          <type>array</type>
         </argument>
       </method>
       <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="20" package="Default">
@@ -28498,9 +28676,11 @@ it will be sent as a message when the button is pressed.</description>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="52" code="PPC:ERR-50008">No summary for method create()</error>
+      <error line="57" code="PPC:ERR-50015">Argument $text is missing from the Docblock of create</error>
+      <error line="57" code="PPC:ERR-50015">Argument $data is missing from the Docblock of create</error>
+      <error line="57" code="PPC:ERR-50008">No summary for method create()</error>
     </parse_markers>
-    <source>eJzFVE1vEzEQve+vGIlKpFFIKAckCoUmFZUQH73kGKma9c7uWnXsxZ5NGkH/O2PvJpQkFeLEXryajzfvzYz97kNTN1lWkDLoaRDYa8W3vGkoXJydvs0yi0sKDSqCeTVzPG30ojtmGGgxl0AJasNx91fi2hWLuUfNYXGtjbn2bjn1HjfJJqmT4TCDIVwZDAE+0yZ36ItZy+xsBI++b47pHDx9bynwrXKWUTGgLXY24xSydhZcE48AaykFzpoNrJ2/A21hToYqj0tYkQ8pxotFSBaAJZOHN7HUtPHajODVy7PXY7gxhdiV0WS5h9SVdZ6Aa1qOJT6mXAYiqJmbcD6ZKPGOuS81dr6a5I7DBBv97K7XlidtkjnJ1FOif2QgX+zq0Z5FZ+pb/IYi7Z7BlZEVdOhj+FSCdZa25q4vaKDUZIoAMusIX4y2GJo7gTlBELmAEgMy+YAVwbom+wgddIDGi4+KcZ+/hblcoYe4RLbqTZN0Nm1utIITFqqHAm56don23Lc0StWEoH8upeooxLbLXKZxSHK7D38nCdMVaoO5obgQMukVMoGqUaYbd+WomNw589O2xhzV0y/gVcfhX5Wp1vuoY7e+f6j7n4K+9IwOFV02GG9RN+NkS0Pdc2Nc11QFTgpk3CfCtXfrAItjj8bHe0WpbYsZFlNftUvpxs64j+SJW2+PvhyH8gKLKgVla1Xqt/IkHRv0YpKQUce9ow0XEDWcnj+F313U1AVtBd3KOyk5tO5LDeQJPYh48T4Wkrj+OmwDdAmDVPb0Ee5eZikb0gf9TnzIdr99O3YZXdBD9pD9Aj8R2Gs=</source>
+    <source>eJzFVU1v00AQvftXjEQl0ijElAMSLYUmFZUQH+WQo6VqvTu2V93smt1xQgT978zaTtoStxVc2Eui2Tcz783H+u37uqqTRKE0wuMokNeSrmhTYzg9OjxJEiuWGGohERbl3NGs1ln3MxcBswUDGdSE4esPPyTWpJ3N5kLNfNks0dLOePKg3xekyqls4YWmkF1oYy68W868F5vW9rBnJJR9c8Zkn3CTO+HVvCFyNpp6sul4nMAYzo0IAe6jIiLefXWEx+Dxe4OBrqSzJCSBsGpnM06KqAFcKyXAmkmCs2YDa+evQVtYoMHSiyWs0IcW49nCJBWIgtDDm5hqVnttJvDq5dHrKVwaxXZpNJepD6lL6zwCVbicMj66nAVEqIjqcJymkm+n1KeaOl+muaOQilo/u+615a029kwT+ZDonwnwiVUdqnZ72dYtnjFL+0HgisgKuuhT+FiAdRa35q4uwkCh0agAPF0xvJpsY2jqBOYIgeWCYAzwrAVRIqwrtHeigw5Qe75DNe39t2HOVsJDHFtb9qa0/a2b3GgJB8RU9wVc9uxa2gvf4KTNxgT9c05VRSG2WebcjX2S23l4miTMVkIbkRuMA8GdXglCkJXg7sZZGRSTO2d+2caYQT39AJ53HP5WmWy8jzp243tP3f8U9Lln9ISiUKPUPFLqVtZOgwjXvFvkQHqMtATUbpe03V5WqeLgMaaV6R7V/E9ih5+dx5RHzL7qM6q8WwcYejiHogXi8kkoGivbxnY1GHWb0a3BhJeQdxoOlCABpxBbcng8+ATy6V6EeA605eiWPwHsg+s+1Yi/DnuIF+9iIsb1e7cF6AJGbdrDO3H/8Cy4jT3o1vEm2f31SI23tx4d6Ca5SX4DzXslbw==</source>
   </file>
   <file path="Method/Interfaces/ForwardMethodAliasInterface.php" generated-path="Method.Interfaces.ForwardMethodAliasInterface.html" hash="04d688c9e4e361694167ea437b4f9d94" package="Default">
     <docblock line="0">
@@ -30450,7 +30630,7 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </parse_markers>
     <source>eJyNVF1P20AQfPevWKk8JFGI1Vdo2gRUVKRWQiXtkyW0sTfJqee7092agAr/vXv+ggZT6hfHt7Mzs3OrfPjkdi5JCso1ehoF9irnG753FObvx6dJYrCk4DAnWG3PLC+dyprXGQbKvhHvbCGwKvwLkF0aJr8RlpBdkyma06VWGPrK6VscK4+KQ3ahtL7wtlx6j/f12f92RuWVPd8h/0SvcK0pvNG/khzEu6tYVCl+yajpZJLABM41hgCR85pV/ot8IzaTWiwvAhHsmF04SdPcepoxadp6LGfWb9O15ZCiU++CEISGQNrSJB+mBVU6TSUZbopDCSa/E5AnDjMUUld7PYYaUo8Xnwm0DoAtRJuz7vwqWkTYSCY3qgAUS7I3ZtsB2xqwaADdqSCmrZFPSbkNQXD+lnyAkafcljJYQcV42im4WsHAl9XqCn58/xo1sFPZWP/EI5JbYinO9rR2je5GJq/V6mgMcc8rnZXTFqNFQ3txRZJJJC0rzcqh51Toy+MCGbt5u+bFLXr4axseQu2oBaT121VrrXI4ai/1ZaoLURHjynDbDk/PUS6RXRYH0CHNXuAAi/HGH0yl9XPaOM7hNLzzdh8gG1r8z3c5OVbWZGdYLP22ipvXHx4yeeLKm5dLO5RLYBQIbCqTRyrIPSHTqB182o81bSZprMMc4kTjk1c0msWvJ1VGFIz8Xc3rC27kRuPTl4jjj42mIFv1QVDrJ6L6K+1gagOj2uD4mYWDftlI3YKeGh+T/mcbXt/RgB6Tx+QPLh3KFw==</source>
   </file>
-  <file path="Type/ReplyKeyboardRemoveType.php" generated-path="Type.ReplyKeyboardRemoveType.html" hash="07ee4a220ea63f413b4c655ff81e6876" package="Default">
+  <file path="Type/ReplyKeyboardRemoveType.php" generated-path="Type.ReplyKeyboardRemoveType.html" hash="bff1fc0534ae0c8549792b23ec3f7b44" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -30466,31 +30646,31 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
         <tag name="plink" line="12" description="https://core.telegram.org/bots/api#replykeyboardremove"/>
         <tag name="package" line="12" description="Default"/>
       </docblock>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="22" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="21" package="Default">
         <name>$removeKeyboard</name>
         <full_name>\TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType::removeKeyboard</full_name>
         <default></default>
-        <docblock line="22">
+        <docblock line="21">
           <description>Requests clients to remove the custom keyboard (user will not be able to summon this keyboard;
 if you want to hide the keyboard from sight but keep it accessible,
 use one_time_keyboard in ReplyKeyboardMarkup).</description>
           <long-description></long-description>
-          <tag name="var" line="22" description="" type="boolean" variable="">
+          <tag name="var" line="21" description="" type="boolean" variable="">
             <type>boolean</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="34" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="33" package="Default">
         <name>$selective</name>
         <full_name>\TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType::selective</full_name>
         <default></default>
-        <docblock line="34">
+        <docblock line="33">
           <description>Optional. Use this parameter if you want to remove the keyboard for specific users only. Targets:
 1) users that are @mentioned in the text of the Message object;
 2) if the bot's message is a reply (has reply_to_message_id), sender of the original message.</description>
           <long-description>Example: A user votes in a poll, bot returns confirmation message in reply to the vote and removes
 the keyboard for that user, while still showing the keyboard with poll options to users who haven't voted yet.</long-description>
-          <tag name="var" line="34" description="" type="boolean|null" variable="">
+          <tag name="var" line="33" description="" type="boolean|null" variable="">
             <type>boolean</type>
             <type>null</type>
           </tag>
@@ -30500,7 +30680,7 @@ the keyboard for that user, while still showing the keyboard with poll options t
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJx9VMtu2zAQvOsrFmiB2IZhIT0mLeqk6CkICgTuLYBBUWuJNUWy3JUdoe2/d6mHk7gPXSiQszOzw5Xefwx1yLIStVURZ8TRaN5yF5A+XM6vs8ypBikojbCpbj3fBPM4LLeK8HEjQAHli0UGC/hkFRE8YLDdHXaFV7F8wMYfMMFWgkigdbDG7aFmDnSV59pHXDFarKJqVj5WeeGZchXMm5iI9iNR7ImEIM/0/2SyHxnIk+dDwXaql71NbHE4THbTsxCW7y0SE2hr0MnKHoZK4BpBt8S+gRPJrCWMcDTWgvMMBYIqLKYiapvGOykydIJfTypmB51v4agcJ2xtyoH+xLuLokKmqoWzZdnHAIZBaY1ERiSWE5UYAO9wy6Z50Zxxr/O4V3HfhvlqrJqK1wcVofDejht5v4a2sEbD26Hvu5P586y+BDbeKbuCr4RDp0HJrSFLJmctvsjwuUkfgQJqsxO1FCRJJ7ZbwUbFCpmuJqHL+XjMtZIQIsK6kcsRcexbTayMTwx+17/fS0iqklyKb6j5lPq7eXKVADJSFwTNCBPfCvrhglmtaHjdst+OgK0p50sgdKX0NUr4aCojvU8k58l+flJNsHgFN711OHhGSl4VBG/tMlkQIW6jk1nzbmdio1JHz67c6EnSS4qJAZQrxyhpUvoj0j6kJLqEY21kGonTfFLtj8ZVr/FHw3VvCHx/mf28D1kfaxlMdUB3wb12CR3yPwfop2vt36eI5FvWbA7yX/iV/QYLO3DS</source>
+    <source>eJx9U0tr3DAQvvtXDLSQ7LKsSY9pS5OUnkIohPQWWMbyrK1GllTNeDdL2//ekR+bJn34IiN/+l4av/sQ21gUNRmHiU5ZkjWykUMkfn+2eFsUHjviiIbgrrkKchnt/bhcIdP9nQIVVC6XBSzho0NmuKXoDtd0qAKm+pa6sKMMWysigy6is/4BWpHI52VpQqK1kKMmYbcOqSmrIFxitK9SJnqYiNJApARlYf4nU3wvQJ/BUX6WCvzWEwuDcZa8rhJgZANpCUzPEjqYdeC0Z0qwt86BDwIVAVaO8iHuuy54PWT5CH87q9gtHEIPe/SSsa2tR/oj7zapCtumVc5edJ8iWAE0hpitSqxmKjUAwdNGbEeb43nrn0e+wfTQx8V6OjUfvthhgioEN22Uwxr7ylkDr8fc10fzL7v6HMUGj24NX5jGpBH1Yki0kxcRf+vwKWRIwJGM3apaLpI1iTus4Q5TQ8Lns9DZYvosLWoJieCi08tRcRqiZlahR4GwHd5vtCRstJfqKxk5tv5mkV1lgE7NCUM3wdQ3wjA/cNoij68bCZsJsLH1YgVMvtZck0RItrGafSZ52eynR+yio3O4HKzDLghx9ooQg3OrbEGFpE9eZy34rU0d5kRPrvzkSdvLipkB0NdTlTwr/VHpUFIWXcG+tTqNLHk+uQ1765vn+L2VdjAEYbjMYd7HrvetDibuyJ/IoF3DgeSfA/TD9+7vU8T6uxqxO/31fxa/ANVHZ6w=</source>
   </file>
   <file path="Method/SendPhotoMethod.php" generated-path="Method.SendPhotoMethod.html" hash="f0fbc673d6aaa18c453fe7f62ed0afe2" package="Default">
     <docblock line="0">
@@ -32413,7 +32593,7 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJyNVNuK2zAQffdXCBrIhWxMofTBado4iUsDIRsS07I0xWjliS1wJCFN9sKy/14pdtJcvHTnRVhz5ujMzV++qVx5XgqsoBpaBjVnmOCzAjP42O57nqBbMIoyIHE2khgqvi6PETWwji1wvaDGKKkxKmALAiOtpbaRfqfjkQ4ZF9ZN6jDftRS44ik4lp7FOvjQAJAcUZnA95nU0EMoINN025M68+8lGp8q/kFVhFASgiPcOEJjCS2R77H3PUzgCUGk9UgH8F48Yo1JYZDEd4soWYSr1eJ2GZMBaR50NPuXqMly+jNaJrPpOJqvIodNNX8AnRScgTBwHTGdRPN4Gt8l43A5cQFWokCOzwmjOq3Bz+NoOQ9nZ4K4K4agRXKi7CQwnM1uf0WTxBGsLP733ufMQLEJgrMEu3XO87xqIWeJ1CMupZeoP5XW/ew46xA3Z58/3YBgMoWU5NTkRG4I5kA2vADyyDEvv1xXiWv/wZ9KtnOt7FVcB8rhA9XEjbrIqit/f6rdve0NaTjeH/adazFDRe0kVrGk4fbkDZfdGkOzt7yHFy6FYa7loyHrul2Lnhgo5FKsRzQNdbZP7Xh5yaQBd1r8f/zrCmCQoj02O8EcNWEaKELrXx9P0u9e3VaZXzvOkm4H71jNlyNHg9vhpcL+hgbEltLCg6CU5WrTau6bn7jmN7uVsKOSdv+a5ubrQY0lvGy4s6p+x4CS49V79f4CUHScOw==</source>
   </file>
-  <file path="Traits/SetMethodTrait.php" generated-path="Traits.SetMethodTrait.html" hash="4275f1db36126bead3da0d36e0f79bea" package="Default">
+  <file path="Traits/SetMethodTrait.php" generated-path="Traits.SetMethodTrait.html" hash="30787795bcc8734d385841aa62df080f" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
@@ -32439,20 +32619,14 @@ fixed-width text or inline URLs in the media caption.</description>
         <long-description></long-description>
         <tag name="package" line="23" description="Default"/>
       </docblock>
-      <method final="false" abstract="true" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="32" package="Default">
+      <method final="false" abstract="true" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="28" package="Default">
         <name>set</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::set()</full_name>
-        <docblock line="32">
+        <docblock line="28">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="32" description="" type="\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface</type>
-          </tag>
-          <tag name="throws" line="32" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="28" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="32" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32461,20 +32635,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="41" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="33" package="Default">
         <name>setChatDescription</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatDescription()</full_name>
-        <docblock line="41">
+        <docblock line="33">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="41" description="" type="\TgBotApi\BotApiBase\Method\SetChatDescriptionMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatDescriptionMethod</type>
-          </tag>
-          <tag name="throws" line="41" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="33" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="41" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32483,20 +32651,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetChatDescriptionMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="53" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="41" package="Default">
         <name>setChatPhoto</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatPhoto()</full_name>
-        <docblock line="53">
+        <docblock line="41">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="53" description="" type="\TgBotApi\BotApiBase\Method\SetChatPhotoMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatPhotoMethod</type>
-          </tag>
-          <tag name="throws" line="53" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="41" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="53" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32505,19 +32667,13 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetChatPhotoMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="64" package="Default">
-        <name>setChatAdministrator</name>
-        <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatAdministrator()</full_name>
-        <docblock line="64">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="49" package="Default">
+        <name>setChatAdministratorCustomTitle</name>
+        <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatAdministratorCustomTitle()</full_name>
+        <docblock line="49">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="64" description="" type="\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</type>
-          </tag>
-          <tag name="return" line="64" description="" type="boolean">
-            <type>boolean</type>
-          </tag>
-          <tag name="throws" line="64" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="49" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
           </tag>
         </docblock>
@@ -32527,20 +32683,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="76" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="57" package="Default">
         <name>setChatStickerSet</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatStickerSet()</full_name>
-        <docblock line="76">
+        <docblock line="57">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="76" description="" type="\TgBotApi\BotApiBase\Method\SetChatStickerSetMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatStickerSetMethod</type>
-          </tag>
-          <tag name="throws" line="76" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="57" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="76" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32549,20 +32699,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetChatStickerSetMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="88" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="65" package="Default">
         <name>setChatTitle</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatTitle()</full_name>
-        <docblock line="88">
+        <docblock line="65">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="88" description="" type="\TgBotApi\BotApiBase\Method\SetChatTitleMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatTitleMethod</type>
-          </tag>
-          <tag name="throws" line="88" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="65" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="88" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32571,20 +32715,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetChatTitleMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="100" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="73" package="Default">
         <name>setGameScore</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setGameScore()</full_name>
-        <docblock line="100">
+        <docblock line="73">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="100" description="" type="\TgBotApi\BotApiBase\Method\SetGameScoreMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetGameScoreMethod</type>
-          </tag>
-          <tag name="throws" line="100" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="73" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="100" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32593,20 +32731,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetGameScoreMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="112" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="81" package="Default">
         <name>setStickerPositionInSet</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setStickerPositionInSet()</full_name>
-        <docblock line="112">
+        <docblock line="81">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="112" description="" type="\TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod</type>
-          </tag>
-          <tag name="throws" line="112" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="81" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="112" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32615,20 +32747,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="124" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="89" package="Default">
         <name>setWebhook</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setWebhook()</full_name>
-        <docblock line="124">
+        <docblock line="89">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="124" description="" type="\TgBotApi\BotApiBase\Method\SetWebhookMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetWebhookMethod</type>
-          </tag>
-          <tag name="throws" line="124" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="89" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="124" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32637,20 +32763,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetWebhookMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="136" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="97" package="Default">
         <name>setPassportDataErrors</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setPassportDataErrors()</full_name>
-        <docblock line="136">
+        <docblock line="97">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="136" description="" type="\TgBotApi\BotApiBase\Method\SetPassportDataErrorsMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetPassportDataErrorsMethod</type>
-          </tag>
-          <tag name="throws" line="136" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="97" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="136" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32659,20 +32779,14 @@ fixed-width text or inline URLs in the media caption.</description>
           <type>\TgBotApi\BotApiBase\Method\SetPassportDataErrorsMethod</type>
         </argument>
       </method>
-      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="148" package="Default">
+      <method final="false" abstract="false" static="false" visibility="public" namespace="TgBotApi\BotApiBase\Traits" line="105" package="Default">
         <name>setChatPermissions</name>
         <full_name>\TgBotApi\BotApiBase\Traits\SetMethodTrait::setChatPermissions()</full_name>
-        <docblock line="148">
+        <docblock line="105">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="148" description="" type="\TgBotApi\BotApiBase\Method\SetChatPermissionsMethod" variable="$method">
-            <type>\TgBotApi\BotApiBase\Method\SetChatPermissionsMethod</type>
-          </tag>
-          <tag name="throws" line="148" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
+          <tag name="throws" line="105" description="" type="\TgBotApi\BotApiBase\Exception\ResponseException">
             <type>\TgBotApi\BotApiBase\Exception\ResponseException</type>
-          </tag>
-          <tag name="return" line="148" description="" type="boolean">
-            <type>boolean</type>
           </tag>
         </docblock>
         <argument line="0" by_reference="false">
@@ -32684,19 +32798,30 @@ fixed-width text or inline URLs in the media caption.</description>
     </trait>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="32" code="PPC:ERR-50008">No summary for method set()</error>
-      <error line="41" code="PPC:ERR-50008">No summary for method setChatDescription()</error>
-      <error line="53" code="PPC:ERR-50008">No summary for method setChatPhoto()</error>
-      <error line="64" code="PPC:ERR-50008">No summary for method setChatAdministrator()</error>
-      <error line="76" code="PPC:ERR-50008">No summary for method setChatStickerSet()</error>
-      <error line="88" code="PPC:ERR-50008">No summary for method setChatTitle()</error>
-      <error line="100" code="PPC:ERR-50008">No summary for method setGameScore()</error>
-      <error line="112" code="PPC:ERR-50008">No summary for method setStickerPositionInSet()</error>
-      <error line="124" code="PPC:ERR-50008">No summary for method setWebhook()</error>
-      <error line="136" code="PPC:ERR-50008">No summary for method setPassportDataErrors()</error>
-      <error line="148" code="PPC:ERR-50008">No summary for method setChatPermissions()</error>
+      <error line="28" code="PPC:ERR-50015">Argument $method is missing from the Docblock of set</error>
+      <error line="28" code="PPC:ERR-50008">No summary for method set()</error>
+      <error line="33" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setChatDescription</error>
+      <error line="33" code="PPC:ERR-50008">No summary for method setChatDescription()</error>
+      <error line="41" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setChatPhoto</error>
+      <error line="41" code="PPC:ERR-50008">No summary for method setChatPhoto()</error>
+      <error line="49" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setChatAdministratorCustomTitle</error>
+      <error line="49" code="PPC:ERR-50008">No summary for method setChatAdministratorCustomTitle()</error>
+      <error line="57" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setChatStickerSet</error>
+      <error line="57" code="PPC:ERR-50008">No summary for method setChatStickerSet()</error>
+      <error line="65" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setChatTitle</error>
+      <error line="65" code="PPC:ERR-50008">No summary for method setChatTitle()</error>
+      <error line="73" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setGameScore</error>
+      <error line="73" code="PPC:ERR-50008">No summary for method setGameScore()</error>
+      <error line="81" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setStickerPositionInSet</error>
+      <error line="81" code="PPC:ERR-50008">No summary for method setStickerPositionInSet()</error>
+      <error line="89" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setWebhook</error>
+      <error line="89" code="PPC:ERR-50008">No summary for method setWebhook()</error>
+      <error line="97" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setPassportDataErrors</error>
+      <error line="97" code="PPC:ERR-50008">No summary for method setPassportDataErrors()</error>
+      <error line="105" code="PPC:ERR-50015">Argument $method is missing from the Docblock of setChatPermissions</error>
+      <error line="105" code="PPC:ERR-50008">No summary for method setChatPermissions()</error>
     </parse_markers>
-    <source>eJy9Vk1vnDAQvftX+JCDs1Kz6rXbr82Hqhwirbor9YJUeb2TYgUw8gxKoir/vcZLSMPiANGCLwh73sx7j8H25295nDO2A5VICwLJakW/6TEH/PLxdMFYJlPAXCrgmz/nhpa5jvaPc4kQbazUhC6swPaAqwcFOWmTRT9dGpMh1DOLIOgGKDa76DojsLeuNEZroP3kMtES64XOFA53EUta7lKdaSdOkrEXBZJJN5oS2Ef1zXIJqKz23IcBV2BTjehwOBAYGzLDIGvS6g5sbVhf3EA/fri2WCtjB0BWEl0HWLqUJK+sNXaAGZWqlUFd2n+dDdL3C7axMXfPADafzRifcd+8vM7kX8/cwpxRywr7y7gbHluOGf+eSytTHuhNfpL62Sq6BlFszT3yg9+hGWeBCpvxrTFJNTf3T7kt+1gRz4ttohW/LTJV4jkCiQ4up598PmdBUEpro4+lpUVCo77oolRJ8un2X6gcVcETijV++Fo68xy+8DFPHQ789+NNrN1XFmEa4+h9e4MMWXAordOWN7W/YiEGURvHluZmOnEvvJQXHYTGkd+jBUZS7iuLMI3j620caBPqrSuLMI3j6w2fqBNKbyMhepE7viGvLgkTelDVFSEKx1cauohNKPqQguhBbKSzvnk7n/rEf6kvuii914En9g9MqGLU</source>
+    <source>eJzNVj1PwzAQ3f0rPDCYSFCxUr4KRYgBqaKVWCIhx70Sq0kc+S4ChPjvOG4JIk1KAwzxYsW+d353enn2yXke54zNQSXSgkCyWtEjveaAp0f7Q8YymQLmUgGfPV0aGuU6XE2XEiGcWakJXViBzQHXLwpy0iYL710akyFUK8NW0B1QbObhbUZgF+5oDKdAq8VRoiVWGz+mcLirWNJonupMu+IkGXtVIJl0pimBVdSuWcaAymrPvRtwAjbViA6HHYGxIdMNMiWtlmCrhu2K69iPGyeLqTK2A2Qi0SnA0liSvLbW2A7NWFc1MajL9t9mnep7gCg2ZvkJYIMgYDzgXry8yuQ/D93GgFHDDntj3A2PLUfALyi25hn5hrLXAQM/y6jUnSKeF1GiFV8UmSqDOAKJFl3zvdSv7h/zyJjEUf7V0Q0n1nQs2qRdY+DTrRpQDgtU2IzvUazx4Kws5DN86GPe/5ew/w3E5j/RK5JtHiN28qBelfLlIaLFVXpF91ub+9jTyizFpnP2hmSTxYqt1tsb6mt/F3Wr7w3BzatPbLkQe0O79napHLj+nPkr4Xf2Aak3bfY=</source>
   </file>
   <file path="Method/Traits/EmojisVariableTrait.php" generated-path="Method.Traits.EmojisVariableTrait.html" hash="7c4dbdc96b276724175d710cdb626c7a" package="Default">
     <docblock line="0">
@@ -33563,68 +33688,134 @@ fixed-width text or inline URLs in the media caption.</description>
     </parse_markers>
     <source>eJyFyzELAjEMhuE9vyKjdvBwVpHe5nCbY0FCG73C2StNBkX87xYKXZ0Cb57veM5zBgjsFyq8ES3R603fmeW03x4AEj1ZMnnG62Nc1ebo2hlJ2E2s8xrcJSmXe0VSF4MxgAZ7QxtCc3aJJL3vqhog/mPIL+UUBNuzd/jAF365yUJt</source>
   </file>
-  <file path="Type/PollType.php" generated-path="Type.PollType.html" hash="65323278406fec5a24493787d11844cd" package="Default">
+  <file path="Type/PollType.php" generated-path="Type.PollType.html" hash="3179f8a82f7dd0f921a5f537603a0ad4" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Type" line="13" package="Default">
+    <namespace-alias name="PollTypeInterface">\TgBotApi\BotApiBase\Interfaces\PollTypeInterface</namespace-alias>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Type" line="15" package="Default">
       <extends/>
+      <implements>\TgBotApi\BotApiBase\Interfaces\PollTypeInterface</implements>
       <name>PollType</name>
       <full_name>\TgBotApi\BotApiBase\Type\PollType</full_name>
-      <docblock line="13">
+      <docblock line="15">
         <description>Class PollType
 This object contains information about a poll.</description>
         <long-description></long-description>
-        <tag name="see" line="13" description="" link="https://core.telegram.org/bots/api#poll"/>
-        <tag name="package" line="13" description="Default"/>
+        <tag name="see" line="15" description="" link="https://core.telegram.org/bots/api#poll"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="20" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="22" package="Default">
         <name>$id</name>
         <full_name>\TgBotApi\BotApiBase\Type\PollType::id</full_name>
         <default></default>
-        <docblock line="20">
+        <docblock line="22">
           <description>Unique poll identifier.</description>
           <long-description></long-description>
-          <tag name="var" line="20" description="" type="string" variable="">
+          <tag name="var" line="22" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="27" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="29" package="Default">
         <name>$question</name>
         <full_name>\TgBotApi\BotApiBase\Type\PollType::question</full_name>
         <default></default>
-        <docblock line="27">
+        <docblock line="29">
           <description>Poll question, 1-255 characters.</description>
           <long-description></long-description>
-          <tag name="var" line="27" description="" type="string" variable="">
+          <tag name="var" line="29" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="34" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="36" package="Default">
         <name>$options</name>
         <full_name>\TgBotApi\BotApiBase\Type\PollType::options</full_name>
         <default></default>
-        <docblock line="34">
+        <docblock line="36">
           <description>List of poll options.</description>
           <long-description></long-description>
-          <tag name="var" line="34" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\PollOptionType&gt;" variable="">
+          <tag name="var" line="36" description="" type="array&lt;mixed,\TgBotApi\BotApiBase\Type\PollOptionType&gt;" variable="">
             <type>array&lt;mixed,\TgBotApi\BotApiBase\Type\PollOptionType&gt;</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="41" package="Default">
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="43" package="Default">
+        <name>$totalVoterCount</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollType::totalVoterCount</full_name>
+        <default></default>
+        <docblock line="43">
+          <description>Total number of users that voted in the poll.</description>
+          <long-description></long-description>
+          <tag name="var" line="43" description="" type="integer" variable="">
+            <type>integer</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="50" package="Default">
         <name>$isClosed</name>
         <full_name>\TgBotApi\BotApiBase\Type\PollType::isClosed</full_name>
         <default></default>
-        <docblock line="41">
-          <description>Optional. True, if the poll is closed.</description>
+        <docblock line="50">
+          <description>True, if the poll is closed.</description>
           <long-description></long-description>
-          <tag name="var" line="41" description="" type="boolean|null" variable="">
+          <tag name="var" line="50" description="" type="boolean|null" variable="">
             <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="57" package="Default">
+        <name>$isAnonymous</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollType::isAnonymous</full_name>
+        <default></default>
+        <docblock line="57">
+          <description>True, if the poll is anonymous.</description>
+          <long-description></long-description>
+          <tag name="var" line="57" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="64" package="Default">
+        <name>$type</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollType::type</full_name>
+        <default></default>
+        <docblock line="64">
+          <description>Poll type, currently can be “regular” or “quiz”.</description>
+          <long-description></long-description>
+          <tag name="var" line="64" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="71" package="Default">
+        <name>$allowsMultipleAnswers</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollType::allowsMultipleAnswers</full_name>
+        <default></default>
+        <docblock line="71">
+          <description>True, if the poll allows multiple answers.</description>
+          <long-description></long-description>
+          <tag name="var" line="71" description="" type="boolean|null" variable="">
+            <type>boolean</type>
+            <type>null</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="80" package="Default">
+        <name>$correctOptionId</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollType::correctOptionId</full_name>
+        <default></default>
+        <docblock line="80">
+          <description>Optional. 0-based identifier of the correct answer option.</description>
+          <long-description>Available only for polls in the quiz mode, which are closed, or was sent (not forwarded)
+by the bot or to the private chat with the bot.</long-description>
+          <tag name="var" line="80" description="" type="integer|null" variable="">
+            <type>integer</type>
             <type>null</type>
           </tag>
         </docblock>
@@ -33633,7 +33824,7 @@ This object contains information about a poll.</description>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
     </parse_markers>
-    <source>eJyVUT1PwzAQ3f0rToIBopKoSF0oiNKuSDCEiaLKcS6JkWsb3wUJAf8dO20HaBa8nHT3Pu6er29954WoURkZ8Iw4aMUb/vBIN9PzuRBWbpG8VAhlu3R85/V6V5aScF1GYAQVWSYgg5WRRPDojEn91Ck7TeCqV1QMylmW2hJo27iwlaydBVm5nkGCj6Q8MhJpQYgAHbOnq6JQLmDOaLANcpu70BaVYyqk1yeJFAmFUL+NPwXENyyVXgZPVr/1OJiArtGybjSGfD8+oBbvMkBKwLb7VjFU31dGKzjVdTz1j3LyhKhN6ZoJTC8uZzNQnQxSMQb6r8VB6djoXhODa3Y3OJ9A4+ppo4dhnrJ4fhn12Qsc2+yY0uRQhh4noBvg7pAcgTKOsB71rZwzX7ZPPzKWHa0G6lx8ix9dfrLp</source>
+    <source>eJyVVNtuEzEQfd+vGAke2ijNUqS+cBFN+1QJBA+BF4qQ1zvJGnk9W3ucKFykfgj8XL+E8V7KJRtK98Vae845M+MzfvaiqZosK1Fb5fEgsDeaP/K2wfD8+PBpljlVY2iURliszojnjbnsljMV8HIhgRIUw/jxhWP0SwGHyzdkbYq+3RJYPplkMIFzq0KAISDtLCoTgIpPqBk0OVbGBTBuSb5WbMiBKigyKGgENBNEAp0GRICKuQlP8lyTxxmjxZVX9Yz8Ki+IQ64a8yCBBJBn+g9hMHVjsUbHv/Zus82+ZCBfm3H6JvDWmauIbQZgSkGZpUE/64+HqNO18pC66lb9Vt6uTSys0fDQlNKHv5iTOAh3SKVO4fjo8ckJ6Ep5pSWbcF+JgWlX6KUJDLTsaqAmBY2zp4xet+epKe8/jOr0BLsyC2JlwcW6QJ/kxC0+AFeKYU2Mpdys/OFwmbvyxvGoIifid0Lhzyk6HlH2Eadglrf0IL7SlgKWo0IFkf3qYrLH2F2F8xb6nzrKkdvWFMdbepfUfEDv8Uca0Sno6L1Yz25BKwcFws31d4+rKMN8c/0DyKeNq2g+y999fcPdbN9ZqrKWNgHqaNnIAEndYbPPpv+uumN61RPNO57dFDonKjuDR0eFPDPlb/OX/JUyk/H36fXokunNPaQE87UyVhWSLDnpnbwrbSlhcGLqGNRUSqWbyugK5G3sfTNNTd2oAEEk4cARJ/hG+RLLw4G/2LY08uKkaKauWd6sFWOaZIaN4WqI2ef5/Y3qq+sacSGG/Jb9BA+HtiY=</source>
   </file>
   <file path="Type/VideoType.php" generated-path="Type.VideoType.html" hash="69b63295cb6a74cd6515ac7781458745" package="Default">
     <docblock line="0">
@@ -35174,106 +35365,127 @@ instructions to remove reply keyboard or to force a reply from the user.</descri
     </parse_markers>
     <source>eJyVjzFPAzEMhXf/CkswwA0XsVIQpQwwIlG2SigX3CTS9RLFLhJC/HeccCxwC14s67332b66ySEDvJIbbaEzlhKdvMh7Jr6+OF8BTPZAnK0j3PpNktscd99tY5l2WzWqyXQdYId3o2XGe008RB+eXCpUDb1qVV4zEQaRzJfGVLEXGskXe+hT8WZIwsbmeOIVEBTA1aNBA24ZDB+AWm17rQ4fE0eJacI4YUVgY6DYYSTcp4ISCCu/nxM/wfWbLRqSeTat5+MwRoeneabqp7/2PTOVRVQV2olLvKOKf1ntrX/d1Z5bwSd8AUmcfzE=</source>
   </file>
-  <file path="Method/SetChatAdministratorCustomTitleMethod.php" generated-path="Method.SetChatAdministratorCustomTitleMethod.html" hash="935f09eec7f909df422e99d664c239b8" package="Default">
+  <file path="Type/Poll/KeyboardButtonPollType.php" generated-path="Type.Poll.KeyboardButtonPollType.html" hash="393795c27980962731e7626e2b4488ab" package="Default">
     <docblock line="0">
       <description></description>
       <long-description></long-description>
       <tag name="package" line="0" description="Default"/>
     </docblock>
-    <namespace-alias name="SendMethodAliasInterface">\TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface</namespace-alias>
-    <namespace-alias name="SetMethodAliasInterface">\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface</namespace-alias>
-    <namespace-alias name="ChatIdVariableTrait">\TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait</namespace-alias>
-    <namespace-alias name="UserIdVariableTrait">\TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait</namespace-alias>
-    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Method" line="17" package="Default">
+    <namespace-alias name="PollTypeInterface">\TgBotApi\BotApiBase\Interfaces\PollTypeInterface</namespace-alias>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Type\Poll" line="15" package="Default">
       <extends/>
-      <implements>\TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface</implements>
-      <name>SetChatAdministratorCustomTitleMethod</name>
-      <full_name>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</full_name>
-      <docblock line="17">
-        <description>Use this method to set a custom title
-for an administrator in a supergroup promoted by the bot. Returns True on success.</description>
+      <implements>\TgBotApi\BotApiBase\Interfaces\PollTypeInterface</implements>
+      <name>KeyboardButtonPollType</name>
+      <full_name>\TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType</full_name>
+      <docblock line="15">
+        <description>This object represents type of a poll,
+which is allowed to be created and sent when the corresponding button is pressed.</description>
         <long-description></long-description>
-        <tag name="see" line="17" description="" link="https://core.telegram.org/bots/api#setchatadministratorcustomtitle"/>
-        <tag name="package" line="17" description="Default"/>
+        <tag name="see" line="15" description="" link="https://core.telegram.org/bots/api#keyboardbuttonpolltype"/>
+        <tag name="package" line="15" description="Default"/>
       </docblock>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="25" package="Default">
-        <name>$customTitle</name>
-        <full_name>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod::customTitle</full_name>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type\Poll" line="24" package="Default">
+        <name>$type</name>
+        <full_name>\TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType::type</full_name>
         <default></default>
-        <docblock line="25">
-          <description></description>
-          <long-description></long-description>
-          <tag name="var" line="25" description="" type="" variable=""/>
-        </docblock>
-      </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="17" package="Default">
-        <name>$chatId</name>
-        <full_name>\TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait::chatId</full_name>
-        <default></default>
-        <docblock line="17">
-          <description>Unique identifier for the target chat or username of the target channel (in the format @channelusername).</description>
-          <long-description></long-description>
-          <tag name="var" line="17" description="" type="integer|string" variable="">
-            <type>integer</type>
+        <docblock line="24">
+          <description>Optional. If quiz is passed, the user will be allowed to create only polls in the quiz mode.</description>
+          <long-description>If regular is passed, only regular polls will be allowed.
+Otherwise, the user will be allowed to create a poll of any type.</long-description>
+          <tag name="var" line="24" description="" type="string" variable="">
             <type>string</type>
           </tag>
         </docblock>
       </property>
-      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="17" package="Default">
-        <name>$userId</name>
-        <full_name>\TgBotApi\BotApiBase\Method\Traits\UserIdVariableTrait::userId</full_name>
-        <default></default>
-        <docblock line="17">
-          <description>Unique identifier of the target user.</description>
-          <long-description></long-description>
-          <tag name="var" line="17" description="" type="integer" variable="">
-            <type>integer</type>
-          </tag>
-        </docblock>
-      </property>
-      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Method" line="33" package="Default">
+      <method final="false" abstract="false" static="true" visibility="public" namespace="TgBotApi\BotApiBase\Type\Poll" line="26" package="Default">
         <name>create</name>
-        <full_name>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod::create()</full_name>
-        <docblock line="33">
+        <full_name>\TgBotApi\BotApiBase\Type\Poll\KeyboardButtonPollType::create()</full_name>
+        <docblock line="26">
           <description></description>
           <long-description></long-description>
-          <tag name="param" line="33" description="" type="integer|string" variable="$chatId">
-            <type>integer</type>
-            <type>string</type>
-          </tag>
-          <tag name="param" line="33" description="" type="integer" variable="$userId">
-            <type>integer</type>
-          </tag>
-          <tag name="param" line="33" description="" type="string" variable="$title">
-            <type>string</type>
-          </tag>
-          <tag name="return" line="33" description="" type="\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod">
-            <type>\TgBotApi\BotApiBase\Method\SetChatAdministratorCustomTitleMethod</type>
-          </tag>
         </docblock>
         <argument line="0" by_reference="false">
-          <name>$chatId</name>
+          <name>$type</name>
           <default></default>
-          <type>integer|string</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$userId</name>
-          <default></default>
-          <type>integer</type>
-        </argument>
-        <argument line="0" by_reference="false">
-          <name>$title</name>
-          <default></default>
-          <type>string</type>
+          <type>\TgBotApi\BotApiBase\Type\Poll\string</type>
         </argument>
       </method>
     </class>
     <parse_markers>
       <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
-      <error line="33" code="PPC:ERR-50008">No summary for method create()</error>
-      <error line="25" code="PPC:ERR-50007">No summary for property $customTitle</error>
+      <error line="26" code="PPC:ERR-50015">Argument $type is missing from the Docblock of create</error>
+      <error line="26" code="PPC:ERR-50008">No summary for method create()</error>
     </parse_markers>
-    <source>eJydk0Fv1DAQhe/+FSPRw+6q3Yhrl0K3PfXABRZOkZDXmU0sJbblmYAq6H9nbGfbwkaoxRdHnjfPX94k7z6ELqgGTa8jLoijNfyN7wPS1dvlRimnB6SgDcKuvfG8DbYu240mrD8id74R2Uj/EtR3jjEexIXqz+iacrrtrabHyuZVHvxfFruoLVN922m+a77qaPW+x3z40tYvhPGkVVWrlYIVSBG4swRD7gH2QMigwYzEfgC23GMSHnwE7UA3g3VWMtcsB1YOgMaAsY1+DBCiHzxjA/t7cUXYe17DJ+QxOoJdHBG8E72RQGgtrsn4mhChYw50WVXGR1wz9thGPax9bCuxoEoH+0awjITwB0CBPDJWSr4IIpCoU1zb58rbrNwlZUkH7BB6HNBxbpibjfqpQFZKeTb+Y3E+4FTNIaclr/ldx+m5ynsY9701cGaeyGa6gpYgJGf+lb5z14o+o5wKYFpnY8b5SzB1Z8GU11SPeTwvC23uBYg1y3YYnWEr4zURNeNi4jzPaBPT+RGjICwvX3FrmUXmt07udPJ7X4HDHxPAYrk5VVy8LxSinHhmRYUuicrTvNMTVlLys4GlNcX42FA8HtSD+g10Q45V</source>
+    <source>eJyNk0Fv2zAMhe/6FQTWQxp0Nnbtlq3LreihO+QYYJBtxtYmS6pIz8iG/vdRUtxlbQdMFyHyex+pR+XDpzAEpTpsrY64Io6m5a98DEibd5fvlXJ6RAq6Rdj1W8+fg9mXbasJ9zsR7r94a0U50euaW8cYD0KgrEyWpyOx1eu1gjXsBkPgm2/YMkQMEQkdE6ROwB9AQxDvVVLOg2kHELW21s/YAXtoENqImuWXdh0kr+jQAQ/yxUfBBe8643poJmbvkj8VIewqgSbuDSHCwBzouq7FgxWjxT7qsfKxrxvPVOtg3nzHY+N17AootZWaFEKtJEQiuDsJtlmw3BnMGCyO+VYvclC/FMjKWaS1hvvAxjttK7g9wMNkfuaOdWr4Kt9K4o4wG2vT5c+iKDmAd/aYMyMwJYYMGX2H1VJDyBH7SSZ/Ds/O5bwQnpV5AtwLN86G8L9aKjPM03THPNkFtPBufkjJ9AZdfzqq8x6mxpoWLpJHnszZEbFm2Q6Ta1Nep1KrwiiGy+t/TCRzSvBpXRgnNCcvfQMO5xN6JX+CF4q3H/O73PzVUVoReYruj7B4H9Wj+g0k6x/5</source>
+  </file>
+  <file path="Type/PollAnswerType.php" generated-path="Type.PollAnswerType.html" hash="6087b867068e7513e73ed453e90ecffa" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="TgBotApi\BotApiBase\Type" line="12" package="Default">
+      <extends/>
+      <name>PollAnswerType</name>
+      <full_name>\TgBotApi\BotApiBase\Type\PollAnswerType</full_name>
+      <docblock line="12">
+        <description>This object represents an answer of a user in a non-anonymous poll.</description>
+        <long-description></long-description>
+        <tag name="see" line="12" description="" link="https://core.telegram.org/bots/api#pollanswer"/>
+        <tag name="package" line="12" description="Default"/>
+      </docblock>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="19" package="Default">
+        <name>$pollId</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollAnswerType::pollId</full_name>
+        <default></default>
+        <docblock line="19">
+          <description>Unique poll identifier.</description>
+          <long-description></long-description>
+          <tag name="var" line="19" description="" type="string" variable="">
+            <type>string</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="26" package="Default">
+        <name>$user</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollAnswerType::user</full_name>
+        <default></default>
+        <docblock line="26">
+          <description>The user, who changed the answer to the poll.</description>
+          <long-description></long-description>
+          <tag name="var" line="26" description="" type="\TgBotApi\BotApiBase\Type\UserType" variable="">
+            <type>\TgBotApi\BotApiBase\Type\UserType</type>
+          </tag>
+        </docblock>
+      </property>
+      <property static="false" visibility="public" namespace="TgBotApi\BotApiBase\Type" line="33" package="Default">
+        <name>$optionIds</name>
+        <full_name>\TgBotApi\BotApiBase\Type\PollAnswerType::optionIds</full_name>
+        <default></default>
+        <docblock line="33">
+          <description>0-based identifiers of answer options, chosen by the user. May be empty if the user retracted their vote.</description>
+          <long-description></long-description>
+          <tag name="var" line="33" description="" type="array&lt;mixed,integer&gt;" variable="">
+            <type>array&lt;mixed,integer&gt;</type>
+          </tag>
+        </docblock>
+      </property>
+    </class>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJxtUU1PwzAMvedXWIIDVFsLVwZi220HJA7diSGUtl4b1CYhdjdViP+O+wFCbFGVNC/283v2/aOvvFIF5rUOeEUcTM5v3Hmkh9vrhVJWN0he5whpuXa88mY3HmtNuEslUIKSKFIQQVoZApe9Y84Q0AcktEygrXx0xABuDxpakj8jGFhn51q2rnEtgXd1HQtNz7QkRKiYPd0lSe4Cxow1lkE3sQtlkjmmRHtz0eeM3JKVKDFBBM8Crgawl6c+FcgaJPYrgq01Hy0O9cAUItHsDYZ4ev6JWh50gL4ftpygZDh9m9Umh8s+fVOI+X/saYWDxRkcKwd5pW2JBbCgUxPYDbfJ7mnNLU3Cz1XtmU9r3swzmUbxxw0NvZ667tk4SzMR42QikHWDgJ4qhifdQYaAjecOzP73RQbIQec8ajcBDo7xrF5j+eX1rNix8KaghfpS31MmuwM=</source>
+  </file>
+  <file path="Interfaces/PollTypeInterface.php" generated-path="Interfaces.PollTypeInterface.html" hash="e820aed67781e2e50e6bfc761814956e" package="Default">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <parse_markers>
+      <error line="0" code="PPC:ERR-50000">No summary was found for this file</error>
+    </parse_markers>
+    <source>eJyzsS/IKODiSklNzkksStUoLinKTC6JL6ksSC22NdS05uLKS8xNLS5ITE5VCEl3yi9xLMiMgVBOicWpMZ55JalFaUDZYqDSTBhHISA/JycEaAZcmquaSwEICkqTcjKTFZLz84pLFEIiA1zjg1zdQ30cgxRsFdSLUtNLgY5Qt8ahNDDUMwqkrrA0swqoqJYLAOKfPmQ=</source>
   </file>
   <package name="Default" full_name="Default"/>
   <package name="global" full_name="global"/>
@@ -35291,6 +35503,7 @@ for an administrator in a supergroup promoted by the bot. Returns True on succes
         <namespace name="InputMedia" full_name="TgBotApi\BotApiBase\Type\InputMedia"/>
         <namespace name="InputMessageContent" full_name="TgBotApi\BotApiBase\Type\InputMessageContent"/>
         <namespace name="PassportElementError" full_name="TgBotApi\BotApiBase\Type\PassportElementError"/>
+        <namespace name="Poll" full_name="TgBotApi\BotApiBase\Type\Poll"/>
       </namespace>
     </namespace>
   </namespace>

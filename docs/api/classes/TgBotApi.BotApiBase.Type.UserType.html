@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">586</span></a></li>
+                <span class="label label-info">619</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -62,11 +62,14 @@
 <ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
+<li class="property public "><a href="#property_canJoinGroups" title="$canJoinGroups() :: Optional. True, if the bot can be invited to groups. Returned only in getMe."><span class="description"></span><pre>$canJoinGroups</pre></a></li>
+<li class="property public "><a href="#property_canReadAllGroupMessages" title="$canReadAllGroupMessages() :: Optional. True, if privacy mode is disabled for the bot. Returned only in getMe."><span class="description"></span><pre>$canReadAllGroupMessages</pre></a></li>
 <li class="property public "><a href="#property_firstName" title="$firstName() :: User‘s or bot’s first name."><span class="description"></span><pre>$firstName</pre></a></li>
 <li class="property public "><a href="#property_id" title="$id() :: Unique identifier for this user or bot."><span class="description"></span><pre>$id</pre></a></li>
 <li class="property public "><a href="#property_isBot" title="$isBot() :: True, if this user is a bot."><span class="description"></span><pre>$isBot</pre></a></li>
 <li class="property public "><a href="#property_languageCode" title="$languageCode() :: Optional. IETF language tag of the user's language."><span class="description"></span><pre>$languageCode</pre></a></li>
 <li class="property public "><a href="#property_lastName" title="$lastName() :: Optional. User‘s or bot’s last name."><span class="description"></span><pre>$lastName</pre></a></li>
+<li class="property public "><a href="#property_supportsInlineQueries" title="$supportsInlineQueries() :: Optional. True, if the bot supports inline queries. Returned only in getMe."><span class="description"></span><pre>$supportsInlineQueries</pre></a></li>
 <li class="property public "><a href="#property_username" title="$username() :: Optional. User‘s or bot’s username."><span class="description"></span><pre>$username</pre></a></li>
 </ul>
 </li></ul>
@@ -103,6 +106,26 @@
 </table>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_canJoinGroups"> </a><div class="element clickable property public property_canJoinGroups" data-toggle="collapse" data-target=".property_canJoinGroups .collapse" title="public">
+<h2>Optional. True, if the bot can be invited to groups. Returned only in getMe.</h2>
+<pre>$canJoinGroups : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_canReadAllGroupMessages"> </a><div class="element clickable property public property_canReadAllGroupMessages" data-toggle="collapse" data-target=".property_canReadAllGroupMessages .collapse" title="public">
+<h2>Optional. True, if privacy mode is disabled for the bot. Returned only in getMe.</h2>
+<pre>$canReadAllGroupMessages : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_firstName"> </a><div class="element clickable property public property_firstName" data-toggle="collapse" data-target=".property_firstName .collapse" title="public">
 <h2>User‘s or bot’s first name.</h2>
 <pre>$firstName : string</pre>
@@ -153,6 +176,16 @@
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_supportsInlineQueries"> </a><div class="element clickable property public property_supportsInlineQueries" data-toggle="collapse" data-target=".property_supportsInlineQueries .collapse" title="public">
+<h2>Optional. True, if the bot supports inline queries. Returned only in getMe.</h2>
+<pre>$supportsInlineQueries : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_username"> </a><div class="element clickable property public property_username" data-toggle="collapse" data-target=".property_username .collapse" title="public">
 <h2>Optional. User‘s or bot’s username.</h2>
 <pre>$username : string | null</pre>
@@ -170,7 +203,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-23T23:47:59+03:00.<br></footer></div>
+            generated on 2020-01-25T00:05:21+03:00.<br></footer></div>
 </div>
 </body>
 </html>
