@@ -4,6 +4,7 @@ All notable changes to `telegram-bot-api` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+<!--- 
 ## NEXT - YYYY-MM-DD
 
 ### Added
@@ -20,6 +21,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ### Security
 - Nothing
+--->
+
+## 1.3.1 - 2020-01-30
+
+### Fixed
+- fixed stdObject property call inUserProfilePhotosNormalizer, updated test for it.
 
 ## 1.3.0 - 2020-01-25
 
