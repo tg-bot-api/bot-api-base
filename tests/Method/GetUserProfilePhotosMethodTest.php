@@ -17,7 +17,7 @@ class GetUserProfilePhotosMethodTest extends MethodTestCase
         $botApi = $this->getBot(
             'getUserProfilePhotos',
             ['user_id' => 1, 'offset' => 0, 'limit' => 100],
-            ['total_count' => 1, 'photos' => []]
+            (object) ['total_count' => 1, 'photos' => []]
         );
 
         $botApi->getUserProfilePhotos(GetUserProfilePhotosMethod::create(1, ['offset' => 0, 'limit' => 100]));
