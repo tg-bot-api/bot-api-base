@@ -14,6 +14,21 @@ abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
     use GetNormalizerTrait;
 
     /**
+     * @return BotApi
+     */
+    public function getBotFromJson(string $json)
+    {
+        $stub = $this->getMockBuilder(ApiClientInterface::class)
+            ->getMock();
+
+        $stub->expects($this->once())
+            ->method('send')
+            ->willReturn(\json_decode($json, false));
+
+        return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, $this->getNormalizer());
+    }
+
+    /**
      * @param $result
      */
     protected function getBot($result): BotApi
@@ -32,5 +47,10 @@ abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
     protected function getMethod(): MethodInterface
     {
         return $this->getMockBuilder(MethodInterface::class)->getMock();
+    }
+
+    protected function getResource($filename): string
+    {
+        return \file_get_contents(\sprintf('%s/resources/%s.json', __DIR__, $filename));
     }
 }

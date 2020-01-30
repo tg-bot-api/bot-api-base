@@ -28,9 +28,6 @@ class UserProfilePhotosNormalizer implements DenormalizerInterface
 
     /**
      * UserProfilePhotosNormalizer constructor.
-     *
-     * @param NormalizerInterface $objectNormalizer
-     * @param ArrayDenormalizer   $arrayDenormalizer
      */
     public function __construct(NormalizerInterface $objectNormalizer, ArrayDenormalizer $arrayDenormalizer)
     {
@@ -42,16 +39,13 @@ class UserProfilePhotosNormalizer implements DenormalizerInterface
      * @param mixed  $data
      * @param string $class
      * @param null   $format
-     * @param array  $context
      *
      * @throws ExceptionInterface
-     *
-     * @return UserProfilePhotosType
      */
     public function denormalize($data, $class, $format = null, array $context = []): UserProfilePhotosType
     {
         $serializer = new Serializer([$this->objectNormalizer, $this->arrayDenormalizer]);
-        $data['photos'] = $serializer->denormalize($data['photos'], PhotoSizeType::class . '[][]');
+        $data->photos = $serializer->denormalize($data->photos, PhotoSizeType::class . '[][]');
 
         return $serializer->denormalize($data, UserProfilePhotosType::class);
     }
@@ -60,8 +54,6 @@ class UserProfilePhotosNormalizer implements DenormalizerInterface
      * @param mixed  $data
      * @param string $type
      * @param null   $format
-     *
-     * @return bool
      */
     public function supportsDenormalization($data, $type, $format = null): bool
     {

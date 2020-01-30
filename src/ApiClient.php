@@ -42,10 +42,6 @@ class ApiClient implements ApiClientInterface
 
     /**
      * ApiApiClient constructor.
-     *
-     * @param RequestFactoryInterface $requestFactory
-     * @param StreamFactoryInterface  $streamFactory
-     * @param ClientInterface         $client
      */
     public function __construct(
         RequestFactoryInterface $requestFactory,
@@ -58,9 +54,6 @@ class ApiClient implements ApiClientInterface
     }
 
     /**
-     * @param string                 $method
-     * @param BotApiRequestInterface $apiRequest
-     *
      * @throws ClientExceptionInterface
      *
      * @return mixed
@@ -79,30 +72,19 @@ class ApiClient implements ApiClientInterface
 
         $content = $response->getBody()->getContents();
 
-        return \json_decode($content);
+        return \json_decode($content, false);
     }
 
-    /**
-     * @param string $botKey
-     */
     public function setBotKey(string $botKey): void
     {
         $this->botKey = $botKey;
     }
 
-    /**
-     * @param string $endPoint
-     */
     public function setEndpoint(string $endPoint): void
     {
         $this->endPoint = $endPoint;
     }
 
-    /**
-     * @param string $method
-     *
-     * @return string
-     */
     protected function generateUri(string $method): string
     {
         return \sprintf(
@@ -114,10 +96,7 @@ class ApiClient implements ApiClientInterface
     }
 
     /**
-     * @param mixed                  $boundary
-     * @param BotApiRequestInterface $request
-     *
-     * @return string
+     * @param mixed $boundary
      */
     protected function createStreamBody($boundary, BotApiRequestInterface $request): string
     {
@@ -135,11 +114,8 @@ class ApiClient implements ApiClientInterface
     }
 
     /**
-     * @param               $boundary
-     * @param               $name
-     * @param InputFileType $file
-     *
-     * @return string
+     * @param $boundary
+     * @param $name
      */
     protected function createFileStream($boundary, $name, InputFileType $file): string
     {
@@ -162,8 +138,6 @@ class ApiClient implements ApiClientInterface
      * @param $boundary
      * @param $name
      * @param $value
-     *
-     * @return string
      */
     protected function createDataStream(string $boundary, string $name, string $value): string
     {

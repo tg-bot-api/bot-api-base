@@ -1,0 +1,31 @@
+{
+  "ok": true,
+  "result": {
+    "total_count": 1,
+    "photos": [
+      [
+        {
+          "file_id": "secret",
+          "file_unique_id": "secret",
+          "file_size": 12930,
+          "width": 160,
+          "height": 160
+        },
+        {
+          "file_id": "secret",
+          "file_unique_id": "secret",
+          "file_size": 40592,
+          "width": 320,
+          "height": 320
+        },
+        {
+          "file_id": "secret",
+          "file_unique_id": "secret",
+          "file_size": 116195,
+          "width": 640,
+          "height": 640
+        }
+      ]
+    ]
+  }
+}
