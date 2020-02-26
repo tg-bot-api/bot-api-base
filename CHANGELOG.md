@@ -23,6 +23,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
+## 1.3.2 - 2020-02-26
+
+### Fixed
+- fixed Poll normalization bug #21.
+
 ## 1.3.1 - 2020-01-30
 
 ### Fixed
