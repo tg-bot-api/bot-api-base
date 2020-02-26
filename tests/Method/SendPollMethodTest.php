@@ -18,15 +18,12 @@ class SendPollMethodTest extends MethodTestCase
         $this->getApi()->sendPoll($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBot('sendPoll', [
             'chat_id' => 'chat_id',
             'question' => 'poll_question',
-            'options' => ['q1', 'q2'],
+            'options' => '["q1","q2"]',
             'disable_notification' => true,
             'reply_to_message_id' => 1,
             'reply_markup' => '{"inline_keyboard":[]}',
