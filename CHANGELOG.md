@@ -23,6 +23,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
+## 1.3.3 - 2020-03-06
+
+### Fixed
+- fixed Poll field in MessageType. bug #24.
+
 ## 1.3.2 - 2020-02-26
 
 ### Fixed

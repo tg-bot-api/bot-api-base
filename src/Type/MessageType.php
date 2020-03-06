@@ -230,6 +230,13 @@ class MessageType implements HasParseModeVariableInterface
     public $venue;
 
     /**
+     * Optional. Message is a native poll, information about the poll.
+     *
+     * @var PollType|null
+     */
+    public $poll;
+
+    /**
      * Optional. New members that were added to the group or supergroup and information about them
      * (the bot itself may be one of these members).
      *
