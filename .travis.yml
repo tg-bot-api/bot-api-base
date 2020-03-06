@@ -19,9 +19,11 @@ matrix:
   include:
     - php: 7.2
       env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
+    - php: 7.4
+      env: 'COMPOSER_FLAGS="--ignore-platform-reqs"'
 
 before_script:
-  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist --ignore-platform-reqs
+  - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
 
 script:
   - vendor/bin/phpcs --standard=psr2 src/
