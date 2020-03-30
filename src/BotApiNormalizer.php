@@ -20,6 +20,7 @@ use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
 use TgBotApi\BotApiBase\Normalizer\LegacyObjectNormalizerWrapper;
 use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
 use TgBotApi\BotApiBase\Normalizer\PollNormalizer;
+use TgBotApi\BotApiBase\Normalizer\SetMyCommandsNormalizer;
 use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
 
 /**
@@ -75,6 +76,7 @@ class BotApiNormalizer implements NormalizerInterface
 
         $serializer = new Serializer([
             new PollNormalizer($objectNormalizer),
+            new SetMyCommandsNormalizer($objectNormalizer),
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
             new JsonSerializableNormalizer($objectNormalizer),

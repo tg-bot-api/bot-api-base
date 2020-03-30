@@ -40,4 +40,35 @@ class AddStickerToSetMethodTest extends MethodTestCase
             ]
         ));
     }
+
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     */
+    public function testEncodeAnimated()
+    {
+        $botApi = $this->getBotWithFiles(
+            'addStickerToSet',
+            [
+                'user_id' => 1,
+                'name' => 'name',
+                'tgs_sticker' => '',
+                'emojis' => '😀',
+                'mask_position' => ['point' => 'forehead', 'x_shift' => 1.0, 'y_shift' => 1.0, 'scale' => 1],
+            ],
+            ['tgs_sticker' => true],
+            ['mask_position'],
+            true
+        );
+
+        $botApi->addStickerToSet(AddStickerToSetMethod::createAnimated(
+            1,
+            'name',
+            InputFileType::create('/dev/null'),
+            '😀',
+            [
+                'maskPosition' => MaskPositionType::create(MaskPositionType::MASK_POINT_FOREHEAD, 1, 1, 1),
+            ]
+        ));
+    }
 }

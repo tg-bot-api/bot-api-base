@@ -10,6 +10,7 @@ use TgBotApi\BotApiBase\Method\SendAnimationMethod;
 use TgBotApi\BotApiBase\Method\SendAudioMethod;
 use TgBotApi\BotApiBase\Method\SendChatActionMethod;
 use TgBotApi\BotApiBase\Method\SendContactMethod;
+use TgBotApi\BotApiBase\Method\SendDiceMethod;
 use TgBotApi\BotApiBase\Method\SendDocumentMethod;
 use TgBotApi\BotApiBase\Method\SendGameMethod;
 use TgBotApi\BotApiBase\Method\SendInvoiceMethod;
@@ -31,8 +32,6 @@ use TgBotApi\BotApiBase\Type\MessageType;
 trait SendMethodTrait
 {
     /**
-     * @param SendMediaGroupMethod $method
-     *
      * @throws ResponseException
      *
      * @return MessageType[]
@@ -40,29 +39,17 @@ trait SendMethodTrait
     abstract public function sendMediaGroup(SendMediaGroupMethod $method): array;
 
     /**
-     * @param SendMethodAliasInterface $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     abstract public function send(SendMethodAliasInterface $method): MessageType;
 
     /**
-     * @param SendChatActionMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     abstract public function sendChatAction(SendChatActionMethod $method): bool;
 
     /**
-     * @param SendPhotoMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendPhoto(SendPhotoMethod $method): MessageType
     {
@@ -70,11 +57,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendAudioMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendAudio(SendAudioMethod $method): MessageType
     {
@@ -82,11 +65,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendDocumentMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendDocument(SendDocumentMethod $method): MessageType
     {
@@ -94,11 +73,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendVideoMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendVideo(SendVideoMethod $method): MessageType
     {
@@ -106,11 +81,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendAnimationMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendAnimation(SendAnimationMethod $method): MessageType
     {
@@ -118,11 +89,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendVoiceMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendVoice(SendVoiceMethod $method): MessageType
     {
@@ -130,11 +97,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendVideoNoteMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendVideoNote(SendVideoNoteMethod $method): MessageType
     {
@@ -142,11 +105,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendGameMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendGame(SendGameMethod $method): MessageType
     {
@@ -154,11 +113,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendInvoiceMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendInvoice(SendInvoiceMethod $method): MessageType
     {
@@ -166,11 +121,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendLocationMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendLocation(SendLocationMethod $method): MessageType
     {
@@ -178,11 +129,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendVenueMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendVenue(SendVenueMethod $method): MessageType
     {
@@ -190,11 +137,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendContactMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendContact(SendContactMethod $method): MessageType
     {
@@ -202,11 +145,15 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendStickerMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
+     */
+    public function sendDice(SendDiceMethod $method): MessageType
+    {
+        return $this->send($method);
+    }
+
+    /**
+     * @throws ResponseException
      */
     public function sendSticker(SendStickerMethod $method): MessageType
     {
@@ -214,11 +161,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendMessageMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendMessage(SendMessageMethod $method): MessageType
     {
@@ -226,11 +169,7 @@ trait SendMethodTrait
     }
 
     /**
-     * @param SendPollMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return MessageType
      */
     public function sendPoll(SendPollMethod $method): MessageType
     {

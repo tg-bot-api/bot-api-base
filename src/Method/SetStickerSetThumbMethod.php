@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method;
 
+use TgBotApi\BotApiBase\Method\Interfaces\SetMethodAliasInterface;
 use TgBotApi\BotApiBase\Type\InputFileType;
 
 /**
@@ -15,7 +16,7 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  *
  * @see https://core.telegram.org/bots/api#setstickersetthumb
  */
-class SetStickerSetThumbMethod
+class SetStickerSetThumbMethod implements SetMethodAliasInterface
 {
     /**
      * Sticker set name.
