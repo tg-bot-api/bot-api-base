@@ -63,8 +63,8 @@ You can configure it to work in symfony, for example, in [this way](https://gist
 |pin|PinChatMessageMethod|bool|
 |promote|PromoteChatMemberMethod|bool|
 |restrict|RestrictChatMemberMethod|bool|
-|send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod, SendPollMethod|MessageType|
-|set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod, SetChatPermissionsMethod, SetChatAdministratorCustomTitleMethod|bool|
+|send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod, SendPollMethod, SendDiceMethod|MessageType|
+|set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod, SetChatPermissionsMethod, SetChatAdministratorCustomTitleMethod, SetMyCommandMethod, SetStickerSetThumbMethod|bool|
 |stop|StopMessageLiveLocationMethod|bool|
 |stopPoll|StopPollMethod|Poll|
 |unban|UnbanChatMemberMethod|bool|
@@ -74,6 +74,7 @@ You can configure it to work in symfony, for example, in [this way](https://gist
 |sendChatAction|SendChatActionMethod|bool|
 |getUpdates|GetUpdatesMethod|UpdateType[]|
 |getMe|GetMeMethod|UserType|
+|getMyCommands|GetMyCommandsMethod|BotCommandType|
 |getUserProfilePhotos|GetUserProfilePhotosMethod|UserProfilePhotosType|
 |getWebhookInfo|GetWebhookInfoMethod|WebhookInfoType|
 |getChatMembersCount|GetChatMembersCountMethod|int|
@@ -145,7 +146,7 @@ If you discover any security related issues, please email wformps@gmail.com inst
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-php-v]: https://img.shields.io/travis/php-v/tg-bot-api/bot-api-base.svg?style=flat-square
-[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.6-blue.svg?style=flat-square
+[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.7-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square
