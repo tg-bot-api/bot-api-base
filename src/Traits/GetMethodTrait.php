@@ -61,11 +61,11 @@ trait GetMethodTrait
     /**
      * @throws ResponseException
      *
-     * @return mixed
+     * @return BotCommandType[]
      */
-    public function getMyCommands(GetMyCommandsMethod $method)
+    public function getMyCommands(GetMyCommandsMethod $method): array
     {
-        return $this->call($method, BotCommandType::class);
+        return $this->call($method, BotCommandType::class . '[]');
     }
 
     /**
