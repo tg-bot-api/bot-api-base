@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">619</span></a></li>
+                <span class="label label-info">796</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">5</span></a></li>
+                <span class="label label-info">7</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -98,6 +98,8 @@
         </span><pre>getGameHighScores()</pre></a></li>
 <li class="method public inherited"><a href="#method_getMe" title="getMe() :: "><span class="description">getMe()
         </span><pre>getMe()</pre></a></li>
+<li class="method public inherited"><a href="#method_getMyCommands" title="getMyCommands() :: "><span class="description">getMyCommands()
+        </span><pre>getMyCommands()</pre></a></li>
 <li class="method public inherited"><a href="#method_getStickerSet" title="getStickerSet() :: "><span class="description">getStickerSet()
         </span><pre>getStickerSet()</pre></a></li>
 <li class="method public inherited"><a href="#method_getUpdates" title="getUpdates() :: "><span class="description">getUpdates()
@@ -278,10 +280,7 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\Interfaces\MethodInterface</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <div class="subelement argument"><h4>$type</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
@@ -425,22 +424,17 @@
 <a id="method_getChat"></a><div class="element clickable method public method_getChat inherited" data-toggle="collapse" data-target=".method_getChat .collapse" title="public">
 <h2>getChat()
         </h2>
-<pre>getChat(\TgBotApi\BotApiBase\Method\GetChatMethod $method) : \TgBotApi\BotApiBase\Type\ChatType</pre>
+<pre>getChat(\TgBotApi\BotApiBase\Method\GetChatMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetChatMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\ChatType</code></div>
 </div></div>
 </div>
 <a id="method_getChatAdministrators"></a><div class="element clickable method public method_getChatAdministrators inherited" data-toggle="collapse" data-target=".method_getChatAdministrators .collapse" title="public">
@@ -451,10 +445,7 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
@@ -467,64 +458,49 @@
 <a id="method_getChatMember"></a><div class="element clickable method public method_getChatMember inherited" data-toggle="collapse" data-target=".method_getChatMember .collapse" title="public">
 <h2>getChatMember()
         </h2>
-<pre>getChatMember(\TgBotApi\BotApiBase\Method\GetChatMemberMethod $method) : \TgBotApi\BotApiBase\Type\ChatMemberType</pre>
+<pre>getChatMember(\TgBotApi\BotApiBase\Method\GetChatMemberMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetChatMemberMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\ChatMemberType</code></div>
 </div></div>
 </div>
 <a id="method_getChatMembersCount"></a><div class="element clickable method public method_getChatMembersCount inherited" data-toggle="collapse" data-target=".method_getChatMembersCount .collapse" title="public">
 <h2>getChatMembersCount()
         </h2>
-<pre>getChatMembersCount(\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod $method) : integer</pre>
+<pre>getChatMembersCount(\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetChatMembersCountMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>integer</code></div>
 </div></div>
 </div>
 <a id="method_getFile"></a><div class="element clickable method public method_getFile inherited" data-toggle="collapse" data-target=".method_getFile .collapse" title="public">
 <h2>getFile()
         </h2>
-<pre>getFile(\TgBotApi\BotApiBase\Method\GetFileMethod $method) : \TgBotApi\BotApiBase\Type\FileType</pre>
+<pre>getFile(\TgBotApi\BotApiBase\Method\GetFileMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetFileMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\FileType</code></div>
 </div></div>
 </div>
 <a id="method_getGameHighScores"></a><div class="element clickable method public method_getGameHighScores inherited" data-toggle="collapse" data-target=".method_getGameHighScores .collapse" title="public">
@@ -535,10 +511,7 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetGameHighScoresMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
@@ -551,43 +524,51 @@
 <a id="method_getMe"></a><div class="element clickable method public method_getMe inherited" data-toggle="collapse" data-target=".method_getMe .collapse" title="public">
 <h2>getMe()
         </h2>
-<pre>getMe(\TgBotApi\BotApiBase\Method\GetMeMethod $method) : \TgBotApi\BotApiBase\Type\UserType</pre>
+<pre>getMe(\TgBotApi\BotApiBase\Method\GetMeMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetMeMethod</code>
+<div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
+<td></td>
+</tr></table>
+</div></div>
 </div>
+<a id="method_getMyCommands"></a><div class="element clickable method public method_getMyCommands inherited" data-toggle="collapse" data-target=".method_getMyCommands .collapse" title="public">
+<h2>getMyCommands()
+        </h2>
+<pre>getMyCommands(\TgBotApi\BotApiBase\Method\GetMyCommandsMethod $method) : mixed</pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
 <h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\UserType</code></div>
+<div class="subelement response"><code>mixed</code></div>
 </div></div>
 </div>
 <a id="method_getStickerSet"></a><div class="element clickable method public method_getStickerSet inherited" data-toggle="collapse" data-target=".method_getStickerSet .collapse" title="public">
 <h2>getStickerSet()
         </h2>
-<pre>getStickerSet(\TgBotApi\BotApiBase\Method\GetStickerSetMethod $method) : \TgBotApi\BotApiBase\Type\StickerSetType</pre>
+<pre>getStickerSet(\TgBotApi\BotApiBase\Method\GetStickerSetMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetStickerSetMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\StickerSetType</code></div>
 </div></div>
 </div>
 <a id="method_getUpdates"></a><div class="element clickable method public method_getUpdates inherited" data-toggle="collapse" data-target=".method_getUpdates .collapse" title="public">
@@ -598,10 +579,7 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetUpdatesMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
@@ -614,43 +592,33 @@
 <a id="method_getUserProfilePhotos"></a><div class="element clickable method public method_getUserProfilePhotos inherited" data-toggle="collapse" data-target=".method_getUserProfilePhotos .collapse" title="public">
 <h2>getUserProfilePhotos()
         </h2>
-<pre>getUserProfilePhotos(\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod $method) : \TgBotApi\BotApiBase\Type\UserProfilePhotosType</pre>
+<pre>getUserProfilePhotos(\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetUserProfilePhotosMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\UserProfilePhotosType</code></div>
 </div></div>
 </div>
 <a id="method_getWebhookInfo"></a><div class="element clickable method public method_getWebhookInfo inherited" data-toggle="collapse" data-target=".method_getWebhookInfo .collapse" title="public">
 <h2>getWebhookInfo()
         </h2>
-<pre>getWebhookInfo(\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod $method) : \TgBotApi\BotApiBase\Type\WebhookInfoType</pre>
+<pre>getWebhookInfo(\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\GetWebhookInfoMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\WebhookInfoType</code></div>
 </div></div>
 </div>
 <a id="method_kick"></a><div class="element clickable method public method_kick inherited" data-toggle="collapse" data-target=".method_kick .collapse" title="public">
@@ -1017,7 +985,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-25T00:05:21+03:00.<br></footer></div>
+            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
 </div>
 </body>
 </html>

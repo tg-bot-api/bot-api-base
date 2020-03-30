@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">619</span></a></li>
+                <span class="label label-info">796</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">5</span></a></li>
+                <span class="label label-info">7</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -129,24 +129,15 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$requestFactory</h4>
-<code>\Psr\Http\Message\RequestFactoryInterface</code>
-</div>
-<div class="subelement argument">
-<h4>$streamFactory</h4>
-<code>\Psr\Http\Message\StreamFactoryInterface</code>
-</div>
-<div class="subelement argument">
-<h4>$client</h4>
-<code>\Psr\Http\Client\ClientInterface</code>
-</div>
+<div class="subelement argument"><h4>$requestFactory</h4></div>
+<div class="subelement argument"><h4>$streamFactory</h4></div>
+<div class="subelement argument"><h4>$client</h4></div>
 </div></div>
 </div>
 <a id="method_send"></a><div class="element clickable method public method_send " data-toggle="collapse" data-target=".method_send .collapse" title="public">
 <h2>send()
         </h2>
-<pre>send(string $method, \TgBotApi\BotApiBase\BotApiRequestInterface $apiRequest) : mixed</pre>
+<pre>send(\TgBotApi\BotApiBase\string $method, \TgBotApi\BotApiBase\BotApiRequestInterface $apiRequest) : mixed</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -155,14 +146,8 @@
 <td>\TgBotApi\BotApiBase\ApiClientInterface::send()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$apiRequest</h4>
-<code>\TgBotApi\BotApiBase\BotApiRequestInterface</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
+<div class="subelement argument"><h4>$apiRequest</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\Psr\Http\Client\ClientExceptionInterface</code></th>
@@ -175,7 +160,7 @@
 <a id="method_setBotKey"></a><div class="element clickable method public method_setBotKey " data-toggle="collapse" data-target=".method_setBotKey .collapse" title="public">
 <h2>setBotKey()
         </h2>
-<pre>setBotKey(string $botKey) </pre>
+<pre>setBotKey(\TgBotApi\BotApiBase\string $botKey) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -184,16 +169,13 @@
 <td>\TgBotApi\BotApiBase\ApiClientInterface::setBotKey()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$botKey</h4>
-<code>string</code>
-</div>
+<div class="subelement argument"><h4>$botKey</h4></div>
 </div></div>
 </div>
 <a id="method_setEndpoint"></a><div class="element clickable method public method_setEndpoint " data-toggle="collapse" data-target=".method_setEndpoint .collapse" title="public">
 <h2>setEndpoint()
         </h2>
-<pre>setEndpoint(string $endPoint) </pre>
+<pre>setEndpoint(\TgBotApi\BotApiBase\string $endPoint) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -202,16 +184,13 @@
 <td>\TgBotApi\BotApiBase\ApiClientInterface::setEndpoint()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$endPoint</h4>
-<code>string</code>
-</div>
+<div class="subelement argument"><h4>$endPoint</h4></div>
 </div></div>
 </div>
 <a id="method_createDataStream"></a><div class="element clickable method protected method_createDataStream " data-toggle="collapse" data-target=".method_createDataStream .collapse" title="protected">
 <h2>createDataStream()
         </h2>
-<pre>createDataStream($boundary, $name, $value) : string</pre>
+<pre>createDataStream($boundary, $name, $value) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -219,32 +198,25 @@
 <div class="subelement argument"><h4>$boundary</h4></div>
 <div class="subelement argument"><h4>$name</h4></div>
 <div class="subelement argument"><h4>$value</h4></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a id="method_createFileStream"></a><div class="element clickable method protected method_createFileStream " data-toggle="collapse" data-target=".method_createFileStream .collapse" title="protected">
 <h2>createFileStream()
         </h2>
-<pre>createFileStream($boundary, $name, \TgBotApi\BotApiBase\Type\InputFileType $file) : string</pre>
+<pre>createFileStream($boundary, $name, \TgBotApi\BotApiBase\Type\InputFileType $file) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$boundary</h4></div>
 <div class="subelement argument"><h4>$name</h4></div>
-<div class="subelement argument">
-<h4>$file</h4>
-<code>\TgBotApi\BotApiBase\Type\InputFileType</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement argument"><h4>$file</h4></div>
 </div></div>
 </div>
 <a id="method_createStreamBody"></a><div class="element clickable method protected method_createStreamBody " data-toggle="collapse" data-target=".method_createStreamBody .collapse" title="protected">
 <h2>createStreamBody()
         </h2>
-<pre>createStreamBody(mixed $boundary, \TgBotApi\BotApiBase\BotApiRequestInterface $request) : string</pre>
+<pre>createStreamBody(mixed $boundary, \TgBotApi\BotApiBase\BotApiRequestInterface $request) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -253,28 +225,18 @@
 <h4>$boundary</h4>
 <code>mixed</code>
 </div>
-<div class="subelement argument">
-<h4>$request</h4>
-<code>\TgBotApi\BotApiBase\BotApiRequestInterface</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement argument"><h4>$request</h4></div>
 </div></div>
 </div>
 <a id="method_generateUri"></a><div class="element clickable method protected method_generateUri " data-toggle="collapse" data-target=".method_generateUri .collapse" title="protected">
 <h2>generateUri()
         </h2>
-<pre>generateUri(string $method) : string</pre>
+<pre>generateUri(\TgBotApi\BotApiBase\string $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>string</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement argument"><h4>$method</h4></div>
 </div></div>
 </div>
 <h3>
@@ -336,7 +298,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-25T00:05:23+03:00.<br></footer></div>
+            generated on 2020-03-31T00:16:07+03:00.<br></footer></div>
 </div>
 </body>
 </html>

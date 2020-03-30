@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">619</span></a></li>
+                <span class="label label-info">796</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">5</span></a></li>
+                <span class="label label-info">7</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -72,6 +72,8 @@
         </span><pre>sendChatAction()</pre></a></li>
 <li class="method public "><a href="#method_sendContact" title="sendContact() :: "><span class="description">sendContact()
         </span><pre>sendContact()</pre></a></li>
+<li class="method public "><a href="#method_sendDice" title="sendDice() :: "><span class="description">sendDice()
+        </span><pre>sendDice()</pre></a></li>
 <li class="method public "><a href="#method_sendDocument" title="sendDocument() :: "><span class="description">sendDocument()
         </span><pre>sendDocument()</pre></a></li>
 <li class="method public "><a href="#method_sendGame" title="sendGame() :: "><span class="description">sendGame()
@@ -130,190 +132,161 @@
 <a id="method_send"></a><div class="element clickable method public method_send " data-toggle="collapse" data-target=".method_send .collapse" title="public">
 <h2>send()
         </h2>
-<pre>send(\TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>send(\TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendAnimation"></a><div class="element clickable method public method_sendAnimation " data-toggle="collapse" data-target=".method_sendAnimation .collapse" title="public">
 <h2>sendAnimation()
         </h2>
-<pre>sendAnimation(\TgBotApi\BotApiBase\Method\SendAnimationMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendAnimation(\TgBotApi\BotApiBase\Method\SendAnimationMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendAnimationMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendAudio"></a><div class="element clickable method public method_sendAudio " data-toggle="collapse" data-target=".method_sendAudio .collapse" title="public">
 <h2>sendAudio()
         </h2>
-<pre>sendAudio(\TgBotApi\BotApiBase\Method\SendAudioMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendAudio(\TgBotApi\BotApiBase\Method\SendAudioMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendAudioMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendChatAction"></a><div class="element clickable method public method_sendChatAction " data-toggle="collapse" data-target=".method_sendChatAction .collapse" title="public">
 <h2>sendChatAction()
         </h2>
-<pre>sendChatAction(\TgBotApi\BotApiBase\Method\SendChatActionMethod $method) : boolean</pre>
+<pre>sendChatAction(\TgBotApi\BotApiBase\Method\SendChatActionMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendChatActionMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_sendContact"></a><div class="element clickable method public method_sendContact " data-toggle="collapse" data-target=".method_sendContact .collapse" title="public">
 <h2>sendContact()
         </h2>
-<pre>sendContact(\TgBotApi\BotApiBase\Method\SendContactMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendContact(\TgBotApi\BotApiBase\Method\SendContactMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendContactMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
+</div></div>
+</div>
+<a id="method_sendDice"></a><div class="element clickable method public method_sendDice " data-toggle="collapse" data-target=".method_sendDice .collapse" title="public">
+<h2>sendDice()
+        </h2>
+<pre>sendDice(\TgBotApi\BotApiBase\Method\SendDiceMethod $method) </pre>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_sendDocument"></a><div class="element clickable method public method_sendDocument " data-toggle="collapse" data-target=".method_sendDocument .collapse" title="public">
 <h2>sendDocument()
         </h2>
-<pre>sendDocument(\TgBotApi\BotApiBase\Method\SendDocumentMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendDocument(\TgBotApi\BotApiBase\Method\SendDocumentMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendDocumentMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendGame"></a><div class="element clickable method public method_sendGame " data-toggle="collapse" data-target=".method_sendGame .collapse" title="public">
 <h2>sendGame()
         </h2>
-<pre>sendGame(\TgBotApi\BotApiBase\Method\SendGameMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendGame(\TgBotApi\BotApiBase\Method\SendGameMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendGameMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendInvoice"></a><div class="element clickable method public method_sendInvoice " data-toggle="collapse" data-target=".method_sendInvoice .collapse" title="public">
 <h2>sendInvoice()
         </h2>
-<pre>sendInvoice(\TgBotApi\BotApiBase\Method\SendInvoiceMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendInvoice(\TgBotApi\BotApiBase\Method\SendInvoiceMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendInvoiceMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendLocation"></a><div class="element clickable method public method_sendLocation " data-toggle="collapse" data-target=".method_sendLocation .collapse" title="public">
 <h2>sendLocation()
         </h2>
-<pre>sendLocation(\TgBotApi\BotApiBase\Method\SendLocationMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendLocation(\TgBotApi\BotApiBase\Method\SendLocationMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendLocationMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendMediaGroup"></a><div class="element clickable method public method_sendMediaGroup " data-toggle="collapse" data-target=".method_sendMediaGroup .collapse" title="public">
@@ -324,10 +297,7 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
@@ -340,169 +310,129 @@
 <a id="method_sendMessage"></a><div class="element clickable method public method_sendMessage " data-toggle="collapse" data-target=".method_sendMessage .collapse" title="public">
 <h2>sendMessage()
         </h2>
-<pre>sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendMessage(\TgBotApi\BotApiBase\Method\SendMessageMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendMessageMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendPhoto"></a><div class="element clickable method public method_sendPhoto " data-toggle="collapse" data-target=".method_sendPhoto .collapse" title="public">
 <h2>sendPhoto()
         </h2>
-<pre>sendPhoto(\TgBotApi\BotApiBase\Method\SendPhotoMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendPhoto(\TgBotApi\BotApiBase\Method\SendPhotoMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendPhotoMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendPoll"></a><div class="element clickable method public method_sendPoll " data-toggle="collapse" data-target=".method_sendPoll .collapse" title="public">
 <h2>sendPoll()
         </h2>
-<pre>sendPoll(\TgBotApi\BotApiBase\Method\SendPollMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendPoll(\TgBotApi\BotApiBase\Method\SendPollMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendPollMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendSticker"></a><div class="element clickable method public method_sendSticker " data-toggle="collapse" data-target=".method_sendSticker .collapse" title="public">
 <h2>sendSticker()
         </h2>
-<pre>sendSticker(\TgBotApi\BotApiBase\Method\SendStickerMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendSticker(\TgBotApi\BotApiBase\Method\SendStickerMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendStickerMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendVenue"></a><div class="element clickable method public method_sendVenue " data-toggle="collapse" data-target=".method_sendVenue .collapse" title="public">
 <h2>sendVenue()
         </h2>
-<pre>sendVenue(\TgBotApi\BotApiBase\Method\SendVenueMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendVenue(\TgBotApi\BotApiBase\Method\SendVenueMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendVenueMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendVideo"></a><div class="element clickable method public method_sendVideo " data-toggle="collapse" data-target=".method_sendVideo .collapse" title="public">
 <h2>sendVideo()
         </h2>
-<pre>sendVideo(\TgBotApi\BotApiBase\Method\SendVideoMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendVideo(\TgBotApi\BotApiBase\Method\SendVideoMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendVideoMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendVideoNote"></a><div class="element clickable method public method_sendVideoNote " data-toggle="collapse" data-target=".method_sendVideoNote .collapse" title="public">
 <h2>sendVideoNote()
         </h2>
-<pre>sendVideoNote(\TgBotApi\BotApiBase\Method\SendVideoNoteMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendVideoNote(\TgBotApi\BotApiBase\Method\SendVideoNoteMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendVideoNoteMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 <a id="method_sendVoice"></a><div class="element clickable method public method_sendVoice " data-toggle="collapse" data-target=".method_sendVoice .collapse" title="public">
 <h2>sendVoice()
         </h2>
-<pre>sendVoice(\TgBotApi\BotApiBase\Method\SendVoiceMethod $method) : \TgBotApi\BotApiBase\Type\MessageType</pre>
+<pre>sendVoice(\TgBotApi\BotApiBase\Method\SendVoiceMethod $method) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendVoiceMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\MessageType</code></div>
 </div></div>
 </div>
 </div>
@@ -512,7 +442,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-25T00:05:21+03:00.<br></footer></div>
+            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
 </div>
 </body>
 </html>
