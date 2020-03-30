@@ -45,4 +45,11 @@ class StickerSetType
      * @var StickerType[]
      */
     public $stickers;
+
+    /**
+     * Optional. Sticker set thumbnail in the .WEBP or .TGS format.
+     *
+     * @var PhotoSizeType|null
+     */
+    public $thumb;
 }

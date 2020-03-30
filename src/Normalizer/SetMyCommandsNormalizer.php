@@ -7,9 +7,9 @@ namespace TgBotApi\BotApiBase\Normalizer;
 use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
-use TgBotApi\BotApiBase\Method\SendPollMethod;
+use TgBotApi\BotApiBase\Method\SetMyCommandsMethod;
 
-class PollNormalizer implements NormalizerInterface
+class SetMyCommandsNormalizer implements NormalizerInterface
 {
     /**
      * @var NormalizerInterface
@@ -25,8 +25,8 @@ class PollNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param SendPollMethod $topic
-     * @param null           $format
+     * @param SetMyCommandsMethod $topic
+     * @param null                $format
      *
      * @throws ExceptionInterface
      *
@@ -39,7 +39,7 @@ class PollNormalizer implements NormalizerInterface
             $this->objectNormalizer,
         ]);
 
-        $topic->options = \json_encode($topic->options);
+        $topic->commands = \json_encode($topic->commands);
 
         return $serializer->normalize($topic, null, ['skip_null_values' => true]);
     }
@@ -50,6 +50,6 @@ class PollNormalizer implements NormalizerInterface
      */
     public function supportsNormalization($data, $format = null): bool
     {
-        return $data instanceof SendPollMethod;
+        return $data instanceof SetMyCommandsMethod;
     }
 }

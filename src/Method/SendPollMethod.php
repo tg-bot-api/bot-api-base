@@ -30,7 +30,7 @@ class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface
     public $question;
 
     /**
-     * List of answer options, 2-10 strings 1-100 characters each.
+     * A JSON-serialized list of answer options, 2-10 strings 1-100 characters each.
      *
      * @var string[]
      */
