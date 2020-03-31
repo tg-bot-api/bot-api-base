@@ -19,6 +19,7 @@ class AddStickerToSetMethod implements AddMethodAliasInterface
 {
     use FillFromArrayTrait;
     use EmojisVariableTrait;
+
     /**
      * User identifier of sticker set owner.
      *
@@ -34,15 +35,23 @@ class AddStickerToSetMethod implements AddMethodAliasInterface
     public $name;
 
     /**
-     * Png image with the sticker, must be up to 512 kilobytes in size,
+     * Optional. Png image with the sticker, must be up to 512 kilobytes in size,
      * dimensions must not exceed 512px, and either width or height must be exactly 512px.
      * Pass a file_id as a String to send a file that already exists on the Telegram servers,
      * pass an HTTP URL as a String for Telegram to get a file from the Internet,
      * or upload a new one using multipart/form-data.
      *
-     * @var InputFileType|string
+     * @var InputFileType|string|null
      */
     public $pngSticker;
+
+    /**
+     * Optional. TGS animation with the sticker, uploaded using multipart/form-data.
+     * See https://core.telegram.org/animated_stickers#technical-requirements for technical requirements.
+     *
+     * @var InputFileType|null
+     */
+    public $tgsSticker;
 
     /**
      * Optional. A JSON-serialized object for position where the mask should be placed on faces.
@@ -52,15 +61,12 @@ class AddStickerToSetMethod implements AddMethodAliasInterface
     public $maskPosition;
 
     /**
-     * @param int                  $userId
-     * @param string               $name
      * @param InputFileType|string $pngSticker
-     * @param string               $emojis
-     * @param array|null           $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      *
-     * @return AddStickerToSetMethod
+     * @deprecated
+     * @see AddStickerToSetMethod::createStatic()
      */
     public static function create(
         int $userId,
@@ -69,10 +75,55 @@ class AddStickerToSetMethod implements AddMethodAliasInterface
         string $emojis,
         array $data = null
     ): AddStickerToSetMethod {
+        return static::createStatic($userId, $name, $pngSticker, $emojis, $data);
+    }
+
+    /**
+     * @param InputFileType|string $pngSticker
+     *
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     */
+    public static function createStatic(
+        int $userId,
+        string $name,
+        $pngSticker,
+        string $emojis,
+        array $data = null
+    ): AddStickerToSetMethod {
+        $instance = static::createBase($userId, $name, $emojis, $data);
+        $instance->pngSticker = $pngSticker;
+
+        return $instance;
+    }
+
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     */
+    public static function createAnimated(
+        int $userId,
+        string $name,
+        InputFileType $tgsSticker,
+        string $emojis,
+        array $data = null
+    ): AddStickerToSetMethod {
+        $instance = static::createBase($userId, $name, $emojis, $data);
+        $instance->tgsSticker = $tgsSticker;
+
+        return $instance;
+    }
+
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     */
+    private static function createBase(
+        int $userId,
+        string $name,
+        string $emojis,
+        array $data = null
+    ): AddStickerToSetMethod {
         $instance = new static();
         $instance->userId = $userId;
         $instance->name = $name;
-        $instance->pngSticker = $pngSticker;
         $instance->emojis = $emojis;
         if ($data) {
             $instance->fill($data);

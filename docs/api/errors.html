@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">619</span></a></li>
+                <span class="label label-info">796</span></a></li>
 <li><a href="markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">5</span></a></li>
+                <span class="label label-info">7</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -182,6 +182,7 @@
 <li><a href="#Type/PhotoSizeType.php"><i class="icon-file"></i>Type/PhotoSizeType.php</a></li>
 <li><a href="#Type/ChatType.php"><i class="icon-file"></i>Type/ChatType.php</a></li>
 <li><a href="#Type/InvoiceType.php"><i class="icon-file"></i>Type/InvoiceType.php</a></li>
+<li><a href="#Type/Poll/KeyboardButtonPollType.php"><i class="icon-file"></i>Type/Poll/KeyboardButtonPollType.php</a></li>
 <li><a href="#Type/EncryptedPassportElementType.php"><i class="icon-file"></i>Type/EncryptedPassportElementType.php</a></li>
 <li><a href="#Method/Interfaces/RestrictMethodAliasInterface.php"><i class="icon-file"></i>Method/Interfaces/RestrictMethodAliasInterface.php</a></li>
 <li><a href="#Type/ChatMemberType.php"><i class="icon-file"></i>Type/ChatMemberType.php</a></li>
@@ -275,6 +276,7 @@
 <li><a href="#Type/MaskPositionType.php"><i class="icon-file"></i>Type/MaskPositionType.php</a></li>
 <li><a href="#Method/Interfaces/AddMethodAliasInterface.php"><i class="icon-file"></i>Method/Interfaces/AddMethodAliasInterface.php</a></li>
 <li><a href="#Type/PollType.php"><i class="icon-file"></i>Type/PollType.php</a></li>
+<li><a href="#Type/PollAnswerType.php"><i class="icon-file"></i>Type/PollAnswerType.php</a></li>
 <li><a href="#Type/VideoType.php"><i class="icon-file"></i>Type/VideoType.php</a></li>
 <li><a href="#Method/Interfaces/EncryptedPassportElementTypes.php"><i class="icon-file"></i>Method/Interfaces/EncryptedPassportElementTypes.php</a></li>
 <li><a href="#Method/ForwardMessageMethod.php"><i class="icon-file"></i>Method/ForwardMessageMethod.php</a></li>
@@ -288,11 +290,17 @@
 <li><a href="#Type/VenueType.php"><i class="icon-file"></i>Type/VenueType.php</a></li>
 <li><a href="#Method/Interfaces/CreateMethodAliasInterface.php"><i class="icon-file"></i>Method/Interfaces/CreateMethodAliasInterface.php</a></li>
 <li><a href="#ApiClientInterface.php"><i class="icon-file"></i>ApiClientInterface.php</a></li>
+<li><a href="#Interfaces/PollTypeInterface.php"><i class="icon-file"></i>Interfaces/PollTypeInterface.php</a></li>
 <li><a href="#Type/InlineQueryResult/InlineQueryResultArticleType.php"><i class="icon-file"></i>Type/InlineQueryResult/InlineQueryResultArticleType.php</a></li>
 <li><a href="#Type/GameHighScoreType.php"><i class="icon-file"></i>Type/GameHighScoreType.php</a></li>
-<li><a href="#Type/Poll/KeyboardButtonPollType.php"><i class="icon-file"></i>Type/Poll/KeyboardButtonPollType.php</a></li>
-<li><a href="#Type/PollAnswerType.php"><i class="icon-file"></i>Type/PollAnswerType.php</a></li>
-<li><a href="#Interfaces/PollTypeInterface.php"><i class="icon-file"></i>Interfaces/PollTypeInterface.php</a></li>
+<li><a href="#Type/BotCommandType.php"><i class="icon-file"></i>Type/BotCommandType.php</a></li>
+<li><a href="#Type/DiceType.php"><i class="icon-file"></i>Type/DiceType.php</a></li>
+<li><a href="#Method/SendDiceMethod.php"><i class="icon-file"></i>Method/SendDiceMethod.php</a></li>
+<li><a href="#Method/SetMyCommandsMethod.php"><i class="icon-file"></i>Method/SetMyCommandsMethod.php</a></li>
+<li><a href="#Method/SetStickerSetThumbMethod.php"><i class="icon-file"></i>Method/SetStickerSetThumbMethod.php</a></li>
+<li><a href="#Method/GetMyCommandsMethod.php"><i class="icon-file"></i>Method/GetMyCommandsMethod.php</a></li>
+<li><a href="#Normalizer/SetMyCommandsNormalizer.php"><i class="icon-file"></i>Normalizer/SetMyCommandsNormalizer.php</a></li>
+<li><a href="#Normalizer/PollNormalizer.php"><i class="icon-file"></i>Normalizer/PollNormalizer.php</a></li>
 </ul></div>
 <div class="span8">
 <ul class="breadcrumb">
@@ -1304,7 +1312,7 @@
 </div>
 <div class="package-contents">
 <a name="Traits/SendMethodTrait.php" id="Traits/SendMethodTrait.php"></a><h3>
-<i class="icon-file"></i>Traits/SendMethodTrait.php<small style="float: right;padding-right: 10px;">19</small>
+<i class="icon-file"></i>Traits/SendMethodTrait.php<small style="float: right;padding-right: 10px;">39</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -1320,92 +1328,192 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>40</td>
+<td>39</td>
+<td>Argument $method is missing from the Docblock of sendMediaGroup</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>39</td>
 <td>No summary for method sendMediaGroup()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>49</td>
+<td>44</td>
+<td>Argument $method is missing from the Docblock of send</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>44</td>
 <td>No summary for method send()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>58</td>
+<td>49</td>
+<td>Argument $method is missing from the Docblock of sendChatAction</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>49</td>
 <td>No summary for method sendChatAction()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>67</td>
+<td>54</td>
+<td>Argument $method is missing from the Docblock of sendPhoto</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>54</td>
 <td>No summary for method sendPhoto()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>79</td>
+<td>62</td>
+<td>Argument $method is missing from the Docblock of sendAudio</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>62</td>
 <td>No summary for method sendAudio()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>91</td>
+<td>70</td>
+<td>Argument $method is missing from the Docblock of sendDocument</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>70</td>
 <td>No summary for method sendDocument()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>103</td>
+<td>78</td>
+<td>Argument $method is missing from the Docblock of sendVideo</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>78</td>
 <td>No summary for method sendVideo()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>115</td>
+<td>86</td>
+<td>Argument $method is missing from the Docblock of sendAnimation</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
 <td>No summary for method sendAnimation()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>127</td>
+<td>94</td>
+<td>Argument $method is missing from the Docblock of sendVoice</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>94</td>
 <td>No summary for method sendVoice()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>139</td>
+<td>102</td>
+<td>Argument $method is missing from the Docblock of sendVideoNote</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
 <td>No summary for method sendVideoNote()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>151</td>
+<td>110</td>
+<td>Argument $method is missing from the Docblock of sendGame</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>110</td>
 <td>No summary for method sendGame()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>163</td>
+<td>118</td>
+<td>Argument $method is missing from the Docblock of sendInvoice</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>118</td>
 <td>No summary for method sendInvoice()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>175</td>
+<td>126</td>
+<td>Argument $method is missing from the Docblock of sendLocation</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>126</td>
 <td>No summary for method sendLocation()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>187</td>
+<td>134</td>
+<td>Argument $method is missing from the Docblock of sendVenue</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>134</td>
 <td>No summary for method sendVenue()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>199</td>
+<td>142</td>
+<td>Argument $method is missing from the Docblock of sendContact</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>142</td>
 <td>No summary for method sendContact()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>211</td>
+<td>150</td>
+<td>Argument $method is missing from the Docblock of sendDice</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>150</td>
+<td>No summary for method sendDice()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>158</td>
+<td>Argument $method is missing from the Docblock of sendSticker</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>158</td>
 <td>No summary for method sendSticker()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>223</td>
+<td>166</td>
+<td>Argument $method is missing from the Docblock of sendMessage</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>166</td>
 <td>No summary for method sendMessage()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>235</td>
+<td>174</td>
+<td>Argument $method is missing from the Docblock of sendPoll</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>174</td>
 <td>No summary for method sendPoll()</td>
 </tr>
 </tbody>
@@ -1832,7 +1940,7 @@
 </div>
 <div class="package-contents">
 <a name="Traits/GetMethodTrait.php" id="Traits/GetMethodTrait.php"></a><h3>
-<i class="icon-file"></i>Traits/GetMethodTrait.php<small style="float: right;padding-right: 10px;">14</small>
+<i class="icon-file"></i>Traits/GetMethodTrait.php<small style="float: right;padding-right: 10px;">30</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -1848,67 +1956,147 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>30</td>
+<td>32</td>
 <td>No summary for trait \TgBotApi\BotApiBase\Traits\GetMethodTrait</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>40</td>
+<td>41</td>
+<td>Name of argument $method does not match with the DocBlock's name $type in call()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>41</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $method in call()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>41</td>
+<td>Argument $type is missing from the Docblock of call</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>41</td>
 <td>No summary for method call()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>49</td>
+<td>48</td>
+<td>Argument $method is missing from the Docblock of getUpdates</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>48</td>
 <td>No summary for method getUpdates()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>61</td>
+<td>56</td>
+<td>Argument $method is missing from the Docblock of getMe</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>56</td>
 <td>No summary for method getMe()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>73</td>
+<td>66</td>
+<td>Argument $method is missing from the Docblock of getMyCommands</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>66</td>
+<td>No summary for method getMyCommands()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>74</td>
+<td>Argument $method is missing from the Docblock of getUserProfilePhotos</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>74</td>
 <td>No summary for method getUserProfilePhotos()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>85</td>
+<td>82</td>
+<td>Argument $method is missing from the Docblock of getWebhookInfo</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>82</td>
 <td>No summary for method getWebhookInfo()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>97</td>
+<td>90</td>
+<td>Argument $method is missing from the Docblock of getChatMembersCount</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
 <td>No summary for method getChatMembersCount()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>109</td>
+<td>98</td>
+<td>Argument $method is missing from the Docblock of getChat</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>98</td>
 <td>No summary for method getChat()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>121</td>
+<td>108</td>
+<td>Argument $method is missing from the Docblock of getChatAdministrators</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
 <td>No summary for method getChatAdministrators()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>133</td>
+<td>116</td>
+<td>Argument $method is missing from the Docblock of getChatMember</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>116</td>
 <td>No summary for method getChatMember()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>145</td>
+<td>126</td>
+<td>Argument $method is missing from the Docblock of getGameHighScores</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>126</td>
 <td>No summary for method getGameHighScores()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>157</td>
+<td>134</td>
+<td>Argument $method is missing from the Docblock of getStickerSet</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>134</td>
 <td>No summary for method getStickerSet()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>169</td>
+<td>142</td>
+<td>Argument $method is missing from the Docblock of getFile</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>142</td>
 <td>No summary for method getFile()</td>
 </tr>
 </tbody>
@@ -1959,17 +2147,17 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>328</td>
+<td>342</td>
 <td>No summary for property $invoice</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>336</td>
+<td>350</td>
 <td>No summary for property $successfulPayment</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>344</td>
+<td>358</td>
 <td>No summary for property $connectedWebsite</td>
 </tr>
 </tbody>
@@ -1977,7 +2165,7 @@
 </div>
 <div class="package-contents">
 <a name="Method/AddStickerToSetMethod.php" id="Method/AddStickerToSetMethod.php"></a><h3>
-<i class="icon-file"></i>Method/AddStickerToSetMethod.php<small style="float: right;padding-right: 10px;">2</small>
+<i class="icon-file"></i>Method/AddStickerToSetMethod.php<small style="float: right;padding-right: 10px;">38</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -1993,8 +2181,188 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>65</td>
+<td>71</td>
+<td>Name of argument $userId does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $userId in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Argument $name is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Name of argument $name does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Argument $pngSticker is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Argument $emojis is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Name of argument $emojis does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $emojis in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Argument $data is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>Name of argument $data does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $data in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>71</td>
 <td>No summary for method create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Name of argument $userId does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $userId in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Argument $name is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Name of argument $name does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Argument $pngSticker is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Argument $emojis is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Name of argument $emojis does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $emojis in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Argument $data is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>Name of argument $data does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $data in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>86</td>
+<td>No summary for method createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>Argument $userId is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>Argument $name is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>Argument $tgsSticker is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>Argument $emojis is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>Argument $data is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>102</td>
+<td>No summary for method createAnimated()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>118</td>
+<td>Argument $userId is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>118</td>
+<td>Argument $name is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>118</td>
+<td>Argument $emojis is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>118</td>
+<td>Argument $data is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>118</td>
+<td>No summary for method createBase()</td>
 </tr>
 </tbody>
 </table></div>
@@ -3680,6 +4048,35 @@
 </table></div>
 </div>
 <div class="package-contents">
+<a name="Type/Poll/KeyboardButtonPollType.php" id="Type/Poll/KeyboardButtonPollType.php"></a><h3>
+<i class="icon-file"></i>Type/Poll/KeyboardButtonPollType.php<small style="float: right;padding-right: 10px;">3</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>26</td>
+<td>Argument $type is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>26</td>
+<td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
 <a name="Type/EncryptedPassportElementType.php" id="Type/EncryptedPassportElementType.php"></a><h3>
 <i class="icon-file"></i>Type/EncryptedPassportElementType.php<small style="float: right;padding-right: 10px;">1</small>
 </h3>
@@ -3756,7 +4153,7 @@
 </div>
 <div class="package-contents">
 <a name="Normalizer/UserProfilePhotosNormalizer.php" id="Normalizer/UserProfilePhotosNormalizer.php"></a><h3>
-<i class="icon-file"></i>Normalizer/UserProfilePhotosNormalizer.php<small style="float: right;padding-right: 10px;">5</small>
+<i class="icon-file"></i>Normalizer/UserProfilePhotosNormalizer.php<small style="float: right;padding-right: 10px;">10</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -3782,12 +4179,37 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>51</td>
+<td>32</td>
+<td>Argument $objectNormalizer is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>32</td>
+<td>Argument $arrayDenormalizer is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>45</td>
+<td>Argument $context is missing from the Docblock of denormalize</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>45</td>
+<td>Name of argument $context does not match with the DocBlock's name $format in denormalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>45</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $context in denormalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>45</td>
 <td>No summary for method denormalize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>66</td>
+<td>58</td>
 <td>No summary for method supportsDenormalization()</td>
 </tr>
 </tbody>
@@ -3914,7 +4336,7 @@
 </div>
 <div class="package-contents">
 <a name="Method/CreateNewStickerSetMethod.php" id="Method/CreateNewStickerSetMethod.php"></a><h3>
-<i class="icon-file"></i>Method/CreateNewStickerSetMethod.php<small style="float: right;padding-right: 10px;">1</small>
+<i class="icon-file"></i>Method/CreateNewStickerSetMethod.php<small style="float: right;padding-right: 10px;">43</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -3922,11 +4344,223 @@
 <th>Line</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="error">
+<tbody>
+<tr class="error">
 <td>error</td>
 <td>0</td>
 <td>No summary was found for this file</td>
-</tr></tbody>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Name of argument $userId does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $userId in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Argument $name is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Name of argument $name does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Argument $title is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Name of argument $title does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $title in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Argument $pngSticker is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Argument $emojis is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Name of argument $emojis does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $emojis in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Argument $data is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>Name of argument $data does not match with the DocBlock's name $pngSticker in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>90</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $data in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Name of argument $userId does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $userId in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Argument $name is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Name of argument $name does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Argument $title is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Name of argument $title does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $title in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Argument $pngSticker is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Argument $emojis is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Name of argument $emojis does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $emojis in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Argument $data is missing from the Docblock of createStatic</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>Name of argument $data does not match with the DocBlock's name $pngSticker in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>108</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $data in createStatic()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>127</td>
+<td>Argument $userId is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>127</td>
+<td>Argument $name is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>127</td>
+<td>Argument $title is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>127</td>
+<td>Argument $tgsSticker is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>127</td>
+<td>Argument $emojis is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>127</td>
+<td>Argument $data is missing from the Docblock of createAnimated</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>144</td>
+<td>Argument $userId is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>144</td>
+<td>Argument $name is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>144</td>
+<td>Argument $title is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>144</td>
+<td>Argument $emojis is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>144</td>
+<td>Argument $data is missing from the Docblock of createBase</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>144</td>
+<td>No summary for method createBase()</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 <div class="package-contents">
@@ -5698,7 +6332,7 @@
 </div>
 <div class="package-contents">
 <a name="ApiClient.php" id="ApiClient.php"></a><h3>
-<i class="icon-file"></i>ApiClient.php<small style="float: right;padding-right: 10px;">13</small>
+<i class="icon-file"></i>ApiClient.php<small style="float: right;padding-right: 10px;">27</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -5739,37 +6373,107 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>68</td>
+<td>46</td>
+<td>Argument $requestFactory is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>46</td>
+<td>Argument $streamFactory is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>46</td>
+<td>Argument $client is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>61</td>
+<td>Argument $method is missing from the Docblock of send</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>61</td>
+<td>Argument $apiRequest is missing from the Docblock of send</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>61</td>
 <td>No summary for method send()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>88</td>
+<td>78</td>
+<td>Argument $botKey is missing from the Docblock of setBotKey</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>78</td>
 <td>No summary for method setBotKey()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>96</td>
+<td>83</td>
+<td>Argument $endPoint is missing from the Docblock of setEndpoint</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>83</td>
 <td>No summary for method setEndpoint()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>106</td>
+<td>88</td>
+<td>Argument $method is missing from the Docblock of generateUri</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>88</td>
 <td>No summary for method generateUri()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>122</td>
+<td>101</td>
+<td>Argument $request is missing from the Docblock of createStreamBody</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>101</td>
+<td>Name of argument $request does not match with the DocBlock's name $boundary in createStreamBody()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>101</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $request in createStreamBody()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>101</td>
 <td>No summary for method createStreamBody()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>144</td>
+<td>120</td>
+<td>Argument $file is missing from the Docblock of createFileStream</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>120</td>
+<td>Name of argument $file does not match with the DocBlock's name $name in createFileStream()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>120</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $file in createFileStream()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>120</td>
 <td>No summary for method createFileStream()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>168</td>
+<td>142</td>
 <td>No summary for method createDataStream()</td>
 </tr>
 </tbody>
@@ -5842,7 +6546,7 @@
 </div>
 <div class="package-contents">
 <a name="Traits/SetMethodTrait.php" id="Traits/SetMethodTrait.php"></a><h3>
-<i class="icon-file"></i>Traits/SetMethodTrait.php<small style="float: right;padding-right: 10px;">23</small>
+<i class="icon-file"></i>Traits/SetMethodTrait.php<small style="float: right;padding-right: 10px;">27</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -5858,112 +6562,132 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>28</td>
+<td>30</td>
 <td>Argument $method is missing from the Docblock of set</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>28</td>
+<td>30</td>
 <td>No summary for method set()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>33</td>
+<td>35</td>
 <td>Argument $method is missing from the Docblock of setChatDescription</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>33</td>
+<td>35</td>
 <td>No summary for method setChatDescription()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>41</td>
+<td>43</td>
 <td>Argument $method is missing from the Docblock of setChatPhoto</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>41</td>
+<td>43</td>
 <td>No summary for method setChatPhoto()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>49</td>
+<td>51</td>
 <td>Argument $method is missing from the Docblock of setChatAdministratorCustomTitle</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>49</td>
+<td>51</td>
 <td>No summary for method setChatAdministratorCustomTitle()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>59</td>
 <td>Argument $method is missing from the Docblock of setChatStickerSet</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>57</td>
+<td>59</td>
 <td>No summary for method setChatStickerSet()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>65</td>
+<td>67</td>
 <td>Argument $method is missing from the Docblock of setChatTitle</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>65</td>
+<td>67</td>
 <td>No summary for method setChatTitle()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>73</td>
+<td>75</td>
+<td>Argument $method is missing from the Docblock of setMyCommands</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>75</td>
+<td>No summary for method setMyCommands()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>83</td>
 <td>Argument $method is missing from the Docblock of setGameScore</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>73</td>
+<td>83</td>
 <td>No summary for method setGameScore()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>81</td>
+<td>91</td>
 <td>Argument $method is missing from the Docblock of setStickerPositionInSet</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>81</td>
+<td>91</td>
 <td>No summary for method setStickerPositionInSet()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>89</td>
+<td>99</td>
+<td>Argument $method is missing from the Docblock of setStickerSetThumb</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>99</td>
+<td>No summary for method setStickerSetThumb()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>107</td>
 <td>Argument $method is missing from the Docblock of setWebhook</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>89</td>
+<td>107</td>
 <td>No summary for method setWebhook()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>97</td>
+<td>115</td>
 <td>Argument $method is missing from the Docblock of setPassportDataErrors</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>97</td>
+<td>115</td>
 <td>No summary for method setPassportDataErrors()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>105</td>
+<td>123</td>
 <td>Argument $method is missing from the Docblock of setChatPermissions</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>105</td>
+<td>123</td>
 <td>No summary for method setChatPermissions()</td>
 </tr>
 </tbody>
@@ -6004,12 +6728,12 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>37</td>
+<td>39</td>
 <td>No summary for method denormalize()</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>64</td>
+<td>66</td>
 <td>No summary for method normalize()</td>
 </tr>
 </tbody>
@@ -6131,6 +6855,23 @@
 <div class="package-contents">
 <a name="Type/PollType.php" id="Type/PollType.php"></a><h3>
 <i class="icon-file"></i>Type/PollType.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Type/PollAnswerType.php" id="Type/PollAnswerType.php"></a><h3>
+<i class="icon-file"></i>Type/PollAnswerType.php<small style="float: right;padding-right: 10px;">1</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -6449,6 +7190,23 @@
 </table></div>
 </div>
 <div class="package-contents">
+<a name="Interfaces/PollTypeInterface.php" id="Interfaces/PollTypeInterface.php"></a><h3>
+<i class="icon-file"></i>Interfaces/PollTypeInterface.php<small style="float: right;padding-right: 10px;">1</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody><tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr></tbody>
+</table></div>
+</div>
+<div class="package-contents">
 <a name="Type/InlineQueryResult/InlineQueryResultArticleType.php" id="Type/InlineQueryResult/InlineQueryResultArticleType.php"></a><h3>
 <i class="icon-file"></i>Type/InlineQueryResult/InlineQueryResultArticleType.php<small style="float: right;padding-right: 10px;">2</small>
 </h3>
@@ -6490,8 +7248,8 @@
 </table></div>
 </div>
 <div class="package-contents">
-<a name="Type/Poll/KeyboardButtonPollType.php" id="Type/Poll/KeyboardButtonPollType.php"></a><h3>
-<i class="icon-file"></i>Type/Poll/KeyboardButtonPollType.php<small style="float: right;padding-right: 10px;">3</small>
+<a name="Type/BotCommandType.php" id="Type/BotCommandType.php"></a><h3>
+<i class="icon-file"></i>Type/BotCommandType.php<small style="float: right;padding-right: 10px;">4</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -6507,20 +7265,25 @@
 </tr>
 <tr class="error">
 <td>error</td>
-<td>26</td>
-<td>Argument $type is missing from the Docblock of create</td>
+<td>30</td>
+<td>Argument $command is missing from the Docblock of create</td>
 </tr>
 <tr class="error">
 <td>error</td>
-<td>26</td>
+<td>30</td>
+<td>Argument $description is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>30</td>
 <td>No summary for method create()</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 <div class="package-contents">
-<a name="Type/PollAnswerType.php" id="Type/PollAnswerType.php"></a><h3>
-<i class="icon-file"></i>Type/PollAnswerType.php<small style="float: right;padding-right: 10px;">1</small>
+<a name="Type/DiceType.php" id="Type/DiceType.php"></a><h3>
+<i class="icon-file"></i>Type/DiceType.php<small style="float: right;padding-right: 10px;">1</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -6536,8 +7299,8 @@
 </table></div>
 </div>
 <div class="package-contents">
-<a name="Interfaces/PollTypeInterface.php" id="Interfaces/PollTypeInterface.php"></a><h3>
-<i class="icon-file"></i>Interfaces/PollTypeInterface.php<small style="float: right;padding-right: 10px;">1</small>
+<a name="Method/SendDiceMethod.php" id="Method/SendDiceMethod.php"></a><h3>
+<i class="icon-file"></i>Method/SendDiceMethod.php<small style="float: right;padding-right: 10px;">5</small>
 </h3>
 <div><table class="table markers table-bordered">
 <thead><tr>
@@ -6545,11 +7308,253 @@
 <th>Line</th>
 <th>Description</th>
 </tr></thead>
-<tbody><tr class="error">
+<tbody>
+<tr class="error">
 <td>error</td>
 <td>0</td>
 <td>No summary was found for this file</td>
-</tr></tbody>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>33</td>
+<td>Argument $data is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>33</td>
+<td>Name of argument $data does not match with the DocBlock's name $chatId in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>33</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $data in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>33</td>
+<td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Method/SetMyCommandsMethod.php" id="Method/SetMyCommandsMethod.php"></a><h3>
+<i class="icon-file"></i>Method/SetMyCommandsMethod.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>30</td>
+<td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Method/SetStickerSetThumbMethod.php" id="Method/SetStickerSetThumbMethod.php"></a><h3>
+<i class="icon-file"></i>Method/SetStickerSetThumbMethod.php<small style="float: right;padding-right: 10px;">8</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>Name of argument $name does not match with the DocBlock's name $thumb in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $name in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>Argument $userId is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>Name of argument $userId does not match with the DocBlock's name $thumb in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $userId in create()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>Argument $thumb is missing from the Docblock of create</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>52</td>
+<td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Method/GetMyCommandsMethod.php" id="Method/GetMyCommandsMethod.php"></a><h3>
+<i class="icon-file"></i>Method/GetMyCommandsMethod.php<small style="float: right;padding-right: 10px;">2</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>19</td>
+<td>No summary for method create()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Normalizer/SetMyCommandsNormalizer.php" id="Normalizer/SetMyCommandsNormalizer.php"></a><h3>
+<i class="icon-file"></i>Normalizer/SetMyCommandsNormalizer.php<small style="float: right;padding-right: 10px;">9</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>12</td>
+<td>No summary for class \TgBotApi\BotApiBase\Normalizer\SetMyCommandsNormalizer</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>17</td>
+<td>No summary for property $objectNormalizer</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>22</td>
+<td>Argument $objectNormalizer is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>Argument $context is missing from the Docblock of normalize</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>Name of argument $context does not match with the DocBlock's name $format in normalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $context in normalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for method normalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>51</td>
+<td>No summary for method supportsNormalization()</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div class="package-contents">
+<a name="Normalizer/PollNormalizer.php" id="Normalizer/PollNormalizer.php"></a><h3>
+<i class="icon-file"></i>Normalizer/PollNormalizer.php<small style="float: right;padding-right: 10px;">9</small>
+</h3>
+<div><table class="table markers table-bordered">
+<thead><tr>
+<th>Type</th>
+<th>Line</th>
+<th>Description</th>
+</tr></thead>
+<tbody>
+<tr class="error">
+<td>error</td>
+<td>0</td>
+<td>No summary was found for this file</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>12</td>
+<td>No summary for class \TgBotApi\BotApiBase\Normalizer\PollNormalizer</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>17</td>
+<td>No summary for property $objectNormalizer</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>22</td>
+<td>Argument $objectNormalizer is missing from the Docblock of __construct</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>Argument $context is missing from the Docblock of normalize</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>Name of argument $context does not match with the DocBlock's name $format in normalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>The type hint of the argument is incorrect for the type definition of the @param tag with argument $context in normalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>35</td>
+<td>No summary for method normalize()</td>
+</tr>
+<tr class="error">
+<td>error</td>
+<td>51</td>
+<td>No summary for method supportsNormalization()</td>
+</tr>
+</tbody>
 </table></div>
 </div>
 </div>
@@ -6557,7 +7562,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-25T00:05:23+03:00.<br></footer></div>
+            generated on 2020-03-31T00:16:07+03:00.<br></footer></div>
 </div>
 </body>
 </html>

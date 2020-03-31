@@ -23,6 +23,30 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
+## 1.4.0 - 2020-03-31
+
+#### March 30, 2020
+#### Bot API 4.7
+
+### Added
+- Added the method `sendDice` `send(SendDiceMethod)` for sending a dice message, which will have a random value from 1 to 6. 
+(Yes, we're aware of the “proper” singular of die. But it's awkward, and we decided to help it change One dice at a time!)
+- Added the field `dice` to the `MessageType` object.
+- Added the method `getMyCommands` for getting the current list of the bot's commands.
+- Added the method `setMyCommands` `set(SetMyCommandMethod)` for changing the list of the bot's commands 
+through the Bot API instead of @BotFather.
+- Added the ability to create animated sticker sets by specifying the 
+parameter `tgsSticker` instead of `pngSticker` in the class `CreateNewStickerSetMethod`.
+- Added the ability to add animated stickers to sets created by the bot by specifying 
+the parameter `tgsSticker` instead of `pngSticker` in the class `AddStickerToSetMethod`.
+- Added the field `thumb` to the `StickerSetType` object.
+- Added the ability to change thumbnails of sticker sets created by the bot 
+using the method `setStickerSetThumb` `set(SetStickerSetThumbMethod)`.
+
+### Deprecated
+- `AddStickerToSetMethod::create()` - please use `createStatic` or `createAnimated` methods
+- `CreateNewStickerSetMethod::create()` - please use `createStatic` or `createAnimated` methods
+
 ## 1.3.3 - 2020-03-06
 
 ### Fixed

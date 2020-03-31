@@ -13,8 +13,10 @@ use TgBotApi\BotApiBase\Method\SetChatPhotoMethod;
 use TgBotApi\BotApiBase\Method\SetChatStickerSetMethod;
 use TgBotApi\BotApiBase\Method\SetChatTitleMethod;
 use TgBotApi\BotApiBase\Method\SetGameScoreMethod;
+use TgBotApi\BotApiBase\Method\SetMyCommandsMethod;
 use TgBotApi\BotApiBase\Method\SetPassportDataErrorsMethod;
 use TgBotApi\BotApiBase\Method\SetStickerPositionInSetMethod;
+use TgBotApi\BotApiBase\Method\SetStickerSetThumbMethod;
 use TgBotApi\BotApiBase\Method\SetWebhookMethod;
 
 /**
@@ -70,6 +72,14 @@ trait SetMethodTrait
     /**
      * @throws ResponseException
      */
+    public function setMyCommands(SetMyCommandsMethod $method): bool
+    {
+        return $this->set($method);
+    }
+
+    /**
+     * @throws ResponseException
+     */
     public function setGameScore(SetGameScoreMethod $method): bool
     {
         return $this->set($method);
@@ -79,6 +89,14 @@ trait SetMethodTrait
      * @throws ResponseException
      */
     public function setStickerPositionInSet(SetStickerPositionInSetMethod $method): bool
+    {
+        return $this->set($method);
+    }
+
+    /**
+     * @throws ResponseException
+     */
+    public function setStickerSetThumb(SetStickerSetThumbMethod $method): bool
     {
         return $this->set($method);
     }

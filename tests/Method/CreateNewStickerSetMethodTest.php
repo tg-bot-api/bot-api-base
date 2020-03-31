@@ -44,4 +44,39 @@ class CreateNewStickerSetMethodTest extends MethodTestCase
             ]
         ));
     }
+
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\ResponseException
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     */
+    public function testEncodeAnimated()
+    {
+        $botApi = $this->getBotWithFiles(
+            'createNewStickerSet',
+            [
+                'user_id' => 1,
+                'name' => 'sticker_set_name',
+                'title' => 'title',
+                'tgs_sticker' => '',
+                'emojis' => '😀',
+                'contains_masks' => true,
+                'mask_position' => ['point' => 'forehead', 'x_shift' => 1.0, 'y_shift' => 1.0, 'scale' => 1],
+            ],
+            ['tgs_sticker' => true],
+            ['mask_position'],
+            true
+        );
+
+        $botApi->createNewStickerSet(CreateNewStickerSetMethod::createAnimated(
+            1,
+            'sticker_set_name',
+            'title',
+            InputFileType::create('/dev/null'),
+            '😀',
+            [
+                'containsMasks' => true,
+                'maskPosition' => MaskPositionType::create(MaskPositionType::MASK_POINT_FOREHEAD, 1, 1, 1),
+            ]
+        ));
+    }
 }

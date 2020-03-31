@@ -33,11 +33,11 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">619</span></a></li>
+                <span class="label label-info">796</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
-                <span class="label label-info">5</span></a></li>
+                <span class="label label-info">7</span></a></li>
 </ul>
 </li>
 </ul></div>
@@ -76,6 +76,7 @@ reply_to_message if someone replies to a very first message in a channel."><span
 <li class="property public "><a href="#property_contact" title="$contact() :: Optional. Message is a shared contact, information about the contact."><span class="description"></span><pre>$contact</pre></a></li>
 <li class="property public "><a href="#property_date" title="$date() :: Date the message was sent in \DateTimeInterface."><span class="description"></span><pre>$date</pre></a></li>
 <li class="property public "><a href="#property_deleteChatPhoto" title="$deleteChatPhoto() :: Optional. Service message: the chat photo was deleted."><span class="description"></span><pre>$deleteChatPhoto</pre></a></li>
+<li class="property public "><a href="#property_dice" title="$dice() :: Optional. Message is a dice with random value from 1 to 6."><span class="description"></span><pre>$dice</pre></a></li>
 <li class="property public "><a href="#property_document" title="$document() :: Optional. Message is a general file, information about the file."><span class="description"></span><pre>$document</pre></a></li>
 <li class="property public "><a href="#property_editDate" title="$editDate() :: Optional. Date the message was last edited in \DateTimeImmutable."><span class="description"></span><pre>$editDate</pre></a></li>
 <li class="property public "><a href="#property_entities" title="$entities() :: Optional. For text messages, special entities like usernames, URLs, bot commands, etc. that appear in the text."><span class="description"></span><pre>$entities</pre></a></li>
@@ -105,6 +106,7 @@ greater than 32 bits and some programming languages may have difficulty/silent d
 <li class="property public "><a href="#property_passportData" title="$passportData() :: Optional. Telegram Passport data."><span class="description"></span><pre>$passportData</pre></a></li>
 <li class="property public "><a href="#property_photo" title="$photo() :: Optional. Message is a photo, available sizes of the photo."><span class="description"></span><pre>$photo</pre></a></li>
 <li class="property public "><a href="#property_pinnedMessage" title="$pinnedMessage() :: Optional. Specified message was pinned."><span class="description"></span><pre>$pinnedMessage</pre></a></li>
+<li class="property public "><a href="#property_poll" title="$poll() :: Optional. Message is a native poll, information about the poll."><span class="description"></span><pre>$poll</pre></a></li>
 <li class="property public "><a href="#property_replyToMessage" title="$replyToMessage() :: Optional. For replies, the original message. Note that the Message object in this field will not contain
 further reply_to_message fields even if it itself is a reply."><span class="description"></span><pre>$replyToMessage</pre></a></li>
 <li class="property public "><a href="#property_sticker" title="$sticker() :: Optional. Message is a sticker, information about the sticker."><span class="description"></span><pre>$sticker</pre></a></li>
@@ -264,6 +266,16 @@ reply_to_message if someone replies to a very first message in a channel.</h2>
 <a id="property_deleteChatPhoto"> </a><div class="element clickable property public property_deleteChatPhoto" data-toggle="collapse" data-target=".property_deleteChatPhoto .collapse" title="public">
 <h2>Optional. Service message: the chat photo was deleted.</h2>
 <pre>$deleteChatPhoto : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_dice"> </a><div class="element clickable property public property_dice" data-toggle="collapse" data-target=".property_dice .collapse" title="public">
+<h2>Optional. Message is a dice with random value from 1 to 6.</h2>
+<pre>$dice : \TgBotApi\BotApiBase\Type\DiceType | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -556,6 +568,16 @@ float type are safe for storing this identifier.</p></div></div></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>Note that the Message object in this field
 will not contain further reply_to_message fields even if it is itself a reply.</p></div></div></div>
 </div>
+<a id="property_poll"> </a><div class="element clickable property public property_poll" data-toggle="collapse" data-target=".property_poll .collapse" title="public">
+<h2>Optional. Message is a native poll, information about the poll.</h2>
+<pre>$poll : \TgBotApi\BotApiBase\Type\PollType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_replyToMessage"> </a><div class="element clickable property public property_replyToMessage" data-toggle="collapse" data-target=".property_replyToMessage .collapse" title="public">
 <h2>Optional. For replies, the original message. Note that the Message object in this field will not contain
 further reply_to_message fields even if it itself is a reply.</h2>
@@ -668,7 +690,7 @@ reply_to_message if someone replies to a very first message in a directly create
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-01-25T00:05:21+03:00.<br></footer></div>
+            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -25,8 +25,8 @@ class PollNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param mixed $topic
-     * @param null  $format
+     * @param SendPollMethod $topic
+     * @param null           $format
      *
      * @throws ExceptionInterface
      *
