@@ -14,7 +14,7 @@
 [![Duplicated Lines (%)][sonar-duplicated-lines-icon]][sonar-path]
 [![Security Rating][sonar-security-rating-icon]][sonar-path]
 
-#### Supported Telegram Bot API v4.6 (January 23, 2020 update)
+#### Supported Telegram Bot API v4.8 (April 24, 2020)
 
 ## Installation
 
@@ -146,7 +146,7 @@ If you discover any security related issues, please email wformps@gmail.com inst
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-php-v]: https://img.shields.io/travis/php-v/tg-bot-api/bot-api-base.svg?style=flat-square
-[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.7-blue.svg?style=flat-square
+[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.8-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square

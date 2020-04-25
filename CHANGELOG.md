@@ -22,6 +22,25 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 --->
+## 1.5.0 - 2020-04-24
+
+#### April 24, 2020
+#### Bot API 4.8
+
+### Added
+- Supported explanations for
+ [**Quizzes 2.0**](https://telegram.org/blog/400-million#better-quizzes). 
+Add explanations by specifying the parameters 
+explanation and `explanationParseMode` in the method `SendPollMethod`.
+- Added the fields explanation and `explanationEntities` to the `PollType` class.
+- Supported timed polls that automatically close at a certain date and time. 
+Set up by specifying the parameter `openPeriod` or `closeDate` in the `SendPollMethod`.
+- Added the fields `openPeriod` and `closeDate` to the `PollType` class.
+- Supported the new darts animation for the dice mini-game. 
+Choose between the default dice animation and darts animation 
+by specifying the parameter `emoji` in the `SendDiceMethod`. 
+Added two factory methods `createWithDice` and `createWithDarts`  for `SendDiceMethod`.
+- Added the field `emoji` to the `DiceType` class.
 
 ## 1.4.0 - 2020-03-31
 
