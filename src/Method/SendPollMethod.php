@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Exception\BadArgumentException;
 use TgBotApi\BotApiBase\Interfaces\PollTypeInterface;
+use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
@@ -17,7 +18,7 @@ use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
  *
  * @see https://core.telegram.org/bots/api#sendpoll
  */
-class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface
+class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface, HasParseModeVariableInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
@@ -63,6 +64,37 @@ class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface
      * @var int|null
      */
     public $correctOptionId;
+
+    /**
+     * Optional. Text that is shown when a user chooses an incorrect answer or taps on the lamp icon
+     * in a quiz-style poll, 0-200 characters with at most 2 line feeds after entities parsing.
+     *
+     * @var string|null
+     */
+    public $explanation;
+
+    /**
+     * Optional. Mode for parsing entities in the explanation. See formatting options for more details.
+     *
+     * @var string|null
+     */
+    public $explanationParseMode;
+
+    /**
+     * Optional. Amount of time in seconds the poll will be active after creation, 5-600.
+     * Can't be used together with close_date.
+     *
+     * @var int|null
+     */
+    public $openPeriod;
+
+    /**
+     * Point in time (will be transformed to Unix timestamp on send) when the poll will be automatically closed.
+     * Must be at least 5 and no more than 600 seconds in the future. Can't be used together with open_period.
+     *
+     * @var \DateTimeInterface|null
+     */
+    public $closeDate;
 
     /**
      * Optional. Pass True, if the poll needs to be immediately closed.

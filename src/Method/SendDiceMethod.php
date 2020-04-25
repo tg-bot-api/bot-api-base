@@ -25,6 +25,16 @@ class SendDiceMethod implements SendMethodAliasInterface
     use SendToChatVariablesTrait;
     use FillFromArrayTrait;
 
+    public const EMOJI_DICE = '🎲';
+    public const EMOJI_DARTS = '🎯';
+
+    /**
+     * Emoji on which the dice throw animation is based. Currently, must be one of “🎲” or “🎯”. Defauts to “🎲”.
+     *
+     * @var string|null
+     */
+    public $emoji;
+
     /**
      * @param int|string $chatId
      *
@@ -38,6 +48,32 @@ class SendDiceMethod implements SendMethodAliasInterface
         if ($data) {
             $instance->fill($data);
         }
+
+        return $instance;
+    }
+
+    /**
+     * @param $chatId
+     *
+     * @throws BadArgumentException
+     */
+    public static function createWithDice($chatId, array $data = null): SendDiceMethod
+    {
+        $instance = static::create($chatId, $data);
+        $instance->emoji = static::EMOJI_DICE;
+
+        return $instance;
+    }
+
+    /**
+     * @param $chatId
+     *
+     * @throws BadArgumentException
+     */
+    public static function createWithDarts($chatId, array $data = null): SendDiceMethod
+    {
+        $instance = static::create($chatId, $data);
+        $instance->emoji = self::EMOJI_DARTS;
 
         return $instance;
     }
