@@ -16,6 +16,7 @@ use TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer;
 use TgBotApi\BotApiBase\Normalizer\EditMessageResponseNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
+use TgBotApi\BotApiBase\Normalizer\InvoiceNormalizer;
 use TgBotApi\BotApiBase\Normalizer\JsonSerializableNormalizer;
 use TgBotApi\BotApiBase\Normalizer\LegacyObjectNormalizerWrapper;
 use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
@@ -76,6 +77,7 @@ class BotApiNormalizer implements NormalizerInterface
 
         $serializer = new Serializer([
             new PollNormalizer($objectNormalizer),
+            new InvoiceNormalizer($objectNormalizer),
             new SetMyCommandsNormalizer($objectNormalizer),
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
