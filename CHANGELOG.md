@@ -22,6 +22,12 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 --->
+
+## 1.5.1 - 2020-05-28
+
+### Fixed
+- fixed SendInvoiceMethod normalization #33.
+
 ## 1.5.0 - 2020-04-24
 
 #### April 24, 2020
