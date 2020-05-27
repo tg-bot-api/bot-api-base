@@ -23,9 +23,6 @@ class SendInvoiceMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBot('sendInvoice', [
@@ -52,13 +49,11 @@ class SendInvoiceMethodTest extends MethodTestCase
             'disable_notification' => true,
             'reply_to_message_id' => 1,
             'reply_markup' => $this->buildInlineMarkupArray(),
-        ], [], ['reply_markup']);
+        ], [], ['reply_markup', 'prices']);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendInvoiceMethod
      */
     private function getMethod(): SendInvoiceMethod
     {
