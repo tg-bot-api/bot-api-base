@@ -93,6 +93,13 @@ class MessageType implements HasParseModeVariableInterface
     public $replyToMessage;
 
     /**
+     * Optional. Bot through which the message was sent.
+     *
+     * @var UserType|null
+     */
+    public $viaBot;
+
+    /**
      * Optional. Date the message was last edited in \DateTimeImmutable.
      *
      * @var \DateTimeImmutable|null
