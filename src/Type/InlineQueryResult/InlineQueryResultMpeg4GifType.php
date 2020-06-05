@@ -46,7 +46,7 @@ class InlineQueryResultMpeg4GifType extends InlineQueryResultType implements Has
     public $mpeg4Duration;
 
     /**
-     * URL of the static thumbnail (jpeg or gif) for the result.
+     * URL of the static (JPEG or GIF) or animated (MPEG4) thumbnail for the result.
      *
      * @var string
      */
@@ -82,14 +82,7 @@ class InlineQueryResultMpeg4GifType extends InlineQueryResultType implements Has
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $mpeg4Url
-     * @param string     $thumbUrl
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultMpeg4GifType
      */
     public static function create(
         string $id,

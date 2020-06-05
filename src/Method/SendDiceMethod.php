@@ -27,6 +27,7 @@ class SendDiceMethod implements SendMethodAliasInterface
 
     public const EMOJI_DICE = '🎲';
     public const EMOJI_DARTS = '🎯';
+    public const EMOJI_BASKETBALL = '🏀';
 
     /**
      * Emoji on which the dice throw animation is based. Currently, must be one of “🎲” or “🎯”. Defauts to “🎲”.
@@ -74,6 +75,19 @@ class SendDiceMethod implements SendMethodAliasInterface
     {
         $instance = static::create($chatId, $data);
         $instance->emoji = self::EMOJI_DARTS;
+
+        return $instance;
+    }
+
+    /**
+     * @param $chatId
+     *
+     * @throws BadArgumentException
+     */
+    public static function createWithBasketball($chatId, array $data = null): SendDiceMethod
+    {
+        $instance = static::create($chatId, $data);
+        $instance->emoji = self::EMOJI_BASKETBALL;
 
         return $instance;
     }
