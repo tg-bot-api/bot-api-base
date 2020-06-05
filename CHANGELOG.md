@@ -23,6 +23,21 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
+## 1.6.0 - 2020-06-06
+
+#### June 4, 2020
+#### Bot API 4.9
+
+### Added
+- Added the new field `viaBot` to the `MessageType` class. 
+You can now know which bot was used to send a message.
+- Supported video thumbnails for inline GIF and MPEG4 animations (Updated comments in classes).
+- Supported the new basketball animation for the random dice. 
+Choose between different animations (dice, darts, basketball)
+by specifying the emoji parameter in the `SendDiceMethod`.
+Added to the class new factory method `SendDiceMethod::createWithBasketball` 
+and new constant `SendDiceMethod::EMOJI_BASKETBALL`.
+
 ## 1.5.1 - 2020-05-28
 
 ### Fixed
