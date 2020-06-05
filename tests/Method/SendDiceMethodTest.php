@@ -52,6 +52,17 @@ class SendDiceMethodTest extends MethodTestCase
                     ]
                 ),
             ],
+            [
+                $this->getApi(SendDiceMethod::EMOJI_BASKETBALL),
+                SendDiceMethod::createWithBasketball(
+                    'chat_id',
+                    [
+                        'disableNotification' => true,
+                        'replyToMessageId' => 1,
+                        'replyMarkup' => $this->buildInlineMarkupObject(),
+                    ]
+                ),
+            ],
         ];
     }
 
