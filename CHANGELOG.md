@@ -23,6 +23,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
+## 1.6.1 - 2020-07-03
+
+### Fixed
+- fixed phpdocumentor/reflection-docblock version #33.
+
 ## 1.6.0 - 2020-06-06
 
 #### June 4, 2020
