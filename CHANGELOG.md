@@ -23,10 +23,10 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
-## 1.6.1 - 2020-07-03
+## 1.6.2 - 2020-07-13
 
 ### Fixed
-- fixed phpdocumentor/reflection-docblock version #33.
+- fixed EditMessageMediaMethod normalization (#33).
 
 
 ## 1.6.1 - 2020-07-03
