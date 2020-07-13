@@ -159,9 +159,6 @@ class EditMessageMediaMethodTest extends MethodTestCase
     }
 
     /**
-     * @param array                  $excepted
-     * @param EditMessageMediaMethod $actual
-     *
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     private function queryApi(array $excepted, EditMessageMediaMethod $actual)
@@ -169,8 +166,8 @@ class EditMessageMediaMethodTest extends MethodTestCase
         $this->getBotWithFiles(
             'editMessageMedia',
             $excepted,
-            ['media' => ['thumb' => true, 'media' => true]],
-            ['reply_markup'],
+            ['media' => ['media' => true, 'thumb' => true]],
+            ['media', 'reply_markup'],
             true
         )->editMessageMedia($actual);
     }
