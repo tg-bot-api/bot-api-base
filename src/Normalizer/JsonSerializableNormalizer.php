@@ -25,8 +25,6 @@ class JsonSerializableNormalizer implements NormalizerInterface
 
     /**
      * JsonSerializableNormalizer constructor.
-     *
-     * @param NormalizerInterface $objectNormalizer
      */
     public function __construct(NormalizerInterface $objectNormalizer)
     {
@@ -36,11 +34,10 @@ class JsonSerializableNormalizer implements NormalizerInterface
     /**
      * @param mixed $topic
      * @param null  $format
-     * @param array $context
      *
      * @throws ExceptionInterface
      *
-     * @return array|bool|false|float|int|string
+     * @return string
      */
     public function normalize($topic, $format = null, array $context = [])
     {
@@ -52,8 +49,6 @@ class JsonSerializableNormalizer implements NormalizerInterface
     /**
      * @param mixed $data
      * @param null  $format
-     *
-     * @return bool
      */
     public function supportsNormalization($data, $format = null): bool
     {

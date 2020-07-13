@@ -13,6 +13,7 @@ use Symfony\Component\Serializer\Normalizer\DateTimeNormalizer;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
 use TgBotApi\BotApiBase\Normalizer\AnswerInlineQueryNormalizer;
+use TgBotApi\BotApiBase\Normalizer\EditMessageMediaNormalizer;
 use TgBotApi\BotApiBase\Normalizer\EditMessageResponseNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputFileNormalizer;
 use TgBotApi\BotApiBase\Normalizer\InputMediaNormalizer;
@@ -81,6 +82,7 @@ class BotApiNormalizer implements NormalizerInterface
             new SetMyCommandsNormalizer($objectNormalizer),
             new InputFileNormalizer($files),
             new MediaGroupNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
+            new EditMessageMediaNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
             new JsonSerializableNormalizer($objectNormalizer),
             new AnswerInlineQueryNormalizer($objectNormalizer),
             new DateTimeNormalizer(),

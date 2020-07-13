@@ -8,8 +8,7 @@ use Symfony\Component\Serializer\Exception\ExceptionInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\Serializer;
 use TgBotApi\BotApiBase\Type\InputFileType;
-use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
-use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaType;
 
 /**
  * Class InputMediaNormalizer.
@@ -28,7 +27,6 @@ class InputMediaNormalizer implements NormalizerInterface
     /**
      * InputMediaNormalizer constructor.
      *
-     * @param NormalizerInterface $objectNormalizer
      * @param $files
      */
     public function __construct(NormalizerInterface $objectNormalizer, &$files)
@@ -38,9 +36,8 @@ class InputMediaNormalizer implements NormalizerInterface
     }
 
     /**
-     * @param mixed $topic
-     * @param null  $format
-     * @param array $context
+     * @param InputMediaType $topic
+     * @param null           $format
      *
      * @throws ExceptionInterface
      *
@@ -68,12 +65,9 @@ class InputMediaNormalizer implements NormalizerInterface
     /**
      * @param mixed $data
      * @param null  $format
-     *
-     * @return bool
      */
     public function supportsNormalization($data, $format = null): bool
     {
-        return $data instanceof InputMediaPhotoType ||
-            $data instanceof InputMediaVideoType;
+        return $data instanceof InputMediaType;
     }
 }
