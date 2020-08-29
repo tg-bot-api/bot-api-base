@@ -21,14 +21,14 @@
 Via Composer
 
 ``` bash
-composer require tg-bot-api/bot-api-base
+composer require tg-bot-api/bot-api-base --prefer-dist
 ```
 
 ## Usage
 
 We support all psr17 and psr18 implementations, but we will use guzzle6 for example
 ```bash
-composer require php-http/guzzle6-adapter http-interop/http-factory-guzzle
+composer require php-http/guzzle6-adapter http-interop/http-factory-guzzle --prefer-dist
 ```
 
 ```php
