@@ -48,6 +48,12 @@ $bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'))
 
 You can configure it to work in symfony, for example, in [this way](https://gist.github.com/greenplugin/09179bee606aa01b1ee00d049ab78fc4).
 
+If you want to use your own api server - you can set url as 4th param in bot api
+
+```php 
+$bot = new \TgBotApi\BotApiBase\BotApi('<bot key>', $apiClient, new \TgBotApi\BotApiBase\BotApiNormalizer(), '<your-domain>');
+```
+
 ### Allowed methods:
 
 |Method|Allowed type|response|
