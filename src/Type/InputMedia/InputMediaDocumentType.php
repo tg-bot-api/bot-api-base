@@ -29,12 +29,17 @@ class InputMediaDocumentType extends InputMediaType
     public $thumb;
 
     /**
+     * Optional. Disables automatic server-side content type detection for files uploaded using multipart/form-data.
+     * Always true, if the document is sent as part of an album.
+     *
+     * @var bool|null
+     */
+    public $disableContentTypeDetection;
+
+    /**
      * @param string|InputFileType $media
-     * @param array|null           $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InputMediaDocumentType
      */
     public static function create($media, array $data = null): InputMediaDocumentType
     {
@@ -42,7 +47,7 @@ class InputMediaDocumentType extends InputMediaType
         $instance->media = $media;
         $instance->type = static::TYPE_DOCUMENT;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['media', 'type']);
         }
 
         return $instance;

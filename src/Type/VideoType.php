@@ -55,6 +55,13 @@ class VideoType
     public $thumb;
 
     /**
+     * Optional. Original filename as defined by sender.
+     *
+     * @var string|null
+     */
+    public $fileName;
+
+    /**
      * Optional. Mime type of a file as defined by sender.
      *
      * @var string|null

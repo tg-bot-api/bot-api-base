@@ -21,6 +21,7 @@ class SendDocumentMethod implements HasParseModeVariableInterface, SendMethodAli
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
     use CaptionVariablesTrait;
+
     /**
      * File to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended),
      * pass an HTTP URL as a String for Telegram to get a file from the Internet,
@@ -42,13 +43,17 @@ class SendDocumentMethod implements HasParseModeVariableInterface, SendMethodAli
     public $thumb;
 
     /**
+     * Optional. Disables automatic server-side content type detection for files uploaded using multipart/form-data.
+     *
+     * @var bool|null
+     */
+    public $disableContentTypeDetection;
+
+    /**
      * @param int|string           $chatId
      * @param InputFileType|string $document
-     * @param array|null           $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendDocumentMethod
      */
     public static function create($chatId, $document, array $data = null): SendDocumentMethod
     {
@@ -56,7 +61,7 @@ class SendDocumentMethod implements HasParseModeVariableInterface, SendMethodAli
         $instance->chatId = $chatId;
         $instance->document = $document;
         if ($data) {
-            $instance->fill($data);
+            $instance->fill($data, ['document']);
         }
 
         return $instance;

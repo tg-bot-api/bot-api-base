@@ -48,6 +48,13 @@ class AudioType
     public $title;
 
     /**
+     * Optional. Original filename as defined by sender.
+     *
+     * @var string|null
+     */
+    public $fileName;
+
+    /**
      * Optional. MIME type of the file as defined by sender.
      *
      * @var string|null

@@ -13,11 +13,11 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  */
 abstract class InputMediaType
 {
-    const TYPE_PHOTO = 'photo';
-    const TYPE_VIDEO = 'video';
-    const TYPE_ANIMATION = 'animation';
-    const TYPE_AUDIO = 'audio';
-    const TYPE_DOCUMENT = 'document';
+    public const TYPE_PHOTO = 'photo';
+    public const TYPE_VIDEO = 'video';
+    public const TYPE_ANIMATION = 'animation';
+    public const TYPE_AUDIO = 'audio';
+    public const TYPE_DOCUMENT = 'document';
 
     /**
      * File to send. Pass a file_id to send a file that exists on the Telegram servers (recommended),

@@ -10,27 +10,22 @@ trait InlineKeyboardMarkupTrait
 {
     use InlineButtonTrait;
 
-    /**
-     * @return array
-     */
-    public function buildInlineMarkupArray(): array
+    public static function buildInlineMarkupArray(): array
     {
         return ['inline_keyboard' => [[
-            $this->buildInlineKeyboardButtonArray(),
-            $this->buildInlineKeyboardButtonArray(),
+            static::buildInlineKeyboardButtonArray(),
+            static::buildInlineKeyboardButtonArray(),
         ]]];
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineKeyboardMarkupType
      */
-    public function buildInlineMarkupObject(): InlineKeyboardMarkupType
+    public static function buildInlineMarkupObject(): InlineKeyboardMarkupType
     {
         return InlineKeyboardMarkupType::create([[
-            $this->buildInlineKeyboardButtonObject(),
-            $this->buildInlineKeyboardButtonObject(),
+            static::buildInlineKeyboardButtonObject(),
+            static::buildInlineKeyboardButtonObject(),
         ]]);
     }
 }
