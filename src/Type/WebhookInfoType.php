@@ -33,6 +33,13 @@ class WebhookInfoType
     public $pendingUpdateCount;
 
     /**
+     * Optional. Currently used webhook IP address.
+     *
+     * @var string|null
+     */
+    public $ipAddress;
+
+    /**
      * Optional. DateTimeImmutable for the most recent error that happened when trying to deliver an update via webhook.
      *
      * @var \DateTimeImmutable|null

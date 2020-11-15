@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\DeleteMethodAliasInterface;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class DeleteWebhookMethod.
@@ -13,11 +14,26 @@ use TgBotApi\BotApiBase\Method\Interfaces\DeleteMethodAliasInterface;
  */
 class DeleteWebhookMethod implements DeleteMethodAliasInterface
 {
+    use FillFromArrayTrait;
+
     /**
-     * @return DeleteWebhookMethod
+     * Pass True to drop all pending updates.
+     *
+     * @var bool|null
      */
-    public static function create(): DeleteWebhookMethod
+    public $dropPendingUpdates;
+
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
+     */
+    public static function create(array $data = null): DeleteWebhookMethod
     {
-        return new static();
+        $instance = new static();
+
+        if ($data) {
+            $instance->fill($data);
+        }
+
+        return $instance;
     }
 }
