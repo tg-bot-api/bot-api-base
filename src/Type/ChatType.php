@@ -85,6 +85,13 @@ class ChatType
     public $photo;
 
     /**
+     * Optional. Bio of the other party in a private chat. Returned only in getChat.
+     *
+     * @var string|null
+     */
+    public $bio;
+
+    /**
      * Optional. Description, for supergroups and channel chats. Returned only in getChat.
      *
      * @var string|null
@@ -103,6 +110,13 @@ class ChatType
      * @var MessageType|null
      */
     public $pinnedMessage;
+
+    /**
+     * Optional. Default chat member permissions, for groups and supergroups. Returned only in getChat.
+     *
+     * @var ChatPermissionsType|null
+     */
+    public $permissions;
 
     /**
      * Optional. For supergroups, name of group sticker set. Returned only in getChat.
@@ -125,4 +139,25 @@ class ChatType
      * @var bool|null
      */
     public $canSetStickerSet;
+
+    /**
+     * Optional. Unique identifier for the linked chat,
+     * i.e. the discussion group identifier for a channel and vice versa;
+     * for supergroups and channel chats.
+     * This identifier may be greater than 32 bits and some programming languages
+     * may have difficulty/silent defects in interpreting it.
+     * But it is smaller than 52 bits, so a signed 64 bit integer or double-precision
+     * float type are safe for storing this identifier. Returned only in getChat.
+     *
+     * @var int|null
+     */
+    public $linkedChatId;
+
+    /**
+     * Optional. For supergroups, the location to which the supergroup is connected.
+     * Returned only in getChat.
+     *
+     * @var ChatLocationType|null
+     */
+    public $location;
 }

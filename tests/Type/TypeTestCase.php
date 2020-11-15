@@ -8,6 +8,8 @@ use TgBotApi\BotApiBase\ApiClientInterface;
 use TgBotApi\BotApiBase\BotApi;
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Tests\GetNormalizerTrait;
+use TgBotApi\BotApiBase\Type\UpdateType;
+use TgBotApi\BotApiBase\WebhookFetcher;
 
 abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
 {
@@ -26,6 +28,14 @@ abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
             ->willReturn(\json_decode($json, false));
 
         return new BotApi('000000000:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA', $stub, $this->getNormalizer());
+    }
+
+    /**
+     * @throws \TgBotApi\BotApiBase\Exception\BadRequestException
+     */
+    public function getFetchedResult(string $json): UpdateType
+    {
+        return (new WebhookFetcher($this->getNormalizer()))->fetch($json);
     }
 
     /**
@@ -49,7 +59,7 @@ abstract class TypeTestCase extends \PHPUnit\Framework\TestCase
         return $this->getMockBuilder(MethodInterface::class)->getMock();
     }
 
-    protected function getResource($filename): string
+    protected static function getResource($filename): string
     {
         return \file_get_contents(\sprintf('%s/resources/%s.json', __DIR__, $filename));
     }
