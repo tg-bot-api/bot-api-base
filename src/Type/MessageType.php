@@ -372,6 +372,14 @@ class MessageType implements HasParseModeVariableInterface
     public $passportData;
 
     /**
+     * Optional. Service message.
+     * A user in the chat triggered another user's proximity alert while sharing Live Location.
+     *
+     * @var ProximityAlertTriggeredType|null
+     */
+    public $proximityAlertTriggered;
+
+    /**
      * Warning: This variable is experimental.
      *
      * @experimental Returns User type

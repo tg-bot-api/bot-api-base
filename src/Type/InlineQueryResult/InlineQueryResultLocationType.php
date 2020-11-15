@@ -42,11 +42,34 @@ class InlineQueryResultLocationType extends InlineQueryResultType
     public $title;
 
     /**
+     * Optional. The radius of uncertainty for the location, measured in meters; 0-1500.
+     *
+     * @var float|int|null
+     */
+    public $horizontalAccuracy;
+
+    /**
      * Optional. Period in seconds for which the location can be updated, should be between 60 and 86400.
      *
      * @var int|null
      */
     public $livePeriod;
+
+    /**
+     * Optional. For live locations, a direction in which the user is moving, in degrees.
+     * Must be between 1 and 360 if specified.
+     *
+     * @var int|null
+     */
+    public $heading;
+
+    /**
+     * Optional. For live locations, a maximum distance for proximity alerts a
+     * bout approaching another chat member, in meters. Must be between 1 and 100000 if specified.
+     *
+     * @var int|null
+     */
+    public $proximityAlertRadius;
 
     /**
      * Optional. Content of the message to be sent instead of the location.
@@ -77,15 +100,7 @@ class InlineQueryResultLocationType extends InlineQueryResultType
     public $thumbHeight;
 
     /**
-     * @param string     $id
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param string     $title
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultLocationType
      */
     public static function create(
         string $id,

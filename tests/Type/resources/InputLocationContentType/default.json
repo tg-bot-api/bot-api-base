@@ -1,0 +1,11 @@
+{
+  "ok": true,
+  "result": {
+    "latitude": 1.3,
+    "longitude": 1.3,
+    "horizontal_accuracy": 200.5,
+    "live_period": 20,
+    "heading": 30,
+    "proximity_alert_radius": 40
+  }
+}
