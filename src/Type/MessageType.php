@@ -28,6 +28,15 @@ class MessageType implements HasParseModeVariableInterface
     public $from;
 
     /**
+     * Optional. Sender of the message, sent on behalf of a chat. The channel itself for channel messages.
+     * The supergroup itself for messages from anonymous group administrators.
+     * The linked channel for messages automatically forwarded to the discussion group.
+     *
+     * @var ChatType|null
+     */
+    public $senderChat;
+
+    /**
      * Date the message was sent in \DateTimeInterface.
      *
      * @var \DateTimeImmutable

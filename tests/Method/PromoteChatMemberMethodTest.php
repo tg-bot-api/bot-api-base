@@ -28,6 +28,7 @@ class PromoteChatMemberMethodTest extends MethodTestCase
             'can_restrict_members' => true,
             'can_pin_messages' => true,
             'can_promote_members' => true,
+            'is_anonymous' => true,
         ], true);
 
         $method = PromoteChatMemberMethod::create('chat_id', 1, ['canChangeInfo' => true]);
@@ -38,6 +39,7 @@ class PromoteChatMemberMethodTest extends MethodTestCase
         $method->canRestrictMembers = true;
         $method->canPinMessages = true;
         $method->canPromoteMembers = true;
+        $method->isAnonymous = true;
 
         $botApi->promoteChatMember($method);
     }
