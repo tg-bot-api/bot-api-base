@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Type\InputMedia;
 
 use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InputMediaType.
@@ -13,6 +14,8 @@ use TgBotApi\BotApiBase\Type\InputFileType;
  */
 abstract class InputMediaType
 {
+    use CaptionEntitiesFieldTrait;
+
     public const TYPE_PHOTO = 'photo';
     public const TYPE_VIDEO = 'video';
     public const TYPE_ANIMATION = 'animation';

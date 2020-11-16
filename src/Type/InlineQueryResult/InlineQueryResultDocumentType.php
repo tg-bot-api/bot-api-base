@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultDocumentType.
@@ -19,9 +20,11 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultDocumentType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
-    const MIME_TYPE_PDF = 'application/pdf';
-    const MIME_TYPE_ZIP = 'application/zip';
+
+    public const MIME_TYPE_PDF = 'application/pdf';
+    public const MIME_TYPE_ZIP = 'application/zip';
 
     /**
      * Title for the result;.
@@ -97,15 +100,7 @@ class InlineQueryResultDocumentType extends InlineQueryResultType implements Has
     public $thumbHeight;
 
     /**
-     * @param string     $id
-     * @param string     $title
-     * @param string     $documentUrl
-     * @param string     $mimeType
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultDocumentType
      */
     public static function create(
         string $id,

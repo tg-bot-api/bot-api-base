@@ -10,6 +10,7 @@ use TgBotApi\BotApiBase\Method\Traits\CaptionVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class SendPhotoMethod.
@@ -21,6 +22,7 @@ class SendPhotoMethod implements HasParseModeVariableInterface, SendMethodAliasI
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
     use CaptionVariablesTrait;
+    use CaptionEntitiesFieldTrait;
 
     /**
      * Photo to send. Pass a file_id as String to send a photo that exists on the Telegram servers (recommended),
@@ -34,11 +36,8 @@ class SendPhotoMethod implements HasParseModeVariableInterface, SendMethodAliasI
     /**
      * @param int|string           $chatId
      * @param InputFileType|string $photo
-     * @param array|null           $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendPhotoMethod
      */
     public static function create($chatId, $photo, array $data = null): SendPhotoMethod
     {

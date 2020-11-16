@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultCachedDocumentType.
@@ -14,7 +15,9 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultCachedDocumentType extends InlineQueryResultType
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
+
     /**
      * Title for the result;.
      *
@@ -59,14 +62,7 @@ class InlineQueryResultCachedDocumentType extends InlineQueryResultType
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $title
-     * @param string     $documentFileId
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultCachedDocumentType
      */
     public static function create(
         string $id,

@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultPhotoType.
@@ -15,7 +16,9 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultPhotoType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
+
     /**
      * A valid URL of the photo. Photo must be in jpeg format. Photo size must not exceed 5MB.
      *
@@ -81,14 +84,7 @@ class InlineQueryResultPhotoType extends InlineQueryResultType implements HasPar
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $thumbUrl
-     * @param string     $photoUrl
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultPhotoType
      */
     public static function create(
         string $id,
