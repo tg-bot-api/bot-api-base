@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Method\Traits\GooglePlaceFieldsTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
 
 /**
@@ -17,6 +18,7 @@ class SendVenueMethod implements SendMethodAliasInterface
 {
     use FillFromArrayTrait;
     use SendToChatVariablesTrait;
+    use GooglePlaceFieldsTrait;
 
     /**
      * Latitude of the venue.
@@ -67,15 +69,8 @@ class SendVenueMethod implements SendMethodAliasInterface
 
     /**
      * @param int|string $chatId
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param string     $title
-     * @param string     $address
-     * @param array|null $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendVenueMethod
      */
     public static function create(
         $chatId,

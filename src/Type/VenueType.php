@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Type;
 
+use TgBotApi\BotApiBase\Type\Traits\GooglePlaceFieldsTrait;
+
 /**
  * Class VenueType.
  *
@@ -11,6 +13,8 @@ namespace TgBotApi\BotApiBase\Type;
  */
 class VenueType
 {
+    use GooglePlaceFieldsTrait;
+
     /**
      * Venue location.
      *

@@ -8,6 +8,14 @@ use TgBotApi\BotApiBase\Method\UnpinChatMessageMethod;
 
 class UnpinChatMessageMethodTest extends MethodTestCase
 {
+    public function testCreate(): void
+    {
+        $method = UnpinChatMessageMethod::create('chat_id', ['messageId' => 1]);
+
+        static::assertEquals('chat_id', $method->chatId);
+        static::assertEquals(1, $method->messageId);
+    }
+
     /**
      * @dataProvider provideData
      *

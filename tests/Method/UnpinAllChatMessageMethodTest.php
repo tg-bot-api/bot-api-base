@@ -8,12 +8,19 @@ use TgBotApi\BotApiBase\Method\UnpinAllChatMessageMethod;
 
 class UnpinAllChatMessageMethodTest extends MethodTestCase
 {
+    public function testCreate(): void
+    {
+        $method = UnpinAllChatMessageMethod::create('chat_id');
+
+        static::assertEquals('chat_id', $method->chatId);
+    }
+
     /**
      * @dataProvider provideData
      *
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
-    public function testEncode(UnpinAllChatMessageMethod $method, array $exceptedRequest)
+    public function testEncode(UnpinAllChatMessageMethod $method, array $exceptedRequest): void
     {
         $botApi = $this->getBot('unpinAllChatMessage', $exceptedRequest, true);
 
