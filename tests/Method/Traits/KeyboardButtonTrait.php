@@ -8,7 +8,7 @@ use TgBotApi\BotApiBase\Type\KeyboardButtonType;
 
 trait KeyboardButtonTrait
 {
-    protected function buildReplyKeyboardButtonArray()
+    protected static function buildReplyKeyboardButtonArray(): array
     {
         return [
             'text' => 'text',
@@ -19,10 +19,8 @@ trait KeyboardButtonTrait
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return KeyboardButtonType
      */
-    protected function buildReplyKeyboardButtonObject(): KeyboardButtonType
+    protected static function buildReplyKeyboardButtonObject(): KeyboardButtonType
     {
         return KeyboardButtonType::create('text', [
             'requestContact' => true,

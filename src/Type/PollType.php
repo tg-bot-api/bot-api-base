@@ -22,7 +22,7 @@ class PollType implements PollTypeInterface
     public $id;
 
     /**
-     * Poll question, 1-255 characters.
+     * Poll question, 1-300 characters.
      *
      * @var string
      */

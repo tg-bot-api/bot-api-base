@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\CloseMethod;
+use TgBotApi\BotApiBase\Method\CopyMessageMethod;
 use TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\LogOutMethod;
@@ -15,6 +16,7 @@ use TgBotApi\BotApiBase\Method\StopPollMethod;
 use TgBotApi\BotApiBase\Traits\AliasMethodTrait;
 use TgBotApi\BotApiBase\Traits\GetMethodTrait;
 use TgBotApi\BotApiBase\Type\FileType;
+use TgBotApi\BotApiBase\Type\MessageIdType;
 use TgBotApi\BotApiBase\Type\MessageType;
 use TgBotApi\BotApiBase\Type\PollType;
 
@@ -46,9 +48,6 @@ class BotApi implements BotApiInterface
      */
     private $normalizer;
 
-    /**
-     * BotApi constructor.
-     */
     public function __construct(
         string $botKey,
         ApiClientInterface $apiClient,
@@ -122,6 +121,14 @@ class BotApi implements BotApiInterface
     public function close(CloseMethod $method): bool
     {
         return $this->call($method);
+    }
+
+    /**
+     * @throws ResponseException
+     */
+    public function copyMessage(CopyMessageMethod $method): MessageIdType
+    {
+        return $this->call($method, MessageIdType::class);
     }
 
     /**
