@@ -19,7 +19,7 @@ class SendPhotoMethodTest extends MethodTestCase
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
-    public function testEncode()
+    public function testEncode(): void
     {
         $this->getApi()->sendPhoto($this->getMethod());
         $this->getApi()->send($this->getMethod());
@@ -32,14 +32,13 @@ class SendPhotoMethodTest extends MethodTestCase
             [
                 'chat_id' => 'chat_id',
                 'photo' => 'photo',
-
                 'caption' => 'caption',
                 'caption_entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
                 'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
-
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
-                'reply_markup' => $this->buildInlineMarkupArray(),
+                'reply_markup' => static::buildInlineMarkupArray(),
+                'allow_sending_without_reply' => true,
             ],
             ['photo' => true],
             ['reply_markup']
@@ -61,6 +60,7 @@ class SendPhotoMethodTest extends MethodTestCase
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
                 'replyMarkup' => static::buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

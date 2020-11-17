@@ -70,6 +70,7 @@ class SendDocumentMethodTest extends MethodTestCase
                         'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                         'disableNotification' => true,
                         'replyToMessageId' => 1,
+                        'allowSendingWithoutReply' => true,
                         'replyMarkup' => static::buildInlineMarkupObject(),
                     ]
                 ),
@@ -82,6 +83,7 @@ class SendDocumentMethodTest extends MethodTestCase
                     'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                     'disable_notification' => true,
                     'reply_to_message_id' => 1,
+                    'allow_sending_without_reply' => true,
                     'reply_markup' => static::buildInlineMarkupArray(),
                 ],
             ],

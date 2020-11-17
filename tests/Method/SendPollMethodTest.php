@@ -29,6 +29,7 @@ class SendPollMethodTest extends MethodTestCase
             'explanation_entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
             'disable_notification' => true,
             'reply_to_message_id' => 1,
+            'allow_sending_without_reply' => true,
             'reply_markup' => '{"inline_keyboard":[]}',
         ]);
     }
@@ -44,6 +45,7 @@ class SendPollMethodTest extends MethodTestCase
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
                 'explanation' => 'explanation',
+                'allowSendingWithoutReply' => true,
                 'explanationEntities' => [MessageEntityType::create(MessageEntityType::TYPE_PRE, 0, 1)],
             ]
         );

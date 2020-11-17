@@ -7,10 +7,12 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 use TgBotApi\BotApiBase\BotApiComplete;
 use TgBotApi\BotApiBase\Method\SendGameMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
+use TgBotApi\BotApiBase\Tests\Method\Traits\ReplyKeyboardMarkupTrait;
 
 class SendGameMethodTest extends MethodTestCase
 {
     use InlineKeyboardMarkupTrait;
+    use ReplyKeyboardMarkupTrait;
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
@@ -22,9 +24,6 @@ class SendGameMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBot('sendGame', [
@@ -32,14 +31,13 @@ class SendGameMethodTest extends MethodTestCase
             'game_short_name' => 'game_short_name',
             'disable_notification' => true,
             'reply_to_message_id' => 1,
-            'reply_markup' => $this->buildInlineMarkupArray(),
+            'reply_markup' => static::buildInlineMarkupArray(),
+            'allow_sending_without_reply' => true,
         ], [], ['reply_markup']);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendGameMethod
      */
     private function getMethod(): SendGameMethod
     {
@@ -49,7 +47,8 @@ class SendGameMethodTest extends MethodTestCase
             [
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'replyMarkup' => static::buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

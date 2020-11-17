@@ -42,7 +42,8 @@ class SendVideoMethodTest extends MethodTestCase
                 'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
-                'reply_markup' => $this->buildInlineMarkupArray(),
+                'allow_sending_without_reply' => true,
+                'reply_markup' => static::buildInlineMarkupArray(),
             ],
             ['video' => true, 'thumb' => true],
             ['reply_markup']
@@ -68,7 +69,8 @@ class SendVideoMethodTest extends MethodTestCase
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
+                'replyMarkup' => static::buildInlineMarkupObject(),
             ]
         );
     }

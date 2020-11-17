@@ -25,9 +25,6 @@ class SendMediaGroupMethodTest extends MethodTestCase
         $this->getApi()->sendMediaGroup($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
@@ -56,6 +53,7 @@ class SendMediaGroupMethodTest extends MethodTestCase
                 ],
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
+                'allow_sending_without_reply' => true,
             ],
             ['media' => [
                 ['media' => true],
@@ -67,8 +65,6 @@ class SendMediaGroupMethodTest extends MethodTestCase
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendMediaGroupMethod
      */
     private function getMethod(): SendMediaGroupMethod
     {
@@ -92,6 +88,7 @@ class SendMediaGroupMethodTest extends MethodTestCase
             [
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

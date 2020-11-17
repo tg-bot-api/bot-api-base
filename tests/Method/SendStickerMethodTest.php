@@ -19,7 +19,6 @@ class SendStickerMethodTest extends MethodTestCase
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
-     * @throws \TgBotApi\BotApiBase\Exception\NormalizationException
      */
     public function testEncode()
     {
@@ -30,9 +29,6 @@ class SendStickerMethodTest extends MethodTestCase
         $this->getApiWithStringFileId()->send($this->getMethodWithStringFileId());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
@@ -40,19 +36,16 @@ class SendStickerMethodTest extends MethodTestCase
             [
                 'chat_id' => 'chat_id',
                 'sticker' => '',
-
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
-                'reply_markup' => $this->buildInlineMarkupArray(),
+                'reply_markup' => static::buildInlineMarkupArray(),
+                'allow_sending_without_reply' => true,
             ],
             ['sticker' => true],
             ['reply_markup']
         );
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApiWithStringFileId(): BotApiComplete
     {
         return $this->getBot(
@@ -60,10 +53,9 @@ class SendStickerMethodTest extends MethodTestCase
             [
                 'chat_id' => 'chat_id',
                 'sticker' => 'file_id',
-
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
-                'reply_markup' => $this->buildInlineMarkupArray(),
+                'reply_markup' => static::buildInlineMarkupArray(),
             ],
             [],
             ['reply_markup']
@@ -72,8 +64,6 @@ class SendStickerMethodTest extends MethodTestCase
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendStickerMethod
      */
     private function getMethod(): SendStickerMethod
     {
@@ -83,15 +73,14 @@ class SendStickerMethodTest extends MethodTestCase
             [
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'replyMarkup' => static::buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
             ]
         );
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendStickerMethod
      */
     private function getMethodWithStringFileId(): SendStickerMethod
     {
@@ -101,7 +90,7 @@ class SendStickerMethodTest extends MethodTestCase
             [
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'replyMarkup' => static::buildInlineMarkupObject(),
             ]
         );
     }

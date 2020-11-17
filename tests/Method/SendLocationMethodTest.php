@@ -35,6 +35,7 @@ class SendLocationMethodTest extends MethodTestCase
             'horizontal_accuracy' => 10.5,
             'heading' => 1,
             'proximity_alert_radius' => 100,
+            'allow_sending_without_reply' => true,
         ], [], ['reply_markup']);
     }
 
@@ -55,6 +56,7 @@ class SendLocationMethodTest extends MethodTestCase
                 'horizontalAccuracy' => 10.5,
                 'heading' => 1,
                 'proximityAlertRadius' => 100,
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

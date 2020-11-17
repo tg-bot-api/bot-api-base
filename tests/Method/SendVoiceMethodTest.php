@@ -42,6 +42,7 @@ class SendVoiceMethodTest extends MethodTestCase
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
                 'reply_markup' => static::buildInlineMarkupArray(),
+                'allow_sending_without_reply' => true,
             ],
             ['voice' => true],
             ['reply_markup']
@@ -64,6 +65,7 @@ class SendVoiceMethodTest extends MethodTestCase
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
                 'replyMarkup' => static::buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

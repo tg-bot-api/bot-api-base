@@ -6,7 +6,8 @@ namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
-use TgBotApi\BotApiBase\Method\Traits\ReplyMarkupVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
 
 /**
  * Class SendGameType.
@@ -16,14 +17,7 @@ use TgBotApi\BotApiBase\Method\Traits\ReplyMarkupVariableTrait;
 class SendGameMethod implements SendMethodAliasInterface
 {
     use FillFromArrayTrait;
-    use ReplyMarkupVariableTrait;
-
-    /**
-     * Unique identifier for the target chat.
-     *
-     * @var int
-     */
-    public $chatId;
+    use SendToChatVariablesTrait;
 
     /**
      * Short name of the game, serves as the unique identifier for the game. Set up your games via Botfather.
@@ -33,27 +27,15 @@ class SendGameMethod implements SendMethodAliasInterface
     public $gameShortName;
 
     /**
-     * Sends the message silently. Users will receive a notification with no sound.
+     * Optional. A JSON-serialized object for an inline keyboard. If empty, one 'Play game_title' button will be shown.
+     * If not empty, the first button must launch the game.
      *
-     * @var bool|null
+     * @var InlineKeyboardMarkupType|null
      */
-    public $disableNotification;
+    public $replyMarkup;
 
     /**
-     * If the message is a reply, ID of the original message.
-     *
-     * @var int|null
-     */
-    public $replyToMessageId;
-
-    /**
-     * @param int        $chatId
-     * @param string     $gameShortName
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendGameMethod
      */
     public static function create(int $chatId, string $gameShortName, array $data = null): SendGameMethod
     {

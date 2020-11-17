@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 use TgBotApi\BotApiBase\Method\CopyMessageMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Tests\Method\Traits\ReplyKeyboardMarkupTrait;
+use TgBotApi\BotApiBase\Type\MessageEntityType;
 use TgBotApi\BotApiBase\Type\ReplyKeyboardMarkupType;
 
 class CopyMessageMethodTest extends MethodTestCase
@@ -20,7 +21,6 @@ class CopyMessageMethodTest extends MethodTestCase
             'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN_V2,
             'disableNotification' => true,
             'replyToMessageId' => 0,
-//                    'allowSendingWithoutReply' => true,
             'replyMarkup' => static::buildReplyMarkupObject(),
         ]);
 
@@ -60,8 +60,9 @@ class CopyMessageMethodTest extends MethodTestCase
                     'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN_V2,
                     'disableNotification' => true,
                     'replyToMessageId' => 0,
-//                    'allowSendingWithoutReply' => true,
+                    'allowSendingWithoutReply' => true,
                     'replyMarkup' => static::buildReplyMarkupObject(),
+                    'captionEntities' => [MessageEntityType::create(MessageEntityType::TYPE_PRE, 0, 1)],
                 ]),
                 [
                     'chat_id' => 1,
@@ -69,10 +70,10 @@ class CopyMessageMethodTest extends MethodTestCase
                     'message_id' => 1,
                     'caption' => 'caption',
                     'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN_V2,
-//                    'caption_entities' => [],
+                    'caption_entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
                     'disable_notification' => true,
                     'reply_to_message_id' => 0,
-//                    'allow_sending_without_reply' => true,
+                    'allow_sending_without_reply' => true,
                     'reply_markup' => static::buildReplyMarkupArray(),
                 ],
                 ['reply_markup'],

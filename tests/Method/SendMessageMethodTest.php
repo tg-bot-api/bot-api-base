@@ -35,6 +35,7 @@ class SendMessageMethodTest extends MethodTestCase
             'disable_notification' => true,
             'entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
             'reply_to_message_id' => 1,
+            'allow_sending_without_reply' => true,
             'reply_markup' => '{"inline_keyboard":[]}',
         ]);
     }
@@ -50,6 +51,7 @@ class SendMessageMethodTest extends MethodTestCase
             'disableNotification' => true,
             'replyToMessageId' => 1,
             'replyMarkup' => InlineKeyboardMarkupType::create([]),
+            'allowSendingWithoutReply' => true,
             'entities' => [MessageEntityType::create(MessageEntityType::TYPE_PRE, 0, 1)],
         ]);
     }

@@ -37,6 +37,7 @@ class SendVenueMethodTest extends MethodTestCase
             'reply_markup' => static::buildInlineMarkupArray(),
             'google_place_type' => 'google_place_type',
             'google_place_id' => 'google_place_id',
+            'allow_sending_without_reply' => true,
         ], [], ['reply_markup']);
     }
 
@@ -59,6 +60,7 @@ class SendVenueMethodTest extends MethodTestCase
                 'replyMarkup' => static::buildInlineMarkupObject(),
                 'googlePlaceId' => 'google_place_id',
                 'googlePlaceType' => 'google_place_type',
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

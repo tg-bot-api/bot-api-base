@@ -19,6 +19,7 @@ class SendMediaGroupMethod implements MethodInterface
 {
     use FillFromArrayTrait;
     use ChatIdVariableTrait;
+
     /**
      * A JSON-serialized array describing photos and videos to be sent, must include 2–10 items.
      *
@@ -41,13 +42,17 @@ class SendMediaGroupMethod implements MethodInterface
     public $replyToMessageId;
 
     /**
+     * Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.
+     *
+     * @var bool|null
+     */
+    public $allowSendingWithoutReply;
+
+    /**
      * @param int|string                                  $chatId
      * @param InputMediaPhotoType[]|InputMediaVideoType[] $media
-     * @param array|null                                  $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendMediaGroupMethod
      */
     public static function create($chatId, $media, array $data = null): SendMediaGroupMethod
     {
