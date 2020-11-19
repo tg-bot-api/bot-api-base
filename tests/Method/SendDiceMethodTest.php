@@ -6,10 +6,20 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 
 use TgBotApi\BotApiBase\Method\SendDiceMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
 
 class SendDiceMethodTest extends MethodTestCase
 {
     use InlineKeyboardMarkupTrait;
+
+    public function testCreate(): void
+    {
+        $datasets = $this->dataProvider();
+
+        foreach ($datasets as $params) {
+            $this->assertMethod(...$params);
+        }
+    }
 
     /**
      * @dataProvider dataProvider
@@ -41,7 +51,7 @@ class SendDiceMethodTest extends MethodTestCase
                         'allowSendingWithoutReply' => true,
                     ]
                 ),
-                $this->getApiRequest(SendDiceMethod::EMOJI_DICE),
+                static::getApiRequest(SendDiceMethod::EMOJI_DICE),
             ],
             [
                 SendDiceMethod::createWithDarts(
@@ -53,7 +63,7 @@ class SendDiceMethodTest extends MethodTestCase
                         'allowSendingWithoutReply' => true,
                     ]
                 ),
-                $this->getApiRequest(SendDiceMethod::EMOJI_DARTS),
+                static::getApiRequest(SendDiceMethod::EMOJI_DARTS),
             ],
             [
                 SendDiceMethod::createWithBasketball(
@@ -65,12 +75,36 @@ class SendDiceMethodTest extends MethodTestCase
                         'allowSendingWithoutReply' => true,
                     ]
                 ),
-                $this->getApiRequest(SendDiceMethod::EMOJI_BASKETBALL),
+                static::getApiRequest(SendDiceMethod::EMOJI_BASKETBALL),
+            ],
+            [
+                SendDiceMethod::createWithFootBall(
+                    'chat_id',
+                    [
+                        'disableNotification' => true,
+                        'replyToMessageId' => 1,
+                        'replyMarkup' => static::buildInlineMarkupObject(),
+                        'allowSendingWithoutReply' => true,
+                    ]
+                ),
+                static::getApiRequest(SendDiceMethod::EMOJI_FOOTBALL),
+            ],
+            [
+                SendDiceMethod::createWithSlotMachine(
+                    'chat_id',
+                    [
+                        'disableNotification' => true,
+                        'replyToMessageId' => 1,
+                        'replyMarkup' => static::buildInlineMarkupObject(),
+                        'allowSendingWithoutReply' => true,
+                    ]
+                ),
+                static::getApiRequest(SendDiceMethod::EMOJI_SLOT_MACHINE),
             ],
         ];
     }
 
-    private function getApiRequest(string $emoji): array
+    private static function getApiRequest(string $emoji): array
     {
         return [
             'chat_id' => 'chat_id',
@@ -80,5 +114,14 @@ class SendDiceMethodTest extends MethodTestCase
             'allow_sending_without_reply' => true,
             'reply_markup' => static::buildInlineMarkupArray(),
         ];
+    }
+
+    private function assertMethod(SendDiceMethod $method, $data): void
+    {
+        static::assertEquals($data['allow_sending_without_reply'], $method->allowSendingWithoutReply);
+        static::assertInstanceOf(InlineKeyboardMarkupType::class, $method->replyMarkup);
+        static::assertEquals('chat_id', $method->chatId);
+        static::assertEquals(1, $method->replyToMessageId);
+        static::assertEquals($data['emoji'], $method->emoji);
     }
 }
