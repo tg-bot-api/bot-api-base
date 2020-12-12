@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,8 +72,10 @@
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
+<li class="property public "><a href="#property_allowSendingWithoutReply" title="$allowSendingWithoutReply() :: Optional. Pass True, if the message should be sent even if the specified replied-to message is not found."><span class="description"></span><pre>$allowSendingWithoutReply</pre></a></li>
 <li class="property public "><a href="#property_disableNotification" title="$disableNotification() :: Optional. Sends the message silently. Users will receive a notification with no sound."><span class="description"></span><pre>$disableNotification</pre></a></li>
 <li class="property public "><a href="#property_disableWebPagePreview" title="$disableWebPagePreview() :: Optional. Disables link previews for links in this message."><span class="description"></span><pre>$disableWebPagePreview</pre></a></li>
+<li class="property public "><a href="#property_entities" title="$entities() :: Optional. List of special entities that appear in message text, which can be specified instead of parse_mode."><span class="description"></span><pre>$entities</pre></a></li>
 <li class="property public "><a href="#property_parseMode" title="$parseMode() :: Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
 text or inline URLs in the media caption."><span class="description"></span><pre>$parseMode</pre></a></li>
 <li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
@@ -119,7 +121,7 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(integer|string $chatId, string $text, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\SendMessageMethod</pre>
+<pre>create(integer|string $chatId, \TgBotApi\BotApiBase\Method\string $text, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -128,21 +130,13 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <h4>$chatId</h4>
 <code>integer</code><code>string</code>
 </div>
-<div class="subelement argument">
-<h4>$text</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$text</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\SendMessageMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -170,6 +164,16 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_allowSendingWithoutReply"> </a><div class="element clickable property public property_allowSendingWithoutReply" data-toggle="collapse" data-target=".property_allowSendingWithoutReply .collapse" title="public">
+<h2>Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.</h2>
+<pre>$allowSendingWithoutReply : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_disableNotification"> </a><div class="element clickable property public property_disableNotification" data-toggle="collapse" data-target=".property_disableNotification .collapse" title="public">
 <h2>Optional. Sends the message silently. Users will receive a notification with no sound.</h2>
 <pre>$disableNotification : boolean | null</pre>
@@ -183,6 +187,16 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <a id="property_disableWebPagePreview"> </a><div class="element clickable property public property_disableWebPagePreview" data-toggle="collapse" data-target=".property_disableWebPagePreview .collapse" title="public">
 <h2>Optional. Disables link previews for links in this message.</h2>
 <pre>$disableWebPagePreview : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_entities"> </a><div class="element clickable property public property_entities" data-toggle="collapse" data-target=".property_entities .collapse" title="public">
+<h2>Optional. List of special entities that appear in message text, which can be specified instead of parse_mode.</h2>
+<pre>$entities : array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageEntityType&gt; | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -239,7 +253,7 @@ instructions to remove reply keyboard or to force a reply from the user.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Tests\Method;
 
-use TgBotApi\BotApiBase\Method\UnpinAllChatMessageMethod;
+use TgBotApi\BotApiBase\Method\UnpinAllChatMessagesMethod;
 
-class UnpinAllChatMessageMethodTest extends MethodTestCase
+class UnpinAllChatMessagesMethodTest extends MethodTestCase
 {
     public function testCreate(): void
     {
-        $method = UnpinAllChatMessageMethod::create('chat_id');
+        $method = UnpinAllChatMessagesMethod::create('chat_id');
 
         static::assertEquals('chat_id', $method->chatId);
     }
@@ -20,18 +20,18 @@ class UnpinAllChatMessageMethodTest extends MethodTestCase
      *
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
-    public function testEncode(UnpinAllChatMessageMethod $method, array $exceptedRequest): void
+    public function testEncode(UnpinAllChatMessagesMethod $method, array $exceptedRequest): void
     {
-        $botApi = $this->getBot('unpinAllChatMessage', $exceptedRequest, true);
+        $botApi = $this->getBot('unpinAllChatMessages', $exceptedRequest, true);
 
-        $botApi->unpinAllChatMessage($method);
+        $botApi->unpinAllChatMessages($method);
     }
 
     public function provideData()
     {
         return [
             'default case' => [
-                UnpinAllChatMessageMethod::create('chat_id'),
+                UnpinAllChatMessagesMethod::create('chat_id'),
                 ['chat_id' => 'chat_id'],
             ],
         ];

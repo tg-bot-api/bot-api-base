@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -74,12 +74,12 @@
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
-<li class="property public "><a href="#property_caption" title="$caption() :: Optional. New caption of the message."><span class="description"></span><pre>$caption</pre></a></li>
+<li class="property public "><a href="#property_caption" title="$caption() :: Optional. Media caption (may also be used when resending photos by file_id), 0-1024 characters\."><span class="description"></span><pre>$caption</pre></a></li>
 <li class="property public "><a href="#property_chatId" title="$chatId() :: Required if inline_message_id is not specified."><span class="description"></span><pre>$chatId</pre></a></li>
 <li class="property public "><a href="#property_inlineMessageId" title="$inlineMessageId() :: Optional. Required if chat_id and message_id are not specified. Identifier of the inline message."><span class="description"></span><pre>$inlineMessageId</pre></a></li>
 <li class="property public "><a href="#property_messageId" title="$messageId() :: Optional. Required if inline_message_id is not specified. Identifier of the sent message."><span class="description"></span><pre>$messageId</pre></a></li>
-<li class="property public "><a href="#property_parseMode" title="$parseMode() :: Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic,
-fixed-width text or inline URLs in the media caption."><span class="description"></span><pre>$parseMode</pre></a></li>
+<li class="property public "><a href="#property_parseMode" title="$parseMode() :: Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
+text or inline URLs in the media caption."><span class="description"></span><pre>$parseMode</pre></a></li>
 <li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
 instructions to remove reply keyboard or to force a reply from the user."><span class="description"></span><pre>$replyMarkup</pre></a></li>
 </ul>
@@ -103,7 +103,8 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 </li>
 </ul>
 <div xmlns:php="http://php.net/xsl" class="element class">
-<p class="short_description">Class EditMessageCaptionMethod.</p>
+<p class="short_description">Use this method to edit captions of messages. On success, if the edited message is not an inline message,
+the edited Message is returned, otherwise True is returned.</p>
 <div class="details">
 <div class="long_description"></div>
 <table class="table table-bordered">
@@ -121,52 +122,36 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create($chatId, integer $messageId, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\EditMessageCaptionMethod</pre>
+<pre>create($chatId, \TgBotApi\BotApiBase\Method\int $messageId, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$chatId</h4></div>
-<div class="subelement argument">
-<h4>$messageId</h4>
-<code>integer</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$messageId</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\EditMessageCaptionMethod</code></div>
 </div></div>
 </div>
 <a id="method_createInline"></a><div class="element clickable method public method_createInline " data-toggle="collapse" data-target=".method_createInline .collapse" title="public">
 <h2>createInline()
         </h2>
-<pre>createInline(string $inlineMessageId, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\EditMessageCaptionMethod</pre>
+<pre>createInline(\TgBotApi\BotApiBase\Method\string $inlineMessageId, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$inlineMessageId</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$inlineMessageId</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\EditMessageCaptionMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -195,7 +180,7 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
 <a id="property_caption"> </a><div class="element clickable property public property_caption" data-toggle="collapse" data-target=".property_caption .collapse" title="public">
-<h2>Optional. New caption of the message.</h2>
+<h2>Optional. Media caption (may also be used when resending photos by file_id), 0-1024 characters\.</h2>
 <pre>$caption : string | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -235,8 +220,8 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_parseMode"> </a><div class="element clickable property public property_parseMode" data-toggle="collapse" data-target=".property_parseMode .collapse" title="public">
-<h2>Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic,
-fixed-width text or inline URLs in the media caption.</h2>
+<h2>Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
+text or inline URLs in the media caption.</h2>
 <pre>$parseMode : string | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -263,7 +248,7 @@ instructions to remove reply keyboard or to force a reply from the user.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:06+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

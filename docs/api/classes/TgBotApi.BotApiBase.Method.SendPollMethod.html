@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,13 +72,20 @@
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
+<li class="property public "><a href="#property_allowSendingWithoutReply" title="$allowSendingWithoutReply() :: Optional. Pass True, if the message should be sent even if the specified replied-to message is not found."><span class="description"></span><pre>$allowSendingWithoutReply</pre></a></li>
 <li class="property public "><a href="#property_allowsMultipleAnswers" title="$allowsMultipleAnswers() :: Optional. True, if the poll allows multiple answers, ignored for polls in quiz mode, defaults to False."><span class="description"></span><pre>$allowsMultipleAnswers</pre></a></li>
+<li class="property public "><a href="#property_closeDate" title="$closeDate() :: Point in time (will be transformed to Unix timestamp on send) when the poll will be automatically closed."><span class="description"></span><pre>$closeDate</pre></a></li>
 <li class="property public "><a href="#property_correctOptionId" title="$correctOptionId() :: Optional. 0-based identifier of the correct answer option, required for polls in quiz mode."><span class="description"></span><pre>$correctOptionId</pre></a></li>
 <li class="property public "><a href="#property_disableNotification" title="$disableNotification() :: Optional. Sends the message silently. Users will receive a notification with no sound."><span class="description"></span><pre>$disableNotification</pre></a></li>
+<li class="property public "><a href="#property_explanation" title="$explanation() :: Optional. Text that is shown when a user chooses an incorrect answer or taps on the lamp icon
+in a quiz-style poll, 0-200 characters with at most 2 line feeds after entities parsing."><span class="description"></span><pre>$explanation</pre></a></li>
+<li class="property public "><a href="#property_explanationEntities" title="$explanationEntities() :: List of special entities that appear in the poll explanation, which can be specified instead of parse_mode."><span class="description"></span><pre>$explanationEntities</pre></a></li>
+<li class="property public "><a href="#property_explanationParseMode" title="$explanationParseMode() :: Optional. Mode for parsing entities in the explanation. See formatting options for more details."><span class="description"></span><pre>$explanationParseMode</pre></a></li>
 <li class="property public "><a href="#property_isAnonymous" title="$isAnonymous() :: Optional. If the poll needs to be anonymous, defaults to True."><span class="description"></span><pre>$isAnonymous</pre></a></li>
 <li class="property public "><a href="#property_isClosed" title="$isClosed() :: Optional. Pass True, if the poll needs to be immediately closed."><span class="description"></span><pre>$isClosed</pre></a></li>
+<li class="property public "><a href="#property_openPeriod" title="$openPeriod() :: Optional. Amount of time in seconds the poll will be active after creation, 5-600."><span class="description"></span><pre>$openPeriod</pre></a></li>
 <li class="property public "><a href="#property_options" title="$options() :: A JSON-serialized list of answer options, 2-10 strings 1-100 characters each."><span class="description"></span><pre>$options</pre></a></li>
-<li class="property public "><a href="#property_question" title="$question() :: Poll question, 1-255 characters."><span class="description"></span><pre>$question</pre></a></li>
+<li class="property public "><a href="#property_question" title="$question() :: Poll question, 1-300 characters."><span class="description"></span><pre>$question</pre></a></li>
 <li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
 instructions to remove reply keyboard or to force a reply from the user."><span class="description"></span><pre>$replyMarkup</pre></a></li>
 <li class="property public "><a href="#property_replyToMessageId" title="$replyToMessageId() :: Optional. If the message is a reply, ID of the original message."><span class="description"></span><pre>$replyToMessageId</pre></a></li>
@@ -169,6 +176,16 @@ Use this method to send a native poll. A native poll can't be sent to a private 
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_allowSendingWithoutReply"> </a><div class="element clickable property public property_allowSendingWithoutReply" data-toggle="collapse" data-target=".property_allowSendingWithoutReply .collapse" title="public">
+<h2>Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.</h2>
+<pre>$allowSendingWithoutReply : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_allowsMultipleAnswers"> </a><div class="element clickable property public property_allowsMultipleAnswers" data-toggle="collapse" data-target=".property_allowsMultipleAnswers .collapse" title="public">
 <h2>Optional. True, if the poll allows multiple answers, ignored for polls in quiz mode, defaults to False.</h2>
 <pre>$allowsMultipleAnswers : boolean | null</pre>
@@ -178,6 +195,16 @@ Use this method to send a native poll. A native poll can't be sent to a private 
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_closeDate"> </a><div class="element clickable property public property_closeDate" data-toggle="collapse" data-target=".property_closeDate .collapse" title="public">
+<h2>Point in time (will be transformed to Unix timestamp on send) when the poll will be automatically closed.</h2>
+<pre>$closeDate : \DateTimeInterface | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Must be at least 5 and no more than 600 seconds in the future. Can't be used together with open_period.</p></div></div></div>
 </div>
 <a id="property_correctOptionId"> </a><div class="element clickable property public property_correctOptionId" data-toggle="collapse" data-target=".property_correctOptionId .collapse" title="public">
 <h2>Optional. 0-based identifier of the correct answer option, required for polls in quiz mode.</h2>
@@ -192,6 +219,37 @@ Use this method to send a native poll. A native poll can't be sent to a private 
 <a id="property_disableNotification"> </a><div class="element clickable property public property_disableNotification" data-toggle="collapse" data-target=".property_disableNotification .collapse" title="public">
 <h2>Optional. Sends the message silently. Users will receive a notification with no sound.</h2>
 <pre>$disableNotification : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_explanation"> </a><div class="element clickable property public property_explanation" data-toggle="collapse" data-target=".property_explanation .collapse" title="public">
+<h2>Optional. Text that is shown when a user chooses an incorrect answer or taps on the lamp icon
+in a quiz-style poll, 0-200 characters with at most 2 line feeds after entities parsing.</h2>
+<pre>$explanation : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_explanationEntities"> </a><div class="element clickable property public property_explanationEntities" data-toggle="collapse" data-target=".property_explanationEntities .collapse" title="public">
+<h2>List of special entities that appear in the poll explanation, which can be specified instead of parse_mode.</h2>
+<pre>$explanationEntities : array&lt;mixed,\TgBotApi\BotApiBase\Type\MessageEntityType&gt; | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_explanationParseMode"> </a><div class="element clickable property public property_explanationParseMode" data-toggle="collapse" data-target=".property_explanationParseMode .collapse" title="public">
+<h2>Optional. Mode for parsing entities in the explanation. See formatting options for more details.</h2>
+<pre>$explanationParseMode : string | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -219,6 +277,16 @@ Use this method to send a native poll. A native poll can't be sent to a private 
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_openPeriod"> </a><div class="element clickable property public property_openPeriod" data-toggle="collapse" data-target=".property_openPeriod .collapse" title="public">
+<h2>Optional. Amount of time in seconds the poll will be active after creation, 5-600.</h2>
+<pre>$openPeriod : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Can't be used together with close_date.</p></div></div></div>
+</div>
 <a id="property_options"> </a><div class="element clickable property public property_options" data-toggle="collapse" data-target=".property_options .collapse" title="public">
 <h2>A JSON-serialized list of answer options, 2-10 strings 1-100 characters each.</h2>
 <pre>$options : array&lt;mixed,string&gt;</pre>
@@ -230,7 +298,7 @@ Use this method to send a native poll. A native poll can't be sent to a private 
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_question"> </a><div class="element clickable property public property_question" data-toggle="collapse" data-target=".property_question .collapse" title="public">
-<h2>Poll question, 1-255 characters.</h2>
+<h2>Poll question, 1-300 characters.</h2>
 <pre>$question : \TgBotApi\BotApiBase\Method\string;</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -277,7 +345,7 @@ instructions to remove reply keyboard or to force a reply from the user.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:06+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

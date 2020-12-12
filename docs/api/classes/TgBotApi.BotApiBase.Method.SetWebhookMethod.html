@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -74,6 +74,8 @@
                     <ul>
 <li class="property public "><a href="#property_allowedUpdates" title="$allowedUpdates() :: Optional    List the types of updates you want your bot to receive."><span class="description"></span><pre>$allowedUpdates</pre></a></li>
 <li class="property public "><a href="#property_certificate" title="$certificate() :: Optional. Upload your public key certificate so that the root certificate in use can be checked."><span class="description"></span><pre>$certificate</pre></a></li>
+<li class="property public "><a href="#property_dropPendingUpdates" title="$dropPendingUpdates() :: Pass True to drop all pending updates."><span class="description"></span><pre>$dropPendingUpdates</pre></a></li>
+<li class="property public "><a href="#property_ipAddress" title="$ipAddress() :: The fixed IP address which will be used to send webhook requests instead of the IP address resolved through DNS."><span class="description"></span><pre>$ipAddress</pre></a></li>
 <li class="property public "><a href="#property_maxConnections" title="$maxConnections() :: Optional    Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100."><span class="description"></span><pre>$maxConnections</pre></a></li>
 <li class="property public "><a href="#property_url" title="$url() :: HTTPS url to send updates to. Use an empty string to remove webhook integration."><span class="description"></span><pre>$url</pre></a></li>
 </ul>
@@ -119,26 +121,18 @@
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(string $url, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\SetWebhookMethod</pre>
+<pre>create(\TgBotApi\BotApiBase\Method\string $url, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$url</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$url</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\SetWebhookMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -197,6 +191,26 @@ so unwanted updates may be received for a short period of time.</p></div></div><
 </tr></table>
 </div></div>
 </div>
+<a id="property_dropPendingUpdates"> </a><div class="element clickable property public property_dropPendingUpdates" data-toggle="collapse" data-target=".property_dropPendingUpdates .collapse" title="public">
+<h2>Pass True to drop all pending updates.</h2>
+<pre>$dropPendingUpdates : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_ipAddress"> </a><div class="element clickable property public property_ipAddress" data-toggle="collapse" data-target=".property_ipAddress .collapse" title="public">
+<h2>The fixed IP address which will be used to send webhook requests instead of the IP address resolved through DNS.</h2>
+<pre>$ipAddress : string</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_maxConnections"> </a><div class="element clickable property public property_maxConnections" data-toggle="collapse" data-target=".property_maxConnections .collapse" title="public">
 <h2>Optional    Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100.</h2>
 <pre>$maxConnections : integer | null</pre>
@@ -225,7 +239,7 @@ and higher values to increase your bot’s throughput.</p></div></div></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:04+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

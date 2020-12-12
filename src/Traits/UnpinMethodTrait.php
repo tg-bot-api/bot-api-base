@@ -6,7 +6,7 @@ namespace TgBotApi\BotApiBase\Traits;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
 use TgBotApi\BotApiBase\Method\Interfaces\UnpinMethodAliasInterface;
-use TgBotApi\BotApiBase\Method\UnpinAllChatMessageMethod;
+use TgBotApi\BotApiBase\Method\UnpinAllChatMessagesMethod;
 use TgBotApi\BotApiBase\Method\UnpinChatMessageMethod;
 
 /**
@@ -30,7 +30,7 @@ trait UnpinMethodTrait
     /**
      * @throws ResponseException
      */
-    public function unpinAllChatMessage(UnpinAllChatMessageMethod $method): bool
+    public function unpinAllChatMessages(UnpinAllChatMessagesMethod $method): bool
     {
         return $this->unpin($method);
     }

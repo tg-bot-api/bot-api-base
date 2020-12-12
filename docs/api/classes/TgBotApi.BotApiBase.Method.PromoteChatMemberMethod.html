@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -83,6 +83,7 @@ or demote administrators that he has promoted, directly or indirectly
 (promoted by administrators that were appointed by him)."><span class="description"></span><pre>$canPromoteMembers</pre></a></li>
 <li class="property public "><a href="#property_canRestrictMembers" title="$canRestrictMembers() :: Optional. Pass True, if the administrator can restrict, ban or unban chat members."><span class="description"></span><pre>$canRestrictMembers</pre></a></li>
 <li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li>
+<li class="property public "><a href="#property_isAnonymous" title="$isAnonymous() :: Pass True, if the administrator's presence in the chat is hidden."><span class="description"></span><pre>$isAnonymous</pre></a></li>
 <li class="property public "><a href="#property_userId" title="$userId() :: Unique identifier of the target user."><span class="description"></span><pre>$userId</pre></a></li>
 </ul>
 </li>
@@ -123,24 +124,19 @@ or demote administrators that he has promoted, directly or indirectly
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create($chatId, $userId, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\PromoteChatMemberMethod</pre>
+<pre>create($chatId, $userId, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$chatId</h4></div>
 <div class="subelement argument"><h4>$userId</h4></div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\PromoteChatMemberMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -260,6 +256,16 @@ or demote administrators that he has promoted, directly or indirectly
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_isAnonymous"> </a><div class="element clickable property public property_isAnonymous" data-toggle="collapse" data-target=".property_isAnonymous .collapse" title="public">
+<h2>Pass True, if the administrator's presence in the chat is hidden.</h2>
+<pre>$isAnonymous : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_userId"> </a><div class="element clickable property public property_userId" data-toggle="collapse" data-target=".property_userId .collapse" title="public">
 <h2>Unique identifier of the target user.</h2>
 <pre>$userId : integer</pre>
@@ -277,7 +283,7 @@ or demote administrators that he has promoted, directly or indirectly
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

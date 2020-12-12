@@ -7,6 +7,8 @@ namespace TgBotApi\BotApiBase\Method;
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaAudioType;
+use TgBotApi\BotApiBase\Type\InputMedia\InputMediaDocumentType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType;
 use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
 
@@ -17,13 +19,13 @@ use TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType;
  */
 class SendMediaGroupMethod implements MethodInterface
 {
-    use FillFromArrayTrait;
     use ChatIdVariableTrait;
+    use FillFromArrayTrait;
 
     /**
      * A JSON-serialized array describing photos and videos to be sent, must include 2–10 items.
      *
-     * @var InputMediaPhotoType[]|InputMediaVideoType[]
+     * @var InputMediaPhotoType[]|InputMediaVideoType[]|InputMediaAudioType[]|InputMediaDocumentType[]
      */
     public $media;
 
@@ -49,12 +51,12 @@ class SendMediaGroupMethod implements MethodInterface
     public $allowSendingWithoutReply;
 
     /**
-     * @param int|string                                  $chatId
-     * @param InputMediaPhotoType[]|InputMediaVideoType[] $media
+     * @param int|string                                                                                 $chatId
+     * @param InputMediaPhotoType[]|InputMediaVideoType[]|InputMediaAudioType[]|InputMediaDocumentType[] $media
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
-    public static function create($chatId, $media, array $data = null): SendMediaGroupMethod
+    public static function create($chatId, array $media, array $data = null): SendMediaGroupMethod
     {
         $instance = new static();
         $instance->chatId = $chatId;

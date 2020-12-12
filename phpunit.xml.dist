@@ -10,7 +10,7 @@
          processIsolation="false"
          stopOnFailure="false">
     <testsuites>
-        <testsuite name="greenplugin Test Suite">
+        <testsuite name="Main Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

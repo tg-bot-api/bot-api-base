@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -63,7 +63,8 @@
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
                     <ul>
-<li class="method public inherited"><a href="#method___construct" title="__construct() :: BotApi constructor."><span class="description">BotApi constructor.</span><pre>__construct()</pre></a></li>
+<li class="method public inherited"><a href="#method___construct" title="__construct() :: "><span class="description">__construct()
+        </span><pre>__construct()</pre></a></li>
 <li class="method public inherited"><a href="#method_add" title="add() :: "><span class="description">add()
         </span><pre>add()</pre></a></li>
 <li class="method public inherited"><a href="#method_addStickerToSet" title="addStickerToSet() :: "><span class="description">addStickerToSet()
@@ -80,6 +81,10 @@
         </span><pre>answerShippingQuery()</pre></a></li>
 <li class="method public inherited"><a href="#method_call" title="call() :: "><span class="description">call()
         </span><pre>call()</pre></a></li>
+<li class="method public inherited"><a href="#method_close" title="close() :: "><span class="description">close()
+        </span><pre>close()</pre></a></li>
+<li class="method public inherited"><a href="#method_copyMessage" title="copyMessage() :: "><span class="description">copyMessage()
+        </span><pre>copyMessage()</pre></a></li>
 <li class="method public inherited"><a href="#method_create" title="create() :: "><span class="description">create()
         </span><pre>create()</pre></a></li>
 <li class="method public inherited"><a href="#method_createNewStickerSet" title="createNewStickerSet() :: "><span class="description">createNewStickerSet()
@@ -148,6 +153,8 @@
         </span><pre>leave()</pre></a></li>
 <li class="method public inherited"><a href="#method_leaveChat" title="leaveChat() :: "><span class="description">leaveChat()
         </span><pre>leaveChat()</pre></a></li>
+<li class="method public inherited"><a href="#method_logOut" title="logOut() :: "><span class="description">logOut()
+        </span><pre>logOut()</pre></a></li>
 <li class="method public inherited"><a href="#method_pin" title="pin() :: "><span class="description">pin()
         </span><pre>pin()</pre></a></li>
 <li class="method public inherited"><a href="#method_pinChatMessage" title="pinChatMessage() :: "><span class="description">pinChatMessage()
@@ -236,6 +243,8 @@
         </span><pre>unbanChatMember()</pre></a></li>
 <li class="method public inherited"><a href="#method_unpin" title="unpin() :: "><span class="description">unpin()
         </span><pre>unpin()</pre></a></li>
+<li class="method public inherited"><a href="#method_unpinAllChatMessage" title="unpinAllChatMessage() :: "><span class="description">unpinAllChatMessage()
+        </span><pre>unpinAllChatMessage()</pre></a></li>
 <li class="method public inherited"><a href="#method_unpinChatMessage" title="unpinChatMessage() :: "><span class="description">unpinChatMessage()
         </span><pre>unpinChatMessage()</pre></a></li>
 <li class="method public inherited"><a href="#method_upload" title="upload() :: "><span class="description">upload()
@@ -292,28 +301,17 @@
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method___construct"></a><div class="element clickable method public method___construct inherited" data-toggle="collapse" data-target=".method___construct .collapse" title="public">
-<h2>BotApi constructor.</h2>
-<pre>__construct(string $botKey, \TgBotApi\BotApiBase\ApiClientInterface $apiClient, \TgBotApi\BotApiBase\NormalizerInterface $normalizer, string $endPoint<code> = 'https://api.telegram.org'</code>) </pre>
+<h2>__construct()
+        </h2>
+<pre>__construct(\TgBotApi\BotApiBase\string $botKey, \TgBotApi\BotApiBase\ApiClientInterface $apiClient, \TgBotApi\BotApiBase\NormalizerInterface $normalizer, \TgBotApi\BotApiBase\string $endPoint<code> = 'https://api.telegram.org'</code>) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$botKey</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$apiClient</h4>
-<code>\TgBotApi\BotApiBase\ApiClientInterface</code>
-</div>
-<div class="subelement argument">
-<h4>$normalizer</h4>
-<code>\TgBotApi\BotApiBase\NormalizerInterface</code>
-</div>
-<div class="subelement argument">
-<h4>$endPoint</h4>
-<code>string</code>
-</div>
+<div class="subelement argument"><h4>$botKey</h4></div>
+<div class="subelement argument"><h4>$apiClient</h4></div>
+<div class="subelement argument"><h4>$normalizer</h4></div>
+<div class="subelement argument"><h4>$endPoint</h4></div>
 </div></div>
 </div>
 <a id="method_add"></a><div class="element clickable method public method_add inherited" data-toggle="collapse" data-target=".method_add .collapse" title="public">
@@ -480,6 +478,38 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>mixed</code></div>
+</div></div>
+</div>
+<a id="method_close"></a><div class="element clickable method public method_close inherited" data-toggle="collapse" data-target=".method_close .collapse" title="public">
+<h2>close()
+        </h2>
+<pre>close(\TgBotApi\BotApiBase\Method\CloseMethod $method) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_copyMessage"></a><div class="element clickable method public method_copyMessage inherited" data-toggle="collapse" data-target=".method_copyMessage .collapse" title="public">
+<h2>copyMessage()
+        </h2>
+<pre>copyMessage(\TgBotApi\BotApiBase\Method\CopyMessageMethod $method) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_create"></a><div class="element clickable method public method_create inherited" data-toggle="collapse" data-target=".method_create .collapse" title="public">
@@ -785,7 +815,7 @@
 <a id="method_exportChatInviteLink"></a><div class="element clickable method public method_exportChatInviteLink inherited" data-toggle="collapse" data-target=".method_exportChatInviteLink .collapse" title="public">
 <h2>exportChatInviteLink()
         </h2>
-<pre>exportChatInviteLink(\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod $method) : string</pre>
+<pre>exportChatInviteLink(\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -794,17 +824,12 @@
 <td>\TgBotApi\BotApiBase\BotApiInterface::exportChatInviteLink()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a id="method_forward"></a><div class="element clickable method public method_forward inherited" data-toggle="collapse" data-target=".method_forward .collapse" title="public">
@@ -852,7 +877,7 @@
 <a id="method_getAbsoluteFilePath"></a><div class="element clickable method public method_getAbsoluteFilePath inherited" data-toggle="collapse" data-target=".method_getAbsoluteFilePath .collapse" title="public">
 <h2>getAbsoluteFilePath()
         </h2>
-<pre>getAbsoluteFilePath(\TgBotApi\BotApiBase\Type\FileType $file) : string</pre>
+<pre>getAbsoluteFilePath(\TgBotApi\BotApiBase\Type\FileType $file) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -861,12 +886,7 @@
 <td>\TgBotApi\BotApiBase\BotApiInterface::getAbsoluteFilePath()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$file</h4>
-<code>\TgBotApi\BotApiBase\Type\FileType</code>
-</div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
+<div class="subelement argument"><h4>$file</h4></div>
 </div></div>
 </div>
 <a id="method_getChat"></a><div class="element clickable method public method_getChat inherited" data-toggle="collapse" data-target=".method_getChat .collapse" title="public">
@@ -988,7 +1008,7 @@
 <a id="method_getMyCommands"></a><div class="element clickable method public method_getMyCommands inherited" data-toggle="collapse" data-target=".method_getMyCommands .collapse" title="public">
 <h2>getMyCommands()
         </h2>
-<pre>getMyCommands(\TgBotApi\BotApiBase\Method\GetMyCommandsMethod $method) : mixed</pre>
+<pre>getMyCommands(\TgBotApi\BotApiBase\Method\GetMyCommandsMethod $method) : array&lt;mixed,\TgBotApi\BotApiBase\Type\BotCommandType&gt;</pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -1000,7 +1020,7 @@
 <td></td>
 </tr></table>
 <h3>Returns</h3>
-<div class="subelement response"><code>mixed</code></div>
+<div class="subelement response"><code>array&lt;mixed,\TgBotApi\BotApiBase\Type\BotCommandType&gt;</code></div>
 </div></div>
 </div>
 <a id="method_getStickerSet"></a><div class="element clickable method public method_getStickerSet inherited" data-toggle="collapse" data-target=".method_getStickerSet .collapse" title="public">
@@ -1151,6 +1171,22 @@
 </tr></table>
 <h3>Returns</h3>
 <div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_logOut"></a><div class="element clickable method public method_logOut inherited" data-toggle="collapse" data-target=".method_logOut .collapse" title="public">
+<h2>logOut()
+        </h2>
+<pre>logOut(\TgBotApi\BotApiBase\Method\LogOutMethod $method) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_pin"></a><div class="element clickable method public method_pin inherited" data-toggle="collapse" data-target=".method_pin .collapse" title="public">
@@ -1335,7 +1371,7 @@
 <a id="method_sendChatAction"></a><div class="element clickable method public method_sendChatAction inherited" data-toggle="collapse" data-target=".method_sendChatAction .collapse" title="public">
 <h2>sendChatAction()
         </h2>
-<pre>sendChatAction(\TgBotApi\BotApiBase\Method\SendChatActionMethod $method) : boolean</pre>
+<pre>sendChatAction(\TgBotApi\BotApiBase\Method\SendChatActionMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -1344,17 +1380,12 @@
 <td>\TgBotApi\BotApiBase\BotApiInterface::sendChatAction()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendChatActionMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <a id="method_sendContact"></a><div class="element clickable method public method_sendContact inherited" data-toggle="collapse" data-target=".method_sendContact .collapse" title="public">
@@ -1465,10 +1496,7 @@
 <td>\TgBotApi\BotApiBase\BotApiInterface::sendMediaGroup()</td>
 </tr></table>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
@@ -1864,22 +1892,17 @@
 <a id="method_stopPoll"></a><div class="element clickable method public method_stopPoll inherited" data-toggle="collapse" data-target=".method_stopPoll .collapse" title="public">
 <h2>stopPoll()
         </h2>
-<pre>stopPoll(\TgBotApi\BotApiBase\Method\StopPollMethod $method) : \TgBotApi\BotApiBase\Type\PollType</pre>
+<pre>stopPoll(\TgBotApi\BotApiBase\Method\StopPollMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\StopPollMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\PollType</code></div>
 </div></div>
 </div>
 <a id="method_unban"></a><div class="element clickable method public method_unban inherited" data-toggle="collapse" data-target=".method_unban .collapse" title="public">
@@ -1945,25 +1968,36 @@
 <div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
-<a id="method_unpinChatMessage"></a><div class="element clickable method public method_unpinChatMessage inherited" data-toggle="collapse" data-target=".method_unpinChatMessage .collapse" title="public">
-<h2>unpinChatMessage()
+<a id="method_unpinAllChatMessage"></a><div class="element clickable method public method_unpinAllChatMessage inherited" data-toggle="collapse" data-target=".method_unpinAllChatMessage .collapse" title="public">
+<h2>unpinAllChatMessage()
         </h2>
-<pre>unpinChatMessage(\TgBotApi\BotApiBase\Method\UnpinChatMessageMethod $method) : boolean</pre>
+<pre>unpinAllChatMessage(\TgBotApi\BotApiBase\Method\UnpinAllChatMessageMethod $method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$method</h4>
-<code>\TgBotApi\BotApiBase\Method\UnpinChatMessageMethod</code>
-</div>
+<div class="subelement argument"><h4>$method</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
+</div></div>
+</div>
+<a id="method_unpinChatMessage"></a><div class="element clickable method public method_unpinChatMessage inherited" data-toggle="collapse" data-target=".method_unpinChatMessage .collapse" title="public">
+<h2>unpinChatMessage()
+        </h2>
+<pre>unpinChatMessage(\TgBotApi\BotApiBase\Method\UnpinChatMessageMethod $method) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$method</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\ResponseException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <a id="method_upload"></a><div class="element clickable method public method_upload inherited" data-toggle="collapse" data-target=".method_upload .collapse" title="public">
@@ -2011,14 +2045,12 @@
 <a id="method_getMethodName"></a><div class="element clickable method private method_getMethodName inherited" data-toggle="collapse" data-target=".method_getMethodName .collapse" title="private">
 <h2>getMethodName()
         </h2>
-<pre>getMethodName($method) : string</pre>
+<pre>getMethodName($method) </pre>
 <div class="labels"><span class="label">Inherited</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
 <div class="subelement argument"><h4>$method</h4></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <h3>
@@ -2070,7 +2102,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:50:58+03:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,6 +72,7 @@
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
+<li class="property public "><a href="#property_allowSendingWithoutReply" title="$allowSendingWithoutReply() :: Optional. Pass True, if the message should be sent even if the specified replied-to message is not found."><span class="description"></span><pre>$allowSendingWithoutReply</pre></a></li>
 <li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li>
 <li class="property public "><a href="#property_disableNotification" title="$disableNotification() :: Optional. Sends the message silently. Users will receive a notification with no sound."><span class="description"></span><pre>$disableNotification</pre></a></li>
 <li class="property public "><a href="#property_media" title="$media() :: A JSON-serialized array describing photos and videos to be sent, must include 2–10 items."><span class="description"></span><pre>$media</pre></a></li>
@@ -115,7 +116,7 @@
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(integer|string $chatId, array&lt;mixed,\TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType&gt;|array&lt;mixed,\TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType&gt; $media, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\SendMediaGroupMethod</pre>
+<pre>create(integer|string $chatId, array&lt;mixed,\TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType&gt;|array&lt;mixed,\TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType&gt; $media, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -128,17 +129,12 @@
 <h4>$media</h4>
 <code>array&lt;mixed,\TgBotApi\BotApiBase\Type\InputMedia\InputMediaPhotoType&gt;</code><code>array&lt;mixed,\TgBotApi\BotApiBase\Type\InputMedia\InputMediaVideoType&gt;</code>
 </div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\SendMediaGroupMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -166,6 +162,16 @@
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_allowSendingWithoutReply"> </a><div class="element clickable property public property_allowSendingWithoutReply" data-toggle="collapse" data-target=".property_allowSendingWithoutReply .collapse" title="public">
+<h2>Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.</h2>
+<pre>$allowSendingWithoutReply : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_chatId"> </a><div class="element clickable property public property_chatId" data-toggle="collapse" data-target=".property_chatId .collapse" title="public">
 <h2>Unique identifier for the target chat or username of the target channel (in the format @channelusername).</h2>
 <pre>$chatId : integer | string</pre>
@@ -213,7 +219,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:06+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

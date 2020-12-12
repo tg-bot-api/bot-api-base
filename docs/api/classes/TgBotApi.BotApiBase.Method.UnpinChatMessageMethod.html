@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -62,12 +62,20 @@
 <ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
 <li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
-                    <ul><li class="method public "><a href="#method_create" title="create() :: "><span class="description">create()
-        </span><pre>create()</pre></a></li></ul>
+                    <ul>
+<li class="method public "><a href="#method_create" title="create() :: "><span class="description">create()
+        </span><pre>create()</pre></a></li>
+<li class="method public inherited"><a href="#method_fill" title="fill() :: "><span class="description">fill()
+        </span><pre>fill()</pre></a></li>
+</ul>
 </li>
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
-                    <ul><li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li></ul>
+                    <ul>
+<li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li>
+<li class="property public "><a href="#property_messageId" title="$messageId() :: Optional Identifier of a message to unpin. If not specified,
+the most recent pinned message (by sending date) will be unpinned."><span class="description"></span><pre>$messageId</pre></a></li>
+</ul>
 </li>
 </ul>
 </div>
@@ -106,7 +114,7 @@
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(integer|string $chatId) : \TgBotApi\BotApiBase\Method\UnpinChatMessageMethod</pre>
+<pre>create(integer|string $chatId, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -115,8 +123,35 @@
 <h4>$chatId</h4>
 <code>integer</code><code>string</code>
 </div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\UnpinChatMessageMethod</code></div>
+<div class="subelement argument"><h4>$data</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
+<h2>fill()
+        </h2>
+<pre>fill(array $data, array $forbidden<code> = array()</code>) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$forbidden</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
+<td></td>
+</tr></table>
 </div></div>
 </div>
 <h3>
@@ -131,6 +166,17 @@
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_messageId"> </a><div class="element clickable property public property_messageId" data-toggle="collapse" data-target=".property_messageId .collapse" title="public">
+<h2>Optional Identifier of a message to unpin. If not specified,
+the most recent pinned message (by sending date) will be unpinned.</h2>
+<pre>$messageId : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 </div>
 </div>
 </div>
@@ -138,7 +184,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:01+03:00.<br></footer></div>
 </div>
 </body>
 </html>

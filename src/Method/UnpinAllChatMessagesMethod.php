@@ -16,14 +16,14 @@ use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
  *
  * @see https://core.telegram.org/bots/api#unpinallchatmessages
  */
-class UnpinAllChatMessageMethod implements UnpinMethodAliasInterface
+class UnpinAllChatMessagesMethod implements UnpinMethodAliasInterface
 {
     use ChatIdVariableTrait;
 
     /**
      * @param int|string $chatId
      */
-    public static function create($chatId): UnpinAllChatMessageMethod
+    public static function create($chatId): UnpinAllChatMessagesMethod
     {
         $instance = new static();
         $instance->chatId = $chatId;
