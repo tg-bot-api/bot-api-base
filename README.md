@@ -3,7 +3,6 @@
 [![Telegram bot api][ico-bot-api]][link-bot-api]
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
-[![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![PHP Version >= 7.2][ico-php-v]][link-php-7-2]

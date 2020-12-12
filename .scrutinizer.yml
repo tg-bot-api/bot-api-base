@@ -8,13 +8,6 @@ build:
                 override: true
             tests:
                 override: [php-scrutinizer-run]
-        coverage:
-            tests:
-                override:
-                    - command: composer test
-                      coverage:
-                          file: build/logs/clover.xml
-                          format: clover
 
 filter:
     excluded_paths: [tests/*]
@@ -38,4 +31,4 @@ checks:
 tools:
     external_code_coverage:
         timeout: 600
-        runs: 3
+        runs: 1
