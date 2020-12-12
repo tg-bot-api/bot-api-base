@@ -1,8 +1,4 @@
-parameters:
-    git_dir: .
-    bin_dir: vendor/bin
-    process_async_limit: 10
-    process_async_wait: 1000
+grumphp:
     process_timeout: 600
     ascii:
         succeeded: ~
@@ -42,16 +38,14 @@ parameters:
             with_dependencies: false
             strict: false
         phpcpd:
-            directory: '.'
+            directory: ['.']
             exclude: ['vendor']
-            names_exclude: []
-            regexps_exclude: []
             fuzzy: false
             min_lines: 5
             min_tokens: 70
             triggered_by: ['php']
         phpmnd:
-            directory: .
+            directory: '.'
             whitelist_patterns: []
             exclude: []
             exclude_name: []
