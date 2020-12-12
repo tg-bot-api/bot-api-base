@@ -23,9 +23,6 @@ class SendVideoNoteMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
@@ -37,7 +34,8 @@ class SendVideoNoteMethodTest extends MethodTestCase
                 'thumb' => '',
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
-                'reply_markup' => $this->buildInlineMarkupArray(),
+                'reply_markup' => static::buildInlineMarkupArray(),
+                'allow_sending_without_reply' => true,
             ],
             ['video_note' => true, 'thumb' => true],
             ['reply_markup']
@@ -46,8 +44,6 @@ class SendVideoNoteMethodTest extends MethodTestCase
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendVideoNoteMethod
      */
     private function getMethod(): SendVideoNoteMethod
     {
@@ -59,7 +55,8 @@ class SendVideoNoteMethodTest extends MethodTestCase
                 'thumb' => InputFileType::create('/dev/null'),
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'replyMarkup' => static::buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

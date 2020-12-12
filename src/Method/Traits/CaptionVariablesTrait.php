@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace TgBotApi\BotApiBase\Method\Traits;
 
-/**
- * Trait CaptionVariablesTrait.
- */
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
+
 trait CaptionVariablesTrait
 {
+    use CaptionEntitiesFieldTrait;
+
     /**
      * Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic, fixed-width
      * text or inline URLs in the media caption.

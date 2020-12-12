@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -63,12 +63,17 @@
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
 <li class="property public "><a href="#property_allowsMultipleAnswers" title="$allowsMultipleAnswers() :: True, if the poll allows multiple answers."><span class="description"></span><pre>$allowsMultipleAnswers</pre></a></li>
+<li class="property public "><a href="#property_closeDate" title="$closeDate() :: Optional. Point in time (Unix timestamp) when the poll will be automatically closed."><span class="description"></span><pre>$closeDate</pre></a></li>
 <li class="property public "><a href="#property_correctOptionId" title="$correctOptionId() :: Optional. 0-based identifier of the correct answer option."><span class="description"></span><pre>$correctOptionId</pre></a></li>
+<li class="property public "><a href="#property_explanation" title="$explanation() :: Optional. Text that is shown when a user chooses an incorrect answer or taps
+on the lamp icon in a quiz-style poll, 0-200 characters."><span class="description"></span><pre>$explanation</pre></a></li>
+<li class="property public "><a href="#property_explanationEntities" title="$explanationEntities() :: Optional. Special entities like usernames, URLs, bot commands, etc. that appear in the explanation."><span class="description"></span><pre>$explanationEntities</pre></a></li>
 <li class="property public "><a href="#property_id" title="$id() :: Unique poll identifier."><span class="description"></span><pre>$id</pre></a></li>
 <li class="property public "><a href="#property_isAnonymous" title="$isAnonymous() :: True, if the poll is anonymous."><span class="description"></span><pre>$isAnonymous</pre></a></li>
 <li class="property public "><a href="#property_isClosed" title="$isClosed() :: True, if the poll is closed."><span class="description"></span><pre>$isClosed</pre></a></li>
+<li class="property public "><a href="#property_openPeriod" title="$openPeriod() :: Optional. Amount of time in seconds the poll will be active after creation."><span class="description"></span><pre>$openPeriod</pre></a></li>
 <li class="property public "><a href="#property_options" title="$options() :: List of poll options."><span class="description"></span><pre>$options</pre></a></li>
-<li class="property public "><a href="#property_question" title="$question() :: Poll question, 1-255 characters."><span class="description"></span><pre>$question</pre></a></li>
+<li class="property public "><a href="#property_question" title="$question() :: Poll question, 1-300 characters."><span class="description"></span><pre>$question</pre></a></li>
 <li class="property public "><a href="#property_totalVoterCount" title="$totalVoterCount() :: Total number of users that voted in the poll."><span class="description"></span><pre>$totalVoterCount</pre></a></li>
 <li class="property public "><a href="#property_type" title="$type() :: Poll type, currently can be “regular” or “quiz”."><span class="description"></span><pre>$type</pre></a></li>
 </ul>
@@ -117,6 +122,16 @@ This object contains information about a poll.</p>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_closeDate"> </a><div class="element clickable property public property_closeDate" data-toggle="collapse" data-target=".property_closeDate .collapse" title="public">
+<h2>Optional. Point in time (Unix timestamp) when the poll will be automatically closed.</h2>
+<pre>$closeDate : \DateTimeInterface | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_correctOptionId"> </a><div class="element clickable property public property_correctOptionId" data-toggle="collapse" data-target=".property_correctOptionId .collapse" title="public">
 <h2>Optional. 0-based identifier of the correct answer option.</h2>
 <pre>$correctOptionId : integer | null</pre>
@@ -127,6 +142,27 @@ This object contains information about a poll.</p>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>Available only for polls in the quiz mode, which are closed, or was sent (not forwarded)
 by the bot or to the private chat with the bot.</p></div></div></div>
+</div>
+<a id="property_explanation"> </a><div class="element clickable property public property_explanation" data-toggle="collapse" data-target=".property_explanation .collapse" title="public">
+<h2>Optional. Text that is shown when a user chooses an incorrect answer or taps
+on the lamp icon in a quiz-style poll, 0-200 characters.</h2>
+<pre>$explanation : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_explanationEntities"> </a><div class="element clickable property public property_explanationEntities" data-toggle="collapse" data-target=".property_explanationEntities .collapse" title="public">
+<h2>Optional. Special entities like usernames, URLs, bot commands, etc. that appear in the explanation.</h2>
+<pre>$explanationEntities : \TgBotApi\BotApiBase\Type\MessageEntityType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_id"> </a><div class="element clickable property public property_id" data-toggle="collapse" data-target=".property_id .collapse" title="public">
 <h2>Unique poll identifier.</h2>
@@ -158,6 +194,16 @@ by the bot or to the private chat with the bot.</p></div></div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_openPeriod"> </a><div class="element clickable property public property_openPeriod" data-toggle="collapse" data-target=".property_openPeriod .collapse" title="public">
+<h2>Optional. Amount of time in seconds the poll will be active after creation.</h2>
+<pre>$openPeriod : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_options"> </a><div class="element clickable property public property_options" data-toggle="collapse" data-target=".property_options .collapse" title="public">
 <h2>List of poll options.</h2>
 <pre>$options : array&lt;mixed,\TgBotApi\BotApiBase\Type\PollOptionType&gt;</pre>
@@ -169,7 +215,7 @@ by the bot or to the private chat with the bot.</p></div></div></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_question"> </a><div class="element clickable property public property_question" data-toggle="collapse" data-target=".property_question .collapse" title="public">
-<h2>Poll question, 1-255 characters.</h2>
+<h2>Poll question, 1-300 characters.</h2>
 <pre>$question : string</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
@@ -205,7 +251,7 @@ by the bot or to the private chat with the bot.</p></div></div></div>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:07+03:00.<br></footer></div>
+            generated on 2020-12-12T21:50:59+03:00.<br></footer></div>
 </div>
 </body>
 </html>

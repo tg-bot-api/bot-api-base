@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -107,8 +107,10 @@ greater than 32 bits and some programming languages may have difficulty/silent d
 <li class="property public "><a href="#property_photo" title="$photo() :: Optional. Message is a photo, available sizes of the photo."><span class="description"></span><pre>$photo</pre></a></li>
 <li class="property public "><a href="#property_pinnedMessage" title="$pinnedMessage() :: Optional. Specified message was pinned."><span class="description"></span><pre>$pinnedMessage</pre></a></li>
 <li class="property public "><a href="#property_poll" title="$poll() :: Optional. Message is a native poll, information about the poll."><span class="description"></span><pre>$poll</pre></a></li>
+<li class="property public "><a href="#property_proximityAlertTriggered" title="$proximityAlertTriggered() :: Optional. Service message."><span class="description"></span><pre>$proximityAlertTriggered</pre></a></li>
 <li class="property public "><a href="#property_replyToMessage" title="$replyToMessage() :: Optional. For replies, the original message. Note that the Message object in this field will not contain
 further reply_to_message fields even if it itself is a reply."><span class="description"></span><pre>$replyToMessage</pre></a></li>
+<li class="property public "><a href="#property_senderChat" title="$senderChat() :: Optional. Sender of the message, sent on behalf of a chat. The channel itself for channel messages."><span class="description"></span><pre>$senderChat</pre></a></li>
 <li class="property public "><a href="#property_sticker" title="$sticker() :: Optional. Message is a sticker, information about the sticker."><span class="description"></span><pre>$sticker</pre></a></li>
 <li class="property public "><a href="#property_successfulPayment" title="$successfulPayment() :: "><span class="description"></span><pre>$successfulPayment</pre></a></li>
 <li class="property public "><a href="#property_supergroupChatCreated" title="$supergroupChatCreated() :: Optional. Service message: the supergroup has been created. This field can‘t be received in a message coming
@@ -116,6 +118,7 @@ through updates, because bot can’t be a member of a supergroup when it is crea
 reply_to_message if someone replies to a very first message in a directly created supergroup."><span class="description"></span><pre>$supergroupChatCreated</pre></a></li>
 <li class="property public "><a href="#property_text" title="$text() :: Optional. For text messages, the actual UTF-8 text of the message, 0-4096 characters."><span class="description"></span><pre>$text</pre></a></li>
 <li class="property public "><a href="#property_venue" title="$venue() :: Optional. Message is a venue, information about the venue."><span class="description"></span><pre>$venue</pre></a></li>
+<li class="property public "><a href="#property_viaBot" title="$viaBot() :: Optional. Bot through which the message was sent."><span class="description"></span><pre>$viaBot</pre></a></li>
 <li class="property public "><a href="#property_video" title="$video() :: Optional. Message is a video, information about the video."><span class="description"></span><pre>$video</pre></a></li>
 <li class="property public "><a href="#property_videoNote" title="$videoNote() :: "><span class="description"></span><pre>$videoNote</pre></a></li>
 <li class="property public "><a href="#property_voice" title="$voice() :: Optional. Message is a voice message, information about the file."><span class="description"></span><pre>$voice</pre></a></li>
@@ -578,6 +581,16 @@ will not contain further reply_to_message fields even if it is itself a reply.</
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_proximityAlertTriggered"> </a><div class="element clickable property public property_proximityAlertTriggered" data-toggle="collapse" data-target=".property_proximityAlertTriggered .collapse" title="public">
+<h2>Optional. Service message.</h2>
+<pre>$proximityAlertTriggered : \TgBotApi\BotApiBase\Type\ProximityAlertTriggeredType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>A user in the chat triggered another user's proximity alert while sharing Live Location.</p></div></div></div>
+</div>
 <a id="property_replyToMessage"> </a><div class="element clickable property public property_replyToMessage" data-toggle="collapse" data-target=".property_replyToMessage .collapse" title="public">
 <h2>Optional. For replies, the original message. Note that the Message object in this field will not contain
 further reply_to_message fields even if it itself is a reply.</h2>
@@ -588,6 +601,17 @@ further reply_to_message fields even if it itself is a reply.</h2>
 </div></div>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_senderChat"> </a><div class="element clickable property public property_senderChat" data-toggle="collapse" data-target=".property_senderChat .collapse" title="public">
+<h2>Optional. Sender of the message, sent on behalf of a chat. The channel itself for channel messages.</h2>
+<pre>$senderChat : \TgBotApi\BotApiBase\Type\ChatType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>The supergroup itself for messages from anonymous group administrators.
+The linked channel for messages automatically forwarded to the discussion group.</p></div></div></div>
 </div>
 <a id="property_sticker"> </a><div class="element clickable property public property_sticker" data-toggle="collapse" data-target=".property_sticker .collapse" title="public">
 <h2>Optional. Message is a sticker, information about the sticker.</h2>
@@ -647,6 +671,16 @@ reply_to_message if someone replies to a very first message in a directly create
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_viaBot"> </a><div class="element clickable property public property_viaBot" data-toggle="collapse" data-target=".property_viaBot .collapse" title="public">
+<h2>Optional. Bot through which the message was sent.</h2>
+<pre>$viaBot : \TgBotApi\BotApiBase\Type\UserType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_video"> </a><div class="element clickable property public property_video" data-toggle="collapse" data-target=".property_video .collapse" title="public">
 <h2>Optional. Message is a video, information about the video.</h2>
 <pre>$video : \TgBotApi\BotApiBase\Type\VideoType | null</pre>
@@ -690,7 +724,7 @@ reply_to_message if someone replies to a very first message in a directly create
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:50:59+03:00.<br></footer></div>
 </div>
 </body>
 </html>

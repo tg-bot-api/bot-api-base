@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultVideoType
@@ -21,9 +22,11 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultVideoType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
-    const MIME_TYPE_TEXT = 'text/html';
-    const MIME_TYPE_VIDEO = 'video/mp4';
+
+    public const MIME_TYPE_TEXT = 'text/html';
+    public const MIME_TYPE_VIDEO = 'video/mp4';
 
     /**
      * A valid URL for the embedded video player or video file.
@@ -106,16 +109,7 @@ class InlineQueryResultVideoType extends InlineQueryResultType implements HasPar
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $video
-     * @param string     $mimeType
-     * @param string     $thumbUrl
-     * @param string     $title
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultVideoType
      */
     public static function create(
         string $id,

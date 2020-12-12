@@ -11,7 +11,7 @@ class UserProfilePhotosTypeTest extends TypeTestCase
 {
     public function testEncode()
     {
-        $result = $this->getResource('user-profile-photos');
+        $result = static::getResource('user-profile-photos');
 
         $type = $this->getType($result);
 

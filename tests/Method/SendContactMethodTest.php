@@ -22,9 +22,6 @@ class SendContactMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBot('sendContact', [
@@ -35,14 +32,13 @@ class SendContactMethodTest extends MethodTestCase
             'vcard' => 'vcard_data',
             'disable_notification' => true,
             'reply_to_message_id' => 1,
+            'allow_sending_without_reply' => true,
             'reply_markup' => $this->buildInlineMarkupArray(),
         ], [], ['reply_markup']);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendContactMethod
      */
     private function getMethod(): SendContactMethod
     {
@@ -55,6 +51,7 @@ class SendContactMethodTest extends MethodTestCase
                 'vcard' => 'vcard_data',
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
+                'allowSendingWithoutReply' => true,
                 'replyMarkup' => $this->buildInlineMarkupObject(),
             ]
         );

@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -112,16 +112,13 @@
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$objectNormalizer</h4>
-<code>\Symfony\Component\Serializer\Normalizer\NormalizerInterface</code>
-</div>
+<div class="subelement argument"><h4>$objectNormalizer</h4></div>
 </div></div>
 </div>
 <a id="method_normalize"></a><div class="element clickable method public method_normalize " data-toggle="collapse" data-target=".method_normalize .collapse" title="public">
 <h2>normalize()
         </h2>
-<pre>normalize(mixed $topic, null $format<code> = null</code>, array $context<code> = array()</code>) : array | boolean | false | float | integer | string</pre>
+<pre>normalize(mixed $topic, null $format<code> = null</code>, array $context<code> = array()</code>) : string</pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -134,25 +131,20 @@
 <h4>$format</h4>
 <code>null</code>
 </div>
-<div class="subelement argument">
-<h4>$context</h4>
-<code>array</code>
-</div>
+<div class="subelement argument"><h4>$context</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\Symfony\Component\Serializer\Exception\ExceptionInterface</code></th>
 <td></td>
 </tr></table>
 <h3>Returns</h3>
-<div class="subelement response">
-<code>array</code><code>boolean</code><code>false</code><code>float</code><code>integer</code><code>string</code>
-</div>
+<div class="subelement response"><code>string</code></div>
 </div></div>
 </div>
 <a id="method_supportsNormalization"></a><div class="element clickable method public method_supportsNormalization " data-toggle="collapse" data-target=".method_supportsNormalization .collapse" title="public">
 <h2>supportsNormalization()
         </h2>
-<pre>supportsNormalization(mixed $data, null $format<code> = null</code>) : boolean</pre>
+<pre>supportsNormalization(mixed $data, null $format<code> = null</code>) </pre>
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -165,8 +157,6 @@
 <h4>$format</h4>
 <code>null</code>
 </div>
-<h3>Returns</h3>
-<div class="subelement response"><code>boolean</code></div>
 </div></div>
 </div>
 <h3>
@@ -188,7 +178,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:01+03:00.<br></footer></div>
 </div>
 </body>
 </html>

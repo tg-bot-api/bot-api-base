@@ -40,7 +40,7 @@
     "phpstan/phpstan": "^0.10.6",
     "phpunit/phpunit": "^7.5.2",
     "povils/phpmnd": "^2.0",
-    "sebastian/phpcpd": "^4.1",
+    "sebastian/phpcpd": "^5.0",
     "squizlabs/php_codesniffer": "^3.4"
   },
   "autoload": {

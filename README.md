@@ -14,7 +14,7 @@
 [![Duplicated Lines (%)][sonar-duplicated-lines-icon]][sonar-path]
 [![Security Rating][sonar-security-rating-icon]][sonar-path]
 
-#### Supported Telegram Bot API v4.9 (June 4, 2020)
+#### Supported Telegram Bot API 5.0 (November 4, 2020)
 
 ## Installation
 
@@ -48,45 +48,54 @@ $bot->send(\TgBotApi\BotApiBase\Method\SendMessageMethod::create($userId, 'Hi'))
 
 You can configure it to work in symfony, for example, in [this way](https://gist.github.com/greenplugin/09179bee606aa01b1ee00d049ab78fc4).
 
+If you want to use your own api server - you can set url as 4th param in bot api
+
+```php 
+$bot = new \TgBotApi\BotApiBase\BotApi('<bot key>', $apiClient, new \TgBotApi\BotApiBase\BotApiNormalizer(), '<your-domain>');
+```
+
 ### Allowed methods:
 
 |Method|Allowed type|response|
 |:--|:--|:--|
-|add|AddStickerToSetMethod|bool|
-|answer|AnswerCallbackQueryMethod, AnswerInlineQueryMethod, AnswerPreCheckoutQueryMethod, AnswerShippingQueryMethod|bool|
-|create|CreateNewStickerSetMethod|bool|
-|delete|DeleteChatPhotoMethod, DeleteChatStickerSetMethod, DeleteMessageMethod, DeleteStickerFromSetMethod, DeleteWebhookMethod|bool|
-|edit|EditMessageCaptionMethod, EditMessageLiveLocationMethod, EditMessageMediaMethod, EditMessageReplyMarkupMethod, EditMessageTextMethod|bool|
-|forward|ForwardMessageMethod|MessageType|
-|kick|KickChatMemberMethod|bool|
-|leave|LeaveChatMethod|bool|
-|pin|PinChatMessageMethod|bool|
-|promote|PromoteChatMemberMethod|bool|
-|restrict|RestrictChatMemberMethod|bool|
-|send|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod, SendPollMethod, SendDiceMethod|MessageType|
-|set|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod, SetChatPermissionsMethod, SetChatAdministratorCustomTitleMethod, SetMyCommandMethod, SetStickerSetThumbMethod|bool|
-|stop|StopMessageLiveLocationMethod|bool|
-|stopPoll|StopPollMethod|Poll|
-|unban|UnbanChatMemberMethod|bool|
-|unpin|UnpinChatMessageMethod|bool|
-|upload|UploadStickerFileMethod|FileType|
-|exportChatInviteLink|ExportChatInviteLinkMethod|string|
-|sendChatAction|SendChatActionMethod|bool|
-|getUpdates|GetUpdatesMethod|UpdateType[]|
-|getMe|GetMeMethod|UserType|
-|getMyCommands|GetMyCommandsMethod|BotCommandType|
-|getUserProfilePhotos|GetUserProfilePhotosMethod|UserProfilePhotosType|
-|getWebhookInfo|GetWebhookInfoMethod|WebhookInfoType|
-|getChatMembersCount|GetChatMembersCountMethod|int|
-|getChat|GetChatMethod|ChatType|
-|getChatAdministrators|GetChatAdministratorsMethod|ChatMemberType[]|
-|getChatMember|GetChatMemberMethod|ChatMemberType|
-|getGameHighScores|GetGameHighScoresMethod|GameHighScoreType[]|
-|getStickerSet|GetStickerSetMethod|StickerSetType|
-|getFile|GetFileMethod|FileType|
-|sendMediaGroup|SendMediaGroupMethod|MessageType[]|
-|getAbsoluteFilePath|FileType|string|
-|call($method, [string $type])|any method class, [optional expected type]|array or excepted type object|
+|`add`|AddStickerToSetMethod|bool|
+|`answer`|AnswerCallbackQueryMethod, AnswerInlineQueryMethod, AnswerPreCheckoutQueryMethod, AnswerShippingQueryMethod|bool|
+|`create`|CreateNewStickerSetMethod|bool|
+|`delete`|DeleteChatPhotoMethod, DeleteChatStickerSetMethod, DeleteMessageMethod, DeleteStickerFromSetMethod, DeleteWebhookMethod|bool|
+|`edit`|EditMessageCaptionMethod, EditMessageLiveLocationMethod, EditMessageMediaMethod, EditMessageReplyMarkupMethod, EditMessageTextMethod|bool|
+|`forward`|ForwardMessageMethod|MessageType|
+|`kick`|KickChatMemberMethod|bool|
+|`leave`|LeaveChatMethod|bool|
+|`pin`|PinChatMessageMethod|bool|
+|`promote`|PromoteChatMemberMethod|bool|
+|`restrict`|RestrictChatMemberMethod|bool|
+|`send`|SendPhotoMethod, SendAudioMethod, SendDocumentMethod, SendVideoMethod, SendAnimationMethod, SendVoiceMethod, SendVideoNoteMethod, SendGameMethod, SendInvoiceMethod, SendLocationMethod, SendVenueMethod, SendContactMethod, SendStickerMethod, SendMessageMethod, SendPollMethod, SendDiceMethod|MessageType|
+|`set`|SetChatDescriptionMethod, SetChatPhotoMethod, SetChatStickerSetMethod, SetChatTitleMethod, SetGameScoreMethod, SetStickerPositionInSetMethod, SetWebhookMethod, SetPassportDataErrorsMethod, SetChatPermissionsMethod, SetChatAdministratorCustomTitleMethod, SetMyCommandMethod, SetStickerSetThumbMethod|bool|
+|`stop`|StopMessageLiveLocationMethod|bool|
+|`stopPoll`|StopPollMethod|Poll|
+|`unban`|UnbanChatMemberMethod|bool|
+|`unpin`|UnpinChatMessageMethod, UnpinAllChatMessagesMethod|bool|
+|`upload`|UploadStickerFileMethod|FileType|
+|`exportChatInviteLink`|ExportChatInviteLinkMethod|string|
+|`sendChatAction`|SendChatActionMethod|bool|
+|`getUpdates`|GetUpdatesMethod|UpdateType[]|
+|`getMe`|GetMeMethod|UserType|
+|`getMyCommands`|GetMyCommandsMethod|BotCommandType|
+|`getUserProfilePhotos`|GetUserProfilePhotosMethod|UserProfilePhotosType|
+|`getWebhookInfo`|GetWebhookInfoMethod|WebhookInfoType|
+|`getChatMembersCount`|GetChatMembersCountMethod|int|
+|`getChat`|GetChatMethod|ChatType|
+|`getChatAdministrators`|GetChatAdministratorsMethod|ChatMemberType[]|
+|`getChatMember`|GetChatMemberMethod|ChatMemberType|
+|`getGameHighScores`|GetGameHighScoresMethod|GameHighScoreType[]|
+|`getStickerSet`|GetStickerSetMethod|StickerSetType|
+|`getFile`|GetFileMethod|FileType|
+|`sendMediaGroup`|SendMediaGroupMethod|MessageType[]|
+|`getAbsoluteFilePath`|FileType|string|
+|`logOut`|LogOutMethod|bool|
+|`close`|CloseMethod|bool|
+|`copyMessage`|CopyMessageMethod|MessageIdType|
+|`call($method, [string $type])`|any method class, [optional expected type]|array or excepted type object|
 
 Implemented all methods and types referenced by [official Api](https://core.telegram.org/bots/api)
 
@@ -146,7 +155,7 @@ If you discover any security related issues, please email wformps@gmail.com inst
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
 [ico-php-v]: https://img.shields.io/travis/php-v/tg-bot-api/bot-api-base.svg?style=flat-square
-[ico-bot-api]: https://img.shields.io/badge/Bot%20API-4.9-blue.svg?style=flat-square
+[ico-bot-api]: https://img.shields.io/badge/Bot%20API-5.0-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
 [ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square

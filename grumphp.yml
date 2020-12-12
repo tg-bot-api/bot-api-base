@@ -37,13 +37,13 @@ grumphp:
             no_check_publish: false
             with_dependencies: false
             strict: false
-        phpcpd:
-            directory: ['.']
-            exclude: ['vendor']
-            fuzzy: false
-            min_lines: 5
-            min_tokens: 70
-            triggered_by: ['php']
+#        phpcpd:
+#            directory: ['.']
+#            exclude: ['vendor']
+#            fuzzy: false
+#            min_lines: 5
+#            min_tokens: 70
+#            triggered_by: ['php']
         phpmnd:
             directory: '.'
             whitelist_patterns: []
@@ -57,13 +57,14 @@ grumphp:
             strings: false
             triggered_by: ['php']
         phpunit:
-            config_file: ~
+            config_file: phpunit-grum.xml.dist
             testsuite: ~
             group: []
             always_execute: false
         git_blacklist:
             keywords:
-            - "die"
+            - "die()"
+            - "die;"
             - "var_dump"
             - "dump"
             - "exit;"

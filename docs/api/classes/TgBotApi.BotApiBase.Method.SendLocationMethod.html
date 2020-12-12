@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,10 +72,15 @@
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
+<li class="property public "><a href="#property_allowSendingWithoutReply" title="$allowSendingWithoutReply() :: Optional. Pass True, if the message should be sent even if the specified replied-to message is not found."><span class="description"></span><pre>$allowSendingWithoutReply</pre></a></li>
 <li class="property public "><a href="#property_disableNotification" title="$disableNotification() :: Optional. Sends the message silently. Users will receive a notification with no sound."><span class="description"></span><pre>$disableNotification</pre></a></li>
+<li class="property public "><a href="#property_heading" title="$heading() :: Optional. For live locations, a direction in which the user is moving, in degrees."><span class="description"></span><pre>$heading</pre></a></li>
+<li class="property public "><a href="#property_horizontalAccuracy" title="$horizontalAccuracy() :: Optional. The radius of uncertainty for the location, measured in meters; 0-1500."><span class="description"></span><pre>$horizontalAccuracy</pre></a></li>
 <li class="property public "><a href="#property_latitude" title="$latitude() :: Latitude of the location."><span class="description"></span><pre>$latitude</pre></a></li>
 <li class="property public "><a href="#property_livePeriod" title="$livePeriod() :: Period in seconds for which the location will be updated (see Live Locations, should be between 60 and 86400."><span class="description"></span><pre>$livePeriod</pre></a></li>
 <li class="property public "><a href="#property_longitude" title="$longitude() :: Longitude of the location."><span class="description"></span><pre>$longitude</pre></a></li>
+<li class="property public "><a href="#property_proximityAlertRadius" title="$proximityAlertRadius() :: Optional. For live locations, a maximum distance
+for proximity alerts about approaching another chat member, in meters."><span class="description"></span><pre>$proximityAlertRadius</pre></a></li>
 <li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
 instructions to remove reply keyboard or to force a reply from the user."><span class="description"></span><pre>$replyMarkup</pre></a></li>
 <li class="property public "><a href="#property_replyToMessageId" title="$replyToMessageId() :: Optional. If the message is a reply, ID of the original message."><span class="description"></span><pre>$replyToMessageId</pre></a></li>
@@ -118,7 +123,7 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(integer|string $chatId, float $latitude, float $longitude, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\SendLocationMethod</pre>
+<pre>create(integer|string $chatId, \TgBotApi\BotApiBase\Method\float $latitude, \TgBotApi\BotApiBase\Method\float $longitude, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -127,25 +132,14 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <h4>$chatId</h4>
 <code>integer</code><code>string</code>
 </div>
-<div class="subelement argument">
-<h4>$latitude</h4>
-<code>float</code>
-</div>
-<div class="subelement argument">
-<h4>$longitude</h4>
-<code>float</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$latitude</h4></div>
+<div class="subelement argument"><h4>$longitude</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\SendLocationMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -173,9 +167,39 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_allowSendingWithoutReply"> </a><div class="element clickable property public property_allowSendingWithoutReply" data-toggle="collapse" data-target=".property_allowSendingWithoutReply .collapse" title="public">
+<h2>Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.</h2>
+<pre>$allowSendingWithoutReply : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
 <a id="property_disableNotification"> </a><div class="element clickable property public property_disableNotification" data-toggle="collapse" data-target=".property_disableNotification .collapse" title="public">
 <h2>Optional. Sends the message silently. Users will receive a notification with no sound.</h2>
 <pre>$disableNotification : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+</div>
+<a id="property_heading"> </a><div class="element clickable property public property_heading" data-toggle="collapse" data-target=".property_heading .collapse" title="public">
+<h2>Optional. For live locations, a direction in which the user is moving, in degrees.</h2>
+<pre>$heading : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Must be between 1 and 360 if specified.</p></div></div></div>
+</div>
+<a id="property_horizontalAccuracy"> </a><div class="element clickable property public property_horizontalAccuracy" data-toggle="collapse" data-target=".property_horizontalAccuracy .collapse" title="public">
+<h2>Optional. The radius of uncertainty for the location, measured in meters; 0-1500.</h2>
+<pre>$horizontalAccuracy : float | integer | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -213,6 +237,17 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
+<a id="property_proximityAlertRadius"> </a><div class="element clickable property public property_proximityAlertRadius" data-toggle="collapse" data-target=".property_proximityAlertRadius .collapse" title="public">
+<h2>Optional. For live locations, a maximum distance
+for proximity alerts about approaching another chat member, in meters.</h2>
+<pre>$proximityAlertRadius : integer | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>Must be between 1 and 100000 if specified.</p></div></div></div>
+</div>
 <a id="property_replyMarkup"> </a><div class="element clickable property public property_replyMarkup" data-toggle="collapse" data-target=".property_replyMarkup .collapse" title="public">
 <h2>Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
 instructions to remove reply keyboard or to force a reply from the user.</h2>
@@ -241,7 +276,7 @@ instructions to remove reply keyboard or to force a reply from the user.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

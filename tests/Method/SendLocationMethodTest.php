@@ -22,9 +22,6 @@ class SendLocationMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBot('sendLocation', [
@@ -34,14 +31,16 @@ class SendLocationMethodTest extends MethodTestCase
             'longitude' => -0.2416802,
             'disable_notification' => true,
             'reply_to_message_id' => 1,
-            'reply_markup' => $this->buildInlineMarkupArray(),
+            'reply_markup' => static::buildInlineMarkupArray(),
+            'horizontal_accuracy' => 10.5,
+            'heading' => 1,
+            'proximity_alert_radius' => 100,
+            'allow_sending_without_reply' => true,
         ], [], ['reply_markup']);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendLocationMethod
      */
     private function getMethod(): SendLocationMethod
     {
@@ -53,7 +52,11 @@ class SendLocationMethodTest extends MethodTestCase
                 'livePeriod' => 60,
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'replyMarkup' => static::buildInlineMarkupObject(),
+                'horizontalAccuracy' => 10.5,
+                'heading' => 1,
+                'proximityAlertRadius' => 100,
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

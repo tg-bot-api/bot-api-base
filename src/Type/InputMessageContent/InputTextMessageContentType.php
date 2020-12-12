@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Type\InputMessageContent;
 
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InputTextMessageContentType.
@@ -15,6 +16,8 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 class InputTextMessageContentType extends InputMessageContentType implements HasParseModeVariableInterface
 {
     use FillFromArrayTrait;
+    use CaptionEntitiesFieldTrait;
+
     /**
      * Text of the message to be sent, 1-4096 characters.
      *
@@ -38,12 +41,7 @@ class InputTextMessageContentType extends InputMessageContentType implements Has
     public $disableWebPagePreview;
 
     /**
-     * @param string     $messageText
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InputTextMessageContentType
      */
     public static function create(string $messageText, array $data = null): InputTextMessageContentType
     {

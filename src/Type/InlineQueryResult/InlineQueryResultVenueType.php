@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\GooglePlaceFieldsTrait;
 
 /**
  * Class InlineQueryResultVenueType.
@@ -18,6 +19,7 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
 class InlineQueryResultVenueType extends InlineQueryResultType
 {
     use FillFromArrayTrait;
+    use GooglePlaceFieldsTrait;
 
     /**
      * Latitude of the venue location in degrees.
@@ -91,16 +93,7 @@ class InlineQueryResultVenueType extends InlineQueryResultType
     public $thumbHeight;
 
     /**
-     * @param string     $id
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param string     $title
-     * @param string     $address
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultVenueType
      */
     public static function create(
         string $id,

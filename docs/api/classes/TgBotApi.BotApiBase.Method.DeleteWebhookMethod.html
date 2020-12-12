@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -59,11 +59,21 @@
 <button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
 </div>
 </div>
-<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list"><li class="nav-header">
+<ul xmlns:php="http://php.net/xsl" class="side-nav nav nav-list">
+<li class="nav-header">
 <i title="Methods" class="icon-custom icon-method"></i> Methods
-                    <ul><li class="method public "><a href="#method_create" title="create() :: "><span class="description">create()
-        </span><pre>create()</pre></a></li></ul>
-</li></ul>
+                    <ul>
+<li class="method public "><a href="#method_create" title="create() :: "><span class="description">create()
+        </span><pre>create()</pre></a></li>
+<li class="method public inherited"><a href="#method_fill" title="fill() :: "><span class="description">fill()
+        </span><pre>fill()</pre></a></li>
+</ul>
+</li>
+<li class="nav-header">
+<i title="Properties" class="icon-custom icon-property"></i> Properties
+                    <ul><li class="property public "><a href="#property_dropPendingUpdates" title="$dropPendingUpdates() :: Pass True to drop all pending updates."><span class="description"></span><pre>$dropPendingUpdates</pre></a></li></ul>
+</li>
+</ul>
 </div>
 <div class="span8">
 <a xmlns:php="http://php.net/xsl" id="\TgBotApi\BotApiBase\Method\DeleteWebhookMethod"></a><ul xmlns:php="http://php.net/xsl" class="breadcrumb">
@@ -100,13 +110,53 @@
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create() : \TgBotApi\BotApiBase\Method\DeleteWebhookMethod</pre>
+<pre>create(array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\DeleteWebhookMethod</code></div>
+<h3>Parameters</h3>
+<div class="subelement argument"><h4>$data</h4></div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
+<td></td>
+</tr></table>
 </div></div>
+</div>
+<a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
+<h2>fill()
+        </h2>
+<pre>fill(array $data, array $forbidden<code> = array()</code>) </pre>
+<div class="labels"><span class="label">Inherited</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$data</h4>
+<code>array</code>
+</div>
+<div class="subelement argument">
+<h4>$forbidden</h4>
+<code>array</code>
+</div>
+<h3>Exceptions</h3>
+<table class="table table-bordered"><tr>
+<th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
+<td></td>
+</tr></table>
+</div></div>
+</div>
+<h3>
+<i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
+<a id="property_dropPendingUpdates"> </a><div class="element clickable property public property_dropPendingUpdates" data-toggle="collapse" data-target=".property_dropPendingUpdates .collapse" title="public">
+<h2>Pass True to drop all pending updates.</h2>
+<pre>$dropPendingUpdates : boolean | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 </div>
 </div>
@@ -115,7 +165,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:06+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultCachedGifType.
@@ -19,6 +20,7 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultCachedGifType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
 
     /**
@@ -58,13 +60,7 @@ class InlineQueryResultCachedGifType extends InlineQueryResultType implements Ha
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $gifFileId
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultCachedGifType
      */
     public static function create(string $id, string $gifFileId, array $data = null): InlineQueryResultCachedGifType
     {

@@ -2,9 +2,9 @@
 
 All notable changes to `telegram-bot-api` will be documented in this file.
 
+<!--- 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
-<!--- 
 ## NEXT - YYYY-MM-DD
 
 ### Added
@@ -22,6 +22,109 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 ### Security
 - Nothing
 --->
+
+## 1.7.0 - 2020-12-12
+#### Bot API 5.0 - november November 4, 2020 
+
+### Added
+- #### Run Your Own Bot API Server Usage
+    - You can pass url as 4th param in bot api
+         ```php 
+         $bot = new \TgBotApi\BotApiBase\BotApi('<bot key>', $apiClient, new \TgBotApi\BotApiBase\BotApiNormalizer(), '<your-domain>');
+         ```
+    - Added the method `logOut` (`LogOutMethod`), which can be used to log out from the cloud Bot API server before launching your bot locally. You must log out the bot before running it locally, otherwise there is no guarantee that the bot will receive all updates.
+    - Added the method `close` (`CloseMethod`), which can be used to close the bot instance before moving it from one local server to another.
+    
+- #### Webhooks
+    - Added the parameter `ipAddress` to the class `SetWebhookMethod`, allowing to bypass DNS resolving and use the specified fixed IP address to send webhook requests.
+    - Added the field `ipAddress` to the class `WebhookInfoType`, containing the current IP address used for webhook connections creation.
+    - Added the ability to drop all pending updates when changing webhook URL using the parameter `dropPendingUpdates` to the class `SetWebhookMethod` and to `DeleteWebhookMethod`.
+
+- #### Working with Groups
+    - The `getChat` request now returns the identifier of the linked chat for supergroups and channels, i.e. the discussion group identifier for a channel and vice versa in the `linkedChatId` property.
+    - The `getChat` request now returns the location to which the supergroup is connected (see `ChatType::$location`). Added the class `ChatLocationType` to represent the location.
+    - Added the parameter `onlyIfBanned` to the class `UnbanChatMemberMethod` to allow safe unban.
+
+- #### Working with Files
+    - Added the property `fileName` to the classes `AudioType` and `VideoType`, containing the name of the original file.
+    -  Added the ability to disable server-side file content type detection using the property `disableContentTypeDetection` in the `SendDocumentMethod` and the class inputMediaDocument.
+
+- #### Multiple Pinned Messages
+    - Added the parameter `messageId` to the `UnpinChatMessageMethod` to allow unpinning of the specific pinned message.
+    - Added the method `UnpinAllChatMessagesMethod`, which can be used to unpin all pinned messages in a chat.
+
+- #### File Albums
+    - Added support for sending and receiving audio and document albums in the `SendMediaGroupMethod`. 
+
+- #### Live Locations
+    - Added the field `livePeriod` to the class `LocationType`, representing a maximum period for which the live location can be updated.
+    - Added support for live location heading: added the field `heading` to the classes `LocationType`, `InlineQueryResultLocationType`, `InputLocationMessageContentType`, `SendLocationMethod` and `EditMessageLiveLocationMethod`.
+    - Added support for proximity alerts in live locations: added the field `proximityAlertRadius` to the classes `LocationType`, `InlineQueryResultLocationType`, `InputLocationMessageContentType`, `SendLocationMethod` and `EditMessageLiveLocationMethod`.
+    - Added the type `ProximityAlertTriggered` and the field `proximityAlertTriggered` to the class Message.
+    - Added possibility to specify the horizontal accuracy of a location. Added the field `horizontalAccuracy` to the classes `LocationType`, `InlineQueryResultLocationType`, `InputLocationMessageContentType`, `SendLocationMethod` and `EditMessageLiveLocationMethod`.
+
+- #### Anonymous Admins
+    - Added the field `senderChat` to the class `MessageType`, containing the sender of a message which is a chat (group or channel). For backward compatibility in non-channel chats, the field from in such messages will contain the user 777000 for messages automatically forwarded to the discussion group and the user 1087968824 (@GroupAnonymousBot) for messages from anonymous group administrators.
+    - Added the field `isAnonymous` to the class `ChatMemberType`, which can be used to distinguish anonymous chat administrators.
+    - Added the parameter `isAnonymous` to the `PromoteChatMemberMethod`, which allows to promote anonymous chat administrators. The bot itself should have the `isAnonymous` right to do this. Despite the fact that bots can have the `isAnonymous` right, they will never appear as anonymous in the chat. Bots can use the right only for passing to other administrators.
+    - Added the custom title of an anonymous message sender to the class `MessageType` as `authorSignature`.
+
+- #### And More
+    - Added the method `BotApi::copyMessage` and `CopyMessageMethod`, which sends a copy of any message.
+    - Maximum poll question length increased to 300.
+    - Added the ability to manually specify text entities (property `entities` or `captionEntities`) instead of specifying the `parseMode` in the classes 
+        - `InputMediaPhotoType`
+        - `InputMediaVideoType` 
+        - `InputMediaAnimationType`
+        - `InputMediaAudioType`
+        - `InputMediaDocumentType`
+        - `InlineQueryResultPhotoType`
+        - `InlineQueryResultGifType`
+        - `InlineQueryResultMpeg4GifType`
+        - `InlineQueryResultVideoType` 
+        - `InlineQueryResultAudioType` 
+        - `InlineQueryResultVoiceType` 
+        - `InlineQueryResultDocumentType` 
+        - `InlineQueryResultCachedPhotoType` 
+        - `InlineQueryResultCachedGifType` 
+        - `InlineQueryResultCachedMpeg4GifType` 
+        - `InlineQueryResultCachedVideoType` 
+        - `InlineQueryResultCachedAudioType` 
+        - `InlineQueryResultCachedVoiceType`
+        - `InlineQueryResultCachedDocumentType` 
+        - `InputTextMessageContentType` 
+        - `SendMessageMethod`
+        - `SendPhotoMethod`
+        - `SendVideoMethod`
+        - `SendAnimationMethod` 
+        - `SendAudioMethod`
+        - `SendDocumentMethod` 
+        - `SendVoiceMethod`
+        - `SendPollMethod` 
+        - `EditMessageTextMethod` 
+        - `EditMessageCaptionMethod`
+    - Added the fields `googlePlaceId` and `googlePlaceType` to the classes `VenueType`, `InlineQueryResultVenueType`, `InputVenueMessageContentType` and to the methods `SendVenueMethod` to support Google Places as a venue API provider.
+    - Added the field `allowSendingWithoutReply` to allow sending messages not a as reply if the replied-to message has already been deleted to following classes:
+        - `sendMessageMethod`
+        - `sendPhotoMethod`
+        - `sendVideoMethod`
+        - `SendAnimationMethod`
+        - `SendAudioMethod`
+        - `SendDocumentMethod`
+        - `SendStickerMethod`
+        - `SendVideoNoteMethod`
+        - `SendVoiceMethod`
+        - `SendLocationMethod`
+        - `SendVenueMethod`
+        - `SendContactMethod`
+        - `SendPollMethod`
+        - `SendDiceMethod`
+        - `SendInvoiceMethod`
+        - `SendGameMethod`
+        - `SendMediaGroupMethod`
+    
+- #### And Last but bot Least
+    - Supported the new football and slot machine animations for the random dice. Choose between different animations (dice, darts, basketball, football, slot machine) by specifying the emoji parameter in the method sendDice.
 
 ## 1.6.2 - 2020-07-13
 

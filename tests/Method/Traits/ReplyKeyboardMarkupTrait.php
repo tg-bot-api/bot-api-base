@@ -10,15 +10,12 @@ trait ReplyKeyboardMarkupTrait
 {
     use KeyboardButtonTrait;
 
-    /**
-     * @return array
-     */
-    public function buildReplyMarkupArray(): array
+    public static function buildReplyMarkupArray(): array
     {
         return [
             'keyboard' => [[
-                $this->buildReplyKeyboardButtonArray(),
-                $this->buildReplyKeyboardButtonArray(),
+                static::buildReplyKeyboardButtonArray(),
+                static::buildReplyKeyboardButtonArray(),
             ]],
             'resize_keyboard' => true,
             'one_time_keyboard' => true,
@@ -28,15 +25,13 @@ trait ReplyKeyboardMarkupTrait
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return ReplyKeyboardMarkupType
      */
-    public function buildReplyMarkupObject(): ReplyKeyboardMarkupType
+    public static function buildReplyMarkupObject(): ReplyKeyboardMarkupType
     {
         return ReplyKeyboardMarkupType::create(
             [[
-                $this->buildReplyKeyboardButtonObject(),
-                $this->buildReplyKeyboardButtonObject(),
+                static::buildReplyKeyboardButtonObject(),
+                static::buildReplyKeyboardButtonObject(),
             ]],
             [
                 'resizeKeyboard' => true,

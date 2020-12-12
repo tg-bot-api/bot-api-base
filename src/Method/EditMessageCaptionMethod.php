@@ -7,11 +7,13 @@ namespace TgBotApi\BotApiBase\Method;
 use TgBotApi\BotApiBase\Exception\BadArgumentException;
 use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
+use TgBotApi\BotApiBase\Method\Traits\CaptionVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
- * Class EditMessageCaptionMethod.
+ * Use this method to edit captions of messages. On success, if the edited message is not an inline message,
+ * the edited Message is returned, otherwise True is returned.
  *
  * @see https://core.telegram.org/bots/api#editmessagecaption
  */
@@ -19,30 +21,12 @@ class EditMessageCaptionMethod implements HasParseModeVariableInterface, EditMet
 {
     use FillFromArrayTrait;
     use EditMessageVariablesTrait;
-
-    /**
-     * Optional. New caption of the message.
-     *
-     * @var string|null
-     */
-    public $caption;
-
-    /**
-     * Optional. Send Markdown or HTML, if you want Telegram apps to show bold, italic,
-     * fixed-width text or inline URLs in the media caption.
-     *
-     * @var string|null
-     */
-    public $parseMode;
+    use CaptionVariablesTrait;
 
     /**
      * @param $chatId
-     * @param int        $messageId
-     * @param array|null $data
      *
      * @throws BadArgumentException
-     *
-     * @return EditMessageCaptionMethod
      */
     public static function create($chatId, int $messageId, array $data = null): EditMessageCaptionMethod
     {
@@ -57,12 +41,7 @@ class EditMessageCaptionMethod implements HasParseModeVariableInterface, EditMet
     }
 
     /**
-     * @param string     $inlineMessageId
-     * @param array|null $data
-     *
      * @throws BadArgumentException
-     *
-     * @return EditMessageCaptionMethod
      */
     public static function createInline(string $inlineMessageId, array $data = null): EditMessageCaptionMethod
     {

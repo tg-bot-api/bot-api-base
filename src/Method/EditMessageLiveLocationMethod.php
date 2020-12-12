@@ -17,6 +17,7 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
 {
     use EditMessageVariablesTrait;
     use FillFromArrayTrait;
+
     /**
      * Latitude of the location.
      *
@@ -32,15 +33,33 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
     public $longitude;
 
     /**
+     * Optional. The radius of uncertainty for the location, measured in meters; 0-1500.
+     *
+     * @var float|int|null
+     */
+    public $horizontalAccuracy;
+
+    /**
+     * Optional. Direction in which the user is moving, in degrees.
+     * Must be between 1 and 360 if specified.
+     *
+     * @var int|null
+     */
+    public $heading;
+
+    /**
+     * Optional. Maximum distance for proximity alerts about
+     * approaching another chat member, in meters.
+     * Must be between 1 and 100000 if specified.
+     *
+     * @var int|null
+     */
+    public $proximityAlertRadius;
+
+    /**
      * @param int|string $chatId
-     * @param int        $messageId
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param array|null $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return EditMessageLiveLocationMethod
      */
     public static function create(
         $chatId,
@@ -62,14 +81,7 @@ class EditMessageLiveLocationMethod implements EditMethodAliasInterface
     }
 
     /**
-     * @param string     $inlineMessageId
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return EditMessageLiveLocationMethod
      */
     public static function createInline(
         string $inlineMessageId,

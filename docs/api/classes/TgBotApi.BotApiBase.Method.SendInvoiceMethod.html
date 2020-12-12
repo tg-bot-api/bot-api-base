@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -72,7 +72,7 @@
 <li class="nav-header">
 <i title="Properties" class="icon-custom icon-property"></i> Properties
                     <ul>
-<li class="property public "><a href="#property_chatId" title="$chatId() :: Unique identifier for the target chat or username of the target channel (in the format @channelusername)."><span class="description"></span><pre>$chatId</pre></a></li>
+<li class="property public "><a href="#property_allowSendingWithoutReply" title="$allowSendingWithoutReply() :: Optional. Pass True, if the message should be sent even if the specified replied-to message is not found."><span class="description"></span><pre>$allowSendingWithoutReply</pre></a></li>
 <li class="property public "><a href="#property_currency" title="$currency() :: Three-letter ISO 4217 currency code, see more on currencies."><span class="description"></span><pre>$currency</pre></a></li>
 <li class="property public "><a href="#property_description" title="$description() :: Product description, 1-255 characters."><span class="description"></span><pre>$description</pre></a></li>
 <li class="property public "><a href="#property_disableNotification" title="$disableNotification() :: Optional. Sends the message silently. Users will receive a notification with no sound."><span class="description"></span><pre>$disableNotification</pre></a></li>
@@ -90,6 +90,7 @@
 (e.g. product price, tax, discount, delivery cost, delivery tax, bonus, etc.)."><span class="description"></span><pre>$prices</pre></a></li>
 <li class="property public "><a href="#property_providerData" title="$providerData() :: Optional. JSON-encoded data about the invoice, which will be shared with the payment provider."><span class="description"></span><pre>$providerData</pre></a></li>
 <li class="property public "><a href="#property_providerToken" title="$providerToken() :: Payments provider token, obtained via Botfather."><span class="description"></span><pre>$providerToken</pre></a></li>
+<li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. A JSON-serialized object for an inline keyboard. If empty, one 'Pay total price' button will be shown."><span class="description"></span><pre>$replyMarkup</pre></a></li>
 <li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
 instructions to remove reply keyboard or to force a reply from the user."><span class="description"></span><pre>$replyMarkup</pre></a></li>
 <li class="property public "><a href="#property_replyToMessageId" title="$replyToMessageId() :: Optional. If the message is a reply, ID of the original message."><span class="description"></span><pre>$replyToMessageId</pre></a></li>
@@ -136,7 +137,7 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(integer|string $chatId, string $title, string $description, string $payload, string $providerToken, string $startParameter, string $currency, array&lt;mixed,\TgBotApi\BotApiBase\Type\LabeledPriceType&gt; $prices, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Method\SendInvoiceMethod</pre>
+<pre>create(integer|string $chatId, \TgBotApi\BotApiBase\Method\string $title, \TgBotApi\BotApiBase\Method\string $description, \TgBotApi\BotApiBase\Method\string $payload, \TgBotApi\BotApiBase\Method\string $providerToken, \TgBotApi\BotApiBase\Method\string $startParameter, \TgBotApi\BotApiBase\Method\string $currency, array&lt;mixed,\TgBotApi\BotApiBase\Type\LabeledPriceType&gt; $prices, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
@@ -145,45 +146,22 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 <h4>$chatId</h4>
 <code>integer</code><code>string</code>
 </div>
-<div class="subelement argument">
-<h4>$title</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$description</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$payload</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$providerToken</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$startParameter</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$currency</h4>
-<code>string</code>
-</div>
+<div class="subelement argument"><h4>$title</h4></div>
+<div class="subelement argument"><h4>$description</h4></div>
+<div class="subelement argument"><h4>$payload</h4></div>
+<div class="subelement argument"><h4>$providerToken</h4></div>
+<div class="subelement argument"><h4>$startParameter</h4></div>
+<div class="subelement argument"><h4>$currency</h4></div>
 <div class="subelement argument">
 <h4>$prices</h4>
 <code>array&lt;mixed,\TgBotApi\BotApiBase\Type\LabeledPriceType&gt;</code>
 </div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Method\SendInvoiceMethod</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -211,9 +189,9 @@ instructions to remove reply keyboard or to force a reply from the user."><span 
 </div>
 <h3>
 <i title="Properties" class="icon-custom icon-property"></i> Properties</h3>
-<a id="property_chatId"> </a><div class="element clickable property public property_chatId" data-toggle="collapse" data-target=".property_chatId .collapse" title="public">
-<h2>Unique identifier for the target chat or username of the target channel (in the format @channelusername).</h2>
-<pre>$chatId : integer | string</pre>
+<a id="property_allowSendingWithoutReply"> </a><div class="element clickable property public property_allowSendingWithoutReply" data-toggle="collapse" data-target=".property_allowSendingWithoutReply .collapse" title="public">
+<h2>Optional. Pass True, if the message should be sent even if the specified replied-to message is not found.</h2>
+<pre>$allowSendingWithoutReply : boolean | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -384,6 +362,16 @@ People like it better when they see what they are paying for.</p></div></div></d
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
 <a id="property_replyMarkup"> </a><div class="element clickable property public property_replyMarkup" data-toggle="collapse" data-target=".property_replyMarkup .collapse" title="public">
+<h2>Optional. A JSON-serialized object for an inline keyboard. If empty, one 'Pay total price' button will be shown.</h2>
+<pre>$replyMarkup : \TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description"><div class="long_description"><p>If not empty, the first button must be a Pay button.</p></div></div></div>
+</div>
+<a id="property_replyMarkup"> </a><div class="element clickable property public property_replyMarkup" data-toggle="collapse" data-target=".property_replyMarkup .collapse" title="public">
 <h2>Optional. Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard,
 instructions to remove reply keyboard or to force a reply from the user.</h2>
 <pre>$replyMarkup : \TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType | \TgBotApi\BotApiBase\Type\ReplyKeyboardMarkupType | \TgBotApi\BotApiBase\Type\ReplyKeyboardRemoveType | \TgBotApi\BotApiBase\Type\ForceReplyType | null</pre>
@@ -451,7 +439,7 @@ instructions to remove reply keyboard or to force a reply from the user.</h2>
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:51:00+03:00.<br></footer></div>
 </div>
 </body>
 </html>

@@ -8,6 +8,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\EditMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\EditMessageVariablesTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\MessageEntityType;
 
 /**
  * Class EditMessageTextMethod.
@@ -35,6 +36,13 @@ class EditMessageTextMethod implements HasParseModeVariableInterface, EditMethod
     public $parseMode;
 
     /**
+     * Optional. List of special entities that appear in message text, which can be specified instead of parse_mode.
+     *
+     * @var MessageEntityType[]|null
+     */
+    public $entities;
+
+    /**
      * Optional. Disables link previews for links in this message.
      *
      * @var bool|null
@@ -43,13 +51,8 @@ class EditMessageTextMethod implements HasParseModeVariableInterface, EditMethod
 
     /**
      * @param int|string $chatId
-     * @param int        $messageId
-     * @param string     $text
-     * @param array|null $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return EditMessageTextMethod
      */
     public static function create($chatId, int $messageId, string $text, array $data = null): EditMessageTextMethod
     {
@@ -65,13 +68,7 @@ class EditMessageTextMethod implements HasParseModeVariableInterface, EditMethod
     }
 
     /**
-     * @param string     $inlineMessageId
-     * @param string     $text
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return EditMessageTextMethod
      */
     public static function createInline(
         string $inlineMessageId,

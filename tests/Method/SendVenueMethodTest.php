@@ -22,9 +22,6 @@ class SendVenueMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBot('sendVenue', [
@@ -37,14 +34,15 @@ class SendVenueMethodTest extends MethodTestCase
             'foursquare_type' => 'arts_entertainment/default',
             'disable_notification' => true,
             'reply_to_message_id' => 1,
-            'reply_markup' => $this->buildInlineMarkupArray(),
+            'reply_markup' => static::buildInlineMarkupArray(),
+            'google_place_type' => 'google_place_type',
+            'google_place_id' => 'google_place_id',
+            'allow_sending_without_reply' => true,
         ], [], ['reply_markup']);
     }
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendVenueMethod
      */
     private function getMethod(): SendVenueMethod
     {
@@ -59,7 +57,10 @@ class SendVenueMethodTest extends MethodTestCase
                 'foursquareType' => 'arts_entertainment/default',
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'replyMarkup' => static::buildInlineMarkupObject(),
+                'googlePlaceId' => 'google_place_id',
+                'googlePlaceType' => 'google_place_type',
+                'allowSendingWithoutReply' => true,
             ]
         );
     }

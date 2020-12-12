@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultCachedVoiceType.
@@ -15,6 +16,7 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultCachedVoiceType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
 
     /**
@@ -54,14 +56,7 @@ class InlineQueryResultCachedVoiceType extends InlineQueryResultType implements 
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $voiceFileId
-     * @param string     $title
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultCachedVoiceType
      */
     public static function create(
         string $id,

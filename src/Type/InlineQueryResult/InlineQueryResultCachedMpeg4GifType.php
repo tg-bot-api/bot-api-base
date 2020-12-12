@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultCachedMpeg4GifType.
@@ -15,7 +16,9 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultCachedMpeg4GifType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
+
     /**
      * A valid file identifier for the MP4 file.
      *
@@ -53,13 +56,7 @@ class InlineQueryResultCachedMpeg4GifType extends InlineQueryResultType implemen
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $mpeg4FileId
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultCachedMpeg4GifType
      */
     public static function create(
         string $id,

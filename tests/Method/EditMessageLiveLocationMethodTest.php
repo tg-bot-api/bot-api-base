@@ -24,6 +24,9 @@ class EditMessageLiveLocationMethodTest extends MethodTestCase
                 'latitude' => 51.5287718,
                 'longitude' => -0.2416802,
                 'reply_markup' => $this->buildReplyMarkupArray(),
+                'horizontal_accuracy' => 100.2,
+                'heading' => 1,
+                'proximity_alert_radius' => 20,
             ],
             EditMessageLiveLocationMethod::create(
                 'chat_id',
@@ -32,6 +35,9 @@ class EditMessageLiveLocationMethodTest extends MethodTestCase
                 -0.2416802,
                 [
                     'replyMarkup' => $this->buildReplyMarkupObject(),
+                    'horizontalAccuracy' => 100.2,
+                    'heading' => 1,
+                    'proximityAlertRadius' => 20,
                 ]
             )
         );
@@ -49,6 +55,9 @@ class EditMessageLiveLocationMethodTest extends MethodTestCase
                 'latitude' => 51.5287718,
                 'longitude' => -0.2416802,
                 'reply_markup' => $this->buildReplyMarkupArray(),
+                'horizontal_accuracy' => 100.2,
+                'heading' => 1,
+                'proximity_alert_radius' => 20,
             ],
             EditMessageLiveLocationMethod::createInline(
                 'inline_message_id',
@@ -56,15 +65,15 @@ class EditMessageLiveLocationMethodTest extends MethodTestCase
                 -0.2416802,
                 [
                     'replyMarkup' => $this->buildReplyMarkupObject(),
+                    'horizontalAccuracy' => 100.2,
+                    'heading' => 1,
+                    'proximityAlertRadius' => 20,
                 ]
             )
         );
     }
 
     /**
-     * @param array                         $excepted
-     * @param EditMessageLiveLocationMethod $actual
-     *
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     private function queryApi(array $excepted, EditMessageLiveLocationMethod $actual)

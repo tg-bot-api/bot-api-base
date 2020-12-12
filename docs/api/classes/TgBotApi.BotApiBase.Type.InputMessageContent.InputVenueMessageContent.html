@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -75,6 +75,8 @@
 <li class="property public "><a href="#property_address" title="$address() :: Address of the venue."><span class="description"></span><pre>$address</pre></a></li>
 <li class="property public "><a href="#property_foursquareId" title="$foursquareId() :: Optional. Foursquare identifier of the venue, if known."><span class="description"></span><pre>$foursquareId</pre></a></li>
 <li class="property public "><a href="#property_foursquareType" title="$foursquareType() :: Optional. Foursquare type of the venue, if known."><span class="description"></span><pre>$foursquareType</pre></a></li>
+<li class="property public "><a href="#property_googlePlaceId" title="$googlePlaceId() :: Optional. Google Places identifier of the venue."><span class="description"></span><pre>$googlePlaceId</pre></a></li>
+<li class="property public "><a href="#property_googlePlaceType" title="$googlePlaceType() :: Optional. Google Places type of the venue."><span class="description"></span><pre>$googlePlaceType</pre></a></li>
 <li class="property public "><a href="#property_latitude" title="$latitude() :: Latitude of the venue in degrees."><span class="description"></span><pre>$latitude</pre></a></li>
 <li class="property public "><a href="#property_longitude" title="$longitude() :: Longitude of the venue in degrees."><span class="description"></span><pre>$longitude</pre></a></li>
 <li class="property public "><a href="#property_title" title="$title() :: Name of the venue."><span class="description"></span><pre>$title</pre></a></li>
@@ -124,38 +126,21 @@
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(float $latitude, float $longitude, string $title, string $address, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Type\InputMessageContent\InputVenueMessageContent</pre>
+<pre>create(\TgBotApi\BotApiBase\Type\InputMessageContent\float $latitude, \TgBotApi\BotApiBase\Type\InputMessageContent\float $longitude, \TgBotApi\BotApiBase\Type\InputMessageContent\string $title, \TgBotApi\BotApiBase\Type\InputMessageContent\string $address, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$latitude</h4>
-<code>float</code>
-</div>
-<div class="subelement argument">
-<h4>$longitude</h4>
-<code>float</code>
-</div>
-<div class="subelement argument">
-<h4>$title</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$address</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$latitude</h4></div>
+<div class="subelement argument"><h4>$longitude</h4></div>
+<div class="subelement argument"><h4>$title</h4></div>
+<div class="subelement argument"><h4>$address</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\InputMessageContent\InputVenueMessageContent</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -213,6 +198,38 @@
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>(For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.).</p></div></div></div>
 </div>
+<a id="property_googlePlaceId"> </a><div class="element clickable property public property_googlePlaceId" data-toggle="collapse" data-target=".property_googlePlaceId .collapse" title="public">
+<h2>Optional. Google Places identifier of the venue.</h2>
+<pre>$googlePlaceId : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://developers.google.com/places/web-service/place-id"></a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_googlePlaceType"> </a><div class="element clickable property public property_googlePlaceType" data-toggle="collapse" data-target=".property_googlePlaceType .collapse" title="public">
+<h2>Optional. Google Places type of the venue.</h2>
+<pre>$googlePlaceType : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://developers.google.com/places/web-service/supported_types"></a></td>
+</tr></table>
+</div></div>
+</div>
 <a id="property_latitude"> </a><div class="element clickable property public property_latitude" data-toggle="collapse" data-target=".property_latitude .collapse" title="public">
 <h2>Latitude of the venue in degrees.</h2>
 <pre>$latitude : float</pre>
@@ -250,7 +267,7 @@
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:05+03:00.<br></footer></div>
+            generated on 2020-12-12T21:50:58+03:00.<br></footer></div>
 </div>
 </body>
 </html>

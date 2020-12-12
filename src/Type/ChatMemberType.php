@@ -40,6 +40,13 @@ class ChatMemberType
     public $customTitle;
 
     /**
+     * Optional. Owner and administrators only. True, if the user's presence in the chat is hidden.
+     *
+     * @var bool|null
+     */
+    public $isAnonymous;
+
+    /**
      * Optional. Restricted and kicked only. Date when restrictions will be lifted for this user, \DateTimeImmutable.
      *
      * @var \DateTimeImmutable|null

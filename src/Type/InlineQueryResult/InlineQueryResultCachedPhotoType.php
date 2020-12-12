@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Type\InlineQueryResult;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
+use TgBotApi\BotApiBase\Type\Traits\CaptionEntitiesFieldTrait;
 
 /**
  * Class InlineQueryResultCachedPhotoType.
@@ -15,6 +16,7 @@ use TgBotApi\BotApiBase\Type\InputMessageContent\InputMessageContentType;
  */
 class InlineQueryResultCachedPhotoType extends InlineQueryResultType implements HasParseModeVariableInterface
 {
+    use CaptionEntitiesFieldTrait;
     use FillFromArrayTrait;
 
     /**
@@ -60,13 +62,7 @@ class InlineQueryResultCachedPhotoType extends InlineQueryResultType implements 
     public $inputMessageContent;
 
     /**
-     * @param string     $id
-     * @param string     $photoFileId
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InlineQueryResultCachedPhotoType
      */
     public static function create(string $id, string $photoFileId, array $data = null): InlineQueryResultCachedPhotoType
     {

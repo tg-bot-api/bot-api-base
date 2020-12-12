@@ -7,6 +7,7 @@ namespace TgBotApi\BotApiBase\Tests\Method;
 use TgBotApi\BotApiBase\Method\EditMessageCaptionMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Tests\Method\Traits\ReplyKeyboardMarkupTrait;
+use TgBotApi\BotApiBase\Type\MessageEntityType;
 
 class EditMessageCaptionMethodTest extends MethodTestCase
 {
@@ -22,10 +23,10 @@ class EditMessageCaptionMethodTest extends MethodTestCase
             [
                 'chat_id' => 'chat_id',
                 'message_id' => 1,
-
                 'caption' => 'caption',
+                'caption_entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
                 'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
-                'reply_markup' => $this->buildReplyMarkupArray(),
+                'reply_markup' => static::buildReplyMarkupArray(),
             ],
             EditMessageCaptionMethod::create(
                 'chat_id',
@@ -33,8 +34,8 @@ class EditMessageCaptionMethodTest extends MethodTestCase
                 [
                     'caption' => 'caption',
                     'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
-
-                    'replyMarkup' => $this->buildReplyMarkupObject(),
+                    'captionEntities' => [MessageEntityType::create(MessageEntityType::TYPE_PRE, 0, 1)],
+                    'replyMarkup' => static::buildReplyMarkupObject(),
                 ]
             )
         );
@@ -65,9 +66,6 @@ class EditMessageCaptionMethodTest extends MethodTestCase
     }
 
     /**
-     * @param array                    $excepted
-     * @param EditMessageCaptionMethod $actual
-     *
      * @throws \TgBotApi\BotApiBase\Exception\ResponseException
      */
     private function queryApi(array $excepted, EditMessageCaptionMethod $actual)

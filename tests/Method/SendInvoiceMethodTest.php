@@ -48,7 +48,8 @@ class SendInvoiceMethodTest extends MethodTestCase
             'is_flexible' => true,
             'disable_notification' => true,
             'reply_to_message_id' => 1,
-            'reply_markup' => $this->buildInlineMarkupArray(),
+            'allow_sending_without_reply' => true,
+            'reply_markup' => static::buildInlineMarkupArray(),
         ], [], ['reply_markup', 'prices']);
     }
 
@@ -81,7 +82,8 @@ class SendInvoiceMethodTest extends MethodTestCase
                 'isFlexible' => true,
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
+                'replyMarkup' => static::buildInlineMarkupObject(),
             ]
         );
     }

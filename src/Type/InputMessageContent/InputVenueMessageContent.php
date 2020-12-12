@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Type\InputMessageContent;
 
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
+use TgBotApi\BotApiBase\Type\Traits\GooglePlaceFieldsTrait;
 
 /**
  * Class InputVenueMessageContent.
@@ -14,6 +15,7 @@ use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 class InputVenueMessageContent extends InputMessageContentType
 {
     use FillFromArrayTrait;
+    use GooglePlaceFieldsTrait;
 
     /**
      * Latitude of the venue in degrees.
@@ -59,15 +61,7 @@ class InputVenueMessageContent extends InputMessageContentType
     public $foursquareType;
 
     /**
-     * @param float      $latitude
-     * @param float      $longitude
-     * @param string     $title
-     * @param string     $address
-     * @param array|null $data
-     *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return InputVenueMessageContent
      */
     public static function create(
         float $latitude,

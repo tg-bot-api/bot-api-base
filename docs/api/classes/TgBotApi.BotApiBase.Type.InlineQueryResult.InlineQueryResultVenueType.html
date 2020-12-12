@@ -33,7 +33,7 @@
 <a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
                                     Reports <b class="caret"></b></a><ul class="dropdown-menu">
 <li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
-                <span class="label label-info">796</span></a></li>
+                <span class="label label-info">1047</span></a></li>
 <li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
                 <ul></ul></a></li>
 <li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
@@ -75,34 +75,15 @@
 <li class="property public "><a href="#property_address" title="$address() :: Address of the venue."><span class="description"></span><pre>$address</pre></a></li>
 <li class="property public "><a href="#property_foursquareId" title="$foursquareId() :: Optional. Foursquare identifier of the venue if known."><span class="description"></span><pre>$foursquareId</pre></a></li>
 <li class="property public "><a href="#property_foursquareType" title="$foursquareType() :: Optional. Foursquare type of the venue, if known."><span class="description"></span><pre>$foursquareType</pre></a></li>
-<li class="property public "><a href="#property_id" title="$id() :: Unique identifier for this result, 1-64 bytes."><span class="description"></span><pre>$id</pre></a></li>
+<li class="property public "><a href="#property_googlePlaceId" title="$googlePlaceId() :: Optional. Google Places identifier of the venue."><span class="description"></span><pre>$googlePlaceId</pre></a></li>
+<li class="property public "><a href="#property_googlePlaceType" title="$googlePlaceType() :: Optional. Google Places type of the venue."><span class="description"></span><pre>$googlePlaceType</pre></a></li>
 <li class="property public "><a href="#property_inputMessageContent" title="$inputMessageContent() :: Optional. Content of the message to be sent instead of the venue."><span class="description"></span><pre>$inputMessageContent</pre></a></li>
 <li class="property public "><a href="#property_latitude" title="$latitude() :: Latitude of the venue location in degrees."><span class="description"></span><pre>$latitude</pre></a></li>
 <li class="property public "><a href="#property_longitude" title="$longitude() :: Longitude of the venue location in degrees."><span class="description"></span><pre>$longitude</pre></a></li>
-<li class="property public "><a href="#property_replyMarkup" title="$replyMarkup() :: Optional. Inline keyboard attached to the message."><span class="description"></span><pre>$replyMarkup</pre></a></li>
 <li class="property public "><a href="#property_thumbHeight" title="$thumbHeight() :: Optional. Thumbnail height."><span class="description"></span><pre>$thumbHeight</pre></a></li>
 <li class="property public "><a href="#property_thumbUrl" title="$thumbUrl() :: Optional. Url of the thumbnail for the result."><span class="description"></span><pre>$thumbUrl</pre></a></li>
 <li class="property public "><a href="#property_thumbWidth" title="$thumbWidth() :: Optional. Thumbnail width."><span class="description"></span><pre>$thumbWidth</pre></a></li>
 <li class="property public "><a href="#property_title" title="$title() :: Title of the venue."><span class="description"></span><pre>$title</pre></a></li>
-<li class="property public "><a href="#property_type" title="$type() :: Type of the result."><span class="description"></span><pre>$type</pre></a></li>
-</ul>
-</li>
-<li class="nav-header">
-<i title="Constants" class="icon-custom icon-constant"></i> Constants
-                    <ul>
-<li class="constant  "><a href="#constant_TYPE_ARTICLE" title="TYPE_ARTICLE() :: "><span class="description">TYPE_ARTICLE</span><pre>TYPE_ARTICLE</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_AUDIO" title="TYPE_AUDIO() :: "><span class="description">TYPE_AUDIO</span><pre>TYPE_AUDIO</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_CONTACT" title="TYPE_CONTACT() :: "><span class="description">TYPE_CONTACT</span><pre>TYPE_CONTACT</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_DOCUMENT" title="TYPE_DOCUMENT() :: "><span class="description">TYPE_DOCUMENT</span><pre>TYPE_DOCUMENT</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_GAME" title="TYPE_GAME() :: "><span class="description">TYPE_GAME</span><pre>TYPE_GAME</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_GIF" title="TYPE_GIF() :: "><span class="description">TYPE_GIF</span><pre>TYPE_GIF</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_LOCATION" title="TYPE_LOCATION() :: "><span class="description">TYPE_LOCATION</span><pre>TYPE_LOCATION</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_MPEG4GIF" title="TYPE_MPEG4GIF() :: "><span class="description">TYPE_MPEG4GIF</span><pre>TYPE_MPEG4GIF</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_PHOTO" title="TYPE_PHOTO() :: "><span class="description">TYPE_PHOTO</span><pre>TYPE_PHOTO</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_STICKER" title="TYPE_STICKER() :: "><span class="description">TYPE_STICKER</span><pre>TYPE_STICKER</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_VENUE" title="TYPE_VENUE() :: "><span class="description">TYPE_VENUE</span><pre>TYPE_VENUE</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_VIDEO" title="TYPE_VIDEO() :: "><span class="description">TYPE_VIDEO</span><pre>TYPE_VIDEO</pre></a></li>
-<li class="constant  "><a href="#constant_TYPE_VOICE" title="TYPE_VOICE() :: "><span class="description">TYPE_VOICE</span><pre>TYPE_VOICE</pre></a></li>
 </ul>
 </li>
 </ul>
@@ -140,52 +121,28 @@ Alternatively, you can use input_message_content to send a message with the spec
 <th>package</th>
 <td><a href="../packages/Default.html">Default</a></td>
 </tr>
-<tr>
-<th>inherited_from</th>
-<td>\TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultType</td>
-</tr>
 </table>
 <h3>
 <i title="Methods" class="icon-custom icon-method"></i> Methods</h3>
 <a id="method_create"></a><div class="element clickable method public method_create " data-toggle="collapse" data-target=".method_create .collapse" title="public">
 <h2>create()
         </h2>
-<pre>create(string $id, float $latitude, float $longitude, string $title, string $address, array|null $data<code> = null</code>) : \TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultVenueType</pre>
+<pre>create(\TgBotApi\BotApiBase\Type\InlineQueryResult\string $id, \TgBotApi\BotApiBase\Type\InlineQueryResult\float $latitude, \TgBotApi\BotApiBase\Type\InlineQueryResult\float $longitude, \TgBotApi\BotApiBase\Type\InlineQueryResult\string $title, \TgBotApi\BotApiBase\Type\InlineQueryResult\string $address, array $data<code> = null</code>) </pre>
 <div class="labels"><span class="label">Static</span></div>
 <div class="row collapse"><div class="detail-description">
 <div class="long_description"></div>
 <h3>Parameters</h3>
-<div class="subelement argument">
-<h4>$id</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$latitude</h4>
-<code>float</code>
-</div>
-<div class="subelement argument">
-<h4>$longitude</h4>
-<code>float</code>
-</div>
-<div class="subelement argument">
-<h4>$title</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$address</h4>
-<code>string</code>
-</div>
-<div class="subelement argument">
-<h4>$data</h4>
-<code>array</code><code>null</code>
-</div>
+<div class="subelement argument"><h4>$id</h4></div>
+<div class="subelement argument"><h4>$latitude</h4></div>
+<div class="subelement argument"><h4>$longitude</h4></div>
+<div class="subelement argument"><h4>$title</h4></div>
+<div class="subelement argument"><h4>$address</h4></div>
+<div class="subelement argument"><h4>$data</h4></div>
 <h3>Exceptions</h3>
 <table class="table table-bordered"><tr>
 <th><code>\TgBotApi\BotApiBase\Exception\BadArgumentException</code></th>
 <td></td>
 </tr></table>
-<h3>Returns</h3>
-<div class="subelement response"><code>\TgBotApi\BotApiBase\Type\InlineQueryResult\InlineQueryResultVenueType</code></div>
 </div></div>
 </div>
 <a id="method_fill"></a><div class="element clickable method public method_fill inherited" data-toggle="collapse" data-target=".method_fill .collapse" title="public">
@@ -243,15 +200,37 @@ Alternatively, you can use input_message_content to send a message with the spec
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"><p>(For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.).</p></div></div></div>
 </div>
-<a id="property_id"> </a><div class="element clickable property public property_id" data-toggle="collapse" data-target=".property_id .collapse" title="public">
-<h2>Unique identifier for this result, 1-64 bytes.</h2>
-<pre>$id : string</pre>
+<a id="property_googlePlaceId"> </a><div class="element clickable property public property_googlePlaceId" data-toggle="collapse" data-target=".property_googlePlaceId .collapse" title="public">
+<h2>Optional. Google Places identifier of the venue.</h2>
+<pre>$googlePlaceId : string | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
 </div></div>
 <div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://developers.google.com/places/web-service/place-id"></a></td>
+</tr></table>
+</div></div>
+</div>
+<a id="property_googlePlaceType"> </a><div class="element clickable property public property_googlePlaceType" data-toggle="collapse" data-target=".property_googlePlaceType .collapse" title="public">
+<h2>Optional. Google Places type of the venue.</h2>
+<pre>$googlePlaceType : string | null</pre>
+<div class="row collapse"><div class="detail-description">
+<h3>Default</h3>
+<div class="subelement argument"></div>
+</div></div>
+<div class="labels"></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<table class="table table-bordered"><tr>
+<th>see</th>
+<td><a href="https://developers.google.com/places/web-service/supported_types"></a></td>
+</tr></table>
+</div></div>
 </div>
 <a id="property_inputMessageContent"> </a><div class="element clickable property public property_inputMessageContent" data-toggle="collapse" data-target=".property_inputMessageContent .collapse" title="public">
 <h2>Optional. Content of the message to be sent instead of the venue.</h2>
@@ -276,16 +255,6 @@ Alternatively, you can use input_message_content to send a message with the spec
 <a id="property_longitude"> </a><div class="element clickable property public property_longitude" data-toggle="collapse" data-target=".property_longitude .collapse" title="public">
 <h2>Longitude of the venue location in degrees.</h2>
 <pre>$longitude : float</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="property_replyMarkup"> </a><div class="element clickable property public property_replyMarkup" data-toggle="collapse" data-target=".property_replyMarkup .collapse" title="public">
-<h2>Optional. Inline keyboard attached to the message.</h2>
-<pre>$replyMarkup : \TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType | null</pre>
 <div class="row collapse"><div class="detail-description">
 <h3>Default</h3>
 <div class="subelement argument"></div>
@@ -333,96 +302,6 @@ Alternatively, you can use input_message_content to send a message with the spec
 <div class="labels"></div>
 <div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
 </div>
-<a id="property_type"> </a><div class="element clickable property public property_type" data-toggle="collapse" data-target=".property_type .collapse" title="public">
-<h2>Type of the result.</h2>
-<pre>$type : string</pre>
-<div class="row collapse"><div class="detail-description">
-<h3>Default</h3>
-<div class="subelement argument"></div>
-</div></div>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<h3>
-<i title="Constants" class="icon-custom icon-constant"></i> Constants</h3>
-<a id="constant_TYPE_ARTICLE"> </a><div class="element clickable constant  constant_TYPE_ARTICLE" data-toggle="collapse" data-target=".constant_TYPE_ARTICLE .collapse" title="">
-<h2>TYPE_ARTICLE</h2>
-<pre>TYPE_ARTICLE = 'article' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_AUDIO"> </a><div class="element clickable constant  constant_TYPE_AUDIO" data-toggle="collapse" data-target=".constant_TYPE_AUDIO .collapse" title="">
-<h2>TYPE_AUDIO</h2>
-<pre>TYPE_AUDIO = 'audio' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_CONTACT"> </a><div class="element clickable constant  constant_TYPE_CONTACT" data-toggle="collapse" data-target=".constant_TYPE_CONTACT .collapse" title="">
-<h2>TYPE_CONTACT</h2>
-<pre>TYPE_CONTACT = 'contact' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_DOCUMENT"> </a><div class="element clickable constant  constant_TYPE_DOCUMENT" data-toggle="collapse" data-target=".constant_TYPE_DOCUMENT .collapse" title="">
-<h2>TYPE_DOCUMENT</h2>
-<pre>TYPE_DOCUMENT = 'document' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_GAME"> </a><div class="element clickable constant  constant_TYPE_GAME" data-toggle="collapse" data-target=".constant_TYPE_GAME .collapse" title="">
-<h2>TYPE_GAME</h2>
-<pre>TYPE_GAME = 'game' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_GIF"> </a><div class="element clickable constant  constant_TYPE_GIF" data-toggle="collapse" data-target=".constant_TYPE_GIF .collapse" title="">
-<h2>TYPE_GIF</h2>
-<pre>TYPE_GIF = 'gif' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_LOCATION"> </a><div class="element clickable constant  constant_TYPE_LOCATION" data-toggle="collapse" data-target=".constant_TYPE_LOCATION .collapse" title="">
-<h2>TYPE_LOCATION</h2>
-<pre>TYPE_LOCATION = 'location' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_MPEG4GIF"> </a><div class="element clickable constant  constant_TYPE_MPEG4GIF" data-toggle="collapse" data-target=".constant_TYPE_MPEG4GIF .collapse" title="">
-<h2>TYPE_MPEG4GIF</h2>
-<pre>TYPE_MPEG4GIF = 'mpeg4_gif' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_PHOTO"> </a><div class="element clickable constant  constant_TYPE_PHOTO" data-toggle="collapse" data-target=".constant_TYPE_PHOTO .collapse" title="">
-<h2>TYPE_PHOTO</h2>
-<pre>TYPE_PHOTO = 'photo' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_STICKER"> </a><div class="element clickable constant  constant_TYPE_STICKER" data-toggle="collapse" data-target=".constant_TYPE_STICKER .collapse" title="">
-<h2>TYPE_STICKER</h2>
-<pre>TYPE_STICKER = 'sticker' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_VENUE"> </a><div class="element clickable constant  constant_TYPE_VENUE" data-toggle="collapse" data-target=".constant_TYPE_VENUE .collapse" title="">
-<h2>TYPE_VENUE</h2>
-<pre>TYPE_VENUE = 'venue' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_VIDEO"> </a><div class="element clickable constant  constant_TYPE_VIDEO" data-toggle="collapse" data-target=".constant_TYPE_VIDEO .collapse" title="">
-<h2>TYPE_VIDEO</h2>
-<pre>TYPE_VIDEO = 'video' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
-<a id="constant_TYPE_VOICE"> </a><div class="element clickable constant  constant_TYPE_VOICE" data-toggle="collapse" data-target=".constant_TYPE_VOICE .collapse" title="">
-<h2>TYPE_VOICE</h2>
-<pre>TYPE_VOICE = 'voice' </pre>
-<div class="labels"></div>
-<div class="row collapse"><div class="detail-description"><div class="long_description"></div></div></div>
-</div>
 </div>
 </div>
 </div>
@@ -430,7 +309,7 @@ Alternatively, you can use input_message_content to send a message with the spec
 <div class="row"><footer class="span12">
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.9.0</a> and<br>
-            generated on 2020-03-31T00:16:07+03:00.<br></footer></div>
+            generated on 2020-12-12T21:50:59+03:00.<br></footer></div>
 </div>
 </body>
 </html>

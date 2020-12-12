@@ -28,9 +28,14 @@ class SendDiceMethod implements SendMethodAliasInterface
     public const EMOJI_DICE = '🎲';
     public const EMOJI_DARTS = '🎯';
     public const EMOJI_BASKETBALL = '🏀';
+    public const EMOJI_FOOTBALL = '⚽';
+    public const EMOJI_SLOT_MACHINE = '🎰';
 
     /**
-     * Emoji on which the dice throw animation is based. Currently, must be one of “🎲” or “🎯”. Defauts to “🎲”.
+     * Emoji on which the dice throw animation is based.
+     * Currently, must be one of “🎲”, “🎯”, “🏀”, “⚽”, or “🎰”.
+     * Dice can have values 1-6 for “🎲” and “🎯”, values 1-5 for “🏀” and “⚽”,
+     * and values 1-64 for “🎰”. Defaults to “🎲”.
      *
      * @var string|null
      */
@@ -88,6 +93,32 @@ class SendDiceMethod implements SendMethodAliasInterface
     {
         $instance = static::create($chatId, $data);
         $instance->emoji = self::EMOJI_BASKETBALL;
+
+        return $instance;
+    }
+
+    /**
+     * @param $chatId
+     *
+     * @throws BadArgumentException
+     */
+    public static function createWithFootBall($chatId, array $data = null): SendDiceMethod
+    {
+        $instance = static::create($chatId, $data);
+        $instance->emoji = self::EMOJI_FOOTBALL;
+
+        return $instance;
+    }
+
+    /**
+     * @param $chatId
+     *
+     * @throws BadArgumentException
+     */
+    public static function createWithSlotMachine($chatId, array $data = null): SendDiceMethod
+    {
+        $instance = static::create($chatId, $data);
+        $instance->emoji = self::EMOJI_SLOT_MACHINE;
 
         return $instance;
     }

@@ -10,6 +10,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\MessageEntityType;
 
 /**
  * Class SendPollMethod
@@ -24,7 +25,7 @@ class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface, Has
     use SendToChatVariablesTrait;
 
     /**
-     * Poll question, 1-255 characters.
+     * Poll question, 1-300 characters.
      *
      * @var string;
      */
@@ -79,6 +80,13 @@ class SendPollMethod implements SendMethodAliasInterface, PollTypeInterface, Has
      * @var string|null
      */
     public $explanationParseMode;
+
+    /**
+     * List of special entities that appear in the poll explanation, which can be specified instead of parse_mode.
+     *
+     * @var MessageEntityType[]|null
+     */
+    public $explanationEntities;
 
     /**
      * Optional. Amount of time in seconds the poll will be active after creation, 5-600.

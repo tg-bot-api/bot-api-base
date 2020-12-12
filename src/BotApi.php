@@ -5,14 +5,18 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase;
 
 use TgBotApi\BotApiBase\Exception\ResponseException;
+use TgBotApi\BotApiBase\Method\CloseMethod;
+use TgBotApi\BotApiBase\Method\CopyMessageMethod;
 use TgBotApi\BotApiBase\Method\ExportChatInviteLinkMethod;
 use TgBotApi\BotApiBase\Method\Interfaces\MethodInterface;
+use TgBotApi\BotApiBase\Method\LogOutMethod;
 use TgBotApi\BotApiBase\Method\SendChatActionMethod;
 use TgBotApi\BotApiBase\Method\SendMediaGroupMethod;
 use TgBotApi\BotApiBase\Method\StopPollMethod;
 use TgBotApi\BotApiBase\Traits\AliasMethodTrait;
 use TgBotApi\BotApiBase\Traits\GetMethodTrait;
 use TgBotApi\BotApiBase\Type\FileType;
+use TgBotApi\BotApiBase\Type\MessageIdType;
 use TgBotApi\BotApiBase\Type\MessageType;
 use TgBotApi\BotApiBase\Type\PollType;
 
@@ -23,6 +27,7 @@ class BotApi implements BotApiInterface
 {
     use AliasMethodTrait;
     use GetMethodTrait;
+
     /**
      * @var string
      */
@@ -43,14 +48,6 @@ class BotApi implements BotApiInterface
      */
     private $normalizer;
 
-    /**
-     * BotApi constructor.
-     *
-     * @param string              $botKey
-     * @param ApiClientInterface  $apiClient
-     * @param NormalizerInterface $normalizer
-     * @param string              $endPoint
-     */
     public function __construct(
         string $botKey,
         ApiClientInterface $apiClient,
@@ -67,8 +64,7 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param             $method
-     * @param string|null $type
+     * @param $method
      *
      * @throws ResponseException
      *
@@ -86,11 +82,7 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param ExportChatInviteLinkMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return string
      */
     public function exportChatInviteLink(ExportChatInviteLinkMethod $method): string
     {
@@ -98,11 +90,7 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param SendChatActionMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return bool
      */
     public function sendChatAction(SendChatActionMethod $method): bool
     {
@@ -110,8 +98,6 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param SendMediaGroupMethod $method
-     *
      * @throws ResponseException
      *
      * @return MessageType[]
@@ -122,22 +108,37 @@ class BotApi implements BotApiInterface
     }
 
     /**
-     * @param StopPollMethod $method
-     *
      * @throws ResponseException
-     *
-     * @return PollType
+     */
+    public function logOut(LogOutMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @throws ResponseException
+     */
+    public function close(CloseMethod $method): bool
+    {
+        return $this->call($method);
+    }
+
+    /**
+     * @throws ResponseException
+     */
+    public function copyMessage(CopyMessageMethod $method): MessageIdType
+    {
+        return $this->call($method, MessageIdType::class);
+    }
+
+    /**
+     * @throws ResponseException
      */
     public function stopPoll(StopPollMethod $method): PollType
     {
         return $this->call($method, PollType::class);
     }
 
-    /**
-     * @param FileType $file
-     *
-     * @return string
-     */
     public function getAbsoluteFilePath(FileType $file): string
     {
         return \sprintf(
@@ -150,8 +151,6 @@ class BotApi implements BotApiInterface
 
     /**
      * @param $method
-     *
-     * @return string
      */
     private function getMethodName($method): string
     {

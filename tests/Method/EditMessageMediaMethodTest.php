@@ -32,6 +32,7 @@ class EditMessageMediaMethodTest extends MethodTestCase
                     'parse_mode' => 'Markdown',
                     'type' => 'document',
                     'thumb' => '',
+                    'disable_content_type_detection' => true,
                 ],
                 'reply_markup' => $this->buildReplyMarkupArray(),
             ],
@@ -42,6 +43,7 @@ class EditMessageMediaMethodTest extends MethodTestCase
                     'thumb' => InputFileType::create('/dev/null'),
                     'caption' => 'InputMediaDocumentType',
                     'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
+                    'disableContentTypeDetection' => true,
                 ]),
                 [
                     'replyMarkup' => $this->buildReplyMarkupObject(),

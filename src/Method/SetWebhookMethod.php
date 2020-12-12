@@ -36,6 +36,13 @@ class SetWebhookMethod implements HasUpdateTypeVariableInterface, SetMethodAlias
     public $certificate;
 
     /**
+     * The fixed IP address which will be used to send webhook requests instead of the IP address resolved through DNS.
+     *
+     * @var string | null
+     */
+    public $ipAddress;
+
+    /**
      * Optional    Maximum allowed number of simultaneous HTTPS connections to the webhook for update delivery, 1-100.
      * Defaults to 40. Use lower values to limit the load on your bot‘s server,
      * and higher values to increase your bot’s throughput.
@@ -59,12 +66,14 @@ class SetWebhookMethod implements HasUpdateTypeVariableInterface, SetMethodAlias
     public $allowedUpdates;
 
     /**
-     * @param string     $url
-     * @param array|null $data
+     * Pass True to drop all pending updates.
      *
+     * @var bool|null
+     */
+    public $dropPendingUpdates;
+
+    /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SetWebhookMethod
      */
     public static function create(string $url, array $data = null): SetWebhookMethod
     {

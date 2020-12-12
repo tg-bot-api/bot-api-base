@@ -6,6 +6,7 @@ namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\UnpinMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 
 /**
  * Class UnpinChatMessageMethod.
@@ -14,17 +15,30 @@ use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
  */
 class UnpinChatMessageMethod implements UnpinMethodAliasInterface
 {
+    use FillFromArrayTrait;
     use ChatIdVariableTrait;
+
+    /**
+     * Optional Identifier of a message to unpin. If not specified,
+     * the most recent pinned message (by sending date) will be unpinned.
+     *
+     * @var int|null
+     */
+    public $messageId;
 
     /**
      * @param int|string $chatId
      *
-     * @return UnpinChatMessageMethod
+     * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
      */
-    public static function create($chatId): UnpinChatMessageMethod
+    public static function create($chatId, array $data = null): UnpinChatMessageMethod
     {
         $instance = new static();
         $instance->chatId = $chatId;
+
+        if (!empty($data)) {
+            $instance->fill($data);
+        }
 
         return $instance;
     }

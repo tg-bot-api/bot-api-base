@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace TgBotApi\BotApiBase\Method;
 
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
-use TgBotApi\BotApiBase\Method\Traits\ChatIdVariableTrait;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
-use TgBotApi\BotApiBase\Method\Traits\ReplyMarkupVariableTrait;
+use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\InlineKeyboardMarkupType;
 use TgBotApi\BotApiBase\Type\LabeledPriceType;
 
 /**
@@ -18,8 +18,7 @@ use TgBotApi\BotApiBase\Type\LabeledPriceType;
 class SendInvoiceMethod implements SendMethodAliasInterface
 {
     use FillFromArrayTrait;
-    use ChatIdVariableTrait;
-    use ReplyMarkupVariableTrait;
+    use SendToChatVariablesTrait;
 
     /**
      * Product name, 1-32 characters.
@@ -160,33 +159,18 @@ class SendInvoiceMethod implements SendMethodAliasInterface
     public $isFlexible;
 
     /**
-     * Optional. Sends the message silently. Users will receive a notification with no sound.
+     * Optional. A JSON-serialized object for an inline keyboard. If empty, one 'Pay total price' button will be shown.
+     * If not empty, the first button must be a Pay button.
      *
-     * @var bool|null
+     * @var InlineKeyboardMarkupType|null
      */
-    public $disableNotification;
-
-    /**
-     * Optional. If the message is a reply, ID of the original message.
-     *
-     * @var int|null
-     */
-    public $replyToMessageId;
+    public $replyMarkup;
 
     /**
      * @param int|string         $chatId
-     * @param string             $title
-     * @param string             $description
-     * @param string             $payload
-     * @param string             $providerToken
-     * @param string             $startParameter
-     * @param string             $currency
      * @param LabeledPriceType[] $prices
-     * @param array|null         $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendInvoiceMethod
      */
     public static function create(
         $chatId,
@@ -208,6 +192,7 @@ class SendInvoiceMethod implements SendMethodAliasInterface
         $instance->startParameter = $startParameter;
         $instance->currency = $currency;
         $instance->prices = $prices;
+
         if ($data) {
             $instance->fill($data);
         }

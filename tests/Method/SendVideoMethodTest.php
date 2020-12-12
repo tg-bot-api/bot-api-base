@@ -9,6 +9,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\SendVideoMethod;
 use TgBotApi\BotApiBase\Tests\Method\Traits\InlineKeyboardMarkupTrait;
 use TgBotApi\BotApiBase\Type\InputFileType;
+use TgBotApi\BotApiBase\Type\MessageEntityType;
 
 class SendVideoMethodTest extends MethodTestCase
 {
@@ -24,9 +25,6 @@ class SendVideoMethodTest extends MethodTestCase
         $this->getApi()->send($this->getMethod());
     }
 
-    /**
-     * @return BotApiComplete
-     */
     private function getApi(): BotApiComplete
     {
         return $this->getBotWithFiles(
@@ -40,10 +38,12 @@ class SendVideoMethodTest extends MethodTestCase
                 'thumb' => '',
                 'support_streaming' => true,
                 'caption' => 'caption',
+                'caption_entities' => [['type' => 'pre', 'offset' => 0, 'length' => 1]],
                 'parse_mode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 'disable_notification' => true,
                 'reply_to_message_id' => 1,
-                'reply_markup' => $this->buildInlineMarkupArray(),
+                'allow_sending_without_reply' => true,
+                'reply_markup' => static::buildInlineMarkupArray(),
             ],
             ['video' => true, 'thumb' => true],
             ['reply_markup']
@@ -52,8 +52,6 @@ class SendVideoMethodTest extends MethodTestCase
 
     /**
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendVideoMethod
      */
     private function getMethod(): SendVideoMethod
     {
@@ -66,11 +64,13 @@ class SendVideoMethodTest extends MethodTestCase
                 'height' => 100,
                 'thumb' => InputFileType::create('/dev/null'),
                 'caption' => 'caption',
+                'captionEntities' => [MessageEntityType::create(MessageEntityType::TYPE_PRE, 0, 1)],
                 'supportStreaming' => true,
                 'parseMode' => HasParseModeVariableInterface::PARSE_MODE_MARKDOWN,
                 'disableNotification' => true,
                 'replyToMessageId' => 1,
-                'replyMarkup' => $this->buildInlineMarkupObject(),
+                'allowSendingWithoutReply' => true,
+                'replyMarkup' => static::buildInlineMarkupObject(),
             ]
         );
     }

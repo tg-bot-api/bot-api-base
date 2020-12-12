@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "result": {
+    "id": 9223372036854775807,
+    "type": "supergroup",
+    "title": "title",
+    "username": "username",
+    "first_name": "first_name",
+    "last_name": "last_name",
+    "photo": {
+      "small_file_id": "small_file_id",
+      "small_file_unique_id": "small_file_unique_id",
+      "big_file_id": "big_file_id",
+      "big_file_unique_id": "big_file_unique_id"
+    },
+    "bio": "bio",
+    "description": "description",
+    "invite_link": "invite_link",
+    "pinned_message": {
+      "message_id": 1,
+      "date": 0,
+      "chat": {
+        "id": 9223372036854775807,
+        "type": "supergroup",
+        "title": "title",
+        "username": "username"
+      }
+    },
+    "permissions": {
+      "can_send_messages": true,
+      "can_send_media_messages": true,
+      "can_send_polls": true,
+      "can_send_other_messages": true,
+      "can_add_web_page_previews": true,
+      "can_change_info": true,
+      "can_invite_users": true,
+      "can_pin_messages": true
+    },
+    "slow_mode_delay": 1,
+    "sticker_set_name": "sticker_set_name",
+    "can_set_sticker_set": true,
+    "linked_chat_id": 9223372036854775806,
+    "location": {
+      "location": {
+        "latitude": 1.1,
+        "longitude": 1.1,
+        "horizontal_accuracy": 200
+      },
+      "address": "address"
+    }
+  }
+}

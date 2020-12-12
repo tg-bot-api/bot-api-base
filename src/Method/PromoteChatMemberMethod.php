@@ -21,6 +21,13 @@ class PromoteChatMemberMethod implements PromoteMethodAliasInterface
     use UserIdVariableTrait;
 
     /**
+     * Pass True, if the administrator's presence in the chat is hidden.
+     *
+     * @var bool|null
+     */
+    public $isAnonymous;
+
+    /**
      * Optional. Pass True, if the administrator can change chat title, photo and other settings.
      *
      * @var bool|null
@@ -81,11 +88,8 @@ class PromoteChatMemberMethod implements PromoteMethodAliasInterface
     /**
      * @param $chatId
      * @param $userId
-     * @param array|null $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return PromoteChatMemberMethod
      */
     public static function create($chatId, $userId, array $data = null): PromoteChatMemberMethod
     {

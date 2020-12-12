@@ -8,6 +8,7 @@ use TgBotApi\BotApiBase\Method\Interfaces\HasParseModeVariableInterface;
 use TgBotApi\BotApiBase\Method\Interfaces\SendMethodAliasInterface;
 use TgBotApi\BotApiBase\Method\Traits\FillFromArrayTrait;
 use TgBotApi\BotApiBase\Method\Traits\SendToChatVariablesTrait;
+use TgBotApi\BotApiBase\Type\MessageEntityType;
 
 /**
  * Class SendMessageMethod.
@@ -35,6 +36,13 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
     public $parseMode;
 
     /**
+     * Optional. List of special entities that appear in message text, which can be specified instead of parse_mode.
+     *
+     * @var MessageEntityType[]|null
+     */
+    public $entities;
+
+    /**
      * Optional. Disables link previews for links in this message.
      *
      * @var bool|null
@@ -43,12 +51,8 @@ class SendMessageMethod implements HasParseModeVariableInterface, SendMethodAlia
 
     /**
      * @param int|string $chatId
-     * @param string     $text
-     * @param array|null $data
      *
      * @throws \TgBotApi\BotApiBase\Exception\BadArgumentException
-     *
-     * @return SendMessageMethod
      */
     public static function create($chatId, string $text, array $data = null): SendMessageMethod
     {
