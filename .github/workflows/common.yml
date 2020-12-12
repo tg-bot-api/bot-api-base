@@ -30,14 +30,13 @@ jobs:
         run: composer validate
 
       - name: Install dependencies
-        env:
-          COMPOSER_FLAGS: ${{ matrix.composerFlags }}
-        run: composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
+        run: composer update ${{ matrix.composerFlags }} --no-interaction --prefer-dist
 
       - name: Tests
         run: vendor/bin/phpunit
 
       - name: Scrutinizer code coverage
+        if: matrix.php == '7.3'
         run: |
           wget https://scrutinizer-ci.com/ocular.phar
           php ocular.phar code-coverage:upload --format=php-clover coverage.clover
