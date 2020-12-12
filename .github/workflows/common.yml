@@ -1,0 +1,38 @@
+name: PHP Composer
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - php: 7.3
+            composerFlags: '--prefer-stable --prefer-lowest'
+          - php: 8.0
+            composerFlags: '--ignore-platform-reqs'
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup PHP with composer v2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: composer:v2
+          coverage: xdebug
+
+      - name: Validate composer.json and composer.lock
+        run: composer validate
+
+      - name: Install dependencies
+        env:
+          COMPOSER_FLAGS: ${{ matrix.composerFlags }}
+        run: composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
+
+      - name: Tests
+        run: vendor/bin/phpunit
