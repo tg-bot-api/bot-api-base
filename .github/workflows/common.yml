@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Build
 
 on:
   push:
@@ -35,9 +35,9 @@ jobs:
         run: composer update ${{ matrix.composerFlags }} --no-interaction --prefer-dist
 
       - name: Tests
-        run: vendor/bin/phpunit
+        run: vendor/bin/phpunit --coverage-clover=coverage.clover
 
-      - name: Scrutinizer code coverage
+      - name: Scrutinizer code coverage upload
         if: matrix.php == '7.3'
         run: |
           wget https://scrutinizer-ci.com/ocular.phar

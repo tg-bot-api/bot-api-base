@@ -4,6 +4,7 @@
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![build][ico-ci]][link-ci]
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![PHP Version >= 7.2][ico-php-v]][link-php-7-2]
 [![Symfony Recipe][ico-symfony-recipe]][link-symfony-recipe]
@@ -157,7 +158,7 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [ico-bot-api]: https://img.shields.io/badge/Bot%20API-5.0-blue.svg?style=flat-square
 [ico-version]: https://img.shields.io/packagist/v/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/tg-bot-api/bot-api-base/master.svg?style=flat-square
+[ico-ci]: https://github.com/tg-bot-api/bot-api-base/workflows/Build/badge.svg
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/tg-bot-api/bot-api-base.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/tg-bot-api/bot-api-base.svg?style=flat-square
@@ -173,7 +174,6 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 
 [link-bot-api]: https://core.telegram.org/bots/api
 [link-packagist]: https://packagist.org/packages/tg-bot-api/bot-api-base
-[link-travis]: https://travis-ci.org/tg-bot-api/bot-api-base
 [link-scrutinizer]: https://scrutinizer-ci.com/g/tg-bot-api/bot-api-base/code-structure
 [link-code-quality]: https://scrutinizer-ci.com/g/tg-bot-api/bot-api-base
 [link-downloads]: https://packagist.org/packages/tg-bot-api/bot-api-base
@@ -183,3 +183,4 @@ The MIT License (MIT). Please see [License File](LICENSE.md) for more informatio
 [link-symfony-recipe]: https://github.com/symfony/recipes-contrib/tree/master/tg-bot-api/bot-api-base/1.0
 [link-php-7-2]: https://www.php.net/releases/7_2_0.php
 [sonar-path]: https://sonarcloud.io/dashboard?id=tg-bot-api_bot-api-base
+[link-ci]: https://github.com/tg-bot-api/bot-api-base/actions
