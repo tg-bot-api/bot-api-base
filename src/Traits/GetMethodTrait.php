@@ -9,6 +9,7 @@ use TgBotApi\BotApiBase\Method\GetChatAdministratorsMethod;
 use TgBotApi\BotApiBase\Method\GetChatMemberMethod;
 use TgBotApi\BotApiBase\Method\GetChatMembersCountMethod;
 use TgBotApi\BotApiBase\Method\GetChatMethod;
+use TgBotApi\BotApiBase\Method\GetChatMenuButtonMethod;
 use TgBotApi\BotApiBase\Method\GetFileMethod;
 use TgBotApi\BotApiBase\Method\GetGameHighScoresMethod;
 use TgBotApi\BotApiBase\Method\GetMeMethod;
@@ -23,6 +24,7 @@ use TgBotApi\BotApiBase\Type\ChatMemberType;
 use TgBotApi\BotApiBase\Type\ChatType;
 use TgBotApi\BotApiBase\Type\FileType;
 use TgBotApi\BotApiBase\Type\GameHighScoreType;
+use TgBotApi\BotApiBase\Type\MenuButtonType;
 use TgBotApi\BotApiBase\Type\StickerSetType;
 use TgBotApi\BotApiBase\Type\UpdateType;
 use TgBotApi\BotApiBase\Type\UserProfilePhotosType;
@@ -116,6 +118,14 @@ trait GetMethodTrait
     public function getChatMember(GetChatMemberMethod $method): ChatMemberType
     {
         return $this->call($method, ChatMemberType::class);
+    }
+
+    /**
+     * @throws ResponseException
+     */
+    public function getChatMenuButton(GetChatMenuButtonMethod $method): MenuButtonType
+    {
+        return $this->call($method, MenuButtonType::class);
     }
 
     /**
