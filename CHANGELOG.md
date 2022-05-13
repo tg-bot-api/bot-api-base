@@ -23,6 +23,17 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 - Nothing
 --->
 
+## Unreleased -
+
+### Added
+- #### WebApp
+    - Added class `WebAppInfoType`. Classes `InlineKeyboardButtonType` and `KeyboardButtonType` extended with parameter `webApp`;
+  
+- #### MenuButton
+    - Added class `MenuButtonType`;
+    - Added classes `GetChatMenuButtonMethod` and `SetChatMenuButtonMethod` for setting chat menu button and getting info about it;
+    - Added class `SetChatMenuButtonNormalizer` for normalize data from `SetChatMenuButtonMethod` before making request;
+
 ## 1.7.0 - 2020-12-12
 #### Bot API 5.0 - november November 4, 2020 
 
