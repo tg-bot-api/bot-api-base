@@ -24,6 +24,7 @@ use TgBotApi\BotApiBase\Normalizer\MediaGroupNormalizer;
 use TgBotApi\BotApiBase\Normalizer\PollNormalizer;
 use TgBotApi\BotApiBase\Normalizer\SetMyCommandsNormalizer;
 use TgBotApi\BotApiBase\Normalizer\UserProfilePhotosNormalizer;
+use TgBotApi\BotApiBase\Normalizer\SetChatMenuButtonNormalizer;
 
 /**
  * Class BotApiNormalizer.
@@ -85,6 +86,7 @@ class BotApiNormalizer implements NormalizerInterface
             new EditMessageMediaNormalizer(new InputMediaNormalizer($objectNormalizer, $files), $objectNormalizer),
             new JsonSerializableNormalizer($objectNormalizer),
             new AnswerInlineQueryNormalizer($objectNormalizer),
+            new SetChatMenuButtonNormalizer($objectNormalizer),
             new DateTimeNormalizer(),
             $objectNormalizer,
         ]);

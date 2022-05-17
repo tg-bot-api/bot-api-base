@@ -87,6 +87,7 @@ $bot = new \TgBotApi\BotApiBase\BotApi('<bot key>', $apiClient, new \TgBotApi\Bo
 |`getChat`|GetChatMethod|ChatType|
 |`getChatAdministrators`|GetChatAdministratorsMethod|ChatMemberType[]|
 |`getChatMember`|GetChatMemberMethod|ChatMemberType|
+|`getChatMenuButton`|GetChatMenuButtonMethod|MenuButtonType|
 |`getGameHighScores`|GetGameHighScoresMethod|GameHighScoreType[]|
 |`getStickerSet`|GetStickerSetMethod|StickerSetType|
 |`getFile`|GetFileMethod|FileType|

@@ -87,6 +87,15 @@ class InlineKeyboardButtonType
     public $pay;
 
     /**
+     * Optional. Description of the Web App that will be launched when the user presses the button.
+     * The Web App will be able to send an arbitrary message on behalf of the user using the method answerWebAppQuery.
+     * Available only in private chats between a user and the bot.
+     *
+     * @var WebAppInfoType|null
+     */
+    public $webApp;
+
+    /**
      * @param string     $text
      * @param array|null $data
      *
